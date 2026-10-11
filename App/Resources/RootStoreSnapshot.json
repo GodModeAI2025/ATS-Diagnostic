@@ -1,0 +1,2129 @@
+{
+  "retrievedAt": "2026-10-11T18:35:31.117154+00:00",
+  "stores": [
+    {
+      "name": "Apple",
+      "source": "https://ccadb.my.salesforce-sites.com/ccadb/Report?Name=AppleTLSServerAuthenticationCSV",
+      "certificates": {
+        "55926084ec963a64b96e2abe01ce0ba86a64fbfebcc7aab5afc155b37fd76066": {
+          "name": "Actalis Authentication Root CA",
+          "constraints": ""
+        },
+        "e35d28419ed02025cfa69038cd623962458da5c695fbdea3c22b0bfb25897092": {
+          "name": "Amazon Root CA 4",
+          "constraints": ""
+        },
+        "568d6905a2c88708a4b3025190edcfedb1974a606a13c6e5290fcb2ae63edab5": {
+          "name": "Starfield Services Root Certificate Authority - G2",
+          "constraints": "Apple Applied Constraints: [\"Server Authentication\",\"Client Authentication\",\"Code Signing\",\"Timestamp Signing\"]"
+        },
+        "8ecde6884f3d87b1125ba31ac3fcb13d7016de7f57cc904fe1cb97c6ae98196e": {
+          "name": "Amazon Root CA 1",
+          "constraints": ""
+        },
+        "1ba5b2aa8c65401a82960118f80bec4f62304d83cec4713a19c39c011ea46db4": {
+          "name": "Amazon Root CA 2",
+          "constraints": ""
+        },
+        "18ce6cfe7bf14e60b2e347b8dfe868cb31d02ebb3ada271569f50343b46db3a4": {
+          "name": "Amazon Root CA 3",
+          "constraints": ""
+        },
+        "6b328085625318aa50d173c98d8bda09d57e27413d114cf787a0f5d06c030cf6": {
+          "name": "Certum EC-384 CA",
+          "constraints": ""
+        },
+        "b676f2eddae8775cd36cb0f63cd1d4603961f49e6265ba013a2f0307b6d0b804": {
+          "name": "Certum Trusted Network CA 2",
+          "constraints": ""
+        },
+        "fe7696573855773e37a95e7ad4d9cc96c30157c15d31765ba9b15704e1ae78fd": {
+          "name": "Certum Trusted Root CA",
+          "constraints": ""
+        },
+        "5c58468d55f58e497e743982d2b50010b6d165374acf83a7d4a32db768c4408e": {
+          "name": "Certum Trusted Network CA",
+          "constraints": ""
+        },
+        "81a9088ea59fb364c548a6f85559099b6f0405efbf18e5324ec9f457ba00112f": {
+          "name": "Atos TrustedRoot Root CA RSA TLS 2021",
+          "constraints": ""
+        },
+        "b2fae53e14ccd7ab9212064701ae279c1d8988facb775fa8a008914e663988a8": {
+          "name": "Atos TrustedRoot Root CA ECC TLS 2021",
+          "constraints": ""
+        },
+        "f356bea244b7a91eb35d53ca9ad7864ace018e2d35d5f8f96ddf68a6f41aa474": {
+          "name": "Atos TrustedRoot 2011",
+          "constraints": ""
+        },
+        "04048028bf1f2864d48f9ad4d83294366a828856553f3b14303f90147f5d40ef": {
+          "name": "Autoridad de Certificacion Firmaprofesional CIF A62634068",
+          "constraints": "Apple Applied Constraints: \"allowed_policies\": [\"Server Authentication\", \"Client Authentication\"]"
+        },
+        "edf7ebbca27a2a384d387b7d4010c666e2edb4843e4c29b4ae1d5b9332e6b24d": {
+          "name": "Buypass Class 3 Root CA",
+          "constraints": ""
+        },
+        "9a114025197c5bb95d94e63d55cd43790847b646b23cdf11ada4a00eff15fb48": {
+          "name": "Buypass Class 2 Root CA",
+          "constraints": ""
+        },
+        "b4585f22e4ac756a4e8612a1361c5d9d031a93fd84febb778fa3068b0fc42dc2": {
+          "name": "Certainly Root E1",
+          "constraints": ""
+        },
+        "77b82cd8644c4305f7acc5cb156b45675004033d51c60c6202a8e0c33467d3a0": {
+          "name": "Certainly Root R1",
+          "constraints": ""
+        },
+        "e3b6a2db2ed7ce48842f7ac53241c7b71d54144bfb40c11f3f1d0b42f5eea12d": {
+          "name": "Certigna",
+          "constraints": ""
+        },
+        "eaa962c4fa4a6bafebe415196d351ccd888d4f53f3fa8ae6d7c466a94e6042bb": {
+          "name": "certSIGN ROOT CA",
+          "constraints": ""
+        },
+        "657cfe2fa73faa38462571f332a2363a46fce7020951710702cdfbb6eeda3305": {
+          "name": "certSIGN ROOT CA G2",
+          "constraints": ""
+        },
+        "5cc3d78e4e1d5e45547a04e6873e64f90cf9536d1ccc2ef800f355c4c5fd70fd": {
+          "name": "CFCA EV ROOT",
+          "constraints": "Apple Applied Constraints: {\"name\":\"CFCA EV ROOT\",\"hash\":\"5cc3d78e4e1d5e45547a04e6873e64f90cf9536d1ccc2ef800f355c4c5fd70fd\",\"allowed_policies\":[\"Server Authentication\",\"Client Authentication\",\"Code Signing\",\"Timestamp Signing\"]}"
+        },
+        "c0a6f4dc63a24bfdcf54ef2a6a082a0a72de35803e2ff5ff527ae5d87206dfd5": {
+          "name": "ePKI Root Certification Authority",
+          "constraints": ""
+        },
+        "f015ce3cc239bfef064be9f1d2c417e1a0264a0a94be1f0c8d121864eb6949cc": {
+          "name": "HiPKI Root CA - G1",
+          "constraints": ""
+        },
+        "49e7a442acf0ea6287050054b52564b650e4f49e42e348d6aa38e039e957b1c1": {
+          "name": "D-TRUST Root Class 3 CA 2 2009",
+          "constraints": ""
+        },
+        "eec5496b988ce98625b934092eec2908bed0b0f316c2d4730c84eaf1f3d34881": {
+          "name": "D-TRUST Root Class 3 CA 2 EV 2009",
+          "constraints": ""
+        },
+        "fd73dad31c644ff1b43bef0ccdda96710b9cd9875eca7e31707af3e96d522bbd": {
+          "name": "T-TeleSec GlobalRoot Class 3",
+          "constraints": "Apple Applied Constraints: {\"name\":\"T-TeleSec GlobalRoot Class 3\",\"hash\":\"fd73dad31c644ff1b43bef0ccdda96710b9cd9875eca7e31707af3e96d522bbd\",\"allowed_policies\":[\"Server Authentication\",\"Client Authentication\",\"Code Signing\",\"Timestamp Signing\"]}"
+        },
+        "91e2f5788d5810eba7ba58737de1548a8ecacd014598bc0b143e041b17052552": {
+          "name": "T-TeleSec GlobalRoot Class 2",
+          "constraints": ""
+        },
+        "85a0dd7dd720adb7ff05f83d542b209dc7ff4528f7d677b18389fea5e5c49e86": {
+          "name": "QuoVadis Root CA 2",
+          "constraints": ""
+        },
+        "371a00dc0533b3721a7eeb40e8419e70799d2b0a0f2c1d80693165f7cec4ad75": {
+          "name": "DigiCert TLS RSA4096 Root G5",
+          "constraints": ""
+        },
+        "018e13f0772532cf809bd1b17281867283fc48c6e13be9c69812854a490c1b05": {
+          "name": "DigiCert TLS ECC P384 Root G5",
+          "constraints": ""
+        },
+        "3e9099b5015e8f486c00bcea9d111ee721faba355a89bcf1df69561e3dc6325c": {
+          "name": "DigiCert Assured ID Root CA",
+          "constraints": ""
+        },
+        "7d05ebb682339f8c9451ee094eebfefa7953a114edb2f44949452fab7d2fc185": {
+          "name": "DigiCert Assured ID Root G2",
+          "constraints": ""
+        },
+        "7e37cb8b4c47090cab36551ba6f45db840680fba166a952db100717f43053fc2": {
+          "name": "DigiCert Assured ID Root G3",
+          "constraints": ""
+        },
+        "4348a0e9444c78cb265e058d5e8944b4d84f9662bd26db257f8934a443c70161": {
+          "name": "DigiCert Global Root CA",
+          "constraints": ""
+        },
+        "cb3ccbb76031e5e0138f8dd39a23f9de47ffc35e43c1144cea27d46a5ab1cb5f": {
+          "name": "DigiCert Global Root G2",
+          "constraints": ""
+        },
+        "31ad6648f8104138c738f39ea4320133393e3a18cc02296ef97c2ac9ef6731d0": {
+          "name": "DigiCert Global Root G3",
+          "constraints": ""
+        },
+        "7431e5f4c3c1ce4690774f0b61e05440883ba9a01ed00ba6abd7806ed3b118cf": {
+          "name": "DigiCert High Assurance EV Root CA",
+          "constraints": ""
+        },
+        "552f7bdcf1a7af9e6ce672017f4f12abf77240c78e761ac203d1d9d20ac89988": {
+          "name": "DigiCert Trusted Root G4",
+          "constraints": ""
+        },
+        "8a866fd1b276b57e578e921c65828a2bed58e9f2f288054134b7f1f4bfc9cc74": {
+          "name": "QuoVadis Root CA 1 G3",
+          "constraints": ""
+        },
+        "8fe4fb0af93a4d0d67db0bebb23e37c71bf325dcbcdd240ea04daf58b47e1840": {
+          "name": "QuoVadis Root CA 2 G3",
+          "constraints": "Apple Applied Constraints: {\"name\":\"QuoVadis Root CA 2 G3\",\"hash\":\"8fe4fb0af93a4d0d67db0bebb23e37c71bf325dcbcdd240ea04daf58b47e1840\",\"allowed_policies\":[\"Server Authentication\",\"Client Authentication\",\"Code Signing\",\"Timestamp Signing\"]}"
+        },
+        "18f1fc7f205df8adddeb7fe007dd57e3af375a9c4d8d73546bf4f1fed1e18d35": {
+          "name": "QuoVadis Root CA 3",
+          "constraints": ""
+        },
+        "88ef81de202eb018452e43f864725cea5fbd1fc2d9d205730709c5d8b8690f46": {
+          "name": "QuoVadis Root CA 3 G3",
+          "constraints": ""
+        },
+        "e23d4a036d7b70e9f595b1422079d2b91edfbb1fb651a0633eaa8a9dc5f80703": {
+          "name": "CA Disig Root R2",
+          "constraints": ""
+        },
+        "40f6af0346a99aa1cd1d555a4e9cce62c7f9634603ee406615833dc8c8d00367": {
+          "name": "emSign Root CA - G1",
+          "constraints": ""
+        },
+        "86a1ecba089c4a8d3bbe2734c612ba341d813e043cf9e8a862cd5c57a36bbe6b": {
+          "name": "emSign ECC Root CA - G3",
+          "constraints": ""
+        },
+        "0376ab1d54c5f9803ce4b2e201a0ee7eef7b57b636e8a93c9b8d4860c96f5fa7": {
+          "name": "AffirmTrust Commercial",
+          "constraints": "Apple Applied Constraints: {\"name\":\"AffirmTrust Commercial\",\"hash\":\"0376ab1d54c5f9803ce4b2e201a0ee7eef7b57b636e8a93c9b8d4860c96f5fa7\",\"allowed_policies\":[\"Server Authentication\",\"Client Authentication\",\"Code Signing\",\"Timestamp Signing\"]}"
+        },
+        "0a81ec5a929777f145904af38d5d509f66b5e2c58fcdb531058b0e17f3f0b41b": {
+          "name": "AffirmTrust Networking",
+          "constraints": "Apple Applied Constraints: {\"name\":\"AffirmTrust Networking\",\"hash\":\"0a81ec5a929777f145904af38d5d509f66b5e2c58fcdb531058b0e17f3f0b41b\",\"allowed_policies\":[\"Server Authentication\",\"Client Authentication\",\"Code Signing\",\"Timestamp Signing\"]}"
+        },
+        "70a73f7f376b60074248904534b11482d5bf0e698ecc498df52577ebf2e93b9a": {
+          "name": "AffirmTrust Premium",
+          "constraints": "Apple Applied Constraints: {\"name\":\"AffirmTrust Premium\",\"hash\":\"70a73f7f376b60074248904534b11482d5bf0e698ecc498df52577ebf2e93b9a\",\"allowed_policies\":[\"Server Authentication\",\"Client Authentication\",\"Code Signing\",\"Timestamp Signing\"]}"
+        },
+        "bd71fdf6da97e4cf62d1647add2581b07d79adf8397eb4ecba9c5e8488821423": {
+          "name": "AffirmTrust Premium ECC",
+          "constraints": "Apple Applied Constraints: {\"name\":\"AffirmTrust Premium ECC\",\"hash\":\"bd71fdf6da97e4cf62d1647add2581b07d79adf8397eb4ecba9c5e8488821423\",\"allowed_policies\":[\"Server Authentication\",\"Client Authentication\",\"Code Signing\",\"Timestamp Signing\"]}"
+        },
+        "bfff8fd04433487d6a8aa60c1a29767a9fc2bbb05e420f713a13b992891d3893": {
+          "name": "GDCA TrustAUTH R5 ROOT",
+          "constraints": ""
+        },
+        "ebd41040e4bb3ec742c9e381d31ef2a41a48b6685c96e7cef3c1df6cd4331c99": {
+          "name": "GlobalSign Root CA",
+          "constraints": ""
+        },
+        "2cabeafe37d06ca22aba7391c0033d25982952c453647349763a3ab5ad6ccf69": {
+          "name": "GlobalSign",
+          "constraints": ""
+        },
+        "179fbc148a3dd00fd24ea13458cc43bfa7f59c8182d783a513f6ebec100c8924": {
+          "name": "GlobalSign",
+          "constraints": ""
+        },
+        "cbb9c44d84b8043e1050ea31a69f514955d7bfd2e2c6b49301019ad61d9f5058": {
+          "name": "GlobalSign Root E46",
+          "constraints": ""
+        },
+        "4fa3126d8d3a11d1c4855a4f807cbad6cf919d3a5a88b03bea2c6372d93c40c9": {
+          "name": "GlobalSign Root R46",
+          "constraints": ""
+        },
+        "cbb522d7b7f127ad6a0113865bdf1cd4102e7d0759af635a7cf4720dc963c53b": {
+          "name": "GlobalSign",
+          "constraints": ""
+        },
+        "2ce1cb0bf9d2f9e102993fbe215152c3b2dd0cabde1c68e5319b839154dbb7f5": {
+          "name": "Starfield Root Certificate Authority - G2",
+          "constraints": "Apple Applied Constraints: {\"name\":\"Starfield Root Certificate Authority - G2\",\"hash\":\"2ce1cb0bf9d2f9e102993fbe215152c3b2dd0cabde1c68e5319b839154dbb7f5\",\"allowed_policies\":[\"Server Authentication\",\"Client Authentication\",\"Code Signing\",\"Timestamp Signing\"]}"
+        },
+        "1465fa205397b876faa6f0a9958e5590e40fcc7faa4fb7c2c8677521fb5fb658": {
+          "name": "Starfield Class 2 Certification Authority",
+          "constraints": ""
+        },
+        "c3846bf24b9e93ca64274c0ec67c1ecc5e024ffcacd2d74019350e81fe546ae4": {
+          "name": "Go Daddy Class 2 Certification Authority",
+          "constraints": ""
+        },
+        "45140b3247eb9cc8c5b4f0d7b53091f73292089e6e5a63e2749dd3aca9198eda": {
+          "name": "Go Daddy Root Certificate Authority - G2",
+          "constraints": ""
+        },
+        "c45d7bb08e6d67e62e4235110b564e5f78fd92ef058c840aea4e6455d7585c60": {
+          "name": "GTS Root R2",
+          "constraints": ""
+        },
+        "34d8a73ee208d9bcdb0d956520934b4e40e69482596e8b6f73c8426b010a6f48": {
+          "name": "GTS Root R3",
+          "constraints": ""
+        },
+        "b085d70b964f191a73e4af0d54ae7a0e07aafdaf9b71dd0862138ab7325a24a2": {
+          "name": "GlobalSign",
+          "constraints": ""
+        },
+        "d947432abde7b7fa90fc2e6b59101b1280e0e1c7e4e40fa3c6887fff57a7f4cf": {
+          "name": "GTS Root R1",
+          "constraints": ""
+        },
+        "8d25cd97229dbf70356bda4eb3cc734031e24cf00fafcfd32dc76eb5841c7ea8": {
+          "name": "GTS Root R2",
+          "constraints": ""
+        },
+        "349dfa4058c5e263123b398ae795573c4e1313c83fe68f93556cd5e8031b3c7d": {
+          "name": "GTS Root R4",
+          "constraints": ""
+        },
+        "2a575471e31340bc21581cbd2cf13e158463203ece94bcf9d3cc196bf09a5472": {
+          "name": "GTS Root R1",
+          "constraints": ""
+        },
+        "bec94911c2955676db6c0a550986d76e3ba005667c442c9762b4fbb773de228c": {
+          "name": "GlobalSign",
+          "constraints": ""
+        },
+        "71cca5391f9e794b04802530b363e121da8a3043bb26662fea4dca7fc951a4bd": {
+          "name": "GTS Root R4",
+          "constraints": ""
+        },
+        "15d5b8774619ea7d54ce1ca6d0b0c403e037a917f131e8a04e1e6b7a71babce5": {
+          "name": "GTS Root R3",
+          "constraints": ""
+        },
+        "5a2fc03f0c83b090bbfa40604b0988446c7636183df9846e17101a447fb8efd6": {
+          "name": "Hongkong Post Root CA 3",
+          "constraints": ""
+        },
+        "9a6ec012e1a7da9dbe34194d478ad7c0db1822fb071df12981496ed104384113": {
+          "name": "ACCVRAIZ1",
+          "constraints": ""
+        },
+        "ebc5570c29018c4d67b1aa127baf12f703b4611ebc17b7dab5573894179b93fa": {
+          "name": "AC RAIZ FNMT-RCM",
+          "constraints": ""
+        },
+        "46edc3689046d53a453fb3104ab80dcaec658b2660ea1629dd7e867990648716": {
+          "name": "TUBITAK Kamu SM SSL Kok Sertifikasi - Surum 1",
+          "constraints": "Apple Applied Constraints: {\"name\":\"TUBITAK Kamu SM SSL Kok Sertifikasi - Surum 1\",\"hash\":\"46edc3689046d53a453fb3104ab80dcaec658b2660ea1629dd7e867990648716\",\"allowed_policies\":[\"Server Authentication\",\"Client Authentication\",\"Code Signing\",\"Timestamp Signing\"]}"
+        },
+        "3f99cc474acfce4dfed58794665e478d1547739f2e780f1bb4ca9b133097d401": {
+          "name": "HARICA TLS ECC Root CA 2021",
+          "constraints": ""
+        },
+        "d95d0e8eda79525bf9beb11b14d2100d3294985f0c62d9fabd9cd999eccb7b1d": {
+          "name": "HARICA TLS RSA Root CA 2021",
+          "constraints": ""
+        },
+        "44b545aa8a25e65a73ca15dc27fc36d24c1cb9953a066539b11582dc487b4833": {
+          "name": "Hellenic Academic and Research Institutions ECC RootCA 2015",
+          "constraints": ""
+        },
+        "a040929a02ce53b4acf4f2ffc6981ce4496f755e6d45fe0b2a692bcd52523f36": {
+          "name": "Hellenic Academic and Research Institutions RootCA 2015",
+          "constraints": ""
+        },
+        "30d0895a9a448a262091635522d1f52010b5867acae12c78ef958fd4f4389f2f": {
+          "name": "IdenTrust Public Sector Root CA 1",
+          "constraints": ""
+        },
+        "5d56499be4d2e08bcfcad08a3e38723d50503bde706948e42f55603019e528ae": {
+          "name": "IdenTrust Commercial Root CA 1",
+          "constraints": ""
+        },
+        "96bcec06264976f37460779acf28c5a7cfe8a3c0aae11a8ffcee05c0bddf08c6": {
+          "name": "ISRG Root X1",
+          "constraints": "Apple Applied Constraints: {\"name\":\"ISRG Root X1\",\"hash\":\"96bcec06264976f37460779acf28c5a7cfe8a3c0aae11a8ffcee05c0bddf08c6\",\"allowed_policies\":[\"Server Authentication\",\"Client Authentication\",\"Code Signing\",\"Timestamp Signing\"]}"
+        },
+        "69729b8e15a86efc177a57afb7171dfc64add28c2fca8cf1507e34453ccb1470": {
+          "name": "ISRG Root X2",
+          "constraints": "Apple Applied Constraints: {\"name\":\"ISRG Root X2\",\"hash\":\"69729b8e15a86efc177a57afb7171dfc64add28c2fca8cf1507e34453ccb1470\",\"allowed_policies\":[\"Server Authentication\",\"Client Authentication\",\"Code Signing\",\"Timestamp Signing\"]}"
+        },
+        "2530cc8e98321502bad96f9b1fba1b099e2d299e0f4548bb914f363bc0d4531f": {
+          "name": "Izenpe.com",
+          "constraints": ""
+        },
+        "3c5f81fea5fab82c64bfa2eaecafcde8e077fc8620a7cae537163df36edbf378": {
+          "name": "Microsec e-Szigno Root CA 2009",
+          "constraints": ""
+        },
+        "358df39d764af9e1b766e9c972df352ee15cfac227af6ad1d70e8e4a6edcba02": {
+          "name": "Microsoft ECC Root Certificate Authority 2017",
+          "constraints": ""
+        },
+        "c741f70f4b2a8d88bf2e71c14122ef53ef10eba0cfa5e64cfa20f418853073e0": {
+          "name": "Microsoft RSA Root Certificate Authority 2017",
+          "constraints": ""
+        },
+        "88f438dcf8ffd1fa8f429115ffe5f82ae1e06e0c70c375faad717b34a49e7265": {
+          "name": "NAVER Global Root Certification Authority",
+          "constraints": ""
+        },
+        "6b9c08e86eb0f767cfad65cd98b62149e5494a67f5845e7bd1ed019f27b86bd6": {
+          "name": "OISTE WISeKey Global Root GB CA",
+          "constraints": ""
+        },
+        "8560f91c3624daba9570b5fea0dbe36ff11a8323be9486854fb3f34a5571198d": {
+          "name": "OISTE WISeKey Global Root GC CA",
+          "constraints": ""
+        },
+        "513b2cecb810d4cde5dd85391adfc6c2dd60d87bb736d2b521484aa47a0ebef6": {
+          "name": "Security Communication RootCA2",
+          "constraints": ""
+        },
+        "6ab2ab75f51cb4f4f0156203fbf6f646232f514be059f62833308b82b4d72db1": {
+          "name": "SECOM TLS ECC Root CA 2024",
+          "constraints": ""
+        },
+        "1435f225c5d252d7a21948cc3ce62aecfa88001e3dd72d1cc3555100eb372f93": {
+          "name": "SECOM TLS RSA Root CA 2024",
+          "constraints": ""
+        },
+        "c90f26f0fb1b4018b22227519b5ca2b53e2ca5b3be5cf18efe1bef47380c5383": {
+          "name": "Sectigo Public Server Authentication Root E46",
+          "constraints": ""
+        },
+        "73c176434f1bc6d5adf45b0e76e727287c8de57616c1e6e6141a2b2cbc7d8e4c": {
+          "name": "Entrust Root Certification Authority",
+          "constraints": ""
+        },
+        "52f0e1c4e58ec629291b60317f074671b85d7ea80d5b07273463534b32b40234": {
+          "name": "COMODO RSA Certification Authority",
+          "constraints": ""
+        },
+        "e793c9b02fd8aa13e21c31228accb08119643b749c898964b1746d46c3d4cbd2": {
+          "name": "USERTrust RSA Certification Authority",
+          "constraints": ""
+        },
+        "4ff460d54b9c86dabfbcfc5712e0400d2bed3fbc4d4fbdaa86e06adcd2a9ad7a": {
+          "name": "USERTrust ECC Certification Authority",
+          "constraints": ""
+        },
+        "43df5774b03e7fef5fe40d931a7bedf1bb2e6b42738c4e6d3841103d3aa7f339": {
+          "name": "Entrust Root Certification Authority - G2",
+          "constraints": ""
+        },
+        "02ed0eb28c14da45165c566791700d6451d7fb56f0b2ab1d3b8eb070e56edff5": {
+          "name": "Entrust Root Certification Authority - EC1",
+          "constraints": ""
+        },
+        "1793927a0614549789adce2f8f34f7f0b66d0f3ae3a3b84d21ec15dbba4fadc7": {
+          "name": "COMODO ECC Certification Authority",
+          "constraints": ""
+        },
+        "0c2cd63df7806fa399ede809116b575bf87989f06518f9808c860503178baf66": {
+          "name": "COMODO Certification Authority",
+          "constraints": ""
+        },
+        "db3517d1f6732a2d5ab97c533ec70779ee3270a62fb4ac4238372460e6f01e88": {
+          "name": "Entrust Root Certification Authority - G4",
+          "constraints": ""
+        },
+        "7bb647a62aeeac88bf257aa522d01ffea395e0ab45c73f93f65654ec38f25a06": {
+          "name": "Sectigo Public Server Authentication Root R46",
+          "constraints": ""
+        },
+        "6dc47172e01cbcb0bf62580d895fe2b8ac9ad4f873801e0c10b9c837d21eb177": {
+          "name": "Entrust.net Certification Authority (2048)",
+          "constraints": ""
+        },
+        "d7a7a0fb5d7e2731d771e9484ebcdef71d5f0c3e0a2948782bc83ee0ea699ef4": {
+          "name": "AAA Certificate Services",
+          "constraints": ""
+        },
+        "85666a562ee0be5ce925c1d8890a6f76a87ec16d4d7d5f29ea7419cf20123b69": {
+          "name": "SSL.com Root Certification Authority RSA",
+          "constraints": ""
+        },
+        "22a2c1f7bded704cc1e701b5f408c310880fe956b5de2a4a44f99c873a25a7c8": {
+          "name": "SSL.com EV Root Certification Authority ECC",
+          "constraints": "Apple Applied Constraints: \"allowed_policies\": [\"Server Authentication\", \"Client Authentication\"]"
+        },
+        "f1c1b50ae5a20dd8030ec9f6bc24823dd367b5255759b4e71b61fce9f7375d73": {
+          "name": "SecureTrust CA",
+          "constraints": ""
+        },
+        "2e7bf16cc22485a7bbe2aa8696750761b0ae39be3b2fe9d0cc6d4ef73491425c": {
+          "name": "SSL.com EV Root Certification Authority RSA R2",
+          "constraints": "Apple Applied Constraints: \"allowed_policies\": [\"Server Authentication\", \"Client Authentication\"]"
+        },
+        "945bbc825ea554f489d1fd51a73ddf2ea624ac7019a05205225c22a78ccfa8b4": {
+          "name": "Trustwave Global ECC P256 Certification Authority",
+          "constraints": ""
+        },
+        "3417bb06cc6007da1b961c920b8ab4ce3fad820e4aa30b9acbc4a74ebdcebc65": {
+          "name": "SSL.com Root Certification Authority ECC",
+          "constraints": ""
+        },
+        "97552015f5ddfc3c8788c006944555408894450084f100867086bc1a2bb58dc8": {
+          "name": "Trustwave Global Certification Authority",
+          "constraints": ""
+        },
+        "55903859c8c0c3ebb8759ece4e2557225ff5758bbd38ebd48276601e1bd58097": {
+          "name": "Trustwave Global ECC P384 Certification Authority",
+          "constraints": ""
+        },
+        "c32ffd9f46f936d16c3673990959434b9ad60aafbb9e7cf33654f144cc1ba143": {
+          "name": "SSL.com TLS ECC Root CA 2022",
+          "constraints": ""
+        },
+        "8faf7d2e2cb4709bb8e0b33666bf75a5dd45b5de480f8ea8d4bfe6bebc17f2ed": {
+          "name": "SSL.com TLS RSA Root CA 2022",
+          "constraints": ""
+        },
+        "be6c4da2bbb9ba59b6f3939768374246c3c005993fa98f020d1dedbed48a81d5": {
+          "name": "SwissSign Silver CA - G2",
+          "constraints": ""
+        },
+        "62dd0be9b9f50a163ea0f8e75c053b1eca57ea55c8688f647c6881f2c8357b95": {
+          "name": "SwissSign Gold CA - G2",
+          "constraints": ""
+        },
+        "bfd88fe1101c41ae3e801bf8be56350ee9bad1a6b9bd515edc5c6d5b8711ac44": {
+          "name": "TWCA Root Certification Authority",
+          "constraints": ""
+        },
+        "59769007f7685d0fcd50872f9f95d5755a5b2b457d81f3692b610a98672f0e1b": {
+          "name": "TWCA Global Root CA",
+          "constraints": ""
+        },
+        "242b69742fcb1e5b2abf98898b94572187544e5b4d9911786573621f6a74b82c": {
+          "name": "Telia Root CA v2",
+          "constraints": ""
+        },
+        "dd6936fe21f8f077c123a1a521c12224f72255b73e03a7260693e8a24b0fa389": {
+          "name": "TeliaSonera Root CA v1",
+          "constraints": ""
+        }
+      }
+    },
+    {
+      "name": "Google Chrome",
+      "source": "https://ccadb.my.salesforce-sites.com/ccadb/Report?Name=ChromeTLSServerAuthenticationCSV",
+      "certificates": {
+        "55926084ec963a64b96e2abe01ce0ba86a64fbfebcc7aab5afc155b37fd76066": {
+          "name": "Actalis Authentication Root CA",
+          "constraints": ""
+        },
+        "2e44102ab58cb85419451c8e19d9acf3662cafbc614b6a53960a30f7d0e2eb41": {
+          "name": "TunTrust Root CA",
+          "constraints": ""
+        },
+        "e35d28419ed02025cfa69038cd623962458da5c695fbdea3c22b0bfb25897092": {
+          "name": "Amazon Root CA 4",
+          "constraints": ""
+        },
+        "18ce6cfe7bf14e60b2e347b8dfe868cb31d02ebb3ada271569f50343b46db3a4": {
+          "name": "Amazon Root CA 3",
+          "constraints": "sct_not_after_sec: 1820966399"
+        },
+        "1ba5b2aa8c65401a82960118f80bec4f62304d83cec4713a19c39c011ea46db4": {
+          "name": "Amazon Root CA 2",
+          "constraints": "sct_not_after_sec: 1820966399"
+        },
+        "8ecde6884f3d87b1125ba31ac3fcb13d7016de7f57cc904fe1cb97c6ae98196e": {
+          "name": "Amazon Root CA 1",
+          "constraints": ""
+        },
+        "6b328085625318aa50d173c98d8bda09d57e27413d114cf787a0f5d06c030cf6": {
+          "name": "Certum EC-384 CA",
+          "constraints": ""
+        },
+        "5c58468d55f58e497e743982d2b50010b6d165374acf83a7d4a32db768c4408e": {
+          "name": "Certum Trusted Network CA",
+          "constraints": "sct_not_after_sec: 1790812799"
+        },
+        "b676f2eddae8775cd36cb0f63cd1d4603961f49e6265ba013a2f0307b6d0b804": {
+          "name": "Certum Trusted Network CA 2",
+          "constraints": ""
+        },
+        "fe7696573855773e37a95e7ad4d9cc96c30157c15d31765ba9b15704e1ae78fd": {
+          "name": "Certum Trusted Root CA",
+          "constraints": ""
+        },
+        "b2fae53e14ccd7ab9212064701ae279c1d8988facb775fa8a008914e663988a8": {
+          "name": "Atos TrustedRoot Root CA ECC TLS 2021",
+          "constraints": ""
+        },
+        "81a9088ea59fb364c548a6f85559099b6f0405efbf18e5324ec9f457ba00112f": {
+          "name": "Atos TrustedRoot Root CA RSA TLS 2021",
+          "constraints": ""
+        },
+        "57de0583efd2b26e0361da99da9df4648def7ee8441c3b728afa9bcde0f9b26a": {
+          "name": "Autoridad de Certificacion Firmaprofesional CIF A62634068",
+          "constraints": "sct_not_after_sec: 1790812799"
+        },
+        "fb8fec759169b9106b1e511644c618c51304373f6c0643088d8beffd1b997599": {
+          "name": "ANF Secure Server Root CA",
+          "constraints": "sct_not_after_sec: 1799971199"
+        },
+        "edf7ebbca27a2a384d387b7d4010c666e2edb4843e4c29b4ae1d5b9332e6b24d": {
+          "name": "Buypass Class 3 Root CA",
+          "constraints": "sct_not_after_sec: 1761955199"
+        },
+        "9a114025197c5bb95d94e63d55cd43790847b646b23cdf11ada4a00eff15fb48": {
+          "name": "Buypass Class 2 Root CA",
+          "constraints": "sct_not_after_sec: 1761955199"
+        },
+        "77b82cd8644c4305f7acc5cb156b45675004033d51c60c6202a8e0c33467d3a0": {
+          "name": "Certainly Root R1",
+          "constraints": ""
+        },
+        "b4585f22e4ac756a4e8612a1361c5d9d031a93fd84febb778fa3068b0fc42dc2": {
+          "name": "Certainly Root E1",
+          "constraints": ""
+        },
+        "d48d3d23eedb50a459e55197601c27774b9d7b18c94d5a059511a10250b93168": {
+          "name": "Certigna Root CA",
+          "constraints": "sct_not_after_sec: 1781481599"
+        },
+        "657cfe2fa73faa38462571f332a2363a46fce7020951710702cdfbb6eeda3305": {
+          "name": "certSIGN ROOT CA G2",
+          "constraints": ""
+        },
+        "5cc3d78e4e1d5e45547a04e6873e64f90cf9536d1ccc2ef800f355c4c5fd70fd": {
+          "name": "CFCA EV ROOT",
+          "constraints": ""
+        },
+        "f015ce3cc239bfef064be9f1d2c417e1a0264a0a94be1f0c8d121864eb6949cc": {
+          "name": "HiPKI Root CA - G1",
+          "constraints": "sct_not_after_sec: 1754006399"
+        },
+        "08170d1aa36453901a2f959245e347db0c8d37abaabc56b81aa100dc958970db": {
+          "name": "D-TRUST EV Root CA 1 2020",
+          "constraints": "sct_not_after_sec: 1819670399"
+        },
+        "e59aaa816009c22bff5b25bad37df306f049797c1f81d85ab089e657bd8f0044": {
+          "name": "D-TRUST BR Root CA 1 2020",
+          "constraints": "sct_not_after_sec: 1820966399"
+        },
+        "49e7a442acf0ea6287050054b52564b650e4f49e42e348d6aa38e039e957b1c1": {
+          "name": "D-TRUST Root Class 3 CA 2 2009",
+          "constraints": "sct_not_after_sec: 1780012799"
+        },
+        "0552e6f83fdf65e8fa9670e666df28a4e21340b510cbe52566f97c4fb94b2bd1": {
+          "name": "D-TRUST BR Root CA 2 2023",
+          "constraints": "sct_not_after_sec: 1820966399"
+        },
+        "8e8221b2e7d4007836a1672f0dcc299c33bc07d316f132fa1a206d587150f1ce": {
+          "name": "D-TRUST EV Root CA 2 2023",
+          "constraints": "sct_not_after_sec: 1819670399"
+        },
+        "eec5496b988ce98625b934092eec2908bed0b0f316c2d4730c84eaf1f3d34881": {
+          "name": "D-TRUST Root Class 3 CA 2 EV 2009",
+          "constraints": "sct_not_after_sec: 1780012799"
+        },
+        "efc65cadbb59adb6efe84da22311b35624b71b3b1ea0da8b6655174ec8978646": {
+          "name": "Telekom Security TLS RSA Root 2023",
+          "constraints": "sct_not_after_sec: 1819670399"
+        },
+        "fd73dad31c644ff1b43bef0ccdda96710b9cd9875eca7e31707af3e96d522bbd": {
+          "name": "T-TeleSec GlobalRoot Class 3",
+          "constraints": "sct_not_after_sec: 1780012799"
+        },
+        "91e2f5788d5810eba7ba58737de1548a8ecacd014598bc0b143e041b17052552": {
+          "name": "T-TeleSec GlobalRoot Class 2",
+          "constraints": "sct_not_after_sec: 1780012799"
+        },
+        "578af4ded0853f4e5998db4aeaf9cbea8d945f60b620a38d1a3c13b2bc7ba8e1": {
+          "name": "Telekom Security TLS ECC Root 2020",
+          "constraints": "sct_not_after_sec: 1819670399"
+        },
+        "cb3ccbb76031e5e0138f8dd39a23f9de47ffc35e43c1144cea27d46a5ab1cb5f": {
+          "name": "DigiCert Global Root G2",
+          "constraints": "sct_not_after_sec: 1820966399"
+        },
+        "371a00dc0533b3721a7eeb40e8419e70799d2b0a0f2c1d80693165f7cec4ad75": {
+          "name": "DigiCert TLS RSA4096 Root G5",
+          "constraints": ""
+        },
+        "018e13f0772532cf809bd1b17281867283fc48c6e13be9c69812854a490c1b05": {
+          "name": "DigiCert TLS ECC P384 Root G5",
+          "constraints": ""
+        },
+        "7d05ebb682339f8c9451ee094eebfefa7953a114edb2f44949452fab7d2fc185": {
+          "name": "DigiCert Assured ID Root G2",
+          "constraints": "sct_not_after_sec: 1789430399"
+        },
+        "7e37cb8b4c47090cab36551ba6f45db840680fba166a952db100717f43053fc2": {
+          "name": "DigiCert Assured ID Root G3",
+          "constraints": "sct_not_after_sec: 1789430399"
+        },
+        "31ad6648f8104138c738f39ea4320133393e3a18cc02296ef97c2ac9ef6731d0": {
+          "name": "DigiCert Global Root G3",
+          "constraints": "sct_not_after_sec: 1820966399"
+        },
+        "552f7bdcf1a7af9e6ce672017f4f12abf77240c78e761ac203d1d9d20ac89988": {
+          "name": "DigiCert Trusted Root G4",
+          "constraints": "sct_not_after_sec: 1789430399"
+        },
+        "8fe4fb0af93a4d0d67db0bebb23e37c71bf325dcbcdd240ea04daf58b47e1840": {
+          "name": "QuoVadis Root CA 2 G3",
+          "constraints": "sct_not_after_sec: 1820966399"
+        },
+        "88ef81de202eb018452e43f864725cea5fbd1fc2d9d205730709c5d8b8690f46": {
+          "name": "QuoVadis Root CA 3 G3",
+          "constraints": "sct_not_after_sec: 1820966399"
+        },
+        "e23d4a036d7b70e9f595b1422079d2b91edfbb1fb651a0633eaa8a9dc5f80703": {
+          "name": "CA Disig Root R2",
+          "constraints": ""
+        },
+        "40f6af0346a99aa1cd1d555a4e9cce62c7f9634603ee406615833dc8c8d00367": {
+          "name": "emSign Root CA - G1",
+          "constraints": ""
+        },
+        "86a1ecba089c4a8d3bbe2734c612ba341d813e043cf9e8a862cd5c57a36bbe6b": {
+          "name": "emSign ECC Root CA - G3",
+          "constraints": ""
+        },
+        "bfff8fd04433487d6a8aa60c1a29767a9fc2bbb05e420f713a13b992891d3893": {
+          "name": "GDCA TrustAUTH R5 ROOT",
+          "constraints": ""
+        },
+        "cbb9c44d84b8043e1050ea31a69f514955d7bfd2e2c6b49301019ad61d9f5058": {
+          "name": "GlobalSign Root E46",
+          "constraints": ""
+        },
+        "2cabeafe37d06ca22aba7391c0033d25982952c453647349763a3ab5ad6ccf69": {
+          "name": "GlobalSign",
+          "constraints": "sct_not_after_sec: 1790812799"
+        },
+        "4fa3126d8d3a11d1c4855a4f807cbad6cf919d3a5a88b03bea2c6372d93c40c9": {
+          "name": "GlobalSign Root R46",
+          "constraints": ""
+        },
+        "179fbc148a3dd00fd24ea13458cc43bfa7f59c8182d783a513f6ebec100c8924": {
+          "name": "GlobalSign",
+          "constraints": "sct_not_after_sec: 1790812799"
+        },
+        "cbb522d7b7f127ad6a0113865bdf1cd4102e7d0759af635a7cf4720dc963c53b": {
+          "name": "GlobalSign",
+          "constraints": "sct_not_after_sec: 1790812799"
+        },
+        "45140b3247eb9cc8c5b4f0d7b53091f73292089e6e5a63e2749dd3aca9198eda": {
+          "name": "Go Daddy Root Certificate Authority - G2",
+          "constraints": ""
+        },
+        "2ce1cb0bf9d2f9e102993fbe215152c3b2dd0cabde1c68e5319b839154dbb7f5": {
+          "name": "Starfield Root Certificate Authority - G2",
+          "constraints": ""
+        },
+        "349dfa4058c5e263123b398ae795573c4e1313c83fe68f93556cd5e8031b3c7d": {
+          "name": "GTS Root R4",
+          "constraints": ""
+        },
+        "b085d70b964f191a73e4af0d54ae7a0e07aafdaf9b71dd0862138ab7325a24a2": {
+          "name": "GlobalSign",
+          "constraints": "sct_not_after_sec: 1820966399"
+        },
+        "d947432abde7b7fa90fc2e6b59101b1280e0e1c7e4e40fa3c6887fff57a7f4cf": {
+          "name": "GTS Root R1",
+          "constraints": ""
+        },
+        "5a2fc03f0c83b090bbfa40604b0988446c7636183df9846e17101a447fb8efd6": {
+          "name": "Hongkong Post Root CA 3",
+          "constraints": ""
+        },
+        "9a6ec012e1a7da9dbe34194d478ad7c0db1822fb071df12981496ed104384113": {
+          "name": "ACCVRAIZ1",
+          "constraints": ""
+        },
+        "ebc5570c29018c4d67b1aa127baf12f703b4611ebc17b7dab5573894179b93fa": {
+          "name": "AC RAIZ FNMT-RCM",
+          "constraints": ""
+        },
+        "554153b13d2cf9ddb753bfbe1a4e0ae08d0aa4187058fe60a2b862b2e4b87bcb": {
+          "name": "AC RAIZ FNMT-RCM SERVIDORES SEGUROS",
+          "constraints": ""
+        },
+        "46edc3689046d53a453fb3104ab80dcaec658b2660ea1629dd7e867990648716": {
+          "name": "TUBITAK Kamu SM SSL Kok Sertifikasi - Surum 1",
+          "constraints": ""
+        },
+        "3f99cc474acfce4dfed58794665e478d1547739f2e780f1bb4ca9b133097d401": {
+          "name": "HARICA TLS ECC Root CA 2021",
+          "constraints": ""
+        },
+        "d95d0e8eda79525bf9beb11b14d2100d3294985f0c62d9fabd9cd999eccb7b1d": {
+          "name": "HARICA TLS RSA Root CA 2021",
+          "constraints": ""
+        },
+        "5d56499be4d2e08bcfcad08a3e38723d50503bde706948e42f55603019e528ae": {
+          "name": "IdenTrust Commercial Root CA 1",
+          "constraints": ""
+        },
+        "69729b8e15a86efc177a57afb7171dfc64add28c2fca8cf1507e34453ccb1470": {
+          "name": "ISRG Root X2",
+          "constraints": ""
+        },
+        "96bcec06264976f37460779acf28c5a7cfe8a3c0aae11a8ffcee05c0bddf08c6": {
+          "name": "ISRG Root X1",
+          "constraints": ""
+        },
+        "8a71de6559336f426c26e53880d00d88a18da4c6a91f0dcb6194e206c5c96387": {
+          "name": "vTrus Root CA",
+          "constraints": "sct_not_after_sec: 1799971199"
+        },
+        "30fbba2c32238e2a98547af97931e550428b9b3f1c8eeb6633dcfa86c5b27dd3": {
+          "name": "vTrus ECC Root CA",
+          "constraints": "sct_not_after_sec: 1799971199"
+        },
+        "2530cc8e98321502bad96f9b1fba1b099e2d299e0f4548bb914f363bc0d4531f": {
+          "name": "Izenpe.com",
+          "constraints": "sct_not_after_sec: 1776211199"
+        },
+        "a1339d33281a0b56e557d3d32b1ce7f9367eb094bd5fa72a7e5004c8ded7cafe": {
+          "name": "SZAFIR ROOT CA2",
+          "constraints": ""
+        },
+        "b49141502d00663d740f2e7ec340c52800962666121a36d09cf7dd2b90384fb4": {
+          "name": "e-Szigno TLS Root CA 2023",
+          "constraints": ""
+        },
+        "3c5f81fea5fab82c64bfa2eaecafcde8e077fc8620a7cae537163df36edbf378": {
+          "name": "Microsec e-Szigno Root CA 2009",
+          "constraints": "sct_not_after_sec: 1790812799"
+        },
+        "beb00b30839b9bc32c32e4447905950641f26421b15ed089198b518ae2ea1b99": {
+          "name": "e-Szigno Root CA 2017",
+          "constraints": "sct_not_after_sec: 1790812799"
+        },
+        "c741f70f4b2a8d88bf2e71c14122ef53ef10eba0cfa5e64cfa20f418853073e0": {
+          "name": "Microsoft RSA Root Certificate Authority 2017",
+          "constraints": ""
+        },
+        "358df39d764af9e1b766e9c972df352ee15cfac227af6ad1d70e8e4a6edcba02": {
+          "name": "Microsoft ECC Root Certificate Authority 2017",
+          "constraints": ""
+        },
+        "88f438dcf8ffd1fa8f429115ffe5f82ae1e06e0c70c375faad717b34a49e7265": {
+          "name": "NAVER Global Root Certification Authority",
+          "constraints": ""
+        },
+        "eec997c0c30f216f7e3b8b307d2bae42412d753fc8219dafd1520b2572850f49": {
+          "name": "OISTE Server Root ECC G1",
+          "constraints": ""
+        },
+        "9ae36232a5189ffddb353dfd26520c015395d22777dac59db57b98c089a651e6": {
+          "name": "OISTE Server Root RSA G1",
+          "constraints": ""
+        },
+        "8560f91c3624daba9570b5fea0dbe36ff11a8323be9486854fb3f34a5571198d": {
+          "name": "OISTE WISeKey Global Root GC CA",
+          "constraints": "sct_not_after_sec: 1790812799"
+        },
+        "6b9c08e86eb0f767cfad65cd98b62149e5494a67f5845e7bd1ed019f27b86bd6": {
+          "name": "OISTE WISeKey Global Root GB CA",
+          "constraints": "sct_not_after_sec: 1790812799"
+        },
+        "e74fbda55bd564c473a36b441aa799c8a68e077440e8288b9fa1e50e4bbaca11": {
+          "name": "Security Communication ECC RootCA1",
+          "constraints": ""
+        },
+        "513b2cecb810d4cde5dd85391adfc6c2dd60d87bb736d2b521484aa47a0ebef6": {
+          "name": "Security Communication RootCA2",
+          "constraints": ""
+        },
+        "7bb647a62aeeac88bf257aa522d01ffea395e0ab45c73f93f65654ec38f25a06": {
+          "name": "Sectigo Public Server Authentication Root R46",
+          "constraints": ""
+        },
+        "c90f26f0fb1b4018b22227519b5ca2b53e2ca5b3be5cf18efe1bef47380c5383": {
+          "name": "Sectigo Public Server Authentication Root E46",
+          "constraints": ""
+        },
+        "1793927a0614549789adce2f8f34f7f0b66d0f3ae3a3b84d21ec15dbba4fadc7": {
+          "name": "COMODO ECC Certification Authority",
+          "constraints": "sct_not_after_sec: 1790812799"
+        },
+        "52f0e1c4e58ec629291b60317f074671b85d7ea80d5b07273463534b32b40234": {
+          "name": "COMODO RSA Certification Authority",
+          "constraints": "sct_not_after_sec: 1790812799"
+        },
+        "e793c9b02fd8aa13e21c31228accb08119643b749c898964b1746d46c3d4cbd2": {
+          "name": "USERTrust RSA Certification Authority",
+          "constraints": "sct_not_after_sec: 1790812799"
+        },
+        "4ff460d54b9c86dabfbcfc5712e0400d2bed3fbc4d4fbdaa86e06adcd2a9ad7a": {
+          "name": "USERTrust ECC Certification Authority",
+          "constraints": "sct_not_after_sec: 1790812799"
+        },
+        "9bea11c976fe014764c1be56a6f914b5a560317abd9988393382e5161aa0493c": {
+          "name": "UCA Global G2 Root",
+          "constraints": ""
+        },
+        "d43af9b35473755c9684fc06d7d8cb70ee5c28e773fb294eb41ee71722924d24": {
+          "name": "UCA Extended Validation Root",
+          "constraints": ""
+        },
+        "8faf7d2e2cb4709bb8e0b33666bf75a5dd45b5de480f8ea8d4bfe6bebc17f2ed": {
+          "name": "SSL.com TLS RSA Root CA 2022",
+          "constraints": ""
+        },
+        "c32ffd9f46f936d16c3673990959434b9ad60aafbb9e7cf33654f144cc1ba143": {
+          "name": "SSL.com TLS ECC Root CA 2022",
+          "constraints": ""
+        },
+        "2e7bf16cc22485a7bbe2aa8696750761b0ae39be3b2fe9d0cc6d4ef73491425c": {
+          "name": "SSL.com EV Root Certification Authority RSA R2",
+          "constraints": "sct_not_after_sec: 1781481599"
+        },
+        "22a2c1f7bded704cc1e701b5f408c310880fe956b5de2a4a44f99c873a25a7c8": {
+          "name": "SSL.com EV Root Certification Authority ECC",
+          "constraints": "sct_not_after_sec: 1781481599"
+        },
+        "85666a562ee0be5ce925c1d8890a6f76a87ec16d4d7d5f29ea7419cf20123b69": {
+          "name": "SSL.com Root Certification Authority RSA",
+          "constraints": "sct_not_after_sec: 1781481599"
+        },
+        "3417bb06cc6007da1b961c920b8ab4ce3fad820e4aa30b9acbc4a74ebdcebc65": {
+          "name": "SSL.com Root Certification Authority ECC",
+          "constraints": "sct_not_after_sec: 1781481599"
+        },
+        "193144f431e0fddb740717d4de926a571133884b4360d30e272913cbe660ce41": {
+          "name": "SwissSign RSA TLS Root CA 2022 - 1",
+          "constraints": "sct_not_after_sec: 1813017599"
+        },
+        "59769007f7685d0fcd50872f9f95d5755a5b2b457d81f3692b610a98672f0e1b": {
+          "name": "TWCA Global Root CA",
+          "constraints": "sct_not_after_sec: 1789430399"
+        },
+        "3f63bb2814be174ec8b6439cf08d6d56f0b7c405883a5648a334424d6b3ec558": {
+          "name": "TWCA CYBER Root CA",
+          "constraints": ""
+        },
+        "242b69742fcb1e5b2abf98898b94572187544e5b4d9911786573621f6a74b82c": {
+          "name": "Telia Root CA v2",
+          "constraints": ""
+        },
+        "06c08d7dafd876971eb1124fe67f847ec0c7a158d3ea53cbe940e2ea9791f4c3": {
+          "name": "TrustAsia TLS RSA Root CA",
+          "constraints": ""
+        },
+        "c0076b9ef0531fb1a656d67c4ebe97cd5dbaa41ef44598acc2489878c92d8711": {
+          "name": "TrustAsia TLS ECC Root CA",
+          "constraints": ""
+        }
+      }
+    },
+    {
+      "name": "Microsoft",
+      "source": "https://ccadb.my.salesforce-sites.com/ccadb/Report?Name=MicrosoftTLSServerAuthenticationCSV",
+      "certificates": {
+        "7a38f708a35a31e42e1cf3220f9a2d273e7666354618b2464657d43d8e77adc2": {
+          "name": "A-Trust-Root-09",
+          "constraints": ""
+        },
+        "8ac552ad577e37ad2c6808d72aa331d6a96b4b3febff34ce9bc0578e08055ec3": {
+          "name": "A-Trust-Root-07",
+          "constraints": ""
+        },
+        "4efaada2543e1e02666998574b3bad96ae264088fa5917f75d32e7a609d1869c": {
+          "name": "Actalis TLS Server ECC Root CA 2025",
+          "constraints": ""
+        },
+        "55926084ec963a64b96e2abe01ce0ba86a64fbfebcc7aab5afc155b37fd76066": {
+          "name": "Actalis Authentication Root CA",
+          "constraints": ""
+        },
+        "6d0e47dfde7cf48308cd4c6c1517dd1af033dcc72bb0501c04268b03b58a9085": {
+          "name": "Actalis TLS Server RSA Root CA 2025",
+          "constraints": ""
+        },
+        "2e44102ab58cb85419451c8e19d9acf3662cafbc614b6a53960a30f7d0e2eb41": {
+          "name": "TunTrust Root CA",
+          "constraints": ""
+        },
+        "18ce6cfe7bf14e60b2e347b8dfe868cb31d02ebb3ada271569f50343b46db3a4": {
+          "name": "Amazon Root CA 3",
+          "constraints": ""
+        },
+        "568d6905a2c88708a4b3025190edcfedb1974a606a13c6e5290fcb2ae63edab5": {
+          "name": "Starfield Services Root Certificate Authority - G2",
+          "constraints": "Microsoft Not Before EKU List: Code Signing\nMicrosoft Not Before Date: 8/1/2021"
+        },
+        "e35d28419ed02025cfa69038cd623962458da5c695fbdea3c22b0bfb25897092": {
+          "name": "Amazon Root CA 4",
+          "constraints": "Microsoft Not Before EKU List: Code Signing\nMicrosoft Not Before Date: 8/1/2021"
+        },
+        "8ecde6884f3d87b1125ba31ac3fcb13d7016de7f57cc904fe1cb97c6ae98196e": {
+          "name": "Amazon Root CA 1",
+          "constraints": ""
+        },
+        "1ba5b2aa8c65401a82960118f80bec4f62304d83cec4713a19c39c011ea46db4": {
+          "name": "Amazon Root CA 2",
+          "constraints": "Microsoft Not Before EKU List: Code Signing\nMicrosoft Not Before Date: 8/1/2021"
+        },
+        "ed12a6e9289239d66ca1d244ce90c623ac305ad05602da352bcfc5fef2c4458d": {
+          "name": "Certum TLS RSA Root CA",
+          "constraints": ""
+        },
+        "fe7696573855773e37a95e7ad4d9cc96c30157c15d31765ba9b15704e1ae78fd": {
+          "name": "Certum Trusted Root CA",
+          "constraints": ""
+        },
+        "630ccb83b0180a992495e039d2613c3287a8102f8a8d703db1330a3e86d4e653": {
+          "name": "Certum TLS ECC Root CA",
+          "constraints": ""
+        },
+        "6b328085625318aa50d173c98d8bda09d57e27413d114cf787a0f5d06c030cf6": {
+          "name": "Certum EC-384 CA",
+          "constraints": ""
+        },
+        "b676f2eddae8775cd36cb0f63cd1d4603961f49e6265ba013a2f0307b6d0b804": {
+          "name": "Certum Trusted Network CA 2",
+          "constraints": ""
+        },
+        "5c58468d55f58e497e743982d2b50010b6d165374acf83a7d4a32db768c4408e": {
+          "name": "Certum Trusted Network CA",
+          "constraints": ""
+        },
+        "81a9088ea59fb364c548a6f85559099b6f0405efbf18e5324ec9f457ba00112f": {
+          "name": "Atos TrustedRoot Root CA RSA TLS 2021",
+          "constraints": ""
+        },
+        "b2fae53e14ccd7ab9212064701ae279c1d8988facb775fa8a008914e663988a8": {
+          "name": "Atos TrustedRoot Root CA ECC TLS 2021",
+          "constraints": ""
+        },
+        "f356bea244b7a91eb35d53ca9ad7864ace018e2d35d5f8f96ddf68a6f41aa474": {
+          "name": "Atos TrustedRoot 2011",
+          "constraints": "Microsoft Not Before EKU List: OCSP Signing\nMicrosoft Not Before Date: 6/1/2020"
+        },
+        "04048028bf1f2864d48f9ad4d83294366a828856553f3b14303f90147f5d40ef": {
+          "name": "Autoridad de Certificacion Firmaprofesional CIF A62634068",
+          "constraints": "Microsoft Not Before EKU List: Code Signing;Secure Email\nMicrosoft Not Before Date: 5/19/2026"
+        },
+        "57de0583efd2b26e0361da99da9df4648def7ee8441c3b728afa9bcde0f9b26a": {
+          "name": "Autoridad de Certificacion Firmaprofesional CIF A62634068",
+          "constraints": ""
+        },
+        "9a114025197c5bb95d94e63d55cd43790847b646b23cdf11ada4a00eff15fb48": {
+          "name": "Buypass Class 2 Root CA",
+          "constraints": "Microsoft Not Before EKU List: Encrypting File System;IP Security Tunnel Termination;IP Security User;OCSP Signing;Secure Email\nMicrosoft Not Before Date: 9/15/2025"
+        },
+        "edf7ebbca27a2a384d387b7d4010c666e2edb4843e4c29b4ae1d5b9332e6b24d": {
+          "name": "Buypass Class 3 Root CA",
+          "constraints": "Microsoft Not Before EKU List: OCSP Signing;Secure Email\nMicrosoft Not Before Date: 9/15/2025"
+        },
+        "d48d3d23eedb50a459e55197601c27774b9d7b18c94d5a059511a10250b93168": {
+          "name": "Certigna Root CA",
+          "constraints": ""
+        },
+        "e3b6a2db2ed7ce48842f7ac53241c7b71d54144bfb40c11f3f1d0b42f5eea12d": {
+          "name": "Certigna",
+          "constraints": "Microsoft Not Before EKU List: OCSP Signing\nMicrosoft Not Before Date: 10/1/2019\nMicrosoft Disallow EKU List: OCSP Signing"
+        },
+        "657cfe2fa73faa38462571f332a2363a46fce7020951710702cdfbb6eeda3305": {
+          "name": "certSIGN ROOT CA G2",
+          "constraints": "Microsoft Not Before EKU List: Secure Email\nMicrosoft Not Before Date: 9/15/2025"
+        },
+        "5cc3d78e4e1d5e45547a04e6873e64f90cf9536d1ccc2ef800f355c4c5fd70fd": {
+          "name": "CFCA EV ROOT",
+          "constraints": "Microsoft Not Before EKU List: Code Signing;Encrypting File System;IP Security End System;IP Security Tunnel Termination;IP Security User;Secure Email\nMicrosoft Not Before Date: 5/19/2026\nMicrosoft Disallow EKU List: OCSP Signing"
+        },
+        "f015ce3cc239bfef064be9f1d2c417e1a0264a0a94be1f0c8d121864eb6949cc": {
+          "name": "HiPKI Root CA - G1",
+          "constraints": ""
+        },
+        "2605875afcc176b2d66dd66a995d7f8d5ebb86ce120d0e7e9e7c6ef294a27d4c": {
+          "name": "ComSign Global Root CA",
+          "constraints": "Microsoft Not Before EKU List: OCSP Signing;Secure Email\nMicrosoft Not Before Date: 5/19/2026"
+        },
+        "4b009c1034494f9ab56bba3ba1d62731fc4d20d8955adcec10a925607261e338": {
+          "name": "SecureSign Root CA14",
+          "constraints": "Microsoft Not Before EKU List: Secure Email\nMicrosoft Not Before Date: 5/19/2026"
+        },
+        "e778f0f095fe843729cd1a0082179e5314a9c291442805e1fb1d8fb6b8886c3a": {
+          "name": "SecureSign Root CA15",
+          "constraints": "Microsoft Not Before EKU List: Secure Email\nMicrosoft Not Before Date: 5/19/2026"
+        },
+        "eec5496b988ce98625b934092eec2908bed0b0f316c2d4730c84eaf1f3d34881": {
+          "name": "D-TRUST Root Class 3 CA 2 EV 2009",
+          "constraints": "Microsoft Not Before EKU List: Code Signing;Secure Email;Time Stamping\nMicrosoft Not Before Date: 9/15/2025"
+        },
+        "49e7a442acf0ea6287050054b52564b650e4f49e42e348d6aa38e039e957b1c1": {
+          "name": "D-TRUST Root Class 3 CA 2 2009",
+          "constraints": "Microsoft Not Before EKU List: Code Signing;Secure Email;Time Stamping\nMicrosoft Not Before Date: 9/15/2025"
+        },
+        "0552e6f83fdf65e8fa9670e666df28a4e21340b510cbe52566f97c4fb94b2bd1": {
+          "name": "D-TRUST BR Root CA 2 2023",
+          "constraints": ""
+        },
+        "8e8221b2e7d4007836a1672f0dcc299c33bc07d316f132fa1a206d587150f1ce": {
+          "name": "D-TRUST EV Root CA 2 2023",
+          "constraints": ""
+        },
+        "e59aaa816009c22bff5b25bad37df306f049797c1f81d85ab089e657bd8f0044": {
+          "name": "D-TRUST BR Root CA 1 2020",
+          "constraints": ""
+        },
+        "08170d1aa36453901a2f959245e347db0c8d37abaabc56b81aa100dc958970db": {
+          "name": "D-TRUST EV Root CA 1 2020",
+          "constraints": ""
+        },
+        "209e956af04df3996507c887d356230d6eb49fdbdd2d8a058ff50b8f80f690aa": {
+          "name": "Australian Defence Public Root CA",
+          "constraints": "Microsoft Not Before EKU List: Code Signing\nMicrosoft Not Before Date: 6/1/2020"
+        },
+        "efc65cadbb59adb6efe84da22311b35624b71b3b1ea0da8b6655174ec8978646": {
+          "name": "Telekom Security TLS RSA Root 2023",
+          "constraints": ""
+        },
+        "fd73dad31c644ff1b43bef0ccdda96710b9cd9875eca7e31707af3e96d522bbd": {
+          "name": "T-TeleSec GlobalRoot Class 3",
+          "constraints": "Microsoft Not Before EKU List: OCSP Signing;Secure Email\nMicrosoft Not Before Date: 9/15/2025\nMicrosoft Disallow EKU List: OCSP Signing"
+        },
+        "578af4ded0853f4e5998db4aeaf9cbea8d945f60b620a38d1a3c13b2bc7ba8e1": {
+          "name": "Telekom Security TLS ECC Root 2020",
+          "constraints": ""
+        },
+        "91e2f5788d5810eba7ba58737de1548a8ecacd014598bc0b143e041b17052552": {
+          "name": "T-TeleSec GlobalRoot Class 2",
+          "constraints": ""
+        },
+        "cb3ccbb76031e5e0138f8dd39a23f9de47ffc35e43c1144cea27d46a5ab1cb5f": {
+          "name": "DigiCert Global Root G2",
+          "constraints": "Microsoft Not Before EKU List: Code Signing\nMicrosoft Not Before Date: 8/1/2021"
+        },
+        "68ad50909b04363c605ef13581a939ff2c96372e3f12325b0a6861e1d59f6603": {
+          "name": "Verizon Global Root CA",
+          "constraints": "Microsoft Not Before EKU List: Code Signing\nMicrosoft Not Before Date: 8/1/2021"
+        },
+        "371a00dc0533b3721a7eeb40e8419e70799d2b0a0f2c1d80693165f7cec4ad75": {
+          "name": "DigiCert TLS RSA4096 Root G5",
+          "constraints": ""
+        },
+        "018e13f0772532cf809bd1b17281867283fc48c6e13be9c69812854a490c1b05": {
+          "name": "DigiCert TLS ECC P384 Root G5",
+          "constraints": ""
+        },
+        "e46a392204a8dca342a71c1ca9a60c9185b9a930370120c3b9c7e3856f0d8f3b": {
+          "name": "DigiCert RSA4096 Root G5",
+          "constraints": ""
+        },
+        "c1468cf2254e6004b24696aba209d1a30ba6e2dff68a9a4e32c6ab414f90c8d9": {
+          "name": "DigiCert ECC P384 Root G5",
+          "constraints": ""
+        },
+        "88ef81de202eb018452e43f864725cea5fbd1fc2d9d205730709c5d8b8690f46": {
+          "name": "QuoVadis Root CA 3 G3",
+          "constraints": "Microsoft Not Before EKU List: Code Signing;OCSP Signing\nMicrosoft Not Before Date: 8/1/2021"
+        },
+        "18f1fc7f205df8adddeb7fe007dd57e3af375a9c4d8d73546bf4f1fed1e18d35": {
+          "name": "QuoVadis Root CA 3",
+          "constraints": "Microsoft Not Before EKU List: Code Signing;OCSP Signing\nMicrosoft Not Before Date: 8/1/2021"
+        },
+        "8fe4fb0af93a4d0d67db0bebb23e37c71bf325dcbcdd240ea04daf58b47e1840": {
+          "name": "QuoVadis Root CA 2 G3",
+          "constraints": "Microsoft Not Before EKU List: OCSP Signing\nMicrosoft Not Before Date: 6/1/2020"
+        },
+        "85a0dd7dd720adb7ff05f83d542b209dc7ff4528f7d677b18389fea5e5c49e86": {
+          "name": "QuoVadis Root CA 2",
+          "constraints": "Microsoft Not Before EKU List: OCSP Signing\nMicrosoft Not Before Date: 6/1/2020"
+        },
+        "8a866fd1b276b57e578e921c65828a2bed58e9f2f288054134b7f1f4bfc9cc74": {
+          "name": "QuoVadis Root CA 1 G3",
+          "constraints": "Microsoft Not Before EKU List: Code Signing;OCSP Signing\nMicrosoft Not Before Date: 8/1/2021"
+        },
+        "552f7bdcf1a7af9e6ce672017f4f12abf77240c78e761ac203d1d9d20ac89988": {
+          "name": "DigiCert Trusted Root G4",
+          "constraints": ""
+        },
+        "6e1fd3ae0d2d477c8f5ee5f335cc5b6356872654e5356a73d8c0a30a17c252a2": {
+          "name": "QuoVadis TLS ECC P384 Root G4",
+          "constraints": ""
+        },
+        "c8a2d38a24f5ac302d8a08ebd38923d9a750b49220f092e82d1c53249e1533d0": {
+          "name": "QuoVadis TLS RSA 4096 Root G4",
+          "constraints": ""
+        },
+        "7431e5f4c3c1ce4690774f0b61e05440883ba9a01ed00ba6abd7806ed3b118cf": {
+          "name": "DigiCert High Assurance EV Root CA",
+          "constraints": ""
+        },
+        "31ad6648f8104138c738f39ea4320133393e3a18cc02296ef97c2ac9ef6731d0": {
+          "name": "DigiCert Global Root G3",
+          "constraints": ""
+        },
+        "4348a0e9444c78cb265e058d5e8944b4d84f9662bd26db257f8934a443c70161": {
+          "name": "DigiCert Global Root CA",
+          "constraints": "Microsoft Not Before EKU List: Code Signing\nMicrosoft Not Before Date: 8/1/2021"
+        },
+        "7e37cb8b4c47090cab36551ba6f45db840680fba166a952db100717f43053fc2": {
+          "name": "DigiCert Assured ID Root G3",
+          "constraints": "Microsoft Not Before EKU List: Code Signing\nMicrosoft Not Before Date: 8/1/2021"
+        },
+        "7d05ebb682339f8c9451ee094eebfefa7953a114edb2f44949452fab7d2fc185": {
+          "name": "DigiCert Assured ID Root G2",
+          "constraints": ""
+        },
+        "3e9099b5015e8f486c00bcea9d111ee721faba355a89bcf1df69561e3dc6325c": {
+          "name": "DigiCert Assured ID Root CA",
+          "constraints": ""
+        },
+        "6248199fea4811fd34aa96ef0a26de52134b73a9a2a99678f0c2ebadf8663ef8": {
+          "name": "CA Disig TLS Root R3",
+          "constraints": ""
+        },
+        "e23d4a036d7b70e9f595b1422079d2b91edfbb1fb651a0633eaa8a9dc5f80703": {
+          "name": "CA Disig Root R2",
+          "constraints": "Microsoft Not Before EKU List: Code Signing\nMicrosoft Not Before Date: 6/1/2020"
+        },
+        "2a99f5bc1174b73cbb1d620884e01c34e51ccb3978da125f0e33268883bf4158": {
+          "name": "Certinomis - Root CA",
+          "constraints": ""
+        },
+        "5e3571f33f45a7df1537a68b5ffb9e036af9d2f5bc4c9717130dc43d7175aac7": {
+          "name": "GLOBALTRUST",
+          "constraints": "Microsoft Not Before EKU List: Encrypting File System;IP Security End System;IP Security Tunnel Termination;IP Security User\nMicrosoft Not Before Date: 8/1/2020\nMicrosoft Disallow EKU List: OCSP Signing"
+        },
+        "416b1f9e84e74c1d19b23d8d7191c6ad81246e641601f599132729f507beb3cc": {
+          "name": "GLOBALTRUST 2015",
+          "constraints": ""
+        },
+        "9a296a5182d1d451a2e37f439b74daafa267523329f90f9a0d2007c334e23c9a": {
+          "name": "GLOBALTRUST 2020",
+          "constraints": ""
+        },
+        "1501f89c5c4dcf36cf588a17c9fd7cfceb9ee01e8729be355e25de80eb6284b4": {
+          "name": "CAEDICOM Root",
+          "constraints": "Microsoft Not Before EKU List: Code Signing;Secure Email\nMicrosoft Not Before Date: 9/15/2025"
+        },
+        "86a1ecba089c4a8d3bbe2734c612ba341d813e043cf9e8a862cd5c57a36bbe6b": {
+          "name": "emSign ECC Root CA - G3",
+          "constraints": ""
+        },
+        "125609aa301da0a249b97a8239cb6a34216f44dcac9f3954b14292f2e8c8608f": {
+          "name": "emSign Root CA - C1",
+          "constraints": ""
+        },
+        "40f6af0346a99aa1cd1d555a4e9cce62c7f9634603ee406615833dc8c8d00367": {
+          "name": "emSign Root CA - G1",
+          "constraints": ""
+        },
+        "bc4d809b15189d78db3e1d8cf4f9726a795da1643ca5f1358e1ddb0edc0d7eb3": {
+          "name": "emSign ECC Root CA - C3",
+          "constraints": ""
+        },
+        "cef71e70b7c29addf6c30cd19e614b38fd5f02a435a0eeddd0087e183d101a51": {
+          "name": "emSign Root TLS CA - G1",
+          "constraints": ""
+        },
+        "7dd78d5f4f13459a83dff9abbba62edbaf6f2d102bf257fd712f4d9f2746ed8d": {
+          "name": "emSign Root TLS CA - G3",
+          "constraints": ""
+        },
+        "5ab4fcdb180b5b6af0d262a2375a2c77d25602015d96648756611e2e78c53ad3": {
+          "name": "Fina Root CA",
+          "constraints": ""
+        },
+        "bfff8fd04433487d6a8aa60c1a29767a9fc2bbb05e420f713a13b992891d3893": {
+          "name": "GDCA TrustAUTH R5 ROOT",
+          "constraints": "Microsoft Not Before EKU List: Encrypting File System;Secure Email\nMicrosoft Not Before Date: 5/19/2026"
+        },
+        "cbb522d7b7f127ad6a0113865bdf1cd4102e7d0759af635a7cf4720dc963c53b": {
+          "name": "GlobalSign",
+          "constraints": ""
+        },
+        "cbb9c44d84b8043e1050ea31a69f514955d7bfd2e2c6b49301019ad61d9f5058": {
+          "name": "GlobalSign Root E46",
+          "constraints": ""
+        },
+        "4fa3126d8d3a11d1c4855a4f807cbad6cf919d3a5a88b03bea2c6372d93c40c9": {
+          "name": "GlobalSign Root R46",
+          "constraints": ""
+        },
+        "2cabeafe37d06ca22aba7391c0033d25982952c453647349763a3ab5ad6ccf69": {
+          "name": "GlobalSign",
+          "constraints": "Microsoft Not Before EKU List: Code Signing;OCSP Signing\nMicrosoft Not Before Date: 8/1/2021\nMicrosoft Disallow EKU List: OCSP Signing"
+        },
+        "179fbc148a3dd00fd24ea13458cc43bfa7f59c8182d783a513f6ebec100c8924": {
+          "name": "GlobalSign",
+          "constraints": "Microsoft Not Before EKU List: Code Signing\nMicrosoft Not Before Date: 8/1/2021"
+        },
+        "ebd41040e4bb3ec742c9e381d31ef2a41a48b6685c96e7cef3c1df6cd4331c99": {
+          "name": "GlobalSign Root CA",
+          "constraints": "Microsoft Not Before EKU List: OCSP Signing\nMicrosoft Not Before Date: 10/1/2019\nMicrosoft Disallow EKU List: OCSP Signing"
+        },
+        "1465fa205397b876faa6f0a9958e5590e40fcc7faa4fb7c2c8677521fb5fb658": {
+          "name": "Starfield Class 2 Certification Authority",
+          "constraints": "Microsoft Not Before EKU List: Code Signing;Secure Email\nMicrosoft Not Before Date: 5/19/2026"
+        },
+        "45140b3247eb9cc8c5b4f0d7b53091f73292089e6e5a63e2749dd3aca9198eda": {
+          "name": "Go Daddy Root Certificate Authority - G2",
+          "constraints": "Microsoft Not Before EKU List: Code Signing;Secure Email\nMicrosoft Not Before Date: 5/19/2026"
+        },
+        "c3846bf24b9e93ca64274c0ec67c1ecc5e024ffcacd2d74019350e81fe546ae4": {
+          "name": "Go Daddy Class 2 Certification Authority",
+          "constraints": "Microsoft Not Before EKU List: Code Signing;Secure Email\nMicrosoft Not Before Date: 5/19/2026"
+        },
+        "2ce1cb0bf9d2f9e102993fbe215152c3b2dd0cabde1c68e5319b839154dbb7f5": {
+          "name": "Starfield Root Certificate Authority - G2",
+          "constraints": "Microsoft Not Before EKU List: Code Signing;Secure Email\nMicrosoft Not Before Date: 5/19/2026"
+        },
+        "25cf3da8e9b97addbf92543c2b82527c8a4e2cff2062a6483040d4b64ace719f": {
+          "name": "GoDaddy TLS Root CA - R1",
+          "constraints": ""
+        },
+        "97366da00baf6730a84d1a8cba5bad7961c46bce707e09241cc9c4c7e3c64f10": {
+          "name": "Starfield TLS Root CA - R1",
+          "constraints": ""
+        },
+        "71cca5391f9e794b04802530b363e121da8a3043bb26662fea4dca7fc951a4bd": {
+          "name": "GTS Root R4",
+          "constraints": ""
+        },
+        "34d8a73ee208d9bcdb0d956520934b4e40e69482596e8b6f73c8426b010a6f48": {
+          "name": "GTS Root R3",
+          "constraints": ""
+        },
+        "b085d70b964f191a73e4af0d54ae7a0e07aafdaf9b71dd0862138ab7325a24a2": {
+          "name": "GlobalSign",
+          "constraints": ""
+        },
+        "d947432abde7b7fa90fc2e6b59101b1280e0e1c7e4e40fa3c6887fff57a7f4cf": {
+          "name": "GTS Root R1",
+          "constraints": ""
+        },
+        "8d25cd97229dbf70356bda4eb3cc734031e24cf00fafcfd32dc76eb5841c7ea8": {
+          "name": "GTS Root R2",
+          "constraints": ""
+        },
+        "349dfa4058c5e263123b398ae795573c4e1313c83fe68f93556cd5e8031b3c7d": {
+          "name": "GTS Root R4",
+          "constraints": ""
+        },
+        "bec94911c2955676db6c0a550986d76e3ba005667c442c9762b4fbb773de228c": {
+          "name": "GlobalSign",
+          "constraints": "Microsoft Not Before EKU List: Code Signing\nMicrosoft Not Before Date: 6/1/2020"
+        },
+        "2a575471e31340bc21581cbd2cf13e158463203ece94bcf9d3cc196bf09a5472": {
+          "name": "GTS Root R1",
+          "constraints": ""
+        },
+        "c45d7bb08e6d67e62e4235110b564e5f78fd92ef058c840aea4e6455d7585c60": {
+          "name": "GTS Root R2",
+          "constraints": ""
+        },
+        "15d5b8774619ea7d54ce1ca6d0b0c403e037a917f131e8a04e1e6b7a71babce5": {
+          "name": "GTS Root R3",
+          "constraints": ""
+        },
+        "6e0bff069a26994c15de2c4888cc54af84882e5495b7fbf66be9ccffec7489f6": {
+          "name": "Autoridade Certificadora Raiz Brasileira v10",
+          "constraints": ""
+        },
+        "5546a52504fba74f61ffd4890067529ade3b9c9d07e502592831ccda9b369fd3": {
+          "name": "DVV Gov. Root CA - G3 ECC",
+          "constraints": ""
+        },
+        "34ff2a4409dc1383e9f8966e8adfe5719eba373fd0ad5e2f49f90ee07cf5d4c1": {
+          "name": "VRK Gov. Root CA - G2",
+          "constraints": "Microsoft Not Before EKU List: Secure Email\nMicrosoft Not Before Date: 9/15/2025"
+        },
+        "d3ed3fc40ad26b52e001e1e18f4b9449529deb75a81d5eb680d7b62db23ba96d": {
+          "name": "DVV Gov. Root CA - G3 RSA",
+          "constraints": ""
+        },
+        "5a2fc03f0c83b090bbfa40604b0988446c7636183df9846e17101a447fb8efd6": {
+          "name": "Hongkong Post Root CA 3",
+          "constraints": "Microsoft Not Before EKU List: OCSP Signing\nMicrosoft Not Before Date: 10/1/2019\nMicrosoft Disallow EKU List: OCSP Signing"
+        },
+        "b724689b79b2ef9421ef8f5cc733eb093851b170ee715177005a09f226d8c91a": {
+          "name": "CCA India 2022 SPL",
+          "constraints": ""
+        },
+        "1cf341ae35341ac3ae1dc68d5b10dc0c9dc1307656f75fd92ca2c68489d52e9a": {
+          "name": "MOIS SSL Root CA",
+          "constraints": ""
+        },
+        "9a6ec012e1a7da9dbe34194d478ad7c0db1822fb071df12981496ed104384113": {
+          "name": "ACCVRAIZ1",
+          "constraints": "Microsoft Not Before EKU List: Code Signing;Secure Email\nMicrosoft Not Before Date: 9/15/2025"
+        },
+        "ebc5570c29018c4d67b1aa127baf12f703b4611ebc17b7dab5573894179b93fa": {
+          "name": "AC RAIZ FNMT-RCM",
+          "constraints": ""
+        },
+        "fc23ddfb7aa505d605b2f492fa1587e3738a074a17c0cf06fadfc725650fa42a": {
+          "name": "AC RAIZ FNMT-RCM SERVIDORES SEGUROS G2R",
+          "constraints": ""
+        },
+        "554153b13d2cf9ddb753bfbe1a4e0ae08d0aa4187058fe60a2b862b2e4b87bcb": {
+          "name": "AC RAIZ FNMT-RCM SERVIDORES SEGUROS",
+          "constraints": ""
+        },
+        "46edc3689046d53a453fb3104ab80dcaec658b2660ea1629dd7e867990648716": {
+          "name": "TUBITAK Kamu SM SSL Kok Sertifikasi - Surum 1",
+          "constraints": ""
+        },
+        "d7ba3f4ff8ad05633451470dda3378a3491b90005e5c687d2b68d53647cfdd66": {
+          "name": "Halcom Root Certificate Authority",
+          "constraints": "Microsoft Not Before EKU List: Code Signing;Secure Email\nMicrosoft Not Before Date: 5/19/2026"
+        },
+        "44b545aa8a25e65a73ca15dc27fc36d24c1cb9953a066539b11582dc487b4833": {
+          "name": "Hellenic Academic and Research Institutions ECC RootCA 2015",
+          "constraints": "Microsoft Not Before EKU List: Secure Email\nMicrosoft Not Before Date: 9/15/2025"
+        },
+        "3f99cc474acfce4dfed58794665e478d1547739f2e780f1bb4ca9b133097d401": {
+          "name": "HARICA TLS ECC Root CA 2021",
+          "constraints": ""
+        },
+        "a040929a02ce53b4acf4f2ffc6981ce4496f755e6d45fe0b2a692bcd52523f36": {
+          "name": "Hellenic Academic and Research Institutions RootCA 2015",
+          "constraints": "Microsoft Not Before EKU List: Secure Email\nMicrosoft Not Before Date: 9/15/2025"
+        },
+        "d95d0e8eda79525bf9beb11b14d2100d3294985f0c62d9fabd9cd999eccb7b1d": {
+          "name": "HARICA TLS RSA Root CA 2021",
+          "constraints": ""
+        },
+        "4c53d6746d9502530d235a82f9cf8382f5779d5ddddbd373abe1724fc1efe796": {
+          "name": "IdenTrust Commercial Root TLS RSA CA 2",
+          "constraints": ""
+        },
+        "30d0895a9a448a262091635522d1f52010b5867acae12c78ef958fd4f4389f2f": {
+          "name": "IdenTrust Public Sector Root CA 1",
+          "constraints": "Microsoft Not Before EKU List: Encrypting File System\nMicrosoft Not Before Date: 8/1/2020"
+        },
+        "983d826ba9c87f653ff9e8384c5413e1d59acf19ddc9c98cecae5fdea2ac229c": {
+          "name": "IdenTrust Commercial Root TLS ECC CA 2",
+          "constraints": ""
+        },
+        "5d56499be4d2e08bcfcad08a3e38723d50503bde706948e42f55603019e528ae": {
+          "name": "IdenTrust Commercial Root CA 1",
+          "constraints": ""
+        },
+        "69729b8e15a86efc177a57afb7171dfc64add28c2fca8cf1507e34453ccb1470": {
+          "name": "ISRG Root X2",
+          "constraints": ""
+        },
+        "96bcec06264976f37460779acf28c5a7cfe8a3c0aae11a8ffcee05c0bddf08c6": {
+          "name": "ISRG Root X1",
+          "constraints": ""
+        },
+        "2530cc8e98321502bad96f9b1fba1b099e2d299e0f4548bb914f363bc0d4531f": {
+          "name": "Izenpe.com",
+          "constraints": ""
+        },
+        "a1339d33281a0b56e557d3d32b1ce7f9367eb094bd5fa72a7e5004c8ded7cafe": {
+          "name": "SZAFIR ROOT CA2",
+          "constraints": ""
+        },
+        "3c5f81fea5fab82c64bfa2eaecafcde8e077fc8620a7cae537163df36edbf378": {
+          "name": "Microsec e-Szigno Root CA 2009",
+          "constraints": ""
+        },
+        "beb00b30839b9bc32c32e4447905950641f26421b15ed089198b518ae2ea1b99": {
+          "name": "e-Szigno Root CA 2017",
+          "constraints": ""
+        },
+        "b49141502d00663d740f2e7ec340c52800962666121a36d09cf7dd2b90384fb4": {
+          "name": "e-Szigno TLS Root CA 2023",
+          "constraints": ""
+        },
+        "c741f70f4b2a8d88bf2e71c14122ef53ef10eba0cfa5e64cfa20f418853073e0": {
+          "name": "Microsoft RSA Root Certificate Authority 2017",
+          "constraints": ""
+        },
+        "358df39d764af9e1b766e9c972df352ee15cfac227af6ad1d70e8e4a6edcba02": {
+          "name": "Microsoft ECC Root Certificate Authority 2017",
+          "constraints": ""
+        },
+        "49a2762987788d4834b32305d767760f244d507742e8c2539fd4ca3ad52c16ee": {
+          "name": "NAVER Cloud Trust Services RSA Root G1",
+          "constraints": ""
+        },
+        "a7c8681042f3675aa8505d3ba313d80f8ac3250fdf874ad29b834689c087fb11": {
+          "name": "NAVER Cloud Trust Services ECC Root G1",
+          "constraints": ""
+        },
+        "88f438dcf8ffd1fa8f429115ffe5f82ae1e06e0c70c375faad717b34a49e7265": {
+          "name": "NAVER Global Root Certification Authority",
+          "constraints": "Microsoft Not Before EKU List: Secure Email\nMicrosoft Not Before Date: 5/19/2026"
+        },
+        "eb7e05aa58e7bd328a282bf8867033f3c035342b516ee85c01673dffffbbfe58": {
+          "name": "NetLock Platina (Class Platinum) F\u0151tan\u00fas\u00edtv\u00e1ny",
+          "constraints": "Microsoft Not Before EKU List: Code Signing\nMicrosoft Not Before Date: 8/1/2021"
+        },
+        "6c61dac3a2def031506be036d2a6fe401994fbd13df9c8d466599274c446ec98": {
+          "name": "NetLock Arany (Class Gold) F\u0151tan\u00fas\u00edtv\u00e1ny",
+          "constraints": "Microsoft Not Before EKU List: Code Signing\nMicrosoft Not Before Date: 2/1/2022"
+        },
+        "65353833cf234c79562164f90849c0d104dbabf8ee41064d83e8cbe03ba1c5a5": {
+          "name": "Netrust Root CA 2",
+          "constraints": "Microsoft Not Before EKU List: OCSP Signing\nMicrosoft Not Before Date: 6/1/2020"
+        },
+        "8560f91c3624daba9570b5fea0dbe36ff11a8323be9486854fb3f34a5571198d": {
+          "name": "OISTE WISeKey Global Root GC CA",
+          "constraints": "Microsoft Not Before EKU List: Code Signing;Document Signing;Encrypting File System;Secure Email;Time Stamping\nMicrosoft Not Before Date: 9/15/2026"
+        },
+        "6b9c08e86eb0f767cfad65cd98b62149e5494a67f5845e7bd1ed019f27b86bd6": {
+          "name": "OISTE WISeKey Global Root GB CA",
+          "constraints": "Microsoft Not Before EKU List: Code Signing\nMicrosoft Not Before Date: 10/1/2019"
+        },
+        "7a77c6c61eeeb9aa65c4ea410d65d895b26a81123283009db104b48de80b2479": {
+          "name": "OATI WebCARES Root CA",
+          "constraints": "Microsoft Not Before EKU List: Secure Email\nMicrosoft Not Before Date: 5/19/2026"
+        },
+        "30f4e5dd679fde8fd11eb6e0c531615c438b06edd9f59cbab49680aa2b6990d9": {
+          "name": "OATI webCARES Server Root CA",
+          "constraints": ""
+        },
+        "ac7f7862e685c7a7d9826a58ea32d183d4893fcc8f8fd6d900c9769a987e77f0": {
+          "name": "PostSignum Root QCA 4",
+          "constraints": "Microsoft Not Before EKU List: OCSP Signing\nMicrosoft Not Before Date: 10/1/2019\nMicrosoft Disallow EKU List: OCSP Signing"
+        },
+        "f9a17a00e5c294ba9614a715819af57f3fd48cc413453fbb8a5fc7e97964e2bc": {
+          "name": "I.CA TLS Root CA/RSA 05/2022",
+          "constraints": ""
+        },
+        "1435f225c5d252d7a21948cc3ce62aecfa88001e3dd72d1cc3555100eb372f93": {
+          "name": "SECOM TLS RSA Root CA 2024",
+          "constraints": ""
+        },
+        "513b2cecb810d4cde5dd85391adfc6c2dd60d87bb736d2b521484aa47a0ebef6": {
+          "name": "Security Communication RootCA2",
+          "constraints": "Microsoft Not Before EKU List: Code Signing\nMicrosoft Not Before Date: 9/15/2026"
+        },
+        "e74fbda55bd564c473a36b441aa799c8a68e077440e8288b9fa1e50e4bbaca11": {
+          "name": "Security Communication ECC RootCA1",
+          "constraints": "Microsoft Not Before EKU List: Code Signing;Document Signing;Secure Email;Time Stamping\nMicrosoft Not Before Date: 9/15/2025"
+        },
+        "6ab2ab75f51cb4f4f0156203fbf6f646232f514be059f62833308b82b4d72db1": {
+          "name": "SECOM TLS ECC Root CA 2024",
+          "constraints": ""
+        },
+        "d7a7a0fb5d7e2731d771e9484ebcdef71d5f0c3e0a2948782bc83ee0ea699ef4": {
+          "name": "AAA Certificate Services",
+          "constraints": ""
+        },
+        "1a0d20445de5ba1862d19ef880858cbce50102b36e8f0a040c3c69e74522fe6e": {
+          "name": "COMODO Certification Authority",
+          "constraints": ""
+        },
+        "4ff460d54b9c86dabfbcfc5712e0400d2bed3fbc4d4fbdaa86e06adcd2a9ad7a": {
+          "name": "USERTrust ECC Certification Authority",
+          "constraints": ""
+        },
+        "7bb647a62aeeac88bf257aa522d01ffea395e0ab45c73f93f65654ec38f25a06": {
+          "name": "Sectigo Public Server Authentication Root R46",
+          "constraints": ""
+        },
+        "c90f26f0fb1b4018b22227519b5ca2b53e2ca5b3be5cf18efe1bef47380c5383": {
+          "name": "Sectigo Public Server Authentication Root E46",
+          "constraints": ""
+        },
+        "52f0e1c4e58ec629291b60317f074671b85d7ea80d5b07273463534b32b40234": {
+          "name": "COMODO RSA Certification Authority",
+          "constraints": ""
+        },
+        "e793c9b02fd8aa13e21c31228accb08119643b749c898964b1746d46c3d4cbd2": {
+          "name": "USERTrust RSA Certification Authority",
+          "constraints": ""
+        },
+        "1793927a0614549789adce2f8f34f7f0b66d0f3ae3a3b84d21ec15dbba4fadc7": {
+          "name": "COMODO ECC Certification Authority",
+          "constraints": ""
+        },
+        "9bea11c976fe014764c1be56a6f914b5a560317abd9988393382e5161aa0493c": {
+          "name": "UCA Global G2 Root",
+          "constraints": ""
+        },
+        "d43af9b35473755c9684fc06d7d8cb70ee5c28e773fb294eb41ee71722924d24": {
+          "name": "UCA Extended Validation Root",
+          "constraints": ""
+        },
+        "fad540811afae0dc767cdf6572a088fa3ce8493dd82b3b869a67d10aab4e8124": {
+          "name": "SI-TRUST Root",
+          "constraints": "Microsoft Not Before EKU List: Code Signing;Encrypting File System;OCSP Signing\nMicrosoft Not Before Date: 8/1/2020"
+        },
+        "55903859c8c0c3ebb8759ece4e2557225ff5758bbd38ebd48276601e1bd58097": {
+          "name": "Trustwave Global ECC P384 Certification Authority",
+          "constraints": "Microsoft Not Before EKU List: Code Signing\nMicrosoft Not Before Date: 9/15/2025"
+        },
+        "3417bb06cc6007da1b961c920b8ab4ce3fad820e4aa30b9acbc4a74ebdcebc65": {
+          "name": "SSL.com Root Certification Authority ECC",
+          "constraints": ""
+        },
+        "cecddc905099d8dadfc5b1d209b737cbe2c18cfb2c10c0ff0bcf0d3286fc1aa2": {
+          "name": "XRamp Global Certification Authority",
+          "constraints": "Microsoft Not Before EKU List: Code Signing\nMicrosoft Not Before Date: 8/1/2021\nMicrosoft Disallow EKU List: OCSP Signing"
+        },
+        "2e7bf16cc22485a7bbe2aa8696750761b0ae39be3b2fe9d0cc6d4ef73491425c": {
+          "name": "SSL.com EV Root Certification Authority RSA R2",
+          "constraints": "Microsoft Not Before EKU List: Secure Email\nMicrosoft Not Before Date: 9/15/2025"
+        },
+        "f1c1b50ae5a20dd8030ec9f6bc24823dd367b5255759b4e71b61fce9f7375d73": {
+          "name": "SecureTrust CA",
+          "constraints": "Microsoft Not Before EKU List: Code Signing\nMicrosoft Not Before Date: 9/15/2025"
+        },
+        "4200f5043ac8590ebb527d209ed1503029fbcbd41ca1b506ec27f15ade7dac69": {
+          "name": "Secure Global CA",
+          "constraints": "Microsoft Not Before EKU List: Code Signing\nMicrosoft Not Before Date: 8/1/2021"
+        },
+        "c32ffd9f46f936d16c3673990959434b9ad60aafbb9e7cf33654f144cc1ba143": {
+          "name": "SSL.com TLS ECC Root CA 2022",
+          "constraints": ""
+        },
+        "8faf7d2e2cb4709bb8e0b33666bf75a5dd45b5de480f8ea8d4bfe6bebc17f2ed": {
+          "name": "SSL.com TLS RSA Root CA 2022",
+          "constraints": ""
+        },
+        "22a2c1f7bded704cc1e701b5f408c310880fe956b5de2a4a44f99c873a25a7c8": {
+          "name": "SSL.com EV Root Certification Authority ECC",
+          "constraints": "Microsoft Not Before EKU List: Secure Email\nMicrosoft Not Before Date: 9/15/2025"
+        },
+        "97552015f5ddfc3c8788c006944555408894450084f100867086bc1a2bb58dc8": {
+          "name": "Trustwave Global Certification Authority",
+          "constraints": "Microsoft Not Before EKU List: Code Signing\nMicrosoft Not Before Date: 9/15/2025"
+        },
+        "945bbc825ea554f489d1fd51a73ddf2ea624ac7019a05205225c22a78ccfa8b4": {
+          "name": "Trustwave Global ECC P256 Certification Authority",
+          "constraints": "Microsoft Not Before EKU List: Code Signing\nMicrosoft Not Before Date: 9/15/2025"
+        },
+        "85666a562ee0be5ce925c1d8890a6f76a87ec16d4d7d5f29ea7419cf20123b69": {
+          "name": "SSL.com Root Certification Authority RSA",
+          "constraints": ""
+        },
+        "62dd0be9b9f50a163ea0f8e75c053b1eca57ea55c8688f647c6881f2c8357b95": {
+          "name": "SwissSign Gold CA - G2",
+          "constraints": "Microsoft Not Before EKU List: Code Signing\nMicrosoft Not Before Date: 8/1/2021"
+        },
+        "193144f431e0fddb740717d4de926a571133884b4360d30e272913cbe660ce41": {
+          "name": "SwissSign RSA TLS Root CA 2022 - 1",
+          "constraints": ""
+        },
+        "3f63bb2814be174ec8b6439cf08d6d56f0b7c405883a5648a334424d6b3ec558": {
+          "name": "TWCA CYBER Root CA",
+          "constraints": ""
+        },
+        "59769007f7685d0fcd50872f9f95d5755a5b2b457d81f3692b610a98672f0e1b": {
+          "name": "TWCA Global Root CA",
+          "constraints": "Microsoft Not Before EKU List: Code Signing\nMicrosoft Not Before Date: 4/1/2019"
+        },
+        "bfd88fe1101c41ae3e801bf8be56350ee9bad1a6b9bd515edc5c6d5b8711ac44": {
+          "name": "TWCA Root Certification Authority",
+          "constraints": "Microsoft Not Before EKU List: Code Signing\nMicrosoft Not Before Date: 6/1/2020"
+        },
+        "098e08a91dbbf77478b96cceb89b1413a5da37b7c862606a955deb07179f4326": {
+          "name": "Telia EC TLS Root CA v3",
+          "constraints": ""
+        },
+        "dd6936fe21f8f077c123a1a521c12224f72255b73e03a7260693e8a24b0fa389": {
+          "name": "TeliaSonera Root CA v1",
+          "constraints": "Microsoft Not Before EKU List: Code Signing\nMicrosoft Not Before Date: 8/1/2019"
+        },
+        "d13db1294c45ebc6fc86c6bbf69fa29bdfe692dff7c713c243c7a956c6a2284c": {
+          "name": "Telia RSA TLS Root CA v3",
+          "constraints": ""
+        },
+        "242b69742fcb1e5b2abf98898b94572187544e5b4d9911786573621f6a74b82c": {
+          "name": "Telia Root CA v2",
+          "constraints": ""
+        },
+        "2a8da2f8d23e0cd3b5871ecfb0f42276ca73230667f474eede71c5ee32cc3ec6": {
+          "name": "Thailand National Root Certification Authority - G1",
+          "constraints": "Microsoft Not Before EKU List: Code Signing;Secure Email\nMicrosoft Not Before Date: 9/15/2026"
+        },
+        "e6be68ce06fe0da0c140f1aeb00b67b636c5eea9422088929362375ce086db39": {
+          "name": "Visa Public ECC Root CA",
+          "constraints": ""
+        },
+        "e6432fce6b48f4e889b2fe183f8b480f72ecf80f57389b0e9c6e89cf04ad69d1": {
+          "name": "Visa TLS Root CA",
+          "constraints": ""
+        }
+      }
+    },
+    {
+      "name": "Mozilla",
+      "source": "https://ccadb.my.salesforce-sites.com/ccadb/Report?Name=MozillaTLSServerAuthenticationCSV",
+      "certificates": {
+        "55926084ec963a64b96e2abe01ce0ba86a64fbfebcc7aab5afc155b37fd76066": {
+          "name": "Actalis Authentication Root CA",
+          "constraints": ""
+        },
+        "2e44102ab58cb85419451c8e19d9acf3662cafbc614b6a53960a30f7d0e2eb41": {
+          "name": "TunTrust Root CA",
+          "constraints": ""
+        },
+        "e35d28419ed02025cfa69038cd623962458da5c695fbdea3c22b0bfb25897092": {
+          "name": "Amazon Root CA 4",
+          "constraints": ""
+        },
+        "18ce6cfe7bf14e60b2e347b8dfe868cb31d02ebb3ada271569f50343b46db3a4": {
+          "name": "Amazon Root CA 3",
+          "constraints": ""
+        },
+        "8ecde6884f3d87b1125ba31ac3fcb13d7016de7f57cc904fe1cb97c6ae98196e": {
+          "name": "Amazon Root CA 1",
+          "constraints": ""
+        },
+        "568d6905a2c88708a4b3025190edcfedb1974a606a13c6e5290fcb2ae63edab5": {
+          "name": "Starfield Services Root Certificate Authority - G2",
+          "constraints": ""
+        },
+        "1ba5b2aa8c65401a82960118f80bec4f62304d83cec4713a19c39c011ea46db4": {
+          "name": "Amazon Root CA 2",
+          "constraints": ""
+        },
+        "6b328085625318aa50d173c98d8bda09d57e27413d114cf787a0f5d06c030cf6": {
+          "name": "Certum EC-384 CA",
+          "constraints": ""
+        },
+        "5c58468d55f58e497e743982d2b50010b6d165374acf83a7d4a32db768c4408e": {
+          "name": "Certum Trusted Network CA",
+          "constraints": ""
+        },
+        "b676f2eddae8775cd36cb0f63cd1d4603961f49e6265ba013a2f0307b6d0b804": {
+          "name": "Certum Trusted Network CA 2",
+          "constraints": ""
+        },
+        "fe7696573855773e37a95e7ad4d9cc96c30157c15d31765ba9b15704e1ae78fd": {
+          "name": "Certum Trusted Root CA",
+          "constraints": ""
+        },
+        "81a9088ea59fb364c548a6f85559099b6f0405efbf18e5324ec9f457ba00112f": {
+          "name": "Atos TrustedRoot Root CA RSA TLS 2021",
+          "constraints": ""
+        },
+        "b2fae53e14ccd7ab9212064701ae279c1d8988facb775fa8a008914e663988a8": {
+          "name": "Atos TrustedRoot Root CA ECC TLS 2021",
+          "constraints": ""
+        },
+        "57de0583efd2b26e0361da99da9df4648def7ee8441c3b728afa9bcde0f9b26a": {
+          "name": "Autoridad de Certificacion Firmaprofesional CIF A62634068",
+          "constraints": ""
+        },
+        "fb8fec759169b9106b1e511644c618c51304373f6c0643088d8beffd1b997599": {
+          "name": "ANF Secure Server Root CA",
+          "constraints": ""
+        },
+        "f3896f88fe7c0a882766a7fa6ad2749fb57a7f3e98fb769c1fa7b09c2c44d5ae": {
+          "name": "BJCA Global Root CA1",
+          "constraints": ""
+        },
+        "574df6931e278039667b720afdc1600fc27eb66dd3092979fb73856487212882": {
+          "name": "BJCA Global Root CA2",
+          "constraints": ""
+        },
+        "9a114025197c5bb95d94e63d55cd43790847b646b23cdf11ada4a00eff15fb48": {
+          "name": "Buypass Class 2 Root CA",
+          "constraints": ""
+        },
+        "edf7ebbca27a2a384d387b7d4010c666e2edb4843e4c29b4ae1d5b9332e6b24d": {
+          "name": "Buypass Class 3 Root CA",
+          "constraints": ""
+        },
+        "b4585f22e4ac756a4e8612a1361c5d9d031a93fd84febb778fa3068b0fc42dc2": {
+          "name": "Certainly Root E1",
+          "constraints": ""
+        },
+        "77b82cd8644c4305f7acc5cb156b45675004033d51c60c6202a8e0c33467d3a0": {
+          "name": "Certainly Root R1",
+          "constraints": ""
+        },
+        "d48d3d23eedb50a459e55197601c27774b9d7b18c94d5a059511a10250b93168": {
+          "name": "Certigna Root CA",
+          "constraints": ""
+        },
+        "657cfe2fa73faa38462571f332a2363a46fce7020951710702cdfbb6eeda3305": {
+          "name": "certSIGN ROOT CA G2",
+          "constraints": ""
+        },
+        "5cc3d78e4e1d5e45547a04e6873e64f90cf9536d1ccc2ef800f355c4c5fd70fd": {
+          "name": "CFCA EV ROOT",
+          "constraints": ""
+        },
+        "f015ce3cc239bfef064be9f1d2c417e1a0264a0a94be1f0c8d121864eb6949cc": {
+          "name": "HiPKI Root CA - G1",
+          "constraints": ""
+        },
+        "4b009c1034494f9ab56bba3ba1d62731fc4d20d8955adcec10a925607261e338": {
+          "name": "SecureSign Root CA14",
+          "constraints": ""
+        },
+        "e778f0f095fe843729cd1a0082179e5314a9c291442805e1fb1d8fb6b8886c3a": {
+          "name": "SecureSign Root CA15",
+          "constraints": ""
+        },
+        "eec5496b988ce98625b934092eec2908bed0b0f316c2d4730c84eaf1f3d34881": {
+          "name": "D-TRUST Root Class 3 CA 2 EV 2009",
+          "constraints": ""
+        },
+        "49e7a442acf0ea6287050054b52564b650e4f49e42e348d6aa38e039e957b1c1": {
+          "name": "D-TRUST Root Class 3 CA 2 2009",
+          "constraints": ""
+        },
+        "8e8221b2e7d4007836a1672f0dcc299c33bc07d316f132fa1a206d587150f1ce": {
+          "name": "D-TRUST EV Root CA 2 2023",
+          "constraints": ""
+        },
+        "0552e6f83fdf65e8fa9670e666df28a4e21340b510cbe52566f97c4fb94b2bd1": {
+          "name": "D-TRUST BR Root CA 2 2023",
+          "constraints": ""
+        },
+        "e59aaa816009c22bff5b25bad37df306f049797c1f81d85ab089e657bd8f0044": {
+          "name": "D-TRUST BR Root CA 1 2020",
+          "constraints": ""
+        },
+        "08170d1aa36453901a2f959245e347db0c8d37abaabc56b81aa100dc958970db": {
+          "name": "D-TRUST EV Root CA 1 2020",
+          "constraints": ""
+        },
+        "578af4ded0853f4e5998db4aeaf9cbea8d945f60b620a38d1a3c13b2bc7ba8e1": {
+          "name": "Telekom Security TLS ECC Root 2020",
+          "constraints": ""
+        },
+        "91e2f5788d5810eba7ba58737de1548a8ecacd014598bc0b143e041b17052552": {
+          "name": "T-TeleSec GlobalRoot Class 2",
+          "constraints": ""
+        },
+        "fd73dad31c644ff1b43bef0ccdda96710b9cd9875eca7e31707af3e96d522bbd": {
+          "name": "T-TeleSec GlobalRoot Class 3",
+          "constraints": ""
+        },
+        "efc65cadbb59adb6efe84da22311b35624b71b3b1ea0da8b6655174ec8978646": {
+          "name": "Telekom Security TLS RSA Root 2023",
+          "constraints": ""
+        },
+        "371a00dc0533b3721a7eeb40e8419e70799d2b0a0f2c1d80693165f7cec4ad75": {
+          "name": "DigiCert TLS RSA4096 Root G5",
+          "constraints": ""
+        },
+        "018e13f0772532cf809bd1b17281867283fc48c6e13be9c69812854a490c1b05": {
+          "name": "DigiCert TLS ECC P384 Root G5",
+          "constraints": ""
+        },
+        "88ef81de202eb018452e43f864725cea5fbd1fc2d9d205730709c5d8b8690f46": {
+          "name": "QuoVadis Root CA 3 G3",
+          "constraints": ""
+        },
+        "8fe4fb0af93a4d0d67db0bebb23e37c71bf325dcbcdd240ea04daf58b47e1840": {
+          "name": "QuoVadis Root CA 2 G3",
+          "constraints": ""
+        },
+        "8a866fd1b276b57e578e921c65828a2bed58e9f2f288054134b7f1f4bfc9cc74": {
+          "name": "QuoVadis Root CA 1 G3",
+          "constraints": ""
+        },
+        "552f7bdcf1a7af9e6ce672017f4f12abf77240c78e761ac203d1d9d20ac89988": {
+          "name": "DigiCert Trusted Root G4",
+          "constraints": ""
+        },
+        "31ad6648f8104138c738f39ea4320133393e3a18cc02296ef97c2ac9ef6731d0": {
+          "name": "DigiCert Global Root G3",
+          "constraints": ""
+        },
+        "cb3ccbb76031e5e0138f8dd39a23f9de47ffc35e43c1144cea27d46a5ab1cb5f": {
+          "name": "DigiCert Global Root G2",
+          "constraints": ""
+        },
+        "7e37cb8b4c47090cab36551ba6f45db840680fba166a952db100717f43053fc2": {
+          "name": "DigiCert Assured ID Root G3",
+          "constraints": ""
+        },
+        "7d05ebb682339f8c9451ee094eebfefa7953a114edb2f44949452fab7d2fc185": {
+          "name": "DigiCert Assured ID Root G2",
+          "constraints": ""
+        },
+        "e23d4a036d7b70e9f595b1422079d2b91edfbb1fb651a0633eaa8a9dc5f80703": {
+          "name": "CA Disig Root R2",
+          "constraints": ""
+        },
+        "40f6af0346a99aa1cd1d555a4e9cce62c7f9634603ee406615833dc8c8d00367": {
+          "name": "emSign Root CA - G1",
+          "constraints": ""
+        },
+        "bc4d809b15189d78db3e1d8cf4f9726a795da1643ca5f1358e1ddb0edc0d7eb3": {
+          "name": "emSign ECC Root CA - C3",
+          "constraints": ""
+        },
+        "86a1ecba089c4a8d3bbe2734c612ba341d813e043cf9e8a862cd5c57a36bbe6b": {
+          "name": "emSign ECC Root CA - G3",
+          "constraints": ""
+        },
+        "125609aa301da0a249b97a8239cb6a34216f44dcac9f3954b14292f2e8c8608f": {
+          "name": "emSign Root CA - C1",
+          "constraints": ""
+        },
+        "bfff8fd04433487d6a8aa60c1a29767a9fc2bbb05e420f713a13b992891d3893": {
+          "name": "GDCA TrustAUTH R5 ROOT",
+          "constraints": ""
+        },
+        "cbb522d7b7f127ad6a0113865bdf1cd4102e7d0759af635a7cf4720dc963c53b": {
+          "name": "GlobalSign",
+          "constraints": ""
+        },
+        "cbb9c44d84b8043e1050ea31a69f514955d7bfd2e2c6b49301019ad61d9f5058": {
+          "name": "GlobalSign Root E46",
+          "constraints": ""
+        },
+        "179fbc148a3dd00fd24ea13458cc43bfa7f59c8182d783a513f6ebec100c8924": {
+          "name": "GlobalSign",
+          "constraints": ""
+        },
+        "4fa3126d8d3a11d1c4855a4f807cbad6cf919d3a5a88b03bea2c6372d93c40c9": {
+          "name": "GlobalSign Root R46",
+          "constraints": ""
+        },
+        "2cabeafe37d06ca22aba7391c0033d25982952c453647349763a3ab5ad6ccf69": {
+          "name": "GlobalSign",
+          "constraints": ""
+        },
+        "45140b3247eb9cc8c5b4f0d7b53091f73292089e6e5a63e2749dd3aca9198eda": {
+          "name": "Go Daddy Root Certificate Authority - G2",
+          "constraints": ""
+        },
+        "2ce1cb0bf9d2f9e102993fbe215152c3b2dd0cabde1c68e5319b839154dbb7f5": {
+          "name": "Starfield Root Certificate Authority - G2",
+          "constraints": ""
+        },
+        "349dfa4058c5e263123b398ae795573c4e1313c83fe68f93556cd5e8031b3c7d": {
+          "name": "GTS Root R4",
+          "constraints": ""
+        },
+        "34d8a73ee208d9bcdb0d956520934b4e40e69482596e8b6f73c8426b010a6f48": {
+          "name": "GTS Root R3",
+          "constraints": ""
+        },
+        "b085d70b964f191a73e4af0d54ae7a0e07aafdaf9b71dd0862138ab7325a24a2": {
+          "name": "GlobalSign",
+          "constraints": ""
+        },
+        "d947432abde7b7fa90fc2e6b59101b1280e0e1c7e4e40fa3c6887fff57a7f4cf": {
+          "name": "GTS Root R1",
+          "constraints": ""
+        },
+        "5a2fc03f0c83b090bbfa40604b0988446c7636183df9846e17101a447fb8efd6": {
+          "name": "Hongkong Post Root CA 3",
+          "constraints": ""
+        },
+        "9a6ec012e1a7da9dbe34194d478ad7c0db1822fb071df12981496ed104384113": {
+          "name": "ACCVRAIZ1",
+          "constraints": ""
+        },
+        "ebc5570c29018c4d67b1aa127baf12f703b4611ebc17b7dab5573894179b93fa": {
+          "name": "AC RAIZ FNMT-RCM",
+          "constraints": ""
+        },
+        "554153b13d2cf9ddb753bfbe1a4e0ae08d0aa4187058fe60a2b862b2e4b87bcb": {
+          "name": "AC RAIZ FNMT-RCM SERVIDORES SEGUROS",
+          "constraints": ""
+        },
+        "46edc3689046d53a453fb3104ab80dcaec658b2660ea1629dd7e867990648716": {
+          "name": "TUBITAK Kamu SM SSL Kok Sertifikasi - Surum 1",
+          "constraints": "Mozilla Applied Constraints: *.tr"
+        },
+        "d95d0e8eda79525bf9beb11b14d2100d3294985f0c62d9fabd9cd999eccb7b1d": {
+          "name": "HARICA TLS RSA Root CA 2021",
+          "constraints": ""
+        },
+        "44b545aa8a25e65a73ca15dc27fc36d24c1cb9953a066539b11582dc487b4833": {
+          "name": "Hellenic Academic and Research Institutions ECC RootCA 2015",
+          "constraints": ""
+        },
+        "a040929a02ce53b4acf4f2ffc6981ce4496f755e6d45fe0b2a692bcd52523f36": {
+          "name": "Hellenic Academic and Research Institutions RootCA 2015",
+          "constraints": ""
+        },
+        "3f99cc474acfce4dfed58794665e478d1547739f2e780f1bb4ca9b133097d401": {
+          "name": "HARICA TLS ECC Root CA 2021",
+          "constraints": ""
+        },
+        "5d56499be4d2e08bcfcad08a3e38723d50503bde706948e42f55603019e528ae": {
+          "name": "IdenTrust Commercial Root CA 1",
+          "constraints": ""
+        },
+        "30d0895a9a448a262091635522d1f52010b5867acae12c78ef958fd4f4389f2f": {
+          "name": "IdenTrust Public Sector Root CA 1",
+          "constraints": ""
+        },
+        "96bcec06264976f37460779acf28c5a7cfe8a3c0aae11a8ffcee05c0bddf08c6": {
+          "name": "ISRG Root X1",
+          "constraints": ""
+        },
+        "69729b8e15a86efc177a57afb7171dfc64add28c2fca8cf1507e34453ccb1470": {
+          "name": "ISRG Root X2",
+          "constraints": ""
+        },
+        "30fbba2c32238e2a98547af97931e550428b9b3f1c8eeb6633dcfa86c5b27dd3": {
+          "name": "vTrus ECC Root CA",
+          "constraints": ""
+        },
+        "8a71de6559336f426c26e53880d00d88a18da4c6a91f0dcb6194e206c5c96387": {
+          "name": "vTrus Root CA",
+          "constraints": ""
+        },
+        "2530cc8e98321502bad96f9b1fba1b099e2d299e0f4548bb914f363bc0d4531f": {
+          "name": "Izenpe.com",
+          "constraints": "Distrust for TLS After Date: 4/15/2026"
+        },
+        "a1339d33281a0b56e557d3d32b1ce7f9367eb094bd5fa72a7e5004c8ded7cafe": {
+          "name": "SZAFIR ROOT CA2",
+          "constraints": ""
+        },
+        "b49141502d00663d740f2e7ec340c52800962666121a36d09cf7dd2b90384fb4": {
+          "name": "e-Szigno TLS Root CA 2023",
+          "constraints": ""
+        },
+        "3c5f81fea5fab82c64bfa2eaecafcde8e077fc8620a7cae537163df36edbf378": {
+          "name": "Microsec e-Szigno Root CA 2009",
+          "constraints": ""
+        },
+        "beb00b30839b9bc32c32e4447905950641f26421b15ed089198b518ae2ea1b99": {
+          "name": "e-Szigno Root CA 2017",
+          "constraints": ""
+        },
+        "c741f70f4b2a8d88bf2e71c14122ef53ef10eba0cfa5e64cfa20f418853073e0": {
+          "name": "Microsoft RSA Root Certificate Authority 2017",
+          "constraints": ""
+        },
+        "358df39d764af9e1b766e9c972df352ee15cfac227af6ad1d70e8e4a6edcba02": {
+          "name": "Microsoft ECC Root Certificate Authority 2017",
+          "constraints": ""
+        },
+        "88f438dcf8ffd1fa8f429115ffe5f82ae1e06e0c70c375faad717b34a49e7265": {
+          "name": "NAVER Global Root Certification Authority",
+          "constraints": ""
+        },
+        "6c61dac3a2def031506be036d2a6fe401994fbd13df9c8d466599274c446ec98": {
+          "name": "NetLock Arany (Class Gold) F\u0151tan\u00fas\u00edtv\u00e1ny",
+          "constraints": ""
+        },
+        "eec997c0c30f216f7e3b8b307d2bae42412d753fc8219dafd1520b2572850f49": {
+          "name": "OISTE Server Root ECC G1",
+          "constraints": ""
+        },
+        "9ae36232a5189ffddb353dfd26520c015395d22777dac59db57b98c089a651e6": {
+          "name": "OISTE Server Root RSA G1",
+          "constraints": ""
+        },
+        "8560f91c3624daba9570b5fea0dbe36ff11a8323be9486854fb3f34a5571198d": {
+          "name": "OISTE WISeKey Global Root GC CA",
+          "constraints": ""
+        },
+        "6b9c08e86eb0f767cfad65cd98b62149e5494a67f5845e7bd1ed019f27b86bd6": {
+          "name": "OISTE WISeKey Global Root GB CA",
+          "constraints": ""
+        },
+        "1435f225c5d252d7a21948cc3ce62aecfa88001e3dd72d1cc3555100eb372f93": {
+          "name": "SECOM TLS RSA Root CA 2024",
+          "constraints": ""
+        },
+        "6ab2ab75f51cb4f4f0156203fbf6f646232f514be059f62833308b82b4d72db1": {
+          "name": "SECOM TLS ECC Root CA 2024",
+          "constraints": ""
+        },
+        "513b2cecb810d4cde5dd85391adfc6c2dd60d87bb736d2b521484aa47a0ebef6": {
+          "name": "Security Communication RootCA2",
+          "constraints": ""
+        },
+        "e74fbda55bd564c473a36b441aa799c8a68e077440e8288b9fa1e50e4bbaca11": {
+          "name": "Security Communication ECC RootCA1",
+          "constraints": ""
+        },
+        "e793c9b02fd8aa13e21c31228accb08119643b749c898964b1746d46c3d4cbd2": {
+          "name": "USERTrust RSA Certification Authority",
+          "constraints": ""
+        },
+        "52f0e1c4e58ec629291b60317f074671b85d7ea80d5b07273463534b32b40234": {
+          "name": "COMODO RSA Certification Authority",
+          "constraints": ""
+        },
+        "7bb647a62aeeac88bf257aa522d01ffea395e0ab45c73f93f65654ec38f25a06": {
+          "name": "Sectigo Public Server Authentication Root R46",
+          "constraints": ""
+        },
+        "4ff460d54b9c86dabfbcfc5712e0400d2bed3fbc4d4fbdaa86e06adcd2a9ad7a": {
+          "name": "USERTrust ECC Certification Authority",
+          "constraints": ""
+        },
+        "1793927a0614549789adce2f8f34f7f0b66d0f3ae3a3b84d21ec15dbba4fadc7": {
+          "name": "COMODO ECC Certification Authority",
+          "constraints": ""
+        },
+        "c90f26f0fb1b4018b22227519b5ca2b53e2ca5b3be5cf18efe1bef47380c5383": {
+          "name": "Sectigo Public Server Authentication Root E46",
+          "constraints": ""
+        },
+        "9bea11c976fe014764c1be56a6f914b5a560317abd9988393382e5161aa0493c": {
+          "name": "UCA Global G2 Root",
+          "constraints": ""
+        },
+        "d43af9b35473755c9684fc06d7d8cb70ee5c28e773fb294eb41ee71722924d24": {
+          "name": "UCA Extended Validation Root",
+          "constraints": ""
+        },
+        "2e7bf16cc22485a7bbe2aa8696750761b0ae39be3b2fe9d0cc6d4ef73491425c": {
+          "name": "SSL.com EV Root Certification Authority RSA R2",
+          "constraints": ""
+        },
+        "c32ffd9f46f936d16c3673990959434b9ad60aafbb9e7cf33654f144cc1ba143": {
+          "name": "SSL.com TLS ECC Root CA 2022",
+          "constraints": ""
+        },
+        "8faf7d2e2cb4709bb8e0b33666bf75a5dd45b5de480f8ea8d4bfe6bebc17f2ed": {
+          "name": "SSL.com TLS RSA Root CA 2022",
+          "constraints": ""
+        },
+        "22a2c1f7bded704cc1e701b5f408c310880fe956b5de2a4a44f99c873a25a7c8": {
+          "name": "SSL.com EV Root Certification Authority ECC",
+          "constraints": ""
+        },
+        "3417bb06cc6007da1b961c920b8ab4ce3fad820e4aa30b9acbc4a74ebdcebc65": {
+          "name": "SSL.com Root Certification Authority ECC",
+          "constraints": ""
+        },
+        "85666a562ee0be5ce925c1d8890a6f76a87ec16d4d7d5f29ea7419cf20123b69": {
+          "name": "SSL.com Root Certification Authority RSA",
+          "constraints": ""
+        },
+        "193144f431e0fddb740717d4de926a571133884b4360d30e272913cbe660ce41": {
+          "name": "SwissSign RSA TLS Root CA 2022 - 1",
+          "constraints": ""
+        },
+        "59769007f7685d0fcd50872f9f95d5755a5b2b457d81f3692b610a98672f0e1b": {
+          "name": "TWCA Global Root CA",
+          "constraints": ""
+        },
+        "bfd88fe1101c41ae3e801bf8be56350ee9bad1a6b9bd515edc5c6d5b8711ac44": {
+          "name": "TWCA Root Certification Authority",
+          "constraints": ""
+        },
+        "3f63bb2814be174ec8b6439cf08d6d56f0b7c405883a5648a334424d6b3ec558": {
+          "name": "TWCA CYBER Root CA",
+          "constraints": ""
+        },
+        "d13db1294c45ebc6fc86c6bbf69fa29bdfe692dff7c713c243c7a956c6a2284c": {
+          "name": "Telia RSA TLS Root CA v3",
+          "constraints": ""
+        },
+        "242b69742fcb1e5b2abf98898b94572187544e5b4d9911786573621f6a74b82c": {
+          "name": "Telia Root CA v2",
+          "constraints": ""
+        },
+        "098e08a91dbbf77478b96cceb89b1413a5da37b7c862606a955deb07179f4326": {
+          "name": "Telia EC TLS Root CA v3",
+          "constraints": ""
+        },
+        "e0d3226aeb1163c2e48ff9be3b50b4c6431be7bb1eacc5c36b5d5ec509039a08": {
+          "name": "TrustAsia Global Root CA G3",
+          "constraints": ""
+        },
+        "be4b56cb5056c0136a526df444508daa36a0b54f42e4ac38f72af470e479654c": {
+          "name": "TrustAsia Global Root CA G4",
+          "constraints": ""
+        },
+        "c0076b9ef0531fb1a656d67c4ebe97cd5dbaa41ef44598acc2489878c92d8711": {
+          "name": "TrustAsia TLS ECC Root CA",
+          "constraints": ""
+        },
+        "06c08d7dafd876971eb1124fe67f847ec0c7a158d3ea53cbe940e2ea9791f4c3": {
+          "name": "TrustAsia TLS RSA Root CA",
+          "constraints": ""
+        }
+      }
+    }
+  ]
+}

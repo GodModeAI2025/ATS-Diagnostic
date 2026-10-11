@@ -57,6 +57,8 @@ enum X509 {
         guard tbs.count >= offset + 6 else { throw ASN1Node.ParseError.invalid }
         var fields: [CertificateField] = []
         func add(_ id: String, _ name: String, _ value: String) { fields.append(CertificateField(id: id, name: name, value: value)) }
+        let version = offset == 1 ? Int(tbs[0].children.first?.value.first ?? 0) + 1 : 1
+        add("version", "X.509 version", "v\(version)")
         add("serial", "Serial number", hex(tbs[offset].value))
         add("signature", "Signature algorithm", root.children[1].children.first?.oid ?? "Unknown")
         add("issuer", "Issuer", name(tbs[offset + 2]))
@@ -74,6 +76,11 @@ enum X509 {
             }
         }
         return fields
+    }
+    static func algorithmName(_ oid: String?) -> String {
+        guard let oid else { return "Unknown" }
+        let names = ["1.2.840.113549.1.1.1": "RSA", "1.2.840.10045.2.1": "Elliptic curve", "1.3.101.112": "Ed25519", "1.2.840.113549.1.1.5": "SHA-1 with RSA", "1.2.840.113549.1.1.11": "SHA-256 with RSA", "1.2.840.113549.1.1.12": "SHA-384 with RSA", "1.2.840.113549.1.1.13": "SHA-512 with RSA", "1.2.840.113549.1.1.10": "RSA-PSS", "1.2.840.10045.4.3.2": "ECDSA with SHA-256", "1.2.840.10045.4.3.3": "ECDSA with SHA-384", "1.2.840.10045.4.3.4": "ECDSA with SHA-512"]
+        return names[oid].map { "\($0) · \(oid)" } ?? oid
     }
     private static func name(_ node: ASN1Node) -> String {
         node.children.flatMap(\.children).map { pair in
@@ -134,7 +141,8 @@ extension X509 {
             let path = root.children.first(where: { $0.tag == 2 }).map { hex($0.value) }
             return "Certificate authority: \(ca ? "Yes" : "No")" + (path.map { "\nPath length constraint: \($0)" } ?? "")
         case "2.5.29.14": return hex(root.value)
-        case "2.5.29.35": return root.children.map { "Field \($0.tag & 0x1f): \(hex($0.value))" }.joined(separator: "\n")
+        case "2.5.29.35": return root.children.map { "\(($0.tag & 0x1f) == 0 ? "Key identifier" : ($0.tag & 0x1f) == 1 ? "Certificate issuer" : "Certificate serial number"): \(hex($0.value))" }.joined(separator: "\n")
+        case "1.3.6.1.4.1.11129.2.4.2": return "Embedded signed certificate timestamps · open Certificate Transparency for details"
         case "1.3.6.1.5.5.7.1.1": return root.children.map { pair in
             let method = pair.children.first?.oid ?? ""
             let label = method == "1.3.6.1.5.5.7.48.1" ? "OCSP" : method == "1.3.6.1.5.5.7.48.2" ? "CA issuers" : method

@@ -11,7 +11,7 @@
   "administrativeAccessAuthorizationPending": false,
   "testerEmail": "mark_zimmermann@mac.com",
   "uploadCompleted": true,
-  "deviceInstallationVerified": false,
+  "deviceInstallationVerified": true,
   "appleId": "6821686996",
   "internalGroupId": "a1bcebc2-c662-4040-9ffc-f9c3f8f7898f",
   "automaticDistribution": false,
@@ -20,5 +20,6 @@
   "testflightState": "Im Test",
   "groupAssigned": true,
   "testerCount": 1,
-  "testerState": "Invited"
+  "testerState": "Invited",
+  "deviceInstallationEvidence": "Eight TestFlight screenshot reports for build32 from intended account on iPhone17 Pro Max / iOS27.2, read 2026-10-11"
 }

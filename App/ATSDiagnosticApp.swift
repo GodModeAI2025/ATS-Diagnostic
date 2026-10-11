@@ -56,12 +56,12 @@ struct InspectView: View {
                     List {
                         Section { InspectionHero(record: store.latest ?? store.records.first) }
                         Section("Host or URL") { inspectionInput }
-                        Section("TLS version probes") { probeControls }
                         if let record = store.latest ?? store.records.first { Section("Latest inspection") { ConnectionOverview(record: record); NavigationLink { RecordView(record: record, store: store) } label: { RecordRow(record: record) } } }
+                        Section { DisclosureGroup("TLS version probes") { probeControls } }
                         Section { trustExplanation }
                     }
                 }
-            }.navigationTitle("ATS Diagnostic").onChange(of: host) { probes = []; probeError = nil }
+            }.navigationTitle("ATS Diagnostic").navigationBarTitleDisplayMode(.inline).onChange(of: host) { probes = []; probeError = nil }
         }
     }
     private var inspectionInput: some View {
@@ -77,7 +77,12 @@ struct InspectView: View {
             Button("Test individual TLS versions", systemImage: "waveform.path") { Task { probing = true; defer { probing = false }; do { probes = try await TLSProbe.allVersions(host); probeError = nil } catch { probeError = error.localizedDescription } } }.disabled(probing || host.isEmpty)
             if probing { ProgressView("Testing TLS handshakes…") }
             if let probeError { Text(probeError).foregroundStyle(.red) }
-            ForEach(probes) { probe in VStack(alignment: .leading, spacing: 4) { Label(probe.id, systemImage: probe.completed ? "checkmark.circle" : "exclamationmark.circle"); Text(probe.detail).font(.footnote).foregroundStyle(.secondary) } }
+            ForEach(probes) { probe in
+                DisclosureGroup {
+                    Text(probe.detail).font(.footnote).foregroundStyle(.secondary)
+                    ForEach(probe.certificates) { certificate in NavigationLink(certificate.subject) { CertificateDetailView(certificate: certificate, isLeaf: certificate.id == probe.certificates.first?.id, systemCT: nil) } }
+                } label: { Label(probe.id + (probe.completed ? " · Supported" : " · Unavailable"), systemImage: probe.completed ? "checkmark.circle" : "exclamationmark.circle") }
+            }
             Text("A failed probe can result from client policy, server configuration or network conditions. No HTTP request is sent during these probes.").font(.footnote).foregroundStyle(.secondary)
         }
     }
@@ -96,6 +101,9 @@ struct RequestView: View {
     @FocusState private var editing: Bool
     @State private var bodyText = ""
     @State private var expectedSHA256 = ""
+    @State private var headerExpanded = false
+    @State private var bodyExpanded = false
+    @State private var integrityExpanded = false
     var body: some View {
         NavigationStack {
             GeometryReader { geometry in
@@ -116,7 +124,7 @@ struct RequestView: View {
                         }.frame(maxWidth: 660)
                     }.padding(24).frame(maxWidth: .infinity).background(Color(uiColor: .systemGroupedBackground))
                 } else { requestForm(showLatest: true) }
-            }.scrollDismissesKeyboard(.interactively).navigationTitle("Request workspace")
+            }.scrollDismissesKeyboard(.interactively).navigationTitle("Requests").navigationBarTitleDisplayMode(.inline)
             .sheet(isPresented: $importCURL) {
                 NavigationStack { Form {
                     Section("Paste cURL") { TextEditor(text: $curlText).font(.body.monospaced()).frame(minHeight: 180).accessibilityLabel("cURL command") }
@@ -133,15 +141,32 @@ struct RequestView: View {
                     TextField("https://example.com/api", text: $url).keyboardType(.URL).textInputAutocapitalization(.never).autocorrectionDisabled()
                     Picker("Method", selection: $method) { ForEach(["GET", "HEAD", "POST", "PUT", "PATCH", "DELETE", "OPTIONS"], id: \.self) { Text($0) } }
                 }
-                Section("Headers · Name: Value") { TextEditor(text: $headers).focused($editing).font(.body.monospaced()).frame(minHeight: 100).accessibilityLabel("Request headers") }
-                Section("Body") { TextEditor(text: $bodyText).focused($editing).font(.body.monospaced()).frame(minHeight: 150).accessibilityLabel("Request body") }
-                Section("Download integrity · optional") { TextField("Expected SHA-256 checksum", text: $expectedSHA256).textInputAutocapitalization(.never).autocorrectionDisabled().font(.body.monospaced()) }
+                Section {
+                    HStack(alignment: .top, spacing: 12) {
+                        SupportingIllustration(kind: .traffic)
+                        Text("Send an HTTP request and inspect the server’s response. For a simple GET request, the URL is enough.").font(.subheadline).foregroundStyle(.secondary)
+                    }
+                }
+                Section("Optional request fields") {
+                    DisclosureGroup(isExpanded: $headerExpanded) {
+                        Text("One header per line, for example Accept: application/json.").font(.footnote).foregroundStyle(.secondary)
+                        TextEditor(text: $headers).focused($editing).font(.callout.monospaced()).frame(height: 110).accessibilityLabel("Request headers")
+                    } label: { Label(headers.isEmpty ? "Headers" : "Headers · configured", systemImage: "list.bullet.rectangle") }
+                    DisclosureGroup(isExpanded: $bodyExpanded) {
+                        Text("The payload sent with this request, usually for POST, PUT or PATCH.").font(.footnote).foregroundStyle(.secondary)
+                        TextEditor(text: $bodyText).focused($editing).font(.callout.monospaced()).frame(height: 150).accessibilityLabel("Request body")
+                    } label: { Label(bodyText.isEmpty ? "Body" : "Body · configured", systemImage: "doc.text") }
+                    DisclosureGroup(isExpanded: $integrityExpanded) {
+                        Text("Paste a known SHA-256 checksum to compare it with the complete downloaded response.").font(.footnote).foregroundStyle(.secondary)
+                        TextField("Expected SHA-256 checksum", text: $expectedSHA256).textInputAutocapitalization(.never).autocorrectionDisabled().font(.callout.monospaced())
+                    } label: { Label(expectedSHA256.isEmpty ? "Verify download checksum" : "Checksum · configured", systemImage: "checkmark.shield") }
+                }
                 Button { Task { await store.execute(url: url, method: method, headers: headers, body: bodyText, expectedSHA256: expectedSHA256) } } label: { Label("Send request", systemImage: "paperplane").frame(maxWidth: .infinity) }.buttonStyle(.borderedProminent).controlSize(.large).disabled(store.running || url.isEmpty)
                 if store.running { ProgressView("Sending…") }
                 if let error = store.error { Text(error).foregroundStyle(.red) }
                 if showLatest, let record = store.latest ?? store.records.first { NavigationLink("Open latest response") { RecordView(record: record, store: store) } }
 
-        }.scrollContentBackground(.hidden)
+        }.scrollContentBackground(.hidden).background(Color(uiColor: .systemGroupedBackground))
     }
 
 }
@@ -163,7 +188,7 @@ struct HistoryView: View {
                         ScrollView {
                             DiagnosticPanel(title: "Traffic overview", illustration: .traffic) { filters; TrafficOverview(statistics: TrafficStatistics(filtered)) }
                         }.frame(width: 340)
-                        List(filtered) { record in NavigationLink { RecordView(record: record, store: store) } label: { RecordRow(record: record) } }.scrollContentBackground(.hidden).frame(maxWidth: 760)
+                        List(filtered) { record in NavigationLink { RecordView(record: record, store: store) } label: { RecordRow(record: record) } }.scrollContentBackground(.hidden).background(Color(uiColor: .systemGroupedBackground)).frame(maxWidth: 760)
                     }.padding(24).frame(maxWidth: .infinity).background(Color(uiColor: .systemGroupedBackground))
                 } else {
                     List {
@@ -209,8 +234,7 @@ struct RecordRow: View {
     }
 }
 struct RecordView: View {
-    @State private var reminderCertificate: CertificateRecord?
-    let record: DiagnosticRecord
+        let record: DiagnosticRecord
     let store: DiagnosticStore
     @Environment(\.dynamicTypeSize) private var dynamicTypeSize
     var body: some View {
@@ -226,17 +250,19 @@ struct RecordView: View {
                     detailList(includeOverview: false).frame(maxWidth: 760)
                 }.padding(24).frame(maxWidth: .infinity).background(Color(uiColor: .systemGroupedBackground))
             } else { detailList(includeOverview: true) }
-        }.sheet(item: $reminderCertificate) { CertificateReminderView(certificate: $0) }.navigationTitle("Connection details").navigationBarTitleDisplayMode(.inline).toolbar { Button("Favorite", systemImage: store.settings.favorites.contains(record.id) ? "star.fill" : "star") { store.toggleFavorite(record.id) } }
+        }.navigationTitle("Connection details").navigationBarTitleDisplayMode(.inline).toolbar { Button("Favorite", systemImage: store.settings.favorites.contains(record.id) ? "star.fill" : "star") { store.toggleFavorite(record.id) } }
     }
     private func detailList(includeOverview: Bool) -> some View {
         List {
             if includeOverview { Section { ConnectionOverview(record: record) } }
+            Section { NavigationLink { ConnectionMapView(record: record) } label: { Label("Connection map", systemImage: "point.3.connected.trianglepath.dotted") } }
             Section("Connection") {
                 Text(record.url).textSelection(.enabled)
+                if let finalURL = record.finalURL, finalURL != record.url { LabeledContent("Final destination", value: finalURL).textSelection(.enabled) }
                 LabeledContent("Status", value: record.status.map(String.init) ?? "Failed")
                 LabeledContent("Protocol", value: record.protocolName ?? "Not reported")
-                LabeledContent("TLS version", value: record.tlsVersion ?? "Not reported")
-                LabeledContent("Cipher suite", value: record.cipher ?? "Not reported")
+                LabeledContent("TLS version", value: TLSDisplay.version(record.tlsVersion))
+                LabeledContent("Cipher suite", value: TLSDisplay.cipher(record.cipher))
                 LabeledContent("Remote address", value: record.remoteAddress ?? "Not reported")
                 if let error = record.error { Text(error).foregroundStyle(.red) }
             }
@@ -256,19 +282,38 @@ struct RecordView: View {
                 LabeledContent("Response size", value: record.bytes.formatted(.byteCount(style: .file)))
             }
             Section {
-                if let valid = record.trustValid { Label(valid ? "Trusted by the system" : "Trust validation failed", systemImage: valid ? "checkmark.shield" : "exclamationmark.shield") }
-                if let message = record.trustMessage { Text(message) }
-                if !record.certificates.isEmpty { ShareLink("Export complete chain as PEM", item: CertificateChainExport(certificates: record.certificates), preview: SharePreview("Certificate chain")) }
+                ConnectionSecuritySummary(record: record)
                 ForEach(record.certificates) { certificate in
-                    DisclosureGroup(certificate.subject) { Text("SHA-256").font(.caption); Text(certificate.id).font(.body.monospaced()).textSelection(.enabled); if let keyDetails = CertificateAnalysis.publicKeyDetails(certificate.der) { Text(keyDetails) }; ForEach(CertificateAnalysis.findings(certificate)) { finding in VStack(alignment: .leading) { Label(finding.title, systemImage: "exclamationmark.triangle").foregroundStyle(.orange); Text(finding.detail) } }; ForEach((try? X509.fields(certificate.der)) ?? []) { field in VStack(alignment: .leading) { Text(field.name).font(.caption).foregroundStyle(.secondary); Text(field.value).textSelection(.enabled) } }; ShareLink("Export DER", item: CertificateExport(certificate: certificate), preview: SharePreview(certificate.subject)); if certificate.expiryDate != nil { Button("Expiry reminder", systemImage: "bell") { reminderCertificate = certificate } }; ShareLink("Export PEM", item: PEMCertificateExport(certificate: certificate), preview: SharePreview(certificate.subject)); ShareLink("Export CRT", item: CRTCertificateExport(certificate: certificate), preview: SharePreview(certificate.subject)) }
+                    NavigationLink { CertificateDetailView(certificate: certificate, isLeaf: certificate.id == record.certificates.first?.id, systemCT: record.certificateTransparency) } label: {
+                        HStack(alignment: .top, spacing: 12) {
+                            SupportingIllustration(kind: .certificate)
+                            VStack(alignment: .leading, spacing: 5) {
+                                Text(certificate.subject).font(.subheadline.weight(.semibold)).lineLimit(2)
+                                Text(certificate.id == record.certificates.first?.id ? "Server certificate" : "Certificate authority").font(.caption).foregroundStyle(.secondary)
+                                if let expiry = certificate.expiryDate { Text("Expires \(expiry.formatted(date: .abbreviated, time: .omitted))").font(.caption).foregroundStyle(.secondary) }
+                            }
+                        }.padding(.vertical, 4)
+                    }
                 }
-            } header: { IllustratedSectionTitle(title: "Certificate chain", kind: .certificate) }
-            Section("Response headers") { Text(record.responseHeaders.sorted { $0.key < $1.key }.map { "\($0.key): \($0.value)" }.joined(separator: "\n")).font(.body.monospaced()).textSelection(.enabled) }
-            Section(record.responseEncoding == "base64" ? "Response body · Base64 · up to 2 MB" : "Response body · up to 2 MB") { Text(record.responseBody).font(.body.monospaced()).textSelection(.enabled) }
+                if !record.certificates.isEmpty { ShareLink("Export complete chain as PEM", item: CertificateChainExport(certificates: record.certificates), preview: SharePreview("Certificate chain")) }
+            } header: { Text("Certificates & trust") }
+            Section("Response headers · \(record.responseHeaders.count)") {
+                ForEach(record.responseHeaders.keys.sorted().prefix(3), id: \.self) { key in HeaderRow(item: HeaderItem(name: key, value: record.responseHeaders[key] ?? "")) }
+                NavigationLink("All headers") { HeadersView(headers: record.responseHeaders) }
+            }
+            Section("Response body") {
+                LabeledContent("Received", value: record.bytes.formatted(.byteCount(style: .file)))
+                if record.responseBody.isEmpty { Text("No body received.").foregroundStyle(.secondary) }
+                else {
+                    Text(String(record.responseBody.trimmingCharacters(in: .whitespacesAndNewlines).prefix(600))).font(.footnote.monospaced()).lineLimit(8).foregroundStyle(.secondary)
+                    NavigationLink(record.responseEncoding == "base64" ? "View Base64 body" : "View response body") { TextValueView(title: "Response body", value: record.responseBody) }
+                    Text("Captured up to 2 MB. The checksum covers the full received response.").font(.caption).foregroundStyle(.secondary)
+                }
+            }
             Section {
                 ShareLink("Copy or share as cURL", item: record.curl)
                 Button("Replay request") { Task { await store.execute(url: record.url, method: record.method, headers: record.requestHeaders.map { "\($0.key): \($0.value)" }.joined(separator: "\n"), body: record.requestBody) } }.disabled(store.running)
             }
-        }.scrollContentBackground(.hidden)
+        }.scrollContentBackground(.hidden).background(Color(uiColor: .systemGroupedBackground))
     }
 }

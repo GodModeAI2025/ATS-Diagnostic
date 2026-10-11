@@ -1,0 +1,186 @@
+Device orientation: Unknown
+------------------------
+Application bundle identifier: com.mobilebox.atsdiagnostic
+Application UI orientation: Portrait
+Application, pid: 6238, label: 'ATS Diagnostic'
+ Window, {{0.0, 0.0}, {402.0, 874.0}}, hitPoint: {201.0, 437.0}
+  Other, {{0.0, 0.0}, {402.0, 874.0}}, hitPoint: {201.0, 437.0}
+  Other, {{0.0, 0.0}, {402.0, 874.0}}, hitPoint: {201.0, 437.0}
+   Other, {{0.0, 0.0}, {402.0, 874.0}}, hitPoint: {201.0, 437.0}
+    Other, {{0.0, 0.0}, {402.0, 874.0}}, hitPoint: {201.0, 437.0}
+     Other, {{0.0, 0.0}, {402.0, 874.0}}, hitPoint: {201.0, 437.0}
+      Other, {{0.0, 0.0}, {402.0, 874.0}}, hitPoint: {201.0, 437.0}
+       Other, {{0.0, 0.0}, {402.0, 874.0}}, hitPoint: {201.0, 437.0}
+        Other, {{0.0, 0.0}, {402.0, 874.0}}, hitPoint: {201.0, 437.0}
+         Other, {{0.0, 0.0}, {402.0, 874.0}}, hitPoint: {201.0, 437.0}
+          Other, {{0.0, 0.0}, {402.0, 874.0}}, hitPoint: {201.0, 437.0}
+           Other, {{0.0, 0.0}, {402.0, 874.0}}, hitPoint: {201.0, 437.0}
+            Other, {{0.0, 0.0}, {402.0, 874.0}}, hitPoint: {201.0, 437.0}
+             NavigationBar, {{0.0, 62.0}, {402.0, 54.0}}, identifier: 'Certificate', hitPoint: {201.0, 89.0}
+              Button, {{16.0, 62.0}, {44.0, 44.0}}, identifier: 'BackButton', label: 'Connection map', hitPoint: {38.0, 84.0}
+              StaticText, {{159.0, 73.7}, {84.0, 20.7}}, label: 'Certificate', hitPoint: {201.0, 84.0}
+             Other, {{0.0, 0.0}, {402.0, 874.0}}, hitPoint: {201.0, 437.0}
+              Other, {{0.0, 0.0}, {402.0, 874.0}}, hitPoint: {201.0, 437.0}
+               Other, {{0.0, 0.0}, {402.0, 874.0}}, hitPoint: {201.0, 437.0}
+                Other, {{0.0, 0.0}, {402.0, 874.0}}, hitPoint: {201.0, 437.0}
+                 CollectionView, {{0.0, 0.0}, {402.0, 874.0}}, hitPoint: {201.0, 437.0}
+                  Other, {{-16.0, -339.3}, {434.0, 406.7}}, hitPoint: {201.0, 33.7}
+                  Cell, {{16.0, -48.0}, {370.0, 97.7}}, hitPoint: {201.0, 24.8}
+                   Other, {{16.0, -48.0}, {370.0, 97.7}}, hitPoint: {201.0, 24.8}
+                    Other, {{16.0, -48.0}, {370.0, 97.7}}, hitPoint: {201.0, 24.8}
+                   Other, {{16.0, -48.0}, {370.0, 97.7}}, hitPoint: {201.0, 24.8}
+                    Other, {{16.0, -48.0}, {370.0, 97.7}}, hitPoint: {201.0, 24.8}
+                     Other, {{16.0, -48.0}, {370.0, 97.7}}, hitPoint: {201.0, 24.8}
+                      StaticText, {{32.0, -8.7}, {338.0, 40.3}}, label: 'C=US, O=DigiCert Inc, OU=www.digicert.com, CN=DigiCert Global Root G2', hitPoint: {201.0, 15.8}
+                  Other, {{0.0, 0.0}, {402.0, 874.0}}, hitPoint: {201.0, 437.0}
+                   Other, {{0.0, 0.0}, {402.0, 156.0}}, hitPoint: {201.0, 78.0}
+                   Other, {{0.0, 741.0}, {402.0, 133.0}}, hitPoint: {201.0, 807.5}
+                  Other, {{0.0, 0.0}, {402.0, 874.0}}, hitPoint: {201.0, 437.0}
+                   Other, {{0.0, 0.0}, {402.0, 156.0}}, hitPoint: {201.0, 78.0}
+                   Other, {{0.0, 741.0}, {402.0, 133.0}}, hitPoint: {201.0, 807.5}
+                  Other, {{-16.0, 67.0}, {434.0, 270.0}}, hitPoint: {201.0, 202.0}
+                  Cell, {{16.0, 67.0}, {370.0, 40.3}}, hitPoint: {201.0, 87.2}
+                   Other, {{16.0, 67.0}, {370.0, 40.3}}, hitPoint: {201.0, 87.2}
+                   Other, {{16.0, 67.0}, {370.0, 40.3}}, hitPoint: {201.0, 87.2}
+                    Other, {{16.0, 67.0}, {370.0, 40.3}}, hitPoint: {201.0, 87.2}
+                     Other, {{16.0, 67.0}, {370.0, 40.3}}, hitPoint: {201.0, 87.2}
+                      StaticText, {{16.0, 67.0}, {370.0, 40.3}}, label: 'Fingerprints', hitPoint: {201.0, 87.2}
+                  Cell, {{16.0, 107.3}, {370.0, 106.0}}, hitPoint: {201.0, 160.3}
+                   Other, {{16.0, 107.3}, {370.0, 106.0}}, hitPoint: {201.0, 160.3}
+                    Other, {{16.0, 107.3}, {370.0, 106.0}}, hitPoint: {201.0, 160.3}
+                   Other, {{16.0, 107.3}, {370.0, 106.0}}, hitPoint: {201.0, 160.3}
+                    Other, {{16.0, 107.3}, {370.0, 106.0}}, hitPoint: {201.0, 160.3}
+                     Other, {{16.0, 107.3}, {370.0, 106.0}}, hitPoint: {201.0, 160.3}
+                      StaticText, {{32.0, 129.5}, {53.7, 14.3}}, label: 'SHA-256', hitPoint: {58.8, 136.7}
+                      Button, {{353.0, 126.7}, {15.0, 20.0}}, identifier: 'square.and.arrow.up', label: 'Share SHA-256', hitPoint: {360.5, 136.7}
+                      StaticText, {{32.0, 155.0}, {336.3, 40.3}}, label: 'cb3ccbb76031e5e0138f8dd39a23f9de47ffc35e43c1144cea27d46a5ab1cb5f', hitPoint: {200.2, 175.2}
+                  Cell, {{16.0, 213.3}, {370.0, 106.0}}, hitPoint: {201.0, 266.3}
+                   Other, {{16.0, 213.3}, {370.0, 106.0}}, hitPoint: {201.0, 266.3}
+                    Other, {{16.0, 213.3}, {370.0, 106.0}}, hitPoint: {201.0, 266.3}
+                   Other, {{16.0, 213.3}, {370.0, 106.0}}, hitPoint: {201.0, 266.3}
+                    Other, {{16.0, 213.3}, {370.0, 106.0}}, hitPoint: {201.0, 266.3}
+                     Other, {{16.0, 213.3}, {370.0, 106.0}}, hitPoint: {201.0, 266.3}
+                      StaticText, {{32.0, 235.5}, {36.7, 14.3}}, label: 'SHA-1', hitPoint: {50.3, 242.7}
+                      Button, {{353.0, 232.7}, {15.0, 20.0}}, identifier: 'square.and.arrow.up', label: 'Share SHA-1', hitPoint: {360.5, 242.7}
+                      StaticText, {{32.0, 261.0}, {247.3, 40.3}}, label: 'df3c24f9bfd666761b268073fe06d1cc8d4f82a4', hitPoint: {155.7, 281.2}
+                  Other, {{32.0, 212.3}, {338.0, 1.0}}, hitPoint: {201.0, 212.8}
+                  Other, {{-16.0, 337.0}, {434.0, 543.7}}, hitPoint: {201.0, 605.5}
+                  Cell, {{16.0, 337.0}, {370.0, 40.3}}, hitPoint: {201.0, 357.2}
+                   Other, {{16.0, 337.0}, {370.0, 40.3}}, hitPoint: {201.0, 357.2}
+                   Other, {{16.0, 337.0}, {370.0, 40.3}}, hitPoint: {201.0, 357.2}
+                    Other, {{16.0, 337.0}, {370.0, 40.3}}, hitPoint: {201.0, 357.2}
+                     Other, {{16.0, 337.0}, {370.0, 40.3}}, hitPoint: {201.0, 357.2}
+                      StaticText, {{16.0, 337.0}, {370.0, 40.3}}, label: 'Root-store inclusion', hitPoint: {201.0, 357.2}
+                  Cell, {{16.0, 377.3}, {370.0, 56.3}}, hitPoint: {201.0, 405.5}
+                   Other, {{16.0, 377.3}, {370.0, 56.3}}, hitPoint: {201.0, 405.5}
+                    Other, {{16.0, 377.3}, {370.0, 56.3}}, hitPoint: {201.0, 405.5}
+                   Other, {{16.0, 377.3}, {370.0, 56.3}}, hitPoint: {201.0, 405.5}
+                    Other, {{16.0, 377.3}, {370.0, 56.3}}, hitPoint: {201.0, 405.5}
+                     Other, {{16.0, 377.3}, {370.0, 56.3}}, hitPoint: {201.0, 405.5}
+                      StaticText, {{33.3, 394.7}, {83.0, 21.7}}, label: 'Apple', hitPoint: {74.8, 405.5}
+                      Image, {{33.3, 394.7}, {21.7, 21.7}}, identifier: 'checkmark.circle', label: 'Selected', Selected, hitPoint: {44.2, 405.5}
+                      StaticText, {{311.0, 396.5}, {59.0, 18.0}}, label: 'Included', hitPoint: {340.5, 405.5}
+                  Cell, {{16.0, 433.7}, {370.0, 84.7}}, hitPoint: {201.0, 476.0}
+                   Other, {{16.0, 433.7}, {370.0, 84.7}}, hitPoint: {201.0, 476.0}
+                    Other, {{16.0, 433.7}, {370.0, 84.7}}, hitPoint: {201.0, 476.0}
+                   Other, {{16.0, 433.7}, {370.0, 84.7}}, hitPoint: {201.0, 476.0}
+                    Other, {{16.0, 433.7}, {370.0, 84.7}}, hitPoint: {201.0, 476.0}
+                     Other, {{16.0, 433.7}, {370.0, 84.7}}, hitPoint: {201.0, 476.0}
+                      StaticText, {{33.3, 451.0}, {158.0, 21.7}}, label: 'Google Chrome', hitPoint: {112.3, 461.8}
+                      Image, {{33.3, 451.0}, {21.7, 21.7}}, identifier: 'checkmark.circle', label: 'Selected', Selected, hitPoint: {44.2, 461.8}
+                      StaticText, {{311.0, 452.8}, {59.0, 18.0}}, label: 'Included', hitPoint: {340.5, 461.8}
+                      Button, {{32.0, 480.0}, {338.0, 20.3}}, label: 'Published constraints', hitPoint: {201.0, 490.2}
+                       StaticText, {{32.0, 480.0}, {164.0, 20.3}}, label: 'Published constraints', hitPoint: {114.0, 490.2}
+                       Button, {{359.7, 483.0}, {10.3, 14.0}}, hitPoint: {364.8, 490.0}
+                        Image, {{359.7, 483.0}, {10.3, 14.0}}, identifier: 'collapsed', hitPoint: {364.8, 490.0}
+                  Other, {{72.0, 432.7}, {298.0, 1.0}}, hitPoint: {221.0, 433.2}
+                  Cell, {{16.0, 518.3}, {370.0, 84.7}}, hitPoint: {201.0, 560.7}
+                   Other, {{16.0, 518.3}, {370.0, 84.7}}, hitPoint: {201.0, 560.7}
+                    Other, {{16.0, 518.3}, {370.0, 84.7}}, hitPoint: {201.0, 560.7}
+                   Other, {{16.0, 518.3}, {370.0, 84.7}}, hitPoint: {201.0, 560.7}
+                    Other, {{16.0, 518.3}, {370.0, 84.7}}, hitPoint: {201.0, 560.7}
+                     Other, {{16.0, 518.3}, {370.0, 84.7}}, hitPoint: {201.0, 560.7}
+                      StaticText, {{33.3, 535.7}, {111.0, 21.7}}, label: 'Microsoft', hitPoint: {88.8, 546.5}
+                      Image, {{33.3, 535.7}, {21.7, 21.7}}, identifier: 'checkmark.circle', label: 'Selected', Selected, hitPoint: {44.2, 546.5}
+                      StaticText, {{311.0, 537.5}, {59.0, 18.0}}, label: 'Included', hitPoint: {340.5, 546.5}
+                      Button, {{32.0, 564.7}, {338.0, 20.3}}, label: 'Published constraints', hitPoint: {201.0, 574.8}
+                       StaticText, {{32.0, 564.7}, {164.0, 20.3}}, label: 'Published constraints', hitPoint: {114.0, 574.8}
+                       Button, {{359.7, 567.7}, {10.3, 14.0}}, hitPoint: {364.8, 574.7}
+                        Image, {{359.7, 567.7}, {10.3, 14.0}}, identifier: 'collapsed', hitPoint: {364.8, 574.7}
+                  Other, {{72.0, 517.3}, {298.0, 1.0}}, hitPoint: {221.0, 517.8}
+                  Cell, {{16.0, 603.0}, {370.0, 56.3}}, hitPoint: {201.0, 631.2}
+                   Other, {{16.0, 603.0}, {370.0, 56.3}}, hitPoint: {201.0, 631.2}
+                    Other, {{16.0, 603.0}, {370.0, 56.3}}, hitPoint: {201.0, 631.2}
+                   Other, {{16.0, 603.0}, {370.0, 56.3}}, hitPoint: {201.0, 631.2}
+                    Other, {{16.0, 603.0}, {370.0, 56.3}}, hitPoint: {201.0, 631.2}
+                     Other, {{16.0, 603.0}, {370.0, 56.3}}, hitPoint: {201.0, 631.2}
+                      StaticText, {{33.3, 620.3}, {91.7, 21.7}}, label: 'Mozilla', hitPoint: {79.2, 631.2}
+                      Image, {{33.3, 620.3}, {21.7, 21.7}}, identifier: 'checkmark.circle', label: 'Selected', Selected, hitPoint: {44.2, 631.2}
+                      StaticText, {{311.0, 622.2}, {59.0, 18.0}}, label: 'Included', hitPoint: {340.5, 631.2}
+                  Other, {{72.0, 602.0}, {298.0, 1.0}}, hitPoint: {221.0, 602.5}
+                  Cell, {{16.0, 659.3}, {370.0, 99.7}}, hitPoint: {201.0, 709.2}
+                   Other, {{16.0, 659.3}, {370.0, 99.7}}, hitPoint: {201.0, 709.2}
+                    Other, {{16.0, 659.3}, {370.0, 99.7}}, hitPoint: {201.0, 709.2}
+                   Other, {{16.0, 659.3}, {370.0, 99.7}}, hitPoint: {201.0, 709.2}
+                    Other, {{16.0, 659.3}, {370.0, 99.7}}, hitPoint: {201.0, 709.2}
+                     Other, {{16.0, 659.3}, {370.0, 99.7}}, hitPoint: {201.0, 709.2}
+                      StaticText, {{16.0, 659.3}, {370.0, 99.7}}, label: 'Exact SHA-256 match against TLS root lists. Inclusion does not validate this server’s full chain or another browser’s policies. Leaf and intermediate certificates normally are not listed.', hitPoint: {201.0, 709.2}
+                  Other, {{72.0, 658.3}, {298.0, 1.0}}, hitPoint: {221.0, 658.8}
+                  Cell, {{16.0, 759.0}, {370.0, 52.0}}, hitPoint: {201.0, 785.0}
+                   Other, {{16.0, 759.0}, {370.0, 52.0}}, hitPoint: {201.0, 785.0}
+                    Other, {{16.0, 759.0}, {370.0, 52.0}}, hitPoint: {201.0, 785.0}
+                   Other, {{16.0, 759.0}, {370.0, 52.0}}, hitPoint: {201.0, 785.0}
+                    Other, {{16.0, 759.0}, {370.0, 52.0}}, hitPoint: {201.0, 785.0}
+                     Other, {{16.0, 759.0}, {370.0, 52.0}}, hitPoint: {201.0, 785.0}
+                      StaticText, {{16.0, 759.0}, {370.0, 52.0}}, label: 'Snapshot: 2026-10-11 · Common CA Database (CCADB)', hitPoint: {201.0, 785.0}
+                  Other, {{32.0, 758.0}, {338.0, 1.0}}, hitPoint: {201.0, 758.5}
+                  Cell, {{16.0, 811.0}, {370.0, 52.0}}, hitPoint: {201.0, 837.0}
+                   Other, {{16.0, 811.0}, {370.0, 52.0}}, hitPoint: {201.0, 837.0}
+                    Other, {{16.0, 811.0}, {370.0, 52.0}}, hitPoint: {201.0, 837.0}
+                   Other, {{16.0, 811.0}, {370.0, 52.0}}, hitPoint: {201.0, 837.0}
+                    Other, {{16.0, 811.0}, {370.0, 52.0}}, hitPoint: {201.0, 837.0}
+                     Other, {{16.0, 811.0}, {370.0, 52.0}}, hitPoint: {201.0, 837.0}
+                      Button, {{16.0, 811.0}, {370.0, 52.0}}, label: 'Data & sources', hitPoint: {201.0, 837.0}
+                       StaticText, {{32.0, 829.2}, {92.7, 15.7}}, label: 'Data & sources', hitPoint: {78.3, 837.0}
+                       Button, {{359.7, 830.0}, {10.3, 14.0}}, hitPoint: {364.8, 837.0}
+                        Image, {{359.7, 830.0}, {10.3, 14.0}}, identifier: 'collapsed', hitPoint: {364.8, 837.0}
+                  Other, {{32.0, 810.0}, {338.0, 1.0}}, hitPoint: {201.0, 810.5}
+                  Other, {{369.0, 116.0}, {30.0, 675.0}}, label: 'Vertical scroll bar, 4 pages', value: 38 %, hitPoint: {384.0, 453.5}
+                   Other, {{396.0, 288.0}, {3.0, 221.3}}, hitPoint: {397.5, 398.7}
+                  Other, {{369.0, 116.0}, {30.0, 675.0}}, label: 'Vertical scroll bar, 4 pages', value: 38 %, hitPoint: {384.0, 453.5}
+                   Other, {{396.0, 288.0}, {3.0, 221.3}}, hitPoint: {397.5, 398.7}
+             Toolbar, {{0.0, 0.0}, {402.0, 874.0}}, identifier: 'Toolbar', label: 'Toolbar', hitPoint: {201.0, 437.0}
+              Other, {{0.0, 0.0}, {402.0, 874.0}}, hitPoint: {201.0, 437.0}
+       Other, {{0.0, 0.0}, {402.0, 874.0}}, hitPoint: {201.0, 437.0}
+        Other, {{0.0, 791.0}, {402.0, 83.0}}, hitPoint: {201.0, 832.5}
+         Other, {{0.0, 0.0}, {402.0, 874.0}}, hitPoint: {201.0, 437.0}
+          TabBar, {{0.0, 791.0}, {402.0, 83.0}}, label: 'Tab Bar', hitPoint: {201.0, 832.5}
+           Other, {{21.0, 791.0}, {360.0, 62.0}}, hitPoint: {201.0, 822.0}
+            Other, {{21.0, 791.0}, {95.0, 54.0}}, hitPoint: {68.5, 818.0}
+            Other, {{21.0, 791.0}, {360.0, 62.0}}, hitPoint: {201.0, 822.0}
+             Button, {{25.0, 795.0}, {95.0, 54.0}}, label: 'Inspect', hitPoint: {72.5, 822.0}
+              Image, {{60.3, 801.7}, {24.7, 26.7}}, identifier: 'checkmark.shield.fill', label: 'Checkmark in a filled shield', hitPoint: {72.7, 815.0}
+             Button, {{110.7, 795.0}, {95.0, 54.0}}, label: 'Requests', hitPoint: {158.2, 822.0}
+              Image, {{141.7, 801.7}, {33.0, 26.3}}, identifier: 'arrow.up.arrow.down', label: 'sort', hitPoint: {158.2, 814.8}
+             Button, {{196.3, 795.0}, {95.0, 54.0}}, label: 'History', Selected, hitPoint: {243.8, 822.0}
+              Image, {{230.3, 801.3}, {27.3, 27.3}}, identifier: 'clock.fill', label: 'clock', hitPoint: {244.0, 815.0}
+             Button, {{282.0, 795.0}, {95.0, 54.0}}, label: 'Tools', hitPoint: {329.5, 822.0}
+              Image, {{313.3, 799.3}, {32.7, 31.7}}, identifier: 'wrench.and.screwdriver.fill', label: 'Wrench and screwdriver, filled', hitPoint: {329.7, 815.2}
+            Other, {{21.0, 791.0}, {360.0, 62.0}}, hitPoint: {201.0, 822.0}
+            Other, {{196.3, 795.0}, {95.0, 54.0}}, hitPoint: {243.8, 822.0}
+             Other, {{196.3, 795.0}, {95.0, 54.0}}, hitPoint: {243.8, 822.0}
+              Other, {{196.3, 795.0}, {95.0, 54.0}}, hitPoint: {243.8, 822.0}
+              Other, {{196.3, 795.0}, {95.0, 54.0}}, hitPoint: {243.8, 822.0}
+               Other, {{196.3, 795.0}, {95.0, 54.0}}, hitPoint: {243.8, 822.0}
+                Other, {{196.3, 795.0}, {95.0, 54.0}}, hitPoint: {243.8, 822.0}
+                 Other, {{196.3, 795.0}, {95.0, 54.0}}, hitPoint: {243.8, 822.0}
+                Other, {{196.3, 795.0}, {95.0, 54.0}}, hitPoint: {243.8, 822.0}
+               Other, {{196.3, 795.0}, {95.0, 54.0}}, hitPoint: {243.8, 822.0}
+         Other, {{0.0, 791.0}, {402.0, 83.0}}, hitPoint: {201.0, 832.5}
+          Other, {{0.0, 791.0}, {402.0, 83.0}}, hitPoint: {201.0, 832.5}
+           Other, {{0.0, 791.0}, {402.0, 83.0}}, hitPoint: {201.0, 832.5}
+            Other, {{0.0, 791.0}, {402.0, 83.0}}, hitPoint: {201.0, 832.5}
+             Other, {{0.0, 791.0}, {402.0, 83.0}}, hitPoint: {201.0, 832.5}
+              Other, {{0.0, 791.0}, {402.0, 83.0}}, hitPoint: {201.0, 832.5}
+            Other, {{0.0, 791.0}, {402.0, 83.0}}, hitPoint: {201.0, 832.5}
+             Other, {{0.0, 791.0}, {402.0, 83.0}}, hitPoint: {201.0, 832.5}

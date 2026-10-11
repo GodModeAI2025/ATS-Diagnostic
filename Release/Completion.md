@@ -9,7 +9,8 @@ The release is complete only when the combined functionality is implemented and 
 - [ ] Complete typed X.509 decoder (initial ASN.1 fields implemented): SAN, EKU, KU, AIA, SKI/AKI, policies, public key, issuer, validity, serial
 - [ ] Trust failures, hostname/expiry/weak-crypto/interception findings
 - [x] Independent TLS-version support probes with negotiated-version readback
-- [ ] Alternate trust stores; CT/revocation details
+- [x] Dated root-store inclusion comparison; system CT-qualified result and embedded SCT/log decoding
+- [ ] Independent alternate-platform trust policies; SCT signature/inclusion checks; revocation details
 - [ ] Safari share extension on iPhone/iPad and macOS support
 
 ## Traffic capture and editing
@@ -52,3 +53,5 @@ The release is complete only when the combined functionality is implemented and 
 Implemented checkboxes describe code presence, not completed runtime verification.
 
 Historical parity additions: stream breakpoints/scripts, stream journal/replay audit, capture initiator metadata, hybrid/fail-open routing, UDP packet analysis, cURL protocol selection/multi-transfer import, regex URL exclusions, query parameter viewer, session-log export and integration notifications.
+
+Preview build32 installation/use verified through the intended tester’s eight TestFlight screenshot reports. Build33 feedback changes and remaining limitations are recorded in Feedback-33.md.

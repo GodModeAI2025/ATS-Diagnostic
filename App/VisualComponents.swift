@@ -7,24 +7,13 @@ extension Color {
 struct InspectionHero: View {
     let record: DiagnosticRecord?
     var body: some View {
-        VStack(alignment: .leading, spacing: 20) {
-            HStack(alignment: .top) {
-                VStack(alignment: .leading, spacing: 8) {
-                    Text("Connection intelligence").font(.subheadline.weight(.medium)).foregroundStyle(.secondary)
-                    Text("See what’s behind\nyour connection.").font(.title2.bold()).fixedSize(horizontal: false, vertical: true)
-                }
-                Spacer(minLength: 12)
-                SupportingIllustration(kind: .server)
+        HStack(alignment: .top, spacing: 14) {
+            SupportingIllustration(kind: .server)
+            VStack(alignment: .leading, spacing: 7) {
+                Text("TLS & certificate inspector").font(.headline)
+                Text("Enter a host to examine its certificates, system trust and connection timings.").font(.subheadline).foregroundStyle(.secondary).fixedSize(horizontal: false, vertical: true)
             }
-            HStack(spacing: 0) {
-                ConnectionStep(title: "Endpoint", symbol: "globe", active: record != nil)
-                Rectangle().fill(Color.secondary.opacity(0.18)).frame(width: 18, height: 1).accessibilityHidden(true)
-                ConnectionStep(title: "TLS & trust", symbol: "lock.shield", active: record?.trustValid == true)
-                Rectangle().fill(Color.secondary.opacity(0.18)).frame(width: 18, height: 1).accessibilityHidden(true)
-                ConnectionStep(title: "Response", symbol: "arrow.down.doc", active: record?.status != nil)
-            }
-            Text("Certificates, security and timings — measured on your device.").font(.subheadline).foregroundStyle(.secondary).fixedSize(horizontal: false, vertical: true)
-        }.padding(.vertical, 12)
+        }.padding(.vertical, 6)
     }
 }
 private struct ConnectionStep: View {
@@ -43,11 +32,10 @@ struct MetricTile: View {
     let value: String
     let symbol: String
     var body: some View {
-        VStack(alignment: .leading, spacing: 12) {
-            SupportingIllustration(kind: symbol == "timer" ? .timing : symbol == "checkmark.seal" || symbol == "lock" ? .certificate : .traffic)
+        VStack(alignment: .leading, spacing: 9) {
             Label { Text(title) } icon: { Image(systemName: symbol).foregroundStyle(Color.diagnosticAccent) }.font(.caption.weight(.medium)).foregroundStyle(.secondary)
             Text(value).font(.title3.weight(.semibold).monospacedDigit()).fixedSize(horizontal: false, vertical: true)
-        }.padding(16).frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .leading).background(Color.diagnosticTint.opacity(0.55), in: RoundedRectangle(cornerRadius: 18)).accessibilityElement(children: .combine)
+        }.padding(14).frame(maxWidth: .infinity, alignment: .leading).background(Color.diagnosticTint.opacity(0.55), in: RoundedRectangle(cornerRadius: 18)).accessibilityElement(children: .combine)
     }
 }
 struct ConnectionOverview: View {
@@ -93,10 +81,11 @@ struct ConnectionTimingChart: View {
     let record: DiagnosticRecord
     var body: some View {
         VStack(alignment: .leading, spacing: 18) {
+            TimingBar(title: "Total request", duration: record.duration, total: record.duration, symbol: "timer")
             if let duration = record.dnsDuration { TimingBar(title: "DNS lookup", duration: duration, total: record.duration, symbol: "globe") }
             if let duration = record.connectDuration { TimingBar(title: "Connection", duration: duration, total: record.duration, symbol: "link") }
             if let duration = record.tlsDuration { TimingBar(title: "TLS handshake", duration: duration, total: record.duration, symbol: "lock") }
-            Text("Each bar compares a measured phase with total request time. Phases can overlap.").font(.caption).foregroundStyle(.secondary)
+            Text(record.dnsDuration == nil && record.connectDuration == nil && record.tlsDuration == nil ? "No separate phase timings were reported for the final transaction." : "Phase bars compare reported durations with total request time. Phases can overlap.").font(.caption).foregroundStyle(.secondary)
         }.padding(.vertical, 8)
     }
 }

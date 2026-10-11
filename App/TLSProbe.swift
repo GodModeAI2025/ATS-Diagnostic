@@ -27,7 +27,12 @@ final class TLSProbe: @unchecked Sendable {
                 sec_protocol_options_set_min_tls_protocol_version(options.securityProtocolOptions, version)
                 sec_protocol_options_set_max_tls_protocol_version(options.securityProtocolOptions, version)
                 sec_protocol_options_set_tls_server_name(options.securityProtocolOptions, host)
-                sec_protocol_options_set_verify_block(options.securityProtocolOptions, { [self] _, trust, complete in
+                sec_protocol_options_set_verify_block(options.securityProtocolOptions, { [self] metadata, trust, complete in
+                    var peerFingerprints = Set<String>()
+                    let peerChainAvailable = sec_protocol_metadata_access_peer_certificate_chain(metadata) { peer in
+                        let certificate = sec_certificate_copy_ref(peer).takeRetainedValue()
+                        peerFingerprints.insert(RootStoreSnapshot.fingerprint(SecCertificateCopyData(certificate) as Data))
+                    }
                     let reference = sec_trust_copy_ref(trust).takeRetainedValue()
                     SecTrustSetPolicies(reference, SecPolicyCreateSSL(true, host as CFString))
                     var error: CFError?
@@ -35,7 +40,7 @@ final class TLSProbe: @unchecked Sendable {
                     trustError = error.map { ($0 as Error).localizedDescription }
                     certificates = (SecTrustCopyCertificateChain(reference) as? [SecCertificate] ?? []).map { certificate in
                         let der = SecCertificateCopyData(certificate) as Data
-                        return CertificateRecord(id: SHA256.hash(data: der).map { String(format: "%02x", $0) }.joined(), subject: SecCertificateCopySubjectSummary(certificate) as String? ?? "Certificate", der: der)
+                        return CertificateRecord(id: SHA256.hash(data: der).map { String(format: "%02x", $0) }.joined(), subject: SecCertificateCopySubjectSummary(certificate) as String? ?? "Certificate", der: der, source: peerChainAvailable ? (peerFingerprints.contains(RootStoreSnapshot.fingerprint(der)) ? "Sent by server" : "Added during system trust evaluation") : "System-evaluated trust chain")
                     }
                     complete(trustValid == true)
                 }, queue)

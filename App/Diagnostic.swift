@@ -6,11 +6,13 @@ struct CertificateRecord: Identifiable, Codable, Sendable {
     let id: String
     let subject: String
     let der: Data
+    var source: String? = nil
 }
 struct DiagnosticRecord: Identifiable, Codable, Sendable {
     var id = UUID()
     var date = Date()
     var url: String
+    var finalURL: String?
     var method: String
     var requestHeaders: [String: String] = [:]
     var requestBody: String = ""
@@ -33,6 +35,7 @@ struct DiagnosticRecord: Identifiable, Codable, Sendable {
     var certificates: [CertificateRecord] = []
     var trustValid: Bool?
     var trustMessage: String?
+    var certificateTransparency: Bool?
     var error: String?
     var curl: String {
         let headers = requestHeaders.sorted { $0.key < $1.key }.map { "-H \(Self.quote("\($0.key): \($0.value)"))" }.joined(separator: " ")
@@ -77,15 +80,17 @@ final class DiagnosticEngine: NSObject, URLSessionDataDelegate, @unchecked Senda
         if let trust = challenge.protectionSpace.serverTrust {
             var error: CFError?
             let valid = SecTrustEvaluateWithError(trust, &error)
+            let trustResult = SecTrustCopyResult(trust) as? [String: Any]
             let chain = SecTrustCopyCertificateChain(trust) as? [SecCertificate] ?? []
             let certificates = chain.map { cert in
                 let der = SecCertificateCopyData(cert) as Data
-                return CertificateRecord(id: SHA256.hash(data: der).map { String(format: "%02x", $0) }.joined(), subject: SecCertificateCopySubjectSummary(cert) as String? ?? "Certificate", der: der)
+                return CertificateRecord(id: SHA256.hash(data: der).map { String(format: "%02x", $0) }.joined(), subject: SecCertificateCopySubjectSummary(cert) as String? ?? "Certificate", der: der, source: "System-evaluated trust chain")
             }
             lock.withLock {
                 record.certificates = certificates
                 record.trustValid = valid
                 record.trustMessage = error.map { ($0 as Error).localizedDescription }
+                record.certificateTransparency = trustResult?[kSecTrustCertificateTransparency as String] as? Bool
             }
         }
         completionHandler(.performDefaultHandling, nil)
@@ -93,6 +98,7 @@ final class DiagnosticEngine: NSObject, URLSessionDataDelegate, @unchecked Senda
     func urlSession(_ session: URLSession, dataTask: URLSessionDataTask, didReceive response: URLResponse, completionHandler: @escaping @Sendable (URLSession.ResponseDisposition) -> Void) {
         lock.withLock {
             if let response = response as? HTTPURLResponse {
+                record.finalURL = response.url?.absoluteString
                 record.status = response.statusCode
                 record.responseHeaders = Dictionary(uniqueKeysWithValues: response.allHeaderFields.map { (String(describing: $0.key), String(describing: $0.value)) })
             }

@@ -1,0 +1,12 @@
+Überarbeitung anhand deines TestFlight-Feedbacks:
+
+- Requests: Header, Body und Prüfsumme sind zunächst zugeklappt; Senden bleibt direkt erreichbar.
+- Connection map: aufklappbare Übersicht über Server, TLS, Zertifikate und HTTP-Antwort.
+- All headers: nach Zweck gegliedert, mit optionalen Erklärungen. Content-Security-Policy und Permissions-Policy zeigen einzelne Direktiven.
+- Zertifikate: eigene Detailseiten mit SHA-1/SHA-256, Schlüsselbezeichnern, X.509-Version, Herkunft, Export und Ablauf-Erinnerung.
+- Root-Store-Vergleich: Apple, Google Chrome, Microsoft und Mozilla; Datensatz vom 11.10.2026, inklusive veröffentlichter Einschränkungen. Eine Aufnahme in eine Root-Liste ersetzt keine vollständige Browser-Prüfung.
+- Certificate Transparency: Apples tatsächliches CT-Ergebnis und eingebettete SCTs mit Log-Namen und Zeitstempeln. Die App prüft SCT-Signaturen und Merkle-Inklusionsbeweise noch nicht unabhängig.
+- TLS-Probes unterscheiden anhand der Peer-Metadaten zwischen vom Server gesendeten und bei der Systemprüfung ergänzten Zertifikaten.
+- Kürzere Antwortvorschau, dezente Farben, weniger Leerfläche und lesbare große Schrift.
+
+Bitte besonders enbw.com, die Zertifikatsdetails, Header-Direktiven und iPad-Querformat ausprobieren. System-Zertifikatsprüfung bleibt aktiviert. Daten werden lokal gespeichert und nur beim bewussten Teilen exportiert.
