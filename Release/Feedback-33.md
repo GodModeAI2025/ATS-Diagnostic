@@ -17,3 +17,5 @@ URLSession certificates are labeled as members of the system-evaluated chain, wi
 Validation: 61 Swift Testing checks passed via Xcode MCP, including SCT framing failures, independent root snapshots, old-certificate decoding, full-response integrity, safe cURL import, HAR and HTTP proxy-parser foundations. The proxy parser has no live capture UI or listener in this build. The App Store quick scanner's single Branch result was reviewed: it matches the app's own SwiftUI TreeBranch type; there is no Branch SDK, tracking SDK or third-party dependency.
 
 This Preview remains an incremental delivery. Full historical feature parity, live proxy/tunnel/MITM capture, independent alternate-platform trust evaluation and revocation are still outstanding.
+
+Release status: signed archive/upload succeeded; Preview 2.0(33) processed and Im Test, assigned solely to mark_zimmermann@mac.com through the manual Mark – Intern group. Build notes saved. Portal separately confirms installed build32; physical installation of build33 remains unverified.
