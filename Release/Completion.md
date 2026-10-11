@@ -31,7 +31,8 @@ The release is complete only when the combined functionality is implemented and 
 ## Utilities and delivery
 - [x] Base64, URL encoding, JSON formatting, SHA-256/SHA-512 and timestamps
 - [ ] Other historical utility parity confirmed against tags and history
-- [ ] Certificate expiry reminders; full-chain export; PEM/CRT/DER formats
+- [x] Full-chain export; PEM/CRT/DER formats
+- [ ] Certificate expiry reminders
 - [ ] ALPN, IDNA hostnames, reverse DNS and redirect-aware per-hop TLS results
 - [ ] Certificate transparency SCT/log checks, OCSP/CRL/revocation
 - [ ] Alternate trust store evaluation and known compromised CA findings

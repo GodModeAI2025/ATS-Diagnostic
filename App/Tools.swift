@@ -5,7 +5,7 @@ import CryptoKit
 struct CertificateExport: Transferable {
     let certificate: CertificateRecord
     static var transferRepresentation: some TransferRepresentation {
-        DataRepresentation(exportedContentType: .data) { $0.certificate.der }.suggestedFileName { $0.certificate.subject + ".der" }
+        DataRepresentation(exportedContentType: .data) { $0.certificate.der }.suggestedFileName { $0.certificate.exportName + ".der" }
     }
 }
 struct ToolsView: View {

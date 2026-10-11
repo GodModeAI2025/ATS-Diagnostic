@@ -28,3 +28,5 @@ User reports Build30 cannot install through TestFlight despite Im Test. Store re
 Streaming integrity verification: 29 tests passed, including a controlled 3 MiB response proving checksum covers all bytes beyond the 2 MiB preview limit. Wide Request/Tools/History layouts added; build verification passed, final screenshots pending. Preview App ID registered and present in fresh App Store Connect app dialog. Administrative access choice awaits explicit authorization after automatic approval rejection.
 
 Final wide-workspace simulator QA passed: clean GET to example.com returned 200/TLS1.3/four certificates; History updated statistics; Tools formatted sorted JSON. Requests, History and Tools showed no standard-landscape clipping or overlap. All sessions closed.
+
+Certificate format exports added after frozen Preview build31: DER/CRT binary and PEM single/complete chain. 32 tests passed via Xcode MCP, including PEM byte roundtrip, chain order and subject filename sanitization. These additions are not yet in an uploaded build.
