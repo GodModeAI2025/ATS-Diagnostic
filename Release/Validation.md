@@ -32,3 +32,7 @@ Final wide-workspace simulator QA passed: clean GET to example.com returned 200/
 Certificate format exports added after frozen Preview build31: DER/CRT binary and PEM single/complete chain. 32 tests passed via Xcode MCP, including PEM byte roundtrip, chain order and subject filename sanitization. These additions are not yet in an uploaded build.
 
 Local expiry reminder planning: 37 tests passed. Isolated simulator UI verified certificate subject/expiry, date picker, include-subject default off, and DER/PEM/CRT/chain export controls. No reminder was scheduled in QA, so notification delivery remains unverified. User explicitly freed all pending actions; App Store Connect Preview record created: 6821686996.
+
+Preview build 2.0 (32), source a37b2c4: signed archive and upload succeeded at 20:05 CEST. Apple reports package processing. New App Store Connect ID 6821686996 and manual internal group a1bcebc2-c662-4040-9ffc-f9c3f8f7898f created; only mark_zimmermann@mac.com selected as tester. Availability and installation remain pending readback.
+
+Preview build32 completion readback: Im Test; one manual internal group, one tester mark_zimmermann@mac.com, invited at 20:10 CEST. Test notes saved. Screenshot TestFlight-Preview32.jpg. Xcode device discovery returned no physical devices, so iPhone TestFlight installation is awaiting the user's actual-device check. Full combined functionality remains unfinished.
