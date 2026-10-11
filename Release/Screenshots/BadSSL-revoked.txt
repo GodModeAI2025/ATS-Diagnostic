@@ -1,0 +1,138 @@
+Device orientation: Unknown
+------------------------
+Application bundle identifier: com.mobilebox.atsdiagnostic
+Application UI orientation: Portrait
+Application, pid: 4273, label: 'ATS Diagnostic'
+ Window, {{0.0, 0.0}, {402.0, 874.0}}, hitPoint: {201.0, 437.0}
+  Other, {{0.0, 0.0}, {402.0, 874.0}}, hitPoint: {201.0, 437.0}
+  Other, {{0.0, 0.0}, {402.0, 874.0}}, hitPoint: {201.0, 437.0}
+   Other, {{0.0, 0.0}, {402.0, 874.0}}, hitPoint: {201.0, 437.0}
+    Other, {{0.0, 0.0}, {402.0, 874.0}}, hitPoint: {201.0, 437.0}
+     Other, {{0.0, 0.0}, {402.0, 874.0}}, hitPoint: {201.0, 437.0}
+      Other, {{0.0, 0.0}, {402.0, 874.0}}, hitPoint: {201.0, 437.0}
+       Other, {{0.0, 0.0}, {402.0, 874.0}}, hitPoint: {201.0, 437.0}
+        Other, {{0.0, 0.0}, {402.0, 874.0}}, hitPoint: {201.0, 437.0}
+         Other, {{0.0, 0.0}, {402.0, 874.0}}, hitPoint: {201.0, 437.0}
+          Other, {{0.0, 0.0}, {402.0, 874.0}}, hitPoint: {201.0, 437.0}
+           Other, {{0.0, 0.0}, {402.0, 874.0}}, hitPoint: {201.0, 437.0}
+            Other, {{0.0, 0.0}, {402.0, 874.0}}, hitPoint: {201.0, 437.0}
+             NavigationBar, {{0.0, 62.0}, {402.0, 54.0}}, identifier: 'revoked', hitPoint: {201.0, 89.0}
+              Button, {{16.0, 62.0}, {44.0, 44.0}}, identifier: 'BackButton', label: 'badssl-Testkatalog', hitPoint: {38.0, 84.0}
+              StaticText, {{169.0, 73.7}, {63.7, 20.7}}, label: 'revoked', hitPoint: {200.8, 84.0}
+             Other, {{0.0, 0.0}, {402.0, 874.0}}, hitPoint: {201.0, 437.0}
+              Other, {{0.0, 0.0}, {402.0, 874.0}}, hitPoint: {201.0, 437.0}
+               Other, {{0.0, 0.0}, {402.0, 874.0}}, hitPoint: {201.0, 437.0}
+                Other, {{0.0, 0.0}, {402.0, 874.0}}, hitPoint: {201.0, 437.0}
+                 CollectionView, {{0.0, 0.0}, {402.0, 874.0}}, hitPoint: {201.0, 437.0}
+                  Other, {{-16.0, -1632.0}, {434.0, 2166.3}}, hitPoint: {201.0, 267.2}
+                  Other, {{0.0, 0.0}, {402.0, 874.0}}, hitPoint: {201.0, 437.0}
+                   Other, {{0.0, 0.0}, {402.0, 156.0}}, hitPoint: {201.0, 78.0}
+                   Other, {{0.0, 741.0}, {402.0, 133.0}}, hitPoint: {201.0, 807.5}
+                  Other, {{0.0, 0.0}, {402.0, 874.0}}, hitPoint: {201.0, 437.0}
+                   Other, {{0.0, 741.0}, {402.0, 133.0}}, hitPoint: {201.0, 807.5}
+                  Cell, {{16.0, 116.0}, {370.0, 40.3}}, hitPoint: {201.0, 136.2}
+                   Other, {{16.0, 116.0}, {370.0, 40.3}}, hitPoint: {201.0, 136.2}
+                   Other, {{16.0, 116.0}, {370.0, 40.3}}, hitPoint: {201.0, 136.2}
+                    Other, {{16.0, 116.0}, {370.0, 40.3}}, hitPoint: {201.0, 136.2}
+                     Other, {{16.0, 116.0}, {370.0, 40.3}}, hitPoint: {201.0, 136.2}
+                      StaticText, {{16.0, 116.0}, {370.0, 40.3}}, label: 'Beobachtetes Ergebnis', hitPoint: {201.0, 136.2}
+                  Cell, {{16.0, 156.3}, {370.0, 52.0}}, hitPoint: {201.0, 182.3}
+                   Other, {{16.0, 156.3}, {370.0, 52.0}}, hitPoint: {201.0, 182.3}
+                    Other, {{16.0, 156.3}, {370.0, 52.0}}, hitPoint: {201.0, 182.3}
+                   Other, {{16.0, 156.3}, {370.0, 52.0}}, hitPoint: {201.0, 182.3}
+                    Other, {{16.0, 156.3}, {370.0, 52.0}}, hitPoint: {201.0, 182.3}
+                     Other, {{16.0, 156.3}, {370.0, 52.0}}, hitPoint: {201.0, 182.3}
+                      StaticText, {{16.0, 156.3}, {370.0, 52.0}}, label: 'https://revoked.badssl.com/', hitPoint: {201.0, 182.3}
+                  Cell, {{16.0, 208.3}, {370.0, 52.0}}, hitPoint: {201.0, 234.3}
+                   Other, {{16.0, 208.3}, {370.0, 52.0}}, hitPoint: {201.0, 234.3}
+                    Other, {{16.0, 208.3}, {370.0, 52.0}}, hitPoint: {201.0, 234.3}
+                   Other, {{16.0, 208.3}, {370.0, 52.0}}, hitPoint: {201.0, 234.3}
+                    Other, {{16.0, 208.3}, {370.0, 52.0}}, hitPoint: {201.0, 234.3}
+                     Other, {{16.0, 208.3}, {370.0, 52.0}}, hitPoint: {201.0, 234.3}
+                      StaticText, {{16.0, 208.3}, {370.0, 52.0}}, label: 'Antwort empfangen', hitPoint: {201.0, 234.3}
+                  Other, {{32.0, 207.3}, {338.0, 1.0}}, hitPoint: {201.0, 207.8}
+                  Cell, {{16.0, 260.3}, {370.0, 256.3}}, hitPoint: {201.0, 388.5}
+                   Other, {{16.0, 260.3}, {370.0, 256.3}}, hitPoint: {201.0, 388.5}
+                    Other, {{16.0, 260.3}, {370.0, 256.3}}, hitPoint: {201.0, 388.5}
+                   Other, {{16.0, 260.3}, {370.0, 256.3}}, hitPoint: {201.0, 388.5}
+                    Other, {{16.0, 260.3}, {370.0, 256.3}}, hitPoint: {201.0, 388.5}
+                     Other, {{16.0, 260.3}, {370.0, 256.3}}, hitPoint: {201.0, 388.5}
+                      StaticText, {{35.0, 280.7}, {200.7, 22.0}}, label: 'Zertifikat widerrufen', hitPoint: {135.3, 291.7}
+                      Image, {{35.0, 280.7}, {18.3, 22.0}}, identifier: 'exclamationmark.shield', label: 'Exclamation Mark In A Shield', hitPoint: {44.2, 291.7}
+                      StaticText, {{32.0, 315.7}, {336.0, 78.0}}, label: 'Die zusätzliche Sperrprüfung bestätigt einen Widerruf. Eine zuvor empfangene HTTP-Antwort oder erfolgreiche Standardprüfung hebt diesen Befund nicht auf.', hitPoint: {200.0, 354.7}
+                      StaticText, {{32.0, 407.7}, {97.0, 14.3}}, label: 'Nächster Schritt', hitPoint: {80.5, 414.8}
+                      StaticText, {{32.0, 428.0}, {328.3, 38.0}}, label: 'Der Betreiber muss das gesperrte Zertifikat ersetzen und die Ursache des Widerrufs prüfen.', hitPoint: {196.2, 447.0}
+                      Button, {{32.0, 480.0}, {338.0, 15.7}}, label: 'Technische Details', hitPoint: {201.0, 487.8}
+                       StaticText, {{32.0, 480.0}, {113.7, 15.7}}, label: 'Technische Details', hitPoint: {88.8, 487.8}
+                       Button, {{359.7, 480.7}, {10.3, 14.0}}, hitPoint: {364.8, 487.7}
+                        Image, {{359.7, 480.7}, {10.3, 14.0}}, identifier: 'collapsed', hitPoint: {364.8, 487.7}
+                  Other, {{32.0, 259.3}, {338.0, 1.0}}, hitPoint: {201.0, 259.8}
+                  Other, {{-16.0, 534.3}, {434.0, 402.0}}, hitPoint: {201.0, 704.2}
+                  Cell, {{16.0, 534.3}, {370.0, 40.3}}, hitPoint: {201.0, 554.5}
+                   Other, {{16.0, 534.3}, {370.0, 40.3}}, hitPoint: {201.0, 554.5}
+                   Other, {{16.0, 534.3}, {370.0, 40.3}}, hitPoint: {201.0, 554.5}
+                    Other, {{16.0, 534.3}, {370.0, 40.3}}, hitPoint: {201.0, 554.5}
+                     Other, {{16.0, 534.3}, {370.0, 40.3}}, hitPoint: {201.0, 554.5}
+                      StaticText, {{16.0, 534.3}, {370.0, 40.3}}, label: 'Grenzen und Einordnung', hitPoint: {201.0, 554.5}
+                  Cell, {{16.0, 574.3}, {370.0, 128.0}}, hitPoint: {201.0, 638.3}
+                   Other, {{16.0, 574.3}, {370.0, 128.0}}, hitPoint: {201.0, 638.3}
+                    Other, {{16.0, 574.3}, {370.0, 128.0}}, hitPoint: {201.0, 638.3}
+                   Other, {{16.0, 574.3}, {370.0, 128.0}}, hitPoint: {201.0, 638.3}
+                    Other, {{16.0, 574.3}, {370.0, 128.0}}, hitPoint: {201.0, 638.3}
+                     Other, {{16.0, 574.3}, {370.0, 128.0}}, hitPoint: {201.0, 638.3}
+                      StaticText, {{16.0, 574.3}, {370.0, 128.0}}, label: 'Systemvertrauen und eine ausdrücklich bestätigte Sperrprüfung werden getrennt dargestellt. Eine erreichbare Antwort ohne Sperrnachweis ist kein Nachweis, dass das Zertifikat nicht widerrufen ist.', hitPoint: {201.0, 638.3}
+                  Cell, {{16.0, 702.7}, {370.0, 148.0}}, hitPoint: {201.0, 776.7}
+                   Other, {{16.0, 702.7}, {370.0, 148.0}}, hitPoint: {201.0, 776.7}
+                    Other, {{16.0, 702.7}, {370.0, 148.0}}, hitPoint: {201.0, 776.7}
+                   Other, {{16.0, 702.7}, {370.0, 148.0}}, hitPoint: {201.0, 776.7}
+                    Other, {{16.0, 702.7}, {370.0, 148.0}}, hitPoint: {201.0, 776.7}
+                     Other, {{16.0, 702.7}, {370.0, 148.0}}, hitPoint: {201.0, 776.7}
+                      StaticText, {{16.0, 702.7}, {370.0, 148.0}}, label: 'Zusätzliche Sperrprüfung: Die Seriennummer des Server-Zertifikats steht in einer aktuellen, mit dem Schlüssel des vertrauenswürdigen direkten Ausstellers geprüften CRL. Widerrufen am 2026-09-15T21:01:24Z. CRL gültig bis 2026-10-20T20:05:52Z.', hitPoint: {201.0, 776.7}
+                  Other, {{32.0, 701.7}, {338.0, 1.0}}, hitPoint: {201.0, 702.2}
+                  Cell, {{16.0, 850.7}, {370.0, 68.0}}, hitPoint: {201.0, 862.3}
+                   Other, {{16.0, 850.7}, {370.0, 68.0}}, hitPoint: {201.0, 862.3}
+                    Other, {{16.0, 850.7}, {370.0, 68.0}}, hitPoint: {201.0, 862.3}
+                   Other, {{16.0, 850.7}, {370.0, 68.0}}, hitPoint: {201.0, 862.3}
+                    Other, {{16.0, 850.7}, {370.0, 68.0}}, hitPoint: {201.0, 862.3}
+                     Other, {{16.0, 850.7}, {370.0, 68.0}}, hitPoint: {201.0, 862.3}
+                      StaticText, {{16.0, 850.7}, {370.0, 68.0}}, label: 'System hat für diese Anfrage keinen positiven Sperrprüfungsnachweis gemeldet.', hitPoint: {201.0, 862.3}
+                  Other, {{32.0, 849.7}, {338.0, 1.0}}, hitPoint: {201.0, 850.2}
+                  Other, {{369.0, 116.0}, {30.0, 675.0}}, label: 'Vertical scroll bar, 2 pages', value: 0 %, hitPoint: {384.0, 453.5}
+                   Other, {{396.0, 781.0}, {3.0, 7.0}}, hitPoint: {397.5, 784.5}
+                  Other, {{369.0, 116.0}, {30.0, 675.0}}, label: 'Vertical scroll bar, 2 pages', value: 0 %, hitPoint: {384.0, 453.5}
+                   Other, {{396.0, 781.0}, {3.0, 7.0}}, hitPoint: {397.5, 784.5}
+             Toolbar, {{0.0, 0.0}, {402.0, 874.0}}, identifier: 'Toolbar', label: 'Toolbar', hitPoint: {201.0, 437.0}
+              Other, {{0.0, 0.0}, {402.0, 874.0}}, hitPoint: {201.0, 437.0}
+       Other, {{0.0, 0.0}, {402.0, 874.0}}, hitPoint: {201.0, 437.0}
+        Other, {{0.0, 791.0}, {402.0, 83.0}}, hitPoint: {201.0, 832.5}
+         Other, {{0.0, 0.0}, {402.0, 874.0}}, hitPoint: {201.0, 437.0}
+          TabBar, {{0.0, 791.0}, {402.0, 83.0}}, label: 'Tab Bar', hitPoint: {201.0, 832.5}
+           Other, {{21.0, 791.0}, {360.0, 62.0}}, hitPoint: {201.0, 822.0}
+            Other, {{21.0, 791.0}, {95.0, 54.0}}, hitPoint: {68.5, 818.0}
+            Other, {{21.0, 791.0}, {360.0, 62.0}}, hitPoint: {201.0, 822.0}
+             Button, {{25.0, 795.0}, {95.0, 54.0}}, identifier: 'checkmark.shield', label: 'Inspect', hitPoint: {72.5, 822.0}
+              Image, {{60.3, 801.7}, {24.7, 26.7}}, identifier: 'checkmark.shield.fill', label: 'Checkmark in a filled shield', hitPoint: {72.7, 815.0}
+             Button, {{110.7, 795.0}, {95.0, 54.0}}, identifier: 'arrow.up.arrow.down', label: 'Requests', hitPoint: {158.2, 822.0}
+              Image, {{141.7, 801.7}, {33.0, 26.3}}, identifier: 'arrow.up.arrow.down', label: 'sort', hitPoint: {158.2, 814.8}
+             Button, {{196.3, 795.0}, {95.0, 54.0}}, identifier: 'clock', label: 'History', hitPoint: {243.8, 822.0}
+              Image, {{230.3, 801.3}, {27.3, 27.3}}, identifier: 'clock.fill', label: 'clock', hitPoint: {244.0, 815.0}
+             Button, {{282.0, 795.0}, {95.0, 54.0}}, identifier: 'wrench.and.screwdriver', label: 'Tools', Selected, hitPoint: {329.5, 822.0}
+              Image, {{313.3, 799.3}, {32.7, 31.7}}, identifier: 'wrench.and.screwdriver.fill', label: 'Wrench and screwdriver, filled', hitPoint: {329.7, 815.2}
+            Other, {{21.0, 791.0}, {360.0, 62.0}}, hitPoint: {201.0, 822.0}
+            Other, {{282.0, 795.0}, {95.0, 54.0}}, hitPoint: {329.5, 822.0}
+             Other, {{282.0, 795.0}, {95.0, 54.0}}, hitPoint: {329.5, 822.0}
+              Other, {{282.0, 795.0}, {95.0, 54.0}}, hitPoint: {329.5, 822.0}
+              Other, {{282.0, 795.0}, {95.0, 54.0}}, hitPoint: {329.5, 822.0}
+               Other, {{282.0, 795.0}, {95.0, 54.0}}, hitPoint: {329.5, 822.0}
+                Other, {{282.0, 795.0}, {95.0, 54.0}}, hitPoint: {329.5, 822.0}
+                 Other, {{282.0, 795.0}, {95.0, 54.0}}, hitPoint: {329.5, 822.0}
+                Other, {{282.0, 795.0}, {95.0, 54.0}}, hitPoint: {329.5, 822.0}
+               Other, {{282.0, 795.0}, {95.0, 54.0}}, hitPoint: {329.5, 822.0}
+         Other, {{0.0, 791.0}, {402.0, 83.0}}, hitPoint: {201.0, 832.5}
+          Other, {{0.0, 791.0}, {402.0, 83.0}}, hitPoint: {201.0, 832.5}
+           Other, {{0.0, 791.0}, {402.0, 83.0}}, hitPoint: {201.0, 832.5}
+            Other, {{0.0, 791.0}, {402.0, 83.0}}, hitPoint: {201.0, 832.5}
+             Other, {{0.0, 791.0}, {402.0, 83.0}}, hitPoint: {201.0, 832.5}
+              Other, {{0.0, 791.0}, {402.0, 83.0}}, hitPoint: {201.0, 832.5}
+            Other, {{0.0, 791.0}, {402.0, 83.0}}, hitPoint: {201.0, 832.5}
+             Other, {{0.0, 791.0}, {402.0, 83.0}}, hitPoint: {201.0, 832.5}

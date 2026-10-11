@@ -1,0 +1,133 @@
+Device orientation: Unknown
+------------------------
+Application bundle identifier: com.mobilebox.atsdiagnostic
+Application UI orientation: Portrait
+Application, pid: 4273, label: 'ATS Diagnostic'
+ Window, {{0.0, 0.0}, {402.0, 874.0}}, hitPoint: {201.0, 437.0}
+  Other, {{0.0, 0.0}, {402.0, 874.0}}, hitPoint: {201.0, 437.0}
+  Other, {{0.0, 0.0}, {402.0, 874.0}}, hitPoint: {201.0, 437.0}
+   Other, {{0.0, 0.0}, {402.0, 874.0}}, hitPoint: {201.0, 437.0}
+    Other, {{0.0, 0.0}, {402.0, 874.0}}, hitPoint: {201.0, 437.0}
+     Other, {{0.0, 0.0}, {402.0, 874.0}}, hitPoint: {201.0, 437.0}
+      Other, {{0.0, 0.0}, {402.0, 874.0}}, hitPoint: {201.0, 437.0}
+       Other, {{0.0, 0.0}, {402.0, 874.0}}, hitPoint: {201.0, 437.0}
+        Other, {{0.0, 0.0}, {402.0, 874.0}}, hitPoint: {201.0, 437.0}
+         Other, {{0.0, 0.0}, {402.0, 874.0}}, hitPoint: {201.0, 437.0}
+          Other, {{0.0, 0.0}, {402.0, 874.0}}, hitPoint: {201.0, 437.0}
+           Other, {{0.0, 0.0}, {402.0, 874.0}}, hitPoint: {201.0, 437.0}
+            Other, {{0.0, 0.0}, {402.0, 874.0}}, hitPoint: {201.0, 437.0}
+             NavigationBar, {{0.0, 62.0}, {402.0, 54.0}}, identifier: 'expired', hitPoint: {201.0, 89.0}
+              Button, {{16.0, 62.0}, {44.0, 44.0}}, identifier: 'BackButton', label: 'badssl-Testkatalog', hitPoint: {38.0, 84.0}
+              StaticText, {{171.3, 73.7}, {59.3, 20.7}}, label: 'expired', hitPoint: {201.0, 84.0}
+              Button, {{345.9, 65.9}, {36.2, 36.2}}, label: 'Bericht teilen', hitPoint: {364.0, 84.0}
+             Other, {{0.0, 0.0}, {402.0, 874.0}}, hitPoint: {201.0, 437.0}
+              Other, {{0.0, 0.0}, {402.0, 874.0}}, hitPoint: {201.0, 437.0}
+               Other, {{0.0, 0.0}, {402.0, 874.0}}, hitPoint: {201.0, 437.0}
+                Other, {{0.0, 0.0}, {402.0, 874.0}}, hitPoint: {201.0, 437.0}
+                 CollectionView, {{0.0, 0.0}, {402.0, 874.0}}, hitPoint: {201.0, 437.0}
+                  Other, {{-16.0, -1632.0}, {434.0, 2166.3}}, hitPoint: {201.0, 267.2}
+                  Other, {{0.0, 0.0}, {402.0, 874.0}}, hitPoint: {201.0, 437.0}
+                   Other, {{0.0, 0.0}, {402.0, 156.0}}, hitPoint: {201.0, 78.0}
+                   Other, {{0.0, 741.0}, {402.0, 133.0}}, hitPoint: {201.0, 807.5}
+                  Other, {{0.0, 0.0}, {402.0, 874.0}}, hitPoint: {201.0, 437.0}
+                   Other, {{0.0, 741.0}, {402.0, 133.0}}, hitPoint: {201.0, 807.5}
+                  Cell, {{16.0, 116.0}, {370.0, 40.3}}, hitPoint: {201.0, 136.2}
+                   Other, {{16.0, 116.0}, {370.0, 40.3}}, hitPoint: {201.0, 136.2}
+                   Other, {{16.0, 116.0}, {370.0, 40.3}}, hitPoint: {201.0, 136.2}
+                    Other, {{16.0, 116.0}, {370.0, 40.3}}, hitPoint: {201.0, 136.2}
+                     Other, {{16.0, 116.0}, {370.0, 40.3}}, hitPoint: {201.0, 136.2}
+                      StaticText, {{16.0, 116.0}, {370.0, 40.3}}, label: 'Beobachtetes Ergebnis', hitPoint: {201.0, 136.2}
+                  Cell, {{16.0, 156.3}, {370.0, 52.0}}, hitPoint: {201.0, 182.3}
+                   Other, {{16.0, 156.3}, {370.0, 52.0}}, hitPoint: {201.0, 182.3}
+                    Other, {{16.0, 156.3}, {370.0, 52.0}}, hitPoint: {201.0, 182.3}
+                   Other, {{16.0, 156.3}, {370.0, 52.0}}, hitPoint: {201.0, 182.3}
+                    Other, {{16.0, 156.3}, {370.0, 52.0}}, hitPoint: {201.0, 182.3}
+                     Other, {{16.0, 156.3}, {370.0, 52.0}}, hitPoint: {201.0, 182.3}
+                      StaticText, {{16.0, 156.3}, {370.0, 52.0}}, label: 'https://expired.badssl.com/', hitPoint: {201.0, 182.3}
+                  Cell, {{16.0, 208.3}, {370.0, 52.0}}, hitPoint: {201.0, 234.3}
+                   Other, {{16.0, 208.3}, {370.0, 52.0}}, hitPoint: {201.0, 234.3}
+                    Other, {{16.0, 208.3}, {370.0, 52.0}}, hitPoint: {201.0, 234.3}
+                   Other, {{16.0, 208.3}, {370.0, 52.0}}, hitPoint: {201.0, 234.3}
+                    Other, {{16.0, 208.3}, {370.0, 52.0}}, hitPoint: {201.0, 234.3}
+                     Other, {{16.0, 208.3}, {370.0, 52.0}}, hitPoint: {201.0, 234.3}
+                      StaticText, {{16.0, 208.3}, {370.0, 52.0}}, label: 'Verbindung abgelehnt', hitPoint: {201.0, 234.3}
+                  Other, {{32.0, 207.3}, {338.0, 1.0}}, hitPoint: {201.0, 207.8}
+                  Cell, {{16.0, 260.3}, {370.0, 256.3}}, hitPoint: {201.0, 388.5}
+                   Other, {{16.0, 260.3}, {370.0, 256.3}}, hitPoint: {201.0, 388.5}
+                    Other, {{16.0, 260.3}, {370.0, 256.3}}, hitPoint: {201.0, 388.5}
+                   Other, {{16.0, 260.3}, {370.0, 256.3}}, hitPoint: {201.0, 388.5}
+                    Other, {{16.0, 260.3}, {370.0, 256.3}}, hitPoint: {201.0, 388.5}
+                     Other, {{16.0, 260.3}, {370.0, 256.3}}, hitPoint: {201.0, 388.5}
+                      StaticText, {{35.0, 280.7}, {203.0, 22.0}}, label: 'Zertifikat abgelaufen', hitPoint: {136.5, 291.7}
+                      Image, {{35.0, 280.7}, {18.3, 22.0}}, identifier: 'exclamationmark.shield', label: 'Exclamation Mark In A Shield', hitPoint: {44.2, 291.7}
+                      StaticText, {{32.0, 315.7}, {314.0, 58.0}}, label: 'Mindestens ein Zertifikat der geprüften Kette liegt außerhalb seiner Gültigkeit. Eine vertrauenswürdige Verbindung kam nicht zustande.', hitPoint: {189.0, 344.7}
+                      StaticText, {{32.0, 387.7}, {97.0, 14.3}}, label: 'Nächster Schritt', hitPoint: {80.5, 394.8}
+                      StaticText, {{32.0, 408.0}, {302.3, 58.0}}, label: 'Gültigkeitsdaten und Gerätezeit prüfen. Der Betreiber muss ein gültiges Zertifikat samt passender Kette bereitstellen.', hitPoint: {183.2, 437.0}
+                      Button, {{32.0, 480.0}, {338.0, 15.7}}, label: 'Technische Details', hitPoint: {201.0, 487.8}
+                       StaticText, {{32.0, 480.0}, {113.7, 15.7}}, label: 'Technische Details', hitPoint: {88.8, 487.8}
+                       Button, {{359.7, 481.0}, {10.3, 14.0}}, hitPoint: {364.8, 488.0}
+                        Image, {{359.7, 481.0}, {10.3, 14.0}}, identifier: 'collapsed', hitPoint: {364.8, 488.0}
+                  Other, {{32.0, 259.3}, {338.0, 1.0}}, hitPoint: {201.0, 259.8}
+                  Other, {{-16.0, 534.3}, {434.0, 166.0}}, hitPoint: {201.0, 617.3}
+                  Cell, {{16.0, 534.3}, {370.0, 40.3}}, hitPoint: {201.0, 554.5}
+                   Other, {{16.0, 534.3}, {370.0, 40.3}}, hitPoint: {201.0, 554.5}
+                   Other, {{16.0, 534.3}, {370.0, 40.3}}, hitPoint: {201.0, 554.5}
+                    Other, {{16.0, 534.3}, {370.0, 40.3}}, hitPoint: {201.0, 554.5}
+                     Other, {{16.0, 534.3}, {370.0, 40.3}}, hitPoint: {201.0, 554.5}
+                      StaticText, {{16.0, 534.3}, {370.0, 40.3}}, label: 'Grenzen und Einordnung', hitPoint: {201.0, 554.5}
+                  Cell, {{16.0, 574.3}, {370.0, 108.0}}, hitPoint: {201.0, 628.3}
+                   Other, {{16.0, 574.3}, {370.0, 108.0}}, hitPoint: {201.0, 628.3}
+                    Other, {{16.0, 574.3}, {370.0, 108.0}}, hitPoint: {201.0, 628.3}
+                   Other, {{16.0, 574.3}, {370.0, 108.0}}, hitPoint: {201.0, 628.3}
+                    Other, {{16.0, 574.3}, {370.0, 108.0}}, hitPoint: {201.0, 628.3}
+                     Other, {{16.0, 574.3}, {370.0, 108.0}}, hitPoint: {201.0, 628.3}
+                      StaticText, {{16.0, 574.3}, {370.0, 108.0}}, label: 'Testabsicht und beobachteter Fehler werden getrennt: Der Name des badssl-Ziels wird nicht als Beweis für die tatsächliche Fehlerursache verwendet.', hitPoint: {201.0, 628.3}
+                  Other, {{-16.0, 700.0}, {434.0, 1837.7}}, hitPoint: {201.0, 787.0}
+                  Cell, {{16.0, 717.7}, {370.0, 52.0}}, hitPoint: {201.0, 743.7}
+                   Other, {{16.0, 717.7}, {370.0, 52.0}}, hitPoint: {201.0, 743.7}
+                    Other, {{16.0, 717.7}, {370.0, 52.0}}, hitPoint: {201.0, 743.7}
+                   Other, {{16.0, 717.7}, {370.0, 52.0}}, hitPoint: {201.0, 743.7}
+                    Other, {{16.0, 717.7}, {370.0, 52.0}}, hitPoint: {201.0, 743.7}
+                     Other, {{16.0, 717.7}, {370.0, 52.0}}, hitPoint: {201.0, 743.7}
+                      Button, {{16.0, 717.7}, {370.0, 52.0}}, label: 'Verbindung und Zertifikate öffnen', hitPoint: {201.0, 743.7}
+                       StaticText, {{32.0, 733.5}, {256.7, 20.3}}, label: 'Verbindung und Zertifikate öffnen', hitPoint: {160.3, 743.7}
+                       Image, {{360.7, 737.7}, {7.0, 12.0}}, identifier: 'chevron.forward', hitPoint: {364.2, 743.7}
+                  Other, {{369.0, 116.0}, {30.0, 675.0}}, label: 'Vertical scroll bar, 1 page', value: 0 %, hitPoint: {384.0, 453.5}
+                   Other, {{396.0, 781.0}, {3.0, 7.0}}, hitPoint: {397.5, 784.5}
+                  Other, {{369.0, 116.0}, {30.0, 675.0}}, label: 'Vertical scroll bar, 1 page', value: 0 %, hitPoint: {384.0, 453.5}
+                   Other, {{396.0, 781.0}, {3.0, 7.0}}, hitPoint: {397.5, 784.5}
+             Toolbar, {{0.0, 0.0}, {402.0, 874.0}}, identifier: 'Toolbar', label: 'Toolbar', hitPoint: {201.0, 437.0}
+              Other, {{0.0, 0.0}, {402.0, 874.0}}, hitPoint: {201.0, 437.0}
+       Other, {{0.0, 0.0}, {402.0, 874.0}}, hitPoint: {201.0, 437.0}
+        Other, {{0.0, 791.0}, {402.0, 83.0}}, hitPoint: {201.0, 832.5}
+         Other, {{0.0, 0.0}, {402.0, 874.0}}, hitPoint: {201.0, 437.0}
+          TabBar, {{0.0, 791.0}, {402.0, 83.0}}, label: 'Tab Bar', hitPoint: {201.0, 832.5}
+           Other, {{21.0, 791.0}, {360.0, 62.0}}, hitPoint: {201.0, 822.0}
+            Other, {{21.0, 791.0}, {95.0, 54.0}}, hitPoint: {68.5, 818.0}
+            Other, {{21.0, 791.0}, {360.0, 62.0}}, hitPoint: {201.0, 822.0}
+             Button, {{25.0, 795.0}, {95.0, 54.0}}, identifier: 'checkmark.shield', label: 'Inspect', hitPoint: {72.5, 822.0}
+              Image, {{60.3, 801.7}, {24.7, 26.7}}, identifier: 'checkmark.shield.fill', label: 'Checkmark in a filled shield', hitPoint: {72.7, 815.0}
+             Button, {{110.7, 795.0}, {95.0, 54.0}}, identifier: 'arrow.up.arrow.down', label: 'Requests', hitPoint: {158.2, 822.0}
+              Image, {{141.7, 801.7}, {33.0, 26.3}}, identifier: 'arrow.up.arrow.down', label: 'sort', hitPoint: {158.2, 814.8}
+             Button, {{196.3, 795.0}, {95.0, 54.0}}, identifier: 'clock', label: 'History', hitPoint: {243.8, 822.0}
+              Image, {{230.3, 801.3}, {27.3, 27.3}}, identifier: 'clock.fill', label: 'clock', hitPoint: {244.0, 815.0}
+             Button, {{282.0, 795.0}, {95.0, 54.0}}, identifier: 'wrench.and.screwdriver', label: 'Tools', Selected, hitPoint: {329.5, 822.0}
+              Image, {{313.3, 799.3}, {32.7, 31.7}}, identifier: 'wrench.and.screwdriver.fill', label: 'Wrench and screwdriver, filled', hitPoint: {329.7, 815.2}
+            Other, {{21.0, 791.0}, {360.0, 62.0}}, hitPoint: {201.0, 822.0}
+            Other, {{282.0, 795.0}, {95.0, 54.0}}, hitPoint: {329.5, 822.0}
+             Other, {{282.0, 795.0}, {95.0, 54.0}}, hitPoint: {329.5, 822.0}
+              Other, {{282.0, 795.0}, {95.0, 54.0}}, hitPoint: {329.5, 822.0}
+              Other, {{282.0, 795.0}, {95.0, 54.0}}, hitPoint: {329.5, 822.0}
+               Other, {{282.0, 795.0}, {95.0, 54.0}}, hitPoint: {329.5, 822.0}
+                Other, {{282.0, 795.0}, {95.0, 54.0}}, hitPoint: {329.5, 822.0}
+                 Other, {{282.0, 795.0}, {95.0, 54.0}}, hitPoint: {329.5, 822.0}
+                Other, {{282.0, 795.0}, {95.0, 54.0}}, hitPoint: {329.5, 822.0}
+               Other, {{282.0, 795.0}, {95.0, 54.0}}, hitPoint: {329.5, 822.0}
+         Other, {{0.0, 791.0}, {402.0, 83.0}}, hitPoint: {201.0, 832.5}
+          Other, {{0.0, 791.0}, {402.0, 83.0}}, hitPoint: {201.0, 832.5}
+           Other, {{0.0, 791.0}, {402.0, 83.0}}, hitPoint: {201.0, 832.5}
+            Other, {{0.0, 791.0}, {402.0, 83.0}}, hitPoint: {201.0, 832.5}
+             Other, {{0.0, 791.0}, {402.0, 83.0}}, hitPoint: {201.0, 832.5}
+              Other, {{0.0, 791.0}, {402.0, 83.0}}, hitPoint: {201.0, 832.5}
+            Other, {{0.0, 791.0}, {402.0, 83.0}}, hitPoint: {201.0, 832.5}
+             Other, {{0.0, 791.0}, {402.0, 83.0}}, hitPoint: {201.0, 832.5}
