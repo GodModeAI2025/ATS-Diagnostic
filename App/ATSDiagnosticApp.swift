@@ -211,7 +211,7 @@ struct HistoryView: View {
                 .confirmationDialog("Delete all local diagnostics?", isPresented: $confirmClear) { Button("Delete history", role: .destructive) { store.clear() } }
                 .fileImporter(isPresented: $importHAR, allowedContentTypes: [.json, .data]) { result in do { let url = try result.get(); let accessed = url.startAccessingSecurityScopedResource(); defer { if accessed { url.stopAccessingSecurityScopedResource() } }; try store.importHAR(Data(contentsOf: url)) } catch { store.error = error.localizedDescription } }
                 .onChange(of: query, initial: true) { refresh() }
-                .onChange(of: store.records.count) { refresh() }
+                .onChange(of: store.records.map(\.id)) { refresh() }
                 .onChange(of: category) { refresh() }
                 .onChange(of: favoritesOnly) { refresh() }
                 .onChange(of: store.settings.favorites) { refresh() }

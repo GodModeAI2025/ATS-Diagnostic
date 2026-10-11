@@ -49,6 +49,7 @@ struct RecordingSettingsView: View {
                 Section("Local recording") {
                     Toggle("Save request history", isOn: $value.enabled)
                     Stepper("Keep up to \(value.recordLimit) requests", value: $value.recordLimit, in: 10...1000, step: 10)
+                    Text("Der gespeicherte Verlauf ist zusätzlich auf 64 MiB begrenzt, einschließlich Antwortvorschauen und Zertifikaten. Die neuesten passenden Einträge bleiben erhalten; ältere werden entfernt. Ein einzelner Eintrag über diesem Limit bleibt nur in der aktuellen Diagnose sichtbar.").font(.footnote)
                     Text("Turning recording off keeps existing history. New requests remain visible until the app closes, without being saved.").font(.footnote)
                 }
                 Section("Exclude URLs · regular expressions") {

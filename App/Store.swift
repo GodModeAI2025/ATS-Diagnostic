@@ -16,7 +16,7 @@ import Observation
     init() {
         if let data = try? Data(contentsOf: optionsFile), let value = try? JSONDecoder().decode(DiagnosticOptions.self, from: data) { diagnosticOptions = value.validated }
         if let data = try? Data(contentsOf: settingsFile), let decoded = try? JSONDecoder().decode(RecordingSettings.self, from: data) { settings = decoded }
-        do { records = try JSONDecoder().decode([DiagnosticRecord].self, from: Data(contentsOf: file)) }
+        do { records = try HistoryRetention.retain(JSONDecoder().decode([DiagnosticRecord].self, from: Data(contentsOf: file)), countLimit: settings.recordLimit) }
         catch { records = [] }
     }
     func execute(url: String, method: String = "GET", headers: String = "", body: String = "", expectedSHA256: String = "") async {
@@ -38,17 +38,16 @@ import Observation
             let record = await DiagnosticEngine(request: request, expectedSHA256: checksum, options: diagnosticOptions).run(request)
             latest = record
             if settings.enabled && settings.accepts(record.url) {
-                records.insert(record, at: 0)
-                records = Array(records.prefix(settings.recordLimit))
+                records = try HistoryRetention.retain([record] + records, countLimit: settings.recordLimit)
                 save()
             }
             running = false
-        } catch { self.error = error.localizedDescription }
+        } catch { running = false; self.error = error.localizedDescription }
     }
     func importHAR(_ data: Data) throws {
         guard data.count <= 20 * 1024 * 1024 else { throw CocoaError(.fileReadTooLarge) }
         let imported = try HARArchive.importRecords(data)
-        records = Array((imported + records).prefix(settings.recordLimit))
+        records = try HistoryRetention.retain(imported + records, countLimit: settings.recordLimit)
         save()
     }
     func updateDiagnosticOptions(_ value: DiagnosticOptions) throws {
