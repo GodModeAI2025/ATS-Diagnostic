@@ -1,0 +1,21 @@
+{
+  "appStoreName": "ATS Diagnostic Preview",
+  "bundleId": "com.mobilebox.atsdiagnostic.preview",
+  "appleId": "6821686996",
+  "version": "2.0",
+  "build": 38,
+  "sourceCommit": "c2c2c3e",
+  "archiveSucceeded": true,
+  "uploadCompleted": true,
+  "uploadCompletedAt": "2026-10-12T00:41:01+02:00",
+  "processingCompleted": null,
+  "testflightState": "Not verified: App Store Connect browser session expired",
+  "groupAssigned": false,
+  "intendedGroupId": "a1bcebc2-c662-4040-9ffc-f9c3f8f7898f",
+  "intendedTesterEmail": "mark_zimmermann@mac.com",
+  "automaticDistribution": false,
+  "unitTestsPassed": 99,
+  "iPadHistoryReplacementVerified": true,
+  "iPadLandscapeAndLargestTextVerified": true,
+  "deviceInstallationVerified": false
+}
