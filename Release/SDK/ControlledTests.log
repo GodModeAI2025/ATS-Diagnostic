@@ -1,0 +1,24 @@
+Building for debugging...
+[2 / 6] ATSRecordingTests-product
+[4 / 8] ATSRecordingTests-product
+[10 / 12] ATSRecordingTests-product
+Build complete! (0,86 Sek.)
+Test Suite 'All tests' started at 2026-10-12 00:49:08.895.
+Test Suite 'All tests' passed at 2026-10-12 00:49:08.896.
+	 Executed 0 tests, with 0 failures (0 unexpected) in 0.000 (0.001) seconds
+◇ Test run started.
+↳ Testing Library Version: 2084
+↳ Target Platform: arm64e-apple-macos14.0
+◇ Suite RecordingClientTests started.
+◇ Test fullResponseSurvivesZeroPreview() started.
+◇ Test tooSmallJournalCannotChangeSuccessfulResponse() started.
+◇ Test originalFailureIsPreservedAndRecorded() started.
+◇ Test countAndEncodedBudgetAreRespected() started.
+◇ Test originalPostBodyAndHeadersReachTheSession() started.
+✔ Test tooSmallJournalCannotChangeSuccessfulResponse() passed after 0.007 seconds.
+✔ Test fullResponseSurvivesZeroPreview() passed after 0.008 seconds.
+✔ Test originalFailureIsPreservedAndRecorded() passed after 0.008 seconds.
+✔ Test originalPostBodyAndHeadersReachTheSession() passed after 0.008 seconds.
+✔ Test countAndEncodedBudgetAreRespected() passed after 0.009 seconds.
+✔ Suite RecordingClientTests passed after 0.009 seconds.
+✔ Test run with 5 tests in 1 suite passed after 0.009 seconds.
