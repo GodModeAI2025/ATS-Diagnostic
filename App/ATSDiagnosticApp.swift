@@ -1,8 +1,11 @@
 import SwiftUI
 import UniformTypeIdentifiers
+import UserNotifications
 
 @main struct ATSDiagnosticApp: App {
     @State private var store = DiagnosticStore()
+    private let notificationDelegate = CertificateNotificationDelegate()
+    init() { UNUserNotificationCenter.current().delegate = notificationDelegate }
     var body: some Scene {
         WindowGroup { RootView(store: store) }
     }
@@ -206,6 +209,7 @@ struct RecordRow: View {
     }
 }
 struct RecordView: View {
+    @State private var reminderCertificate: CertificateRecord?
     let record: DiagnosticRecord
     let store: DiagnosticStore
     @Environment(\.dynamicTypeSize) private var dynamicTypeSize
@@ -222,7 +226,7 @@ struct RecordView: View {
                     detailList(includeOverview: false).frame(maxWidth: 760)
                 }.padding(24).frame(maxWidth: .infinity).background(Color(uiColor: .systemGroupedBackground))
             } else { detailList(includeOverview: true) }
-        }.navigationTitle("Connection details").navigationBarTitleDisplayMode(.inline).toolbar { Button("Favorite", systemImage: store.settings.favorites.contains(record.id) ? "star.fill" : "star") { store.toggleFavorite(record.id) } }
+        }.sheet(item: $reminderCertificate) { CertificateReminderView(certificate: $0) }.navigationTitle("Connection details").navigationBarTitleDisplayMode(.inline).toolbar { Button("Favorite", systemImage: store.settings.favorites.contains(record.id) ? "star.fill" : "star") { store.toggleFavorite(record.id) } }
     }
     private func detailList(includeOverview: Bool) -> some View {
         List {
@@ -256,7 +260,7 @@ struct RecordView: View {
                 if let message = record.trustMessage { Text(message) }
                 if !record.certificates.isEmpty { ShareLink("Export complete chain as PEM", item: CertificateChainExport(certificates: record.certificates), preview: SharePreview("Certificate chain")) }
                 ForEach(record.certificates) { certificate in
-                    DisclosureGroup(certificate.subject) { Text("SHA-256").font(.caption); Text(certificate.id).font(.body.monospaced()).textSelection(.enabled); if let keyDetails = CertificateAnalysis.publicKeyDetails(certificate.der) { Text(keyDetails) }; ForEach(CertificateAnalysis.findings(certificate)) { finding in VStack(alignment: .leading) { Label(finding.title, systemImage: "exclamationmark.triangle").foregroundStyle(.orange); Text(finding.detail) } }; ForEach((try? X509.fields(certificate.der)) ?? []) { field in VStack(alignment: .leading) { Text(field.name).font(.caption).foregroundStyle(.secondary); Text(field.value).textSelection(.enabled) } }; ShareLink("Export DER", item: CertificateExport(certificate: certificate), preview: SharePreview(certificate.subject)); ShareLink("Export PEM", item: PEMCertificateExport(certificate: certificate), preview: SharePreview(certificate.subject)); ShareLink("Export CRT", item: CRTCertificateExport(certificate: certificate), preview: SharePreview(certificate.subject)) }
+                    DisclosureGroup(certificate.subject) { Text("SHA-256").font(.caption); Text(certificate.id).font(.body.monospaced()).textSelection(.enabled); if let keyDetails = CertificateAnalysis.publicKeyDetails(certificate.der) { Text(keyDetails) }; ForEach(CertificateAnalysis.findings(certificate)) { finding in VStack(alignment: .leading) { Label(finding.title, systemImage: "exclamationmark.triangle").foregroundStyle(.orange); Text(finding.detail) } }; ForEach((try? X509.fields(certificate.der)) ?? []) { field in VStack(alignment: .leading) { Text(field.name).font(.caption).foregroundStyle(.secondary); Text(field.value).textSelection(.enabled) } }; ShareLink("Export DER", item: CertificateExport(certificate: certificate), preview: SharePreview(certificate.subject)); if certificate.expiryDate != nil { Button("Expiry reminder", systemImage: "bell") { reminderCertificate = certificate } }; ShareLink("Export PEM", item: PEMCertificateExport(certificate: certificate), preview: SharePreview(certificate.subject)); ShareLink("Export CRT", item: CRTCertificateExport(certificate: certificate), preview: SharePreview(certificate.subject)) }
                 }
             } header: { IllustratedSectionTitle(title: "Certificate chain", kind: .certificate) }
             Section("Response headers") { Text(record.responseHeaders.sorted { $0.key < $1.key }.map { "\($0.key): \($0.value)" }.joined(separator: "\n")).font(.body.monospaced()).textSelection(.enabled) }

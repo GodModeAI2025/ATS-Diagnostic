@@ -32,7 +32,7 @@ The release is complete only when the combined functionality is implemented and 
 - [x] Base64, URL encoding, JSON formatting, SHA-256/SHA-512 and timestamps
 - [ ] Other historical utility parity confirmed against tags and history
 - [x] Full-chain export; PEM/CRT/DER formats
-- [ ] Certificate expiry reminders
+- [x] Certificate expiry reminder planning and local notification scheduling (delivery not device-verified)
 - [ ] ALPN, IDNA hostnames, reverse DNS and redirect-aware per-hop TLS results
 - [ ] Certificate transparency SCT/log checks, OCSP/CRL/revocation
 - [ ] Alternate trust store evaluation and known compromised CA findings

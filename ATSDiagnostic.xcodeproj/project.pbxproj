@@ -20,6 +20,7 @@
 		3BEA09AEF69591C9E9CA8DAF /* StreamingIntegrityTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25717A33CD7A96A36B57D11D /* StreamingIntegrityTests.swift */; };
 		43F40D97F182CD3182318204 /* CURLImport.swift in Sources */ = {isa = PBXBuildFile; fileRef = 515483A147B28C641EE47456 /* CURLImport.swift */; };
 		4792B0CC0854E01E5A51D7D9 /* RecordingSettingsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D23B04393A327FEE67D7F180 /* RecordingSettingsTests.swift */; };
+		4ED4232225C983443FA7938D /* CertificateReminders.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91225691ACBDD43921BC9414 /* CertificateReminders.swift */; };
 		541095BC8BF9940CACAAD16D /* Diagnostic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0354E181C7AA4FB81B16BEBB /* Diagnostic.swift */; };
 		55353EB6457378815E588805 /* Integrity.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5571AEF32197ACDBF1475DB /* Integrity.swift */; };
 		5540E3D666229F5236001DF1 /* CertificateFormatsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BB9572933C9725E68F4AF2D /* CertificateFormatsTests.swift */; };
@@ -29,11 +30,13 @@
 		825AE0C0DC75E4C6F1613DE1 /* CertificateFormats.swift in Sources */ = {isa = PBXBuildFile; fileRef = 306C387A89FF92AF8E550A38 /* CertificateFormats.swift */; };
 		862B9FA49455E8A3B60632F9 /* CURLImportTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5116786756C186E1A2D6769C /* CURLImportTests.swift */; };
 		8807BD7716946293292CF465 /* RecordingSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50E6B91F56AB4DD248EAA064 /* RecordingSettings.swift */; };
+		8BAD952AAC5CB40FAB7BAC78 /* CertificateReminders.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91225691ACBDD43921BC9414 /* CertificateReminders.swift */; };
 		8E40C646E34E85F19A7927D6 /* Store.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBB74451B3AEAD1F53388754 /* Store.swift */; };
 		91AA03CB65DA21BACAA9198F /* PrivacyInfo.xcprivacy in Resources */ = {isa = PBXBuildFile; fileRef = 1674A595E76AB8616445BEBF /* PrivacyInfo.xcprivacy */; };
 		92DC922400211EF8ABB15C71 /* PrivacyInfo.xcprivacy in Resources */ = {isa = PBXBuildFile; fileRef = 1674A595E76AB8616445BEBF /* PrivacyInfo.xcprivacy */; };
 		98742F0DA603062B176B4B0E /* TLSProbe.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABC8F829F66AF685D8859DC0 /* TLSProbe.swift */; };
 		9EC117912282E1ECDB045049 /* CertificateFindings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FB8348535345EC1A56E1F14 /* CertificateFindings.swift */; };
+		A1D329C2B08FE63A1D9E56C9 /* CertificateReminderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59E847A30CD68F6D73D2CD42 /* CertificateReminderTests.swift */; };
 		AF276C8B265A3534BCCDA3A9 /* X509.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CFCC8BF2582B5E1B8F4E4A1 /* X509.swift */; };
 		B25C8782DDE6BAE7E6D29A3B /* Diagnostic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0354E181C7AA4FB81B16BEBB /* Diagnostic.swift */; };
 		B89827E3E63739044284C76A /* Tools.swift in Sources */ = {isa = PBXBuildFile; fileRef = B623A579ADD8FD75F9E64D2A /* Tools.swift */; };
@@ -67,12 +70,14 @@
 		50E6B91F56AB4DD248EAA064 /* RecordingSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordingSettings.swift; sourceTree = "<group>"; };
 		5116786756C186E1A2D6769C /* CURLImportTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CURLImportTests.swift; sourceTree = "<group>"; };
 		515483A147B28C641EE47456 /* CURLImport.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CURLImport.swift; sourceTree = "<group>"; };
+		59E847A30CD68F6D73D2CD42 /* CertificateReminderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CertificateReminderTests.swift; sourceTree = "<group>"; };
 		687B5C8DC9BA142303849330 /* VisualComponents.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VisualComponents.swift; sourceTree = "<group>"; };
 		6AB56752BCD5D28B97DB8C7E /* ATSDiagnostic.app */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.application; path = ATSDiagnostic.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6F416B595E31C21C933D4911 /* EndpointTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndpointTests.swift; sourceTree = "<group>"; };
 		8BB9572933C9725E68F4AF2D /* CertificateFormatsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CertificateFormatsTests.swift; sourceTree = "<group>"; };
 		8CFCC8BF2582B5E1B8F4E4A1 /* X509.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = X509.swift; sourceTree = "<group>"; };
 		8E46CE5231D8CC42A1587A78 /* HAR.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HAR.swift; sourceTree = "<group>"; };
+		91225691ACBDD43921BC9414 /* CertificateReminders.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CertificateReminders.swift; sourceTree = "<group>"; };
 		98BF98AF90961C96D6E0AB2B /* IntegrityTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntegrityTests.swift; sourceTree = "<group>"; };
 		ABC8F829F66AF685D8859DC0 /* TLSProbe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TLSProbe.swift; sourceTree = "<group>"; };
 		B5571AEF32197ACDBF1475DB /* Integrity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Integrity.swift; sourceTree = "<group>"; };
@@ -92,6 +97,7 @@
 			children = (
 				D0F97E508554E43B0CDABA22 /* ASN1Tests.swift */,
 				8BB9572933C9725E68F4AF2D /* CertificateFormatsTests.swift */,
+				59E847A30CD68F6D73D2CD42 /* CertificateReminderTests.swift */,
 				5116786756C186E1A2D6769C /* CURLImportTests.swift */,
 				6F416B595E31C21C933D4911 /* EndpointTests.swift */,
 				BBFDF97001FEC55463E871E0 /* HARTests.swift */,
@@ -128,6 +134,7 @@
 				FA48D7B93B862A0646236C1B /* ATSDiagnosticApp.swift */,
 				2FB8348535345EC1A56E1F14 /* CertificateFindings.swift */,
 				306C387A89FF92AF8E550A38 /* CertificateFormats.swift */,
+				91225691ACBDD43921BC9414 /* CertificateReminders.swift */,
 				515483A147B28C641EE47456 /* CURLImport.swift */,
 				0354E181C7AA4FB81B16BEBB /* Diagnostic.swift */,
 				8E46CE5231D8CC42A1587A78 /* HAR.swift */,
@@ -271,6 +278,7 @@
 				81186C01D4A82C1DB7B04CD8 /* CURLImport.swift in Sources */,
 				9EC117912282E1ECDB045049 /* CertificateFindings.swift in Sources */,
 				825AE0C0DC75E4C6F1613DE1 /* CertificateFormats.swift in Sources */,
+				4ED4232225C983443FA7938D /* CertificateReminders.swift in Sources */,
 				541095BC8BF9940CACAAD16D /* Diagnostic.swift in Sources */,
 				2C6A9B2F1CC537D485940B4A /* HAR.swift in Sources */,
 				55353EB6457378815E588805 /* Integrity.swift in Sources */,
@@ -291,6 +299,7 @@
 				43F40D97F182CD3182318204 /* CURLImport.swift in Sources */,
 				CCF4F88C3D1EBE00E1A0D6AF /* CertificateFindings.swift in Sources */,
 				E69A2493585758DC7BFB6509 /* CertificateFormats.swift in Sources */,
+				8BAD952AAC5CB40FAB7BAC78 /* CertificateReminders.swift in Sources */,
 				B25C8782DDE6BAE7E6D29A3B /* Diagnostic.swift in Sources */,
 				BF6307C82B4BDB21AE152F13 /* HAR.swift in Sources */,
 				2FCA13441C543680773D12B0 /* Integrity.swift in Sources */,
@@ -310,6 +319,7 @@
 				0AFB4D0D277FF9ACF358CE81 /* ASN1Tests.swift in Sources */,
 				862B9FA49455E8A3B60632F9 /* CURLImportTests.swift in Sources */,
 				5540E3D666229F5236001DF1 /* CertificateFormatsTests.swift in Sources */,
+				A1D329C2B08FE63A1D9E56C9 /* CertificateReminderTests.swift in Sources */,
 				117F3FD22732F020EEE3C5E1 /* EndpointTests.swift in Sources */,
 				12B5FC44B53A012A2E7B0ACC /* HARTests.swift in Sources */,
 				F1F1C375B80BF4C13DE010B6 /* IntegrityTests.swift in Sources */,
@@ -384,7 +394,7 @@
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
-				CURRENT_PROJECT_VERSION = 31;
+				CURRENT_PROJECT_VERSION = 32;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEVELOPMENT_TEAM = SP73Z8JWXM;
 				ENABLE_NS_ASSERTIONS = NO;
@@ -486,7 +496,7 @@
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
-				CURRENT_PROJECT_VERSION = 31;
+				CURRENT_PROJECT_VERSION = 32;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				DEVELOPMENT_TEAM = SP73Z8JWXM;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
