@@ -85,3 +85,5 @@ Build 39 candidate: SDK HAR interoperability and import provenance implemented; 
 Build 39 uploaded successfully at 2026-10-12 01:28:37 CEST. Processing completion and manual owner-group assignment are not verified: App Store Connect still requires sign-in. PreviewRecord-39-Pending.json preserves the exact boundary; Preview36 remains the last portal-verified group build.
 
 SDK events: ten controlled macOS tests passed (two opt-in live test methods skipped in this run); iOS Simulator build passed. Producer/observer lifetime and bounded event queues are verified. This SDK-only change does not alter uploaded App build 39.
+
+SDK runtime verification on iOS 27.0 now passed: ten controlled tests plus a separate targeted run of three live HTTPS cases (two test methods). Response preservation, HAR, events/observer lifecycle and default system certificate rejection are verified on the isolated iPhone Simulator. See SDK/Events/iOSRuntimeSummary.json, iOSLiveSummary.json and iOSLive.log. This does not prove physical-device behavior or finish the remaining automatic capture/tunnel/presentation requirements.

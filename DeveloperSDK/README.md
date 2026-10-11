@@ -19,7 +19,7 @@ Noch offen: automatische URLProtocol-Integration, Streaming-/Upload-/Download-Au
 
 Prüfung: `swift test`. Die Tests verwenden eine kontrollierte URLProtocol-Gegenstelle in der vom Aufrufer bereitgestellten Session und prüfen vollständige Rückgabe trotz leerer Vorschau, unveränderte Fehler, tatsächliche POST-Daten, begrenztes Journal und explizites Leeren.
 
-Zusätzlich: `ATS_RECORDING_LIVE=1 swift test` prüft example.com sowie die unveränderte Systemablehnung von expired.badssl.com und wrong.host.badssl.com. Diese Live-Prüfung wurde auf macOS ausgeführt; iOS ist bisher kompiliert, die SDK-Laufzeit dort noch nicht geprüft.
+Zusätzlich: `ATS_RECORDING_LIVE=1 swift test` prüft example.com sowie die unveränderte Systemablehnung von expired.badssl.com und wrong.host.badssl.com. Diese Live-Prüfung wurde auf macOS und anschließend auf dem isolierten iPhone-Simulator mit iOS 27.0 ausgeführt. Zehn kontrollierte Tests und drei Live-Fälle bestanden dort.
 
 HAR-Export und App-Import sind implementiert. Fehlende Protokollangaben bleiben unbekannt. Fehler und Hashwerte stammen aus der importierten Aufzeichnung und werden als solche gekennzeichnet. Bei gekürztem, binärem oder unbekanntem Anfragekörper wird keine vollständige Replay-Anfrage vorgetäuscht; die App deaktiviert Replay und cURL-Ausgabe. Anfragefelder stammen aus dem übergebenen URLRequest; von der Session ergänzte Cookies/Headers und einzelne Redirect-Hops sind noch nicht vollständig erfasst.
 
