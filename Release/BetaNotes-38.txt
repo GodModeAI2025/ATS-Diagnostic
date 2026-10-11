@@ -1,0 +1,9 @@
+Verlauf und lokale Speichergrenze
+
+Die Verlaufsliste aktualisiert sich jetzt auch dann, wenn ein neuer Eintrag einen alten ersetzt und die Anzahl gleich bleibt. Suche, Antwortfilter und Favoriten verwenden dabei weiterhin die aktuellen Einträge.
+
+Der gespeicherte Verlauf ist zusätzlich zur gewählten Eintragszahl auf insgesamt 64 MiB begrenzt. Die Grenze umfasst Antwortvorschauen, Anfragekörper, Header und Zertifikate in ihrer tatsächlich gespeicherten JSON-Darstellung. Die neuesten passenden Einträge bleiben erhalten; ältere werden entfernt. Ein einzelner Eintrag über der Gesamtgrenze bleibt nur als aktuelle Diagnose sichtbar. Diese Begrenzung gilt auch beim HAR-Import und beim erneuten Laden.
+
+Die Aufnahme-Einstellungen erläutern die Speichergrenze. Die vorherigen Funktionen aus Build 37, einschließlich des lokalen Vordergrund-Proxys und der konkreten Zertifikatsfehlermeldungen, bleiben enthalten.
+
+Bitte prüfen: Aufnahme-Limit auf zehn Einträge stellen, mehr als zehn Diagnosen ausführen und anschließend im Verlauf den neuesten Eintrag sowie Suche und Filter prüfen. VPN/MITM, PCAP und Entwickler-Integration sind weiterhin offen.
