@@ -1,0 +1,11 @@
+{
+  "sourceCommit": "c2c2c3e",
+  "version": "2.0",
+  "build": "38",
+  "bundleId": "com.mobilebox.atsdiagnostic.preview",
+  "team": "SP73Z8JWXM",
+  "archiveSucceeded": true,
+  "unitTestsPassed": 99,
+  "uiRegressionPending": true,
+  "uploaded": false
+}
