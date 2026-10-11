@@ -49,8 +49,9 @@ private struct BadSSLResultView: View {
             Section("Beobachtetes Ergebnis") {
                 Text(result.test.url).font(.callout.monospaced()).textSelection(.enabled)
                 Text(result.verdict).font(.headline)
+                LabeledContent("HTTP-Status",value:result.record.status.map(String.init) ?? "Keine HTTP-Antwort")
                 if DiagnosticFailure.explain(result.record) != nil { DiagnosticIssueView(record:result.record) }
-                else { LabeledContent("HTTP",value:result.record.status.map(String.init) ?? "Nicht gemeldet");LabeledContent("TLS",value:TLSDisplay.version(result.record.tlsVersion));Text("Die Anfrage wurde vom System akzeptiert. Das bestätigt nur diesen Verbindungsversuch.").font(.subheadline).foregroundStyle(.secondary) }
+                else { LabeledContent("TLS",value:TLSDisplay.version(result.record.tlsVersion));Text("Die Anfrage wurde vom System akzeptiert. Das bestätigt nur diesen Verbindungsversuch.").font(.subheadline).foregroundStyle(.secondary) }
             }
             Section("Grenzen und Einordnung") { ForEach(result.observations,id:\.self) { Text($0).font(.subheadline).foregroundStyle(.secondary) } }
             Section { NavigationLink("Verbindung und Zertifikate öffnen") { RecordView(record:result.record,store:store) } }
