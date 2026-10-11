@@ -15,3 +15,5 @@ Der Listener bindet ausschließlich127.0.0.1. Acht gleichzeitige Verbindungen,16
 Die App stoppt den Proxy beim Wechsel in den Hintergrund. Dies ist noch kein geräteweiter Hintergrund-Capture: VPN/Packet-Tunnel, MITM/CA-Verwaltung, PCAP, vollständige Protokolldekodierung, Regeln und Entwickler-SDK bleiben offen. Plaintext-HTTP nutzt bewusste TCP-Weiterleitung im Proxy; die manuellen Inspect/Requests behalten ATS bei.
 
 Die Aufnahme ist ein tatsächlicher erster Proxy-Pfad. Vollständige Vereinigung der historischen Funktionen wird dadurch nicht behauptet.
+
+Beim CONNECT-Abschluss werden beide abgeschlossenen Schreibrichtungen berücksichtigt, bevor die Verbindungen beendet werden. Nach dieser Korrektur bestanden erneut 95 App-Tests und sechs Live-Fälle. Build 2.0 (37) wurde am 12. Oktober 2026 um 00:19:47 CEST erfolgreich hochgeladen. Verarbeitung und Gruppenzuordnung sind noch nicht im Portal bestätigt; die Browser-Sitzung verlangt eine erneute Anmeldung.
