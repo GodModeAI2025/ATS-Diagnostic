@@ -1,9 +1,9 @@
 Neu in ATS Diagnostic 2.0 (36)
 
 • Diagnoseeinstellungen unter Tools: Wartezeit ohne neue Daten und Gesamtzeitlimit für neue HTTP-Anfragen in Inspect und Requests.
-• Antwortvorschau zwischen0 und16MiB wählbar. Bytezahl und SHA-256 bleiben auf die vollständige empfangene Antwort bezogen.
+• Antwortvorschau zwischen 0 und 16 MiB wählbar. Bytezahl und SHA-256 bleiben auf die vollständige empfangene Antwort bezogen.
 • Verwendete Werte erscheinen in den Verbindungsdetails und bleiben nach einem App-Neustart erhalten.
-• Standardwerte wiederherstellen:20s Wartezeit,30s gesamte Anfrage,2MiB Vorschau. Historie und Favoriten bleiben erhalten.
+• Standardwerte wiederherstellen: 20 s Wartezeit, 30 s gesamte Anfrage, 2 MiB Vorschau. Historie und Favoriten bleiben erhalten.
 • Keine Vorschau wird klar von Keine Antwortdaten unterschieden. Angezeigte Vorschaugrenzen folgen den gespeicherten Werten.
 
 Bitte prüfen: Einstellungen ändern/speichern, App neu starten, Anfrage ausführen, Werte und Vorschau in den Verbindungsdetails vergleichen und Standardwerte wiederherstellen.

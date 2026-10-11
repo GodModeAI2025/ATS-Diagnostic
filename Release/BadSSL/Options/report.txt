@@ -1,0 +1,1556 @@
+ATS Diagnostic · badssl
+Katalog: https://badssl.com/ · 2026-10-11
+Ergebnisse: 73/73
+Plattform: iOS URLSession / Systemvertrauen; keine Prüfung aller Browserfunktionen.
+
+badssl.com · Kontrollziel · Control
+https://badssl.com/
+Ergebnis: Antwort empfangen
+Befund: HTTP 200 empfangen
+HTTP: 200 · TLS: TLS 1.2 · Cipher: ECDHE-RSA · AES-128-GCM (0xc02f)
+Systemvertrauen: true · CT: true
+Zertifikat: *.badssl.com · SHA-256 101154813e8fdab6ba4fab575185c1a13944bcec1d849ae2cd94a073494997e3
+Aussteller Land (C): US
+Aussteller Organisation (O): Let's Encrypt
+Aussteller Name (CN): YR1
+Zertifikat: YR1 · SHA-256 13949634d99cd6fd6aa80bc034fefacceb1969feef986586713ecdbb05758d3f
+Aussteller Land (C): US
+Aussteller Organisation (O): ISRG
+Aussteller Name (CN): Root YR
+Zertifikat: Root YR · SHA-256 072639d0b140d5bffae16ad9c3f6cc6086040621f51ee61a6d46a8915c07cf76
+Aussteller Land (C): US
+Aussteller Organisation (O): Internet Security Research Group
+Aussteller Name (CN): ISRG Root X1
+Zertifikat: ISRG Root X1 · SHA-256 96bcec06264976f37460779acf28c5a7cfe8a3c0aae11a8ffcee05c0bddf08c6
+Aussteller Land (C): US
+Aussteller Organisation (O): Internet Security Research Group
+Aussteller Name (CN): ISRG Root X1
+Einordnung: Testabsicht und beobachteter Fehler werden getrennt: Der Name des badssl-Ziels wird nicht als Beweis für die tatsächliche Fehlerursache verwendet.
+
+expired · Certificate
+https://expired.badssl.com/
+Ergebnis: Verbindung abgelehnt
+Befund: Zertifikat abgelaufen
+Bedeutung: Mindestens ein Zertifikat der geprüften Kette liegt außerhalb seiner Gültigkeit. Eine vertrauenswürdige Verbindung kam nicht zustande.
+Nächster Schritt: Gültigkeitsdaten und Gerätezeit prüfen. Der Betreiber muss ein gültiges Zertifikat samt passender Kette bereitstellen.
+Technik: NSOSStatusErrorDomain / -67818 / SSL —: “*.badssl.com” certificate is expired
+Technik: NSOSStatusErrorDomain / -67818 / SSL —: Certificate 0 “*.badssl.com” has errors: Certificate is not temporally valid;
+Technik: NSURLErrorDomain / -1200 / SSL -9802: A TLS error caused the secure connection to fail.
+Technik: kCFErrorDomainCFNetwork / -1200 / SSL -9802: The operation couldn’t be completed. (kCFErrorDomainCFNetwork error -1200.)
+HTTP: — · TLS: TLS 1.2 · Cipher: ECDHE-RSA · AES-128-GCM (0xc02f)
+Systemvertrauen: false · CT: nicht gemeldet
+Zertifikat: *.badssl.com · SHA-256 ba105ce02bac76888ecee47cd4eb7941653e9ac993b61b2eb3dcc82014d21b4f
+Aussteller Land (C): GB
+Aussteller Region (ST): Greater Manchester
+Aussteller Ort (L): Salford
+Aussteller Organisation (O): COMODO CA Limited
+Aussteller Name (CN): COMODO RSA Domain Validation Secure Server CA
+Zertifikat: COMODO RSA Domain Validation Secure Server CA · SHA-256 02ab57e4e67a0cb48dd2ff34830e8ac40f4476fb08ca6be3f5cd846f646840f0
+Aussteller Land (C): GB
+Aussteller Region (ST): Greater Manchester
+Aussteller Ort (L): Salford
+Aussteller Organisation (O): COMODO CA Limited
+Aussteller Name (CN): COMODO RSA Certification Authority
+Zertifikat: COMODO RSA Certification Authority · SHA-256 52f0e1c4e58ec629291b60317f074671b85d7ea80d5b07273463534b32b40234
+Aussteller Land (C): GB
+Aussteller Region (ST): Greater Manchester
+Aussteller Ort (L): Salford
+Aussteller Organisation (O): COMODO CA Limited
+Aussteller Name (CN): COMODO RSA Certification Authority
+Einordnung: Testabsicht und beobachteter Fehler werden getrennt: Der Name des badssl-Ziels wird nicht als Beweis für die tatsächliche Fehlerursache verwendet.
+
+wrong.host · Certificate
+https://wrong.host.badssl.com/
+Ergebnis: Verbindung abgelehnt
+Befund: Zertifikat passt nicht zum Hostnamen
+Bedeutung: Die Zertifikatsprüfung hat eine Abweichung zwischen aufgerufenem Host und den erlaubten Zertifikatsnamen festgestellt.
+Nächster Schritt: Adresse und Subject Alternative Names vergleichen. Der Betreiber muss ein Zertifikat für genau diesen Host einsetzen.
+Technik: NSOSStatusErrorDomain / -67602 / SSL —: “*.badssl.com” certificate name does not match input
+Technik: NSOSStatusErrorDomain / -67602 / SSL —: Certificate 0 “*.badssl.com” has errors: SSL hostname does not match name(s) in certificate;
+Technik: NSURLErrorDomain / -1200 / SSL -9802: A TLS error caused the secure connection to fail.
+Technik: kCFErrorDomainCFNetwork / -1200 / SSL -9802: The operation couldn’t be completed. (kCFErrorDomainCFNetwork error -1200.)
+HTTP: — · TLS: TLS 1.2 · Cipher: ECDHE-RSA · AES-128-GCM (0xc02f)
+Systemvertrauen: false · CT: nicht gemeldet
+Zertifikat: *.badssl.com · SHA-256 101154813e8fdab6ba4fab575185c1a13944bcec1d849ae2cd94a073494997e3
+Aussteller Land (C): US
+Aussteller Organisation (O): Let's Encrypt
+Aussteller Name (CN): YR1
+Zertifikat: YR1 · SHA-256 13949634d99cd6fd6aa80bc034fefacceb1969feef986586713ecdbb05758d3f
+Aussteller Land (C): US
+Aussteller Organisation (O): ISRG
+Aussteller Name (CN): Root YR
+Zertifikat: Root YR · SHA-256 072639d0b140d5bffae16ad9c3f6cc6086040621f51ee61a6d46a8915c07cf76
+Aussteller Land (C): US
+Aussteller Organisation (O): Internet Security Research Group
+Aussteller Name (CN): ISRG Root X1
+Zertifikat: ISRG Root X1 · SHA-256 96bcec06264976f37460779acf28c5a7cfe8a3c0aae11a8ffcee05c0bddf08c6
+Aussteller Land (C): US
+Aussteller Organisation (O): Internet Security Research Group
+Aussteller Name (CN): ISRG Root X1
+Einordnung: Testabsicht und beobachteter Fehler werden getrennt: Der Name des badssl-Ziels wird nicht als Beweis für die tatsächliche Fehlerursache verwendet.
+
+self-signed · Certificate
+https://self-signed.badssl.com/
+Ergebnis: Verbindung abgelehnt
+Befund: Zertifikatskette nicht vertrauenswürdig
+Bedeutung: Das System konnte diese Zertifikatskette nicht als vertrauenswürdig bestätigen. Mögliche Gründe sind ein unbekannter Aussteller, eine fehlende Zwischenstelle oder weitere Zertifikatsanforderungen.
+Nächster Schritt: Aussteller, vollständige Zertifikatskette und Systemmeldung prüfen. Die App umgeht die Zertifikatsprüfung nicht.
+Technik: NSOSStatusErrorDomain / -67843 / SSL —: “*.badssl.com” certificate is not trusted
+Technik: NSOSStatusErrorDomain / -67843 / SSL —: Certificate 0 “*.badssl.com” has errors: Extended key usage does not match certificate usage, Root is not trusted;
+Technik: NSURLErrorDomain / -1200 / SSL -9802: A TLS error caused the secure connection to fail.
+Technik: kCFErrorDomainCFNetwork / -1200 / SSL -9802: The operation couldn’t be completed. (kCFErrorDomainCFNetwork error -1200.)
+HTTP: — · TLS: TLS 1.2 · Cipher: ECDHE-RSA · AES-128-GCM (0xc02f)
+Systemvertrauen: false · CT: nicht gemeldet
+Zertifikat: *.badssl.com · SHA-256 3963935f5553a2e0db9d53fa9a2d09747216a8e2f68e2079d632205f7b014ee8
+Aussteller Land (C): US
+Aussteller Region (ST): California
+Aussteller Ort (L): San Francisco
+Aussteller Organisation (O): BadSSL
+Aussteller Name (CN): *.badssl.com
+Einordnung: Testabsicht und beobachteter Fehler werden getrennt: Der Name des badssl-Ziels wird nicht als Beweis für die tatsächliche Fehlerursache verwendet.
+
+untrusted-root · Certificate
+https://untrusted-root.badssl.com/
+Ergebnis: Verbindung abgelehnt
+Befund: Zertifikatskette nicht vertrauenswürdig
+Bedeutung: Das System konnte diese Zertifikatskette nicht als vertrauenswürdig bestätigen. Mögliche Gründe sind ein unbekannter Aussteller, eine fehlende Zwischenstelle oder weitere Zertifikatsanforderungen.
+Nächster Schritt: Aussteller, vollständige Zertifikatskette und Systemmeldung prüfen. Die App umgeht die Zertifikatsprüfung nicht.
+Technik: NSOSStatusErrorDomain / -67843 / SSL —: “BadSSL Untrusted Root Certificate Authority” certificate is not trusted
+Technik: NSOSStatusErrorDomain / -67843 / SSL —: Certificate 0 “*.badssl.com” has errors: Extended key usage does not match certificate usage;Certificate 1 “BadSSL Untrusted Root Certificate Authority” has errors: Root is not trusted;
+Technik: NSURLErrorDomain / -1200 / SSL -9802: A TLS error caused the secure connection to fail.
+Technik: kCFErrorDomainCFNetwork / -1200 / SSL -9802: The operation couldn’t be completed. (kCFErrorDomainCFNetwork error -1200.)
+HTTP: — · TLS: TLS 1.2 · Cipher: ECDHE-RSA · AES-128-GCM (0xc02f)
+Systemvertrauen: false · CT: nicht gemeldet
+Zertifikat: *.badssl.com · SHA-256 66126d61935c5a71adabb767bc4a1a296082dfaa6028432d16e8878a2f8cb435
+Aussteller Land (C): US
+Aussteller Region (ST): California
+Aussteller Ort (L): San Francisco
+Aussteller Organisation (O): BadSSL
+Aussteller Name (CN): BadSSL Untrusted Root Certificate Authority
+Zertifikat: BadSSL Untrusted Root Certificate Authority · SHA-256 43194b56f17cd0b72be548b35ae93adb1664e4023d1d7d0957f5bab66a31fe3d
+Aussteller Land (C): US
+Aussteller Region (ST): California
+Aussteller Ort (L): San Francisco
+Aussteller Organisation (O): BadSSL
+Aussteller Name (CN): BadSSL Untrusted Root Certificate Authority
+Einordnung: Testabsicht und beobachteter Fehler werden getrennt: Der Name des badssl-Ziels wird nicht als Beweis für die tatsächliche Fehlerursache verwendet.
+
+revoked · Certificate
+https://revoked.badssl.com/
+Ergebnis: Antwort empfangen
+Befund: Zertifikat widerrufen
+Bedeutung: Die zusätzliche Sperrprüfung bestätigt einen Widerruf. Eine zuvor empfangene HTTP-Antwort oder erfolgreiche Standardprüfung hebt diesen Befund nicht auf.
+Nächster Schritt: Der Betreiber muss das gesperrte Zertifikat ersetzen und die Ursache des Widerrufs prüfen.
+Technik: ATS Diagnostic · signierte CRL / 1 / SSL —: Quelle: http://ye2.c.lencr.org/74.crl; Abruf: https://ye2.c.lencr.org/74.crl; Signatur, Aussteller, Gültigkeit und CRL-Geltungsbereich geprüft.
+HTTP: 200 · TLS: TLS 1.2 · Cipher: ECDHE-ECDSA · AES-128-GCM (0xc02b)
+Systemvertrauen: true · CT: true
+Zertifikat: revoked.badssl.com · SHA-256 196a142ecd79d369f09fdacbb151a7570419cb75fe87b1501618ac88a0d83b3c
+Aussteller Land (C): US
+Aussteller Organisation (O): Let's Encrypt
+Aussteller Name (CN): YE2
+Zertifikat: YE2 · SHA-256 97658de8c68dfa98ace1e5028a63d54a1aae911b3e21471076c6850cd08cbab4
+Aussteller Land (C): US
+Aussteller Organisation (O): ISRG
+Aussteller Name (CN): Root YE
+Zertifikat: Root YE · SHA-256 0fc0901cca2bae9e9fdbb02d50d02f1094f7b36672086991b9e897626dc485f0
+Aussteller Land (C): US
+Aussteller Organisation (O): Internet Security Research Group
+Aussteller Name (CN): ISRG Root X2
+Zertifikat: ISRG Root X2 · SHA-256 69729b8e15a86efc177a57afb7171dfc64add28c2fca8cf1507e34453ccb1470
+Aussteller Land (C): US
+Aussteller Organisation (O): Internet Security Research Group
+Aussteller Name (CN): ISRG Root X2
+Einordnung: Systemvertrauen und eine ausdrücklich bestätigte Sperrprüfung werden getrennt dargestellt. Eine erreichbare Antwort ohne Sperrnachweis ist kein Nachweis, dass das Zertifikat nicht widerrufen ist.
+Einordnung: Zusätzliche Sperrprüfung: Die Seriennummer des Server-Zertifikats steht in einer aktuellen, mit dem Schlüssel des vertrauenswürdigen direkten Ausstellers geprüften CRL. Widerrufen am 2026-09-15T21:01:24Z. CRL gültig bis 2026-10-20T20:35:52Z.
+Einordnung: System hat für diese Anfrage keinen positiven Sperrprüfungsnachweis gemeldet.
+
+pinning-test · Certificate
+https://pinning-test.badssl.com/
+Ergebnis: Antwort empfangen
+Befund: HTTP 200 empfangen
+HTTP: 200 · TLS: TLS 1.2 · Cipher: ECDHE-RSA · AES-128-GCM (0xc02f)
+Systemvertrauen: true · CT: true
+Zertifikat: *.badssl.com · SHA-256 101154813e8fdab6ba4fab575185c1a13944bcec1d849ae2cd94a073494997e3
+Aussteller Land (C): US
+Aussteller Organisation (O): Let's Encrypt
+Aussteller Name (CN): YR1
+Zertifikat: YR1 · SHA-256 13949634d99cd6fd6aa80bc034fefacceb1969feef986586713ecdbb05758d3f
+Aussteller Land (C): US
+Aussteller Organisation (O): ISRG
+Aussteller Name (CN): Root YR
+Zertifikat: Root YR · SHA-256 072639d0b140d5bffae16ad9c3f6cc6086040621f51ee61a6d46a8915c07cf76
+Aussteller Land (C): US
+Aussteller Organisation (O): Internet Security Research Group
+Aussteller Name (CN): ISRG Root X1
+Zertifikat: ISRG Root X1 · SHA-256 96bcec06264976f37460779acf28c5a7cfe8a3c0aae11a8ffcee05c0bddf08c6
+Aussteller Land (C): US
+Aussteller Organisation (O): Internet Security Research Group
+Aussteller Name (CN): ISRG Root X1
+Einordnung: Diese App verwendet die Systemprüfung, aber für diesen Host keine festgelegten Zertifikat-Pins. Ein erfolgreicher Aufruf belegt deshalb keine Pinning-Prüfung.
+
+no-common-name · Certificate
+https://no-common-name.badssl.com/
+Ergebnis: Verbindung abgelehnt
+Befund: Zertifikat abgelaufen
+Bedeutung: Mindestens ein Zertifikat der geprüften Kette liegt außerhalb seiner Gültigkeit. Eine vertrauenswürdige Verbindung kam nicht zustande.
+Nächster Schritt: Gültigkeitsdaten und Gerätezeit prüfen. Der Betreiber muss ein gültiges Zertifikat samt passender Kette bereitstellen.
+Technik: NSOSStatusErrorDomain / -67818 / SSL —: “no-common-name.badssl.com” certificate is expired
+Technik: NSOSStatusErrorDomain / -67818 / SSL —: Certificate 0 “no-common-name.badssl.com” has errors: Certificate is not temporally valid;
+Technik: NSURLErrorDomain / -1200 / SSL -9802: A TLS error caused the secure connection to fail.
+Technik: kCFErrorDomainCFNetwork / -1200 / SSL -9802: The operation couldn’t be completed. (kCFErrorDomainCFNetwork error -1200.)
+HTTP: — · TLS: TLS 1.2 · Cipher: ECDHE-RSA · AES-128-GCM (0xc02f)
+Systemvertrauen: false · CT: nicht gemeldet
+Zertifikat: no-common-name.badssl.com · SHA-256 76e419beef7a686320d32fd47e4f6945916b77317df861570bce9d06defad8e3
+Aussteller Land (C): GB
+Aussteller Region (ST): Greater Manchester
+Aussteller Ort (L): Salford
+Aussteller Organisation (O): COMODO CA Limited
+Aussteller Name (CN): COMODO RSA Organization Validation Secure Server CA
+Zertifikat: COMODO RSA Organization Validation Secure Server CA · SHA-256 111006378afbe8e99bb02ba87390ca429fca2773f74d7f7eb5744f5ddf68014b
+Aussteller Land (C): GB
+Aussteller Region (ST): Greater Manchester
+Aussteller Ort (L): Salford
+Aussteller Organisation (O): COMODO CA Limited
+Aussteller Name (CN): COMODO RSA Certification Authority
+Zertifikat: COMODO RSA Certification Authority · SHA-256 52f0e1c4e58ec629291b60317f074671b85d7ea80d5b07273463534b32b40234
+Aussteller Land (C): GB
+Aussteller Region (ST): Greater Manchester
+Aussteller Ort (L): Salford
+Aussteller Organisation (O): COMODO CA Limited
+Aussteller Name (CN): COMODO RSA Certification Authority
+Einordnung: Fehlende Subject-Angaben allein beweisen keinen Hostnamenfehler. Die Systemprüfung berücksichtigt auch die Subject Alternative Names.
+
+no-subject · Certificate
+https://no-subject.badssl.com/
+Ergebnis: Verbindung abgelehnt
+Befund: Zertifikat abgelaufen
+Bedeutung: Mindestens ein Zertifikat der geprüften Kette liegt außerhalb seiner Gültigkeit. Eine vertrauenswürdige Verbindung kam nicht zustande.
+Nächster Schritt: Gültigkeitsdaten und Gerätezeit prüfen. Der Betreiber muss ein gültiges Zertifikat samt passender Kette bereitstellen.
+Technik: NSOSStatusErrorDomain / -67818 / SSL —: “no-subject.badssl.com” certificate is expired
+Technik: NSOSStatusErrorDomain / -67818 / SSL —: Certificate 0 “no-subject.badssl.com” has errors: Certificate is not temporally valid;
+Technik: NSURLErrorDomain / -1200 / SSL -9802: A TLS error caused the secure connection to fail.
+Technik: kCFErrorDomainCFNetwork / -1200 / SSL -9802: The operation couldn’t be completed. (kCFErrorDomainCFNetwork error -1200.)
+HTTP: — · TLS: TLS 1.2 · Cipher: ECDHE-RSA · AES-128-GCM (0xc02f)
+Systemvertrauen: false · CT: nicht gemeldet
+Zertifikat: no-subject.badssl.com · SHA-256 4dd1e0e41d5604c6e420ca38efd36c27422665c6c2c1d61dac49111b1684588b
+Aussteller Land (C): GB
+Aussteller Region (ST): Greater Manchester
+Aussteller Ort (L): Salford
+Aussteller Organisation (O): COMODO CA Limited
+Aussteller Name (CN): UbiquiTLS™ DV RSA Server CA
+Zertifikat: UbiquiTLS™ DV RSA Server CA · SHA-256 f00322c97b57cea6d64a6a1d365c6c6b7f0eba3089876c1430e1063e8a82a676
+Aussteller Land (C): GB
+Aussteller Region (ST): Greater Manchester
+Aussteller Ort (L): Salford
+Aussteller Organisation (O): COMODO CA Limited
+Aussteller Name (CN): COMODO RSA Certification Authority
+Zertifikat: COMODO RSA Certification Authority · SHA-256 52f0e1c4e58ec629291b60317f074671b85d7ea80d5b07273463534b32b40234
+Aussteller Land (C): GB
+Aussteller Region (ST): Greater Manchester
+Aussteller Ort (L): Salford
+Aussteller Organisation (O): COMODO CA Limited
+Aussteller Name (CN): COMODO RSA Certification Authority
+Einordnung: Fehlende Subject-Angaben allein beweisen keinen Hostnamenfehler. Die Systemprüfung berücksichtigt auch die Subject Alternative Names.
+
+incomplete-chain · Certificate
+https://incomplete-chain.badssl.com/
+Ergebnis: Antwort empfangen
+Befund: HTTP 200 empfangen
+HTTP: 200 · TLS: TLS 1.2 · Cipher: ECDHE-RSA · AES-128-GCM (0xc02f)
+Systemvertrauen: true · CT: true
+Zertifikat: *.badssl.com · SHA-256 101154813e8fdab6ba4fab575185c1a13944bcec1d849ae2cd94a073494997e3
+Aussteller Land (C): US
+Aussteller Organisation (O): Let's Encrypt
+Aussteller Name (CN): YR1
+Zertifikat: YR1 · SHA-256 13949634d99cd6fd6aa80bc034fefacceb1969feef986586713ecdbb05758d3f
+Aussteller Land (C): US
+Aussteller Organisation (O): ISRG
+Aussteller Name (CN): Root YR
+Zertifikat: Root YR · SHA-256 072639d0b140d5bffae16ad9c3f6cc6086040621f51ee61a6d46a8915c07cf76
+Aussteller Land (C): US
+Aussteller Organisation (O): Internet Security Research Group
+Aussteller Name (CN): ISRG Root X1
+Zertifikat: ISRG Root X1 · SHA-256 96bcec06264976f37460779acf28c5a7cfe8a3c0aae11a8ffcee05c0bddf08c6
+Aussteller Land (C): US
+Aussteller Organisation (O): Internet Security Research Group
+Aussteller Name (CN): ISRG Root X1
+Einordnung: Das System kann fehlende Zwischenzertifikate nachladen. Eine erfolgreiche Systemprüfung beweist nicht, dass der Server eine vollständige Kette gesendet hat.
+
+sha256 · Certificate
+https://sha256.badssl.com/
+Ergebnis: Antwort empfangen
+Befund: HTTP 200 empfangen
+HTTP: 200 · TLS: TLS 1.2 · Cipher: ECDHE-RSA · AES-128-GCM (0xc02f)
+Systemvertrauen: true · CT: true
+Zertifikat: *.badssl.com · SHA-256 101154813e8fdab6ba4fab575185c1a13944bcec1d849ae2cd94a073494997e3
+Aussteller Land (C): US
+Aussteller Organisation (O): Let's Encrypt
+Aussteller Name (CN): YR1
+Zertifikat: YR1 · SHA-256 13949634d99cd6fd6aa80bc034fefacceb1969feef986586713ecdbb05758d3f
+Aussteller Land (C): US
+Aussteller Organisation (O): ISRG
+Aussteller Name (CN): Root YR
+Zertifikat: Root YR · SHA-256 072639d0b140d5bffae16ad9c3f6cc6086040621f51ee61a6d46a8915c07cf76
+Aussteller Land (C): US
+Aussteller Organisation (O): Internet Security Research Group
+Aussteller Name (CN): ISRG Root X1
+Zertifikat: ISRG Root X1 · SHA-256 96bcec06264976f37460779acf28c5a7cfe8a3c0aae11a8ffcee05c0bddf08c6
+Aussteller Land (C): US
+Aussteller Organisation (O): Internet Security Research Group
+Aussteller Name (CN): ISRG Root X1
+Einordnung: Testabsicht und beobachteter Fehler werden getrennt: Der Name des badssl-Ziels wird nicht als Beweis für die tatsächliche Fehlerursache verwendet.
+
+sha384 · Certificate
+https://sha384.badssl.com/
+Ergebnis: Verbindung abgelehnt
+Befund: Zertifikat abgelaufen
+Bedeutung: Mindestens ein Zertifikat der geprüften Kette liegt außerhalb seiner Gültigkeit. Eine vertrauenswürdige Verbindung kam nicht zustande.
+Nächster Schritt: Gültigkeitsdaten und Gerätezeit prüfen. Der Betreiber muss ein gültiges Zertifikat samt passender Kette bereitstellen.
+Technik: NSOSStatusErrorDomain / -67818 / SSL —: “sha384.badssl.com” certificate is expired
+Technik: NSOSStatusErrorDomain / -67818 / SSL —: Certificate 0 “sha384.badssl.com” has errors: Certificate is not temporally valid;Certificate 1 “DigiCert SHA2 Secure Server CA” has errors: Certificate is not temporally valid;
+Technik: NSURLErrorDomain / -1200 / SSL -9802: A TLS error caused the secure connection to fail.
+Technik: kCFErrorDomainCFNetwork / -1200 / SSL -9802: The operation couldn’t be completed. (kCFErrorDomainCFNetwork error -1200.)
+HTTP: — · TLS: TLS 1.2 · Cipher: ECDHE-RSA · AES-128-GCM (0xc02f)
+Systemvertrauen: false · CT: nicht gemeldet
+Zertifikat: sha384.badssl.com · SHA-256 1ffa933f458aa1b298aac57a9db82f8f99ac52da8824dff5f76d6c4312663d51
+Aussteller Land (C): US
+Aussteller Organisation (O): DigiCert Inc
+Aussteller Name (CN): DigiCert SHA2 Secure Server CA
+Zertifikat: DigiCert SHA2 Secure Server CA · SHA-256 154c433c491929c5ef686e838e323664a00e6a0d822ccc958fb4dab03e49a08f
+Aussteller Land (C): US
+Aussteller Organisation (O): DigiCert Inc
+Aussteller Organisationseinheit (OU): www.digicert.com
+Aussteller Name (CN): DigiCert Global Root CA
+Zertifikat: DigiCert Global Root CA · SHA-256 4348a0e9444c78cb265e058d5e8944b4d84f9662bd26db257f8934a443c70161
+Aussteller Land (C): US
+Aussteller Organisation (O): DigiCert Inc
+Aussteller Organisationseinheit (OU): www.digicert.com
+Aussteller Name (CN): DigiCert Global Root CA
+Einordnung: Testabsicht und beobachteter Fehler werden getrennt: Der Name des badssl-Ziels wird nicht als Beweis für die tatsächliche Fehlerursache verwendet.
+
+sha512 · Certificate
+https://sha512.badssl.com/
+Ergebnis: Verbindung abgelehnt
+Befund: Zertifikat abgelaufen
+Bedeutung: Mindestens ein Zertifikat der geprüften Kette liegt außerhalb seiner Gültigkeit. Eine vertrauenswürdige Verbindung kam nicht zustande.
+Nächster Schritt: Gültigkeitsdaten und Gerätezeit prüfen. Der Betreiber muss ein gültiges Zertifikat samt passender Kette bereitstellen.
+Technik: NSOSStatusErrorDomain / -67818 / SSL —: “sha512.badssl.com” certificate is expired
+Technik: NSOSStatusErrorDomain / -67818 / SSL —: Certificate 0 “sha512.badssl.com” has errors: Certificate is not temporally valid;Certificate 1 “DigiCert SHA2 Secure Server CA” has errors: Certificate is not temporally valid;
+Technik: NSURLErrorDomain / -1200 / SSL -9802: A TLS error caused the secure connection to fail.
+Technik: kCFErrorDomainCFNetwork / -1200 / SSL -9802: The operation couldn’t be completed. (kCFErrorDomainCFNetwork error -1200.)
+HTTP: — · TLS: TLS 1.2 · Cipher: ECDHE-RSA · AES-128-GCM (0xc02f)
+Systemvertrauen: false · CT: nicht gemeldet
+Zertifikat: sha512.badssl.com · SHA-256 8fe969cdca663a61a8fd399204c0a164034830b8f6ae0792e3eced08cc903c45
+Aussteller Land (C): US
+Aussteller Organisation (O): DigiCert Inc
+Aussteller Name (CN): DigiCert SHA2 Secure Server CA
+Zertifikat: DigiCert SHA2 Secure Server CA · SHA-256 154c433c491929c5ef686e838e323664a00e6a0d822ccc958fb4dab03e49a08f
+Aussteller Land (C): US
+Aussteller Organisation (O): DigiCert Inc
+Aussteller Organisationseinheit (OU): www.digicert.com
+Aussteller Name (CN): DigiCert Global Root CA
+Zertifikat: DigiCert Global Root CA · SHA-256 4348a0e9444c78cb265e058d5e8944b4d84f9662bd26db257f8934a443c70161
+Aussteller Land (C): US
+Aussteller Organisation (O): DigiCert Inc
+Aussteller Organisationseinheit (OU): www.digicert.com
+Aussteller Name (CN): DigiCert Global Root CA
+Einordnung: Testabsicht und beobachteter Fehler werden getrennt: Der Name des badssl-Ziels wird nicht als Beweis für die tatsächliche Fehlerursache verwendet.
+
+1000-sans · Certificate
+https://1000-sans.badssl.com/
+Ergebnis: Verbindung abgelehnt
+Befund: Zertifikat abgelaufen
+Bedeutung: Mindestens ein Zertifikat der geprüften Kette liegt außerhalb seiner Gültigkeit. Eine vertrauenswürdige Verbindung kam nicht zustande.
+Nächster Schritt: Gültigkeitsdaten und Gerätezeit prüfen. Der Betreiber muss ein gültiges Zertifikat samt passender Kette bereitstellen.
+Technik: NSOSStatusErrorDomain / -67818 / SSL —: “1000-sans.badssl.com” certificate is expired
+Technik: NSOSStatusErrorDomain / -67818 / SSL —: Certificate 0 “1000-sans.badssl.com” has errors: Certificate is not temporally valid;Certificate 1 “DigiCert SHA2 Secure Server CA” has errors: Certificate is not temporally valid;
+Technik: NSURLErrorDomain / -1200 / SSL -9802: A TLS error caused the secure connection to fail.
+Technik: kCFErrorDomainCFNetwork / -1200 / SSL -9802: The operation couldn’t be completed. (kCFErrorDomainCFNetwork error -1200.)
+HTTP: — · TLS: TLS 1.2 · Cipher: ECDHE-RSA · AES-128-GCM (0xc02f)
+Systemvertrauen: false · CT: nicht gemeldet
+Zertifikat: 1000-sans.badssl.com · SHA-256 ea0c6b7bc63e3ae5429fa19c09a070b65bcd198fde2d04c8b1ee261ce4b2bb0d
+Aussteller Land (C): US
+Aussteller Organisation (O): DigiCert Inc
+Aussteller Name (CN): DigiCert SHA2 Secure Server CA
+Zertifikat: DigiCert SHA2 Secure Server CA · SHA-256 154c433c491929c5ef686e838e323664a00e6a0d822ccc958fb4dab03e49a08f
+Aussteller Land (C): US
+Aussteller Organisation (O): DigiCert Inc
+Aussteller Organisationseinheit (OU): www.digicert.com
+Aussteller Name (CN): DigiCert Global Root CA
+Zertifikat: DigiCert Global Root CA · SHA-256 4348a0e9444c78cb265e058d5e8944b4d84f9662bd26db257f8934a443c70161
+Aussteller Land (C): US
+Aussteller Organisation (O): DigiCert Inc
+Aussteller Organisationseinheit (OU): www.digicert.com
+Aussteller Name (CN): DigiCert Global Root CA
+Einordnung: Testabsicht und beobachteter Fehler werden getrennt: Der Name des badssl-Ziels wird nicht als Beweis für die tatsächliche Fehlerursache verwendet.
+
+10000-sans · Certificate
+https://10000-sans.badssl.com/
+Ergebnis: Verbindung abgelehnt
+Befund: TLS-Parameter nicht akzeptiert
+Bedeutung: Das System meldet einen unzulässigen TLS-Parameter. Welcher Parameter betroffen ist, wurde in diesem Versuch nicht eindeutig ausgewiesen.
+Nächster Schritt: Server-Protokoll und Handshake-Details prüfen. Eine große Zahl von Zertifikatsnamen ist ohne weitere Belege nicht die bestätigte Ursache.
+Technik: NSURLErrorDomain / -1200 / SSL -9830: A TLS error caused the secure connection to fail.
+Technik: kCFErrorDomainCFNetwork / -1200 / SSL -9830: The operation couldn’t be completed. (kCFErrorDomainCFNetwork error -1200.)
+HTTP: — · TLS: Not reported · Cipher: Not reported
+Systemvertrauen: nicht gemeldet · CT: nicht gemeldet
+Einordnung: Testabsicht und beobachteter Fehler werden getrennt: Der Name des badssl-Ziels wird nicht als Beweis für die tatsächliche Fehlerursache verwendet.
+
+ecc256 · Certificate
+https://ecc256.badssl.com/
+Ergebnis: Antwort empfangen
+Befund: HTTP 200 empfangen
+HTTP: 200 · TLS: TLS 1.2 · Cipher: ECDHE-ECDSA · AES-128-GCM (0xc02b)
+Systemvertrauen: true · CT: true
+Zertifikat: *.badssl.com · SHA-256 f9e44a052254792df5646aef30ad59348d4cf906670089de9156cd8ab8b266df
+Aussteller Land (C): US
+Aussteller Organisation (O): Let's Encrypt
+Aussteller Name (CN): YE1
+Zertifikat: YE1 · SHA-256 a2372d06431e9716365eeed47ec020351497d182fcc038e457e58168a03cac07
+Aussteller Land (C): US
+Aussteller Organisation (O): ISRG
+Aussteller Name (CN): Root YE
+Zertifikat: Root YE · SHA-256 0fc0901cca2bae9e9fdbb02d50d02f1094f7b36672086991b9e897626dc485f0
+Aussteller Land (C): US
+Aussteller Organisation (O): Internet Security Research Group
+Aussteller Name (CN): ISRG Root X2
+Zertifikat: ISRG Root X2 · SHA-256 69729b8e15a86efc177a57afb7171dfc64add28c2fca8cf1507e34453ccb1470
+Aussteller Land (C): US
+Aussteller Organisation (O): Internet Security Research Group
+Aussteller Name (CN): ISRG Root X2
+Einordnung: Testabsicht und beobachteter Fehler werden getrennt: Der Name des badssl-Ziels wird nicht als Beweis für die tatsächliche Fehlerursache verwendet.
+
+ecc384 · Certificate
+https://ecc384.badssl.com/
+Ergebnis: Antwort empfangen
+Befund: HTTP 200 empfangen
+HTTP: 200 · TLS: TLS 1.2 · Cipher: ECDHE-ECDSA · AES-128-GCM (0xc02b)
+Systemvertrauen: true · CT: true
+Zertifikat: *.badssl.com · SHA-256 04c27d6a469f4f9b6e382385f1db17b8486cb6ae1c1fc73aa0957e9922626e15
+Aussteller Land (C): US
+Aussteller Organisation (O): Let's Encrypt
+Aussteller Name (CN): YE2
+Zertifikat: YE2 · SHA-256 97658de8c68dfa98ace1e5028a63d54a1aae911b3e21471076c6850cd08cbab4
+Aussteller Land (C): US
+Aussteller Organisation (O): ISRG
+Aussteller Name (CN): Root YE
+Zertifikat: Root YE · SHA-256 0fc0901cca2bae9e9fdbb02d50d02f1094f7b36672086991b9e897626dc485f0
+Aussteller Land (C): US
+Aussteller Organisation (O): Internet Security Research Group
+Aussteller Name (CN): ISRG Root X2
+Zertifikat: ISRG Root X2 · SHA-256 69729b8e15a86efc177a57afb7171dfc64add28c2fca8cf1507e34453ccb1470
+Aussteller Land (C): US
+Aussteller Organisation (O): Internet Security Research Group
+Aussteller Name (CN): ISRG Root X2
+Einordnung: Testabsicht und beobachteter Fehler werden getrennt: Der Name des badssl-Ziels wird nicht als Beweis für die tatsächliche Fehlerursache verwendet.
+
+rsa2048 · Certificate
+https://rsa2048.badssl.com/
+Ergebnis: Antwort empfangen
+Befund: HTTP 200 empfangen
+HTTP: 200 · TLS: TLS 1.2 · Cipher: ECDHE-RSA · AES-128-GCM (0xc02f)
+Systemvertrauen: true · CT: true
+Zertifikat: *.badssl.com · SHA-256 101154813e8fdab6ba4fab575185c1a13944bcec1d849ae2cd94a073494997e3
+Aussteller Land (C): US
+Aussteller Organisation (O): Let's Encrypt
+Aussteller Name (CN): YR1
+Zertifikat: YR1 · SHA-256 13949634d99cd6fd6aa80bc034fefacceb1969feef986586713ecdbb05758d3f
+Aussteller Land (C): US
+Aussteller Organisation (O): ISRG
+Aussteller Name (CN): Root YR
+Zertifikat: Root YR · SHA-256 072639d0b140d5bffae16ad9c3f6cc6086040621f51ee61a6d46a8915c07cf76
+Aussteller Land (C): US
+Aussteller Organisation (O): Internet Security Research Group
+Aussteller Name (CN): ISRG Root X1
+Zertifikat: ISRG Root X1 · SHA-256 96bcec06264976f37460779acf28c5a7cfe8a3c0aae11a8ffcee05c0bddf08c6
+Aussteller Land (C): US
+Aussteller Organisation (O): Internet Security Research Group
+Aussteller Name (CN): ISRG Root X1
+Einordnung: Testabsicht und beobachteter Fehler werden getrennt: Der Name des badssl-Ziels wird nicht als Beweis für die tatsächliche Fehlerursache verwendet.
+
+rsa4096 · Certificate
+https://rsa4096.badssl.com/
+Ergebnis: Antwort empfangen
+Befund: HTTP 200 empfangen
+HTTP: 200 · TLS: TLS 1.2 · Cipher: ECDHE-RSA · AES-128-GCM (0xc02f)
+Systemvertrauen: true · CT: true
+Zertifikat: *.badssl.com · SHA-256 5b6d7d8375ce0e7fc9edf9a43d61e3435823729d35dc4d25cd696394fe6513a7
+Aussteller Land (C): US
+Aussteller Organisation (O): Let's Encrypt
+Aussteller Name (CN): YR1
+Zertifikat: YR1 · SHA-256 13949634d99cd6fd6aa80bc034fefacceb1969feef986586713ecdbb05758d3f
+Aussteller Land (C): US
+Aussteller Organisation (O): ISRG
+Aussteller Name (CN): Root YR
+Zertifikat: Root YR · SHA-256 072639d0b140d5bffae16ad9c3f6cc6086040621f51ee61a6d46a8915c07cf76
+Aussteller Land (C): US
+Aussteller Organisation (O): Internet Security Research Group
+Aussteller Name (CN): ISRG Root X1
+Zertifikat: ISRG Root X1 · SHA-256 96bcec06264976f37460779acf28c5a7cfe8a3c0aae11a8ffcee05c0bddf08c6
+Aussteller Land (C): US
+Aussteller Organisation (O): Internet Security Research Group
+Aussteller Name (CN): ISRG Root X1
+Einordnung: Testabsicht und beobachteter Fehler werden getrennt: Der Name des badssl-Ziels wird nicht als Beweis für die tatsächliche Fehlerursache verwendet.
+
+rsa8192 · Certificate
+https://rsa8192.badssl.com/
+Ergebnis: Verbindung abgelehnt
+Befund: Zertifikat abgelaufen
+Bedeutung: Mindestens ein Zertifikat der geprüften Kette liegt außerhalb seiner Gültigkeit. Eine vertrauenswürdige Verbindung kam nicht zustande.
+Nächster Schritt: Gültigkeitsdaten und Gerätezeit prüfen. Der Betreiber muss ein gültiges Zertifikat samt passender Kette bereitstellen.
+Technik: NSOSStatusErrorDomain / -67818 / SSL —: “*.badssl.com” certificate is expired
+Technik: NSOSStatusErrorDomain / -67818 / SSL —: Certificate 0 “*.badssl.com” has errors: Certificate is not temporally valid;
+Technik: NSURLErrorDomain / -1200 / SSL -9802: A TLS error caused the secure connection to fail.
+Technik: kCFErrorDomainCFNetwork / -1200 / SSL -9802: The operation couldn’t be completed. (kCFErrorDomainCFNetwork error -1200.)
+HTTP: — · TLS: TLS 1.2 · Cipher: ECDHE-RSA · AES-128-GCM (0xc02f)
+Systemvertrauen: false · CT: nicht gemeldet
+Zertifikat: *.badssl.com · SHA-256 5764a77e5d8e6cdac928b13428b9407180c788d5c0ff6b7f8a3639cd10b8cc93
+Aussteller Land (C): US
+Aussteller Organisation (O): DigiCert Inc
+Aussteller Organisationseinheit (OU): www.digicert.com
+Aussteller Name (CN): RapidSSL TLS RSA CA G1
+Zertifikat: RapidSSL TLS RSA CA G1 · SHA-256 4422e963ee53cd58cc9f85cd40bf5ffec0095fdf1a154535661c1c06bcadc69b
+Aussteller Land (C): US
+Aussteller Organisation (O): DigiCert Inc
+Aussteller Organisationseinheit (OU): www.digicert.com
+Aussteller Name (CN): DigiCert Global Root G2
+Zertifikat: DigiCert Global Root G2 · SHA-256 cb3ccbb76031e5e0138f8dd39a23f9de47ffc35e43c1144cea27d46a5ab1cb5f
+Aussteller Land (C): US
+Aussteller Organisation (O): DigiCert Inc
+Aussteller Organisationseinheit (OU): www.digicert.com
+Aussteller Name (CN): DigiCert Global Root G2
+Einordnung: Testabsicht und beobachteter Fehler werden getrennt: Der Name des badssl-Ziels wird nicht als Beweis für die tatsächliche Fehlerursache verwendet.
+
+extended-validation · Certificate
+https://extended-validation.badssl.com/
+Ergebnis: Verbindung abgelehnt
+Befund: Zertifikat abgelaufen
+Bedeutung: Mindestens ein Zertifikat der geprüften Kette liegt außerhalb seiner Gültigkeit. Eine vertrauenswürdige Verbindung kam nicht zustande.
+Nächster Schritt: Gültigkeitsdaten und Gerätezeit prüfen. Der Betreiber muss ein gültiges Zertifikat samt passender Kette bereitstellen.
+Technik: NSOSStatusErrorDomain / -67818 / SSL —: “extended-validation.badssl.com” certificate is expired
+Technik: NSOSStatusErrorDomain / -67818 / SSL —: Certificate 0 “extended-validation.badssl.com” has errors: Certificate is not temporally valid;
+Technik: NSURLErrorDomain / -1200 / SSL -9802: A TLS error caused the secure connection to fail.
+Technik: kCFErrorDomainCFNetwork / -1200 / SSL -9802: The operation couldn’t be completed. (kCFErrorDomainCFNetwork error -1200.)
+HTTP: — · TLS: TLS 1.2 · Cipher: ECDHE-RSA · AES-128-GCM (0xc02f)
+Systemvertrauen: false · CT: nicht gemeldet
+Zertifikat: extended-validation.badssl.com · SHA-256 1293933a9708f6529f82ad8fcccbf4f3ae939bbaecd42b2967d65ccbfc54601c
+Aussteller Land (C): US
+Aussteller Organisation (O): DigiCert Inc
+Aussteller Organisationseinheit (OU): www.digicert.com
+Aussteller Name (CN): DigiCert SHA2 Extended Validation Server CA
+Zertifikat: DigiCert SHA2 Extended Validation Server CA · SHA-256 403e062a2653059113285baf80a0d4ae422c848c9f78fad01fc94bc5b87fef1a
+Aussteller Land (C): US
+Aussteller Organisation (O): DigiCert Inc
+Aussteller Organisationseinheit (OU): www.digicert.com
+Aussteller Name (CN): DigiCert High Assurance EV Root CA
+Zertifikat: DigiCert High Assurance EV Root CA · SHA-256 7431e5f4c3c1ce4690774f0b61e05440883ba9a01ed00ba6abd7806ed3b118cf
+Aussteller Land (C): US
+Aussteller Organisation (O): DigiCert Inc
+Aussteller Organisationseinheit (OU): www.digicert.com
+Aussteller Name (CN): DigiCert High Assurance EV Root CA
+Einordnung: Testabsicht und beobachteter Fehler werden getrennt: Der Name des badssl-Ziels wird nicht als Beweis für die tatsächliche Fehlerursache verwendet.
+
+client · Client Certificate
+https://client.badssl.com/
+Ergebnis: HTTP-Ablehnung
+Befund: Client-Zertifikat benötigt
+Bedeutung: Der Server fordert einen Zertifikatsnachweis vom Client an. Für diese Anfrage wurde kein Client-Zertifikat eingerichtet.
+Nächster Schritt: Für diesen Dienst ist eine passende Client-Identität erforderlich. Die normale Prüfung des Server-Zertifikats ersetzt diesen Nachweis nicht.
+HTTP: 400 · TLS: TLS 1.2 · Cipher: ECDHE-RSA · AES-128-GCM (0xc02f)
+Systemvertrauen: true · CT: true
+Zertifikat: *.badssl.com · SHA-256 101154813e8fdab6ba4fab575185c1a13944bcec1d849ae2cd94a073494997e3
+Aussteller Land (C): US
+Aussteller Organisation (O): Let's Encrypt
+Aussteller Name (CN): YR1
+Zertifikat: YR1 · SHA-256 13949634d99cd6fd6aa80bc034fefacceb1969feef986586713ecdbb05758d3f
+Aussteller Land (C): US
+Aussteller Organisation (O): ISRG
+Aussteller Name (CN): Root YR
+Zertifikat: Root YR · SHA-256 072639d0b140d5bffae16ad9c3f6cc6086040621f51ee61a6d46a8915c07cf76
+Aussteller Land (C): US
+Aussteller Organisation (O): Internet Security Research Group
+Aussteller Name (CN): ISRG Root X1
+Zertifikat: ISRG Root X1 · SHA-256 96bcec06264976f37460779acf28c5a7cfe8a3c0aae11a8ffcee05c0bddf08c6
+Aussteller Land (C): US
+Aussteller Organisation (O): Internet Security Research Group
+Aussteller Name (CN): ISRG Root X1
+Einordnung: Der Durchlauf richtet keine Client-Identität ein. Eine Client-Zertifikatsanforderung oder HTTP-Ablehnung wird getrennt vom Vertrauen in den Server ausgewiesen.
+
+client-cert-missing · Client Certificate
+https://client-cert-missing.badssl.com/
+Ergebnis: HTTP-Ablehnung
+Befund: Client-Zertifikat benötigt
+Bedeutung: Der Server fordert einen Zertifikatsnachweis vom Client an. Für diese Anfrage wurde kein Client-Zertifikat eingerichtet.
+Nächster Schritt: Für diesen Dienst ist eine passende Client-Identität erforderlich. Die normale Prüfung des Server-Zertifikats ersetzt diesen Nachweis nicht.
+HTTP: 400 · TLS: TLS 1.2 · Cipher: ECDHE-RSA · AES-128-GCM (0xc02f)
+Systemvertrauen: true · CT: true
+Zertifikat: *.badssl.com · SHA-256 101154813e8fdab6ba4fab575185c1a13944bcec1d849ae2cd94a073494997e3
+Aussteller Land (C): US
+Aussteller Organisation (O): Let's Encrypt
+Aussteller Name (CN): YR1
+Zertifikat: YR1 · SHA-256 13949634d99cd6fd6aa80bc034fefacceb1969feef986586713ecdbb05758d3f
+Aussteller Land (C): US
+Aussteller Organisation (O): ISRG
+Aussteller Name (CN): Root YR
+Zertifikat: Root YR · SHA-256 072639d0b140d5bffae16ad9c3f6cc6086040621f51ee61a6d46a8915c07cf76
+Aussteller Land (C): US
+Aussteller Organisation (O): Internet Security Research Group
+Aussteller Name (CN): ISRG Root X1
+Zertifikat: ISRG Root X1 · SHA-256 96bcec06264976f37460779acf28c5a7cfe8a3c0aae11a8ffcee05c0bddf08c6
+Aussteller Land (C): US
+Aussteller Organisation (O): Internet Security Research Group
+Aussteller Name (CN): ISRG Root X1
+Einordnung: Der Durchlauf richtet keine Client-Identität ein. Eine Client-Zertifikatsanforderung oder HTTP-Ablehnung wird getrennt vom Vertrauen in den Server ausgewiesen.
+
+mixed-script · Mixed Content
+https://mixed-script.badssl.com/
+Ergebnis: Antwort empfangen
+Befund: HTTP 200 empfangen
+HTTP: 200 · TLS: TLS 1.2 · Cipher: ECDHE-RSA · AES-128-GCM (0xc02f)
+Systemvertrauen: true · CT: true
+Zertifikat: *.badssl.com · SHA-256 101154813e8fdab6ba4fab575185c1a13944bcec1d849ae2cd94a073494997e3
+Aussteller Land (C): US
+Aussteller Organisation (O): Let's Encrypt
+Aussteller Name (CN): YR1
+Zertifikat: YR1 · SHA-256 13949634d99cd6fd6aa80bc034fefacceb1969feef986586713ecdbb05758d3f
+Aussteller Land (C): US
+Aussteller Organisation (O): ISRG
+Aussteller Name (CN): Root YR
+Zertifikat: Root YR · SHA-256 072639d0b140d5bffae16ad9c3f6cc6086040621f51ee61a6d46a8915c07cf76
+Aussteller Land (C): US
+Aussteller Organisation (O): Internet Security Research Group
+Aussteller Name (CN): ISRG Root X1
+Zertifikat: ISRG Root X1 · SHA-256 96bcec06264976f37460779acf28c5a7cfe8a3c0aae11a8ffcee05c0bddf08c6
+Aussteller Land (C): US
+Aussteller Organisation (O): Internet Security Research Group
+Aussteller Name (CN): ISRG Root X1
+Einordnung: Die App prüft den Hauptaufruf und HTTP-Verweise im empfangenen HTML. Sie führt keine Skripte aus und bildet keine Browser-Seite nach. Dynamisch erzeugte Inhalte und Browser-Blocking sind damit nicht vollständig geprüft.
+Einordnung: Im erfassten HTML wurden 1 direkte HTTP-Ressourcenverweise gefunden. Diese Subressourcen wurden nicht geladen.
+
+very · Mixed Content
+https://very.badssl.com/
+Ergebnis: Antwort empfangen
+Befund: HTTP 200 empfangen
+HTTP: 200 · TLS: TLS 1.2 · Cipher: ECDHE-RSA · AES-256-CBC · SHA-1 (0xc014)
+Systemvertrauen: true · CT: true
+Zertifikat: *.badssl.com · SHA-256 101154813e8fdab6ba4fab575185c1a13944bcec1d849ae2cd94a073494997e3
+Aussteller Land (C): US
+Aussteller Organisation (O): Let's Encrypt
+Aussteller Name (CN): YR1
+Zertifikat: YR1 · SHA-256 13949634d99cd6fd6aa80bc034fefacceb1969feef986586713ecdbb05758d3f
+Aussteller Land (C): US
+Aussteller Organisation (O): ISRG
+Aussteller Name (CN): Root YR
+Zertifikat: Root YR · SHA-256 072639d0b140d5bffae16ad9c3f6cc6086040621f51ee61a6d46a8915c07cf76
+Aussteller Land (C): US
+Aussteller Organisation (O): Internet Security Research Group
+Aussteller Name (CN): ISRG Root X1
+Zertifikat: ISRG Root X1 · SHA-256 96bcec06264976f37460779acf28c5a7cfe8a3c0aae11a8ffcee05c0bddf08c6
+Aussteller Land (C): US
+Aussteller Organisation (O): Internet Security Research Group
+Aussteller Name (CN): ISRG Root X1
+Einordnung: Die App prüft den Hauptaufruf und HTTP-Verweise im empfangenen HTML. Sie führt keine Skripte aus und bildet keine Browser-Seite nach. Dynamisch erzeugte Inhalte und Browser-Blocking sind damit nicht vollständig geprüft.
+Einordnung: Im erfassten HTML wurden 3 direkte HTTP-Ressourcenverweise gefunden. Diese Subressourcen wurden nicht geladen.
+
+mixed · Mixed Content
+https://mixed.badssl.com/
+Ergebnis: Antwort empfangen
+Befund: HTTP 200 empfangen
+HTTP: 200 · TLS: TLS 1.2 · Cipher: ECDHE-RSA · AES-128-GCM (0xc02f)
+Systemvertrauen: true · CT: true
+Zertifikat: *.badssl.com · SHA-256 101154813e8fdab6ba4fab575185c1a13944bcec1d849ae2cd94a073494997e3
+Aussteller Land (C): US
+Aussteller Organisation (O): Let's Encrypt
+Aussteller Name (CN): YR1
+Zertifikat: YR1 · SHA-256 13949634d99cd6fd6aa80bc034fefacceb1969feef986586713ecdbb05758d3f
+Aussteller Land (C): US
+Aussteller Organisation (O): ISRG
+Aussteller Name (CN): Root YR
+Zertifikat: Root YR · SHA-256 072639d0b140d5bffae16ad9c3f6cc6086040621f51ee61a6d46a8915c07cf76
+Aussteller Land (C): US
+Aussteller Organisation (O): Internet Security Research Group
+Aussteller Name (CN): ISRG Root X1
+Zertifikat: ISRG Root X1 · SHA-256 96bcec06264976f37460779acf28c5a7cfe8a3c0aae11a8ffcee05c0bddf08c6
+Aussteller Land (C): US
+Aussteller Organisation (O): Internet Security Research Group
+Aussteller Name (CN): ISRG Root X1
+Einordnung: Die App prüft den Hauptaufruf und HTTP-Verweise im empfangenen HTML. Sie führt keine Skripte aus und bildet keine Browser-Seite nach. Dynamisch erzeugte Inhalte und Browser-Blocking sind damit nicht vollständig geprüft.
+Einordnung: Im erfassten HTML wurden 1 direkte HTTP-Ressourcenverweise gefunden. Diese Subressourcen wurden nicht geladen.
+
+mixed-favicon · Mixed Content
+https://mixed-favicon.badssl.com/
+Ergebnis: Antwort empfangen
+Befund: HTTP 200 empfangen
+HTTP: 200 · TLS: TLS 1.2 · Cipher: ECDHE-RSA · AES-128-GCM (0xc02f)
+Systemvertrauen: true · CT: true
+Zertifikat: *.badssl.com · SHA-256 101154813e8fdab6ba4fab575185c1a13944bcec1d849ae2cd94a073494997e3
+Aussteller Land (C): US
+Aussteller Organisation (O): Let's Encrypt
+Aussteller Name (CN): YR1
+Zertifikat: YR1 · SHA-256 13949634d99cd6fd6aa80bc034fefacceb1969feef986586713ecdbb05758d3f
+Aussteller Land (C): US
+Aussteller Organisation (O): ISRG
+Aussteller Name (CN): Root YR
+Zertifikat: Root YR · SHA-256 072639d0b140d5bffae16ad9c3f6cc6086040621f51ee61a6d46a8915c07cf76
+Aussteller Land (C): US
+Aussteller Organisation (O): Internet Security Research Group
+Aussteller Name (CN): ISRG Root X1
+Zertifikat: ISRG Root X1 · SHA-256 96bcec06264976f37460779acf28c5a7cfe8a3c0aae11a8ffcee05c0bddf08c6
+Aussteller Land (C): US
+Aussteller Organisation (O): Internet Security Research Group
+Aussteller Name (CN): ISRG Root X1
+Einordnung: Die App prüft den Hauptaufruf und HTTP-Verweise im empfangenen HTML. Sie führt keine Skripte aus und bildet keine Browser-Seite nach. Dynamisch erzeugte Inhalte und Browser-Blocking sind damit nicht vollständig geprüft.
+Einordnung: Im erfassten HTML wurden mit der statischen Suche keine direkten HTTP-Ressourcenverweise gefunden; dynamische Inhalte bleiben offen.
+
+mixed-form · Mixed Content
+https://mixed-form.badssl.com/
+Ergebnis: Antwort empfangen
+Befund: HTTP 200 empfangen
+HTTP: 200 · TLS: TLS 1.2 · Cipher: ECDHE-RSA · AES-128-GCM (0xc02f)
+Systemvertrauen: true · CT: true
+Zertifikat: *.badssl.com · SHA-256 101154813e8fdab6ba4fab575185c1a13944bcec1d849ae2cd94a073494997e3
+Aussteller Land (C): US
+Aussteller Organisation (O): Let's Encrypt
+Aussteller Name (CN): YR1
+Zertifikat: YR1 · SHA-256 13949634d99cd6fd6aa80bc034fefacceb1969feef986586713ecdbb05758d3f
+Aussteller Land (C): US
+Aussteller Organisation (O): ISRG
+Aussteller Name (CN): Root YR
+Zertifikat: Root YR · SHA-256 072639d0b140d5bffae16ad9c3f6cc6086040621f51ee61a6d46a8915c07cf76
+Aussteller Land (C): US
+Aussteller Organisation (O): Internet Security Research Group
+Aussteller Name (CN): ISRG Root X1
+Zertifikat: ISRG Root X1 · SHA-256 96bcec06264976f37460779acf28c5a7cfe8a3c0aae11a8ffcee05c0bddf08c6
+Aussteller Land (C): US
+Aussteller Organisation (O): Internet Security Research Group
+Aussteller Name (CN): ISRG Root X1
+Einordnung: Die App prüft den Hauptaufruf und HTTP-Verweise im empfangenen HTML. Sie führt keine Skripte aus und bildet keine Browser-Seite nach. Dynamisch erzeugte Inhalte und Browser-Blocking sind damit nicht vollständig geprüft.
+Einordnung: Im erfassten HTML wurden 1 direkte HTTP-Ressourcenverweise gefunden. Diese Subressourcen wurden nicht geladen.
+
+http · HTTP
+http://http.badssl.com/
+Ergebnis: Verbindung abgelehnt
+Befund: Unverschlüsseltes HTTP durch ATS blockiert
+Bedeutung: Die angeforderte URL verwendet HTTP. Die App behält Apples Transport-Schutz bei und sendet diese Anfrage nicht unverschlüsselt.
+Nächster Schritt: Eine HTTPS-Adresse verwenden. Dieser Befund beschreibt die App-Richtlinie, nicht einen Fehler des Zertifikats.
+Technik: NSURLErrorDomain / -1022 / SSL —: The resource could not be loaded because the App Transport Security policy requires the use of a secure connection.
+Technik: kCFErrorDomainCFNetwork / -1022 / SSL —: The operation couldn’t be completed. (kCFErrorDomainCFNetwork error -1022.)
+HTTP: — · TLS: Not reported · Cipher: Not reported
+Systemvertrauen: nicht gemeldet · CT: nicht gemeldet
+Einordnung: HTTP ist unverschlüsselt. Apples ATS-Richtlinie bleibt aktiviert; eine Blockierung ist der beobachtete Schutz der App.
+
+http-textarea · HTTP
+http://http-textarea.badssl.com/
+Ergebnis: Verbindung abgelehnt
+Befund: Unverschlüsseltes HTTP durch ATS blockiert
+Bedeutung: Die angeforderte URL verwendet HTTP. Die App behält Apples Transport-Schutz bei und sendet diese Anfrage nicht unverschlüsselt.
+Nächster Schritt: Eine HTTPS-Adresse verwenden. Dieser Befund beschreibt die App-Richtlinie, nicht einen Fehler des Zertifikats.
+Technik: NSURLErrorDomain / -1022 / SSL —: The resource could not be loaded because the App Transport Security policy requires the use of a secure connection.
+Technik: kCFErrorDomainCFNetwork / -1022 / SSL —: The operation couldn’t be completed. (kCFErrorDomainCFNetwork error -1022.)
+HTTP: — · TLS: Not reported · Cipher: Not reported
+Systemvertrauen: nicht gemeldet · CT: nicht gemeldet
+Einordnung: HTTP ist unverschlüsselt. Apples ATS-Richtlinie bleibt aktiviert; eine Blockierung ist der beobachtete Schutz der App.
+
+http-password · HTTP
+http://http-password.badssl.com/
+Ergebnis: Verbindung abgelehnt
+Befund: Unverschlüsseltes HTTP durch ATS blockiert
+Bedeutung: Die angeforderte URL verwendet HTTP. Die App behält Apples Transport-Schutz bei und sendet diese Anfrage nicht unverschlüsselt.
+Nächster Schritt: Eine HTTPS-Adresse verwenden. Dieser Befund beschreibt die App-Richtlinie, nicht einen Fehler des Zertifikats.
+Technik: NSURLErrorDomain / -1022 / SSL —: The resource could not be loaded because the App Transport Security policy requires the use of a secure connection.
+Technik: kCFErrorDomainCFNetwork / -1022 / SSL —: The operation couldn’t be completed. (kCFErrorDomainCFNetwork error -1022.)
+HTTP: — · TLS: Not reported · Cipher: Not reported
+Systemvertrauen: nicht gemeldet · CT: nicht gemeldet
+Einordnung: HTTP ist unverschlüsselt. Apples ATS-Richtlinie bleibt aktiviert; eine Blockierung ist der beobachtete Schutz der App.
+
+http-login · HTTP
+http://http-login.badssl.com/
+Ergebnis: Verbindung abgelehnt
+Befund: Unverschlüsseltes HTTP durch ATS blockiert
+Bedeutung: Die angeforderte URL verwendet HTTP. Die App behält Apples Transport-Schutz bei und sendet diese Anfrage nicht unverschlüsselt.
+Nächster Schritt: Eine HTTPS-Adresse verwenden. Dieser Befund beschreibt die App-Richtlinie, nicht einen Fehler des Zertifikats.
+Technik: NSURLErrorDomain / -1022 / SSL —: The resource could not be loaded because the App Transport Security policy requires the use of a secure connection.
+Technik: kCFErrorDomainCFNetwork / -1022 / SSL —: The operation couldn’t be completed. (kCFErrorDomainCFNetwork error -1022.)
+HTTP: — · TLS: Not reported · Cipher: Not reported
+Systemvertrauen: nicht gemeldet · CT: nicht gemeldet
+Einordnung: HTTP ist unverschlüsselt. Apples ATS-Richtlinie bleibt aktiviert; eine Blockierung ist der beobachtete Schutz der App.
+
+http-dynamic-login · HTTP
+http://http-dynamic-login.badssl.com/
+Ergebnis: Verbindung abgelehnt
+Befund: Unverschlüsseltes HTTP durch ATS blockiert
+Bedeutung: Die angeforderte URL verwendet HTTP. Die App behält Apples Transport-Schutz bei und sendet diese Anfrage nicht unverschlüsselt.
+Nächster Schritt: Eine HTTPS-Adresse verwenden. Dieser Befund beschreibt die App-Richtlinie, nicht einen Fehler des Zertifikats.
+Technik: NSURLErrorDomain / -1022 / SSL —: The resource could not be loaded because the App Transport Security policy requires the use of a secure connection.
+Technik: kCFErrorDomainCFNetwork / -1022 / SSL —: The operation couldn’t be completed. (kCFErrorDomainCFNetwork error -1022.)
+HTTP: — · TLS: Not reported · Cipher: Not reported
+Systemvertrauen: nicht gemeldet · CT: nicht gemeldet
+Einordnung: HTTP ist unverschlüsselt. Apples ATS-Richtlinie bleibt aktiviert; eine Blockierung ist der beobachtete Schutz der App.
+
+http-credit-card · HTTP
+http://http-credit-card.badssl.com/
+Ergebnis: Verbindung abgelehnt
+Befund: Unverschlüsseltes HTTP durch ATS blockiert
+Bedeutung: Die angeforderte URL verwendet HTTP. Die App behält Apples Transport-Schutz bei und sendet diese Anfrage nicht unverschlüsselt.
+Nächster Schritt: Eine HTTPS-Adresse verwenden. Dieser Befund beschreibt die App-Richtlinie, nicht einen Fehler des Zertifikats.
+Technik: NSURLErrorDomain / -1022 / SSL —: The resource could not be loaded because the App Transport Security policy requires the use of a secure connection.
+Technik: kCFErrorDomainCFNetwork / -1022 / SSL —: The operation couldn’t be completed. (kCFErrorDomainCFNetwork error -1022.)
+HTTP: — · TLS: Not reported · Cipher: Not reported
+Systemvertrauen: nicht gemeldet · CT: nicht gemeldet
+Einordnung: HTTP ist unverschlüsselt. Apples ATS-Richtlinie bleibt aktiviert; eine Blockierung ist der beobachtete Schutz der App.
+
+cbc · Cipher Suite
+https://cbc.badssl.com/
+Ergebnis: Antwort empfangen
+Befund: HTTP 200 empfangen
+HTTP: 200 · TLS: TLS 1.2 · Cipher: ECDHE-RSA · AES-256-CBC · SHA-1 (0xc014)
+Systemvertrauen: true · CT: true
+Zertifikat: *.badssl.com · SHA-256 101154813e8fdab6ba4fab575185c1a13944bcec1d849ae2cd94a073494997e3
+Aussteller Land (C): US
+Aussteller Organisation (O): Let's Encrypt
+Aussteller Name (CN): YR1
+Zertifikat: YR1 · SHA-256 13949634d99cd6fd6aa80bc034fefacceb1969feef986586713ecdbb05758d3f
+Aussteller Land (C): US
+Aussteller Organisation (O): ISRG
+Aussteller Name (CN): Root YR
+Zertifikat: Root YR · SHA-256 072639d0b140d5bffae16ad9c3f6cc6086040621f51ee61a6d46a8915c07cf76
+Aussteller Land (C): US
+Aussteller Organisation (O): Internet Security Research Group
+Aussteller Name (CN): ISRG Root X1
+Zertifikat: ISRG Root X1 · SHA-256 96bcec06264976f37460779acf28c5a7cfe8a3c0aae11a8ffcee05c0bddf08c6
+Aussteller Land (C): US
+Aussteller Organisation (O): Internet Security Research Group
+Aussteller Name (CN): ISRG Root X1
+Einordnung: Dieser Durchlauf beobachtet den Verbindungsversuch unseres iOS-Clients. Ein einzelner Handshake ist keine vollständige Aufzählung aller Server-Protokolle, Cipher Suites oder Schwachstellen.
+
+rc4-md5 · Cipher Suite
+https://rc4-md5.badssl.com/
+Ergebnis: Verbindung abgelehnt
+Befund: TLS-Peer meldet Handshakefehler
+Bedeutung: Die Gegenstelle hat den sicheren Verbindungsaufbau mit einem Handshake-Fehler abgelehnt. Der gemeldete Code nennt keinen bestimmten Cipher-, Schlüssel- oder Zertifikatsgrund.
+Nächster Schritt: Protokoll- und Serverkonfiguration vergleichen. Das Testziel kann für ein bestimmtes Verfahren eingerichtet sein; das allein beweist noch nicht die konkrete Abbruchursache.
+Technik: NSURLErrorDomain / -1200 / SSL -9824: A TLS error caused the secure connection to fail.
+Technik: kCFErrorDomainCFNetwork / -1200 / SSL -9824: The operation couldn’t be completed. (kCFErrorDomainCFNetwork error -1200.)
+HTTP: — · TLS: Not reported · Cipher: Not reported
+Systemvertrauen: nicht gemeldet · CT: nicht gemeldet
+Einordnung: Dieser Durchlauf beobachtet den Verbindungsversuch unseres iOS-Clients. Ein einzelner Handshake ist keine vollständige Aufzählung aller Server-Protokolle, Cipher Suites oder Schwachstellen.
+
+rc4 · Cipher Suite
+https://rc4.badssl.com/
+Ergebnis: Verbindung abgelehnt
+Befund: TLS-Peer meldet Handshakefehler
+Bedeutung: Die Gegenstelle hat den sicheren Verbindungsaufbau mit einem Handshake-Fehler abgelehnt. Der gemeldete Code nennt keinen bestimmten Cipher-, Schlüssel- oder Zertifikatsgrund.
+Nächster Schritt: Protokoll- und Serverkonfiguration vergleichen. Das Testziel kann für ein bestimmtes Verfahren eingerichtet sein; das allein beweist noch nicht die konkrete Abbruchursache.
+Technik: NSURLErrorDomain / -1200 / SSL -9824: A TLS error caused the secure connection to fail.
+Technik: kCFErrorDomainCFNetwork / -1200 / SSL -9824: The operation couldn’t be completed. (kCFErrorDomainCFNetwork error -1200.)
+HTTP: — · TLS: Not reported · Cipher: Not reported
+Systemvertrauen: nicht gemeldet · CT: nicht gemeldet
+Einordnung: Dieser Durchlauf beobachtet den Verbindungsversuch unseres iOS-Clients. Ein einzelner Handshake ist keine vollständige Aufzählung aller Server-Protokolle, Cipher Suites oder Schwachstellen.
+
+3des · Cipher Suite
+https://3des.badssl.com/
+Ergebnis: Verbindung abgelehnt
+Befund: TLS-Peer meldet Handshakefehler
+Bedeutung: Die Gegenstelle hat den sicheren Verbindungsaufbau mit einem Handshake-Fehler abgelehnt. Der gemeldete Code nennt keinen bestimmten Cipher-, Schlüssel- oder Zertifikatsgrund.
+Nächster Schritt: Protokoll- und Serverkonfiguration vergleichen. Das Testziel kann für ein bestimmtes Verfahren eingerichtet sein; das allein beweist noch nicht die konkrete Abbruchursache.
+Technik: NSURLErrorDomain / -1200 / SSL -9824: A TLS error caused the secure connection to fail.
+Technik: kCFErrorDomainCFNetwork / -1200 / SSL -9824: The operation couldn’t be completed. (kCFErrorDomainCFNetwork error -1200.)
+HTTP: — · TLS: Not reported · Cipher: Not reported
+Systemvertrauen: nicht gemeldet · CT: nicht gemeldet
+Einordnung: Dieser Durchlauf beobachtet den Verbindungsversuch unseres iOS-Clients. Ein einzelner Handshake ist keine vollständige Aufzählung aller Server-Protokolle, Cipher Suites oder Schwachstellen.
+
+null · Cipher Suite
+https://null.badssl.com/
+Ergebnis: Verbindung abgelehnt
+Befund: TLS-Peer meldet Handshakefehler
+Bedeutung: Die Gegenstelle hat den sicheren Verbindungsaufbau mit einem Handshake-Fehler abgelehnt. Der gemeldete Code nennt keinen bestimmten Cipher-, Schlüssel- oder Zertifikatsgrund.
+Nächster Schritt: Protokoll- und Serverkonfiguration vergleichen. Das Testziel kann für ein bestimmtes Verfahren eingerichtet sein; das allein beweist noch nicht die konkrete Abbruchursache.
+Technik: NSURLErrorDomain / -1200 / SSL -9824: A TLS error caused the secure connection to fail.
+Technik: kCFErrorDomainCFNetwork / -1200 / SSL -9824: The operation couldn’t be completed. (kCFErrorDomainCFNetwork error -1200.)
+HTTP: — · TLS: Not reported · Cipher: Not reported
+Systemvertrauen: nicht gemeldet · CT: nicht gemeldet
+Einordnung: Dieser Durchlauf beobachtet den Verbindungsversuch unseres iOS-Clients. Ein einzelner Handshake ist keine vollständige Aufzählung aller Server-Protokolle, Cipher Suites oder Schwachstellen.
+
+mozilla-old · Cipher Suite
+https://mozilla-old.badssl.com/
+Ergebnis: Antwort empfangen
+Befund: HTTP 200 empfangen
+HTTP: 200 · TLS: TLS 1.2 · Cipher: ECDHE-RSA · AES-128-GCM (0xc02f)
+Systemvertrauen: true · CT: true
+Zertifikat: *.badssl.com · SHA-256 101154813e8fdab6ba4fab575185c1a13944bcec1d849ae2cd94a073494997e3
+Aussteller Land (C): US
+Aussteller Organisation (O): Let's Encrypt
+Aussteller Name (CN): YR1
+Zertifikat: YR1 · SHA-256 13949634d99cd6fd6aa80bc034fefacceb1969feef986586713ecdbb05758d3f
+Aussteller Land (C): US
+Aussteller Organisation (O): ISRG
+Aussteller Name (CN): Root YR
+Zertifikat: Root YR · SHA-256 072639d0b140d5bffae16ad9c3f6cc6086040621f51ee61a6d46a8915c07cf76
+Aussteller Land (C): US
+Aussteller Organisation (O): Internet Security Research Group
+Aussteller Name (CN): ISRG Root X1
+Zertifikat: ISRG Root X1 · SHA-256 96bcec06264976f37460779acf28c5a7cfe8a3c0aae11a8ffcee05c0bddf08c6
+Aussteller Land (C): US
+Aussteller Organisation (O): Internet Security Research Group
+Aussteller Name (CN): ISRG Root X1
+Einordnung: Dieser Durchlauf beobachtet den Verbindungsversuch unseres iOS-Clients. Ein einzelner Handshake ist keine vollständige Aufzählung aller Server-Protokolle, Cipher Suites oder Schwachstellen.
+
+mozilla-intermediate · Cipher Suite
+https://mozilla-intermediate.badssl.com/
+Ergebnis: Antwort empfangen
+Befund: HTTP 200 empfangen
+HTTP: 200 · TLS: TLS 1.2 · Cipher: ECDHE-RSA · AES-128-GCM (0xc02f)
+Systemvertrauen: true · CT: true
+Zertifikat: *.badssl.com · SHA-256 101154813e8fdab6ba4fab575185c1a13944bcec1d849ae2cd94a073494997e3
+Aussteller Land (C): US
+Aussteller Organisation (O): Let's Encrypt
+Aussteller Name (CN): YR1
+Zertifikat: YR1 · SHA-256 13949634d99cd6fd6aa80bc034fefacceb1969feef986586713ecdbb05758d3f
+Aussteller Land (C): US
+Aussteller Organisation (O): ISRG
+Aussteller Name (CN): Root YR
+Zertifikat: Root YR · SHA-256 072639d0b140d5bffae16ad9c3f6cc6086040621f51ee61a6d46a8915c07cf76
+Aussteller Land (C): US
+Aussteller Organisation (O): Internet Security Research Group
+Aussteller Name (CN): ISRG Root X1
+Zertifikat: ISRG Root X1 · SHA-256 96bcec06264976f37460779acf28c5a7cfe8a3c0aae11a8ffcee05c0bddf08c6
+Aussteller Land (C): US
+Aussteller Organisation (O): Internet Security Research Group
+Aussteller Name (CN): ISRG Root X1
+Einordnung: Dieser Durchlauf beobachtet den Verbindungsversuch unseres iOS-Clients. Ein einzelner Handshake ist keine vollständige Aufzählung aller Server-Protokolle, Cipher Suites oder Schwachstellen.
+
+mozilla-modern · Cipher Suite
+https://mozilla-modern.badssl.com/
+Ergebnis: Antwort empfangen
+Befund: HTTP 200 empfangen
+HTTP: 200 · TLS: TLS 1.2 · Cipher: ECDHE-RSA · AES-256-GCM (0xc030)
+Systemvertrauen: true · CT: true
+Zertifikat: *.badssl.com · SHA-256 101154813e8fdab6ba4fab575185c1a13944bcec1d849ae2cd94a073494997e3
+Aussteller Land (C): US
+Aussteller Organisation (O): Let's Encrypt
+Aussteller Name (CN): YR1
+Zertifikat: YR1 · SHA-256 13949634d99cd6fd6aa80bc034fefacceb1969feef986586713ecdbb05758d3f
+Aussteller Land (C): US
+Aussteller Organisation (O): ISRG
+Aussteller Name (CN): Root YR
+Zertifikat: Root YR · SHA-256 072639d0b140d5bffae16ad9c3f6cc6086040621f51ee61a6d46a8915c07cf76
+Aussteller Land (C): US
+Aussteller Organisation (O): Internet Security Research Group
+Aussteller Name (CN): ISRG Root X1
+Zertifikat: ISRG Root X1 · SHA-256 96bcec06264976f37460779acf28c5a7cfe8a3c0aae11a8ffcee05c0bddf08c6
+Aussteller Land (C): US
+Aussteller Organisation (O): Internet Security Research Group
+Aussteller Name (CN): ISRG Root X1
+Einordnung: Dieser Durchlauf beobachtet den Verbindungsversuch unseres iOS-Clients. Ein einzelner Handshake ist keine vollständige Aufzählung aller Server-Protokolle, Cipher Suites oder Schwachstellen.
+
+dh480 · Key Exchange
+https://dh480.badssl.com/
+Ergebnis: Verbindung abgelehnt
+Befund: TLS-Peer meldet Handshakefehler
+Bedeutung: Die Gegenstelle hat den sicheren Verbindungsaufbau mit einem Handshake-Fehler abgelehnt. Der gemeldete Code nennt keinen bestimmten Cipher-, Schlüssel- oder Zertifikatsgrund.
+Nächster Schritt: Protokoll- und Serverkonfiguration vergleichen. Das Testziel kann für ein bestimmtes Verfahren eingerichtet sein; das allein beweist noch nicht die konkrete Abbruchursache.
+Technik: NSURLErrorDomain / -1200 / SSL -9824: A TLS error caused the secure connection to fail.
+Technik: kCFErrorDomainCFNetwork / -1200 / SSL -9824: The operation couldn’t be completed. (kCFErrorDomainCFNetwork error -1200.)
+HTTP: — · TLS: Not reported · Cipher: Not reported
+Systemvertrauen: nicht gemeldet · CT: nicht gemeldet
+Einordnung: Dieser Durchlauf beobachtet den Verbindungsversuch unseres iOS-Clients. Ein einzelner Handshake ist keine vollständige Aufzählung aller Server-Protokolle, Cipher Suites oder Schwachstellen.
+
+dh512 · Key Exchange
+https://dh512.badssl.com/
+Ergebnis: Verbindung abgelehnt
+Befund: TLS-Peer meldet Handshakefehler
+Bedeutung: Die Gegenstelle hat den sicheren Verbindungsaufbau mit einem Handshake-Fehler abgelehnt. Der gemeldete Code nennt keinen bestimmten Cipher-, Schlüssel- oder Zertifikatsgrund.
+Nächster Schritt: Protokoll- und Serverkonfiguration vergleichen. Das Testziel kann für ein bestimmtes Verfahren eingerichtet sein; das allein beweist noch nicht die konkrete Abbruchursache.
+Technik: NSURLErrorDomain / -1200 / SSL -9824: A TLS error caused the secure connection to fail.
+Technik: kCFErrorDomainCFNetwork / -1200 / SSL -9824: The operation couldn’t be completed. (kCFErrorDomainCFNetwork error -1200.)
+HTTP: — · TLS: Not reported · Cipher: Not reported
+Systemvertrauen: nicht gemeldet · CT: nicht gemeldet
+Einordnung: Dieser Durchlauf beobachtet den Verbindungsversuch unseres iOS-Clients. Ein einzelner Handshake ist keine vollständige Aufzählung aller Server-Protokolle, Cipher Suites oder Schwachstellen.
+
+dh1024 · Key Exchange
+https://dh1024.badssl.com/
+Ergebnis: Verbindung abgelehnt
+Befund: TLS-Verbindung ohne Abschluss geschlossen
+Bedeutung: Die Verbindung wurde ohne den erwarteten TLS-Abschluss beendet. Ein bestimmter Cipher- oder Zertifikatsfehler ist dadurch nicht belegt.
+Nächster Schritt: Server, Verbindung und Handshake-Protokoll prüfen und erneut testen.
+Technik: NSURLErrorDomain / -1200 / SSL -9816: A TLS error caused the secure connection to fail.
+Technik: kCFErrorDomainCFNetwork / -1200 / SSL -9816: The operation couldn’t be completed. (kCFErrorDomainCFNetwork error -1200.)
+HTTP: — · TLS: Not reported · Cipher: Not reported
+Systemvertrauen: nicht gemeldet · CT: nicht gemeldet
+Einordnung: Dieser Durchlauf beobachtet den Verbindungsversuch unseres iOS-Clients. Ein einzelner Handshake ist keine vollständige Aufzählung aller Server-Protokolle, Cipher Suites oder Schwachstellen.
+
+dh2048 · Key Exchange
+https://dh2048.badssl.com/
+Ergebnis: Verbindung abgelehnt
+Befund: TLS-Peer meldet Handshakefehler
+Bedeutung: Die Gegenstelle hat den sicheren Verbindungsaufbau mit einem Handshake-Fehler abgelehnt. Der gemeldete Code nennt keinen bestimmten Cipher-, Schlüssel- oder Zertifikatsgrund.
+Nächster Schritt: Protokoll- und Serverkonfiguration vergleichen. Das Testziel kann für ein bestimmtes Verfahren eingerichtet sein; das allein beweist noch nicht die konkrete Abbruchursache.
+Technik: NSURLErrorDomain / -1200 / SSL -9824: A TLS error caused the secure connection to fail.
+Technik: kCFErrorDomainCFNetwork / -1200 / SSL -9824: The operation couldn’t be completed. (kCFErrorDomainCFNetwork error -1200.)
+HTTP: — · TLS: Not reported · Cipher: Not reported
+Systemvertrauen: nicht gemeldet · CT: nicht gemeldet
+Einordnung: Dieser Durchlauf beobachtet den Verbindungsversuch unseres iOS-Clients. Ein einzelner Handshake ist keine vollständige Aufzählung aller Server-Protokolle, Cipher Suites oder Schwachstellen.
+
+dh-small-subgroup · Key Exchange
+https://dh-small-subgroup.badssl.com/
+Ergebnis: Verbindung abgelehnt
+Befund: TLS-Peer meldet Handshakefehler
+Bedeutung: Die Gegenstelle hat den sicheren Verbindungsaufbau mit einem Handshake-Fehler abgelehnt. Der gemeldete Code nennt keinen bestimmten Cipher-, Schlüssel- oder Zertifikatsgrund.
+Nächster Schritt: Protokoll- und Serverkonfiguration vergleichen. Das Testziel kann für ein bestimmtes Verfahren eingerichtet sein; das allein beweist noch nicht die konkrete Abbruchursache.
+Technik: NSURLErrorDomain / -1200 / SSL -9824: A TLS error caused the secure connection to fail.
+Technik: kCFErrorDomainCFNetwork / -1200 / SSL -9824: The operation couldn’t be completed. (kCFErrorDomainCFNetwork error -1200.)
+HTTP: — · TLS: Not reported · Cipher: Not reported
+Systemvertrauen: nicht gemeldet · CT: nicht gemeldet
+Einordnung: Dieser Durchlauf beobachtet den Verbindungsversuch unseres iOS-Clients. Ein einzelner Handshake ist keine vollständige Aufzählung aller Server-Protokolle, Cipher Suites oder Schwachstellen.
+
+dh-composite · Key Exchange
+https://dh-composite.badssl.com/
+Ergebnis: Verbindung abgelehnt
+Befund: TLS-Peer meldet Handshakefehler
+Bedeutung: Die Gegenstelle hat den sicheren Verbindungsaufbau mit einem Handshake-Fehler abgelehnt. Der gemeldete Code nennt keinen bestimmten Cipher-, Schlüssel- oder Zertifikatsgrund.
+Nächster Schritt: Protokoll- und Serverkonfiguration vergleichen. Das Testziel kann für ein bestimmtes Verfahren eingerichtet sein; das allein beweist noch nicht die konkrete Abbruchursache.
+Technik: NSURLErrorDomain / -1200 / SSL -9824: A TLS error caused the secure connection to fail.
+Technik: kCFErrorDomainCFNetwork / -1200 / SSL -9824: The operation couldn’t be completed. (kCFErrorDomainCFNetwork error -1200.)
+HTTP: — · TLS: Not reported · Cipher: Not reported
+Systemvertrauen: nicht gemeldet · CT: nicht gemeldet
+Einordnung: Dieser Durchlauf beobachtet den Verbindungsversuch unseres iOS-Clients. Ein einzelner Handshake ist keine vollständige Aufzählung aller Server-Protokolle, Cipher Suites oder Schwachstellen.
+
+static-rsa · Key Exchange
+https://static-rsa.badssl.com/
+Ergebnis: Verbindung abgelehnt
+Befund: TLS-Peer meldet Handshakefehler
+Bedeutung: Die Gegenstelle hat den sicheren Verbindungsaufbau mit einem Handshake-Fehler abgelehnt. Der gemeldete Code nennt keinen bestimmten Cipher-, Schlüssel- oder Zertifikatsgrund.
+Nächster Schritt: Protokoll- und Serverkonfiguration vergleichen. Das Testziel kann für ein bestimmtes Verfahren eingerichtet sein; das allein beweist noch nicht die konkrete Abbruchursache.
+Technik: NSURLErrorDomain / -1200 / SSL -9824: A TLS error caused the secure connection to fail.
+Technik: kCFErrorDomainCFNetwork / -1200 / SSL -9824: The operation couldn’t be completed. (kCFErrorDomainCFNetwork error -1200.)
+HTTP: — · TLS: Not reported · Cipher: Not reported
+Systemvertrauen: nicht gemeldet · CT: nicht gemeldet
+Einordnung: Dieser Durchlauf beobachtet den Verbindungsversuch unseres iOS-Clients. Ein einzelner Handshake ist keine vollständige Aufzählung aller Server-Protokolle, Cipher Suites oder Schwachstellen.
+
+tls-v1-0:1010 · Protocol
+https://tls-v1-0.badssl.com:1010/
+Ergebnis: Verbindung abgelehnt
+Befund: TLS-Version nicht akzeptiert
+Bedeutung: Die Systemmeldung benennt eine nicht akzeptierte Protokollversion. Die Verbindung erfüllt die Anforderungen dieses Clients nicht.
+Nächster Schritt: Server auf TLS 1.2 oder TLS 1.3 aktualisieren; die einzelnen Versions-Probes können zusätzliche Handshake-Ergebnisse liefern.
+Technik: NSURLErrorDomain / -1200 / SSL -9836: A TLS error caused the secure connection to fail.
+Technik: kCFErrorDomainCFNetwork / -1200 / SSL -9836: The operation couldn’t be completed. (kCFErrorDomainCFNetwork error -1200.)
+HTTP: — · TLS: Not reported · Cipher: Not reported
+Systemvertrauen: nicht gemeldet · CT: nicht gemeldet
+Einordnung: Dieser Durchlauf beobachtet den Verbindungsversuch unseres iOS-Clients. Ein einzelner Handshake ist keine vollständige Aufzählung aller Server-Protokolle, Cipher Suites oder Schwachstellen.
+
+tls-v1-1:1011 · Protocol
+https://tls-v1-1.badssl.com:1011/
+Ergebnis: Verbindung abgelehnt
+Befund: TLS-Version nicht akzeptiert
+Bedeutung: Die Systemmeldung benennt eine nicht akzeptierte Protokollversion. Die Verbindung erfüllt die Anforderungen dieses Clients nicht.
+Nächster Schritt: Server auf TLS 1.2 oder TLS 1.3 aktualisieren; die einzelnen Versions-Probes können zusätzliche Handshake-Ergebnisse liefern.
+Technik: NSURLErrorDomain / -1200 / SSL -9836: A TLS error caused the secure connection to fail.
+Technik: kCFErrorDomainCFNetwork / -1200 / SSL -9836: The operation couldn’t be completed. (kCFErrorDomainCFNetwork error -1200.)
+HTTP: — · TLS: Not reported · Cipher: Not reported
+Systemvertrauen: nicht gemeldet · CT: nicht gemeldet
+Einordnung: Dieser Durchlauf beobachtet den Verbindungsversuch unseres iOS-Clients. Ein einzelner Handshake ist keine vollständige Aufzählung aller Server-Protokolle, Cipher Suites oder Schwachstellen.
+
+tls-v1-2:1012 · Protocol
+https://tls-v1-2.badssl.com:1012/
+Ergebnis: Antwort empfangen
+Befund: HTTP 200 empfangen
+HTTP: 200 · TLS: TLS 1.2 · Cipher: ECDHE-RSA · AES-256-GCM (0xc030)
+Systemvertrauen: true · CT: true
+Zertifikat: *.badssl.com · SHA-256 101154813e8fdab6ba4fab575185c1a13944bcec1d849ae2cd94a073494997e3
+Aussteller Land (C): US
+Aussteller Organisation (O): Let's Encrypt
+Aussteller Name (CN): YR1
+Zertifikat: YR1 · SHA-256 13949634d99cd6fd6aa80bc034fefacceb1969feef986586713ecdbb05758d3f
+Aussteller Land (C): US
+Aussteller Organisation (O): ISRG
+Aussteller Name (CN): Root YR
+Zertifikat: Root YR · SHA-256 072639d0b140d5bffae16ad9c3f6cc6086040621f51ee61a6d46a8915c07cf76
+Aussteller Land (C): US
+Aussteller Organisation (O): Internet Security Research Group
+Aussteller Name (CN): ISRG Root X1
+Zertifikat: ISRG Root X1 · SHA-256 96bcec06264976f37460779acf28c5a7cfe8a3c0aae11a8ffcee05c0bddf08c6
+Aussteller Land (C): US
+Aussteller Organisation (O): Internet Security Research Group
+Aussteller Name (CN): ISRG Root X1
+Einordnung: Dieser Durchlauf beobachtet den Verbindungsversuch unseres iOS-Clients. Ein einzelner Handshake ist keine vollständige Aufzählung aller Server-Protokolle, Cipher Suites oder Schwachstellen.
+
+no-sct · Certificate Transparency
+https://no-sct.badssl.com/
+Ergebnis: Verbindung abgelehnt
+Befund: Zertifikat abgelaufen
+Bedeutung: Mindestens ein Zertifikat der geprüften Kette liegt außerhalb seiner Gültigkeit. Eine vertrauenswürdige Verbindung kam nicht zustande.
+Nächster Schritt: Gültigkeitsdaten und Gerätezeit prüfen. Der Betreiber muss ein gültiges Zertifikat samt passender Kette bereitstellen.
+Technik: NSOSStatusErrorDomain / -67818 / SSL —: “no-sct.badssl.com” certificate is expired
+Technik: NSOSStatusErrorDomain / -67818 / SSL —: Certificate 0 “no-sct.badssl.com” has errors: Certificate is not temporally valid;
+Technik: NSURLErrorDomain / -1200 / SSL -9802: A TLS error caused the secure connection to fail.
+Technik: kCFErrorDomainCFNetwork / -1200 / SSL -9802: The operation couldn’t be completed. (kCFErrorDomainCFNetwork error -1200.)
+HTTP: — · TLS: TLS 1.2 · Cipher: ECDHE-RSA · AES-128-GCM (0xc02f)
+Systemvertrauen: false · CT: nicht gemeldet
+Zertifikat: no-sct.badssl.com · SHA-256 3ef5738fc1eacd2b2c8c7f56864930ba5bc75c3aaf6a4531507449c37aec9e06
+Aussteller Land (C): US
+Aussteller Organisation (O): DigiCert Inc
+Aussteller Organisationseinheit (OU): www.digicert.com
+Aussteller Name (CN): RapidSSL TLS RSA CA G1
+Zertifikat: RapidSSL TLS RSA CA G1 · SHA-256 4422e963ee53cd58cc9f85cd40bf5ffec0095fdf1a154535661c1c06bcadc69b
+Aussteller Land (C): US
+Aussteller Organisation (O): DigiCert Inc
+Aussteller Organisationseinheit (OU): www.digicert.com
+Aussteller Name (CN): DigiCert Global Root G2
+Zertifikat: DigiCert Global Root G2 · SHA-256 cb3ccbb76031e5e0138f8dd39a23f9de47ffc35e43c1144cea27d46a5ab1cb5f
+Aussteller Land (C): US
+Aussteller Organisation (O): DigiCert Inc
+Aussteller Organisationseinheit (OU): www.digicert.com
+Aussteller Name (CN): DigiCert Global Root G2
+Einordnung: Apples CT-Ergebnis und eingebettete SCTs sind eigene Befunde. Kein gemeldetes CT-Ergebnis beweist nicht automatisch einen CT-Fehler.
+
+hsts · Upgrade
+https://hsts.badssl.com/
+Ergebnis: Antwort empfangen
+Befund: HTTP 200 empfangen
+HTTP: 200 · TLS: TLS 1.2 · Cipher: ECDHE-RSA · AES-128-GCM (0xc02f)
+Systemvertrauen: true · CT: true
+Zertifikat: *.badssl.com · SHA-256 101154813e8fdab6ba4fab575185c1a13944bcec1d849ae2cd94a073494997e3
+Aussteller Land (C): US
+Aussteller Organisation (O): Let's Encrypt
+Aussteller Name (CN): YR1
+Zertifikat: YR1 · SHA-256 13949634d99cd6fd6aa80bc034fefacceb1969feef986586713ecdbb05758d3f
+Aussteller Land (C): US
+Aussteller Organisation (O): ISRG
+Aussteller Name (CN): Root YR
+Zertifikat: Root YR · SHA-256 072639d0b140d5bffae16ad9c3f6cc6086040621f51ee61a6d46a8915c07cf76
+Aussteller Land (C): US
+Aussteller Organisation (O): Internet Security Research Group
+Aussteller Name (CN): ISRG Root X1
+Zertifikat: ISRG Root X1 · SHA-256 96bcec06264976f37460779acf28c5a7cfe8a3c0aae11a8ffcee05c0bddf08c6
+Aussteller Land (C): US
+Aussteller Organisation (O): Internet Security Research Group
+Aussteller Name (CN): ISRG Root X1
+Einordnung: HSTS-Header und die tatsächliche Ziel-URL können beobachtet werden. Browser-Preload-Listen, HTTPS-Everywhere und Browser-Upgrades sind dadurch nicht vollständig geprüft.
+
+upgrade · Upgrade
+https://upgrade.badssl.com/
+Ergebnis: Antwort empfangen
+Befund: HTTP 200 empfangen
+HTTP: 200 · TLS: TLS 1.2 · Cipher: ECDHE-RSA · AES-128-GCM (0xc02f)
+Systemvertrauen: true · CT: true
+Zertifikat: *.badssl.com · SHA-256 101154813e8fdab6ba4fab575185c1a13944bcec1d849ae2cd94a073494997e3
+Aussteller Land (C): US
+Aussteller Organisation (O): Let's Encrypt
+Aussteller Name (CN): YR1
+Zertifikat: YR1 · SHA-256 13949634d99cd6fd6aa80bc034fefacceb1969feef986586713ecdbb05758d3f
+Aussteller Land (C): US
+Aussteller Organisation (O): ISRG
+Aussteller Name (CN): Root YR
+Zertifikat: Root YR · SHA-256 072639d0b140d5bffae16ad9c3f6cc6086040621f51ee61a6d46a8915c07cf76
+Aussteller Land (C): US
+Aussteller Organisation (O): Internet Security Research Group
+Aussteller Name (CN): ISRG Root X1
+Zertifikat: ISRG Root X1 · SHA-256 96bcec06264976f37460779acf28c5a7cfe8a3c0aae11a8ffcee05c0bddf08c6
+Aussteller Land (C): US
+Aussteller Organisation (O): Internet Security Research Group
+Aussteller Name (CN): ISRG Root X1
+Einordnung: HSTS-Header und die tatsächliche Ziel-URL können beobachtet werden. Browser-Preload-Listen, HTTPS-Everywhere und Browser-Upgrades sind dadurch nicht vollständig geprüft.
+
+preloaded-hsts · Upgrade
+https://preloaded-hsts.badssl.com/
+Ergebnis: Antwort empfangen
+Befund: HTTP 200 empfangen
+HTTP: 200 · TLS: TLS 1.2 · Cipher: ECDHE-RSA · AES-128-GCM (0xc02f)
+Systemvertrauen: true · CT: true
+Zertifikat: *.badssl.com · SHA-256 101154813e8fdab6ba4fab575185c1a13944bcec1d849ae2cd94a073494997e3
+Aussteller Land (C): US
+Aussteller Organisation (O): Let's Encrypt
+Aussteller Name (CN): YR1
+Zertifikat: YR1 · SHA-256 13949634d99cd6fd6aa80bc034fefacceb1969feef986586713ecdbb05758d3f
+Aussteller Land (C): US
+Aussteller Organisation (O): ISRG
+Aussteller Name (CN): Root YR
+Zertifikat: Root YR · SHA-256 072639d0b140d5bffae16ad9c3f6cc6086040621f51ee61a6d46a8915c07cf76
+Aussteller Land (C): US
+Aussteller Organisation (O): Internet Security Research Group
+Aussteller Name (CN): ISRG Root X1
+Zertifikat: ISRG Root X1 · SHA-256 96bcec06264976f37460779acf28c5a7cfe8a3c0aae11a8ffcee05c0bddf08c6
+Aussteller Land (C): US
+Aussteller Organisation (O): Internet Security Research Group
+Aussteller Name (CN): ISRG Root X1
+Einordnung: HSTS-Header und die tatsächliche Ziel-URL können beobachtet werden. Browser-Preload-Listen, HTTPS-Everywhere und Browser-Upgrades sind dadurch nicht vollständig geprüft.
+
+subdomain.preloaded-hsts · Upgrade
+https://subdomain.preloaded-hsts.badssl.com/
+Ergebnis: Verbindung abgelehnt
+Befund: Zertifikat passt nicht zum Hostnamen
+Bedeutung: Die Zertifikatsprüfung hat eine Abweichung zwischen aufgerufenem Host und den erlaubten Zertifikatsnamen festgestellt.
+Nächster Schritt: Adresse und Subject Alternative Names vergleichen. Der Betreiber muss ein Zertifikat für genau diesen Host einsetzen.
+Technik: NSOSStatusErrorDomain / -67602 / SSL —: “*.badssl.com” certificate name does not match input
+Technik: NSOSStatusErrorDomain / -67602 / SSL —: Certificate 0 “*.badssl.com” has errors: SSL hostname does not match name(s) in certificate;
+Technik: NSURLErrorDomain / -1200 / SSL -9802: A TLS error caused the secure connection to fail.
+Technik: kCFErrorDomainCFNetwork / -1200 / SSL -9802: The operation couldn’t be completed. (kCFErrorDomainCFNetwork error -1200.)
+HTTP: — · TLS: TLS 1.2 · Cipher: ECDHE-RSA · AES-128-GCM (0xc02f)
+Systemvertrauen: false · CT: nicht gemeldet
+Zertifikat: *.badssl.com · SHA-256 101154813e8fdab6ba4fab575185c1a13944bcec1d849ae2cd94a073494997e3
+Aussteller Land (C): US
+Aussteller Organisation (O): Let's Encrypt
+Aussteller Name (CN): YR1
+Zertifikat: YR1 · SHA-256 13949634d99cd6fd6aa80bc034fefacceb1969feef986586713ecdbb05758d3f
+Aussteller Land (C): US
+Aussteller Organisation (O): ISRG
+Aussteller Name (CN): Root YR
+Zertifikat: Root YR · SHA-256 072639d0b140d5bffae16ad9c3f6cc6086040621f51ee61a6d46a8915c07cf76
+Aussteller Land (C): US
+Aussteller Organisation (O): Internet Security Research Group
+Aussteller Name (CN): ISRG Root X1
+Zertifikat: ISRG Root X1 · SHA-256 96bcec06264976f37460779acf28c5a7cfe8a3c0aae11a8ffcee05c0bddf08c6
+Aussteller Land (C): US
+Aussteller Organisation (O): Internet Security Research Group
+Aussteller Name (CN): ISRG Root X1
+Einordnung: HSTS-Header und die tatsächliche Ziel-URL können beobachtet werden. Browser-Preload-Listen, HTTPS-Everywhere und Browser-Upgrades sind dadurch nicht vollständig geprüft.
+
+https-everywhere · Upgrade
+https://https-everywhere.badssl.com/
+Ergebnis: Antwort empfangen
+Befund: HTTP 200 empfangen
+HTTP: 200 · TLS: TLS 1.2 · Cipher: ECDHE-RSA · AES-128-GCM (0xc02f)
+Systemvertrauen: true · CT: true
+Zertifikat: *.badssl.com · SHA-256 101154813e8fdab6ba4fab575185c1a13944bcec1d849ae2cd94a073494997e3
+Aussteller Land (C): US
+Aussteller Organisation (O): Let's Encrypt
+Aussteller Name (CN): YR1
+Zertifikat: YR1 · SHA-256 13949634d99cd6fd6aa80bc034fefacceb1969feef986586713ecdbb05758d3f
+Aussteller Land (C): US
+Aussteller Organisation (O): ISRG
+Aussteller Name (CN): Root YR
+Zertifikat: Root YR · SHA-256 072639d0b140d5bffae16ad9c3f6cc6086040621f51ee61a6d46a8915c07cf76
+Aussteller Land (C): US
+Aussteller Organisation (O): Internet Security Research Group
+Aussteller Name (CN): ISRG Root X1
+Zertifikat: ISRG Root X1 · SHA-256 96bcec06264976f37460779acf28c5a7cfe8a3c0aae11a8ffcee05c0bddf08c6
+Aussteller Land (C): US
+Aussteller Organisation (O): Internet Security Research Group
+Aussteller Name (CN): ISRG Root X1
+Einordnung: HSTS-Header und die tatsächliche Ziel-URL können beobachtet werden. Browser-Preload-Listen, HTTPS-Everywhere und Browser-Upgrades sind dadurch nicht vollständig geprüft.
+
+spoofed-favicon · UI
+https://spoofed-favicon.badssl.com/
+Ergebnis: Antwort empfangen
+Befund: HTTP 200 empfangen
+HTTP: 200 · TLS: TLS 1.2 · Cipher: ECDHE-RSA · AES-128-GCM (0xc02f)
+Systemvertrauen: true · CT: true
+Zertifikat: *.badssl.com · SHA-256 101154813e8fdab6ba4fab575185c1a13944bcec1d849ae2cd94a073494997e3
+Aussteller Land (C): US
+Aussteller Organisation (O): Let's Encrypt
+Aussteller Name (CN): YR1
+Zertifikat: YR1 · SHA-256 13949634d99cd6fd6aa80bc034fefacceb1969feef986586713ecdbb05758d3f
+Aussteller Land (C): US
+Aussteller Organisation (O): ISRG
+Aussteller Name (CN): Root YR
+Zertifikat: Root YR · SHA-256 072639d0b140d5bffae16ad9c3f6cc6086040621f51ee61a6d46a8915c07cf76
+Aussteller Land (C): US
+Aussteller Organisation (O): Internet Security Research Group
+Aussteller Name (CN): ISRG Root X1
+Zertifikat: ISRG Root X1 · SHA-256 96bcec06264976f37460779acf28c5a7cfe8a3c0aae11a8ffcee05c0bddf08c6
+Aussteller Land (C): US
+Aussteller Organisation (O): Internet Security Research Group
+Aussteller Name (CN): ISRG Root X1
+Einordnung: Die App zeigt den aufgerufenen Host statt eines vom Server gewählten Browser-Titels oder Favicons. Browser-Täuschung wird nicht nachgestellt.
+
+lock-title · UI
+https://lock-title.badssl.com/
+Ergebnis: Antwort empfangen
+Befund: HTTP 200 empfangen
+HTTP: 200 · TLS: TLS 1.2 · Cipher: ECDHE-RSA · AES-128-GCM (0xc02f)
+Systemvertrauen: true · CT: true
+Zertifikat: *.badssl.com · SHA-256 101154813e8fdab6ba4fab575185c1a13944bcec1d849ae2cd94a073494997e3
+Aussteller Land (C): US
+Aussteller Organisation (O): Let's Encrypt
+Aussteller Name (CN): YR1
+Zertifikat: YR1 · SHA-256 13949634d99cd6fd6aa80bc034fefacceb1969feef986586713ecdbb05758d3f
+Aussteller Land (C): US
+Aussteller Organisation (O): ISRG
+Aussteller Name (CN): Root YR
+Zertifikat: Root YR · SHA-256 072639d0b140d5bffae16ad9c3f6cc6086040621f51ee61a6d46a8915c07cf76
+Aussteller Land (C): US
+Aussteller Organisation (O): Internet Security Research Group
+Aussteller Name (CN): ISRG Root X1
+Zertifikat: ISRG Root X1 · SHA-256 96bcec06264976f37460779acf28c5a7cfe8a3c0aae11a8ffcee05c0bddf08c6
+Aussteller Land (C): US
+Aussteller Organisation (O): Internet Security Research Group
+Aussteller Name (CN): ISRG Root X1
+Einordnung: Die App zeigt den aufgerufenen Host statt eines vom Server gewählten Browser-Titels oder Favicons. Browser-Täuschung wird nicht nachgestellt.
+
+long-extended-subdomain-name-containing-many-letters-and-dashes · UI
+https://long-extended-subdomain-name-containing-many-letters-and-dashes.badssl.com/
+Ergebnis: Antwort empfangen
+Befund: HTTP 200 empfangen
+HTTP: 200 · TLS: TLS 1.2 · Cipher: ECDHE-RSA · AES-128-GCM (0xc02f)
+Systemvertrauen: true · CT: true
+Zertifikat: *.badssl.com · SHA-256 101154813e8fdab6ba4fab575185c1a13944bcec1d849ae2cd94a073494997e3
+Aussteller Land (C): US
+Aussteller Organisation (O): Let's Encrypt
+Aussteller Name (CN): YR1
+Zertifikat: YR1 · SHA-256 13949634d99cd6fd6aa80bc034fefacceb1969feef986586713ecdbb05758d3f
+Aussteller Land (C): US
+Aussteller Organisation (O): ISRG
+Aussteller Name (CN): Root YR
+Zertifikat: Root YR · SHA-256 072639d0b140d5bffae16ad9c3f6cc6086040621f51ee61a6d46a8915c07cf76
+Aussteller Land (C): US
+Aussteller Organisation (O): Internet Security Research Group
+Aussteller Name (CN): ISRG Root X1
+Zertifikat: ISRG Root X1 · SHA-256 96bcec06264976f37460779acf28c5a7cfe8a3c0aae11a8ffcee05c0bddf08c6
+Aussteller Land (C): US
+Aussteller Organisation (O): Internet Security Research Group
+Aussteller Name (CN): ISRG Root X1
+Einordnung: Die App zeigt den aufgerufenen Host statt eines vom Server gewählten Browser-Titels oder Favicons. Browser-Täuschung wird nicht nachgestellt.
+
+longextendedsubdomainnamewithoutdashesinordertotestwordwrapping · UI
+https://longextendedsubdomainnamewithoutdashesinordertotestwordwrapping.badssl.com/
+Ergebnis: Antwort empfangen
+Befund: HTTP 200 empfangen
+HTTP: 200 · TLS: TLS 1.2 · Cipher: ECDHE-RSA · AES-128-GCM (0xc02f)
+Systemvertrauen: true · CT: true
+Zertifikat: *.badssl.com · SHA-256 101154813e8fdab6ba4fab575185c1a13944bcec1d849ae2cd94a073494997e3
+Aussteller Land (C): US
+Aussteller Organisation (O): Let's Encrypt
+Aussteller Name (CN): YR1
+Zertifikat: YR1 · SHA-256 13949634d99cd6fd6aa80bc034fefacceb1969feef986586713ecdbb05758d3f
+Aussteller Land (C): US
+Aussteller Organisation (O): ISRG
+Aussteller Name (CN): Root YR
+Zertifikat: Root YR · SHA-256 072639d0b140d5bffae16ad9c3f6cc6086040621f51ee61a6d46a8915c07cf76
+Aussteller Land (C): US
+Aussteller Organisation (O): Internet Security Research Group
+Aussteller Name (CN): ISRG Root X1
+Zertifikat: ISRG Root X1 · SHA-256 96bcec06264976f37460779acf28c5a7cfe8a3c0aae11a8ffcee05c0bddf08c6
+Aussteller Land (C): US
+Aussteller Organisation (O): Internet Security Research Group
+Aussteller Name (CN): ISRG Root X1
+Einordnung: Die App zeigt den aufgerufenen Host statt eines vom Server gewählten Browser-Titels oder Favicons. Browser-Täuschung wird nicht nachgestellt.
+
+superfish · Known Bad
+https://superfish.badssl.com/
+Ergebnis: Verbindung abgelehnt
+Befund: Zertifikatskette nicht vertrauenswürdig
+Bedeutung: Das System konnte diese Zertifikatskette nicht als vertrauenswürdig bestätigen. Mögliche Gründe sind ein unbekannter Aussteller, eine fehlende Zwischenstelle oder weitere Zertifikatsanforderungen.
+Nächster Schritt: Aussteller, vollständige Zertifikatskette und Systemmeldung prüfen. Die App umgeht die Zertifikatsprüfung nicht.
+Technik: NSOSStatusErrorDomain / -25318 / SSL —: “superfish.badssl.com” certificate is not trusted
+Technik: NSOSStatusErrorDomain / -25318 / SSL —: Certificate 0 “superfish.badssl.com” has errors: Certificate is not temporally valid, Unable to build chain to root (possible missing intermediate);
+Technik: NSURLErrorDomain / -1200 / SSL -9802: A TLS error caused the secure connection to fail.
+Technik: kCFErrorDomainCFNetwork / -1200 / SSL -9802: The operation couldn’t be completed. (kCFErrorDomainCFNetwork error -1200.)
+HTTP: — · TLS: TLS 1.2 · Cipher: ECDHE-RSA · AES-128-GCM (0xc02f)
+Systemvertrauen: false · CT: nicht gemeldet
+Zertifikat: superfish.badssl.com · SHA-256 5d88c3b0687af73bc1dc4dda31d2669c9d503c3e209126abe175edbd86495917
+Aussteller Organisation (O): Superfish, Inc.
+Aussteller Ort (L): SF
+Aussteller Region (ST): CA
+Aussteller Land (C): US
+Aussteller Name (CN): Superfish, Inc.
+Einordnung: Testabsicht und beobachteter Fehler werden getrennt: Der Name des badssl-Ziels wird nicht als Beweis für die tatsächliche Fehlerursache verwendet.
+
+edellroot · Known Bad
+https://edellroot.badssl.com/
+Ergebnis: Verbindung abgelehnt
+Befund: Zertifikatskette nicht vertrauenswürdig
+Bedeutung: Das System konnte diese Zertifikatskette nicht als vertrauenswürdig bestätigen. Mögliche Gründe sind ein unbekannter Aussteller, eine fehlende Zwischenstelle oder weitere Zertifikatsanforderungen.
+Nächster Schritt: Aussteller, vollständige Zertifikatskette und Systemmeldung prüfen. Die App umgeht die Zertifikatsprüfung nicht.
+Technik: NSOSStatusErrorDomain / -25318 / SSL —: “edellroot.badssl.com” certificate is not trusted
+Technik: NSOSStatusErrorDomain / -25318 / SSL —: Certificate 0 “edellroot.badssl.com” has errors: Certificate is not temporally valid, Unable to build chain to root (possible missing intermediate);
+Technik: NSURLErrorDomain / -1200 / SSL -9802: A TLS error caused the secure connection to fail.
+Technik: kCFErrorDomainCFNetwork / -1200 / SSL -9802: The operation couldn’t be completed. (kCFErrorDomainCFNetwork error -1200.)
+HTTP: — · TLS: TLS 1.2 · Cipher: ECDHE-RSA · AES-128-GCM (0xc02f)
+Systemvertrauen: false · CT: nicht gemeldet
+Zertifikat: edellroot.badssl.com · SHA-256 0c105e23ec21fbc99371e4ed05b2b9cf4dc67aa06b5ab61d61502b50ed667039
+Aussteller Name (CN): eDellRoot
+Einordnung: Testabsicht und beobachteter Fehler werden getrennt: Der Name des badssl-Ziels wird nicht als Beweis für die tatsächliche Fehlerursache verwendet.
+
+dsdtestprovider · Known Bad
+https://dsdtestprovider.badssl.com/
+Ergebnis: Verbindung abgelehnt
+Befund: Zertifikatskette nicht vertrauenswürdig
+Bedeutung: Das System konnte diese Zertifikatskette nicht als vertrauenswürdig bestätigen. Mögliche Gründe sind ein unbekannter Aussteller, eine fehlende Zwischenstelle oder weitere Zertifikatsanforderungen.
+Nächster Schritt: Aussteller, vollständige Zertifikatskette und Systemmeldung prüfen. Die App umgeht die Zertifikatsprüfung nicht.
+Technik: NSOSStatusErrorDomain / -25318 / SSL —: “dsdtestprovider.badssl.com” certificate is not trusted
+Technik: NSOSStatusErrorDomain / -25318 / SSL —: Certificate 0 “dsdtestprovider.badssl.com” has errors: Certificate is not temporally valid, Unable to build chain to root (possible missing intermediate);
+Technik: NSURLErrorDomain / -1200 / SSL -9802: A TLS error caused the secure connection to fail.
+Technik: kCFErrorDomainCFNetwork / -1200 / SSL -9802: The operation couldn’t be completed. (kCFErrorDomainCFNetwork error -1200.)
+HTTP: — · TLS: TLS 1.2 · Cipher: ECDHE-RSA · AES-128-GCM (0xc02f)
+Systemvertrauen: false · CT: nicht gemeldet
+Zertifikat: dsdtestprovider.badssl.com · SHA-256 942e58cee0818ba4df54b23d38802a614cb8961f70cf3fd218c014b4d9de3e7f
+Aussteller Organisationseinheit (OU): DSDTestProvider
+Aussteller Organisation (O): DSDTestProvider
+Aussteller Name (CN): DSDTestProvider
+Einordnung: Testabsicht und beobachteter Fehler werden getrennt: Der Name des badssl-Ziels wird nicht als Beweis für die tatsächliche Fehlerursache verwendet.
+
+preact-cli · Known Bad
+https://preact-cli.badssl.com/
+Ergebnis: Verbindung abgelehnt
+Befund: Zertifikatskette nicht vertrauenswürdig
+Bedeutung: Das System konnte diese Zertifikatskette nicht als vertrauenswürdig bestätigen. Mögliche Gründe sind ein unbekannter Aussteller, eine fehlende Zwischenstelle oder weitere Zertifikatsanforderungen.
+Nächster Schritt: Aussteller, vollständige Zertifikatskette und Systemmeldung prüfen. Die App umgeht die Zertifikatsprüfung nicht.
+Technik: NSOSStatusErrorDomain / -25318 / SSL —: “preact-cli.badssl.com” certificate is not trusted
+Technik: NSOSStatusErrorDomain / -25318 / SSL —: Certificate 0 “preact-cli.badssl.com” has errors: Unable to build chain to root (possible missing intermediate), Extended key usage does not match certificate usage;
+Technik: NSURLErrorDomain / -1200 / SSL -9802: A TLS error caused the secure connection to fail.
+Technik: kCFErrorDomainCFNetwork / -1200 / SSL -9802: The operation couldn’t be completed. (kCFErrorDomainCFNetwork error -1200.)
+HTTP: — · TLS: TLS 1.2 · Cipher: ECDHE-RSA · AES-128-GCM (0xc02f)
+Systemvertrauen: false · CT: nicht gemeldet
+Zertifikat: preact-cli.badssl.com · SHA-256 b09b601dab88c4b10313bb5592214d79e5f9ab3c0db2b814119668efffb35865
+Aussteller Organisation (O): Acme Co
+Einordnung: Testabsicht und beobachteter Fehler werden getrennt: Der Name des badssl-Ziels wird nicht als Beweis für die tatsächliche Fehlerursache verwendet.
+
+webpack-dev-server · Known Bad
+https://webpack-dev-server.badssl.com/
+Ergebnis: Verbindung abgelehnt
+Befund: Zertifikatskette nicht vertrauenswürdig
+Bedeutung: Das System konnte diese Zertifikatskette nicht als vertrauenswürdig bestätigen. Mögliche Gründe sind ein unbekannter Aussteller, eine fehlende Zwischenstelle oder weitere Zertifikatsanforderungen.
+Nächster Schritt: Aussteller, vollständige Zertifikatskette und Systemmeldung prüfen. Die App umgeht die Zertifikatsprüfung nicht.
+Technik: NSOSStatusErrorDomain / -25318 / SSL —: “webpack-dev-server.badssl.com” certificate is not trusted
+Technik: NSOSStatusErrorDomain / -25318 / SSL —: Certificate 0 “webpack-dev-server.badssl.com” has errors: Unable to build chain to root (possible missing intermediate), Extended key usage does not match certificate usage;
+Technik: NSURLErrorDomain / -1200 / SSL -9802: A TLS error caused the secure connection to fail.
+Technik: kCFErrorDomainCFNetwork / -1200 / SSL -9802: The operation couldn’t be completed. (kCFErrorDomainCFNetwork error -1200.)
+HTTP: — · TLS: TLS 1.2 · Cipher: ECDHE-RSA · AES-128-GCM (0xc02f)
+Systemvertrauen: false · CT: nicht gemeldet
+Zertifikat: webpack-dev-server.badssl.com · SHA-256 1f909af4aabded62b3764a3a3e0f2651c7892c7ff649387a0a40d3c6007db48f
+Aussteller Name (CN): localhost
+Einordnung: Testabsicht und beobachteter Fehler werden getrennt: Der Name des badssl-Ziels wird nicht als Beweis für die tatsächliche Fehlerursache verwendet.
+
+captive-portal · Chrome Tests
+https://captive-portal.badssl.com/
+Ergebnis: Verbindung abgelehnt
+Befund: Zertifikat passt nicht zum Hostnamen
+Bedeutung: Die Zertifikatsprüfung hat eine Abweichung zwischen aufgerufenem Host und den erlaubten Zertifikatsnamen festgestellt.
+Nächster Schritt: Adresse und Subject Alternative Names vergleichen. Der Betreiber muss ein Zertifikat für genau diesen Host einsetzen.
+Technik: NSOSStatusErrorDomain / -67602 / SSL —: “login.captive-portal.badssl.com” certificate name does not match input
+Technik: NSOSStatusErrorDomain / -67602 / SSL —: Certificate 0 “login.captive-portal.badssl.com” has errors: SSL hostname does not match name(s) in certificate, Certificate is not temporally valid;Certificate 1 “DigiCert SHA2 Secure Server CA” has errors: Certificate is not temporally valid;
+Technik: NSURLErrorDomain / -1200 / SSL -9802: A TLS error caused the secure connection to fail.
+Technik: kCFErrorDomainCFNetwork / -1200 / SSL -9802: The operation couldn’t be completed. (kCFErrorDomainCFNetwork error -1200.)
+HTTP: — · TLS: TLS 1.2 · Cipher: ECDHE-RSA · AES-128-GCM (0xc02f)
+Systemvertrauen: false · CT: nicht gemeldet
+Zertifikat: login.captive-portal.badssl.com · SHA-256 abdfbadb8f3264797f8279917f57d52cfbc7eb6e6725e0be9244f41788ae25c1
+Aussteller Land (C): US
+Aussteller Organisation (O): DigiCert Inc
+Aussteller Name (CN): DigiCert SHA2 Secure Server CA
+Zertifikat: DigiCert SHA2 Secure Server CA · SHA-256 154c433c491929c5ef686e838e323664a00e6a0d822ccc958fb4dab03e49a08f
+Aussteller Land (C): US
+Aussteller Organisation (O): DigiCert Inc
+Aussteller Organisationseinheit (OU): www.digicert.com
+Aussteller Name (CN): DigiCert Global Root CA
+Zertifikat: DigiCert Global Root CA · SHA-256 4348a0e9444c78cb265e058d5e8944b4d84f9662bd26db257f8934a443c70161
+Aussteller Land (C): US
+Aussteller Organisation (O): DigiCert Inc
+Aussteller Organisationseinheit (OU): www.digicert.com
+Aussteller Name (CN): DigiCert Global Root CA
+Einordnung: Testabsicht und beobachteter Fehler werden getrennt: Der Name des badssl-Ziels wird nicht als Beweis für die tatsächliche Fehlerursache verwendet.
+
+mitm-software · Chrome Tests
+https://mitm-software.badssl.com/
+Ergebnis: Verbindung abgelehnt
+Befund: Zertifikatskette nicht vertrauenswürdig
+Bedeutung: Das System konnte diese Zertifikatskette nicht als vertrauenswürdig bestätigen. Mögliche Gründe sind ein unbekannter Aussteller, eine fehlende Zwischenstelle oder weitere Zertifikatsanforderungen.
+Nächster Schritt: Aussteller, vollständige Zertifikatskette und Systemmeldung prüfen. Die App umgeht die Zertifikatsprüfung nicht.
+Technik: NSOSStatusErrorDomain / -25318 / SSL —: “mitm-software.badssl.com” certificate is not trusted
+Technik: NSOSStatusErrorDomain / -25318 / SSL —: Certificate 0 “mitm-software.badssl.com” has errors: Unable to build chain to root (possible missing intermediate), Extended key usage does not match certificate usage;
+Technik: NSURLErrorDomain / -1200 / SSL -9802: A TLS error caused the secure connection to fail.
+Technik: kCFErrorDomainCFNetwork / -1200 / SSL -9802: The operation couldn’t be completed. (kCFErrorDomainCFNetwork error -1200.)
+HTTP: — · TLS: TLS 1.2 · Cipher: ECDHE-RSA · AES-128-GCM (0xc02f)
+Systemvertrauen: false · CT: nicht gemeldet
+Zertifikat: mitm-software.badssl.com · SHA-256 7fa726aa465b3971457f16beaabc67a2909ef9dfa2e2bdfdf68e50502811b537
+Aussteller Land (C): US
+Aussteller Region (ST): California
+Aussteller Ort (L): San Francisco
+Aussteller Organisation (O): BadSSL
+Aussteller Name (CN): BadSSL MITM Software Test
+Einordnung: Testabsicht und beobachteter Fehler werden getrennt: Der Name des badssl-Ziels wird nicht als Beweis für die tatsächliche Fehlerursache verwendet.
+
+sha1-2016 · Defunct
+https://sha1-2016.badssl.com/
+Ergebnis: Verbindung abgelehnt
+Befund: Zertifikatskette nicht vertrauenswürdig
+Bedeutung: Das System konnte diese Zertifikatskette nicht als vertrauenswürdig bestätigen. Mögliche Gründe sind ein unbekannter Aussteller, eine fehlende Zwischenstelle oder weitere Zertifikatsanforderungen.
+Nächster Schritt: Aussteller, vollständige Zertifikatskette und Systemmeldung prüfen. Die App umgeht die Zertifikatsprüfung nicht.
+Technik: NSOSStatusErrorDomain / -67815 / SSL —: “*.badssl.com” certificate is using a broken signature algorithm
+Technik: NSOSStatusErrorDomain / -67815 / SSL —: Certificate 0 “*.badssl.com” has errors: Certificate is not temporally valid, Signature hash algorithm is not permitted for this use;Certificate 1 “PositiveSSL CA 2” has errors: Signature hash algorithm is not permitted for this use, Certificate is not temporally valid, Unable to build chain to root (possible missing intermediate);
+Technik: NSURLErrorDomain / -1200 / SSL -9802: A TLS error caused the secure connection to fail.
+Technik: kCFErrorDomainCFNetwork / -1200 / SSL -9802: The operation couldn’t be completed. (kCFErrorDomainCFNetwork error -1200.)
+HTTP: — · TLS: TLS 1.2 · Cipher: ECDHE-RSA · AES-128-GCM (0xc02f)
+Systemvertrauen: false · CT: nicht gemeldet
+Zertifikat: *.badssl.com · SHA-256 020f82f2b8e8e5ab7407184708806cacec065f5063db54cf617659587374c6d0
+Aussteller Land (C): GB
+Aussteller Region (ST): Greater Manchester
+Aussteller Ort (L): Salford
+Aussteller Organisation (O): COMODO CA Limited
+Aussteller Name (CN): PositiveSSL CA 2
+Zertifikat: PositiveSSL CA 2 · SHA-256 4475534dbb114714c628d3eef21811002d6ccecc4328e41587732251e424f8a6
+Aussteller Land (C): SE
+Aussteller Organisation (O): AddTrust AB
+Aussteller Organisationseinheit (OU): AddTrust External TTP Network
+Aussteller Name (CN): AddTrust External CA Root
+Einordnung: badssl kennzeichnet dieses Ziel als nicht mehr aktuell. Ein heutiger Fehler kann von der früher vorgesehenen Testursache abweichen.
+
+sha1-2017 · Defunct
+https://sha1-2017.badssl.com/
+Ergebnis: Verbindung abgelehnt
+Befund: Zertifikatskette nicht vertrauenswürdig
+Bedeutung: Das System konnte diese Zertifikatskette nicht als vertrauenswürdig bestätigen. Mögliche Gründe sind ein unbekannter Aussteller, eine fehlende Zwischenstelle oder weitere Zertifikatsanforderungen.
+Nächster Schritt: Aussteller, vollständige Zertifikatskette und Systemmeldung prüfen. Die App umgeht die Zertifikatsprüfung nicht.
+Technik: NSOSStatusErrorDomain / -67815 / SSL —: “*.badssl.com” certificate is using a broken signature algorithm
+Technik: NSOSStatusErrorDomain / -67815 / SSL —: Certificate 0 “*.badssl.com” has errors: Certificate is not temporally valid, Signature hash algorithm is not permitted for this use;Certificate 1 “DigiCert Secure Server CA” has errors: Certificate is not temporally valid, Signature hash algorithm is not permitted for this use;
+Technik: NSURLErrorDomain / -1200 / SSL -9802: A TLS error caused the secure connection to fail.
+Technik: kCFErrorDomainCFNetwork / -1200 / SSL -9802: The operation couldn’t be completed. (kCFErrorDomainCFNetwork error -1200.)
+HTTP: — · TLS: TLS 1.2 · Cipher: ECDHE-RSA · AES-128-GCM (0xc02f)
+Systemvertrauen: false · CT: nicht gemeldet
+Zertifikat: *.badssl.com · SHA-256 141758610bd4d119c58e945674c6db2bd85e404bd6197af2ec8b80b8587268ab
+Aussteller Land (C): US
+Aussteller Organisation (O): DigiCert Inc
+Aussteller Name (CN): DigiCert Secure Server CA
+Zertifikat: DigiCert Secure Server CA · SHA-256 94d4ece2ed9a5457b969a13b260489e9a5fe4790a041f27a3eb4126c84418ef9
+Aussteller Land (C): US
+Aussteller Organisation (O): DigiCert Inc
+Aussteller Organisationseinheit (OU): www.digicert.com
+Aussteller Name (CN): DigiCert Global Root CA
+Zertifikat: DigiCert Global Root CA · SHA-256 4348a0e9444c78cb265e058d5e8944b4d84f9662bd26db257f8934a443c70161
+Aussteller Land (C): US
+Aussteller Organisation (O): DigiCert Inc
+Aussteller Organisationseinheit (OU): www.digicert.com
+Aussteller Name (CN): DigiCert Global Root CA
+Einordnung: badssl kennzeichnet dieses Ziel als nicht mehr aktuell. Ein heutiger Fehler kann von der früher vorgesehenen Testursache abweichen.
+
+sha1-intermediate · Defunct
+https://sha1-intermediate.badssl.com/
+Ergebnis: Verbindung abgelehnt
+Befund: Zertifikatskette nicht vertrauenswürdig
+Bedeutung: Das System konnte diese Zertifikatskette nicht als vertrauenswürdig bestätigen. Mögliche Gründe sind ein unbekannter Aussteller, eine fehlende Zwischenstelle oder weitere Zertifikatsanforderungen.
+Nächster Schritt: Aussteller, vollständige Zertifikatskette und Systemmeldung prüfen. Die App umgeht die Zertifikatsprüfung nicht.
+Technik: NSOSStatusErrorDomain / -25318 / SSL —: “*.badssl.com” certificate is not trusted
+Technik: NSOSStatusErrorDomain / -25318 / SSL —: Certificate 0 “*.badssl.com” has errors: Certificate is not temporally valid, Unable to build chain to root (possible missing intermediate);
+Technik: NSURLErrorDomain / -1200 / SSL -9802: A TLS error caused the secure connection to fail.
+Technik: kCFErrorDomainCFNetwork / -1200 / SSL -9802: The operation couldn’t be completed. (kCFErrorDomainCFNetwork error -1200.)
+HTTP: — · TLS: TLS 1.2 · Cipher: ECDHE-RSA · AES-128-GCM (0xc02f)
+Systemvertrauen: false · CT: nicht gemeldet
+Zertifikat: *.badssl.com · SHA-256 500a77e0eb1ff3492ee6a407499699f36e44d15e72f67a4035074172b0d71771
+Aussteller Land (C): GB
+Aussteller Region (ST): Greater Manchester
+Aussteller Ort (L): Salford
+Aussteller Organisation (O): COMODO CA Limited
+Aussteller Name (CN): COMODO SSL CA
+Einordnung: badssl kennzeichnet dieses Ziel als nicht mehr aktuell. Ein heutiger Fehler kann von der früher vorgesehenen Testursache abweichen.
+
+invalid-expected-sct · Defunct
+https://invalid-expected-sct.badssl.com/
+Ergebnis: Verbindung abgelehnt
+Befund: Zertifikatskette nicht vertrauenswürdig
+Bedeutung: Das System konnte diese Zertifikatskette nicht als vertrauenswürdig bestätigen. Mögliche Gründe sind ein unbekannter Aussteller, eine fehlende Zwischenstelle oder weitere Zertifikatsanforderungen.
+Nächster Schritt: Aussteller, vollständige Zertifikatskette und Systemmeldung prüfen. Die App umgeht die Zertifikatsprüfung nicht.
+Technik: NSOSStatusErrorDomain / -25318 / SSL —: “RapidSSL SHA256 CA” certificate is not trusted
+Technik: NSOSStatusErrorDomain / -25318 / SSL —: Certificate 0 “invalid-expected-sct.badssl.com” has errors: Certificate is not temporally valid;Certificate 1 “RapidSSL SHA256 CA” has errors: Certificate is not temporally valid, Unable to build chain to root (possible missing intermediate);
+Technik: NSURLErrorDomain / -1200 / SSL -9802: A TLS error caused the secure connection to fail.
+Technik: kCFErrorDomainCFNetwork / -1200 / SSL -9802: The operation couldn’t be completed. (kCFErrorDomainCFNetwork error -1200.)
+HTTP: — · TLS: TLS 1.2 · Cipher: ECDHE-RSA · AES-128-GCM (0xc02f)
+Systemvertrauen: false · CT: nicht gemeldet
+Zertifikat: invalid-expected-sct.badssl.com · SHA-256 4a425603bef742deb402dfb019a0f1719e3a7339ea939af9537acd556aee846f
+Aussteller Land (C): US
+Aussteller Organisation (O): GeoTrust Inc.
+Aussteller Name (CN): RapidSSL SHA256 CA
+Zertifikat: RapidSSL SHA256 CA · SHA-256 e6683e88315cd1cb403c0cea490f7c4b4c82c91cd485037489aadbaa90839f61
+Aussteller Land (C): US
+Aussteller Organisation (O): GeoTrust Inc.
+Aussteller Name (CN): GeoTrust Global CA
+Einordnung: badssl kennzeichnet dieses Ziel als nicht mehr aktuell. Ein heutiger Fehler kann von der früher vorgesehenen Testursache abweichen.

@@ -1,0 +1,158 @@
+Device orientation: Unknown
+------------------------
+Application bundle identifier: com.mobilebox.atsdiagnostic
+Application UI orientation: Portrait
+Application, pid: 40213, label: 'ATS Diagnostic'
+ Window, {{0.0, 0.0}, {402.0, 874.0}}, hitPoint: {201.0, 437.0}
+  Other, {{0.0, 0.0}, {402.0, 874.0}}, hitPoint: {201.0, 437.0}
+  Other, {{0.0, 0.0}, {402.0, 874.0}}, hitPoint: {201.0, 437.0}
+   Other, {{0.0, 0.0}, {402.0, 874.0}}, hitPoint: {201.0, 437.0}
+    Other, {{0.0, 0.0}, {402.0, 874.0}}, hitPoint: {201.0, 437.0}
+     Other, {{0.0, 0.0}, {402.0, 874.0}}, hitPoint: {201.0, 437.0}
+      Other, {{0.0, 0.0}, {402.0, 874.0}}, hitPoint: {201.0, 437.0}
+       Other, {{0.0, 0.0}, {402.0, 874.0}}, hitPoint: {201.0, 437.0}
+        Other, {{0.0, 0.0}, {402.0, 874.0}}, hitPoint: {201.0, 437.0}
+         Other, {{0.0, 0.0}, {402.0, 874.0}}, hitPoint: {201.0, 437.0}
+          Other, {{0.0, 0.0}, {402.0, 874.0}}, hitPoint: {201.0, 437.0}
+           Other, {{0.0, 0.0}, {402.0, 874.0}}, hitPoint: {201.0, 437.0}
+            Other, {{0.0, 0.0}, {402.0, 874.0}}, hitPoint: {201.0, 437.0}
+             NavigationBar, {{0.0, 62.0}, {402.0, 106.0}}, identifier: 'Diagnoseeinstellungen', hitPoint: {201.0, 115.0}
+              Button, {{16.0, 62.0}, {44.0, 44.0}}, identifier: 'BackButton', label: 'Tools', hitPoint: {38.0, 84.0}
+              Other, {{277.5, 66.0}, {104.4, 35.9}}, hitPoint: {329.7, 84.0}
+               Other, {{277.5, 66.0}, {104.4, 35.9}}, hitPoint: {329.7, 84.0}
+                Button, {{277.5, 66.0}, {104.4, 35.9}}, label: 'Speichern', hitPoint: {329.7, 84.0}
+              StaticText, {{16.0, 119.7}, {363.3, 40.7}}, label: 'Diagnoseeinstellungen', hitPoint: {197.7, 140.0}
+             Other, {{0.0, 0.0}, {402.0, 874.0}}, hitPoint: {201.0, 437.0}
+              Other, {{0.0, 0.0}, {402.0, 874.0}}, hitPoint: {201.0, 437.0}
+               Other, {{0.0, 0.0}, {402.0, 874.0}}, hitPoint: {201.0, 437.0}
+                Other, {{0.0, 0.0}, {402.0, 874.0}}, hitPoint: {201.0, 437.0}
+                 CollectionView, {{0.0, 0.0}, {402.0, 874.0}}, hitPoint: {201.0, 437.0}
+                  Other, {{-16.0, -1580.0}, {434.0, 2085.0}}, hitPoint: {201.0, 252.5}
+                  Other, {{0.0, 0.0}, {402.0, 874.0}}, hitPoint: {201.0, 437.0}
+                   Other, {{0.0, 0.0}, {402.0, 156.0}}, hitPoint: {201.0, 78.0}
+                   Other, {{0.0, 741.0}, {402.0, 133.0}}, hitPoint: {201.0, 807.5}
+                  Other, {{0.0, 0.0}, {402.0, 874.0}}, hitPoint: {201.0, 437.0}
+                   Other, {{0.0, 741.0}, {402.0, 133.0}}, hitPoint: {201.0, 807.5}
+                  Cell, {{16.0, 168.0}, {370.0, 40.3}}, hitPoint: {201.0, 188.2}
+                   Other, {{16.0, 168.0}, {370.0, 40.3}}, hitPoint: {201.0, 188.2}
+                   Other, {{16.0, 168.0}, {370.0, 40.3}}, hitPoint: {201.0, 188.2}
+                    Other, {{16.0, 168.0}, {370.0, 40.3}}, hitPoint: {201.0, 188.2}
+                     Other, {{16.0, 168.0}, {370.0, 40.3}}, hitPoint: {201.0, 188.2}
+                      StaticText, {{16.0, 168.0}, {370.0, 40.3}}, label: 'Zeitlimits · Sekunden', hitPoint: {201.0, 188.2}
+                  Cell, {{16.0, 208.3}, {370.0, 76.0}}, hitPoint: {201.0, 246.3}
+                   Other, {{16.0, 208.3}, {370.0, 76.0}}, hitPoint: {201.0, 246.3}
+                    Other, {{16.0, 208.3}, {370.0, 76.0}}, hitPoint: {201.0, 246.3}
+                   Other, {{16.0, 208.3}, {370.0, 76.0}}, hitPoint: {201.0, 246.3}
+                    Other, {{16.0, 208.3}, {370.0, 76.0}}, hitPoint: {201.0, 246.3}
+                     Other, {{16.0, 208.3}, {370.0, 76.0}}, hitPoint: {201.0, 246.3}
+                      StaticText, {{32.0, 223.3}, {186.0, 18.0}}, label: 'Wartezeit ohne neue Daten', hitPoint: {125.0, 232.3}
+                      TextField, {{32.0, 247.3}, {338.0, 22.0}}, label: 'Wartezeit ohne neue Daten · Sekunden', placeholderValue: 'Sekunden', value: 20, hitPoint: {201.0, 258.3}
+                  Cell, {{16.0, 284.3}, {370.0, 63.7}}, hitPoint: {201.0, 316.2}
+                   Other, {{16.0, 284.3}, {370.0, 63.7}}, hitPoint: {201.0, 316.2}
+                    Other, {{16.0, 284.3}, {370.0, 63.7}}, hitPoint: {201.0, 316.2}
+                   Other, {{16.0, 284.3}, {370.0, 63.7}}, hitPoint: {201.0, 316.2}
+                    Other, {{16.0, 284.3}, {370.0, 63.7}}, hitPoint: {201.0, 316.2}
+                     Other, {{16.0, 284.3}, {370.0, 63.7}}, hitPoint: {201.0, 316.2}
+                      StaticText, {{16.0, 284.3}, {370.0, 63.7}}, label: 'Maximal 300 Sekunden. Das System startet dieses Wartezeitlimit neu, wenn weitere Daten eintreffen.', hitPoint: {201.0, 316.2}
+                  Other, {{32.0, 283.3}, {338.0, 1.0}}, hitPoint: {201.0, 283.8}
+                  Cell, {{16.0, 348.0}, {370.0, 76.0}}, hitPoint: {201.0, 386.0}
+                   Other, {{16.0, 348.0}, {370.0, 76.0}}, hitPoint: {201.0, 386.0}
+                    Other, {{16.0, 348.0}, {370.0, 76.0}}, hitPoint: {201.0, 386.0}
+                   Other, {{16.0, 348.0}, {370.0, 76.0}}, hitPoint: {201.0, 386.0}
+                    Other, {{16.0, 348.0}, {370.0, 76.0}}, hitPoint: {201.0, 386.0}
+                     Other, {{16.0, 348.0}, {370.0, 76.0}}, hitPoint: {201.0, 386.0}
+                      StaticText, {{32.0, 363.0}, {119.7, 18.0}}, label: 'Gesamte Anfrage', hitPoint: {91.8, 372.0}
+                      TextField, {{32.0, 387.0}, {338.0, 22.0}}, label: 'Gesamte Anfrage · Sekunden', placeholderValue: 'Sekunden', value: 30, hitPoint: {201.0, 398.0}
+                  Other, {{32.0, 347.0}, {338.0, 1.0}}, hitPoint: {201.0, 347.5}
+                  Cell, {{16.0, 424.0}, {370.0, 63.7}}, hitPoint: {201.0, 455.8}
+                   Other, {{16.0, 424.0}, {370.0, 63.7}}, hitPoint: {201.0, 455.8}
+                    Other, {{16.0, 424.0}, {370.0, 63.7}}, hitPoint: {201.0, 455.8}
+                   Other, {{16.0, 424.0}, {370.0, 63.7}}, hitPoint: {201.0, 455.8}
+                    Other, {{16.0, 424.0}, {370.0, 63.7}}, hitPoint: {201.0, 455.8}
+                     Other, {{16.0, 424.0}, {370.0, 63.7}}, hitPoint: {201.0, 455.8}
+                      StaticText, {{16.0, 424.0}, {370.0, 63.7}}, label: 'Maximal 3.600 Sekunden für die vollständige Übertragung, auch wenn laufend Daten eintreffen.', hitPoint: {201.0, 455.8}
+                  Other, {{32.0, 423.0}, {338.0, 1.0}}, hitPoint: {201.0, 423.5}
+                  Other, {{-16.0, 505.0}, {434.0, 246.7}}, hitPoint: {201.0, 628.3}
+                  Cell, {{16.0, 505.0}, {370.0, 40.3}}, hitPoint: {201.0, 525.2}
+                   Other, {{16.0, 505.0}, {370.0, 40.3}}, hitPoint: {201.0, 525.2}
+                   Other, {{16.0, 505.0}, {370.0, 40.3}}, hitPoint: {201.0, 525.2}
+                    Other, {{16.0, 505.0}, {370.0, 40.3}}, hitPoint: {201.0, 525.2}
+                     Other, {{16.0, 505.0}, {370.0, 40.3}}, hitPoint: {201.0, 525.2}
+                      StaticText, {{16.0, 505.0}, {370.0, 40.3}}, label: 'Antwortvorschau', hitPoint: {201.0, 525.2}
+                  Cell, {{16.0, 545.3}, {370.0, 89.0}}, hitPoint: {201.0, 589.8}
+                   Other, {{16.0, 545.3}, {370.0, 89.0}}, hitPoint: {201.0, 589.8}
+                    Other, {{16.0, 545.3}, {370.0, 89.0}}, hitPoint: {201.0, 589.8}
+                   Other, {{16.0, 545.3}, {370.0, 89.0}}, hitPoint: {201.0, 589.8}
+                    Other, {{16.0, 545.3}, {370.0, 89.0}}, hitPoint: {201.0, 589.8}
+                     Other, {{16.0, 545.3}, {370.0, 89.0}}, hitPoint: {201.0, 589.8}
+                      StaticText, {{32.0, 560.5}, {201.7, 20.3}}, label: 'Gespeicherter Antworttext', hitPoint: {132.8, 570.7}
+                      Button, {{32.0, 560.5}, {201.7, 58.8}}, label: 'Gespeicherter Antworttext, Keine Vorschau', hitPoint: {132.8, 589.9}
+                       StaticText, {{44.0, 592.0}, {117.7, 20.3}}, label: 'Keine Vorschau', hitPoint: {102.8, 602.2}
+                  Cell, {{16.0, 634.7}, {370.0, 99.7}}, hitPoint: {201.0, 684.5}
+                   Other, {{16.0, 634.7}, {370.0, 99.7}}, hitPoint: {201.0, 684.5}
+                    Other, {{16.0, 634.7}, {370.0, 99.7}}, hitPoint: {201.0, 684.5}
+                   Other, {{16.0, 634.7}, {370.0, 99.7}}, hitPoint: {201.0, 684.5}
+                    Other, {{16.0, 634.7}, {370.0, 99.7}}, hitPoint: {201.0, 684.5}
+                     Other, {{16.0, 634.7}, {370.0, 99.7}}, hitPoint: {201.0, 684.5}
+                      StaticText, {{16.0, 634.7}, {370.0, 99.7}}, label: 'Nur die Vorschau wird begrenzt. Bytezahl und SHA-256 beziehen sich weiterhin auf die vollständige empfangene Antwort. Eine kleinere Vorschau reduziert den gespeicherten Inhalt.', hitPoint: {201.0, 684.5}
+                  Other, {{32.0, 633.7}, {338.0, 1.0}}, hitPoint: {201.0, 634.2}
+                  Other, {{-16.0, 751.7}, {434.0, 2019.0}}, hitPoint: {201.0, 812.8}
+                  Cell, {{16.0, 769.3}, {370.0, 52.0}}, hitPoint: {201.0, 795.3}
+                   Other, {{16.0, 769.3}, {370.0, 52.0}}, hitPoint: {201.0, 795.3}
+                    Other, {{16.0, 769.3}, {370.0, 52.0}}, hitPoint: {201.0, 795.3}
+                   Other, {{16.0, 769.3}, {370.0, 52.0}}, hitPoint: {201.0, 795.3}
+                    Other, {{16.0, 769.3}, {370.0, 52.0}}, hitPoint: {201.0, 795.3}
+                     Other, {{16.0, 769.3}, {370.0, 52.0}}, hitPoint: {201.0, 795.3}
+                      Button, {{16.0, 769.3}, {370.0, 52.0}}, label: 'Standardwerte wiederherstellen', hitPoint: {201.0, 795.3}
+                       Image, {{34.7, 784.0}, {19.0, 23.0}}, identifier: 'arrow.counterclockwise', label: 'Counterclockwise Curved Arrow', hitPoint: {44.2, 795.5}
+                       StaticText, {{34.7, 784.0}, {279.7, 23.0}}, label: 'Standardwerte wiederherstellen', hitPoint: {174.5, 795.5}
+                  Cell, {{16.0, 821.3}, {370.0, 99.7}}, hitPoint: {201.0, 847.7}
+                   Other, {{16.0, 821.3}, {370.0, 99.7}}, hitPoint: {201.0, 847.7}
+                    Other, {{16.0, 821.3}, {370.0, 99.7}}, hitPoint: {201.0, 847.7}
+                   Other, {{16.0, 821.3}, {370.0, 99.7}}, hitPoint: {201.0, 847.7}
+                    Other, {{16.0, 821.3}, {370.0, 99.7}}, hitPoint: {201.0, 847.7}
+                     Other, {{16.0, 821.3}, {370.0, 99.7}}, hitPoint: {201.0, 847.7}
+                      StaticText, {{16.0, 821.3}, {370.0, 99.7}}, label: 'Die Werte gelten nach dem Speichern für neue Anfragen in Inspect und Requests. Die laufende Anfrage, der feste badssl-Referenztest und TLS-Versions-Probes verwenden ihre bisherigen Limits.', hitPoint: {201.0, 847.7}
+                  Other, {{72.0, 820.3}, {298.0, 1.0}}, hitPoint: {221.0, 820.8}
+                  Other, {{369.0, 116.0}, {30.0, 675.0}}, label: 'Vertical scroll bar, 2 pages', value: 0 %, hitPoint: {384.0, 453.5}
+                   Other, {{396.0, 119.0}, {3.0, 528.7}}, hitPoint: {397.5, 383.3}
+                  Other, {{369.0, 116.0}, {30.0, 675.0}}, label: 'Vertical scroll bar, 2 pages', value: 0 %, hitPoint: {384.0, 453.5}
+                   Other, {{396.0, 119.0}, {3.0, 528.7}}, hitPoint: {397.5, 383.3}
+             Toolbar, {{0.0, 0.0}, {402.0, 874.0}}, identifier: 'Toolbar', label: 'Toolbar', hitPoint: {201.0, 437.0}
+              Other, {{0.0, 0.0}, {402.0, 874.0}}, hitPoint: {201.0, 437.0}
+       Other, {{0.0, 0.0}, {402.0, 874.0}}, hitPoint: {201.0, 437.0}
+        Other, {{0.0, 791.0}, {402.0, 83.0}}, hitPoint: {201.0, 832.5}
+         Other, {{0.0, 0.0}, {402.0, 874.0}}, hitPoint: {201.0, 437.0}
+          TabBar, {{0.0, 791.0}, {402.0, 83.0}}, label: 'Tab Bar', hitPoint: {201.0, 832.5}
+           Other, {{21.0, 791.0}, {360.0, 62.0}}, hitPoint: {201.0, 822.0}
+            Other, {{21.0, 791.0}, {95.0, 54.0}}, hitPoint: {68.5, 818.0}
+            Other, {{21.0, 791.0}, {360.0, 62.0}}, hitPoint: {201.0, 822.0}
+             Button, {{25.0, 795.0}, {95.0, 54.0}}, identifier: 'checkmark.shield', label: 'Inspect', hitPoint: {72.5, 822.0}
+              Image, {{60.3, 801.7}, {24.7, 26.7}}, identifier: 'checkmark.shield.fill', label: 'Checkmark in a filled shield', hitPoint: {72.7, 815.0}
+             Button, {{110.7, 795.0}, {95.0, 54.0}}, identifier: 'arrow.up.arrow.down', label: 'Requests', hitPoint: {158.2, 822.0}
+              Image, {{141.7, 801.7}, {33.0, 26.3}}, identifier: 'arrow.up.arrow.down', label: 'sort', hitPoint: {158.2, 814.8}
+             Button, {{196.3, 795.0}, {95.0, 54.0}}, identifier: 'clock', label: 'History', hitPoint: {243.8, 822.0}
+              Image, {{230.3, 801.3}, {27.3, 27.3}}, identifier: 'clock.fill', label: 'clock', hitPoint: {244.0, 815.0}
+             Button, {{282.0, 795.0}, {95.0, 54.0}}, identifier: 'wrench.and.screwdriver', label: 'Tools', Selected, hitPoint: {329.5, 822.0}
+              Image, {{313.3, 799.3}, {32.7, 31.7}}, identifier: 'wrench.and.screwdriver.fill', label: 'Wrench and screwdriver, filled', hitPoint: {329.7, 815.2}
+            Other, {{21.0, 791.0}, {360.0, 62.0}}, hitPoint: {201.0, 822.0}
+            Other, {{282.0, 795.0}, {95.0, 54.0}}, hitPoint: {329.5, 822.0}
+             Other, {{282.0, 795.0}, {95.0, 54.0}}, hitPoint: {329.5, 822.0}
+              Other, {{282.0, 795.0}, {95.0, 54.0}}, hitPoint: {329.5, 822.0}
+              Other, {{282.0, 795.0}, {95.0, 54.0}}, hitPoint: {329.5, 822.0}
+               Other, {{282.0, 795.0}, {95.0, 54.0}}, hitPoint: {329.5, 822.0}
+                Other, {{282.0, 795.0}, {95.0, 54.0}}, hitPoint: {329.5, 822.0}
+                 Other, {{282.0, 795.0}, {95.0, 54.0}}, hitPoint: {329.5, 822.0}
+                Other, {{282.0, 795.0}, {95.0, 54.0}}, hitPoint: {329.5, 822.0}
+               Other, {{282.0, 795.0}, {95.0, 54.0}}, hitPoint: {329.5, 822.0}
+         Other, {{0.0, 791.0}, {402.0, 83.0}}, hitPoint: {201.0, 832.5}
+          Other, {{0.0, 791.0}, {402.0, 83.0}}, hitPoint: {201.0, 832.5}
+           Other, {{0.0, 791.0}, {402.0, 83.0}}, hitPoint: {201.0, 832.5}
+            Other, {{0.0, 791.0}, {402.0, 83.0}}, hitPoint: {201.0, 832.5}
+             Other, {{0.0, 791.0}, {402.0, 83.0}}, hitPoint: {201.0, 832.5}
+              Other, {{0.0, 791.0}, {402.0, 83.0}}, hitPoint: {201.0, 832.5}
+            Other, {{0.0, 791.0}, {402.0, 83.0}}, hitPoint: {201.0, 832.5}
+             Other, {{0.0, 791.0}, {402.0, 83.0}}, hitPoint: {201.0, 832.5}
+ Window, {{0.0, 0.0}, {402.0, 874.0}}, hitPoint: {201.0, 437.0}
+  Other, {{0.0, 0.0}, {402.0, 874.0}}, hitPoint: {201.0, 437.0}
+   Other, {{0.0, 0.0}, {402.0, 874.0}}, hitPoint: {201.0, 437.0}
