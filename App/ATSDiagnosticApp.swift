@@ -259,15 +259,17 @@ struct RecordView: View {
             } else { detailList(includeOverview: true) }
         }.navigationTitle("Connection details").navigationBarTitleDisplayMode(.inline).toolbar { Button("Favorite", systemImage: store.settings.favorites.contains(record.id) ? "star.fill" : "star") { store.toggleFavorite(record.id) } }
     }
+    private var checksumExplanation: LocalizedStringKey { record.origin == nil ? "SHA-256 of the complete received response" : "SHA-256 laut importierter Aufzeichnung · nicht neu geprüft" }
     private func detailList(includeOverview: Bool) -> some View {
         List {
+            if let origin = record.origin { ImportedRecordSection(origin: origin, requestBodyUnavailable: !record.canReplay, requestPreview: record.importedRequestBodyPreview, requestBytes: record.importedRequestBodyBytes) }
             if includeOverview { Section { ConnectionOverview(record: record); DiagnosticIssueView(record:displayedRecord) } }
             Section { NavigationLink { ConnectionMapView(record: record) } label: { Label("Connection map", systemImage: "point.3.connected.trianglepath.dotted") } }
             Section("Connection") {
                 Text(record.url).textSelection(.enabled)
                 if let finalURL = record.finalURL, finalURL != record.url { LabeledContent("Final destination", value: finalURL).textSelection(.enabled) }
                 LabeledContent("Status", value: record.status.map(String.init) ?? "Failed")
-                LabeledContent("Protocol", value: record.protocolName ?? "Not reported")
+                LabeledContent("Protocol", value: record.protocolName.flatMap { $0.isEmpty ? nil : $0 } ?? "Not reported")
                 LabeledContent("TLS version", value: TLSDisplay.version(record.tlsVersion))
                 LabeledContent("Cipher suite", value: TLSDisplay.cipher(record.cipher))
                 LabeledContent("Remote address", value: record.remoteAddress ?? "Not reported")
@@ -276,8 +278,8 @@ struct RecordView: View {
             if let options = record.diagnosticOptions { DiagnosticOptionsSummary(options:options) }
             if let checksum = record.responseSHA256 {
                 Section("Download integrity") {
-                    Text("SHA-256 of the complete received response").font(.caption).foregroundStyle(.secondary)
-                    Text(checksum).font(.body.monospaced()).textSelection(.enabled)
+                    Text(checksumExplanation).font(.caption).foregroundStyle(.secondary)
+                    Text(Integrity.groupedDigest(checksum)).font(.body.monospaced()).textSelection(.enabled)
                     if let matches = record.integrityMatches { Label(matches ? "Checksum matches" : "Checksum mismatch", systemImage: matches ? "checkmark.shield" : "exclamationmark.shield").foregroundStyle(matches ? Color.diagnosticAccent : Color.red) }
                 }
             }
@@ -310,10 +312,10 @@ struct RecordView: View {
                 ForEach(record.responseHeaders.keys.sorted().prefix(3), id: \.self) { key in HeaderRow(item: HeaderItem(name: key, value: record.responseHeaders[key] ?? "")) }
                 NavigationLink("All headers") { HeadersView(headers: record.responseHeaders) }
             }
-            ResponseBodySection(body: record.responseBody, encoding: record.responseEncoding, bytes: record.bytes, previewLimit: record.diagnosticOptions?.bodyPreviewBytes, hasCompleteHash: record.responseSHA256 != nil)
+            ResponseBodySection(body: record.responseBody, encoding: record.responseEncoding, bytes: record.bytes, previewLimit: record.diagnosticOptions?.bodyPreviewBytes, hasCompleteHash: record.origin == nil && record.responseSHA256 != nil, byteCountKnown: record.responseByteCountKnown != false)
             Section {
-                ShareLink("Copy or share as cURL", item: record.curl)
-                Button("Replay request") { Task { await store.execute(url: record.url, method: record.method, headers: record.requestHeaders.map { "\($0.key): \($0.value)" }.joined(separator: "\n"), body: record.requestBody) } }.disabled(store.running)
+                ShareLink("Copy or share as cURL", item: record.curl).disabled(!record.canReplay)
+                Button("Replay request") { Task { await store.execute(url: record.url, method: record.method, headers: record.requestHeaders.map { "\($0.key): \($0.value)" }.joined(separator: "\n"), body: record.requestBody) } }.disabled(store.running || !record.canReplay)
             }
         }.scrollContentBackground(.hidden).background(Color(uiColor: .systemGroupedBackground))
     }
@@ -325,14 +327,15 @@ private struct ResponseBodySection: View {
     let bytes: Int
     let previewLimit: Int?
     let hasCompleteHash: Bool
-    init(body: String, encoding: String?, bytes: Int, previewLimit: Int?, hasCompleteHash: Bool) {
-        bodyText = body; self.encoding = encoding; self.bytes = bytes; self.previewLimit = previewLimit; self.hasCompleteHash = hasCompleteHash
+    let byteCountKnown: Bool
+    init(body: String, encoding: String?, bytes: Int, previewLimit: Int?, hasCompleteHash: Bool, byteCountKnown: Bool) {
+        bodyText = body; self.encoding = encoding; self.bytes = bytes; self.previewLimit = previewLimit; self.hasCompleteHash = hasCompleteHash; self.byteCountKnown = byteCountKnown
     }
     var body: some View {
         Section("Antwortdaten") {
-            LabeledContent("Empfangen", value: bytes.formatted(.byteCount(style: .file)))
+            LabeledContent("Empfangen", value: byteCountKnown ? bytes.formatted(.byteCount(style: .file)) : "Nicht gemeldet")
             if bodyText.isEmpty {
-                Text(bytes > 0 ? "Antwortdaten empfangen; keine Textvorschau gespeichert." : "Keine Antwortdaten empfangen.").foregroundStyle(.secondary)
+                Text(!byteCountKnown ? "Der Import enthält keine verlässlich gemeldete Antwortgröße." : bytes > 0 ? "Antwortdaten empfangen; keine Textvorschau gespeichert." : "Keine Antwortdaten empfangen.").foregroundStyle(.secondary)
             } else {
                 Text(String(bodyText.trimmingCharacters(in: .whitespacesAndNewlines).prefix(600))).font(.footnote.monospaced()).lineLimit(8).foregroundStyle(.secondary)
                 NavigationLink(encoding == "base64" ? "Base64-Vorschau öffnen" : "Antwortvorschau öffnen") { TextValueView(title: "Antwortvorschau", value: bodyText) }

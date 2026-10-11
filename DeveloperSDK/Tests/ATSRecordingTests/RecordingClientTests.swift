@@ -69,4 +69,30 @@ struct RecordingClientTests {
         #expect(data.count == 4096); #expect(await recorder.records().isEmpty)
     }
 
+    @Test func harMarksPartialRequestsAndUnknownProtocol() async throws {
+        let recorder = try RecordingClient(previewLimit: 3)
+        let session = session(); defer { session.invalidateAndCancel() }
+        var request = URLRequest(url: URL(string: "https://fixture.invalid/echo")!)
+        request.httpMethod = "POST"; request.httpBody = Data("complete body".utf8)
+        _ = try await recorder.data(for: request, using: session)
+        let data = try await recorder.harData()
+        let root = try #require(try JSONSerialization.jsonObject(with: data) as? [String: Any])
+        let log = try #require(root["log"] as? [String: Any])
+        let entry = try #require((log["entries"] as? [[String: Any]])?.first)
+        let recordedRequest = try #require(entry["request"] as? [String: Any])
+        let metadata = try #require(entry["_atsDiagnostic"] as? [String: Any])
+        #expect(recordedRequest["httpVersion"] as? String == "")
+        #expect(recordedRequest["bodySize"] as? Int == 13); #expect(recordedRequest["postData"] == nil)
+        #expect(metadata["requestBodyUnavailable"] as? Bool == true)
+        #expect(metadata["requestBodyPreviewBase64"] as? String == Data("com".utf8).base64EncodedString())
+        try writeHARFixture(data, name: "SDK-Post-Partial")
+    }
+
+}
+
+func writeHARFixture(_ data: Data, name: String) throws {
+    guard let path = ProcessInfo.processInfo.environment["ATS_RECORDING_FIXTURES"] else { return }
+    let directory = URL(fileURLWithPath: path, isDirectory: true)
+    try FileManager.default.createDirectory(at: directory, withIntermediateDirectories: true)
+    try data.write(to: directory.appendingPathComponent(name + ".json"), options: .atomic)
 }

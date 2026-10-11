@@ -1,0 +1,37 @@
+Building for debugging...
+[2 / 5] ATSRecordingTests-product
+[4 / 7] ATSRecordingTests-product
+[9 / 11] ATSRecordingTests-product
+Build complete! (0,72 Sek.)
+Test Suite 'All tests' started at 2026-10-12 01:02:24.346.
+Test Suite 'All tests' passed at 2026-10-12 01:02:24.347.
+	 Executed 0 tests, with 0 failures (0 unexpected) in 0.000 (0.001) seconds
+◇ Test run started.
+↳ Testing Library Version: 2084
+↳ Target Platform: arm64e-apple-macos14.0
+◇ Suite RecordingClientTests started.
+◇ Suite LiveHTTPSRecordingTests started.
+◇ Test harMarksPartialRequestsAndUnknownProtocol() started.
+◇ Test originalPostBodyAndHeadersReachTheSession() started.
+◇ Test originalFailureIsPreservedAndRecorded() started.
+◇ Test tooSmallJournalCannotChangeSuccessfulResponse() started.
+◇ Test countAndEncodedBudgetAreRespected() started.
+◇ Test fullResponseSurvivesZeroPreview() started.
+◇ Test liveResponseIsReturnedAndRecorded() started.
+◇ Test certificateFailureMatchesTheUnwrappedSession(_:) started.
+◇ Test case passing 1 argument target → "https://expired.badssl.com/" to certificateFailureMatchesTheUnwrappedSession(_:) started.
+◇ Test case passing 1 argument target → "https://wrong.host.badssl.com/" to certificateFailureMatchesTheUnwrappedSession(_:) started.
+✔ Test originalPostBodyAndHeadersReachTheSession() passed after 0.008 seconds.
+✔ Test fullResponseSurvivesZeroPreview() passed after 0.008 seconds.
+✔ Test originalFailureIsPreservedAndRecorded() passed after 0.009 seconds.
+✔ Test tooSmallJournalCannotChangeSuccessfulResponse() passed after 0.009 seconds.
+✔ Test harMarksPartialRequestsAndUnknownProtocol() passed after 0.010 seconds.
+✔ Test countAndEncodedBudgetAreRespected() passed after 0.010 seconds.
+✔ Suite RecordingClientTests passed after 0.010 seconds.
+SDK_LIVE_PROOF example.com HTTP 200 bytes 577 preview 16
+✔ Test liveResponseIsReturnedAndRecorded() passed after 0.552 seconds.
+SDK_LIVE_PROOF https://wrong.host.badssl.com/ baseline -1202; returned/recorded NSURLErrorDomain -1202
+SDK_LIVE_PROOF https://expired.badssl.com/ baseline -1202; returned/recorded NSURLErrorDomain -1202
+✔ Test certificateFailureMatchesTheUnwrappedSession(_:) with 2 test cases passed after 0.906 seconds.
+✔ Suite LiveHTTPSRecordingTests passed after 0.906 seconds.
+✔ Test run with 8 tests in 2 suites passed after 0.907 seconds.

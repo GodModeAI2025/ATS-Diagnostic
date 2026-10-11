@@ -1,0 +1,338 @@
+Device orientation: Portrait
+------------------------
+Application bundle identifier: com.mobilebox.atsdiagnostic
+Application UI orientation: Portrait
+Application, pid: 31782, label: 'ATS Diagnostic'
+ Window, {{0.0, 0.0}, {1032.0, 1376.0}}, hitPoint: {516.0, 688.0}
+  Other, {{0.0, 0.0}, {1032.0, 1376.0}}, hitPoint: {516.0, 688.0}
+  Other, {{0.0, 0.0}, {1032.0, 1376.0}}, hitPoint: {516.0, 688.0}
+   Other, {{0.0, 0.0}, {1032.0, 1376.0}}, hitPoint: {516.0, 688.0}
+    Other, {{0.0, 0.0}, {1032.0, 1376.0}}, hitPoint: {516.0, 688.0}
+     Other, {{0.0, 0.0}, {1032.0, 1376.0}}, hitPoint: {516.0, 688.0}
+      Other, {{0.0, 0.0}, {1032.0, 1376.0}}, hitPoint: {516.0, 688.0}
+       Other, {{0.0, 0.0}, {1032.0, 1376.0}}, hitPoint: {516.0, 688.0}
+        Other, {{0.0, 0.0}, {1032.0, 1376.0}}, hitPoint: {516.0, 688.0}
+         Other, {{0.0, 0.0}, {1032.0, 1376.0}}, hitPoint: {516.0, 688.0}
+          Other, {{0.0, 0.0}, {1032.0, 1376.0}}, hitPoint: {516.0, 688.0}
+           Other, {{0.0, 0.0}, {1032.0, 1376.0}}, hitPoint: {516.0, 688.0}
+            Other, {{0.0, 0.0}, {1032.0, 1376.0}}, hitPoint: {516.0, 688.0}
+             NavigationBar, {{0.0, 32.0}, {1032.0, 108.0}}, identifier: 'Connection details', hitPoint: {516.0, 86.0}
+              Button, {{10.0, 32.0}, {44.0, 44.0}}, identifier: 'BackButton', label: 'History', hitPoint: {32.0, 54.0}
+              Button, {{981.9, 36.0}, {36.1, 36.0}}, label: 'Favorite', hitPoint: {1000.0, 54.0}
+              StaticText, {{441.5, 97.5}, {148.5, 21.0}}, label: 'Connection details', hitPoint: {515.8, 108.0}
+             Other, {{0.0, 0.0}, {1032.0, 1376.0}}, hitPoint: {516.0, 688.0}
+              Other, {{0.0, 0.0}, {1032.0, 1376.0}}, hitPoint: {516.0, 688.0}
+               Other, {{0.0, 0.0}, {1032.0, 1376.0}}, hitPoint: {516.0, 688.0}
+                Other, {{0.0, 0.0}, {1032.0, 1376.0}}, hitPoint: {516.0, 688.0}
+                 ScrollView, {{24.0, 164.0}, {360.0, 1168.0}}, hitPoint: {204.0, 748.0}
+                  Other, {{24.0, 164.0}, {360.0, 524.5}}, hitPoint: {204.0, 426.2}
+                   StaticText, {{90.0, 191.8}, {167.0, 20.5}}, label: 'Connection overview', hitPoint: {173.5, 202.0}
+                   StaticText, {{45.5, 246.5}, {177.5, 20.5}}, label: 'Response received', hitPoint: {134.2, 256.7}
+                   Other, {{44.0, 283.0}, {320.0, 164.5}}, hitPoint: {204.0, 365.2}
+                    StaticText, {{44.0, 283.0}, {154.0, 75.5}}, label: 'HTTP status, 200', hitPoint: {121.0, 320.8}
+                     StaticText, {{59.0, 297.0}, {93.5, 14.5}}, label: 'HTTP status', hitPoint: {105.8, 304.2}
+                     Image, {{59.0, 298.0}, {12.5, 12.5}}, identifier: 'arrow.down.circle', label: 'Arrow Down Circle', hitPoint: {65.2, 304.2}
+                     StaticText, {{58.0, 320.5}, {38.0, 24.0}}, label: '200', hitPoint: {77.0, 332.5}
+                    StaticText, {{210.0, 283.0}, {154.0, 75.5}}, label: 'TLS version, Not reported', hitPoint: {287.0, 320.8}
+                     StaticText, {{225.5, 297.0}, {86.0, 14.5}}, label: 'TLS version', hitPoint: {268.5, 304.3}
+                     Image, {{225.5, 298.0}, {8.5, 12.0}}, identifier: 'lock', label: 'Lock', hitPoint: {229.8, 304.0}
+                     StaticText, {{224.0, 320.5}, {117.5, 24.0}}, label: 'Not reported', hitPoint: {282.8, 332.5}
+                    StaticText, {{44.0, 371.5}, {154.0, 75.5}}, label: 'Duration, 0,002 s', hitPoint: {121.0, 409.2}
+                     StaticText, {{59.0, 385.3}, {71.5, 14.5}}, label: 'Duration', hitPoint: {94.8, 392.5}
+                     Image, {{59.0, 386.5}, {12.5, 12.5}}, identifier: 'timer', label: 'Timer', hitPoint: {65.2, 392.8}
+                     StaticText, {{58.0, 408.8}, {71.0, 24.0}}, label: '0,002 s', hitPoint: {93.5, 420.8}
+                    StaticText, {{210.0, 370.5}, {154.0, 77.0}}, label: 'Certificates, 0', hitPoint: {287.0, 409.0}
+                     StaticText, {{225.0, 385.5}, {91.0, 14.5}}, label: 'Certificates', hitPoint: {270.5, 392.7}
+                     Image, {{225.0, 385.5}, {14.0, 14.0}}, identifier: 'checkmark.seal', label: 'Verified', Selected, hitPoint: {232.0, 392.5}
+                     StaticText, {{224.0, 409.5}, {13.0, 24.0}}, label: '0', hitPoint: {230.5, 421.5}
+                   StaticText, {{90.0, 523.7}, {142.5, 20.5}}, label: 'Measured timings', hitPoint: {161.2, 534.0}
+                   StaticText, {{44.0, 578.0}, {320.0, 34.0}}, label: 'Total request, 0,002 s', hitPoint: {204.0, 595.0}
+                    StaticText, {{45.5, 578.0}, {114.0, 18.0}}, label: 'Total request', hitPoint: {102.5, 587.0}
+                    Image, {{45.5, 579.5}, {15.0, 15.0}}, identifier: 'timer', label: 'Timer', hitPoint: {53.0, 587.0}
+                    StaticText, {{311.0, 578.0}, {53.0, 18.0}}, label: '0,002 s', hitPoint: {337.5, 587.0}
+                    Other, {{44.0, 604.0}, {320.0, 8.0}}, hitPoint: {204.0, 608.0}
+                   StaticText, {{44.0, 630.0}, {305.5, 30.5}}, label: 'No separate phase timings were reported for the final transaction.', hitPoint: {196.8, 645.3}
+                  Other, {{351.0, 164.0}, {30.0, 1168.0}}, label: 'Vertical scroll bar, 1 page', value: 0 %, hitPoint: {366.0, 748.0}
+                  Other, {{351.0, 164.0}, {30.0, 1168.0}}, label: 'Vertical scroll bar, 1 page', value: 0 %, hitPoint: {366.0, 748.0}
+                 CollectionView, {{408.0, 164.0}, {600.0, 1168.0}}, hitPoint: {708.0, 748.0}
+                  Other, {{388.0, -2492.0}, {640.0, 3044.5}}, hitPoint: {708.0, 276.2}
+                  Cell, {{428.0, 199.0}, {560.0, 52.0}}, hitPoint: {708.0, 225.0}
+                   Other, {{428.0, 199.0}, {560.0, 52.0}}, hitPoint: {708.0, 225.0}
+                    Other, {{428.0, 199.0}, {560.0, 52.0}}, hitPoint: {708.0, 225.0}
+                   Other, {{428.0, 199.0}, {560.0, 52.0}}, hitPoint: {708.0, 225.0}
+                    Other, {{428.0, 199.0}, {560.0, 52.0}}, hitPoint: {708.0, 225.0}
+                     Other, {{428.0, 199.0}, {560.0, 52.0}}, hitPoint: {708.0, 225.0}
+                      StaticText, {{428.0, 199.0}, {560.0, 52.0}}, label: 'Importierte Aufzeichnung', hitPoint: {708.0, 225.0}
+                      Image, {{450.5, 212.5}, {19.5, 25.0}}, identifier: 'square.and.arrow.down', label: 'Download', hitPoint: {460.2, 225.0}
+                  Cell, {{428.0, 251.0}, {560.0, 52.0}}, hitPoint: {708.0, 277.0}
+                   Other, {{428.0, 251.0}, {560.0, 52.0}}, hitPoint: {708.0, 277.0}
+                    Other, {{428.0, 251.0}, {560.0, 52.0}}, hitPoint: {708.0, 277.0}
+                   Other, {{428.0, 251.0}, {560.0, 52.0}}, hitPoint: {708.0, 277.0}
+                    Other, {{428.0, 251.0}, {560.0, 52.0}}, hitPoint: {708.0, 277.0}
+                     Other, {{428.0, 251.0}, {560.0, 52.0}}, hitPoint: {708.0, 277.0}
+                      StaticText, {{428.0, 251.0}, {560.0, 52.0}}, label: 'Vom Export gemeldete Quelle: ATSRecording.', hitPoint: {708.0, 277.0}
+                  Other, {{488.0, 250.0}, {480.0, 1.0}}, hitPoint: {728.0, 250.5}
+                  Cell, {{428.0, 303.0}, {560.0, 64.0}}, hitPoint: {708.0, 335.0}
+                   Other, {{428.0, 303.0}, {560.0, 64.0}}, hitPoint: {708.0, 335.0}
+                    Other, {{428.0, 303.0}, {560.0, 64.0}}, hitPoint: {708.0, 335.0}
+                   Other, {{428.0, 303.0}, {560.0, 64.0}}, hitPoint: {708.0, 335.0}
+                    Other, {{428.0, 303.0}, {560.0, 64.0}}, hitPoint: {708.0, 335.0}
+                     Other, {{428.0, 303.0}, {560.0, 64.0}}, hitPoint: {708.0, 335.0}
+                      StaticText, {{428.0, 303.0}, {560.0, 64.0}}, label: 'Die Angaben stammen aus der importierten Datei. Diese Verbindung wurde durch den Import nicht erneut geprüft.', hitPoint: {708.0, 335.0}
+                  Other, {{448.0, 302.0}, {520.0, 1.0}}, hitPoint: {708.0, 302.5}
+                  Cell, {{428.0, 367.0}, {560.0, 64.0}}, hitPoint: {708.0, 399.0}
+                   Other, {{428.0, 367.0}, {560.0, 64.0}}, hitPoint: {708.0, 399.0}
+                    Other, {{428.0, 367.0}, {560.0, 64.0}}, hitPoint: {708.0, 399.0}
+                   Other, {{428.0, 367.0}, {560.0, 64.0}}, hitPoint: {708.0, 399.0}
+                    Other, {{428.0, 367.0}, {560.0, 64.0}}, hitPoint: {708.0, 399.0}
+                     Other, {{428.0, 367.0}, {560.0, 64.0}}, hitPoint: {708.0, 399.0}
+                      StaticText, {{428.0, 367.0}, {560.0, 64.0}}, label: 'Der ursprüngliche Anfragekörper ist nicht vollständig für eine Wiederholung verfügbar. Wiederholung und cURL-Ausgabe sind deaktiviert.', hitPoint: {708.0, 399.0}
+                  Other, {{448.0, 366.0}, {520.0, 1.0}}, hitPoint: {708.0, 366.5}
+                  Cell, {{428.0, 431.0}, {560.0, 52.0}}, hitPoint: {708.0, 457.0}
+                   Other, {{428.0, 431.0}, {560.0, 52.0}}, hitPoint: {708.0, 457.0}
+                    Other, {{428.0, 431.0}, {560.0, 52.0}}, hitPoint: {708.0, 457.0}
+                   Other, {{428.0, 431.0}, {560.0, 52.0}}, hitPoint: {708.0, 457.0}
+                    Other, {{428.0, 431.0}, {560.0, 52.0}}, hitPoint: {708.0, 457.0}
+                     Other, {{428.0, 431.0}, {560.0, 52.0}}, hitPoint: {708.0, 457.0}
+                      StaticText, {{428.0, 431.0}, {560.0, 52.0}}, label: 'Ursprünglicher Anfragekörper, 13 bytes', hitPoint: {708.0, 457.0}
+                      StaticText, {{448.0, 446.8}, {227.5, 20.5}}, label: 'Ursprünglicher Anfragekörper', hitPoint: {561.8, 457.0}
+                  Other, {{448.0, 430.0}, {520.0, 1.0}}, hitPoint: {708.0, 430.5}
+                  Cell, {{428.0, 483.0}, {560.0, 52.0}}, hitPoint: {708.0, 509.0}
+                   Other, {{428.0, 483.0}, {560.0, 52.0}}, hitPoint: {708.0, 509.0}
+                    Other, {{428.0, 483.0}, {560.0, 52.0}}, hitPoint: {708.0, 509.0}
+                   Other, {{428.0, 483.0}, {560.0, 52.0}}, hitPoint: {708.0, 509.0}
+                    Other, {{428.0, 483.0}, {560.0, 52.0}}, hitPoint: {708.0, 509.0}
+                     Other, {{428.0, 483.0}, {560.0, 52.0}}, hitPoint: {708.0, 509.0}
+                      Button, {{428.0, 483.0}, {560.0, 52.0}}, label: 'Importierte Anfragevorschau', hitPoint: {708.0, 509.0}
+                       StaticText, {{448.0, 498.8}, {218.5, 20.5}}, label: 'Importierte Anfragevorschau', hitPoint: {557.2, 509.0}
+                       Image, {{958.5, 503.0}, {7.0, 12.0}}, identifier: 'chevron.forward', hitPoint: {962.0, 509.0}
+                  Other, {{448.0, 482.0}, {520.0, 1.0}}, hitPoint: {708.0, 482.5}
+                  Other, {{388.0, 552.5}, {640.0, 87.0}}, hitPoint: {708.0, 596.0}
+                  Cell, {{428.0, 570.0}, {560.0, 52.0}}, hitPoint: {708.0, 596.0}
+                   Other, {{428.0, 570.0}, {560.0, 52.0}}, hitPoint: {708.0, 596.0}
+                    Other, {{428.0, 570.0}, {560.0, 52.0}}, hitPoint: {708.0, 596.0}
+                   Other, {{428.0, 570.0}, {560.0, 52.0}}, hitPoint: {708.0, 596.0}
+                    Other, {{428.0, 570.0}, {560.0, 52.0}}, hitPoint: {708.0, 596.0}
+                     Other, {{428.0, 570.0}, {560.0, 52.0}}, hitPoint: {708.0, 596.0}
+                      Button, {{428.0, 570.0}, {560.0, 52.0}}, label: 'Connection map', hitPoint: {708.0, 596.0}
+                       StaticText, {{448.5, 585.8}, {165.0, 20.5}}, label: 'Connection map', hitPoint: {531.0, 596.0}
+                       Image, {{448.5, 587.0}, {23.0, 18.5}}, identifier: 'point.3.connected.trianglepath.dotted', label: 'Three Connected Points With A Dotted Triangular Path', hitPoint: {460.0, 596.2}
+                       Image, {{958.5, 590.0}, {7.0, 12.0}}, identifier: 'chevron.forward', hitPoint: {962.0, 596.0}
+                  Other, {{388.0, 639.5}, {640.0, 370.0}}, hitPoint: {708.0, 824.5}
+                  Cell, {{428.0, 639.5}, {560.0, 40.5}}, hitPoint: {708.0, 659.8}
+                   Other, {{428.0, 639.5}, {560.0, 40.5}}, hitPoint: {708.0, 659.8}
+                   Other, {{428.0, 639.5}, {560.0, 40.5}}, hitPoint: {708.0, 659.8}
+                    Other, {{428.0, 639.5}, {560.0, 40.5}}, hitPoint: {708.0, 659.8}
+                     Other, {{428.0, 639.5}, {560.0, 40.5}}, hitPoint: {708.0, 659.8}
+                      StaticText, {{428.0, 639.5}, {560.0, 40.5}}, label: 'Connection', hitPoint: {708.0, 659.8}
+                  Cell, {{428.0, 680.0}, {560.0, 52.0}}, hitPoint: {708.0, 706.0}
+                   Other, {{428.0, 680.0}, {560.0, 52.0}}, hitPoint: {708.0, 706.0}
+                    Other, {{428.0, 680.0}, {560.0, 52.0}}, hitPoint: {708.0, 706.0}
+                   Other, {{428.0, 680.0}, {560.0, 52.0}}, hitPoint: {708.0, 706.0}
+                    Other, {{428.0, 680.0}, {560.0, 52.0}}, hitPoint: {708.0, 706.0}
+                     Other, {{428.0, 680.0}, {560.0, 52.0}}, hitPoint: {708.0, 706.0}
+                      StaticText, {{428.0, 680.0}, {560.0, 52.0}}, label: 'https://fixture.invalid/echo', hitPoint: {708.0, 706.0}
+                  Cell, {{428.0, 732.0}, {560.0, 52.0}}, hitPoint: {708.0, 758.0}
+                   Other, {{428.0, 732.0}, {560.0, 52.0}}, hitPoint: {708.0, 758.0}
+                    Other, {{428.0, 732.0}, {560.0, 52.0}}, hitPoint: {708.0, 758.0}
+                   Other, {{428.0, 732.0}, {560.0, 52.0}}, hitPoint: {708.0, 758.0}
+                    Other, {{428.0, 732.0}, {560.0, 52.0}}, hitPoint: {708.0, 758.0}
+                     Other, {{428.0, 732.0}, {560.0, 52.0}}, hitPoint: {708.0, 758.0}
+                      StaticText, {{428.0, 732.0}, {560.0, 52.0}}, label: 'Status, 200', hitPoint: {708.0, 758.0}
+                      StaticText, {{448.0, 747.8}, {49.0, 20.5}}, label: 'Status', hitPoint: {472.5, 758.0}
+                  Other, {{448.0, 731.0}, {520.0, 1.0}}, hitPoint: {708.0, 731.5}
+                  Cell, {{428.0, 784.0}, {560.0, 52.0}}, hitPoint: {708.0, 810.0}
+                   Other, {{428.0, 784.0}, {560.0, 52.0}}, hitPoint: {708.0, 810.0}
+                    Other, {{428.0, 784.0}, {560.0, 52.0}}, hitPoint: {708.0, 810.0}
+                   Other, {{428.0, 784.0}, {560.0, 52.0}}, hitPoint: {708.0, 810.0}
+                    Other, {{428.0, 784.0}, {560.0, 52.0}}, hitPoint: {708.0, 810.0}
+                     Other, {{428.0, 784.0}, {560.0, 52.0}}, hitPoint: {708.0, 810.0}
+                      StaticText, {{448.0, 799.8}, {64.0, 20.5}}, label: 'Protocol', hitPoint: {480.0, 810.0}
+                  Other, {{448.0, 783.0}, {520.0, 1.0}}, hitPoint: {708.0, 783.5}
+                  Cell, {{428.0, 836.0}, {560.0, 52.0}}, hitPoint: {708.0, 862.0}
+                   Other, {{428.0, 836.0}, {560.0, 52.0}}, hitPoint: {708.0, 862.0}
+                    Other, {{428.0, 836.0}, {560.0, 52.0}}, hitPoint: {708.0, 862.0}
+                   Other, {{428.0, 836.0}, {560.0, 52.0}}, hitPoint: {708.0, 862.0}
+                    Other, {{428.0, 836.0}, {560.0, 52.0}}, hitPoint: {708.0, 862.0}
+                     Other, {{428.0, 836.0}, {560.0, 52.0}}, hitPoint: {708.0, 862.0}
+                      StaticText, {{428.0, 836.0}, {560.0, 52.0}}, label: 'TLS version, Not reported', hitPoint: {708.0, 862.0}
+                      StaticText, {{448.0, 851.8}, {89.5, 20.5}}, label: 'TLS version', hitPoint: {492.8, 862.0}
+                  Other, {{448.0, 835.0}, {520.0, 1.0}}, hitPoint: {708.0, 835.5}
+                  Cell, {{428.0, 888.0}, {560.0, 52.0}}, hitPoint: {708.0, 914.0}
+                   Other, {{428.0, 888.0}, {560.0, 52.0}}, hitPoint: {708.0, 914.0}
+                    Other, {{428.0, 888.0}, {560.0, 52.0}}, hitPoint: {708.0, 914.0}
+                   Other, {{428.0, 888.0}, {560.0, 52.0}}, hitPoint: {708.0, 914.0}
+                    Other, {{428.0, 888.0}, {560.0, 52.0}}, hitPoint: {708.0, 914.0}
+                     Other, {{428.0, 888.0}, {560.0, 52.0}}, hitPoint: {708.0, 914.0}
+                      StaticText, {{428.0, 888.0}, {560.0, 52.0}}, label: 'Cipher suite, Not reported', hitPoint: {708.0, 914.0}
+                      StaticText, {{448.0, 903.8}, {91.5, 20.5}}, label: 'Cipher suite', hitPoint: {493.8, 914.0}
+                  Other, {{448.0, 887.0}, {520.0, 1.0}}, hitPoint: {708.0, 887.5}
+                  Cell, {{428.0, 940.0}, {560.0, 52.0}}, hitPoint: {708.0, 966.0}
+                   Other, {{428.0, 940.0}, {560.0, 52.0}}, hitPoint: {708.0, 966.0}
+                    Other, {{428.0, 940.0}, {560.0, 52.0}}, hitPoint: {708.0, 966.0}
+                   Other, {{428.0, 940.0}, {560.0, 52.0}}, hitPoint: {708.0, 966.0}
+                    Other, {{428.0, 940.0}, {560.0, 52.0}}, hitPoint: {708.0, 966.0}
+                     Other, {{428.0, 940.0}, {560.0, 52.0}}, hitPoint: {708.0, 966.0}
+                      StaticText, {{428.0, 940.0}, {560.0, 52.0}}, label: 'Remote address, Not reported', hitPoint: {708.0, 966.0}
+                      StaticText, {{448.0, 955.8}, {124.0, 20.5}}, label: 'Remote address', hitPoint: {510.0, 966.0}
+                  Other, {{448.0, 939.0}, {520.0, 1.0}}, hitPoint: {708.0, 939.5}
+                  Other, {{388.0, 1009.5}, {640.0, 182.5}}, hitPoint: {708.0, 1100.8}
+                  Cell, {{428.0, 1009.5}, {560.0, 40.5}}, hitPoint: {708.0, 1029.8}
+                   Other, {{428.0, 1009.5}, {560.0, 40.5}}, hitPoint: {708.0, 1029.8}
+                   Other, {{428.0, 1009.5}, {560.0, 40.5}}, hitPoint: {708.0, 1029.8}
+                    Other, {{428.0, 1009.5}, {560.0, 40.5}}, hitPoint: {708.0, 1029.8}
+                     Other, {{428.0, 1009.5}, {560.0, 40.5}}, hitPoint: {708.0, 1029.8}
+                      StaticText, {{428.0, 1009.5}, {560.0, 40.5}}, label: 'Download integrity', hitPoint: {708.0, 1029.8}
+                  Cell, {{428.0, 1050.0}, {560.0, 52.0}}, hitPoint: {708.0, 1076.0}
+                   Other, {{428.0, 1050.0}, {560.0, 52.0}}, hitPoint: {708.0, 1076.0}
+                    Other, {{428.0, 1050.0}, {560.0, 52.0}}, hitPoint: {708.0, 1076.0}
+                   Other, {{428.0, 1050.0}, {560.0, 52.0}}, hitPoint: {708.0, 1076.0}
+                    Other, {{428.0, 1050.0}, {560.0, 52.0}}, hitPoint: {708.0, 1076.0}
+                     Other, {{428.0, 1050.0}, {560.0, 52.0}}, hitPoint: {708.0, 1076.0}
+                      StaticText, {{428.0, 1050.0}, {560.0, 52.0}}, label: 'SHA-256 laut importierter Aufzeichnung · nicht neu geprüft', hitPoint: {708.0, 1076.0}
+                  Cell, {{428.0, 1102.0}, {560.0, 72.5}}, hitPoint: {708.0, 1138.2}
+                   Other, {{428.0, 1102.0}, {560.0, 72.5}}, hitPoint: {708.0, 1138.2}
+                    Other, {{428.0, 1102.0}, {560.0, 72.5}}, hitPoint: {708.0, 1138.2}
+                   Other, {{428.0, 1102.0}, {560.0, 72.5}}, hitPoint: {708.0, 1138.2}
+                    Other, {{428.0, 1102.0}, {560.0, 72.5}}, hitPoint: {708.0, 1138.2}
+                     Other, {{428.0, 1102.0}, {560.0, 72.5}}, hitPoint: {708.0, 1138.2}
+                      StaticText, {{428.0, 1102.0}, {560.0, 72.5}}, label: '2952f781c05a98e03545f78d0e710d921569adbdf3e18525a724b5cc7af864fb', hitPoint: {708.0, 1138.2}
+                  Other, {{448.0, 1101.0}, {520.0, 1.0}}, hitPoint: {708.0, 1101.5}
+                  Other, {{388.0, 1192.0}, {640.0, 162.0}}, hitPoint: {708.0, 1273.0}
+                  Cell, {{428.0, 1192.0}, {560.0, 40.5}}, hitPoint: {708.0, 1212.2}
+                   Other, {{428.0, 1192.0}, {560.0, 40.5}}, hitPoint: {708.0, 1212.2}
+                   Other, {{428.0, 1192.0}, {560.0, 40.5}}, hitPoint: {708.0, 1212.2}
+                    Other, {{428.0, 1192.0}, {560.0, 40.5}}, hitPoint: {708.0, 1212.2}
+                     Other, {{428.0, 1192.0}, {560.0, 40.5}}, hitPoint: {708.0, 1212.2}
+                      StaticText, {{428.0, 1192.0}, {560.0, 40.5}}, label: 'Timings', hitPoint: {708.0, 1212.2}
+                  Cell, {{428.0, 1232.5}, {560.0, 52.0}}, hitPoint: {708.0, 1258.5}
+                   Other, {{428.0, 1232.5}, {560.0, 52.0}}, hitPoint: {708.0, 1258.5}
+                    Other, {{428.0, 1232.5}, {560.0, 52.0}}, hitPoint: {708.0, 1258.5}
+                   Other, {{428.0, 1232.5}, {560.0, 52.0}}, hitPoint: {708.0, 1258.5}
+                    Other, {{428.0, 1232.5}, {560.0, 52.0}}, hitPoint: {708.0, 1258.5}
+                     Other, {{428.0, 1232.5}, {560.0, 52.0}}, hitPoint: {708.0, 1258.5}
+                      StaticText, {{428.0, 1232.5}, {560.0, 52.0}}, label: 'Total, 0,002 s', hitPoint: {708.0, 1258.5}
+                      StaticText, {{448.0, 1248.2}, {37.0, 20.5}}, label: 'Total', hitPoint: {466.5, 1258.5}
+                  Cell, {{428.0, 1284.5}, {560.0, 52.0}}, hitPoint: {708.0, 1310.5}
+                   Other, {{428.0, 1284.5}, {560.0, 52.0}}, hitPoint: {708.0, 1310.5}
+                    Other, {{428.0, 1284.5}, {560.0, 52.0}}, hitPoint: {708.0, 1310.5}
+                   Other, {{428.0, 1284.5}, {560.0, 52.0}}, hitPoint: {708.0, 1310.5}
+                    Other, {{428.0, 1284.5}, {560.0, 52.0}}, hitPoint: {708.0, 1310.5}
+                     Other, {{428.0, 1284.5}, {560.0, 52.0}}, hitPoint: {708.0, 1310.5}
+                      StaticText, {{428.0, 1284.5}, {560.0, 52.0}}, label: 'Response size, 13 bytes', hitPoint: {708.0, 1310.5}
+                      StaticText, {{448.0, 1300.2}, {109.5, 20.5}}, label: 'Response size', hitPoint: {502.8, 1310.5}
+                  Other, {{448.0, 1283.5}, {520.0, 1.0}}, hitPoint: {708.0, 1284.0}
+                  Other, {{975.0, 164.0}, {30.0, 1168.0}}, label: 'Vertical scroll bar, 2 pages', value: 0 %, hitPoint: {990.0, 748.0}
+                  Other, {{975.0, 164.0}, {30.0, 1168.0}}, label: 'Vertical scroll bar, 2 pages', value: 0 %, hitPoint: {990.0, 748.0}
+             Toolbar, {{0.0, 0.0}, {1032.0, 1376.0}}, identifier: 'Toolbar', label: 'Toolbar', hitPoint: {516.0, 688.0}
+              Other, {{0.0, 0.0}, {1032.0, 1376.0}}, hitPoint: {516.0, 688.0}
+       Other, {{0.0, 0.0}, {1032.0, 1376.0}}, hitPoint: {516.0, 688.0}
+        Other, {{0.0, 32.0}, {1032.0, 44.0}}, hitPoint: {516.0, 54.0}
+         Button, {{287.0, 36.0}, {90.5, 36.0}}, identifier: 'checkmark.shield', label: 'Inspect', Selected, hitPoint: {332.2, 54.0}
+          Button, {{287.0, 36.0}, {90.5, 36.0}}, identifier: 'checkmark.shield', label: 'Inspect', Selected, hitPoint: {332.2, 54.0}
+         Button, {{377.5, 36.0}, {105.0, 36.0}}, identifier: 'arrow.up.arrow.down', label: 'Requests', hitPoint: {430.0, 54.0}
+          Button, {{377.5, 36.0}, {105.0, 36.0}}, identifier: 'arrow.up.arrow.down', label: 'Requests', hitPoint: {430.0, 54.0}
+         Button, {{482.5, 36.0}, {100.5, 36.0}}, identifier: 'network', label: 'Erfassen', hitPoint: {532.8, 54.0}
+          Button, {{482.5, 36.0}, {100.5, 36.0}}, identifier: 'network', label: 'Erfassen', hitPoint: {532.8, 54.0}
+         Button, {{583.0, 36.0}, {88.5, 36.0}}, identifier: 'clock', label: 'History', Selected, hitPoint: {627.2, 54.0}
+          Button, {{583.0, 36.0}, {88.5, 36.0}}, identifier: 'clock', label: 'History', Selected, hitPoint: {627.2, 54.0}
+         Button, {{671.5, 36.0}, {73.5, 36.0}}, identifier: 'wrench.and.screwdriver', label: 'Tools', hitPoint: {708.2, 54.0}
+          Button, {{671.5, 36.0}, {73.5, 36.0}}, identifier: 'wrench.and.screwdriver', label: 'Tools', hitPoint: {708.2, 54.0}
+ Window, {{0.0, 0.0}, {1032.0, 1376.0}}, hitPoint: {516.0, 688.0}
+  Other, {{0.0, 0.0}, {1032.0, 1376.0}}, hitPoint: {516.0, 688.0}
+   Other, {{0.0, 0.0}, {1032.0, 1376.0}}, hitPoint: {516.0, 688.0}
+------------------------
+Application bundle identifier: com.apple.springboard
+Application UI orientation: Portrait
+Application, pid: 22814, label: ' ', activationBundleId: com.apple.springboard
+ Window, {{0.0, 0.0}, {1032.0, 1376.0}}, hitPoint: {516.0, 688.0}, activationBundleId: com.apple.springboard
+  Other, {{0.0, 0.0}, {1032.0, 1376.0}}, hitPoint: {516.0, 688.0}, activationBundleId: com.apple.springboard
+ Window, {{0.0, 0.0}, {1032.0, 1376.0}}, hitPoint: {516.0, 688.0}, activationBundleId: com.apple.springboard
+  Other, {{0.0, 0.0}, {1032.0, 1376.0}}, hitPoint: {516.0, 688.0}, activationBundleId: com.apple.springboard
+ Window, {{0.0, 0.0}, {1032.0, 1376.0}}, hitPoint: {516.0, 688.0}, activationBundleId: com.apple.springboard
+  Other, {{0.0, 0.0}, {2064.0, 2752.0}}, hitPoint: {516.0, 688.0}, activationBundleId: com.apple.springboard
+   Other, {{0.0, 0.0}, {2064.0, 2752.0}}, hitPoint: {516.0, 688.0}, activationBundleId: com.apple.springboard
+   Other, {{0.0, 0.0}, {2064.0, 2752.0}}, hitPoint: {516.0, 688.0}, activationBundleId: com.apple.springboard
+ Window, {{0.0, 0.0}, {1032.0, 1376.0}}, hitPoint: {516.0, 688.0}, activationBundleId: com.apple.springboard
+  Other, {{0.0, 0.0}, {2064.0, 2752.0}}, hitPoint: {516.0, 688.0}, activationBundleId: com.apple.springboard
+ Window, {{0.0, 0.0}, {1032.0, 1376.0}}, identifier: 'SBSwitcherWindow:Main', hitPoint: {516.0, 688.0}, activationBundleId: com.apple.springboard
+  Other, {{0.0, 0.0}, {1032.0, 1376.0}}, hitPoint: {516.0, 688.0}, activationBundleId: com.apple.springboard
+   Other, {{0.0, 0.0}, {1032.0, 1376.0}}, hitPoint: {516.0, 688.0}, activationBundleId: com.apple.springboard
+    Other, {{0.0, 0.0}, {1032.0, 1376.0}}, hitPoint: {516.0, 688.0}, activationBundleId: com.apple.springboard
+     Other, {{0.0, 0.0}, {1032.0, 1376.0}}, hitPoint: {516.0, 688.0}, activationBundleId: com.apple.springboard
+      ScrollView, {{0.0, 0.0}, {1032.0, 1376.0}}, hitPoint: {516.0, 688.0}, activationBundleId: com.apple.springboard
+      Other, {{0.0, 0.0}, {1032.0, 1376.0}}, identifier: 'AppSwitcherContentView', hitPoint: {516.0, 688.0}, activationBundleId: com.apple.springboard
+       Other, {{0.0, 0.0}, {1032.0, 1376.0}}, hitPoint: {516.0, 688.0}, activationBundleId: com.apple.springboard
+        Other, {{0.0, 0.0}, {1032.0, 1376.0}}, hitPoint: {516.0, 688.0}, activationBundleId: com.apple.springboard
+       Other, {{0.0, 0.0}, {1032.0, 1376.0}}, hitPoint: {516.0, 688.0}, activationBundleId: com.apple.springboard
+        Other, {{0.0, 0.0}, {1032.0, 1376.0}}, hitPoint: {516.0, 688.0}, activationBundleId: com.apple.springboard
+         Other, {{0.0, 0.0}, {1032.0, 1376.0}}, hitPoint: {516.0, 688.0}, activationBundleId: com.apple.springboard
+       Other, {{0.0, 0.0}, {1032.0, 1376.0}}, identifier: 'card:com.mobilebox.atsdiagnostic:sceneID:com.mobilebox.atsdiagnostic-D9ED0026-08B6-4205-9F32-A1BFA979A218', label: 'ATS Diagnostic', hitPoint: {516.0, 688.0}, activationBundleId: com.apple.springboard
+        Other, {{0.0, 0.0}, {1032.0, 1376.0}}, hitPoint: {516.0, 688.0}, activationBundleId: com.apple.springboard
+         Other, {{0.0, 0.0}, {1032.0, 1376.0}}, hitPoint: {516.0, 688.0}, activationBundleId: com.apple.springboard
+          Other, {{-196.0, -294.0}, {1424.0, 1964.0}}, hitPoint: {516.0, 688.0}, activationBundleId: com.apple.springboard
+           Other, {{0.0, 0.0}, {1032.0, 1376.0}}, hitPoint: {516.0, 688.0}, activationBundleId: com.apple.springboard
+            Other, {{0.0, 0.0}, {1032.0, 1376.0}}, hitPoint: {516.0, 688.0}, activationBundleId: com.apple.springboard
+             ScrollView, {{0.0, -688.0}, {1032.0, 2064.0}}, hitPoint: {516.0, 688.0}, activationBundleId: com.apple.springboard
+              Other, {{0.0, 0.0}, {1032.0, 1376.0}}, hitPoint: {516.0, 688.0}, activationBundleId: com.apple.springboard
+               Other, {{0.0, 0.0}, {1032.0, 1376.0}}, hitPoint: {516.0, 688.0}, activationBundleId: com.apple.springboard
+                Other, {{0.0, 0.0}, {1032.0, 1376.0}}, hitPoint: {516.0, 688.0}, activationBundleId: com.apple.springboard
+               Other, {{0.0, 0.0}, {1032.0, 1376.0}}, hitPoint: {516.0, 688.0}, activationBundleId: com.apple.springboard
+                Other, {{0.0, 0.0}, {1032.0, 1376.0}}, hitPoint: {516.0, 688.0}, activationBundleId: com.apple.springboard
+                 Other, {{0.0, 0.0}, {1032.0, 1376.0}}, hitPoint: {516.0, 688.0}, activationBundleId: com.apple.springboard
+                  Other, {{0.0, 0.0}, {1032.0, 1376.0}}, hitPoint: {516.0, 688.0}, activationBundleId: com.apple.springboard
+                   Other, {{0.0, 0.0}, {1032.0, 1376.0}}, hitPoint: {516.0, 688.0}, activationBundleId: com.apple.springboard
+                    Other, {{0.0, 0.0}, {1032.0, 1376.0}}, hitPoint: {516.0, 688.0}, activationBundleId: com.apple.springboard
+                     Other, {{0.0, 0.0}, {1032.0, 1376.0}}, hitPoint: {516.0, 688.0}, activationBundleId: com.apple.springboard
+                      Other, {{0.0, 0.0}, {1032.0, 1376.0}}, hitPoint: {516.0, 688.0}, activationBundleId: com.apple.springboard
+                       Other, {{0.0, 0.0}, {1032.0, 1376.0}}, hitPoint: {516.0, 688.0}, activationBundleId: com.apple.springboard
+                        Other, {{0.0, 0.0}, {1032.0, 1376.0}}, hitPoint: {516.0, 688.0}, activationBundleId: com.apple.springboard
+                         StatusBar, {{0.0, 0.0}, {1032.0, 32.0}}, hitPoint: {516.0, 16.0}, activationBundleId: com.apple.springboard
+                          Other, {{0.0, 0.0}, {1032.0, 32.0}}, hitPoint: {516.0, 16.0}, activationBundleId: com.apple.springboard
+                           Other, {{0.0, 0.0}, {1032.0, 32.0}}, hitPoint: {516.0, 16.0}, activationBundleId: com.apple.springboard
+                            Other, {{25.0, 11.0}, {148.0, 10.0}}, hitPoint: {99.0, 16.0}, activationBundleId: com.apple.springboard
+                             StaticText, {{25.0, 7.5}, {33.0, 17.0}}, label: '01:11', hitPoint: {41.5, 16.0}, activationBundleId: com.apple.springboard
+                             StaticText, {{68.0, 7.5}, {105.0, 17.0}}, label: 'Montag 12. Okt.', hitPoint: {120.5, 16.0}, activationBundleId: com.apple.springboard
+                            Other, {{49.0, 7.0}, {18.0, 18.0}}, hitPoint: {58.0, 16.0}, activationBundleId: com.apple.springboard
+                            Other, {{183.0, 11.0}, {117.5, 10.0}}, hitPoint: {241.8, 16.0}, activationBundleId: com.apple.springboard
+                             Other, {{183.0, 0.0}, {117.5, 32.0}}, hitPoint: {241.8, 16.0}, activationBundleId: com.apple.springboard
+                              Other, {{183.0, 0.0}, {117.5, 32.0}}, hitPoint: {241.8, 16.0}, activationBundleId: com.apple.springboard
+                               StaticText, {{183.0, 0.0}, {105.0, 32.0}}, label: 'ATS Diagnostic', hitPoint: {235.5, 16.0}, activationBundleId: com.apple.springboard
+                            Other, {{233.0, 7.0}, {18.0, 18.0}}, hitPoint: {242.0, 16.0}, activationBundleId: com.apple.springboard
+                            Other, {{308.5, 11.0}, {697.5, 10.0}}, hitPoint: {657.2, 16.0}, activationBundleId: com.apple.springboard
+                             Other, {{955.0, 8.0}, {18.0, 16.0}}, identifier: '3 von 3 WLAN-Balken', value: SSID, 3 von 3 WLAN..., hitPoint: {964.0, 16.0}, activationBundleId: com.apple.springboard
+                              Image, {{954.5, 9.0}, {18.5, 13.5}}, identifier: 'wifi', label: 'WLAN', hitPoint: {963.8, 15.8}, activationBundleId: com.apple.springboard
+                             Other, {{977.0, 9.5}, {29.0, 13.0}}, label: '100 % Batterieladung', value: Lädt nicht, hitPoint: {991.5, 16.0}, activationBundleId: com.apple.springboard
+                            Other, {{964.0, 7.0}, {18.0, 18.0}}, hitPoint: {973.0, 16.0}, activationBundleId: com.apple.springboard
+                      Other, {{0.0, 0.0}, {1032.0, 1376.0}}, hitPoint: {516.0, 688.0}, activationBundleId: com.apple.springboard
+                       Other, {{0.0, 0.0}, {1032.0, 1376.0}}, hitPoint: {516.0, 688.0}, activationBundleId: com.apple.springboard
+                        Other, {{0.0, 0.0}, {1032.0, 1376.0}}, hitPoint: {516.0, 688.0}, activationBundleId: com.apple.springboard
+                     Other, {{0.0, 0.0}, {1032.0, 1376.0}}, hitPoint: {516.0, 688.0}, activationBundleId: com.apple.springboard
+                Other, {{0.0, 0.0}, {1032.0, 1376.0}}, hitPoint: {516.0, 688.0}, activationBundleId: com.apple.springboard
+                Other, {{0.0, 32.0}, {1032.0, 1344.0}}, hitPoint: {516.0, 704.0}, activationBundleId: com.apple.springboard
+               Other, {{1012.0, 1356.0}, {40.0, 40.0}}, identifier: 'resize-grabber', label: 'ATS Diagnostic skalieren', value: Unten rechts, hitPoint: {1022.0, 1366.0}, activationBundleId: com.apple.springboard
+       Other, {{0.0, 0.0}, {1032.0, 1376.0}}, hitPoint: {516.0, 688.0}, activationBundleId: com.apple.springboard
+        Other, {{0.0, 0.0}, {1032.0, 1376.0}}, hitPoint: {516.0, 688.0}, activationBundleId: com.apple.springboard
+         Other, {{0.0, 0.0}, {1032.0, 1376.0}}, hitPoint: {516.0, 688.0}, activationBundleId: com.apple.springboard
+          Other, {{0.0, 0.0}, {1032.0, 1376.0}}, hitPoint: {516.0, 688.0}, activationBundleId: com.apple.springboard
+ Window, {{0.0, 0.0}, {1032.0, 1376.0}}, hitPoint: {516.0, 688.0}, activationBundleId: com.apple.springboard
+  Other, {{0.0, 0.0}, {1032.0, 1376.0}}, hitPoint: {516.0, 688.0}, activationBundleId: com.apple.springboard
+   Other, {{0.0, 0.0}, {1032.0, 1376.0}}, hitPoint: {516.0, 688.0}, activationBundleId: com.apple.springboard
+ Window, {{0.0, 0.0}, {516.0, 688.0}}, hitPoint: {258.0, 344.0}, activationBundleId: com.apple.springboard
+  Other, {{0.0, 0.0}, {1032.0, 1376.0}}, hitPoint: {258.0, 344.0}, activationBundleId: com.apple.springboard
+   Other, {{0.0, 0.0}, {1032.0, 1376.0}}, hitPoint: {258.0, 344.0}, activationBundleId: com.apple.springboard
+ Window, {{0.0, 0.0}, {1032.0, 1376.0}}, hitPoint: {516.0, 688.0}, activationBundleId: com.apple.springboard
+  Other, {{0.0, 0.0}, {1032.0, 1376.0}}, hitPoint: {516.0, 688.0}, activationBundleId: com.apple.springboard
+   Other, {{0.0, 0.0}, {1032.0, 1376.0}}, hitPoint: {516.0, 688.0}, activationBundleId: com.apple.springboard
+ Window, {{0.0, 0.0}, {1032.0, 1376.0}}, hitPoint: {516.0, 688.0}, activationBundleId: com.apple.springboard
+  StatusBar, {{0.0, 0.0}, {1032.0, 32.0}}, hitPoint: {516.0, 16.0}, activationBundleId: com.apple.springboard
+  Other, {{0.0, 0.0}, {1032.0, 1376.0}}, hitPoint: {516.0, 688.0}, activationBundleId: com.apple.springboard
+ Window, {{0.0, 0.0}, {1032.0, 1376.0}}, hitPoint: {516.0, 688.0}, activationBundleId: com.apple.springboard
+  Other, {{0.0, 0.0}, {1032.0, 1376.0}}, hitPoint: {516.0, 688.0}, activationBundleId: com.apple.springboard
+ Window, {{0.0, 0.0}, {1032.0, 1376.0}}, hitPoint: {516.0, 688.0}, activationBundleId: com.apple.springboard
+  Other, {{0.0, 0.0}, {1032.0, 1376.0}}, hitPoint: {516.0, 688.0}, activationBundleId: com.apple.springboard
+ Window, {{0.0, 0.0}, {1032.0, 1376.0}}, hitPoint: {516.0, 688.0}, activationBundleId: com.apple.springboard
+  Other, {{0.0, 0.0}, {1032.0, 1376.0}}, hitPoint: {516.0, 688.0}, activationBundleId: com.apple.springboard
+   Other, {{0.0, 0.0}, {1032.0, 1376.0}}, hitPoint: {516.0, 688.0}, activationBundleId: com.apple.springboard
+    Other, {{0.0, 0.0}, {1032.0, 1376.0}}, hitPoint: {516.0, 688.0}, activationBundleId: com.apple.springboard
+     RemotePlaceholder, pid: 25603, {{0.0, 0.0}, {0.0, 0.0}}, Disabled, isRemoteLeafPlaceholder: true

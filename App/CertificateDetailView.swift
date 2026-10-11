@@ -110,10 +110,7 @@ private struct CertificateFieldRow: View {
 struct FingerprintRow: View {
     let title: String
     let value: String
-    private var groupedValue: String {
-        let characters = Array(value)
-        return stride(from: 0, to: characters.count, by: 4).map { String(characters[$0..<min($0 + 4, characters.count)]) }.joined(separator: " ")
-    }
+    private var groupedValue: String { Integrity.groupedDigest(value) }
     var body: some View {
         VStack(alignment: .leading, spacing: 7) {
             HStack { Text(title).font(.caption.weight(.medium)).foregroundStyle(.secondary); Spacer(); ShareLink(item: value) { Image(systemName: "square.and.arrow.up").accessibilityLabel("Share \(title)") } }

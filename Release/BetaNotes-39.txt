@@ -1,0 +1,9 @@
+SDK-Aufzeichnungen als HAR importieren
+
+Das separate ATSRecording-Swift-Paket exportiert ausdrücklich aufgezeichnete Anfragen jetzt als HAR. Die App übernimmt Antwortvorschauen, gemeldete SHA-256-Werte und tatsächliche Fehlercodes. Importierte Aufzeichnungen sind sichtbar gekennzeichnet; der Import führt keine neue Verbindung oder Zertifikatsprüfung aus.
+
+Gekürzte, binäre oder fehlende ursprüngliche Anfragekörper werden nicht als vollständige Replay-Anfragen ausgegeben. Replay und cURL-Ausgabe sind in diesen Fällen deaktiviert; eine vorhandene Anfragevorschau bleibt einsehbar. Diese Einschränkung bleibt auch nach erneutem HAR-Export erhalten. Unbekannte Antwortgrößen und Protokollversionen werden nicht erfunden.
+
+Automatische URLProtocol-Aufzeichnung, Streaming/Uploads/Downloads, vollständige Verbindungsmetriken und SDK-Präsentationshooks bleiben offen. Das SDK ist ein separates Entwickler-Paket; die App bietet den HAR-Import. VPN/MITM und PCAP bleiben ebenfalls offen.
+
+Lange SHA-256-Werte werden in lesbaren Vierergruppen angezeigt. Gruppierte Prüfsummen können direkt als erwarteter Hash eingefügt werden.

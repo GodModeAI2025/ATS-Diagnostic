@@ -8,6 +8,7 @@ struct CertificateRecord: Identifiable, Codable, Sendable {
     let der: Data
     var source: String? = nil
 }
+enum DiagnosticRecordOrigin: String, Codable, Sendable { case har, developerSDK }
 struct DiagnosticRecord: Identifiable, Codable, Sendable {
     var id = UUID()
     var date = Date()
@@ -43,6 +44,12 @@ struct DiagnosticRecord: Identifiable, Codable, Sendable {
     var revocationChecked: Bool?
     var revocationAssessment: RevocationAssessment?
     var diagnosticOptions: DiagnosticOptions?
+    var origin: DiagnosticRecordOrigin?
+    var requestBodyUnavailable: Bool?
+    var importedRequestBodyPreview: Data?
+    var importedRequestBodyBytes: Int?
+    var responseByteCountKnown: Bool?
+    var canReplay: Bool { requestBodyUnavailable != true }
     var curl: String {
         let headers = requestHeaders.sorted { $0.key < $1.key }.map { "-H \(Self.quote("\($0.key): \($0.value)"))" }.joined(separator: " ")
         return "curl -X \(method) \(headers) \(requestBody.isEmpty ? "" : "--data-raw " + Self.quote(requestBody)) \(Self.quote(url))"

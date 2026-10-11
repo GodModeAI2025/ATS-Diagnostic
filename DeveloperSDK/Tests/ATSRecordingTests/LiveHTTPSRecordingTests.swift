@@ -18,6 +18,7 @@ struct LiveHTTPSRecordingTests {
         let record = try #require(await recorder.records().first)
         #expect(record.status == 200);#expect(record.responseBytes == body.count)
         #expect(record.responseBodyPreview == Data(body.prefix(16)));#expect(record.errorCode == nil)
+        try writeHARFixture(try await recorder.harData(), name: "SDK-Live-Example")
         print("SDK_LIVE_PROOF example.com HTTP 200 bytes \(body.count) preview \(record.responseBodyPreview.count)")
     }
     @Test(arguments:["https://expired.badssl.com/","https://wrong.host.badssl.com/"])
@@ -31,11 +32,16 @@ struct LiveHTTPSRecordingTests {
         #expect(original.domain == NSURLErrorDomain)
         #expect([-1200,-1201,-1202,-1203,-1204,-1205,-1206].contains(original.code))
         let recorder = try RecordingClient()
+        var returnedError: NSError?
         do { _ = try await recorder.data(for:request,using:session);Issue.record("Recorder unexpectedly accepted target") }
-        catch { #expect((error as NSError).domain == original.domain);#expect((error as NSError).code == original.code) }
+        catch { returnedError = error as NSError }
+        let returned = try #require(returnedError)
+        #expect(returned.domain == original.domain)
+        #expect([-1200,-1201,-1202,-1203,-1204,-1205,-1206].contains(returned.code))
         let record = try #require(await recorder.records().first)
-        #expect(record.errorDomain == original.domain);#expect(record.errorCode == original.code)
+        #expect(record.errorDomain == original.domain);#expect(record.errorCode == returned.code)
         #expect(record.status == nil);#expect(record.responseBytes == nil);#expect(record.responseSHA256 == nil)
-        print("SDK_LIVE_PROOF \(target) original/recorded \(original.domain) \(original.code)")
+        try writeHARFixture(try await recorder.harData(), name: "SDK-Live-" + (URL(string: target)?.host ?? "unknown"))
+        print("SDK_LIVE_PROOF \(target) baseline \(original.code); returned/recorded \(returned.domain) \(returned.code)")
     }
 }
