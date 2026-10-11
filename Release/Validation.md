@@ -10,3 +10,5 @@
 Updated decoder/HAR test suite: 10 passed, 0 failed via Xcode MCP. App Store quick scan: 11 files, no raw findings.
 
 Pending: full UI QA, full functional parity, signed archive, upload, processing and tester availability. No TestFlight completion is claimed.
+
+Additional checks: 22 tests passed via Xcode MCP, including cURL import, recording exclusions, response categorization, key usage and ASN.1 time boundaries. Simulator keyboard Done button and Base64 output verified. Own opaque 1024px app icon visually verified.

@@ -37,7 +37,7 @@ struct InspectView: View {
                 }
                 if store.running { ProgressView("Connecting…") }
                 if let error = store.error { Text(error).foregroundStyle(.red) }
-                if let record = store.records.first { Section("Latest inspection") { NavigationLink { RecordView(record: record, store: store) } label: { RecordRow(record: record) } } }
+                if let record = store.latest ?? store.records.first { Section("Latest inspection") { NavigationLink { RecordView(record: record, store: store) } label: { RecordRow(record: record) } } }
                 Section { Text("System trust validation stays enabled. A successful request describes this connection; it does not certify every ATS requirement of another app.").font(.footnote).foregroundStyle(.secondary) }
             }.navigationTitle("ATS Diagnostic")
         }
@@ -49,6 +49,9 @@ struct RequestView: View {
     @State private var url = ""
     @State private var method = "GET"
     @State private var headers = ""
+    @State private var importCURL = false
+    @State private var curlText = ""
+    @State private var importError: String?
     @FocusState private var editing: Bool
     @State private var bodyText = ""
     var body: some View {
@@ -63,8 +66,16 @@ struct RequestView: View {
                 Button { Task { await store.execute(url: url, method: method, headers: headers, body: bodyText) } } label: { Label("Send request", systemImage: "paperplane") }.disabled(store.running || url.isEmpty)
                 if store.running { ProgressView("Sending…") }
                 if let error = store.error { Text(error).foregroundStyle(.red) }
-                if let record = store.records.first { NavigationLink("Open latest response") { RecordView(record: record, store: store) } }
-            }.scrollDismissesKeyboard(.interactively).navigationTitle("Request workspace").toolbar { ToolbarItemGroup(placement: .keyboard) { Spacer(); Button("Done") { editing = false } } }
+                if let record = store.latest ?? store.records.first { NavigationLink("Open latest response") { RecordView(record: record, store: store) } }
+            }.scrollDismissesKeyboard(.interactively).navigationTitle("Request workspace")
+            .sheet(isPresented: $importCURL) {
+                NavigationStack { Form {
+                    Section("Paste cURL") { TextEditor(text: $curlText).font(.body.monospaced()).frame(minHeight: 180).accessibilityLabel("cURL command") }
+                    if let importError { Text(importError).foregroundStyle(.red) }
+                    Button("Import request") { do { let request = try CURLImport.parse(curlText); url = request.url; method = request.method; headers = request.headers; bodyText = request.body; importError = nil; importCURL = false } catch { importError = error.localizedDescription } }
+                }.navigationTitle("Import cURL").toolbar { Button("Cancel") { importCURL = false } } }
+            }
+            .toolbar { ToolbarItem(placement: .topBarTrailing) { Button("Import cURL", systemImage: "square.and.arrow.down") { importCURL = true } }; ToolbarItemGroup(placement: .keyboard) { Spacer(); Button("Done") { editing = false } } }
         }
     }
 }
@@ -74,20 +85,38 @@ struct HistoryView: View {
     @State private var filtered: [DiagnosticRecord] = []
     @State private var confirmClear = false
     @State private var importHAR = false
+    @State private var category = ResponseCategory.all
+    @State private var favoritesOnly = false
+    @State private var showSettings = false
     var body: some View {
         NavigationStack {
-            List(filtered) { record in NavigationLink { RecordView(record: record, store: store) } label: { RecordRow(record: record) } }
+            List {
+                Section {
+                    Picker("Response type", selection: $category) { ForEach(ResponseCategory.allCases) { Text($0.rawValue).tag($0) } }
+                    Toggle("Favorites only", isOn: $favoritesOnly)
+                    let statistics = TrafficStatistics(filtered)
+                    LabeledContent("Requests", value: statistics.count.formatted())
+                    LabeledContent("Response data", value: statistics.bytes.formatted(.byteCount(style: .file)))
+                    LabeledContent("Average duration", value: statistics.averageDuration.formatted(.number.precision(.fractionLength(3))) + " s")
+                    LabeledContent("Failures", value: statistics.failures.formatted())
+                }
+                ForEach(filtered) { record in NavigationLink { RecordView(record: record, store: store) } label: { RecordRow(record: record) } }
+            }
                 .overlay { if store.records.isEmpty { ContentUnavailableView("No connections yet", systemImage: "network", description: Text("Inspect a host or send a request to begin.")) } }
                 .searchable(text: $query, prompt: "URL, method or status")
                 .navigationTitle("History")
-                .toolbar { ShareLink(item: HARArchive(records: store.records), preview: SharePreview("Diagnostics archive")) { Label("Export HAR", systemImage: "square.and.arrow.up") }; Button("Import HAR", systemImage: "square.and.arrow.down") { importHAR = true }; Button("Clear", systemImage: "trash") { confirmClear = true }.disabled(store.records.isEmpty) }
+                .sheet(isPresented: $showSettings) { RecordingSettingsView(store: store) }
+                .toolbar { Button("Recording settings", systemImage: "gearshape") { showSettings = true }; ShareLink(item: HARArchive(records: store.records), preview: SharePreview("Diagnostics archive")) { Label("Export HAR", systemImage: "square.and.arrow.up") }; Button("Import HAR", systemImage: "square.and.arrow.down") { importHAR = true }; Button("Clear", systemImage: "trash") { confirmClear = true }.disabled(store.records.isEmpty) }
                 .confirmationDialog("Delete all local diagnostics?", isPresented: $confirmClear) { Button("Delete history", role: .destructive) { store.clear() } }
                 .fileImporter(isPresented: $importHAR, allowedContentTypes: [.json, .data]) { result in do { let url = try result.get(); let accessed = url.startAccessingSecurityScopedResource(); defer { if accessed { url.stopAccessingSecurityScopedResource() } }; try store.importHAR(Data(contentsOf: url)) } catch { store.error = error.localizedDescription } }
                 .onChange(of: query, initial: true) { refresh() }
                 .onChange(of: store.records.count) { refresh() }
+                .onChange(of: category) { refresh() }
+                .onChange(of: favoritesOnly) { refresh() }
+                .onChange(of: store.settings.favorites) { refresh() }
         }
     }
-    private func refresh() { filtered = store.records.filter { query.isEmpty || "\($0.url) \($0.method) \($0.status ?? 0)".localizedCaseInsensitiveContains(query) } }
+    private func refresh() { filtered = store.records.filter { (query.isEmpty || "\($0.url) \($0.method) \($0.status ?? 0)".localizedCaseInsensitiveContains(query)) && category.matches($0) && (!favoritesOnly || store.settings.favorites.contains($0.id)) } }
 }
 struct RecordRow: View {
     let record: DiagnosticRecord
@@ -124,7 +153,7 @@ struct RecordView: View {
                 if let valid = record.trustValid { Label(valid ? "Trusted by the system" : "Trust validation failed", systemImage: valid ? "checkmark.shield" : "exclamationmark.shield") }
                 if let message = record.trustMessage { Text(message) }
                 ForEach(record.certificates) { certificate in
-                    DisclosureGroup(certificate.subject) { Text("SHA-256").font(.caption); Text(certificate.id).font(.body.monospaced()).textSelection(.enabled); ForEach((try? X509.fields(certificate.der)) ?? []) { field in VStack(alignment: .leading) { Text(field.name).font(.caption).foregroundStyle(.secondary); Text(field.value).textSelection(.enabled) } }; ShareLink("Export DER", item: CertificateExport(certificate: certificate), preview: SharePreview(certificate.subject)) }
+                    DisclosureGroup(certificate.subject) { Text("SHA-256").font(.caption); Text(certificate.id).font(.body.monospaced()).textSelection(.enabled); if let keyDetails = CertificateAnalysis.publicKeyDetails(certificate.der) { Text(keyDetails) }; ForEach(CertificateAnalysis.findings(certificate)) { finding in VStack(alignment: .leading) { Label(finding.title, systemImage: "exclamationmark.triangle").foregroundStyle(.orange); Text(finding.detail) } }; ForEach((try? X509.fields(certificate.der)) ?? []) { field in VStack(alignment: .leading) { Text(field.name).font(.caption).foregroundStyle(.secondary); Text(field.value).textSelection(.enabled) } }; ShareLink("Export DER", item: CertificateExport(certificate: certificate), preview: SharePreview(certificate.subject)) }
                 }
             }
             Section("Response headers") { Text(record.responseHeaders.sorted { $0.key < $1.key }.map { "\($0.key): \($0.value)" }.joined(separator: "\n")).font(.body.monospaced()).textSelection(.enabled) }
@@ -133,6 +162,6 @@ struct RecordView: View {
                 ShareLink("Copy or share as cURL", item: record.curl)
                 Button("Replay request") { Task { await store.execute(url: record.url, method: record.method, headers: record.requestHeaders.map { "\($0.key): \($0.value)" }.joined(separator: "\n"), body: record.requestBody) } }.disabled(store.running)
             }
-        }.navigationTitle("Connection details").navigationBarTitleDisplayMode(.inline)
+        }.navigationTitle("Connection details").navigationBarTitleDisplayMode(.inline).toolbar { Button("Favorite", systemImage: store.settings.favorites.contains(record.id) ? "star.fill" : "star") { store.toggleFavorite(record.id) } }
     }
 }

@@ -15,7 +15,7 @@ The release is complete only when the combined functionality is implemented and 
 - [x] Manual HTTP request builder and replay; cURL export
 - [x] Local history, URL/method/status search, deletion and bounded body capture
 - [ ] cURL import; HAR import/export; PCAP capture/export; NDJSON export
-- [ ] Response-type filters, logging controls, URL exclusions, aggregate statistics, favorites
+- [x] Response-type filters, logging controls, URL exclusions, aggregate statistics, favorites
 - [ ] URLProtocol developer integration and shake/custom presentation hooks
 - [ ] Proxy-only, full-tunnel and dual-MITM modes
 - [ ] Local root CA generation, certificate setup, per-host leaf generation and MITM allowlist

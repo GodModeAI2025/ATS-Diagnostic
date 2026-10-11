@@ -12,11 +12,17 @@
 		117F3FD22732F020EEE3C5E1 /* EndpointTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F416B595E31C21C933D4911 /* EndpointTests.swift */; };
 		12B5FC44B53A012A2E7B0ACC /* HARTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBFDF97001FEC55463E871E0 /* HARTests.swift */; };
 		34C6567F9501B5FF3ED2FD6C /* Tools.swift in Sources */ = {isa = PBXBuildFile; fileRef = B623A579ADD8FD75F9E64D2A /* Tools.swift */; };
+		43F40D97F182CD3182318204 /* CURLImport.swift in Sources */ = {isa = PBXBuildFile; fileRef = 515483A147B28C641EE47456 /* CURLImport.swift */; };
+		4792B0CC0854E01E5A51D7D9 /* RecordingSettingsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D23B04393A327FEE67D7F180 /* RecordingSettingsTests.swift */; };
+		7B494C1CEF9C7D5BF5A8817A /* RecordingSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50E6B91F56AB4DD248EAA064 /* RecordingSettings.swift */; };
+		862B9FA49455E8A3B60632F9 /* CURLImportTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5116786756C186E1A2D6769C /* CURLImportTests.swift */; };
 		8E40C646E34E85F19A7927D6 /* Store.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBB74451B3AEAD1F53388754 /* Store.swift */; };
 		92DC922400211EF8ABB15C71 /* PrivacyInfo.xcprivacy in Resources */ = {isa = PBXBuildFile; fileRef = 1674A595E76AB8616445BEBF /* PrivacyInfo.xcprivacy */; };
 		B25C8782DDE6BAE7E6D29A3B /* Diagnostic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0354E181C7AA4FB81B16BEBB /* Diagnostic.swift */; };
 		BF6307C82B4BDB21AE152F13 /* HAR.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E46CE5231D8CC42A1587A78 /* HAR.swift */; };
 		C20E1B5DF3B19D588AD83858 /* ATSDiagnosticApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA48D7B93B862A0646236C1B /* ATSDiagnosticApp.swift */; };
+		CCF4F88C3D1EBE00E1A0D6AF /* CertificateFindings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FB8348535345EC1A56E1F14 /* CertificateFindings.swift */; };
+		FE15A7008B4ECCB46EF7CB1B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D7FD6A27B7550D386C7632C8 /* Assets.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -33,6 +39,10 @@
 		0354E181C7AA4FB81B16BEBB /* Diagnostic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Diagnostic.swift; sourceTree = "<group>"; };
 		140438702E17A5D8B0E39955 /* ATSDiagnosticTests.xctest */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.cfbundle; path = ATSDiagnosticTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1674A595E76AB8616445BEBF /* PrivacyInfo.xcprivacy */ = {isa = PBXFileReference; path = PrivacyInfo.xcprivacy; sourceTree = "<group>"; };
+		2FB8348535345EC1A56E1F14 /* CertificateFindings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CertificateFindings.swift; sourceTree = "<group>"; };
+		50E6B91F56AB4DD248EAA064 /* RecordingSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordingSettings.swift; sourceTree = "<group>"; };
+		5116786756C186E1A2D6769C /* CURLImportTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CURLImportTests.swift; sourceTree = "<group>"; };
+		515483A147B28C641EE47456 /* CURLImport.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CURLImport.swift; sourceTree = "<group>"; };
 		6AB56752BCD5D28B97DB8C7E /* ATSDiagnostic.app */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.application; path = ATSDiagnostic.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6F416B595E31C21C933D4911 /* EndpointTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndpointTests.swift; sourceTree = "<group>"; };
 		8CFCC8BF2582B5E1B8F4E4A1 /* X509.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = X509.swift; sourceTree = "<group>"; };
@@ -40,6 +50,8 @@
 		B623A579ADD8FD75F9E64D2A /* Tools.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tools.swift; sourceTree = "<group>"; };
 		BBFDF97001FEC55463E871E0 /* HARTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HARTests.swift; sourceTree = "<group>"; };
 		D0F97E508554E43B0CDABA22 /* ASN1Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ASN1Tests.swift; sourceTree = "<group>"; };
+		D23B04393A327FEE67D7F180 /* RecordingSettingsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordingSettingsTests.swift; sourceTree = "<group>"; };
+		D7FD6A27B7550D386C7632C8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DBB74451B3AEAD1F53388754 /* Store.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Store.swift; sourceTree = "<group>"; };
 		FA48D7B93B862A0646236C1B /* ATSDiagnosticApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ATSDiagnosticApp.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -49,8 +61,10 @@
 			isa = PBXGroup;
 			children = (
 				D0F97E508554E43B0CDABA22 /* ASN1Tests.swift */,
+				5116786756C186E1A2D6769C /* CURLImportTests.swift */,
 				6F416B595E31C21C933D4911 /* EndpointTests.swift */,
 				BBFDF97001FEC55463E871E0 /* HARTests.swift */,
+				D23B04393A327FEE67D7F180 /* RecordingSettingsTests.swift */,
 			);
 			path = Tests;
 			sourceTree = "<group>";
@@ -76,10 +90,14 @@
 		DDDBB5D62C42CB3742F93C7E /* App */ = {
 			isa = PBXGroup;
 			children = (
+				D7FD6A27B7550D386C7632C8 /* Assets.xcassets */,
 				FA48D7B93B862A0646236C1B /* ATSDiagnosticApp.swift */,
+				2FB8348535345EC1A56E1F14 /* CertificateFindings.swift */,
+				515483A147B28C641EE47456 /* CURLImport.swift */,
 				0354E181C7AA4FB81B16BEBB /* Diagnostic.swift */,
 				8E46CE5231D8CC42A1587A78 /* HAR.swift */,
 				1674A595E76AB8616445BEBF /* PrivacyInfo.xcprivacy */,
+				50E6B91F56AB4DD248EAA064 /* RecordingSettings.swift */,
 				DBB74451B3AEAD1F53388754 /* Store.swift */,
 				B623A579ADD8FD75F9E64D2A /* Tools.swift */,
 				8CFCC8BF2582B5E1B8F4E4A1 /* X509.swift */,
@@ -168,6 +186,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FE15A7008B4ECCB46EF7CB1B /* Assets.xcassets in Resources */,
 				92DC922400211EF8ABB15C71 /* PrivacyInfo.xcprivacy in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -180,8 +199,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				C20E1B5DF3B19D588AD83858 /* ATSDiagnosticApp.swift in Sources */,
+				43F40D97F182CD3182318204 /* CURLImport.swift in Sources */,
+				CCF4F88C3D1EBE00E1A0D6AF /* CertificateFindings.swift in Sources */,
 				B25C8782DDE6BAE7E6D29A3B /* Diagnostic.swift in Sources */,
 				BF6307C82B4BDB21AE152F13 /* HAR.swift in Sources */,
+				7B494C1CEF9C7D5BF5A8817A /* RecordingSettings.swift in Sources */,
 				8E40C646E34E85F19A7927D6 /* Store.swift in Sources */,
 				34C6567F9501B5FF3ED2FD6C /* Tools.swift in Sources */,
 				08F33130CBECF29A05201EE6 /* X509.swift in Sources */,
@@ -193,8 +215,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				0AFB4D0D277FF9ACF358CE81 /* ASN1Tests.swift in Sources */,
+				862B9FA49455E8A3B60632F9 /* CURLImportTests.swift in Sources */,
 				117F3FD22732F020EEE3C5E1 /* EndpointTests.swift in Sources */,
 				12B5FC44B53A012A2E7B0ACC /* HARTests.swift in Sources */,
+				4792B0CC0854E01E5A51D7D9 /* RecordingSettingsTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -276,6 +300,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_CFBundleDisplayName = "ATS Diagnostic";
+				INFOPLIST_KEY_ITSAppUsesNonExemptEncryption = NO;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
@@ -380,6 +405,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_CFBundleDisplayName = "ATS Diagnostic";
+				INFOPLIST_KEY_ITSAppUsesNonExemptEncryption = NO;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
