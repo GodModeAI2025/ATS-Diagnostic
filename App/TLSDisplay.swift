@@ -12,7 +12,7 @@ enum TLSDisplay {
     }
     static func cipher(_ raw: String?) -> String {
         guard let raw else { return "Not reported" }
-        let names = ["0x1301": "AES-128-GCM · SHA-256", "0x1302": "AES-256-GCM · SHA-384", "0x1303": "ChaCha20-Poly1305 · SHA-256", "0xc02f": "ECDHE-RSA · AES-128-GCM", "0xc030": "ECDHE-RSA · AES-256-GCM", "0xc02b": "ECDHE-ECDSA · AES-128-GCM", "0xc02c": "ECDHE-ECDSA · AES-256-GCM"]
+        let names = ["0xc014": "ECDHE-RSA · AES-256-CBC · SHA-1", "0xc013": "ECDHE-RSA · AES-128-CBC · SHA-1", "0x009c": "RSA · AES-128-GCM · SHA-256", "0x009d": "RSA · AES-256-GCM · SHA-384", "0x1301": "AES-128-GCM · SHA-256", "0x1302": "AES-256-GCM · SHA-384", "0x1303": "ChaCha20-Poly1305 · SHA-256", "0xc02f": "ECDHE-RSA · AES-128-GCM", "0xc030": "ECDHE-RSA · AES-256-GCM", "0xc02b": "ECDHE-ECDSA · AES-128-GCM", "0xc02c": "ECDHE-ECDSA · AES-256-GCM"]
         return names[raw.lowercased()].map { "\($0) (\(raw))" } ?? raw
     }
 }

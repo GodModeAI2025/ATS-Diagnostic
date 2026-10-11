@@ -55,3 +55,9 @@ Implemented checkboxes describe code presence, not completed runtime verificatio
 Historical parity additions: stream breakpoints/scripts, stream journal/replay audit, capture initiator metadata, hybrid/fail-open routing, UDP packet analysis, cURL protocol selection/multi-transfer import, regex URL exclusions, query parameter viewer, session-log export and integration notifications.
 
 Preview build32 installation/use verified through the intended tester’s eight TestFlight screenshot reports. Build33 feedback changes and remaining limitations are recorded in Feedback-33.md.
+
+## Current diagnostic verification
+
+The native badssl catalog covers 73 URLs (72 linked test targets, including four defunct targets, plus the baseline). The iOS 27.0 simulator integration run completed on 2026-10-11; all 79 current unit tests passed. German explanations preserve the actual error evidence and distinguish HTTP responses, system trust, and separately verified revocation. Structured certificate issuer attributes and navigation to the next issuer certificate are implemented. See BadSSL/Validation.md for the observed matrix and browser-testing limitations. Device UI verification and the next Preview release remain pending.
+
+Further diagnostic improvements remain open: complete supported-cipher enumeration, key-exchange group analysis, verified vulnerability-specific probes, endpoint-specific findings across multiple server addresses, and timestamped comparisons of repeat assessments. Negotiated connection metrics alone do not establish those server-wide properties. External assessment integration would need to clearly distinguish remote results from device measurements and disclose the transfer of the target hostname.

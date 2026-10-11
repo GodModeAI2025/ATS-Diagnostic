@@ -8,10 +8,12 @@ struct CertificateDetailView: View {
     @State private var showExplanation = false
     @State private var showReminder = false
     @State private var showDataLicense = false
-    private let fields: [CertificateField]
-    init(certificate: CertificateRecord, isLeaf: Bool, systemCT: Bool?) {
+    let issuerCertificate: CertificateRecord?
+    @State private var presentation: CertificatePresentation?
+    private var fields: [CertificateField] { presentation?.fields ?? [] }
+    init(certificate: CertificateRecord, isLeaf: Bool, systemCT: Bool?, issuerCertificate: CertificateRecord? = nil) {
         self.certificate = certificate; self.isLeaf = isLeaf; self.systemCT = systemCT
-        fields = (try? X509.fields(certificate.der)) ?? []
+        self.issuerCertificate = issuerCertificate
     }
     var body: some View {
         List {
@@ -21,14 +23,15 @@ struct CertificateDetailView: View {
                     VStack(alignment: .leading, spacing: 6) {
                         Text(certificate.subject).font(.headline).textSelection(.enabled)
                         Text(isLeaf ? "Server certificate" : "Certificate authority in the chain").font(.subheadline).foregroundStyle(.secondary)
-                        if let expiry = certificate.expiryDate { Label("Expires \(expiry.formatted(date: .abbreviated, time: .omitted))", systemImage: "calendar").font(.caption).foregroundStyle(expiry < Date() ? Color.orange : Color.secondary) }
+                        if let expiry = presentation?.expiry { Label("Expires \(expiry.formatted(date: .abbreviated, time: .omitted))", systemImage: "calendar").font(.caption).foregroundStyle(expiry < Date() ? Color.orange : Color.secondary) }
                     }
                 }.padding(.vertical, 6)
                 Toggle("Explain certificate fields", isOn: $showExplanation)
             }
             Section("Identity & validity") {
-                ForEach(fields.filter { ["subject", "issuer", "from", "until"].contains($0.id) }) { field in CertificateFieldRow(field: field, explain: showExplanation) }
+                ForEach(fields.filter { ["subject", "from", "until"].contains($0.id) }) { field in CertificateFieldRow(field: field, explain: showExplanation) }
             }
+            if let presentation { CertificateIssuerView(attributes:presentation.issuerAttributes,issuerCertificate:issuerCertificate) } else { ProgressView("Zertifikatsangaben auswerten…") }
             Section("Fingerprints") {
                 FingerprintRow(title: "SHA-256", value: RootStoreSnapshot.fingerprint(certificate.der))
                 FingerprintRow(title: "SHA-1", value: Insecure.SHA1.hash(data: certificate.der).map { String(format: "%02x", $0) }.joined())
@@ -47,7 +50,7 @@ struct CertificateDetailView: View {
                 }
             }
             Section("Public key & identifiers") {
-                if let key = CertificateAnalysis.publicKeyDetails(certificate.der) { Label(key, systemImage: "key").textSelection(.enabled) }
+                if let key = presentation?.publicKey { Label(key, systemImage: "key").textSelection(.enabled) }
                 ForEach(fields.filter { ["key", "2.5.29.14", "2.5.29.35"].contains($0.id) }) { field in CertificateFieldRow(field: field, explain: showExplanation) }
             }
             Section("Metadata") {
@@ -61,16 +64,17 @@ struct CertificateDetailView: View {
             Section("Extensions") {
                 ForEach(fields.filter { !["subject", "issuer", "from", "until", "key", "version", "serial", "signature", "2.5.29.14", "2.5.29.35", CertificateTransparency.oid].contains($0.id) }) { field in CertificateFieldRow(field: field, explain: showExplanation) }
             }
-            if !CertificateAnalysis.findings(certificate).isEmpty {
-                Section("Findings") { ForEach(CertificateAnalysis.findings(certificate)) { finding in VStack(alignment: .leading, spacing: 6) { Label(finding.title, systemImage: "exclamationmark.triangle").foregroundStyle(.orange); Text(finding.detail).font(.subheadline) } } }
+            if let findings = presentation?.findings, !findings.isEmpty {
+                Section("Findings") { ForEach(findings) { finding in VStack(alignment: .leading, spacing: 6) { Label(finding.title, systemImage: "exclamationmark.triangle").foregroundStyle(.orange); Text(finding.detail).font(.subheadline) } } }
             }
             Section("Export & reminders") {
                 ShareLink("Export PEM", item: PEMCertificateExport(certificate: certificate), preview: SharePreview(certificate.subject))
                 ShareLink("Export DER", item: CertificateExport(certificate: certificate), preview: SharePreview(certificate.subject))
                 ShareLink("Export CRT", item: CRTCertificateExport(certificate: certificate), preview: SharePreview(certificate.subject))
-                if certificate.expiryDate != nil { Button("Expiry reminder", systemImage: "bell") { showReminder = true } }
+                if presentation?.expiry != nil { Button("Expiry reminder", systemImage: "bell") { showReminder = true } }
             }
         }.listStyle(.insetGrouped).navigationTitle("Certificate").navigationBarTitleDisplayMode(.inline)
+        .task(id:certificate.id) { presentation = await Task.detached(priority:.userInitiated) { CertificatePresentation.make(certificate) }.value }
         .sheet(isPresented: $showReminder) { CertificateReminderView(certificate: certificate) }
         .sheet(isPresented: $showDataLicense) { DataLicenseView() }
     }
@@ -81,7 +85,8 @@ private struct CertificateFieldRow: View {
     var body: some View {
         VStack(alignment: .leading, spacing: 7) {
             Text(field.name).font(.caption.weight(.medium)).foregroundStyle(.secondary)
-            Text(field.id == "signature" || field.id == "key" ? X509.algorithmName(field.value) : field.value).font(field.id == "serial" || field.id == "2.5.29.14" || field.id == "2.5.29.35" ? .callout.monospaced() : .callout).textSelection(.enabled).fixedSize(horizontal: false, vertical: true)
+            Text(field.id == "signature" || field.id == "key" ? X509.algorithmName(field.value) : String(field.value.prefix(800))).lineLimit(8).font(field.id == "serial" || field.id == "2.5.29.14" || field.id == "2.5.29.35" ? .callout.monospaced() : .callout).textSelection(.enabled).fixedSize(horizontal: false, vertical: true)
+            if field.value.count > 800 { NavigationLink("Vollständigen Wert öffnen") { TextValueView(title:field.name,value:field.value) }.font(.footnote) }
             if explain, let explanation = explanations[field.id] { Text(explanation).font(.footnote).foregroundStyle(.secondary) }
         }.padding(.vertical, 3)
     }

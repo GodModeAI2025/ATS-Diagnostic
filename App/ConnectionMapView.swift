@@ -11,7 +11,7 @@ struct ConnectionMapView: View {
                     DisclosureGroup {
                         VStack(alignment: .leading, spacing: 12) {
                             ForEach(record.certificates) { certificate in
-                                NavigationLink { CertificateDetailView(certificate: certificate, isLeaf: certificate.id == record.certificates.first?.id, systemCT: record.certificateTransparency) } label: { TreeNode(title: certificate.subject, subtitle: certificate.id == record.certificates.first?.id ? "Server certificate" : "Certificate authority", symbol: "checkmark.seal") }
+                                NavigationLink { CertificateDetailView(certificate: certificate, isLeaf: certificate.id == record.certificates.first?.id, systemCT: record.certificateTransparency, issuerCertificate: record.certificates.nextIssuer(after:certificate)) } label: { TreeNode(title: certificate.subject, subtitle: certificate.id == record.certificates.first?.id ? "Server certificate" : "Certificate authority", symbol: "checkmark.seal") }
                             }
                             if let leaf = record.certificates.first { NavigationLink { CertificateTransparencyView(certificate: leaf, systemCT: record.certificateTransparency, isLeaf: true) } label: { TreeNode(title: "Certificate Transparency", subtitle: record.certificateTransparency == true ? "System CT qualified" : "Inspect log timestamps", symbol: "doc.text.magnifyingglass") } }
                         }.padding(.top, 12)

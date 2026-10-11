@@ -44,7 +44,7 @@ struct ConnectionOverview: View {
     var body: some View {
         VStack(alignment: .leading, spacing: 16) {
             HStack {
-                Label(record.error == nil ? "Connection received" : "Connection needs attention", systemImage: record.error == nil ? "checkmark.circle.fill" : "exclamationmark.triangle.fill").font(.headline).foregroundStyle(record.error == nil ? Color.diagnosticAccent : Color.orange)
+                Label(DiagnosticFailure.explain(record) == nil ? "Response received" : "Connection needs attention", systemImage: DiagnosticFailure.explain(record) == nil ? "checkmark.circle.fill" : "exclamationmark.triangle.fill").font(.headline).foregroundStyle(DiagnosticFailure.explain(record) == nil ? Color.diagnosticAccent : Color.orange)
                 Spacer()
             }
             AdaptiveMetricGrid {

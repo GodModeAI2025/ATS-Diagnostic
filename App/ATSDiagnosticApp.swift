@@ -17,7 +17,7 @@ struct RootView: View {
             Tab("Inspect", systemImage: "checkmark.shield") { InspectView(store: store) }
             Tab("Requests", systemImage: "arrow.up.arrow.down") { RequestView(store: store) }
             Tab("History", systemImage: "clock") { HistoryView(store: store) }
-            Tab("Tools", systemImage: "wrench.and.screwdriver") { ToolsView() }
+            Tab("Tools", systemImage: "wrench.and.screwdriver") { ToolsView(store:store) }
         }.tint(Color.diagnosticAccent)
     }
 }
@@ -42,6 +42,7 @@ struct InspectView: View {
                                 if let record = store.latest ?? store.records.first {
                                     DiagnosticPanel(title: "Latest inspection", illustration: .traffic) {
                                         ConnectionOverview(record: record)
+                                        DiagnosticIssueView(record:record)
                                         ConnectionTimingChart(record: record)
                                         NavigationLink { RecordView(record: record, store: store) } label: { RecordRow(record: record) }
                                     }
@@ -56,7 +57,7 @@ struct InspectView: View {
                     List {
                         Section { InspectionHero(record: store.latest ?? store.records.first) }
                         Section("Host or URL") { inspectionInput }
-                        if let record = store.latest ?? store.records.first { Section("Latest inspection") { ConnectionOverview(record: record); NavigationLink { RecordView(record: record, store: store) } label: { RecordRow(record: record) } } }
+                        if let record = store.latest ?? store.records.first { Section("Latest inspection") { ConnectionOverview(record: record); DiagnosticIssueView(record:record); NavigationLink { RecordView(record: record, store: store) } label: { RecordRow(record: record) } } }
                         Section { DisclosureGroup("TLS version probes") { probeControls } }
                         Section { trustExplanation }
                     }
@@ -80,7 +81,7 @@ struct InspectView: View {
             ForEach(probes) { probe in
                 DisclosureGroup {
                     Text(probe.detail).font(.footnote).foregroundStyle(.secondary)
-                    ForEach(probe.certificates) { certificate in NavigationLink(certificate.subject) { CertificateDetailView(certificate: certificate, isLeaf: certificate.id == probe.certificates.first?.id, systemCT: nil) } }
+                    ForEach(probe.certificates) { certificate in NavigationLink(certificate.subject) { CertificateDetailView(certificate: certificate, isLeaf: certificate.id == probe.certificates.first?.id, systemCT: nil, issuerCertificate: probe.certificates.nextIssuer(after:certificate)) } }
                 } label: { Label(probe.id + (probe.completed ? " · Supported" : " · Unavailable"), systemImage: probe.completed ? "checkmark.circle" : "exclamationmark.circle") }
             }
             Text("A failed probe can result from client policy, server configuration or network conditions. No HTTP request is sent during these probes.").font(.footnote).foregroundStyle(.secondary)
@@ -234,6 +235,8 @@ struct RecordRow: View {
     }
 }
 struct RecordView: View {
+    @State private var additionalRevocation: RevocationAssessment?
+    private var displayedRecord: DiagnosticRecord { var value = record;if let additionalRevocation { value.revocationAssessment = additionalRevocation };return value }
         let record: DiagnosticRecord
     let store: DiagnosticStore
     @Environment(\.dynamicTypeSize) private var dynamicTypeSize
@@ -243,7 +246,7 @@ struct RecordView: View {
                 HStack(alignment: .top, spacing: 24) {
                     ScrollView {
                         VStack(spacing: 20) {
-                            DiagnosticPanel(title: "Connection overview", illustration: .traffic) { ConnectionOverview(record: record) }
+                            DiagnosticPanel(title: "Connection overview", illustration: .traffic) { ConnectionOverview(record: record); DiagnosticIssueView(record:displayedRecord) }
                             DiagnosticPanel(title: "Measured timings", illustration: .timing) { ConnectionTimingChart(record: record) }
                         }
                     }.frame(width: 360)
@@ -254,7 +257,7 @@ struct RecordView: View {
     }
     private func detailList(includeOverview: Bool) -> some View {
         List {
-            if includeOverview { Section { ConnectionOverview(record: record) } }
+            if includeOverview { Section { ConnectionOverview(record: record); DiagnosticIssueView(record:displayedRecord) } }
             Section { NavigationLink { ConnectionMapView(record: record) } label: { Label("Connection map", systemImage: "point.3.connected.trianglepath.dotted") } }
             Section("Connection") {
                 Text(record.url).textSelection(.enabled)
@@ -284,7 +287,7 @@ struct RecordView: View {
             Section {
                 ConnectionSecuritySummary(record: record)
                 ForEach(record.certificates) { certificate in
-                    NavigationLink { CertificateDetailView(certificate: certificate, isLeaf: certificate.id == record.certificates.first?.id, systemCT: record.certificateTransparency) } label: {
+                    NavigationLink { CertificateDetailView(certificate: certificate, isLeaf: certificate.id == record.certificates.first?.id, systemCT: record.certificateTransparency, issuerCertificate: record.certificates.nextIssuer(after:certificate)) } label: {
                         HStack(alignment: .top, spacing: 12) {
                             SupportingIllustration(kind: .certificate)
                             VStack(alignment: .leading, spacing: 5) {
@@ -297,6 +300,7 @@ struct RecordView: View {
                 }
                 if !record.certificates.isEmpty { ShareLink("Export complete chain as PEM", item: CertificateChainExport(certificates: record.certificates), preview: SharePreview("Certificate chain")) }
             } header: { Text("Certificates & trust") }
+            RevocationView(record:record,assessment:$additionalRevocation)
             Section("Response headers · \(record.responseHeaders.count)") {
                 ForEach(record.responseHeaders.keys.sorted().prefix(3), id: \.self) { key in HeaderRow(item: HeaderItem(name: key, value: record.responseHeaders[key] ?? "")) }
                 NavigationLink("All headers") { HeadersView(headers: record.responseHeaders) }

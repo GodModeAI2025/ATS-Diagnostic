@@ -37,6 +37,11 @@ struct DiagnosticRecord: Identifiable, Codable, Sendable {
     var trustMessage: String?
     var certificateTransparency: Bool?
     var error: String?
+    var networkErrors: [ErrorEvidence]?
+    var trustErrors: [ErrorEvidence]?
+    var clientCertificateRequested: Bool?
+    var revocationChecked: Bool?
+    var revocationAssessment: RevocationAssessment?
     var curl: String {
         let headers = requestHeaders.sorted { $0.key < $1.key }.map { "-H \(Self.quote("\($0.key): \($0.value)"))" }.joined(separator: " ")
         return "curl -X \(method) \(headers) \(requestBody.isEmpty ? "" : "--data-raw " + Self.quote(requestBody)) \(Self.quote(url))"
@@ -71,29 +76,41 @@ final class DiagnosticEngine: NSObject, URLSessionDataDelegate, @unchecked Senda
             config.timeoutIntervalForRequest = 20
             config.timeoutIntervalForResource = 30
             config.urlCache = nil
+            config.urlCredentialStorage = nil
             let session = URLSession(configuration: config, delegate: self, delegateQueue: nil)
             self.session = session
             session.dataTask(with: request).resume()
         }
     }
     func urlSession(_ session: URLSession, didReceive challenge: URLAuthenticationChallenge, completionHandler: @escaping @Sendable (URLSession.AuthChallengeDisposition, URLCredential?) -> Void) {
-        if let trust = challenge.protectionSpace.serverTrust {
-            var error: CFError?
-            let valid = SecTrustEvaluateWithError(trust, &error)
-            let trustResult = SecTrustCopyResult(trust) as? [String: Any]
-            let chain = SecTrustCopyCertificateChain(trust) as? [SecCertificate] ?? []
-            let certificates = chain.map { cert in
-                let der = SecCertificateCopyData(cert) as Data
-                return CertificateRecord(id: SHA256.hash(data: der).map { String(format: "%02x", $0) }.joined(), subject: SecCertificateCopySubjectSummary(cert) as String? ?? "Certificate", der: der, source: "System-evaluated trust chain")
-            }
-            lock.withLock {
-                record.certificates = certificates
-                record.trustValid = valid
-                record.trustMessage = error.map { ($0 as Error).localizedDescription }
-                record.certificateTransparency = trustResult?[kSecTrustCertificateTransparency as String] as? Bool
-            }
+        if challenge.protectionSpace.authenticationMethod == NSURLAuthenticationMethodClientCertificate {
+            lock.withLock { record.clientCertificateRequested = true }
         }
+        if let trust = challenge.protectionSpace.serverTrust { captureTrust(trust) }
         completionHandler(.performDefaultHandling, nil)
+    }
+    private func captureTrust(_ trust: SecTrust) {
+        var error: CFError?
+        let valid = SecTrustEvaluateWithError(trust, &error)
+        let result = SecTrustCopyResult(trust) as? [String: Any]
+        let chain = SecTrustCopyCertificateChain(trust) as? [SecCertificate] ?? []
+        let certificates = chain.map { cert in
+            let der = SecCertificateCopyData(cert) as Data
+            return CertificateRecord(id: RootStoreSnapshot.fingerprint(der), subject: SecCertificateCopySubjectSummary(cert) as String? ?? "Certificate", der: der, source: "System-evaluated trust chain")
+        }
+        lock.withLock {
+            record.certificates = certificates; record.trustValid = valid
+            record.trustMessage = error.map { ($0 as Error).localizedDescription }
+            record.trustErrors = error.map { ErrorEvidence.capture($0 as Error) }
+            record.certificateTransparency = result?[kSecTrustCertificateTransparency as String] as? Bool
+            record.revocationChecked = result?[kSecTrustRevocationChecked as String] as? Bool
+        }
+    }
+    private func trustFromError(_ error: NSError, depth: Int = 0) -> SecTrust? {
+        guard depth < 5 else { return nil }
+        if let value = error.userInfo[NSURLErrorFailingURLPeerTrustErrorKey], CFGetTypeID(value as CFTypeRef) == SecTrustGetTypeID() { return (value as! SecTrust) }
+        if let underlying = error.userInfo[NSUnderlyingErrorKey] as? NSError { return trustFromError(underlying, depth: depth + 1) }
+        return nil
     }
     func urlSession(_ session: URLSession, dataTask: URLSessionDataTask, didReceive response: URLResponse, completionHandler: @escaping @Sendable (URLSession.ResponseDisposition) -> Void) {
         lock.withLock {
@@ -130,7 +147,9 @@ final class DiagnosticEngine: NSObject, URLSessionDataDelegate, @unchecked Senda
         guard let start, let end else { return nil }; return end.timeIntervalSince(start)
     }
     func urlSession(_ session: URLSession, task: URLSessionTask, didCompleteWithError error: Error?) {
+        if let error, let trust = trustFromError(error as NSError) { captureTrust(trust) }
         let result = lock.withLock {
+            record.networkErrors = error.map(ErrorEvidence.capture)
             record.error = error?.localizedDescription
             if error == nil {
                 record.responseSHA256 = hasher.finalize().map { String(format: "%02x", $0) }.joined()

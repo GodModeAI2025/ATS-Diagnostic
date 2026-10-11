@@ -1,7 +1,7 @@
 import Foundation
 import Security
 
-struct CertificateFinding: Identifiable {
+struct CertificateFinding: Identifiable, Sendable {
     let id: String
     let title: String
     let detail: String

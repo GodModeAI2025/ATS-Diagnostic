@@ -1,0 +1,11 @@
+Neu in ATS Diagnostic 2.0 (34)
+
+• badssl-Testkatalog mit 73 Zielen: native Verbindungsprüfung, gespeicherte Ergebnisse und TXT/JSON-Bericht.
+• Verständliche Fehler: tatsächlicher Befund, Bedeutung, nächster Schritt und aufklappbare Systemcodes. Testnamen werden nicht als Fehlerbeweis verwendet.
+• Ausstellerdetails: Organisation, Name, Land und weitere vorhandene Zertifikatsangaben; Navigation zum nächsten Zertifikat der ausgewerteten Kette.
+• Zusätzliche Sperrprüfung: Systemantwort und bestätigter Widerruf werden getrennt dargestellt. signaturgeprüfte CRLs ergänzen die Systemprüfung für unterstützte direkte Aussteller.
+• Große Zertifikatsfelder werden zunächst gekürzt angezeigt und separat vollständig geöffnet.
+
+Bitte prüfen: abgelaufenes Zertifikat, falscher Hostname, revoked.badssl.com, Client-Zertifikat-Anforderung sowie Ausstellerdetails auf iPhone und iPad quer.
+
+Grenzen: Browser-Mixed-Content und HSTS-Preload werden nicht vollständig nachgestellt. Ein erfolgreicher Aufruf ist keine vollständige Sicherheitsfreigabe. Cipher-Enumeration, unabhängige SCT-Signaturprüfung und vollständige OCSP/CRL-Kettenprüfung bleiben offen. Nicht belegbare Sperrprüfungen werden als unbekannt angezeigt.

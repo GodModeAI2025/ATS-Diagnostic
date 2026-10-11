@@ -1,0 +1,18 @@
+import Foundation
+import Testing
+@testable import ATSDiagnostic
+struct CertificateIssuerTests {
+    @Test func decodesOrganizationCountryAndUnicodeName() throws {
+        let name = try #require(ASN1Node.decode(Data([0x30,0x32,0x31,0x0b,0x30,0x09,0x06,0x03,0x55,0x04,0x06,0x13,0x02,0x44,0x45,0x31,0x0f,0x30,0x0d,0x06,0x03,0x55,0x04,0x0a,0x0c,0x06,0x54,0x65,0x73,0x74,0x43,0x41,0x31,0x12,0x30,0x10,0x06,0x03,0x55,0x04,0x03,0x1e,0x09,0x00,0x54,0x00,0x65,0x00,0x73,0x00,0x74,0x00])).first)
+        // Deliberately malformed UTF-16 retains a readable hex fallback rather than inventing a name.
+        let attributes = X509.nameAttributes(name)
+        #expect(attributes.first { $0.oid == "2.5.4.6" }?.value == "DE")
+        #expect(attributes.first { $0.oid == "2.5.4.10" }?.value == "TestCA")
+        #expect(attributes.count == 3)
+    }
+    @Test func utf16DirectoryString() {
+        let pair = ASN1Node(tag:0x30,value:Data(),children:[ASN1Node(tag:6,value:Data([0x55,0x04,0x03]),children:[]),ASN1Node(tag:0x1e,value:Data([0,0x54,0,0x65,0,0x73,0,0x74]),children:[])])
+        let name = ASN1Node(tag:0x30,value:Data(),children:[ASN1Node(tag:0x31,value:Data(),children:[pair])])
+        #expect(X509.nameAttributes(name).first?.value == "Test")
+    }
+}

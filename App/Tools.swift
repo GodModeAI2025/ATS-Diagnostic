@@ -9,6 +9,7 @@ struct CertificateExport: Transferable {
     }
 }
 struct ToolsView: View {
+    let store: DiagnosticStore
     @Environment(\.dynamicTypeSize) private var dynamicTypeSize
     @FocusState private var editing: Bool
     @State private var input = ""
@@ -21,7 +22,7 @@ struct ToolsView: View {
                 if geometry.size.width >= 900 && !dynamicTypeSize.isAccessibilitySize {
                     ScrollView {
                         HStack(alignment: .top, spacing: 24) {
-                            DiagnosticPanel(title: "Input", illustration: .traffic) { operationPicker; inputEditor; transformButton }.frame(maxWidth: 520)
+                            DiagnosticPanel(title: "Input", illustration: .traffic) { NavigationLink("badssl-Testkatalog") { BadSSLView(store:store) }; operationPicker; inputEditor; transformButton }.frame(maxWidth: 520)
                             VStack(spacing: 20) {
                                 DiagnosticPanel(title: "Result", illustration: .traffic) { resultContent }
                                 DiagnosticPanel(title: "Privacy", illustration: .certificate) { privacyText }
@@ -30,6 +31,7 @@ struct ToolsView: View {
                     }.background(Color(uiColor: .systemGroupedBackground))
                 } else {
                     Form {
+                        Section { NavigationLink { BadSSLView(store:store) } label: { Label("badssl-Testkatalog",systemImage:"checkmark.shield") } }
                         Section("Transform") { operationPicker }
                         Section("Input") { inputEditor }
                         transformButton

@@ -4,6 +4,7 @@ struct ASN1Node: Sendable {
     let tag: UInt8
     let value: Data
     let children: [ASN1Node]
+    var originalEncoding: Data? = nil
     static func decode(_ data: Data) throws -> [ASN1Node] {
         let bytes = [UInt8](data)
         return try parse(bytes, depth: 0)
@@ -13,6 +14,7 @@ struct ASN1Node: Sendable {
         var index = 0
         var nodes: [ASN1Node] = []
         while index < bytes.count {
+            let start = index
             let tag = bytes[index]; index += 1
             guard index < bytes.count else { throw ParseError.invalid }
             let lengthByte = bytes[index]; index += 1
@@ -25,7 +27,7 @@ struct ASN1Node: Sendable {
             }
             guard length <= bytes.count - index else { throw ParseError.invalid }
             let value = Array(bytes[index..<index + length]); index += length
-            nodes.append(ASN1Node(tag: tag, value: Data(value), children: tag & 0x20 != 0 ? try parse(value, depth: depth + 1) : []))
+            nodes.append(ASN1Node(tag: tag, value: Data(value), children: tag & 0x20 != 0 ? try parse(value, depth: depth + 1) : [], originalEncoding: Data(bytes[start..<index])))
         }
         return nodes
     }

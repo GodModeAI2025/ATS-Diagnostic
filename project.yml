@@ -48,6 +48,16 @@ targets:
     settings:
       base:
         GENERATE_INFOPLIST_FILE: YES
+  ATSDiagnosticLiveTests:
+    type: bundle.unit-test
+    platform: iOS
+    sources: [LiveTests]
+    dependencies:
+      - target: ATSDiagnostic
+    settings:
+      base:
+        GENERATE_INFOPLIST_FILE: YES
+
 schemes:
   ATSDiagnostic:
     build:
@@ -59,3 +69,10 @@ schemes:
     build:
       targets:
         ATSDiagnosticPreview: all
+
+  ATSDiagnosticBadSSL:
+    build:
+      targets:
+        ATSDiagnostic: all
+    test:
+      targets: [ATSDiagnosticLiveTests]
