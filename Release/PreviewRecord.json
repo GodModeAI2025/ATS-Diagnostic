@@ -1,0 +1,15 @@
+{
+  "appStoreName": "ATS Diagnostic Preview",
+  "displayName": "ATS Diagnostic",
+  "bundleId": "com.mobilebox.atsdiagnostic.preview",
+  "version": "2.0",
+  "build": 31,
+  "sourceCommit": "635c03bbd483ef78aa95f5b282d5f526a7017260",
+  "archiveSucceeded": true,
+  "appIDRegistered": true,
+  "appStoreRecordCreated": false,
+  "administrativeAccessAuthorizationPending": true,
+  "testerEmail": "mark_zimmermann@mac.com",
+  "uploadCompleted": false,
+  "deviceInstallationVerified": false
+}
