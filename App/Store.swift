@@ -16,9 +16,10 @@ import Observation
         do { records = try JSONDecoder().decode([DiagnosticRecord].self, from: Data(contentsOf: file)) }
         catch { records = [] }
     }
-    func execute(url: String, method: String = "GET", headers: String = "", body: String = "") async {
+    func execute(url: String, method: String = "GET", headers: String = "", body: String = "", expectedSHA256: String = "") async {
         guard !running else { return }
         do {
+            let checksum = try Integrity.normalizeSHA256(expectedSHA256)
             let endpoint = try Endpoint.parse(url)
             var request = URLRequest(url: endpoint)
             request.httpMethod = method
@@ -31,7 +32,7 @@ import Observation
             }
             running = true
             error = nil
-            let record = await DiagnosticEngine(request: request).run(request)
+            let record = await DiagnosticEngine(request: request, expectedSHA256: checksum).run(request)
             latest = record
             if settings.enabled && settings.accepts(record.url) {
                 records.insert(record, at: 0)
@@ -43,8 +44,8 @@ import Observation
     }
     func importHAR(_ data: Data) throws {
         guard data.count <= 20 * 1024 * 1024 else { throw CocoaError(.fileReadTooLarge) }
-        let archive = try JSONDecoder().decode(HARArchive.self, from: data)
-        records = Array((archive.records() + records).prefix(200))
+        let imported = try HARArchive.importRecords(data)
+        records = Array((imported + records).prefix(settings.recordLimit))
         save()
     }
     func updateSettings(_ value: RecordingSettings) throws {

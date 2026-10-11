@@ -8,13 +8,15 @@ The release is complete only when the combined functionality is implemented and 
 - [x] Negotiated TLS version/cipher, HTTP protocol, remote address and phase timings
 - [ ] Complete typed X.509 decoder (initial ASN.1 fields implemented): SAN, EKU, KU, AIA, SKI/AKI, policies, public key, issuer, validity, serial
 - [ ] Trust failures, hostname/expiry/weak-crypto/interception findings
-- [ ] Independent TLS-version support probes; alternate trust stores; CT/revocation details
+- [x] Independent TLS-version support probes with negotiated-version readback
+- [ ] Alternate trust stores; CT/revocation details
 - [ ] Safari share extension on iPhone/iPad and macOS support
 
 ## Traffic capture and editing
 - [x] Manual HTTP request builder and replay; cURL export
 - [x] Local history, URL/method/status search, deletion and bounded body capture
-- [ ] cURL import; HAR import/export; PCAP capture/export; NDJSON export
+- [x] cURL import; HAR import/export; NDJSON export
+- [ ] PCAP capture/export
 - [x] Response-type filters, logging controls, URL exclusions, aggregate statistics, favorites
 - [ ] URLProtocol developer integration and shake/custom presentation hooks
 - [ ] Proxy-only, full-tunnel and dual-MITM modes
@@ -37,14 +39,15 @@ The release is complete only when the combined functionality is implemented and 
 - [ ] NSS key material export where technically available and explicitly enabled
 - [ ] Language selection/localization, alternate icons and logs export
 - [ ] Certificate information links and Safari web extension/handoff
-- [ ] Original product capabilities: preferred cipher order, multipath, content encoding and download-integrity checks
+- [x] Download-integrity check with streaming SHA-256 over the complete response
+- [ ] Preferred cipher order, multipath and expanded content-encoding analysis
 - [ ] Local privacy controls, export disclosure, privacy manifest and store metadata
 - [ ] App icon, iPhone/iPad screenshots, accessibility and appearance QA
 - [x] Existing App Store bundle identifier and version/build numbers verified
 - [ ] Unit/integration/device tests; signed archive; upload and processing
-- [ ] TestFlight tester/group assignment and available-build readback
-- [ ] Push to the authorized repository
+- [x] Initial build30 TestFlight tester/group assignment and available-build readback (only mark_zimmermann@mac.com)
+- [x] Push to the authorized repository (subsequent development continues)
 
-Implemented checkboxes describe code presence, not completed runtime verification. No upstream code or assets are included.
+Implemented checkboxes describe code presence, not completed runtime verification.
 
 Historical parity additions: stream breakpoints/scripts, stream journal/replay audit, capture initiator metadata, hybrid/fail-open routing, UDP packet analysis, cURL protocol selection/multi-transfer import, regex URL exclusions, query parameter viewer, session-log export and integration notifications.

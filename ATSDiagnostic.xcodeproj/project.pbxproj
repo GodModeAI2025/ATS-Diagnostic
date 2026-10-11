@@ -7,21 +7,40 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		04C1CEE76848FE669B747E2A /* ATSDiagnosticApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA48D7B93B862A0646236C1B /* ATSDiagnosticApp.swift */; };
 		08F33130CBECF29A05201EE6 /* X509.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CFCC8BF2582B5E1B8F4E4A1 /* X509.swift */; };
 		0AFB4D0D277FF9ACF358CE81 /* ASN1Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0F97E508554E43B0CDABA22 /* ASN1Tests.swift */; };
 		117F3FD22732F020EEE3C5E1 /* EndpointTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F416B595E31C21C933D4911 /* EndpointTests.swift */; };
 		12B5FC44B53A012A2E7B0ACC /* HARTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBFDF97001FEC55463E871E0 /* HARTests.swift */; };
+		2C2AEEE90F31E4BA71B21532 /* VisualComponents.swift in Sources */ = {isa = PBXBuildFile; fileRef = 687B5C8DC9BA142303849330 /* VisualComponents.swift */; };
+		2C6A9B2F1CC537D485940B4A /* HAR.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E46CE5231D8CC42A1587A78 /* HAR.swift */; };
+		2FCA13441C543680773D12B0 /* Integrity.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5571AEF32197ACDBF1475DB /* Integrity.swift */; };
+		319F161D4D0BBCFD1CE27375 /* Store.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBB74451B3AEAD1F53388754 /* Store.swift */; };
 		34C6567F9501B5FF3ED2FD6C /* Tools.swift in Sources */ = {isa = PBXBuildFile; fileRef = B623A579ADD8FD75F9E64D2A /* Tools.swift */; };
+		3BEA09AEF69591C9E9CA8DAF /* StreamingIntegrityTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25717A33CD7A96A36B57D11D /* StreamingIntegrityTests.swift */; };
 		43F40D97F182CD3182318204 /* CURLImport.swift in Sources */ = {isa = PBXBuildFile; fileRef = 515483A147B28C641EE47456 /* CURLImport.swift */; };
 		4792B0CC0854E01E5A51D7D9 /* RecordingSettingsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D23B04393A327FEE67D7F180 /* RecordingSettingsTests.swift */; };
+		541095BC8BF9940CACAAD16D /* Diagnostic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0354E181C7AA4FB81B16BEBB /* Diagnostic.swift */; };
+		55353EB6457378815E588805 /* Integrity.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5571AEF32197ACDBF1475DB /* Integrity.swift */; };
+		6A83545CBDCFF1C00351EE98 /* TLSProbe.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABC8F829F66AF685D8859DC0 /* TLSProbe.swift */; };
 		7B494C1CEF9C7D5BF5A8817A /* RecordingSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50E6B91F56AB4DD248EAA064 /* RecordingSettings.swift */; };
+		81186C01D4A82C1DB7B04CD8 /* CURLImport.swift in Sources */ = {isa = PBXBuildFile; fileRef = 515483A147B28C641EE47456 /* CURLImport.swift */; };
 		862B9FA49455E8A3B60632F9 /* CURLImportTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5116786756C186E1A2D6769C /* CURLImportTests.swift */; };
+		8807BD7716946293292CF465 /* RecordingSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50E6B91F56AB4DD248EAA064 /* RecordingSettings.swift */; };
 		8E40C646E34E85F19A7927D6 /* Store.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBB74451B3AEAD1F53388754 /* Store.swift */; };
+		91AA03CB65DA21BACAA9198F /* PrivacyInfo.xcprivacy in Resources */ = {isa = PBXBuildFile; fileRef = 1674A595E76AB8616445BEBF /* PrivacyInfo.xcprivacy */; };
 		92DC922400211EF8ABB15C71 /* PrivacyInfo.xcprivacy in Resources */ = {isa = PBXBuildFile; fileRef = 1674A595E76AB8616445BEBF /* PrivacyInfo.xcprivacy */; };
+		98742F0DA603062B176B4B0E /* TLSProbe.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABC8F829F66AF685D8859DC0 /* TLSProbe.swift */; };
+		9EC117912282E1ECDB045049 /* CertificateFindings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FB8348535345EC1A56E1F14 /* CertificateFindings.swift */; };
+		AF276C8B265A3534BCCDA3A9 /* X509.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CFCC8BF2582B5E1B8F4E4A1 /* X509.swift */; };
 		B25C8782DDE6BAE7E6D29A3B /* Diagnostic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0354E181C7AA4FB81B16BEBB /* Diagnostic.swift */; };
+		B89827E3E63739044284C76A /* Tools.swift in Sources */ = {isa = PBXBuildFile; fileRef = B623A579ADD8FD75F9E64D2A /* Tools.swift */; };
 		BF6307C82B4BDB21AE152F13 /* HAR.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E46CE5231D8CC42A1587A78 /* HAR.swift */; };
 		C20E1B5DF3B19D588AD83858 /* ATSDiagnosticApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA48D7B93B862A0646236C1B /* ATSDiagnosticApp.swift */; };
 		CCF4F88C3D1EBE00E1A0D6AF /* CertificateFindings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FB8348535345EC1A56E1F14 /* CertificateFindings.swift */; };
+		E05CEECCBE5C7B79305282B2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D7FD6A27B7550D386C7632C8 /* Assets.xcassets */; };
+		E7F88C72B0A0FBD40949F4E9 /* VisualComponents.swift in Sources */ = {isa = PBXBuildFile; fileRef = 687B5C8DC9BA142303849330 /* VisualComponents.swift */; };
+		F1F1C375B80BF4C13DE010B6 /* IntegrityTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98BF98AF90961C96D6E0AB2B /* IntegrityTests.swift */; };
 		FE15A7008B4ECCB46EF7CB1B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D7FD6A27B7550D386C7632C8 /* Assets.xcassets */; };
 /* End PBXBuildFile section */
 
@@ -39,20 +58,26 @@
 		0354E181C7AA4FB81B16BEBB /* Diagnostic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Diagnostic.swift; sourceTree = "<group>"; };
 		140438702E17A5D8B0E39955 /* ATSDiagnosticTests.xctest */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.cfbundle; path = ATSDiagnosticTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1674A595E76AB8616445BEBF /* PrivacyInfo.xcprivacy */ = {isa = PBXFileReference; path = PrivacyInfo.xcprivacy; sourceTree = "<group>"; };
+		25717A33CD7A96A36B57D11D /* StreamingIntegrityTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StreamingIntegrityTests.swift; sourceTree = "<group>"; };
 		2FB8348535345EC1A56E1F14 /* CertificateFindings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CertificateFindings.swift; sourceTree = "<group>"; };
 		50E6B91F56AB4DD248EAA064 /* RecordingSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordingSettings.swift; sourceTree = "<group>"; };
 		5116786756C186E1A2D6769C /* CURLImportTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CURLImportTests.swift; sourceTree = "<group>"; };
 		515483A147B28C641EE47456 /* CURLImport.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CURLImport.swift; sourceTree = "<group>"; };
+		687B5C8DC9BA142303849330 /* VisualComponents.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VisualComponents.swift; sourceTree = "<group>"; };
 		6AB56752BCD5D28B97DB8C7E /* ATSDiagnostic.app */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.application; path = ATSDiagnostic.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6F416B595E31C21C933D4911 /* EndpointTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndpointTests.swift; sourceTree = "<group>"; };
 		8CFCC8BF2582B5E1B8F4E4A1 /* X509.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = X509.swift; sourceTree = "<group>"; };
 		8E46CE5231D8CC42A1587A78 /* HAR.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HAR.swift; sourceTree = "<group>"; };
+		98BF98AF90961C96D6E0AB2B /* IntegrityTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntegrityTests.swift; sourceTree = "<group>"; };
+		ABC8F829F66AF685D8859DC0 /* TLSProbe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TLSProbe.swift; sourceTree = "<group>"; };
+		B5571AEF32197ACDBF1475DB /* Integrity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Integrity.swift; sourceTree = "<group>"; };
 		B623A579ADD8FD75F9E64D2A /* Tools.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tools.swift; sourceTree = "<group>"; };
 		BBFDF97001FEC55463E871E0 /* HARTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HARTests.swift; sourceTree = "<group>"; };
 		D0F97E508554E43B0CDABA22 /* ASN1Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ASN1Tests.swift; sourceTree = "<group>"; };
 		D23B04393A327FEE67D7F180 /* RecordingSettingsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordingSettingsTests.swift; sourceTree = "<group>"; };
 		D7FD6A27B7550D386C7632C8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DBB74451B3AEAD1F53388754 /* Store.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Store.swift; sourceTree = "<group>"; };
+		E031D20D2B393480C2B3A4CF /* ATSDiagnosticPreview.app */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.application; path = ATSDiagnosticPreview.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FA48D7B93B862A0646236C1B /* ATSDiagnosticApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ATSDiagnosticApp.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -64,7 +89,9 @@
 				5116786756C186E1A2D6769C /* CURLImportTests.swift */,
 				6F416B595E31C21C933D4911 /* EndpointTests.swift */,
 				BBFDF97001FEC55463E871E0 /* HARTests.swift */,
+				98BF98AF90961C96D6E0AB2B /* IntegrityTests.swift */,
 				D23B04393A327FEE67D7F180 /* RecordingSettingsTests.swift */,
+				25717A33CD7A96A36B57D11D /* StreamingIntegrityTests.swift */,
 			);
 			path = Tests;
 			sourceTree = "<group>";
@@ -82,6 +109,7 @@
 			isa = PBXGroup;
 			children = (
 				6AB56752BCD5D28B97DB8C7E /* ATSDiagnostic.app */,
+				E031D20D2B393480C2B3A4CF /* ATSDiagnosticPreview.app */,
 				140438702E17A5D8B0E39955 /* ATSDiagnosticTests.xctest */,
 			);
 			name = Products;
@@ -96,10 +124,13 @@
 				515483A147B28C641EE47456 /* CURLImport.swift */,
 				0354E181C7AA4FB81B16BEBB /* Diagnostic.swift */,
 				8E46CE5231D8CC42A1587A78 /* HAR.swift */,
+				B5571AEF32197ACDBF1475DB /* Integrity.swift */,
 				1674A595E76AB8616445BEBF /* PrivacyInfo.xcprivacy */,
 				50E6B91F56AB4DD248EAA064 /* RecordingSettings.swift */,
 				DBB74451B3AEAD1F53388754 /* Store.swift */,
+				ABC8F829F66AF685D8859DC0 /* TLSProbe.swift */,
 				B623A579ADD8FD75F9E64D2A /* Tools.swift */,
+				687B5C8DC9BA142303849330 /* VisualComponents.swift */,
 				8CFCC8BF2582B5E1B8F4E4A1 /* X509.swift */,
 			);
 			path = App;
@@ -125,6 +156,24 @@
 			productName = ATSDiagnosticTests;
 			productReference = 140438702E17A5D8B0E39955 /* ATSDiagnosticTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		87A28E172021848C5CBBB4E8 /* ATSDiagnosticPreview */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A734CAE6A1698F5C403BBC09 /* Build configuration list for PBXNativeTarget "ATSDiagnosticPreview" */;
+			buildPhases = (
+				4C47B3D0BBA57B148B685B9C /* Sources */,
+				887CFC1DFCB55E567B475486 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ATSDiagnosticPreview;
+			packageProductDependencies = (
+			);
+			productName = ATSDiagnosticPreview;
+			productReference = E031D20D2B393480C2B3A4CF /* ATSDiagnosticPreview.app */;
+			productType = "com.apple.product-type.application";
 		};
 		F7A293E092DF4CBD8B373B48 /* ATSDiagnostic */ = {
 			isa = PBXNativeTarget;
@@ -156,6 +205,9 @@
 					3F4C0A3006EF31173224AA07 = {
 						DevelopmentTeam = SP73Z8JWXM;
 					};
+					87A28E172021848C5CBBB4E8 = {
+						DevelopmentTeam = SP73Z8JWXM;
+					};
 					F7A293E092DF4CBD8B373B48 = {
 						DevelopmentTeam = SP73Z8JWXM;
 					};
@@ -176,12 +228,22 @@
 			projectRoot = "";
 			targets = (
 				F7A293E092DF4CBD8B373B48 /* ATSDiagnostic */,
+				87A28E172021848C5CBBB4E8 /* ATSDiagnosticPreview */,
 				3F4C0A3006EF31173224AA07 /* ATSDiagnosticTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		887CFC1DFCB55E567B475486 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E05CEECCBE5C7B79305282B2 /* Assets.xcassets in Resources */,
+				91AA03CB65DA21BACAA9198F /* PrivacyInfo.xcprivacy in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		F3761B3F80DE0576130C76FE /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -194,6 +256,25 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		4C47B3D0BBA57B148B685B9C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				04C1CEE76848FE669B747E2A /* ATSDiagnosticApp.swift in Sources */,
+				81186C01D4A82C1DB7B04CD8 /* CURLImport.swift in Sources */,
+				9EC117912282E1ECDB045049 /* CertificateFindings.swift in Sources */,
+				541095BC8BF9940CACAAD16D /* Diagnostic.swift in Sources */,
+				2C6A9B2F1CC537D485940B4A /* HAR.swift in Sources */,
+				55353EB6457378815E588805 /* Integrity.swift in Sources */,
+				8807BD7716946293292CF465 /* RecordingSettings.swift in Sources */,
+				319F161D4D0BBCFD1CE27375 /* Store.swift in Sources */,
+				98742F0DA603062B176B4B0E /* TLSProbe.swift in Sources */,
+				B89827E3E63739044284C76A /* Tools.swift in Sources */,
+				E7F88C72B0A0FBD40949F4E9 /* VisualComponents.swift in Sources */,
+				AF276C8B265A3534BCCDA3A9 /* X509.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		704B7A1E0222D3C2CE2EE410 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -203,9 +284,12 @@
 				CCF4F88C3D1EBE00E1A0D6AF /* CertificateFindings.swift in Sources */,
 				B25C8782DDE6BAE7E6D29A3B /* Diagnostic.swift in Sources */,
 				BF6307C82B4BDB21AE152F13 /* HAR.swift in Sources */,
+				2FCA13441C543680773D12B0 /* Integrity.swift in Sources */,
 				7B494C1CEF9C7D5BF5A8817A /* RecordingSettings.swift in Sources */,
 				8E40C646E34E85F19A7927D6 /* Store.swift in Sources */,
+				6A83545CBDCFF1C00351EE98 /* TLSProbe.swift in Sources */,
 				34C6567F9501B5FF3ED2FD6C /* Tools.swift in Sources */,
+				2C2AEEE90F31E4BA71B21532 /* VisualComponents.swift in Sources */,
 				08F33130CBECF29A05201EE6 /* X509.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -218,7 +302,9 @@
 				862B9FA49455E8A3B60632F9 /* CURLImportTests.swift in Sources */,
 				117F3FD22732F020EEE3C5E1 /* EndpointTests.swift in Sources */,
 				12B5FC44B53A012A2E7B0ACC /* HARTests.swift in Sources */,
+				F1F1C375B80BF4C13DE010B6 /* IntegrityTests.swift in Sources */,
 				4792B0CC0854E01E5A51D7D9 /* RecordingSettingsTests.swift in Sources */,
+				3BEA09AEF69591C9E9CA8DAF /* StreamingIntegrityTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -233,6 +319,27 @@
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
+		5CCDDC9EBB2C92510EB70471 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = "ATS Diagnostic";
+				INFOPLIST_KEY_ITSAppUsesNonExemptEncryption = NO;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.mobilebox.atsdiagnostic.preview;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 		633D2DC3F37B4543CCACB4EB /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -267,7 +374,7 @@
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
-				CURRENT_PROJECT_VERSION = 30;
+				CURRENT_PROJECT_VERSION = 31;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEVELOPMENT_TEAM = SP73Z8JWXM;
 				ENABLE_NS_ASSERTIONS = NO;
@@ -314,6 +421,27 @@
 			};
 			name = Release;
 		};
+		8A1999265AF34560351489E3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = "ATS Diagnostic";
+				INFOPLIST_KEY_ITSAppUsesNonExemptEncryption = NO;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.mobilebox.atsdiagnostic.preview;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
 		9DD46AFAA9EA56EA15460A89 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -348,7 +476,7 @@
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
-				CURRENT_PROJECT_VERSION = 30;
+				CURRENT_PROJECT_VERSION = 31;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				DEVELOPMENT_TEAM = SP73Z8JWXM;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -453,6 +581,15 @@
 			buildConfigurations = (
 				D457FC851680CAB4F85EB0E3 /* Debug */,
 				B6F2C652984340A0682718BA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		A734CAE6A1698F5C403BBC09 /* Build configuration list for PBXNativeTarget "ATSDiagnosticPreview" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8A1999265AF34560351489E3 /* Debug */,
+				5CCDDC9EBB2C92510EB70471 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Debug;

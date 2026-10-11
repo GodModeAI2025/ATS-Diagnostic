@@ -1,0 +1,12 @@
+Visual refresh with muted colors, connection overview cards and measured timing bars.
+
+Please test:
+- Inspect a hostname or HTTPS URL; view TLS, system trust, certificate chain and typed certificate details.
+- Run individual TLS version probes and check the displayed negotiated version.
+- Import a single cURL request, edit headers/body, send and replay it.
+- Filter history by response type or favorites; check statistics and recording exclusions.
+- Import/export HAR and share certificates or cURL requests.
+- Use JSON formatting, Base64, URL encoding, hashes and timestamps.
+- Check the interface on iPhone/iPad in portrait, landscape, light/dark appearance and larger text.
+
+Diagnostics stay on the device unless explicitly shared. Recording can be disabled in History settings. Certificate validation remains enabled.

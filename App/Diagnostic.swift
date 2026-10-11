@@ -17,6 +17,10 @@ struct DiagnosticRecord: Identifiable, Codable, Sendable {
     var status: Int?
     var responseHeaders: [String: String] = [:]
     var responseBody: String = ""
+    var responseEncoding: String?
+    var responseSHA256: String?
+    var expectedSHA256: String?
+    var integrityMatches: Bool?
     var bytes = 0
     var duration: Double = 0
     var protocolName: String?
@@ -49,16 +53,18 @@ final class DiagnosticEngine: NSObject, URLSessionDataDelegate, @unchecked Senda
     private let lock = NSLock()
     private var record: DiagnosticRecord
     private var buffer = Data()
+    private var hasher = SHA256()
     private let bodyLimit = 2 * 1024 * 1024
     private var continuation: CheckedContinuation<DiagnosticRecord, Never>?
     private var session: URLSession?
-    init(request: URLRequest) {
+    init(request: URLRequest, expectedSHA256: String? = nil) {
         record = DiagnosticRecord(url: request.url?.absoluteString ?? "", method: request.httpMethod ?? "GET", requestHeaders: request.allHTTPHeaderFields ?? [:], requestBody: request.httpBody.flatMap { String(data: $0, encoding: .utf8) } ?? "")
+        record.expectedSHA256 = expectedSHA256
     }
-    func run(_ request: URLRequest) async -> DiagnosticRecord {
+    func run(_ request: URLRequest, configuration: URLSessionConfiguration? = nil) async -> DiagnosticRecord {
         await withCheckedContinuation { continuation in
             self.continuation = continuation
-            let config = URLSessionConfiguration.ephemeral
+            let config = configuration ?? URLSessionConfiguration.ephemeral
             config.timeoutIntervalForRequest = 20
             config.timeoutIntervalForResource = 30
             config.urlCache = nil
@@ -95,6 +101,7 @@ final class DiagnosticEngine: NSObject, URLSessionDataDelegate, @unchecked Senda
     }
     func urlSession(_ session: URLSession, dataTask: URLSessionDataTask, didReceive data: Data) {
         lock.withLock {
+            hasher.update(data: data)
             record.bytes += data.count
             buffer.append(data.prefix(max(0, bodyLimit - buffer.count)))
         }
@@ -119,7 +126,11 @@ final class DiagnosticEngine: NSObject, URLSessionDataDelegate, @unchecked Senda
     func urlSession(_ session: URLSession, task: URLSessionTask, didCompleteWithError error: Error?) {
         let result = lock.withLock {
             record.error = error?.localizedDescription
-            record.responseBody = String(data: buffer, encoding: .utf8) ?? buffer.base64EncodedString()
+            if error == nil {
+                record.responseSHA256 = hasher.finalize().map { String(format: "%02x", $0) }.joined()
+                record.integrityMatches = record.expectedSHA256.map { $0 == record.responseSHA256 }
+            }
+            if let text = String(data: buffer, encoding: .utf8) { record.responseBody = text } else { record.responseBody = buffer.base64EncodedString(); record.responseEncoding = "base64" }
             return record
         }
         continuation?.resume(returning: result)

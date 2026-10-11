@@ -15,37 +15,75 @@ struct RootView: View {
             Tab("Requests", systemImage: "arrow.up.arrow.down") { RequestView(store: store) }
             Tab("History", systemImage: "clock") { HistoryView(store: store) }
             Tab("Tools", systemImage: "wrench.and.screwdriver") { ToolsView() }
-        }.tint(.teal)
+        }.tint(Color.diagnosticAccent)
     }
 }
 struct InspectView: View {
     let store: DiagnosticStore
+    @Environment(\.dynamicTypeSize) private var dynamicTypeSize
     @State private var host = ""
+    @State private var probing = false
+    @State private var probes: [TLSProbeResult] = []
+    @State private var probeError: String?
     var body: some View {
         NavigationStack {
-            List {
-                Section {
-                    VStack(alignment: .leading, spacing: 12) {
-                        Image(systemName: "checkmark.shield.fill").font(.largeTitle).foregroundStyle(.teal).accessibilityHidden(true)
-                        Text("Understand your connection").font(.title2.bold())
-                        Text("Inspect TLS, the certificate chain and connection timings directly from your device.").foregroundStyle(.secondary)
-                    }.padding(.vertical, 12)
+            GeometryReader { geometry in
+                if geometry.size.width >= 900 && !dynamicTypeSize.isAccessibilitySize {
+                    ScrollView {
+                        HStack(alignment: .top, spacing: 24) {
+                            VStack(spacing: 20) {
+                                DiagnosticPanel(title: "Inspect a connection", illustration: .server) { InspectionHero(record: store.latest ?? store.records.first); inspectionInput }
+                                DiagnosticPanel(title: "TLS version probes", illustration: .certificate) { probeControls }
+                            }.frame(width: 340)
+                            VStack(spacing: 20) {
+                                if let record = store.latest ?? store.records.first {
+                                    DiagnosticPanel(title: "Latest inspection", illustration: .traffic) {
+                                        ConnectionOverview(record: record)
+                                        ConnectionTimingChart(record: record)
+                                        NavigationLink { RecordView(record: record, store: store) } label: { RecordRow(record: record) }
+                                    }
+                                } else {
+                                    DiagnosticPanel(title: "Connection overview", illustration: .traffic) { ContentUnavailableView("Ready to inspect", systemImage: "network", description: Text("Enter a hostname to see certificates, security and timings.")) }
+                                }
+                                DiagnosticPanel(title: "System trust", illustration: .certificate) { trustExplanation }
+                            }.frame(maxWidth: 760)
+                        }.padding(24).frame(maxWidth: .infinity)
+                    }.background(Color(uiColor: .systemGroupedBackground))
+                } else {
+                    List {
+                        Section { InspectionHero(record: store.latest ?? store.records.first) }
+                        Section("Host or URL") { inspectionInput }
+                        Section("TLS version probes") { probeControls }
+                        if let record = store.latest ?? store.records.first { Section("Latest inspection") { ConnectionOverview(record: record); NavigationLink { RecordView(record: record, store: store) } label: { RecordRow(record: record) } } }
+                        Section { trustExplanation }
+                    }
                 }
-                Section("Host or URL") {
-                    TextField("example.com", text: $host).textInputAutocapitalization(.never).autocorrectionDisabled().keyboardType(.URL).onSubmit { run() }
-                    Button(action: run) { Label(store.running ? "Inspecting…" : "Inspect connection", systemImage: "magnifyingglass") }.disabled(store.running || host.isEmpty)
-                }
-                if store.running { ProgressView("Connecting…") }
-                if let error = store.error { Text(error).foregroundStyle(.red) }
-                if let record = store.latest ?? store.records.first { Section("Latest inspection") { NavigationLink { RecordView(record: record, store: store) } label: { RecordRow(record: record) } } }
-                Section { Text("System trust validation stays enabled. A successful request describes this connection; it does not certify every ATS requirement of another app.").font(.footnote).foregroundStyle(.secondary) }
-            }.navigationTitle("ATS Diagnostic")
+            }.navigationTitle("ATS Diagnostic").onChange(of: host) { probes = []; probeError = nil }
         }
     }
+    private var inspectionInput: some View {
+        VStack(alignment: .leading, spacing: 16) {
+            TextField("example.com", text: $host).textInputAutocapitalization(.never).autocorrectionDisabled().keyboardType(.URL).disabled(probing).onSubmit { run() }.textFieldStyle(.roundedBorder)
+            Button(action: run) { Label(store.running ? "Inspecting…" : "Inspect connection", systemImage: "magnifyingglass").frame(maxWidth: .infinity) }.buttonStyle(.borderedProminent).controlSize(.large).disabled(store.running || host.isEmpty)
+            if store.running { ProgressView("Connecting…") }
+            if let error = store.error { Text(error).foregroundStyle(.red) }
+        }
+    }
+    private var probeControls: some View {
+        VStack(alignment: .leading, spacing: 12) {
+            Button("Test individual TLS versions", systemImage: "waveform.path") { Task { probing = true; defer { probing = false }; do { probes = try await TLSProbe.allVersions(host); probeError = nil } catch { probeError = error.localizedDescription } } }.disabled(probing || host.isEmpty)
+            if probing { ProgressView("Testing TLS handshakes…") }
+            if let probeError { Text(probeError).foregroundStyle(.red) }
+            ForEach(probes) { probe in VStack(alignment: .leading, spacing: 4) { Label(probe.id, systemImage: probe.completed ? "checkmark.circle" : "exclamationmark.circle"); Text(probe.detail).font(.footnote).foregroundStyle(.secondary) } }
+            Text("A failed probe can result from client policy, server configuration or network conditions. No HTTP request is sent during these probes.").font(.footnote).foregroundStyle(.secondary)
+        }
+    }
+    private var trustExplanation: some View { Text("System trust validation stays enabled. A successful request describes this connection; it does not certify every ATS requirement of another app.").font(.footnote).foregroundStyle(.secondary) }
     private func run() { Task { await store.execute(url: host) } }
 }
 struct RequestView: View {
     let store: DiagnosticStore
+    @Environment(\.dynamicTypeSize) private var dynamicTypeSize
     @State private var url = ""
     @State private var method = "GET"
     @State private var headers = ""
@@ -54,19 +92,27 @@ struct RequestView: View {
     @State private var importError: String?
     @FocusState private var editing: Bool
     @State private var bodyText = ""
+    @State private var expectedSHA256 = ""
     var body: some View {
         NavigationStack {
-            Form {
-                Section("Request") {
-                    TextField("https://example.com/api", text: $url).keyboardType(.URL).textInputAutocapitalization(.never).autocorrectionDisabled()
-                    Picker("Method", selection: $method) { ForEach(["GET", "HEAD", "POST", "PUT", "PATCH", "DELETE", "OPTIONS"], id: \.self) { Text($0) } }
-                }
-                Section("Headers · Name: Value") { TextEditor(text: $headers).focused($editing).font(.body.monospaced()).frame(minHeight: 100).accessibilityLabel("Request headers") }
-                Section("Body") { TextEditor(text: $bodyText).focused($editing).font(.body.monospaced()).frame(minHeight: 150).accessibilityLabel("Request body") }
-                Button { Task { await store.execute(url: url, method: method, headers: headers, body: bodyText) } } label: { Label("Send request", systemImage: "paperplane") }.disabled(store.running || url.isEmpty)
-                if store.running { ProgressView("Sending…") }
-                if let error = store.error { Text(error).foregroundStyle(.red) }
-                if let record = store.latest ?? store.records.first { NavigationLink("Open latest response") { RecordView(record: record, store: store) } }
+            GeometryReader { geometry in
+                if geometry.size.width >= 900 && !dynamicTypeSize.isAccessibilitySize {
+                    HStack(alignment: .top, spacing: 24) {
+                        requestForm(showLatest: false).frame(width: 460)
+                        ScrollView {
+                            if let record = store.latest ?? store.records.first {
+                                DiagnosticPanel(title: "Latest response", illustration: .traffic) {
+                                    RecordRow(record: record)
+                                    ConnectionOverview(record: record)
+                                    Text(String(record.responseBody.prefix(1200))).font(.callout.monospaced()).textSelection(.enabled)
+                                    NavigationLink("Open full response") { RecordView(record: record, store: store) }
+                                }
+                            } else {
+                                DiagnosticPanel(title: "Response workspace", illustration: .traffic) { Text("Send a request to inspect headers, body, certificates and timings.").foregroundStyle(.secondary) }
+                            }
+                        }.frame(maxWidth: 660)
+                    }.padding(24).frame(maxWidth: .infinity).background(Color(uiColor: .systemGroupedBackground))
+                } else { requestForm(showLatest: true) }
             }.scrollDismissesKeyboard(.interactively).navigationTitle("Request workspace")
             .sheet(isPresented: $importCURL) {
                 NavigationStack { Form {
@@ -78,9 +124,27 @@ struct RequestView: View {
             .toolbar { ToolbarItem(placement: .topBarTrailing) { Button("Import cURL", systemImage: "square.and.arrow.down") { importCURL = true } }; ToolbarItemGroup(placement: .keyboard) { Spacer(); Button("Done") { editing = false } } }
         }
     }
+    private func requestForm(showLatest: Bool) -> some View {
+        Form {
+                Section("Request") {
+                    TextField("https://example.com/api", text: $url).keyboardType(.URL).textInputAutocapitalization(.never).autocorrectionDisabled()
+                    Picker("Method", selection: $method) { ForEach(["GET", "HEAD", "POST", "PUT", "PATCH", "DELETE", "OPTIONS"], id: \.self) { Text($0) } }
+                }
+                Section("Headers · Name: Value") { TextEditor(text: $headers).focused($editing).font(.body.monospaced()).frame(minHeight: 100).accessibilityLabel("Request headers") }
+                Section("Body") { TextEditor(text: $bodyText).focused($editing).font(.body.monospaced()).frame(minHeight: 150).accessibilityLabel("Request body") }
+                Section("Download integrity · optional") { TextField("Expected SHA-256 checksum", text: $expectedSHA256).textInputAutocapitalization(.never).autocorrectionDisabled().font(.body.monospaced()) }
+                Button { Task { await store.execute(url: url, method: method, headers: headers, body: bodyText, expectedSHA256: expectedSHA256) } } label: { Label("Send request", systemImage: "paperplane").frame(maxWidth: .infinity) }.buttonStyle(.borderedProminent).controlSize(.large).disabled(store.running || url.isEmpty)
+                if store.running { ProgressView("Sending…") }
+                if let error = store.error { Text(error).foregroundStyle(.red) }
+                if showLatest, let record = store.latest ?? store.records.first { NavigationLink("Open latest response") { RecordView(record: record, store: store) } }
+
+        }.scrollContentBackground(.hidden)
+    }
+
 }
 struct HistoryView: View {
     let store: DiagnosticStore
+    @Environment(\.dynamicTypeSize) private var dynamicTypeSize
     @State private var query = ""
     @State private var filtered: [DiagnosticRecord] = []
     @State private var confirmClear = false
@@ -90,23 +154,27 @@ struct HistoryView: View {
     @State private var showSettings = false
     var body: some View {
         NavigationStack {
-            List {
-                Section {
-                    Picker("Response type", selection: $category) { ForEach(ResponseCategory.allCases) { Text($0.rawValue).tag($0) } }
-                    Toggle("Favorites only", isOn: $favoritesOnly)
-                    let statistics = TrafficStatistics(filtered)
-                    LabeledContent("Requests", value: statistics.count.formatted())
-                    LabeledContent("Response data", value: statistics.bytes.formatted(.byteCount(style: .file)))
-                    LabeledContent("Average duration", value: statistics.averageDuration.formatted(.number.precision(.fractionLength(3))) + " s")
-                    LabeledContent("Failures", value: statistics.failures.formatted())
+            GeometryReader { geometry in
+                if geometry.size.width >= 900 && !dynamicTypeSize.isAccessibilitySize {
+                    HStack(alignment: .top, spacing: 24) {
+                        ScrollView {
+                            DiagnosticPanel(title: "Traffic overview", illustration: .traffic) { filters; TrafficOverview(statistics: TrafficStatistics(filtered)) }
+                        }.frame(width: 340)
+                        List(filtered) { record in NavigationLink { RecordView(record: record, store: store) } label: { RecordRow(record: record) } }.scrollContentBackground(.hidden).frame(maxWidth: 760)
+                    }.padding(24).frame(maxWidth: .infinity).background(Color(uiColor: .systemGroupedBackground))
+                } else {
+                    List {
+                        Section { filters; TrafficOverview(statistics: TrafficStatistics(filtered)) }
+                        ForEach(filtered) { record in NavigationLink { RecordView(record: record, store: store) } label: { RecordRow(record: record) } }
+                    }
                 }
-                ForEach(filtered) { record in NavigationLink { RecordView(record: record, store: store) } label: { RecordRow(record: record) } }
             }
+
                 .overlay { if store.records.isEmpty { ContentUnavailableView("No connections yet", systemImage: "network", description: Text("Inspect a host or send a request to begin.")) } }
                 .searchable(text: $query, prompt: "URL, method or status")
                 .navigationTitle("History")
                 .sheet(isPresented: $showSettings) { RecordingSettingsView(store: store) }
-                .toolbar { Button("Recording settings", systemImage: "gearshape") { showSettings = true }; ShareLink(item: HARArchive(records: store.records), preview: SharePreview("Diagnostics archive")) { Label("Export HAR", systemImage: "square.and.arrow.up") }; Button("Import HAR", systemImage: "square.and.arrow.down") { importHAR = true }; Button("Clear", systemImage: "trash") { confirmClear = true }.disabled(store.records.isEmpty) }
+                .toolbar { ShareLink(item: DiagnosticLogExport(records: store.records), preview: SharePreview("Diagnostic log")) { Label("Export log", systemImage: "doc.text") }; Button("Recording settings", systemImage: "gearshape") { showSettings = true }; ShareLink(item: HARArchive(records: store.records), preview: SharePreview("Diagnostics archive")) { Label("Export HAR", systemImage: "square.and.arrow.up") }; Button("Import HAR", systemImage: "square.and.arrow.down") { importHAR = true }; Button("Clear", systemImage: "trash") { confirmClear = true }.disabled(store.records.isEmpty) }
                 .confirmationDialog("Delete all local diagnostics?", isPresented: $confirmClear) { Button("Delete history", role: .destructive) { store.clear() } }
                 .fileImporter(isPresented: $importHAR, allowedContentTypes: [.json, .data]) { result in do { let url = try result.get(); let accessed = url.startAccessingSecurityScopedResource(); defer { if accessed { url.stopAccessingSecurityScopedResource() } }; try store.importHAR(Data(contentsOf: url)) } catch { store.error = error.localizedDescription } }
                 .onChange(of: query, initial: true) { refresh() }
@@ -116,23 +184,49 @@ struct HistoryView: View {
                 .onChange(of: store.settings.favorites) { refresh() }
         }
     }
+    private var filters: some View {
+        VStack(alignment: .leading, spacing: 16) {
+            Picker("Response type", selection: $category) { ForEach(ResponseCategory.allCases) { Text($0.rawValue).tag($0) } }
+            Toggle("Favorites only", isOn: $favoritesOnly)
+        }
+    }
     private func refresh() { filtered = store.records.filter { (query.isEmpty || "\($0.url) \($0.method) \($0.status ?? 0)".localizedCaseInsensitiveContains(query)) && category.matches($0) && (!favoritesOnly || store.settings.favorites.contains($0.id)) } }
 }
 struct RecordRow: View {
     let record: DiagnosticRecord
     var body: some View {
-        VStack(alignment: .leading, spacing: 6) {
+        HStack(alignment: .top, spacing: 12) {
+            SupportingIllustration(kind: .traffic)
+            VStack(alignment: .leading, spacing: 6) {
             Text(record.url).font(.headline).lineLimit(2)
             Label("\(record.method) · \(record.status.map(String.init) ?? "Failed")", systemImage: record.error == nil ? "checkmark.circle" : "exclamationmark.triangle").foregroundStyle(record.error == nil ? Color.secondary : Color.red)
             Text(record.date, format: .dateTime.month().day().hour().minute()).font(.caption).foregroundStyle(.secondary)
+            }
         }.padding(.vertical, 4)
     }
 }
 struct RecordView: View {
     let record: DiagnosticRecord
     let store: DiagnosticStore
+    @Environment(\.dynamicTypeSize) private var dynamicTypeSize
     var body: some View {
+        GeometryReader { geometry in
+            if geometry.size.width >= 900 && !dynamicTypeSize.isAccessibilitySize {
+                HStack(alignment: .top, spacing: 24) {
+                    ScrollView {
+                        VStack(spacing: 20) {
+                            DiagnosticPanel(title: "Connection overview", illustration: .traffic) { ConnectionOverview(record: record) }
+                            DiagnosticPanel(title: "Measured timings", illustration: .timing) { ConnectionTimingChart(record: record) }
+                        }
+                    }.frame(width: 360)
+                    detailList(includeOverview: false).frame(maxWidth: 760)
+                }.padding(24).frame(maxWidth: .infinity).background(Color(uiColor: .systemGroupedBackground))
+            } else { detailList(includeOverview: true) }
+        }.navigationTitle("Connection details").navigationBarTitleDisplayMode(.inline).toolbar { Button("Favorite", systemImage: store.settings.favorites.contains(record.id) ? "star.fill" : "star") { store.toggleFavorite(record.id) } }
+    }
+    private func detailList(includeOverview: Bool) -> some View {
         List {
+            if includeOverview { Section { ConnectionOverview(record: record) } }
             Section("Connection") {
                 Text(record.url).textSelection(.enabled)
                 LabeledContent("Status", value: record.status.map(String.init) ?? "Failed")
@@ -142,26 +236,34 @@ struct RecordView: View {
                 LabeledContent("Remote address", value: record.remoteAddress ?? "Not reported")
                 if let error = record.error { Text(error).foregroundStyle(.red) }
             }
+            if let checksum = record.responseSHA256 {
+                Section("Download integrity") {
+                    Text("SHA-256 of the complete received response").font(.caption).foregroundStyle(.secondary)
+                    Text(checksum).font(.body.monospaced()).textSelection(.enabled)
+                    if let matches = record.integrityMatches { Label(matches ? "Checksum matches" : "Checksum mismatch", systemImage: matches ? "checkmark.shield" : "exclamationmark.shield").foregroundStyle(matches ? Color.diagnosticAccent : Color.red) }
+                }
+            }
             Section("Timings") {
+                if includeOverview { ConnectionTimingChart(record: record) }
                 LabeledContent("Total", value: record.duration.formatted(.number.precision(.fractionLength(3))) + " s")
                 if let d = record.dnsDuration { LabeledContent("DNS", value: d.formatted() + " s") }
                 if let d = record.connectDuration { LabeledContent("Connect", value: d.formatted() + " s") }
                 if let d = record.tlsDuration { LabeledContent("TLS handshake", value: d.formatted() + " s") }
                 LabeledContent("Response size", value: record.bytes.formatted(.byteCount(style: .file)))
             }
-            Section("Certificate chain") {
+            Section {
                 if let valid = record.trustValid { Label(valid ? "Trusted by the system" : "Trust validation failed", systemImage: valid ? "checkmark.shield" : "exclamationmark.shield") }
                 if let message = record.trustMessage { Text(message) }
                 ForEach(record.certificates) { certificate in
                     DisclosureGroup(certificate.subject) { Text("SHA-256").font(.caption); Text(certificate.id).font(.body.monospaced()).textSelection(.enabled); if let keyDetails = CertificateAnalysis.publicKeyDetails(certificate.der) { Text(keyDetails) }; ForEach(CertificateAnalysis.findings(certificate)) { finding in VStack(alignment: .leading) { Label(finding.title, systemImage: "exclamationmark.triangle").foregroundStyle(.orange); Text(finding.detail) } }; ForEach((try? X509.fields(certificate.der)) ?? []) { field in VStack(alignment: .leading) { Text(field.name).font(.caption).foregroundStyle(.secondary); Text(field.value).textSelection(.enabled) } }; ShareLink("Export DER", item: CertificateExport(certificate: certificate), preview: SharePreview(certificate.subject)) }
                 }
-            }
+            } header: { IllustratedSectionTitle(title: "Certificate chain", kind: .certificate) }
             Section("Response headers") { Text(record.responseHeaders.sorted { $0.key < $1.key }.map { "\($0.key): \($0.value)" }.joined(separator: "\n")).font(.body.monospaced()).textSelection(.enabled) }
-            Section("Response body · up to 2 MB") { Text(record.responseBody).font(.body.monospaced()).textSelection(.enabled) }
+            Section(record.responseEncoding == "base64" ? "Response body · Base64 · up to 2 MB" : "Response body · up to 2 MB") { Text(record.responseBody).font(.body.monospaced()).textSelection(.enabled) }
             Section {
                 ShareLink("Copy or share as cURL", item: record.curl)
                 Button("Replay request") { Task { await store.execute(url: record.url, method: record.method, headers: record.requestHeaders.map { "\($0.key): \($0.value)" }.joined(separator: "\n"), body: record.requestBody) } }.disabled(store.running)
             }
-        }.navigationTitle("Connection details").navigationBarTitleDisplayMode(.inline).toolbar { Button("Favorite", systemImage: store.settings.favorites.contains(record.id) ? "star.fill" : "star") { store.toggleFavorite(record.id) } }
+        }.scrollContentBackground(.hidden)
     }
 }
