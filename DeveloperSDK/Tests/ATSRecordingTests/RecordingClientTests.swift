@@ -88,6 +88,53 @@ struct RecordingClientTests {
         try writeHARFixture(data, name: "SDK-Post-Partial")
     }
 
+    @Test func observationsReportRecordingAndClearThenFinish() async throws {
+        let recorder = try RecordingClient()
+        let observation = try await recorder.observe()
+        var iterator = observation.events.makeAsyncIterator()
+        let initial = try #require(await iterator.next()); #expect(initial.revision == 0)
+        let session = session(); defer { session.invalidateAndCancel() }
+        _ = try await recorder.data(for: URLRequest(url: URL(string: "https://fixture.invalid/events")!), using: session)
+        let event = try #require(await iterator.next())
+        let record = try #require(await recorder.records().first)
+        if case .recorded(let id) = event.kind { #expect(id == record.id) } else { Issue.record("Expected recorded event") }
+        #expect(event.revision == 1)
+        await recorder.clear()
+        let clear = try #require(await iterator.next())
+        if case .cleared = clear.kind {} else { Issue.record("Expected cleared event") }
+        #expect(clear.revision == 2)
+        await observation.cancel(); #expect(await iterator.next() == nil)
+    }
+    @Test func slowObserverCanDetectGapsAndReloadCurrentJournal() async throws {
+        let recorder = try RecordingClient()
+        let observation = try await recorder.observe()
+        var iterator = observation.events.makeAsyncIterator(); _ = await iterator.next()
+        for _ in 0..<65 { await recorder.clear() }
+        let session = session(); defer { session.invalidateAndCancel() }
+        _ = try await recorder.data(for: URLRequest(url: URL(string: "https://fixture.invalid/current")!), using: session)
+        let event = try #require(await iterator.next()); #expect(event.revision > 1)
+        #expect(await recorder.records().first?.url.hasSuffix("/current") == true)
+        await observation.cancel()
+    }
+    @Test func observerLimitCanBeReleasedExplicitly() async throws {
+        let recorder = try RecordingClient()
+        var observations: [RecordingObservation] = []
+        for _ in 0..<16 { observations.append(try await recorder.observe()) }
+        await #expect(throws: RecordingClient.ObservationError.self) { try await recorder.observe() }
+        await observations.removeLast().cancel()
+        let replacement = try await recorder.observe(); await replacement.cancel()
+        for observation in observations { await observation.cancel() }
+    }
+
+    @Test func observationDoesNotRetainItsProducer() async throws {
+        let (observation, weakOwner) = try await detachedObservation()
+        await Task.yield()
+        #expect(weakOwner.value == nil)
+        var iterator = observation.events.makeAsyncIterator()
+        _ = await iterator.next()
+        #expect(await iterator.next() == nil)
+    }
+
 }
 
 func writeHARFixture(_ data: Data, name: String) throws {
@@ -95,4 +142,13 @@ func writeHARFixture(_ data: Data, name: String) throws {
     let directory = URL(fileURLWithPath: path, isDirectory: true)
     try FileManager.default.createDirectory(at: directory, withIntermediateDirectories: true)
     try data.write(to: directory.appendingPathComponent(name + ".json"), options: .atomic)
+}
+
+private final class WeakRecordingOwner: @unchecked Sendable {
+    weak var value: RecordingClient?
+    init(_ value: RecordingClient) { self.value = value }
+}
+private func detachedObservation() async throws -> (RecordingObservation, WeakRecordingOwner) {
+    let client = try RecordingClient()
+    return (try await client.observe(), WeakRecordingOwner(client))
 }

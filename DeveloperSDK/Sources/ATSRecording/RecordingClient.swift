@@ -22,15 +22,30 @@ public struct RecordedExchange: Codable, Sendable, Identifiable {
     public var responsePreviewTruncated: Bool { responseBytes.map { $0 > responseBodyPreview.count } ?? true }
 }
 
+public struct RecordingEvent: Sendable {
+    public enum Kind: Sendable { case initial, recorded(UUID), recordingOmitted(UUID), cleared }
+    public let revision: UInt64
+    public let kind: Kind
+}
+public struct RecordingObservation: Sendable {
+    fileprivate let id: UUID
+    public let events: AsyncStream<RecordingEvent>
+    fileprivate weak var owner: RecordingClient?
+    public func cancel() async { await owner?.stopObserving(id) }
+}
+
 /// Opt-in recording around an existing URLSession. The caller receives the complete,
 /// unchanged response; only the journal preview is bounded. No trust handler is installed.
 public actor RecordingClient {
     public enum ConfigurationError: Error { case invalidLimits }
+    public enum ObservationError: Error { case tooManyObservers }
     private let countLimit: Int
     private let previewLimit: Int
     private let byteLimit: Int
     private var journal: [(record: RecordedExchange, encoded: Data)] = []
     private var encodedBytes = 2
+    private var revision: UInt64 = 0
+    private var observers: [UUID: AsyncStream<RecordingEvent>.Continuation] = [:]
 
     public init(countLimit: Int = 200, previewLimit: Int = 64 * 1024, byteLimit: Int = 64 * 1024 * 1024) throws {
         guard (1...1000).contains(countLimit), (0...16 * 1024 * 1024).contains(previewLimit), (2...512 * 1024 * 1024).contains(byteLimit) else { throw ConfigurationError.invalidLimits }
@@ -57,7 +72,26 @@ public actor RecordingClient {
     }
 
     public func records() -> [RecordedExchange] { journal.map(\.record) }
-    public func clear() { journal.removeAll(); encodedBytes = 2 }
+    public func clear() { journal.removeAll(); encodedBytes = 2; publish(.cleared) }
+    /// Buffered metadata-only events; revision gaps require a records() reload.
+    public func observe() throws -> RecordingObservation {
+        guard observers.count < 16 else { throw ObservationError.tooManyObservers }
+        let id = UUID()
+        let pair = AsyncStream<RecordingEvent>.makeStream(bufferingPolicy: .bufferingNewest(32))
+        observers[id] = pair.continuation
+        pair.continuation.onTermination = { [weak self] _ in Task { await self?.stopObserving(id) } }
+        pair.continuation.yield(RecordingEvent(revision: revision, kind: .initial))
+        return RecordingObservation(id: id, events: pair.stream, owner: self)
+    }
+    fileprivate func stopObserving(_ id: UUID) { observers.removeValue(forKey: id)?.finish() }
+    private func publish(_ kind: RecordingEvent.Kind) {
+        revision += 1
+        let event = RecordingEvent(revision: revision, kind: kind)
+        var terminated: [UUID] = []
+        for (id, continuation) in observers { if case .terminated = continuation.yield(event) { terminated.append(id) } }
+        for id in terminated { observers.removeValue(forKey: id) }
+    }
+    deinit { for continuation in observers.values { continuation.finish() } }
     public func jsonData() -> Data {
         var result = Data([0x5b])
         for (index, item) in journal.enumerated() { if index > 0 { result.append(0x2c) }; result.append(item.encoded) }
@@ -66,13 +100,14 @@ public actor RecordingClient {
 
     private func append(_ record: RecordedExchange) throws {
         let encoded = try JSONEncoder().encode(record)
-        guard encoded.count + 2 <= byteLimit else { return }
+        guard encoded.count + 2 <= byteLimit else { publish(.recordingOmitted(record.id)); return }
         journal.insert((record, encoded), at: 0)
         encodedBytes += encoded.count + (journal.count > 1 ? 1 : 0)
         while journal.count > countLimit || encodedBytes > byteLimit {
             let removed = journal.removeLast()
             encodedBytes -= removed.encoded.count + (journal.isEmpty ? 0 : 1)
         }
+        publish(.recorded(record.id))
     }
     private func preview(_ data: Data?) -> Data {
         guard let data, !data.isEmpty, previewLimit > 0 else { return Data() }

@@ -15,10 +15,16 @@ Die bestehende Session behält ihre Cookies, Weiterleitungen, Cache-, Proxy- und
 
 Standard: 200 Einträge, 64 KiB Vorschau je Körper, 64 MiB kodiertes Journal. Zu große Einträge werden ausgelassen; abgeschlossene ältere Einträge werden zur Einhaltung der Grenzen entfernt. `clear()` leert abgeschlossene Einträge und beendet keine laufenden Anfragen. Das Journal bleibt im Arbeitsspeicher. Exporte können vertrauliche Header oder Körper enthalten und müssen von der integrierenden App ausdrücklich geteilt werden.
 
-Noch offen: automatische URLProtocol-Integration, Streaming-/Upload-/Download-Aufzeichnung, vollständige Redirect- und Verbindungsmetriken, Ereignisbenachrichtigungen und Shake-/Präsentationshooks. Dieses Paket ist noch nicht in Build 38 eingebettet. Die vollständige historische SDK-Parität ist damit nicht erreicht.
+Noch offen: automatische URLProtocol-Integration, Streaming-/Upload-/Download-Aufzeichnung, vollständige Redirect- und Verbindungsmetriken, Shake-/Präsentationshooks. Dieses Paket ist noch nicht in Build 38 eingebettet. Die vollständige historische SDK-Parität ist damit nicht erreicht.
 
 Prüfung: `swift test`. Die Tests verwenden eine kontrollierte URLProtocol-Gegenstelle in der vom Aufrufer bereitgestellten Session und prüfen vollständige Rückgabe trotz leerer Vorschau, unveränderte Fehler, tatsächliche POST-Daten, begrenztes Journal und explizites Leeren.
 
 Zusätzlich: `ATS_RECORDING_LIVE=1 swift test` prüft example.com sowie die unveränderte Systemablehnung von expired.badssl.com und wrong.host.badssl.com. Diese Live-Prüfung wurde auf macOS ausgeführt; iOS ist bisher kompiliert, die SDK-Laufzeit dort noch nicht geprüft.
 
 HAR-Export und App-Import sind implementiert. Fehlende Protokollangaben bleiben unbekannt. Fehler und Hashwerte stammen aus der importierten Aufzeichnung und werden als solche gekennzeichnet. Bei gekürztem, binärem oder unbekanntem Anfragekörper wird keine vollständige Replay-Anfrage vorgetäuscht; die App deaktiviert Replay und cURL-Ausgabe. Anfragefelder stammen aus dem übergebenen URLRequest; von der Session ergänzte Cookies/Headers und einzelne Redirect-Hops sind noch nicht vollständig erfasst.
+
+## Ereignisse
+
+`let observation = try await recorder.observe()` liefert `observation.events`. Ereignisse melden den aktuellen Stand (`initial`), abgeschlossene Aufzeichnungen (`recorded` mit ID), wegen des Speicherlimits ausgelassene Aufzeichnungen (`recordingOmitted`) und das Leeren (`cleared`). Die Nutzdaten enthalten nur Revision/Typ/ID, keine Körperkopien. Jede Beobachtung puffert die neuesten 32 Ereignisse; maximal 16 Beobachter pro Recorder. Bei einer Revisionslücke `await recorder.records()` neu laden, statt alte Änderungen einzeln anzuwenden.
+
+`await observation.cancel()` meldet einen Beobachter explizit ab. Task-Abbruch beendet die AsyncStream-Beobachtung ebenfalls; bereits gepufferte Ereignisse können nach explizitem Abschluss noch ausgelesen werden. Ein Beobachter hält den Recorder nicht am Leben. Wird der Recorder freigegeben, enden seine Streams. Die aufrufende App entscheidet über Darstellung und Aktivierung.
