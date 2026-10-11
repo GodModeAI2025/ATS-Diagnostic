@@ -6,6 +6,8 @@
   "team": "SP73Z8JWXM",
   "archiveSucceeded": true,
   "unitTestsPassed": 99,
-  "uiRegressionPending": true,
-  "uploaded": false
+  "uiRegressionPending": false,
+  "uploaded": false,
+  "uiRegressionPassed": true,
+  "uploadStarted": true
 }
