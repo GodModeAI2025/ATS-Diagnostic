@@ -1,0 +1,15 @@
+{
+  "verifiedAt": "2026-10-11",
+  "appName": "ATS Diagnostic",
+  "appleId": "1297164068",
+  "bundleId": "com.mobilebox.atsdiagnostic",
+  "teamId": "SP73Z8JWXM",
+  "storeState": "Removed from App Store",
+  "draftVersion": "2.0",
+  "releaseMode": "Manual",
+  "primaryLanguage": "en-US",
+  "buildNumberVerified": true,
+  "testflightAvailable": false,
+  "lastVisibleHistoricalBuild": 29,
+  "newBuildNumber": 30
+}
