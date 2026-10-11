@@ -1,0 +1,27 @@
+{
+  "date" : "2026-10-11T22:13:29Z",
+  "duration" : 0.26967075,
+  "error" : "Zertifikat passt nicht zum Hostnamen",
+  "id" : "EE538F79-DCED-4485-8283-D7D3DF7B7777",
+  "method" : "GET",
+  "receivedBytes" : 0,
+  "requestPreview" : "R0VUIC8gSFRUUC8xLjENCkhvc3Q6IHdyb25nLmhvc3QuYmFkc3NsLmNvbQ0KQ29ubmVjdGlvbjogY2xvc2UNCg0K",
+  "responsePreview" : "",
+  "revision" : 4,
+  "sentBytes" : 0,
+  "state" : "failed",
+  "status" : 502,
+  "target" : "https:\/\/wrong.host.badssl.com\/",
+  "upstreamTrustErrors" : [
+    {
+      "code" : -67602,
+      "domain" : "NSOSStatusErrorDomain",
+      "message" : "“*.badssl.com” certificate name does not match input"
+    },
+    {
+      "code" : -67602,
+      "domain" : "NSOSStatusErrorDomain",
+      "message" : "Certificate 0 “*.badssl.com” has errors: SSL hostname does not match name(s) in certificate;"
+    }
+  ]
+}

@@ -1,0 +1,677 @@
+{
+  "counts": {
+    "expectedFailures": 0,
+    "failed": 0,
+    "notRun": 0,
+    "passed": 95,
+    "skipped": 0,
+    "total": 95
+  },
+  "results": [
+    {
+      "displayName": "rejectsTruncatedLength()",
+      "errorMessages": [],
+      "identifier": "ASN1Tests/rejectsTruncatedLength()",
+      "state": "Passed",
+      "targetName": "ATSDiagnosticTests"
+    },
+    {
+      "displayName": "rejectsLengthOverflow()",
+      "errorMessages": [],
+      "identifier": "ASN1Tests/rejectsLengthOverflow()",
+      "state": "Passed",
+      "targetName": "ATSDiagnosticTests"
+    },
+    {
+      "displayName": "decodesOID()",
+      "errorMessages": [],
+      "identifier": "ASN1Tests/decodesOID()",
+      "state": "Passed",
+      "targetName": "ATSDiagnosticTests"
+    },
+    {
+      "displayName": "decodesLargeSecondOIDArc()",
+      "errorMessages": [],
+      "identifier": "ASN1Tests/decodesLargeSecondOIDArc()",
+      "state": "Passed",
+      "targetName": "ATSDiagnosticTests"
+    },
+    {
+      "displayName": "readsSequence()",
+      "errorMessages": [],
+      "identifier": "ASN1Tests/readsSequence()",
+      "state": "Passed",
+      "targetName": "ATSDiagnosticTests"
+    },
+    {
+      "displayName": "utcCenturyBoundary()",
+      "errorMessages": [],
+      "identifier": "CertificateFieldTests/utcCenturyBoundary()",
+      "state": "Passed",
+      "targetName": "ATSDiagnosticTests"
+    },
+    {
+      "displayName": "decodesKeyUsage()",
+      "errorMessages": [],
+      "identifier": "CertificateFieldTests/decodesKeyUsage()",
+      "state": "Passed",
+      "targetName": "ATSDiagnosticTests"
+    },
+    {
+      "displayName": "alternativeNamesAreTyped()",
+      "errorMessages": [],
+      "identifier": "CertificateFieldTests/alternativeNamesAreTyped()",
+      "state": "Passed",
+      "targetName": "ATSDiagnosticTests"
+    },
+    {
+      "displayName": "pemRoundTripsCertificateBytes()",
+      "errorMessages": [],
+      "identifier": "CertificateFormatsTests/pemRoundTripsCertificateBytes()",
+      "state": "Passed",
+      "targetName": "ATSDiagnosticTests"
+    },
+    {
+      "displayName": "chainPreservesOrder()",
+      "errorMessages": [],
+      "identifier": "CertificateFormatsTests/chainPreservesOrder()",
+      "state": "Passed",
+      "targetName": "ATSDiagnosticTests"
+    },
+    {
+      "displayName": "unsafeSubjectCannotBecomeAPath()",
+      "errorMessages": [],
+      "identifier": "CertificateFormatsTests/unsafeSubjectCannotBecomeAPath()",
+      "state": "Passed",
+      "targetName": "ATSDiagnosticTests"
+    },
+    {
+      "displayName": "decodesOrganizationCountryAndUnicodeName()",
+      "errorMessages": [],
+      "identifier": "CertificateIssuerTests/decodesOrganizationCountryAndUnicodeName()",
+      "state": "Passed",
+      "targetName": "ATSDiagnosticTests"
+    },
+    {
+      "displayName": "utf16DirectoryString()",
+      "errorMessages": [],
+      "identifier": "CertificateIssuerTests/utf16DirectoryString()",
+      "state": "Passed",
+      "targetName": "ATSDiagnosticTests"
+    },
+    {
+      "displayName": "defaultIsOneWeekBeforeExpiry()",
+      "errorMessages": [],
+      "identifier": "CertificateReminderTests/defaultIsOneWeekBeforeExpiry()",
+      "state": "Passed",
+      "targetName": "ATSDiagnosticTests"
+    },
+    {
+      "displayName": "soonExpirySchedulesFutureReminder()",
+      "errorMessages": [],
+      "identifier": "CertificateReminderTests/soonExpirySchedulesFutureReminder()",
+      "state": "Passed",
+      "targetName": "ATSDiagnosticTests"
+    },
+    {
+      "displayName": "refusesExpiredCertificate()",
+      "errorMessages": [],
+      "identifier": "CertificateReminderTests/refusesExpiredCertificate()",
+      "state": "Passed",
+      "targetName": "ATSDiagnosticTests"
+    },
+    {
+      "displayName": "refusesReminderAfterExpiry()",
+      "errorMessages": [],
+      "identifier": "CertificateReminderTests/refusesReminderAfterExpiry()",
+      "state": "Passed",
+      "targetName": "ATSDiagnosticTests"
+    },
+    {
+      "displayName": "replacementIdentifierIsStable()",
+      "errorMessages": [],
+      "identifier": "CertificateReminderTests/replacementIdentifierIsStable()",
+      "state": "Passed",
+      "targetName": "ATSDiagnosticTests"
+    },
+    {
+      "displayName": "decodesLogTimestampAndAlgorithm()",
+      "errorMessages": [],
+      "identifier": "CertificateTransparencyTests/decodesLogTimestampAndAlgorithm()",
+      "state": "Passed",
+      "targetName": "ATSDiagnosticTests"
+    },
+    {
+      "displayName": "rejectsTruncatedSCT()",
+      "errorMessages": [],
+      "identifier": "CertificateTransparencyTests/rejectsTruncatedSCT()",
+      "state": "Passed",
+      "targetName": "ATSDiagnosticTests"
+    },
+    {
+      "displayName": "rejectsUnknownSCTVersion()",
+      "errorMessages": [],
+      "identifier": "CertificateTransparencyTests/rejectsUnknownSCTVersion()",
+      "state": "Passed",
+      "targetName": "ATSDiagnosticTests"
+    },
+    {
+      "displayName": "rejectsEmptySignature()",
+      "errorMessages": [],
+      "identifier": "CertificateTransparencyTests/rejectsEmptySignature()",
+      "state": "Passed",
+      "targetName": "ATSDiagnosticTests"
+    },
+    {
+      "displayName": "rejectsTrailingDataOutsideList()",
+      "errorMessages": [],
+      "identifier": "CertificateTransparencyTests/rejectsTrailingDataOutsideList()",
+      "state": "Passed",
+      "targetName": "ATSDiagnosticTests"
+    },
+    {
+      "displayName": "bundledDataHasIndependentStoresAndConstraints()",
+      "errorMessages": [],
+      "identifier": "CertificateTransparencyTests/bundledDataHasIndependentStoresAndConstraints()",
+      "state": "Passed",
+      "targetName": "ATSDiagnosticTests"
+    },
+    {
+      "displayName": "fingerprintsUseDERBytes()",
+      "errorMessages": [],
+      "identifier": "CertificateTransparencyTests/fingerprintsUseDERBytes()",
+      "state": "Passed",
+      "targetName": "ATSDiagnosticTests"
+    },
+    {
+      "displayName": "oldHistoryDecodesWithoutNewMetadata()",
+      "errorMessages": [],
+      "identifier": "CertificateTransparencyTests/oldHistoryDecodesWithoutNewMetadata()",
+      "state": "Passed",
+      "targetName": "ATSDiagnosticTests"
+    },
+    {
+      "displayName": "importsQuotedPayload()",
+      "errorMessages": [],
+      "identifier": "CURLImportTests/importsQuotedPayload()",
+      "state": "Passed",
+      "targetName": "ATSDiagnosticTests"
+    },
+    {
+      "displayName": "rejectsShellExecution()",
+      "errorMessages": [],
+      "identifier": "CURLImportTests/rejectsShellExecution()",
+      "state": "Passed",
+      "targetName": "ATSDiagnosticTests"
+    },
+    {
+      "displayName": "rejectsFileRead()",
+      "errorMessages": [],
+      "identifier": "CURLImportTests/rejectsFileRead()",
+      "state": "Passed",
+      "targetName": "ATSDiagnosticTests"
+    },
+    {
+      "displayName": "roundTripsExport()",
+      "errorMessages": [],
+      "identifier": "CURLImportTests/roundTripsExport()",
+      "state": "Passed",
+      "targetName": "ATSDiagnosticTests"
+    },
+    {
+      "displayName": "rejectsIncompleteQuotes()",
+      "errorMessages": [],
+      "identifier": "CURLImportTests/rejectsIncompleteQuotes()",
+      "state": "Passed",
+      "targetName": "ATSDiagnosticTests"
+    },
+    {
+      "displayName": "noDiagnosisFromHostname()",
+      "errorMessages": [],
+      "identifier": "DiagnosticFailureTests/noDiagnosisFromHostname()",
+      "state": "Passed",
+      "targetName": "ATSDiagnosticTests"
+    },
+    {
+      "displayName": "specificTrustErrorWinsOverGenericTLSFailure()",
+      "errorMessages": [],
+      "identifier": "DiagnosticFailureTests/specificTrustErrorWinsOverGenericTLSFailure()",
+      "state": "Passed",
+      "targetName": "ATSDiagnosticTests"
+    },
+    {
+      "displayName": "expiryUsesSystemEvidence()",
+      "errorMessages": [],
+      "identifier": "DiagnosticFailureTests/expiryUsesSystemEvidence()",
+      "state": "Passed",
+      "targetName": "ATSDiagnosticTests"
+    },
+    {
+      "displayName": "tlsVersionUsesActualPeerAlert()",
+      "errorMessages": [],
+      "identifier": "DiagnosticFailureTests/tlsVersionUsesActualPeerAlert()",
+      "state": "Passed",
+      "targetName": "ATSDiagnosticTests"
+    },
+    {
+      "displayName": "genericHandshakeDoesNotGuessCipher()",
+      "errorMessages": [],
+      "identifier": "DiagnosticFailureTests/genericHandshakeDoesNotGuessCipher()",
+      "state": "Passed",
+      "targetName": "ATSDiagnosticTests"
+    },
+    {
+      "displayName": "httpAndClientCertificateAreSeparate()",
+      "errorMessages": [],
+      "identifier": "DiagnosticFailureTests/httpAndClientCertificateAreSeparate()",
+      "state": "Passed",
+      "targetName": "ATSDiagnosticTests"
+    },
+    {
+      "displayName": "failedExtraRevocationDoesNotRewriteSuccessfulTransport()",
+      "errorMessages": [],
+      "identifier": "DiagnosticFailureTests/failedExtraRevocationDoesNotRewriteSuccessfulTransport()",
+      "state": "Passed",
+      "targetName": "ATSDiagnosticTests"
+    },
+    {
+      "displayName": "evidenceCapturesNestedSSLCode()",
+      "errorMessages": [],
+      "identifier": "DiagnosticFailureTests/evidenceCapturesNestedSSLCode()",
+      "state": "Passed",
+      "targetName": "ATSDiagnosticTests"
+    },
+    {
+      "displayName": "oldRecordKeepsRawUnknownFailure()",
+      "errorMessages": [],
+      "identifier": "DiagnosticFailureTests/oldRecordKeepsRawUnknownFailure()",
+      "state": "Passed",
+      "targetName": "ATSDiagnosticTests"
+    },
+    {
+      "displayName": "rejectsUnboundedOrNonFiniteValues()",
+      "errorMessages": [],
+      "identifier": "DiagnosticOptionsTests/rejectsUnboundedOrNonFiniteValues()",
+      "state": "Passed",
+      "targetName": "ATSDiagnosticTests"
+    },
+    {
+      "displayName": "resourceDeadlineCanBeShorterThanIdleDeadline()",
+      "errorMessages": [],
+      "identifier": "DiagnosticOptionsTests/resourceDeadlineCanBeShorterThanIdleDeadline()",
+      "state": "Passed",
+      "targetName": "ATSDiagnosticTests"
+    },
+    {
+      "displayName": "invalidPersistedValuesFallBackToStandard()",
+      "errorMessages": [],
+      "identifier": "DiagnosticOptionsTests/invalidPersistedValuesFallBackToStandard()",
+      "state": "Passed",
+      "targetName": "ATSDiagnosticTests"
+    },
+    {
+      "displayName": "configurationAndActualRequestUseSelectedLimits()",
+      "errorMessages": [],
+      "identifier": "DiagnosticOptionsTests/configurationAndActualRequestUseSelectedLimits()",
+      "state": "Passed",
+      "targetName": "ATSDiagnosticTests"
+    },
+    {
+      "displayName": "smallPreviewDoesNotChangeCompleteResponseHash()",
+      "errorMessages": [],
+      "identifier": "DiagnosticOptionsTests/smallPreviewDoesNotChangeCompleteResponseHash()",
+      "state": "Passed",
+      "targetName": "ATSDiagnosticTests"
+    },
+    {
+      "displayName": "previewCanBeDisabledWithoutLosingHashOrByteCount()",
+      "errorMessages": [],
+      "identifier": "DiagnosticOptionsTests/previewCanBeDisabledWithoutLosingHashOrByteCount()",
+      "state": "Passed",
+      "targetName": "ATSDiagnosticTests"
+    },
+    {
+      "displayName": "historicalRecordsWithoutOptionsStillDecode()",
+      "errorMessages": [],
+      "identifier": "DiagnosticOptionsTests/historicalRecordsWithoutOptionsStillDecode()",
+      "state": "Passed",
+      "targetName": "ATSDiagnosticTests"
+    },
+    {
+      "displayName": "defaultsToHTTPS()",
+      "errorMessages": [],
+      "identifier": "EndpointTests/defaultsToHTTPS()",
+      "state": "Passed",
+      "targetName": "ATSDiagnosticTests"
+    },
+    {
+      "displayName": "rejectsCredentials()",
+      "errorMessages": [],
+      "identifier": "EndpointTests/rejectsCredentials()",
+      "state": "Passed",
+      "targetName": "ATSDiagnosticTests"
+    },
+    {
+      "displayName": "rejectsOtherSchemes()",
+      "errorMessages": [],
+      "identifier": "EndpointTests/rejectsOtherSchemes()",
+      "state": "Passed",
+      "targetName": "ATSDiagnosticTests"
+    },
+    {
+      "displayName": "shellQuoteProtectsApostrophes()",
+      "errorMessages": [],
+      "identifier": "EndpointTests/shellQuoteProtectsApostrophes()",
+      "state": "Passed",
+      "targetName": "ATSDiagnosticTests"
+    },
+    {
+      "displayName": "acceptsBrowserCookiesAndOptionalBodies()",
+      "errorMessages": [],
+      "identifier": "ExternalHARTests/acceptsBrowserCookiesAndOptionalBodies()",
+      "state": "Passed",
+      "targetName": "ATSDiagnosticTests"
+    },
+    {
+      "displayName": "preservesBinaryEncoding()",
+      "errorMessages": [],
+      "identifier": "ExternalHARTests/preservesBinaryEncoding()",
+      "state": "Passed",
+      "targetName": "ATSDiagnosticTests"
+    },
+    {
+      "displayName": "preservesReplayData()",
+      "errorMessages": [],
+      "identifier": "HARTests/preservesReplayData()",
+      "state": "Passed",
+      "targetName": "ATSDiagnosticTests"
+    },
+    {
+      "displayName": "rejectsConnectionNominatedLength()",
+      "errorMessages": [],
+      "identifier": "HTTPProxyFramingSafetyTests/rejectsConnectionNominatedLength()",
+      "state": "Passed",
+      "targetName": "ATSDiagnosticTests"
+    },
+    {
+      "displayName": "rejectsControlCharacterInChunkExtension()",
+      "errorMessages": [],
+      "identifier": "HTTPProxyFramingSafetyTests/rejectsControlCharacterInChunkExtension()",
+      "state": "Passed",
+      "targetName": "ATSDiagnosticTests"
+    },
+    {
+      "displayName": "rejectsTrailerFramingOverride()",
+      "errorMessages": [],
+      "identifier": "HTTPProxyFramingSafetyTests/rejectsTrailerFramingOverride()",
+      "state": "Passed",
+      "targetName": "ATSDiagnosticTests"
+    },
+    {
+      "displayName": "incompleteHeaderWaits()",
+      "errorMessages": [],
+      "identifier": "HTTPProxyMessageTests/incompleteHeaderWaits()",
+      "state": "Passed",
+      "targetName": "ATSDiagnosticTests"
+    },
+    {
+      "displayName": "parsesChunkedWithTrailers()",
+      "errorMessages": [],
+      "identifier": "HTTPProxyMessageTests/parsesChunkedWithTrailers()",
+      "state": "Passed",
+      "targetName": "ATSDiagnosticTests"
+    },
+    {
+      "displayName": "rejectsAmbiguousFraming()",
+      "errorMessages": [],
+      "identifier": "HTTPProxyMessageTests/rejectsAmbiguousFraming()",
+      "state": "Passed",
+      "targetName": "ATSDiagnosticTests"
+    },
+    {
+      "displayName": "rejectsConflictingDuplicateLengths()",
+      "errorMessages": [],
+      "identifier": "HTTPProxyMessageTests/rejectsConflictingDuplicateLengths()",
+      "state": "Passed",
+      "targetName": "ATSDiagnosticTests"
+    },
+    {
+      "displayName": "acceptsMatchingDuplicateLengths()",
+      "errorMessages": [],
+      "identifier": "HTTPProxyMessageTests/acceptsMatchingDuplicateLengths()",
+      "state": "Passed",
+      "targetName": "ATSDiagnosticTests"
+    },
+    {
+      "displayName": "preservesPipelinedBytes()",
+      "errorMessages": [],
+      "identifier": "HTTPProxyMessageTests/preservesPipelinedBytes()",
+      "state": "Passed",
+      "targetName": "ATSDiagnosticTests"
+    },
+    {
+      "displayName": "supportsIPv6Connect()",
+      "errorMessages": [],
+      "identifier": "HTTPProxyMessageTests/supportsIPv6Connect()",
+      "state": "Passed",
+      "targetName": "ATSDiagnosticTests"
+    },
+    {
+      "displayName": "removesProxyCredentialsFromUpstream()",
+      "errorMessages": [],
+      "identifier": "HTTPProxyMessageTests/removesProxyCredentialsFromUpstream()",
+      "state": "Passed",
+      "targetName": "ATSDiagnosticTests"
+    },
+    {
+      "displayName": "rejectsOversizedChunkWithoutAllocation()",
+      "errorMessages": [],
+      "identifier": "HTTPProxyMessageTests/rejectsOversizedChunkWithoutAllocation()",
+      "state": "Passed",
+      "targetName": "ATSDiagnosticTests"
+    },
+    {
+      "displayName": "rejectsWhitespaceBeforeHeaderColon()",
+      "errorMessages": [],
+      "identifier": "HTTPProxyMessageTests/rejectsWhitespaceBeforeHeaderColon()",
+      "state": "Passed",
+      "targetName": "ATSDiagnosticTests"
+    },
+    {
+      "displayName": "acceptsColonSeparatedDigest()",
+      "errorMessages": [],
+      "identifier": "IntegrityTests/acceptsColonSeparatedDigest()",
+      "state": "Passed",
+      "targetName": "ATSDiagnosticTests"
+    },
+    {
+      "displayName": "rejectsTruncatedChecksum()",
+      "errorMessages": [],
+      "identifier": "IntegrityTests/rejectsTruncatedChecksum()",
+      "state": "Passed",
+      "targetName": "ATSDiagnosticTests"
+    },
+    {
+      "displayName": "rejectsNonHexadecimal()",
+      "errorMessages": [],
+      "identifier": "IntegrityTests/rejectsNonHexadecimal()",
+      "state": "Passed",
+      "targetName": "ATSDiagnosticTests"
+    },
+    {
+      "displayName": "emptyMeansNoExpectedChecksum()",
+      "errorMessages": [],
+      "identifier": "IntegrityTests/emptyMeansNoExpectedChecksum()",
+      "state": "Passed",
+      "targetName": "ATSDiagnosticTests"
+    },
+    {
+      "displayName": "httpActuallyForwardsOriginFormAndStripsProxySecret()",
+      "errorMessages": [],
+      "identifier": "LocalProxyTests/httpActuallyForwardsOriginFormAndStripsProxySecret()",
+      "state": "Passed",
+      "targetName": "ATSDiagnosticTests"
+    },
+    {
+      "displayName": "connectRelaysLargeOpaqueBytesAndHalfClose()",
+      "errorMessages": [],
+      "identifier": "LocalProxyTests/connectRelaysLargeOpaqueBytesAndHalfClose()",
+      "state": "Passed",
+      "targetName": "ATSDiagnosticTests"
+    },
+    {
+      "displayName": "ambiguousFramingRejectedBeforeConnecting()",
+      "errorMessages": [],
+      "identifier": "LocalProxyTests/ambiguousFramingRejectedBeforeConnecting()",
+      "state": "Passed",
+      "targetName": "ATSDiagnosticTests"
+    },
+    {
+      "displayName": "selfLoopRejectedAndIdleConnectionClosed()",
+      "errorMessages": [],
+      "identifier": "LocalProxyTests/selfLoopRejectedAndIdleConnectionClosed()",
+      "state": "Passed",
+      "targetName": "ATSDiagnosticTests"
+    },
+    {
+      "displayName": "interimResponseDoesNotHideFinalStatus()",
+      "errorMessages": [],
+      "identifier": "LocalProxyTests/interimResponseDoesNotHideFinalStatus()",
+      "state": "Passed",
+      "targetName": "ATSDiagnosticTests"
+    },
+    {
+      "displayName": "upgradeHeadersArePreservedButProxyAuthIsNot()",
+      "errorMessages": [],
+      "identifier": "LocalProxyTests/upgradeHeadersArePreservedButProxyAuthIsNot()",
+      "state": "Passed",
+      "targetName": "ATSDiagnosticTests"
+    },
+    {
+      "displayName": "serverHalfCloseDoesNotDiscardLaterClientBytes()",
+      "errorMessages": [],
+      "identifier": "LocalProxyTests/serverHalfCloseDoesNotDiscardLaterClientBytes()",
+      "state": "Passed",
+      "targetName": "ATSDiagnosticTests"
+    },
+    {
+      "displayName": "upgradeBecomesBidirectionalStream()",
+      "errorMessages": [],
+      "identifier": "LocalProxyTests/upgradeBecomesBidirectionalStream()",
+      "state": "Passed",
+      "targetName": "ATSDiagnosticTests"
+    },
+    {
+      "displayName": "postBodyReallyReachesOriginWithNormalizedLength()",
+      "errorMessages": [],
+      "identifier": "LocalProxyTests/postBodyReallyReachesOriginWithNormalizedLength()",
+      "state": "Passed",
+      "targetName": "ATSDiagnosticTests"
+    },
+    {
+      "displayName": "cspKeepsValuesTogether()",
+      "errorMessages": [],
+      "identifier": "PolicyDirectivesTests/cspKeepsValuesTogether()",
+      "state": "Passed",
+      "targetName": "ATSDiagnosticTests"
+    },
+    {
+      "displayName": "permissionsKeepQuotedCommas()",
+      "errorMessages": [],
+      "identifier": "PolicyDirectivesTests/permissionsKeepQuotedCommas()",
+      "state": "Passed",
+      "targetName": "ATSDiagnosticTests"
+    },
+    {
+      "displayName": "otherHeadersAreNotInterpretedAsPolicies()",
+      "errorMessages": [],
+      "identifier": "PolicyDirectivesTests/otherHeadersAreNotInterpretedAsPolicies()",
+      "state": "Passed",
+      "targetName": "ATSDiagnosticTests"
+    },
+    {
+      "displayName": "excludesRegexMatches()",
+      "errorMessages": [],
+      "identifier": "RecordingSettingsTests/excludesRegexMatches()",
+      "state": "Passed",
+      "targetName": "ATSDiagnosticTests"
+    },
+    {
+      "displayName": "rejectsMalformedPattern()",
+      "errorMessages": [],
+      "identifier": "RecordingSettingsTests/rejectsMalformedPattern()",
+      "state": "Passed",
+      "targetName": "ATSDiagnosticTests"
+    },
+    {
+      "displayName": "categoriesIgnoreHeaderCase()",
+      "errorMessages": [],
+      "identifier": "RecordingSettingsTests/categoriesIgnoreHeaderCase()",
+      "state": "Passed",
+      "targetName": "ATSDiagnosticTests"
+    },
+    {
+      "displayName": "statisticsHaveNoDivideByZero()",
+      "errorMessages": [],
+      "identifier": "RecordingSettingsTests/statisticsHaveNoDivideByZero()",
+      "state": "Passed",
+      "targetName": "ATSDiagnosticTests"
+    },
+    {
+      "displayName": "validatesSignatureAndFindsSerial()",
+      "errorMessages": [],
+      "identifier": "SignedCRLTests/validatesSignatureAndFindsSerial()",
+      "state": "Passed",
+      "targetName": "ATSDiagnosticTests"
+    },
+    {
+      "displayName": "rejectsTamperedSignature()",
+      "errorMessages": [],
+      "identifier": "SignedCRLTests/rejectsTamperedSignature()",
+      "state": "Passed",
+      "targetName": "ATSDiagnosticTests"
+    },
+    {
+      "displayName": "rejectsStaleList()",
+      "errorMessages": [],
+      "identifier": "SignedCRLTests/rejectsStaleList()",
+      "state": "Passed",
+      "targetName": "ATSDiagnosticTests"
+    },
+    {
+      "displayName": "rejectsWrongIssuer()",
+      "errorMessages": [],
+      "identifier": "SignedCRLTests/rejectsWrongIssuer()",
+      "state": "Passed",
+      "targetName": "ATSDiagnosticTests"
+    },
+    {
+      "displayName": "rejectsDeltaWithoutBase()",
+      "errorMessages": [],
+      "identifier": "SignedCRLTests/rejectsDeltaWithoutBase()",
+      "state": "Passed",
+      "targetName": "ATSDiagnosticTests"
+    },
+    {
+      "displayName": "verifiesDistributionPointScope()",
+      "errorMessages": [],
+      "identifier": "SignedCRLTests/verifiesDistributionPointScope()",
+      "state": "Passed",
+      "targetName": "ATSDiagnosticTests"
+    },
+    {
+      "displayName": "rejectsIndirectAndPartialReasonLists()",
+      "errorMessages": [],
+      "identifier": "SignedCRLTests/rejectsIndirectAndPartialReasonLists()",
+      "state": "Passed",
+      "targetName": "ATSDiagnosticTests"
+    },
+    {
+      "displayName": "hashesEntireResponseBeyondPreviewLimit()",
+      "errorMessages": [],
+      "identifier": "StreamingIntegrityTests/hashesEntireResponseBeyondPreviewLimit()",
+      "state": "Passed",
+      "targetName": "ATSDiagnosticTests"
+    }
+  ]
+}

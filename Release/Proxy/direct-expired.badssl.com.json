@@ -1,0 +1,27 @@
+{
+  "date" : "2026-10-11T22:13:29Z",
+  "duration" : 0.271017583,
+  "error" : "Zertifikat abgelaufen",
+  "id" : "693FF498-EAD2-4F36-80FB-0F3CE41BACEB",
+  "method" : "GET",
+  "receivedBytes" : 0,
+  "requestPreview" : "R0VUIC8gSFRUUC8xLjENCkhvc3Q6IGV4cGlyZWQuYmFkc3NsLmNvbQ0KQ29ubmVjdGlvbjogY2xvc2UNCg0K",
+  "responsePreview" : "",
+  "revision" : 4,
+  "sentBytes" : 0,
+  "state" : "failed",
+  "status" : 502,
+  "target" : "https:\/\/expired.badssl.com\/",
+  "upstreamTrustErrors" : [
+    {
+      "code" : -67818,
+      "domain" : "NSOSStatusErrorDomain",
+      "message" : "“*.badssl.com” certificate is expired"
+    },
+    {
+      "code" : -67818,
+      "domain" : "NSOSStatusErrorDomain",
+      "message" : "Certificate 0 “*.badssl.com” has errors: Certificate is not temporally valid;"
+    }
+  ]
+}

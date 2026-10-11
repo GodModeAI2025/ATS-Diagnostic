@@ -8,7 +8,7 @@ settings:
     SWIFT_VERSION: '6.0'
     DEVELOPMENT_TEAM: SP73Z8JWXM
     MARKETING_VERSION: '2.0'
-    CURRENT_PROJECT_VERSION: '36'
+    CURRENT_PROJECT_VERSION: '37'
     TARGETED_DEVICE_FAMILY: '1,2'
 targets:
   ATSDiagnostic:
@@ -57,6 +57,15 @@ targets:
     settings:
       base:
         GENERATE_INFOPLIST_FILE: YES
+  ATSDiagnosticProxyTests:
+    type: bundle.unit-test
+    platform: iOS
+    sources: [ProxyLiveTests]
+    dependencies:
+      - target: ATSDiagnostic
+    settings:
+      base:
+        GENERATE_INFOPLIST_FILE: YES
 
 schemes:
   ATSDiagnostic:
@@ -76,3 +85,9 @@ schemes:
         ATSDiagnostic: all
     test:
       targets: [ATSDiagnosticLiveTests]
+  ATSDiagnosticProxy:
+    build:
+      targets:
+        ATSDiagnostic: all
+    test:
+      targets: [ATSDiagnosticProxyTests]

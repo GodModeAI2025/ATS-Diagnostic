@@ -1,0 +1,86 @@
+{
+  "client" : {
+    "bytes" : 577,
+    "certificateTransparency" : true,
+    "certificates" : [
+      {
+        "der" : "MIID5jCCA42gAwIBAgIQAe7mqrtSHV4U\/DFf2ZhWkDAKBggqhkjOPQQDAjBRMQswCQYDVQQGEwJVUzEYMBYGA1UECgwPU1NMIENvcnBvcmF0aW9uMSgwJgYDVQQDDB9DbG91ZGZsYXJlIFRMUyBJc3N1aW5nIEVDQyBDQSAzMB4XDTI2MDkyNjIyNDkxMVoXDTI2MTIyNTIyNTYzNVowFjEUMBIGA1UEAwwLZXhhbXBsZS5jb20wWTATBgcqhkjOPQIBBggqhkjOPQMBBwNCAARqadExWzxTJ4S3LSzKIzAAeyF09q0Qt0F0XmLiZiaJSD0SQPhVK36pUKlM55TUstJnrU7f+7elE0kZESKzzcbto4ICgDCCAnwwDAYDVR0TAQH\/BAIwADAfBgNVHSMEGDAWgBSDA\/3n9vVKTRVB9O0iFtMyCj7KZjBsBggrBgEFBQcBAQRgMF4wOQYIKwYBBQUHMAKGLWh0dHA6Ly9pLmNmLWkuc3NsLmNvbS9DbG91ZGZsYXJlLVRMUy1JLUUzLmNlcjAhBggrBgEFBQcwAYYVaHR0cDovL28uY2YtaS5zc2wuY29tMCUGA1UdEQQeMByCC2V4YW1wbGUuY29tgg0qLmV4YW1wbGUuY29tMCMGA1UdIAQcMBowCAYGZ4EMAQIBMA4GDCsGAQQBgqkwAQMBATATBgNVHSUEDDAKBggrBgEFBQcDATBTBgNVHR8ETDBKMEigRqBEhkJodHRwOi8vYy5jZi1pLnNzbC5jb20vYWU4MDFlZDFjNTViYjU3OWQ3OTIwOGIwZDc3MmFjZmI4Y2MzYTIwOC5jcmwwDgYDVR0PAQH\/BAQDAgeAMA8GCSsGAQQBgtpLLAQCBQAwggEEBgorBgEEAdZ5AgQCBIH1BIHyAPAAdgCUTkOH+uzB74HzGSQmqBhlAcfTXzgCAT9yZ31VNy4Z2AAAAaDf8a1iAAAEAwBHMEUCIQCuCUahRazwOcqj3A77y8eXdQBpLlGCjv9D\/xvXd3X7hAIgbc0KMS+MsANY5WLGpHgTk3Uxk0g1VWTQB78vYRMga1EAdgDLOPcViXyEoURfW8Hd+8lu8ppZzUcKaQWFsMsUwxRY5wAAAaDf8a1+AAAEAwBHMEUCIB2YN\/lZP6eSBMtV0BTrGD7KSyKVu\/i68Zza97li96FcAiEA1mtvTnM8zbNKj6ArUpWmgTRURDDgOC4R1C2W5cSK6fIwCgYIKoZIzj0EAwIDRwAwRAIgNGlXxWLTTqn5+XQOkP06fTgaEbjDMAHUILmIapx8i5sCIAeTI\/xpafGZNB9HwNfEeU05yh+aSv95pD8SNtIAWNr0",
+        "id" : "85ca6ab068e9bcce88b6c4aa3c47f7d17228134a457f870d3800e6223a0df07a",
+        "source" : "System-evaluated trust chain",
+        "subject" : "example.com"
+      },
+      {
+        "der" : "MIIC4jCCAmmgAwIBAgIQMe7oivuHzZ74M2YEdD+bJzAKBggqhkjOPQQDAzBPMQswCQYDVQQGEwJVUzEYMBYGA1UECgwPU1NMIENvcnBvcmF0aW9uMSYwJAYDVQQDDB1TU0wuY29tIFRMUyBUcmFuc2l0IEVDQyBDQSBSMjAeFw0yNTA1MjkxOTQ5NDVaFw0zNTA1MjcxOTQ5NDRaMFExCzAJBgNVBAYTAlVTMRgwFgYDVQQKDA9TU0wgQ29ycG9yYXRpb24xKDAmBgNVBAMMH0Nsb3VkZmxhcmUgVExTIElzc3VpbmcgRUNDIENBIDMwWTATBgcqhkjOPQIBBggqhkjOPQMBBwNCAAT9HRQUjiNCkybPcNCJ17Eecqw+XVlSgd8c9dYludZ3B4ULjRKxKz9AuR9yBuD\/QFIKk0n4yXGwfu7go0VRGER0o4IBIzCCAR8wEgYDVR0TAQH\/BAgwBgEB\/wIBADAfBgNVHSMEGDAWgBQyosfYWIv\/f8A88lVpM+zOzB+8lzBIBggrBgEFBQcBAQQ8MDowOAYIKwYBBQUHMAKGLGh0dHA6Ly9jZXJ0LnNzbC5jb20vU1NMLmNvbS1UTFMtVC1FQ0MtUjIuY2VyMBEGA1UdIAQKMAgwBgYEVR0gADAdBgNVHSUEFjAUBggrBgEFBQcDAgYIKwYBBQUHAwEwPQYDVR0fBDYwNDAyoDCgLoYsaHR0cDovL2NybHMuc3NsLmNvbS9TU0wuY29tLVRMUy1ULUVDQy1SMi5jcmwwHQYDVR0OBBYEFIMD\/ef29UpNFUH07SIW0zIKPspmMA4GA1UdDwEB\/wQEAwIBhjAKBggqhkjOPQQDAwNnADBkAjBkW\/dgTArl36px6LVMWzfHLv0pFD+P9BoOYzirZ2aS2IwsQPHb0rQdZMY5NghTTk4CMCiwDU71fhtYVRulUc575HJroLXgj+BkpkBubdHnb2+aPpCH7LP6QNQ\/Xm9NiqdxAw==",
+        "id" : "f15f29abef73aa4dd9ab754baeae3685bdd3874b46b525071177628685718026",
+        "source" : "System-evaluated trust chain",
+        "subject" : "Cloudflare TLS Issuing ECC CA 3"
+      },
+      {
+        "der" : "MIIDNDCCArmgAwIBAgIQYE2K+NALqHSLlVhTFyxfLjAKBggqhkjOPQQDAzBOMQswCQYDVQQGEwJVUzEYMBYGA1UECgwPU1NMIENvcnBvcmF0aW9uMSUwIwYDVQQDDBxTU0wuY29tIFRMUyBFQ0MgUm9vdCBDQSAyMDIyMB4XDTIyMTAyMTE3MDIyM1oXDTM3MTAxNzE3MDIyMlowTzELMAkGA1UEBhMCVVMxGDAWBgNVBAoMD1NTTCBDb3Jwb3JhdGlvbjEmMCQGA1UEAwwdU1NMLmNvbSBUTFMgVHJhbnNpdCBFQ0MgQ0EgUjIwdjAQBgcqhkjOPQIBBgUrgQQAIgNiAARk532ZA1NckR7q+NgjraG\/LOJjie8oaPbt1\/Dsq2iudyvkdpcbUOvbWSgtb7g2uauNl8pMIp7uidkCP\/16czqQjSvMLzo3g9oNtC1FG3NyCWVfeCE954tmP0f9CSnWFA+jggFZMIIBVTASBgNVHRMBAf8ECDAGAQH\/AgEBMB8GA1UdIwQYMBaAFImPL6PoK6AUVHvzVrgmX2c4C5zQMEwGCCsGAQUFBwEBBEAwPjA8BggrBgEFBQcwAoYwaHR0cDovL2NlcnQuc3NsLmNvbS9TU0xjb20tVExTLVJvb3QtMjAyMi1FQ0MuY2VyMD8GA1UdIAQ4MDYwNAYEVR0gADAsMCoGCCsGAQUFBwIBFh5odHRwczovL3d3dy5zc2wuY29tL3JlcG9zaXRvcnkwHQYDVR0lBBYwFAYIKwYBBQUHAwIGCCsGAQUFBwMBMEEGA1UdHwQ6MDgwNqA0oDKGMGh0dHA6Ly9jcmxzLnNzbC5jb20vU1NMY29tLVRMUy1Sb290LTIwMjItRUNDLmNybDAdBgNVHQ4EFgQUMqLH2FiL\/3\/APPJVaTPszswfvJcwDgYDVR0PAQH\/BAQDAgGGMAoGCCqGSM49BAMDA2kAMGYCMQC4SkI+e2cts1nTN9MCRil97z624WxLAp94hT7tNZGPZLe9YiLIyzgKqW\/bE0b2h9ACMQCvV5XMRcunAylQaCQc4J\/GwR1p7yrPC0DRWWeyLAkQWi5Ylta9DxlX74QFFksFCP0=",
+        "id" : "5d1bc399274e649e1c72697de91a54ad725088c5221cb61e17ee9c290bc42a92",
+        "source" : "System-evaluated trust chain",
+        "subject" : "SSL.com TLS Transit ECC CA R2"
+      },
+      {
+        "der" : "MIICOjCCAcCgAwIBAgIQFAP1q\/s3ixdAW+JDsqXRxDAKBggqhkjOPQQDAzBOMQswCQYDVQQGEwJVUzEYMBYGA1UECgwPU1NMIENvcnBvcmF0aW9uMSUwIwYDVQQDDBxTU0wuY29tIFRMUyBFQ0MgUm9vdCBDQSAyMDIyMB4XDTIyMDgyNTE2MzM0OFoXDTQ2MDgxOTE2MzM0N1owTjELMAkGA1UEBhMCVVMxGDAWBgNVBAoMD1NTTCBDb3Jwb3JhdGlvbjElMCMGA1UEAwwcU1NMLmNvbSBUTFMgRUNDIFJvb3QgQ0EgMjAyMjB2MBAGByqGSM49AgEGBSuBBAAiA2IABEUpNXP6wrgjzhR9qLFNoFs27iosU8NgCTWyJGYmacCzldZdkkAZDsalE3D07xJRKF3nzL35PIXBz5SQySvOkkJYWWf9lCcQZIxPBLFNSeR7T5v15wj4A4j3p8OSSxlUgaNjMGEwDwYDVR0TAQH\/BAUwAwEB\/zAfBgNVHSMEGDAWgBSJjy+j6CugFFR781a4Jl9nOAuc0DAdBgNVHQ4EFgQUiY8vo+groBRUe\/NWuCZfZzgLnNAwDgYDVR0PAQH\/BAQDAgGGMAoGCCqGSM49BAMDA2gAMGUCMFXjIlbp15IkWE8elDIPDAI2wv2sdDJO4fscgIijzPvX6yv\/N33w7deedWo1dlJF4AIxAMeNb0Igj762TVntd00pxCAgRWSGOlDGxK0tk\/UYfXLtqc\/ErFc2KAhl3zx5Zn6g6g==",
+        "id" : "c32ffd9f46f936d16c3673990959434b9ad60aafbb9e7cf33654f144cc1ba143",
+        "source" : "System-evaluated trust chain",
+        "subject" : "SSL.com TLS ECC Root CA 2022"
+      }
+    ],
+    "cipher" : "0x1302",
+    "connectDuration" : 0.05799996852874756,
+    "date" : "2026-10-11T22:13:29Z",
+    "diagnosticOptions" : {
+      "bodyPreviewBytes" : 2097152,
+      "requestTimeout" : 20,
+      "resourceTimeout" : 30
+    },
+    "dnsDuration" : 0,
+    "duration" : 0.10002398490905762,
+    "finalURL" : "https:\/\/example.com\/",
+    "id" : "F2CCA5FE-C2C2-4B7B-8A40-737D52C09875",
+    "method" : "GET",
+    "protocolName" : "h2",
+    "remoteAddress" : "127.0.0.1",
+    "requestBody" : "",
+    "requestHeaders" : {
+
+    },
+    "responseBody" : "<!doctype html><html lang=en><head><meta charset=utf-8><link rel=icon href=data:,><meta name=viewport content=\"width=device-width,initial-scale=1\"><title>Example Domain<\/title><style>html{color-scheme:light dark;background:light-dark(#eee,#222)}body{font:16px\/1.6 system-ui,sans-serif;max-width:26em;margin:auto;padding:25vh 2em 2em;text-align:center}<\/style><\/head><body><p>This domain is for use in documentation examples without needing permission. This is not a service; avoid relying on it for testing and monitoring purposes.<\/p><script src=\/s.js><\/script><\/body><\/html>\n",
+    "responseHeaders" : {
+      "Age" : "7282",
+      "Alt-Svc" : "h3=\":443\"; ma=86400",
+      "Content-Encoding" : "br",
+      "Content-Type" : "text\/html; charset=utf-8",
+      "Date" : "Sun, 11 Oct 2026 22:13:29 GMT",
+      "Last-Modified" : "Fri, 09 Oct 2026 20:19:47 GMT",
+      "Server" : "cloudflare",
+      "allow" : "GET, HEAD",
+      "cf-cache-status" : "HIT",
+      "cf-ray" : "a491365dea0d5172-DUS"
+    },
+    "responseSHA256" : "25ddf2c883e0d1958ea971d279a7e4f0fd446724ee3db7db19dadabd4a62e484",
+    "revocationChecked" : true,
+    "status" : 200,
+    "tlsDuration" : 0.03299999237060547,
+    "tlsVersion" : "0x0304",
+    "trustValid" : true,
+    "url" : "https:\/\/example.com"
+  },
+  "tunnel" : {
+    "date" : "2026-10-11T22:13:29Z",
+    "duration" : 0.087692167,
+    "error" : "Prüfung abgeschlossen",
+    "id" : "B9C07B21-3DFE-4AF3-A0CB-E7CAB1323F55",
+    "method" : "CONNECT",
+    "receivedBytes" : 6825,
+    "requestPreview" : "",
+    "responsePreview" : "",
+    "revision" : 4,
+    "sentBytes" : 1834,
+    "state" : "stopped",
+    "status" : 200,
+    "target" : "https:\/\/example.com:443"
+  }
+}

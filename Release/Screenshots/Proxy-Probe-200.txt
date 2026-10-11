@@ -1,0 +1,168 @@
+Device orientation: Unknown
+------------------------
+Application bundle identifier: com.mobilebox.atsdiagnostic
+Application UI orientation: Portrait
+Application, pid: 82889, label: 'ATS Diagnostic'
+ Window, {{0.0, 0.0}, {402.0, 874.0}}, hitPoint: {201.0, 437.0}
+  Other, {{0.0, 0.0}, {402.0, 874.0}}, hitPoint: {201.0, 437.0}
+  Other, {{0.0, 0.0}, {402.0, 874.0}}, hitPoint: {201.0, 437.0}
+   Other, {{0.0, 0.0}, {402.0, 874.0}}, hitPoint: {201.0, 437.0}
+    Other, {{0.0, 0.0}, {402.0, 874.0}}, hitPoint: {201.0, 437.0}
+     Other, {{0.0, 0.0}, {402.0, 874.0}}, hitPoint: {201.0, 437.0}
+      Other, {{0.0, 0.0}, {402.0, 874.0}}, hitPoint: {201.0, 437.0}
+       Other, {{0.0, 0.0}, {402.0, 874.0}}, hitPoint: {201.0, 437.0}
+        Other, {{0.0, 0.0}, {402.0, 874.0}}, hitPoint: {201.0, 437.0}
+         Other, {{0.0, 0.0}, {402.0, 874.0}}, hitPoint: {201.0, 437.0}
+          Other, {{0.0, 0.0}, {402.0, 874.0}}, hitPoint: {201.0, 437.0}
+           Other, {{0.0, 0.0}, {402.0, 874.0}}, hitPoint: {201.0, 437.0}
+            Other, {{0.0, 0.0}, {402.0, 874.0}}, hitPoint: {201.0, 437.0}
+             NavigationBar, {{0.0, 62.0}, {402.0, 54.0}}, identifier: 'Erfassen', hitPoint: {201.0, 89.0}
+              StaticText, {{166.0, 73.7}, {69.7, 20.7}}, label: 'Erfassen', hitPoint: {200.8, 84.0}
+              Button, {{346.0, 66.0}, {36.0, 36.0}}, label: 'Erfassungen teilen', hitPoint: {364.0, 84.0}
+             Other, {{0.0, 0.0}, {402.0, 874.0}}, hitPoint: {201.0, 437.0}
+              Other, {{0.0, 0.0}, {402.0, 874.0}}, hitPoint: {201.0, 437.0}
+               Other, {{0.0, 0.0}, {402.0, 874.0}}, hitPoint: {201.0, 437.0}
+                Other, {{0.0, 0.0}, {402.0, 874.0}}, hitPoint: {201.0, 437.0}
+                 CollectionView, {{0.0, 0.0}, {402.0, 874.0}}, hitPoint: {201.0, 437.0}
+                  Other, {{-16.0, -88.7}, {434.0, 465.3}}, hitPoint: {201.0, 188.3}
+                  Cell, {{16.0, -48.3}, {370.0, 68.0}}, hitPoint: {201.0, 9.8}
+                   Other, {{16.0, -48.3}, {370.0, 68.0}}, hitPoint: {201.0, 9.8}
+                    Other, {{16.0, -48.3}, {370.0, 68.0}}, hitPoint: {201.0, 9.8}
+                   Other, {{16.0, -48.3}, {370.0, 68.0}}, hitPoint: {201.0, 9.8}
+                    Other, {{16.0, -48.3}, {370.0, 68.0}}, hitPoint: {201.0, 9.8}
+                     Other, {{16.0, -48.3}, {370.0, 68.0}}, hitPoint: {201.0, 9.8}
+                      StaticText, {{16.0, -48.3}, {370.0, 68.0}}, label: 'HTTP: Anfrage, Antwortstatus und begrenzte Rohdatenvorschau', hitPoint: {201.0, 9.8}
+                  Other, {{0.0, 0.0}, {402.0, 874.0}}, hitPoint: {201.0, 437.0}
+                   Other, {{0.0, 0.0}, {402.0, 156.0}}, hitPoint: {201.0, 78.0}
+                   Other, {{0.0, 741.0}, {402.0, 133.0}}, hitPoint: {201.0, 807.5}
+                  Other, {{0.0, 0.0}, {402.0, 874.0}}, hitPoint: {201.0, 437.0}
+                   Other, {{0.0, 0.0}, {402.0, 156.0}}, hitPoint: {201.0, 78.0}
+                   Other, {{0.0, 741.0}, {402.0, 133.0}}, hitPoint: {201.0, 807.5}
+                  Cell, {{16.0, 19.7}, {370.0, 68.0}}, hitPoint: {201.0, 53.7}
+                   Other, {{16.0, 19.7}, {370.0, 68.0}}, hitPoint: {201.0, 53.7}
+                    Other, {{16.0, 19.7}, {370.0, 68.0}}, hitPoint: {201.0, 53.7}
+                   Other, {{16.0, 19.7}, {370.0, 68.0}}, hitPoint: {201.0, 53.7}
+                    Other, {{16.0, 19.7}, {370.0, 68.0}}, hitPoint: {201.0, 53.7}
+                     Other, {{16.0, 19.7}, {370.0, 68.0}}, hitPoint: {201.0, 53.7}
+                      StaticText, {{16.0, 19.7}, {370.0, 68.0}}, label: 'CONNECT: Ziel und übertragene Bytezahlen', hitPoint: {201.0, 53.7}
+                      Image, {{36.3, 44.3}, {15.7, 19.0}}, identifier: 'lock.shield', label: 'Padlock In A Shield', hitPoint: {44.2, 53.8}
+                  Other, {{72.0, 18.7}, {298.0, 1.0}}, hitPoint: {221.0, 19.2}
+                  Cell, {{16.0, 87.7}, {370.0, 117.7}}, hitPoint: {201.0, 146.5}
+                   Other, {{16.0, 87.7}, {370.0, 117.7}}, hitPoint: {201.0, 146.5}
+                    Other, {{16.0, 87.7}, {370.0, 117.7}}, hitPoint: {201.0, 146.5}
+                   Other, {{16.0, 87.7}, {370.0, 117.7}}, hitPoint: {201.0, 146.5}
+                    Other, {{16.0, 87.7}, {370.0, 117.7}}, hitPoint: {201.0, 146.5}
+                     Other, {{16.0, 87.7}, {370.0, 117.7}}, hitPoint: {201.0, 146.5}
+                      StaticText, {{16.0, 87.7}, {370.0, 117.7}}, label: 'Bei CONNECT prüft der Client seine TLS-Verbindung selbst. HTTPS-Inhalte und Zertifikate werden in diesem Tunnelmodus nicht entschlüsselt. Die separate Prüfanfrage zeigt die TLS-Ergebnisse ihres eigenen Clients.', hitPoint: {201.0, 146.5}
+                  Other, {{72.0, 86.7}, {298.0, 1.0}}, hitPoint: {221.0, 87.2}
+                  Cell, {{16.0, 205.3}, {370.0, 153.7}}, hitPoint: {201.0, 282.2}
+                   Other, {{16.0, 205.3}, {370.0, 153.7}}, hitPoint: {201.0, 282.2}
+                    Other, {{16.0, 205.3}, {370.0, 153.7}}, hitPoint: {201.0, 282.2}
+                   Other, {{16.0, 205.3}, {370.0, 153.7}}, hitPoint: {201.0, 282.2}
+                    Other, {{16.0, 205.3}, {370.0, 153.7}}, hitPoint: {201.0, 282.2}
+                     Other, {{16.0, 205.3}, {370.0, 153.7}}, hitPoint: {201.0, 282.2}
+                      StaticText, {{16.0, 205.3}, {370.0, 153.7}}, label: 'HTTP ist unverschlüsselt. Die Rohdatenvorschau kann Zugangsdaten enthalten. Bis zu acht aktive Verbindungen, 16 MiB Anfragekörper und 64 KiB Vorschau je Richtung. Der Proxy beendet Verbindungen nach 60 Sekunden ohne neue Daten oder nach einer Stunde. Erfasste Verbindungen bleiben nur in dieser App-Sitzung; ein Export wird von dir ausgelöst.', hitPoint: {201.0, 282.2}
+                  Other, {{32.0, 204.3}, {338.0, 1.0}}, hitPoint: {201.0, 204.8}
+                  Other, {{-16.0, 376.3}, {434.0, 266.0}}, hitPoint: {201.0, 509.3}
+                  Cell, {{16.0, 376.3}, {370.0, 40.3}}, hitPoint: {201.0, 396.5}
+                   Other, {{16.0, 376.3}, {370.0, 40.3}}, hitPoint: {201.0, 396.5}
+                   Other, {{16.0, 376.3}, {370.0, 40.3}}, hitPoint: {201.0, 396.5}
+                    Other, {{16.0, 376.3}, {370.0, 40.3}}, hitPoint: {201.0, 396.5}
+                     Other, {{16.0, 376.3}, {370.0, 40.3}}, hitPoint: {201.0, 396.5}
+                      StaticText, {{16.0, 376.3}, {370.0, 40.3}}, label: 'Prüfanfrage durch den Proxy', hitPoint: {201.0, 396.5}
+                  Cell, {{16.0, 416.7}, {370.0, 52.0}}, hitPoint: {201.0, 442.7}
+                   Other, {{16.0, 416.7}, {370.0, 52.0}}, hitPoint: {201.0, 442.7}
+                    Other, {{16.0, 416.7}, {370.0, 52.0}}, hitPoint: {201.0, 442.7}
+                   Other, {{16.0, 416.7}, {370.0, 52.0}}, hitPoint: {201.0, 442.7}
+                    Other, {{16.0, 416.7}, {370.0, 52.0}}, hitPoint: {201.0, 442.7}
+                     Other, {{16.0, 416.7}, {370.0, 52.0}}, hitPoint: {201.0, 442.7}
+                      TextField, {{32.0, 431.7}, {338.0, 22.0}}, placeholderValue: 'HTTPS-Ziel', value: https://example.com, hitPoint: {201.0, 442.7}
+                  Cell, {{16.0, 468.7}, {370.0, 52.0}}, hitPoint: {201.0, 494.7}
+                   Other, {{16.0, 468.7}, {370.0, 52.0}}, hitPoint: {201.0, 494.7}
+                    Other, {{16.0, 468.7}, {370.0, 52.0}}, hitPoint: {201.0, 494.7}
+                   Other, {{16.0, 468.7}, {370.0, 52.0}}, hitPoint: {201.0, 494.7}
+                    Other, {{16.0, 468.7}, {370.0, 52.0}}, hitPoint: {201.0, 494.7}
+                     Other, {{16.0, 468.7}, {370.0, 52.0}}, hitPoint: {201.0, 494.7}
+                      Button, {{16.0, 468.7}, {370.0, 52.0}}, label: 'Über Proxy prüfen', hitPoint: {201.0, 494.7}
+                       StaticText, {{34.0, 484.5}, {176.7, 20.3}}, label: 'Über Proxy prüfen', hitPoint: {122.3, 494.7}
+                       Image, {{34.0, 484.7}, {19.7, 20.0}}, identifier: 'arrow.triangle.branch', label: 'Divide', hitPoint: {43.8, 494.7}
+                  Other, {{32.0, 467.7}, {338.0, 1.0}}, hitPoint: {201.0, 468.2}
+                  Cell, {{16.0, 520.7}, {370.0, 52.0}}, hitPoint: {201.0, 546.7}
+                   Other, {{16.0, 520.7}, {370.0, 52.0}}, hitPoint: {201.0, 546.7}
+                    Other, {{16.0, 520.7}, {370.0, 52.0}}, hitPoint: {201.0, 546.7}
+                   Other, {{16.0, 520.7}, {370.0, 52.0}}, hitPoint: {201.0, 546.7}
+                    Other, {{16.0, 520.7}, {370.0, 52.0}}, hitPoint: {201.0, 546.7}
+                     Other, {{16.0, 520.7}, {370.0, 52.0}}, hitPoint: {201.0, 546.7}
+                      Button, {{16.0, 520.7}, {370.0, 52.0}}, label: 'Ergebnis der Prüfanfrage', hitPoint: {201.0, 546.7}
+                       StaticText, {{32.0, 536.5}, {190.7, 20.3}}, label: 'Ergebnis der Prüfanfrage', hitPoint: {127.3, 546.7}
+                       Image, {{360.7, 540.7}, {7.0, 12.0}}, identifier: 'chevron.forward', hitPoint: {364.2, 546.7}
+                  Other, {{72.0, 519.7}, {298.0, 1.0}}, hitPoint: {221.0, 520.2}
+                  Cell, {{16.0, 572.7}, {370.0, 52.0}}, hitPoint: {201.0, 598.7}
+                   Other, {{16.0, 572.7}, {370.0, 52.0}}, hitPoint: {201.0, 598.7}
+                    Other, {{16.0, 572.7}, {370.0, 52.0}}, hitPoint: {201.0, 598.7}
+                   Other, {{16.0, 572.7}, {370.0, 52.0}}, hitPoint: {201.0, 598.7}
+                    Other, {{16.0, 572.7}, {370.0, 52.0}}, hitPoint: {201.0, 598.7}
+                     Other, {{16.0, 572.7}, {370.0, 52.0}}, hitPoint: {201.0, 598.7}
+                      StaticText, {{16.0, 572.7}, {370.0, 52.0}}, label: 'HTTP-Status, 200', hitPoint: {201.0, 598.7}
+                      StaticText, {{32.0, 588.5}, {99.7, 20.3}}, label: 'HTTP-Status', hitPoint: {81.8, 598.7}
+                  Other, {{32.0, 571.7}, {338.0, 1.0}}, hitPoint: {201.0, 572.2}
+                  Other, {{-16.0, 642.3}, {434.0, 1897.0}}, hitPoint: {201.0, 758.2}
+                  Cell, {{16.0, 642.3}, {370.0, 40.3}}, hitPoint: {201.0, 662.5}
+                   Other, {{16.0, 642.3}, {370.0, 40.3}}, hitPoint: {201.0, 662.5}
+                   Other, {{16.0, 642.3}, {370.0, 40.3}}, hitPoint: {201.0, 662.5}
+                    Other, {{16.0, 642.3}, {370.0, 40.3}}, hitPoint: {201.0, 662.5}
+                     Other, {{16.0, 642.3}, {370.0, 40.3}}, hitPoint: {201.0, 662.5}
+                      StaticText, {{16.0, 642.3}, {370.0, 40.3}}, label: 'Verbindungen · 1', hitPoint: {201.0, 662.5}
+                  Cell, {{16.0, 682.3}, {370.0, 88.7}}, hitPoint: {201.0, 726.7}
+                   Other, {{16.0, 682.3}, {370.0, 88.7}}, hitPoint: {201.0, 726.7}
+                    Other, {{16.0, 682.3}, {370.0, 88.7}}, hitPoint: {201.0, 726.7}
+                   Other, {{16.0, 682.3}, {370.0, 88.7}}, hitPoint: {201.0, 726.7}
+                    Other, {{16.0, 682.3}, {370.0, 88.7}}, hitPoint: {201.0, 726.7}
+                     Other, {{16.0, 682.3}, {370.0, 88.7}}, hitPoint: {201.0, 726.7}
+                      Button, {{16.0, 682.3}, {370.0, 88.7}}, label: 'https://example.com:443, CONNECT · Übertragung beendet, ↑ 2 kB · ↓ 7 kB', hitPoint: {201.0, 726.7}
+                       Image, {{34.0, 698.7}, {14.0, 17.0}}, identifier: 'lock.shield', label: 'Padlock In A Shield', hitPoint: {41.0, 707.2}
+                       StaticText, {{62.0, 697.3}, {180.7, 18.0}}, label: 'https://example.com:443', hitPoint: {152.3, 706.3}
+                       StaticText, {{62.0, 721.3}, {191.3, 14.3}}, label: 'CONNECT · Übertragung beendet', hitPoint: {157.7, 728.5}
+                       Image, {{360.7, 720.7}, {7.0, 12.0}}, identifier: 'chevron.forward', hitPoint: {364.2, 726.7}
+                       StaticText, {{62.0, 741.7}, {111.3, 14.3}}, label: '↑ 2 kB · ↓ 7 kB', hitPoint: {117.7, 748.8}
+                  Other, {{369.0, 116.0}, {30.0, 675.0}}, label: 'Vertical scroll bar, 2 pages', value: 100 %, hitPoint: {384.0, 453.5}
+                   Other, {{396.0, 393.3}, {3.0, 394.7}}, hitPoint: {397.5, 590.7}
+                  Other, {{369.0, 116.0}, {30.0, 675.0}}, label: 'Vertical scroll bar, 2 pages', value: 100 %, hitPoint: {384.0, 453.5}
+                   Other, {{396.0, 393.3}, {3.0, 394.7}}, hitPoint: {397.5, 590.7}
+             Toolbar, {{0.0, 0.0}, {402.0, 874.0}}, identifier: 'Toolbar', label: 'Toolbar', hitPoint: {201.0, 437.0}
+              Other, {{0.0, 0.0}, {402.0, 874.0}}, hitPoint: {201.0, 437.0}
+       Other, {{0.0, 0.0}, {402.0, 874.0}}, hitPoint: {201.0, 437.0}
+        Other, {{0.0, 791.0}, {402.0, 83.0}}, hitPoint: {201.0, 832.5}
+         Other, {{0.0, 0.0}, {402.0, 874.0}}, hitPoint: {201.0, 437.0}
+          TabBar, {{0.0, 791.0}, {402.0, 83.0}}, label: 'Tab Bar', hitPoint: {201.0, 832.5}
+           Other, {{21.0, 791.0}, {360.0, 62.0}}, hitPoint: {201.0, 822.0}
+            Other, {{21.0, 791.0}, {86.7, 54.0}}, hitPoint: {64.4, 818.0}
+            Other, {{21.0, 791.0}, {360.0, 62.0}}, hitPoint: {201.0, 822.0}
+             Button, {{25.0, 795.0}, {85.1, 54.0}}, label: 'Inspect', hitPoint: {67.6, 822.0}
+              Image, {{55.3, 801.7}, {24.7, 26.7}}, identifier: 'checkmark.shield.fill', label: 'Checkmark in a filled shield', hitPoint: {67.7, 815.0}
+             Button, {{90.1, 795.0}, {89.9, 54.0}}, label: 'Requests', hitPoint: {135.1, 822.0}
+              Image, {{118.4, 801.7}, {33.0, 26.3}}, identifier: 'arrow.up.arrow.down', label: 'sort', hitPoint: {134.9, 814.8}
+             Button, {{160.1, 795.0}, {86.7, 54.0}}, label: 'Erfassen', Selected, hitPoint: {203.4, 822.0}
+              Image, {{189.7, 801.3}, {27.3, 27.3}}, identifier: 'network', label: 'Network nodes connected by lines', hitPoint: {203.4, 815.0}
+             Button, {{226.8, 795.0}, {85.1, 54.0}}, label: 'History', hitPoint: {269.3, 822.0}
+              Image, {{255.8, 801.3}, {27.3, 27.3}}, identifier: 'clock.fill', label: 'clock', hitPoint: {269.4, 815.0}
+             Button, {{291.9, 795.0}, {85.1, 54.0}}, label: 'Tools', hitPoint: {334.4, 822.0}
+              Image, {{318.2, 799.3}, {32.7, 31.7}}, identifier: 'wrench.and.screwdriver.fill', label: 'Wrench and screwdriver, filled', hitPoint: {334.6, 815.2}
+            Other, {{21.0, 791.0}, {360.0, 62.0}}, hitPoint: {201.0, 822.0}
+            Other, {{160.1, 795.0}, {86.7, 54.0}}, hitPoint: {203.4, 822.0}
+             Other, {{160.1, 795.0}, {86.7, 54.0}}, hitPoint: {203.4, 822.0}
+              Other, {{160.1, 795.0}, {86.7, 54.0}}, hitPoint: {203.4, 822.0}
+              Other, {{160.1, 795.0}, {86.7, 54.0}}, hitPoint: {203.4, 822.0}
+               Other, {{160.1, 795.0}, {86.7, 54.0}}, hitPoint: {203.4, 822.0}
+                Other, {{160.1, 795.0}, {86.7, 54.0}}, hitPoint: {203.4, 822.0}
+                 Other, {{160.1, 795.0}, {86.7, 54.0}}, hitPoint: {203.4, 822.0}
+                Other, {{160.1, 795.0}, {86.7, 54.0}}, hitPoint: {203.4, 822.0}
+               Other, {{160.1, 795.0}, {86.7, 54.0}}, hitPoint: {203.4, 822.0}
+         Other, {{0.0, 791.0}, {402.0, 83.0}}, hitPoint: {201.0, 832.5}
+          Other, {{0.0, 791.0}, {402.0, 83.0}}, hitPoint: {201.0, 832.5}
+           Other, {{0.0, 791.0}, {402.0, 83.0}}, hitPoint: {201.0, 832.5}
+            Other, {{0.0, 791.0}, {402.0, 83.0}}, hitPoint: {201.0, 832.5}
+             Other, {{0.0, 791.0}, {402.0, 83.0}}, hitPoint: {201.0, 832.5}
+              Other, {{0.0, 791.0}, {402.0, 83.0}}, hitPoint: {201.0, 832.5}
+            Other, {{0.0, 791.0}, {402.0, 83.0}}, hitPoint: {201.0, 832.5}
+             Other, {{0.0, 791.0}, {402.0, 83.0}}, hitPoint: {201.0, 832.5}

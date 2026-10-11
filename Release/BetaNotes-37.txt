@@ -1,0 +1,10 @@
+Neu in ATS Diagnostic 2.0 (37)
+
+• Neuer Bereich Erfassen: lokaler HTTP-Proxy auf 127.0.0.1, Port automatisch oder frei wählbar.
+• Echte HTTP-Weiterleitung mit Anfrage-/Antwortvorschau und Status; CONNECT leitet TCP-Daten in beide Richtungen weiter und zeigt Ziel und Bytezahlen.
+• Prüfanfrage durch den Proxy mit regulärer System-Zertifikatsprüfung; ungültige Zertifikate bleiben abgelehnt.
+• Live-Verbindungsdetails, sauberer Stop und JSON-Export, der erst beim Teilen erzeugt wird.
+
+Bitte prüfen: Proxy auf Port 0 starten, Adresse ablesen, Über Proxy prüfen auf example.com ausführen, CONNECT-Aufzeichnung und Prüfergebnis öffnen, Proxy stoppen. Keine systemweite WLAN-Proxy-Einstellung ändern.
+
+Grenzen: Nur auf diesem Gerät und im Vordergrund. Hintergrundwechsel stoppt den Proxy. CONNECT-Inhalte bleiben undurchsichtig. HTTP-Vorschauen können Zugangsdaten enthalten. Acht Verbindungen, 16 MiB Anfragekörper, 64 KiB Vorschau je Richtung, 60 Sekunden Leerlauf und eine Stunde Gesamtdauer. Aufzeichnungen bleiben in der App-Sitzung; Export erfolgt ausdrücklich durch den Nutzer. VPN, MITM, PCAP, Protokolldekodierung und Entwickler-SDK sind noch offen.

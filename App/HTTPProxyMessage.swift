@@ -14,18 +14,24 @@ struct ProxyHTTPRequest: Sendable {
     let wireBody: Data
     let consumedBytes: Int
     var isTunnel: Bool { method == "CONNECT" }
+    var requestsUpgrade: Bool { headers.contains { $0.name.lowercased() == "upgrade" } && headers.contains { $0.name.lowercased() == "connection" && $0.value.lowercased().split(separator:",").contains { $0.trimmingCharacters(in:.whitespaces) == "upgrade" } } }
     func upstreamBytes() -> Data {
         var components = URLComponents(url: url, resolvingAgainstBaseURL: false)
         components?.fragment = nil
         let path = (components?.percentEncodedPath.isEmpty == false ? components?.percentEncodedPath : "/") ?? "/"
         let origin = path + (components?.percentEncodedQuery.map { "?" + $0 } ?? "")
         let connectionNames = Set(headers.filter { $0.name.lowercased() == "connection" }.flatMap { $0.value.lowercased().split(separator: ",").map { $0.trimmingCharacters(in: .whitespaces) } })
-        let blocked = connectionNames.union(["connection", "proxy-connection", "proxy-authorization", "keep-alive", "host"])
+        var blocked = connectionNames.union(["connection", "proxy-connection", "proxy-authorization", "keep-alive", "host", "expect"])
+        if requestsUpgrade { blocked.remove("upgrade") }
         var filtered = headers.filter { !blocked.contains($0.name.lowercased()) }
+        if headers.contains(where: { $0.name.lowercased() == "content-length" }) {
+            filtered.removeAll { $0.name.lowercased() == "content-length" }
+            filtered.append(HTTPHeader(name:"Content-Length",value:String(body.count)))
+        }
         let host = url.host ?? ""
         let authority = (host.contains(":") && !host.hasPrefix("[") ? "[\(host)]" : host) + (url.port.map { ":\($0)" } ?? "")
         filtered.append(HTTPHeader(name: "Host", value: authority))
-        filtered.append(HTTPHeader(name: "Connection", value: "close"))
+        filtered.append(HTTPHeader(name: "Connection", value: requestsUpgrade ? "Upgrade" : "close"))
         var bytes = Data("\(method) \(origin) HTTP/1.1\r\n".utf8)
         for header in filtered { bytes.append(Data("\(header.name): \(header.value)\r\n".utf8)) }
         bytes.append(Data("\r\n".utf8)); bytes.append(wireBody)
