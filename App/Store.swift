@@ -5,13 +5,16 @@ import Observation
     var records: [DiagnosticRecord] = []
     var latest: DiagnosticRecord?
     var settings = RecordingSettings()
+    var diagnosticOptions = DiagnosticOptions.standard
     var running = false
     var error: String?
     private var file: URL {
         URL.documentsDirectory.appendingPathComponent("diagnostics.json")
     }
     private var settingsFile: URL { URL.documentsDirectory.appendingPathComponent("recording-settings.json") }
+    private var optionsFile: URL { URL.documentsDirectory.appendingPathComponent("diagnostic-options.json") }
     init() {
+        if let data = try? Data(contentsOf: optionsFile), let value = try? JSONDecoder().decode(DiagnosticOptions.self, from: data) { diagnosticOptions = value.validated }
         if let data = try? Data(contentsOf: settingsFile), let decoded = try? JSONDecoder().decode(RecordingSettings.self, from: data) { settings = decoded }
         do { records = try JSONDecoder().decode([DiagnosticRecord].self, from: Data(contentsOf: file)) }
         catch { records = [] }
@@ -32,7 +35,7 @@ import Observation
             }
             running = true
             error = nil
-            let record = await DiagnosticEngine(request: request, expectedSHA256: checksum).run(request)
+            let record = await DiagnosticEngine(request: request, expectedSHA256: checksum, options: diagnosticOptions).run(request)
             latest = record
             if settings.enabled && settings.accepts(record.url) {
                 records.insert(record, at: 0)
@@ -47,6 +50,11 @@ import Observation
         let imported = try HARArchive.importRecords(data)
         records = Array((imported + records).prefix(settings.recordLimit))
         save()
+    }
+    func updateDiagnosticOptions(_ value: DiagnosticOptions) throws {
+        try value.validate()
+        try JSONEncoder().encode(value).write(to: optionsFile, options: [.atomic, .completeFileProtection])
+        diagnosticOptions = value
     }
     func updateSettings(_ value: RecordingSettings) throws {
         try value.validate()

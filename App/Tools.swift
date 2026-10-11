@@ -39,7 +39,10 @@ struct ToolsView: View {
                         Section("Privacy") { privacyText }
                     }
                 }
-            }.scrollDismissesKeyboard(.interactively).navigationTitle("Tools").toolbar { ToolbarItemGroup(placement: .keyboard) { Spacer(); Button("Done") { editing = false } } }
+            }.scrollDismissesKeyboard(.interactively).navigationTitle("Tools").toolbar {
+                ToolbarItem(placement: .topBarTrailing) { NavigationLink { DiagnosticSettingsView(store:store) } label: { Label("Diagnoseeinstellungen",systemImage:"slider.horizontal.3") } }
+                ToolbarItemGroup(placement: .keyboard) { if editing { Spacer(); Button("Done") { editing = false } } }
+            }.onDisappear { editing = false }
         }
     }
     private var operationPicker: some View { Picker("Operation", selection: $operation) { ForEach(operations, id: \.self) { Text($0) } } }

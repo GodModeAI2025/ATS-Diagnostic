@@ -11,6 +11,7 @@
 		04C49249BFEAA91814B39B5B /* CertificateIssuerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C63641EE993FF40210F5917 /* CertificateIssuerView.swift */; };
 		08F33130CBECF29A05201EE6 /* X509.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CFCC8BF2582B5E1B8F4E4A1 /* X509.swift */; };
 		0AFB4D0D277FF9ACF358CE81 /* ASN1Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0F97E508554E43B0CDABA22 /* ASN1Tests.swift */; };
+		0D86FB94C7E8E90B8C0486A4 /* DiagnosticOptionsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BD71BB4443DD67B3D667E5C /* DiagnosticOptionsTests.swift */; };
 		10BC66014A678974AA9A6383 /* RevocationAssessment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2376A40FF8D615A5635F72D1 /* RevocationAssessment.swift */; };
 		117F3FD22732F020EEE3C5E1 /* EndpointTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F416B595E31C21C933D4911 /* EndpointTests.swift */; };
 		12B11E7EABD8B6007EE73014 /* TLSDisplay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C37115E859C3B7E31FAB79C /* TLSDisplay.swift */; };
@@ -73,6 +74,7 @@
 		A6B6B5EA6FA5D4483DC6A2F4 /* HTTPProxyMessageTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAA192DD5325997D4603D365 /* HTTPProxyMessageTests.swift */; };
 		ACDA30D9DB4F1BB6FBB266B3 /* DiagnosticFailureTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A4D779A854D30AAF1836C77 /* DiagnosticFailureTests.swift */; };
 		AF276C8B265A3534BCCDA3A9 /* X509.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CFCC8BF2582B5E1B8F4E4A1 /* X509.swift */; };
+		B12964EFB49FAC1465B30292 /* DiagnosticSettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B23483D08F8289B1EEBDA828 /* DiagnosticSettingsView.swift */; };
 		B25C8782DDE6BAE7E6D29A3B /* Diagnostic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0354E181C7AA4FB81B16BEBB /* Diagnostic.swift */; };
 		B48124AD58464D4A866E9995 /* PolicyDirectives.swift in Sources */ = {isa = PBXBuildFile; fileRef = B24D2A511693F1C3090D61F1 /* PolicyDirectives.swift */; };
 		B55549B675A6A0BDBCD1DED3 /* BadSSLLiveTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7758E7EFF054786C036974E3 /* BadSSLLiveTests.swift */; };
@@ -87,6 +89,7 @@
 		C2DB2498D717BB2B14CD6C59 /* CertificateDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B1A39C75564C7E5F42B7323 /* CertificateDetailView.swift */; };
 		CCF4F88C3D1EBE00E1A0D6AF /* CertificateFindings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FB8348535345EC1A56E1F14 /* CertificateFindings.swift */; };
 		D2EACD1C8C02F6241D3DD599 /* SignedCRLTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 260C1CF7F732EF44D22E72DA /* SignedCRLTests.swift */; };
+		D36018ADF1ED7A65B2F192AF /* DiagnosticSettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B23483D08F8289B1EEBDA828 /* DiagnosticSettingsView.swift */; };
 		E05CEECCBE5C7B79305282B2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D7FD6A27B7550D386C7632C8 /* Assets.xcassets */; };
 		E274583D6D6C84F180AF51A9 /* DiagnosticFailure.swift in Sources */ = {isa = PBXBuildFile; fileRef = 034C303F69B4D34EBD8BB1A1 /* DiagnosticFailure.swift */; };
 		E69A2493585758DC7BFB6509 /* CertificateFormats.swift in Sources */ = {isa = PBXBuildFile; fileRef = 306C387A89FF92AF8E550A38 /* CertificateFormats.swift */; };
@@ -95,8 +98,10 @@
 		EC87C05D22670AF92C2D9FDE /* BadSSLSuite.swift in Sources */ = {isa = PBXBuildFile; fileRef = 706B5102F961F60CA9E9BE97 /* BadSSLSuite.swift */; };
 		ED25B8DCC7D3B3248750CD7F /* PolicyDirectives.swift in Sources */ = {isa = PBXBuildFile; fileRef = B24D2A511693F1C3090D61F1 /* PolicyDirectives.swift */; };
 		F1F1C375B80BF4C13DE010B6 /* IntegrityTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98BF98AF90961C96D6E0AB2B /* IntegrityTests.swift */; };
+		F7F5E9D9AAB9A9DDCC04267F /* DiagnosticOptions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CAB7A4A887A022BE790CC74 /* DiagnosticOptions.swift */; };
 		FE15A7008B4ECCB46EF7CB1B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D7FD6A27B7550D386C7632C8 /* Assets.xcassets */; };
 		FE80928B90B86C4EE633C496 /* RootStoreSnapshot.json in Resources */ = {isa = PBXBuildFile; fileRef = 5270ECD0BD1CD881958FABD3 /* RootStoreSnapshot.json */; };
+		FF4C44000484C15E692D4557 /* DiagnosticOptions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CAB7A4A887A022BE790CC74 /* DiagnosticOptions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -140,6 +145,7 @@
 		57F9EAAA85FD34BDFD306CDA /* ConnectionMapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConnectionMapView.swift; sourceTree = "<group>"; };
 		593FCAF2F7741A75C32A3854 /* RootStoreSnapshot.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootStoreSnapshot.swift; sourceTree = "<group>"; };
 		59E847A30CD68F6D73D2CD42 /* CertificateReminderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CertificateReminderTests.swift; sourceTree = "<group>"; };
+		5CAB7A4A887A022BE790CC74 /* DiagnosticOptions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiagnosticOptions.swift; sourceTree = "<group>"; };
 		687B5C8DC9BA142303849330 /* VisualComponents.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VisualComponents.swift; sourceTree = "<group>"; };
 		6A5AE58CCEBB77DC8A9F1E7C /* ATSDiagnosticLiveTests.xctest */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.cfbundle; path = ATSDiagnosticLiveTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		6AB56752BCD5D28B97DB8C7E /* ATSDiagnostic.app */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.application; path = ATSDiagnostic.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -147,6 +153,7 @@
 		706B5102F961F60CA9E9BE97 /* BadSSLSuite.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BadSSLSuite.swift; sourceTree = "<group>"; };
 		7758E7EFF054786C036974E3 /* BadSSLLiveTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BadSSLLiveTests.swift; sourceTree = "<group>"; };
 		8BB9572933C9725E68F4AF2D /* CertificateFormatsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CertificateFormatsTests.swift; sourceTree = "<group>"; };
+		8BD71BB4443DD67B3D667E5C /* DiagnosticOptionsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiagnosticOptionsTests.swift; sourceTree = "<group>"; };
 		8C37115E859C3B7E31FAB79C /* TLSDisplay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TLSDisplay.swift; sourceTree = "<group>"; };
 		8CFCC8BF2582B5E1B8F4E4A1 /* X509.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = X509.swift; sourceTree = "<group>"; };
 		8D9A4044CD5FEABE4C3A7F19 /* CertificateIssuerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CertificateIssuerTests.swift; sourceTree = "<group>"; };
@@ -160,6 +167,7 @@
 		A06531EFAC5C286A0772F400 /* PolicyDirectivesTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PolicyDirectivesTests.swift; sourceTree = "<group>"; };
 		ABC8F829F66AF685D8859DC0 /* TLSProbe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TLSProbe.swift; sourceTree = "<group>"; };
 		ADFBB0848E1250019868E7F3 /* RevocationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RevocationView.swift; sourceTree = "<group>"; };
+		B23483D08F8289B1EEBDA828 /* DiagnosticSettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiagnosticSettingsView.swift; sourceTree = "<group>"; };
 		B24D2A511693F1C3090D61F1 /* PolicyDirectives.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PolicyDirectives.swift; sourceTree = "<group>"; };
 		B5571AEF32197ACDBF1475DB /* Integrity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Integrity.swift; sourceTree = "<group>"; };
 		B623A579ADD8FD75F9E64D2A /* Tools.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tools.swift; sourceTree = "<group>"; };
@@ -206,6 +214,7 @@
 				9F8BC3C673B24C862C754BBD /* CertificateTransparencyTests.swift */,
 				5116786756C186E1A2D6769C /* CURLImportTests.swift */,
 				2A4D779A854D30AAF1836C77 /* DiagnosticFailureTests.swift */,
+				8BD71BB4443DD67B3D667E5C /* DiagnosticOptionsTests.swift */,
 				6F416B595E31C21C933D4911 /* EndpointTests.swift */,
 				BBFDF97001FEC55463E871E0 /* HARTests.swift */,
 				EAA192DD5325997D4603D365 /* HTTPProxyMessageTests.swift */,
@@ -258,6 +267,8 @@
 				0354E181C7AA4FB81B16BEBB /* Diagnostic.swift */,
 				034C303F69B4D34EBD8BB1A1 /* DiagnosticFailure.swift */,
 				2FADD3EDC9C9B0F550BA9CFE /* DiagnosticIssueView.swift */,
+				5CAB7A4A887A022BE790CC74 /* DiagnosticOptions.swift */,
+				B23483D08F8289B1EEBDA828 /* DiagnosticSettingsView.swift */,
 				8E46CE5231D8CC42A1587A78 /* HAR.swift */,
 				BAA06F59CA7F407DB1257EED /* HTTPDetailViews.swift */,
 				3AA82D275D1C50A55AA9F83A /* HTTPProxyMessage.swift */,
@@ -449,6 +460,8 @@
 				541095BC8BF9940CACAAD16D /* Diagnostic.swift in Sources */,
 				6009007BBC17790623650527 /* DiagnosticFailure.swift in Sources */,
 				7D99C4A6AF0AA34BBAF953BA /* DiagnosticIssueView.swift in Sources */,
+				F7F5E9D9AAB9A9DDCC04267F /* DiagnosticOptions.swift in Sources */,
+				B12964EFB49FAC1465B30292 /* DiagnosticSettingsView.swift in Sources */,
 				2C6A9B2F1CC537D485940B4A /* HAR.swift in Sources */,
 				89D5B454689C2C103A4F4D3B /* HTTPDetailViews.swift in Sources */,
 				B924E34D3C99DDB24D926116 /* HTTPProxyMessage.swift in Sources */,
@@ -487,6 +500,8 @@
 				B25C8782DDE6BAE7E6D29A3B /* Diagnostic.swift in Sources */,
 				E274583D6D6C84F180AF51A9 /* DiagnosticFailure.swift in Sources */,
 				94FB0404831682B046C2A013 /* DiagnosticIssueView.swift in Sources */,
+				FF4C44000484C15E692D4557 /* DiagnosticOptions.swift in Sources */,
+				D36018ADF1ED7A65B2F192AF /* DiagnosticSettingsView.swift in Sources */,
 				BF6307C82B4BDB21AE152F13 /* HAR.swift in Sources */,
 				8A921EC296645270E2EB0A83 /* HTTPDetailViews.swift in Sources */,
 				3189B213A050C5CA5E2FAF86 /* HTTPProxyMessage.swift in Sources */,
@@ -517,6 +532,7 @@
 				A1D329C2B08FE63A1D9E56C9 /* CertificateReminderTests.swift in Sources */,
 				709942B658F7C24A3F011555 /* CertificateTransparencyTests.swift in Sources */,
 				ACDA30D9DB4F1BB6FBB266B3 /* DiagnosticFailureTests.swift in Sources */,
+				0D86FB94C7E8E90B8C0486A4 /* DiagnosticOptionsTests.swift in Sources */,
 				117F3FD22732F020EEE3C5E1 /* EndpointTests.swift in Sources */,
 				12B5FC44B53A012A2E7B0ACC /* HARTests.swift in Sources */,
 				A6B6B5EA6FA5D4483DC6A2F4 /* HTTPProxyMessageTests.swift in Sources */,
@@ -607,7 +623,7 @@
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
-				CURRENT_PROJECT_VERSION = 35;
+				CURRENT_PROJECT_VERSION = 36;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEVELOPMENT_TEAM = SP73Z8JWXM;
 				ENABLE_NS_ASSERTIONS = NO;
@@ -726,7 +742,7 @@
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
-				CURRENT_PROJECT_VERSION = 35;
+				CURRENT_PROJECT_VERSION = 36;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				DEVELOPMENT_TEAM = SP73Z8JWXM;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;

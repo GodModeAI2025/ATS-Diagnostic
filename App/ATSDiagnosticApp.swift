@@ -269,6 +269,7 @@ struct RecordView: View {
                 LabeledContent("Remote address", value: record.remoteAddress ?? "Not reported")
                 if let error = record.error { Text(error).foregroundStyle(.red) }
             }
+            if let options = record.diagnosticOptions { DiagnosticOptionsSummary(options:options) }
             if let checksum = record.responseSHA256 {
                 Section("Download integrity") {
                     Text("SHA-256 of the complete received response").font(.caption).foregroundStyle(.secondary)
@@ -305,19 +306,35 @@ struct RecordView: View {
                 ForEach(record.responseHeaders.keys.sorted().prefix(3), id: \.self) { key in HeaderRow(item: HeaderItem(name: key, value: record.responseHeaders[key] ?? "")) }
                 NavigationLink("All headers") { HeadersView(headers: record.responseHeaders) }
             }
-            Section("Response body") {
-                LabeledContent("Received", value: record.bytes.formatted(.byteCount(style: .file)))
-                if record.responseBody.isEmpty { Text("No body received.").foregroundStyle(.secondary) }
-                else {
-                    Text(String(record.responseBody.trimmingCharacters(in: .whitespacesAndNewlines).prefix(600))).font(.footnote.monospaced()).lineLimit(8).foregroundStyle(.secondary)
-                    NavigationLink(record.responseEncoding == "base64" ? "View Base64 body" : "View response body") { TextValueView(title: "Response body", value: record.responseBody) }
-                    Text("Captured up to 2 MB. The checksum covers the full received response.").font(.caption).foregroundStyle(.secondary)
-                }
-            }
+            ResponseBodySection(body: record.responseBody, encoding: record.responseEncoding, bytes: record.bytes, previewLimit: record.diagnosticOptions?.bodyPreviewBytes, hasCompleteHash: record.responseSHA256 != nil)
             Section {
                 ShareLink("Copy or share as cURL", item: record.curl)
                 Button("Replay request") { Task { await store.execute(url: record.url, method: record.method, headers: record.requestHeaders.map { "\($0.key): \($0.value)" }.joined(separator: "\n"), body: record.requestBody) } }.disabled(store.running)
             }
         }.scrollContentBackground(.hidden).background(Color(uiColor: .systemGroupedBackground))
+    }
+}
+
+private struct ResponseBodySection: View {
+    let bodyText: String
+    let encoding: String?
+    let bytes: Int
+    let previewLimit: Int?
+    let hasCompleteHash: Bool
+    init(body: String, encoding: String?, bytes: Int, previewLimit: Int?, hasCompleteHash: Bool) {
+        bodyText = body; self.encoding = encoding; self.bytes = bytes; self.previewLimit = previewLimit; self.hasCompleteHash = hasCompleteHash
+    }
+    var body: some View {
+        Section("Antwortdaten") {
+            LabeledContent("Empfangen", value: bytes.formatted(.byteCount(style: .file)))
+            if bodyText.isEmpty {
+                Text(bytes > 0 ? "Antwortdaten empfangen; keine Textvorschau gespeichert." : "Keine Antwortdaten empfangen.").foregroundStyle(.secondary)
+            } else {
+                Text(String(bodyText.trimmingCharacters(in: .whitespacesAndNewlines).prefix(600))).font(.footnote.monospaced()).lineLimit(8).foregroundStyle(.secondary)
+                NavigationLink(encoding == "base64" ? "Base64-Vorschau öffnen" : "Antwortvorschau öffnen") { TextValueView(title: "Antwortvorschau", value: bodyText) }
+            }
+            if let previewLimit { Text("Vorschau bis zu \(previewLimit.formatted(.byteCount(style: .memory))).").font(.caption).foregroundStyle(.secondary) }
+            if hasCompleteHash { Text("SHA-256 bezieht sich auf die vollständig empfangene Antwort.").font(.caption).foregroundStyle(.secondary) }
+        }
     }
 }

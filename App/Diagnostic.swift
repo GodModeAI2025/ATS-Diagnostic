@@ -42,6 +42,7 @@ struct DiagnosticRecord: Identifiable, Codable, Sendable {
     var clientCertificateRequested: Bool?
     var revocationChecked: Bool?
     var revocationAssessment: RevocationAssessment?
+    var diagnosticOptions: DiagnosticOptions?
     var curl: String {
         let headers = requestHeaders.sorted { $0.key < $1.key }.map { "-H \(Self.quote("\($0.key): \($0.value)"))" }.joined(separator: " ")
         return "curl -X \(method) \(headers) \(requestBody.isEmpty ? "" : "--data-raw " + Self.quote(requestBody)) \(Self.quote(url))"
@@ -62,24 +63,24 @@ final class DiagnosticEngine: NSObject, URLSessionDataDelegate, @unchecked Senda
     private var record: DiagnosticRecord
     private var buffer = Data()
     private var hasher = SHA256()
-    private let bodyLimit = 2 * 1024 * 1024
+    private let options: DiagnosticOptions
+    private var bodyLimit: Int { options.bodyPreviewBytes }
     private var continuation: CheckedContinuation<DiagnosticRecord, Never>?
     private var session: URLSession?
-    init(request: URLRequest, expectedSHA256: String? = nil) {
+    init(request: URLRequest, expectedSHA256: String? = nil, options: DiagnosticOptions = .standard) {
+        self.options = options.validated
         record = DiagnosticRecord(url: request.url?.absoluteString ?? "", method: request.httpMethod ?? "GET", requestHeaders: request.allHTTPHeaderFields ?? [:], requestBody: request.httpBody.flatMap { String(data: $0, encoding: .utf8) } ?? "")
         record.expectedSHA256 = expectedSHA256
+        record.diagnosticOptions = self.options
     }
     func run(_ request: URLRequest, configuration: URLSessionConfiguration? = nil) async -> DiagnosticRecord {
         await withCheckedContinuation { continuation in
             self.continuation = continuation
             let config = configuration ?? URLSessionConfiguration.ephemeral
-            config.timeoutIntervalForRequest = 20
-            config.timeoutIntervalForResource = 30
-            config.urlCache = nil
-            config.urlCredentialStorage = nil
+            let configuredRequest = options.configure(config, request: request)
             let session = URLSession(configuration: config, delegate: self, delegateQueue: nil)
             self.session = session
-            session.dataTask(with: request).resume()
+            session.dataTask(with: configuredRequest).resume()
         }
     }
     func urlSession(_ session: URLSession, didReceive challenge: URLAuthenticationChallenge, completionHandler: @escaping @Sendable (URLSession.AuthChallengeDisposition, URLCredential?) -> Void) {
