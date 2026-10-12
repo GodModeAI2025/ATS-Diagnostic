@@ -1,0 +1,14 @@
+ATS Diagnostic is a user-directed HTTP/TLS and certificate diagnostic utility. Targets are selected by the user and may be devices on the local network or Internet servers operated by third parties. The developer cannot control or pre-enumerate their configurations.
+
+Local-network access is used to inspect user-selected local devices and servers. The permission description explains this purpose. No background discovery or Bonjour browsing is performed.
+
+NSAllowsArbitraryLoads is required to diagnose arbitrary user-selected HTTP endpoints and legacy TLS configurations on local networks and the Internet. The developer cannot control these third-party servers or enumerate them in NSExceptionDomains. Default HTTPS server trust evaluation remains enabled; ATS transport restrictions are relaxed for diagnosis. The app does not accept all certificates or bypass hostname, expiry or certificate-chain checks. A successful request describes the measured connection and does not certify every ATS requirement of another app.
+
+The foreground proxy listens on loopback only and stops in the background. There is no device-wide VPN, HTTPS interception or installed root CA. Inspection history is kept locally; reports are shared only by explicit user action.
+
+Test: enter example.com in Inspect, run and open the result for issuer, chain, headers, HSTS and TLS-version details. Enter a reachable local device hostname or address to exercise local-network permission. No account is required.
+
+App Store Improvement Notice: This is the rebuilt version 2.0 submitted to resolve the December 3, 2024 notice and March 4, 2025 removal of version 1.2.0 under Guideline 4. It is built with the current Xcode/iOS SDK, provides a native adaptive iPhone/iPad interface, a new icon and launch screen, clear diagnostics, keyboard handling and updated privacy information. Please review this update for restoration of the existing app record.
+
+
+Build 55 adds native URL query parameter details, editable request copies, native redirect metrics, reverse address lookup and persistent foreground proxy rewrite rules. CONNECT completion now waits for actual receive/send results; native state messages remain separate from successful transfer evidence. The original system certificate trust policy is preserved. The privacy manifest declares app-container FileTimestamp access with reason C617.1. No account is required.
