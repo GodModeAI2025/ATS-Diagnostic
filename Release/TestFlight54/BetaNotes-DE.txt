@@ -1,0 +1,5 @@
+Neu in Build 54: Unter „Erfassen → Proxy-Regeln“ können passende HTTP-Anfragen gezielt umgeschrieben werden. Exakte URL, optional neues Ziel, Methode, Header und UTF-8- oder Base64-Body festlegen. Bei mehreren Treffern gilt die erste aktivierte Regel. Die Aufzeichnung zeigt angewendete Regel und ursprüngliches Ziel. Bei einem Zielwechsel werden alte Authorization- und Cookie-Header entfernt.
+
+Regeln werden auf dem Gerät gespeichert und nach einem Neustart geladen. Bearbeiten, Löschen und Umordnen sind bei laufendem Proxy gesperrt. CONNECT-Tunnel und Upgrade-Verbindungen werden nicht verändert. CONNECT-Abschlüsse werden anhand der tatsächlichen Datenübertragung bewertet; zusätzliche Systemmeldungen bleiben getrennt sichtbar. Echte TCP-Abbrüche werden weiterhin als Fehler ausgewiesen. Keine Zertifikatsprüfung wird umgangen.
+
+Bitte gezielte Änderungen an eigenen Testservern, Neustart, Deaktivierung/Löschen sowie verständliche Validierungsfehler prüfen.

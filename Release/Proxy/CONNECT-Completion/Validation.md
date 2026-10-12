@@ -9,3 +9,5 @@ The installed official Apple Network connection.h documents receive completion e
 Full151 native app methods passed, zero failures/skips. The large512KiB CONNECT case ran eight times with exact payload comparison, both byte counts, completed state and opaque-preview assertions. An independent BSD TCP peer using SO_LINGER{1,0} generated a real RST; the proxy remained failed with original transport evidence and a named failure phase. The earlier incorrectly selected zero-test run is not evidence.
 
 Native iPhone success/error UI verification is pending. TestFlight53 and Store50 do not contain this subsequent correction. Preview54 upload remains held until verification is complete.
+
+Native iPhone simulator QA passed: exactly524288 bytes sent/identically received after half-close; capture completed with additional NWError50 preserved separately; opaque preview absent/explanation visible. Real SO_LINGER RST remained failed with Empfang vom Ziel and original NWError54. Proxy, fixtures and device session stopped/closed. See CONNECT-Fix-* screenshots and AX.
