@@ -1,0 +1,58 @@
+Building for debugging...
+[1 / 10]
+[2 / 5] ATSRecordingTests-product
+[4 / 7] ATSRecordingTests-product
+[10 / 12] ATSRecordingTests-product
+Build complete! (1,58 Sek.)
+Test Suite 'All tests' started at 2026-10-12 02:14:04.019.
+Test Suite 'All tests' passed at 2026-10-12 02:14:04.020.
+	 Executed 0 tests, with 0 failures (0 unexpected) in 0.000 (0.001) seconds
+◇ Test run started.
+↳ Testing Library Version: 2084
+↳ Target Platform: arm64e-apple-macos14.0
+◇ Suite RecordingActivationTests started.
+➜ Suite LiveHTTPSRecordingTests skipped.
+◇ Suite RecordingClientTests started.
+◇ Test noHandlerLeavesMotionUnhandled() started.
+◇ Test disabledActivationDoesNotPresentAnything() started.
+➜ Test certificateFailureMatchesTheUnwrappedSession(_:) skipped.
+◇ Test observationDoesNotRetainItsProducer() started.
+◇ Test downloadWithZeroPreviewKeepsFullFileAndDigest() started.
+◇ Test countAndEncodedBudgetAreRespected() started.
+◇ Test hostReceivesTheCorrectTriggerAndCanDisableIt() started.
+◇ Test downloadPreservesFileAndHashesBeyondPreview() started.
+◇ Test uploadFailurePreservesTransportError() started.
+◇ Test observationsReportRecordingAndClearThenFinish() started.
+◇ Test downloadFailurePreservesOriginalError() started.
+◇ Test fullResponseSurvivesZeroPreview() started.
+◇ Test originalPostBodyAndHeadersReachTheSession() started.
+➜ Test liveResponseIsReturnedAndRecorded() skipped.
+◇ Test slowObserverCanDetectGapsAndReloadCurrentJournal() started.
+◇ Test observerLimitCanBeReleasedExplicitly() started.
+◇ Test originalFailureIsPreservedAndRecorded() started.
+◇ Test harMarksPartialRequestsAndUnknownProtocol() started.
+◇ Test fileUploadKeepsBodyFileBackedAndMarksJournalUnavailable() started.
+◇ Test tooSmallJournalCannotChangeSuccessfulResponse() started.
+◇ Test uploadRecordsExplicitBodyAndPreservesResponse() started.
+✔ Test observationDoesNotRetainItsProducer() passed after 0.001 seconds.
+✔ Test noHandlerLeavesMotionUnhandled() passed after 0.001 seconds.
+✔ Test hostReceivesTheCorrectTriggerAndCanDisableIt() passed after 0.001 seconds.
+✔ Test disabledActivationDoesNotPresentAnything() passed after 0.001 seconds.
+✔ Suite RecordingActivationTests passed after 0.001 seconds.
+✔ Test observerLimitCanBeReleasedExplicitly() passed after 0.001 seconds.
+✔ Test tooSmallJournalCannotChangeSuccessfulResponse() passed after 0.009 seconds.
+✔ Test observationsReportRecordingAndClearThenFinish() passed after 0.010 seconds.
+✔ Test slowObserverCanDetectGapsAndReloadCurrentJournal() passed after 0.011 seconds.
+✔ Test originalPostBodyAndHeadersReachTheSession() passed after 0.011 seconds.
+✔ Test originalFailureIsPreservedAndRecorded() passed after 0.011 seconds.
+✔ Test uploadFailurePreservesTransportError() passed after 0.011 seconds.
+✔ Test downloadFailurePreservesOriginalError() passed after 0.011 seconds.
+✔ Test uploadRecordsExplicitBodyAndPreservesResponse() passed after 0.011 seconds.
+✔ Test fullResponseSurvivesZeroPreview() passed after 0.011 seconds.
+✔ Test harMarksPartialRequestsAndUnknownProtocol() passed after 0.011 seconds.
+✔ Test downloadWithZeroPreviewKeepsFullFileAndDigest() passed after 0.012 seconds.
+✔ Test downloadPreservesFileAndHashesBeyondPreview() passed after 0.021 seconds.
+✔ Test fileUploadKeepsBodyFileBackedAndMarksJournalUnavailable() passed after 0.021 seconds.
+✔ Test countAndEncodedBudgetAreRespected() passed after 0.022 seconds.
+✔ Suite RecordingClientTests passed after 0.022 seconds.
+✔ Test run with 21 tests in 3 suites passed after 0.022 seconds.

@@ -91,6 +91,23 @@ public actor RecordingClient {
         }
     }
 
+    /// File upload stays file-backed. The journal does not claim to know bytes sent.
+    public func upload(for request: URLRequest, fromFile file: URL, using session: URLSession) async throws -> (Data, URLResponse) {
+        let began = ContinuousClock.now
+        let date = Date()
+        var uploadRequest = request
+        uploadRequest.httpBody = nil
+        uploadRequest.httpBodyStream = nil
+        do {
+            let (data, response) = try await session.upload(for: uploadRequest, fromFile: file)
+            try? append(makeRecord(request: uploadRequest, date: date, began: began, data: data, response: response as? HTTPURLResponse, error: nil, requestBodyUnknown: true))
+            return (data, response)
+        } catch {
+            try? append(makeRecord(request: uploadRequest, date: date, began: began, data: nil, response: nil, error: error as NSError, requestBodyUnknown: true))
+            throw error
+        }
+    }
+
     /// Returns URLSession's download file unchanged; journal hashing uses bounded reads.
     public func download(for request: URLRequest, using session: URLSession) async throws -> (URL, URLResponse) {
         let began = ContinuousClock.now
@@ -165,10 +182,10 @@ public actor RecordingClient {
         guard let data, !data.isEmpty, previewLimit > 0 else { return Data() }
         return data.withUnsafeBytes { buffer in Data(bytes: buffer.baseAddress!, count: min(buffer.count, previewLimit)) }
     }
-    private func makeRecord(request: URLRequest, date: Date, began: ContinuousClock.Instant, data: Data?, response: HTTPURLResponse?, error: NSError?, responseByteCount: Int? = nil, responseHash: String? = nil) -> RecordedExchange {
+    private func makeRecord(request: URLRequest, date: Date, began: ContinuousClock.Instant, data: Data?, response: HTTPURLResponse?, error: NSError?, responseByteCount: Int? = nil, responseHash: String? = nil, requestBodyUnknown: Bool = false) -> RecordedExchange {
         let time = began.duration(to: .now).components
         let headers = response?.allHeaderFields.reduce(into: [String: String]()) { result, item in result[String(describing: item.key)] = String(describing: item.value) } ?? [:]
-        let body = request.httpBody
-        return RecordedExchange(id: UUID(), date: date, url: request.url?.absoluteString ?? "", method: request.httpMethod ?? "GET", requestHeaders: request.allHTTPHeaderFields ?? [:], requestBodyPreview: preview(body), requestBodyBytes: body?.count ?? (request.httpBodyStream == nil ? 0 : nil), status: response?.statusCode, responseHeaders: headers, responseBodyPreview: preview(data), responseBytes: responseByteCount ?? data?.count, responseSHA256: responseHash ?? data.map { SHA256.hash(data: $0).map { String(format: "%02x", $0) }.joined() }, duration: Double(time.seconds) + Double(time.attoseconds) / 1e18, errorDomain: error?.domain, errorCode: error?.code, errorDescription: error?.localizedDescription)
+        let body = requestBodyUnknown ? nil : request.httpBody
+        return RecordedExchange(id: UUID(), date: date, url: request.url?.absoluteString ?? "", method: request.httpMethod ?? "GET", requestHeaders: request.allHTTPHeaderFields ?? [:], requestBodyPreview: preview(body), requestBodyBytes: requestBodyUnknown ? nil : (body?.count ?? (request.httpBodyStream == nil ? 0 : nil)), status: response?.statusCode, responseHeaders: headers, responseBodyPreview: preview(data), responseBytes: responseByteCount ?? data?.count, responseSHA256: responseHash ?? data.map { SHA256.hash(data: $0).map { String(format: "%02x", $0) }.joined() }, duration: Double(time.seconds) + Double(time.attoseconds) / 1e18, errorDomain: error?.domain, errorCode: error?.code, errorDescription: error?.localizedDescription)
     }
 }

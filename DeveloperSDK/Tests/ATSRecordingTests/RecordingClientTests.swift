@@ -126,6 +126,28 @@ struct RecordingClientTests {
         #expect(record.responseBytes == nil); #expect(record.responseSHA256 == nil)
     }
 
+    @Test func fileUploadKeepsBodyFileBackedAndMarksJournalUnavailable() async throws {
+        let recorder = try RecordingClient(previewLimit: 3)
+        let session = session(); defer { session.invalidateAndCancel() }
+        let body = Data((0..<150_017).map { UInt8($0 % 251) })
+        let file = FileManager.default.temporaryDirectory.appendingPathComponent(UUID().uuidString)
+        try body.write(to: file); defer { try? FileManager.default.removeItem(at: file) }
+        var request = URLRequest(url: URL(string: "https://fixture.invalid/echo")!)
+        request.httpMethod = "POST"; request.httpBody = Data("ignored".utf8)
+        let (responseBody, _) = try await recorder.upload(for: request, fromFile: file, using: session)
+        #expect(responseBody == body); #expect(try Data(contentsOf: file) == body)
+        let record = try #require(await recorder.records().first)
+        #expect(record.requestBodyBytes == nil); #expect(record.requestBodyPreview.isEmpty)
+        #expect(record.requestPreviewTruncated); #expect(record.responseBytes == body.count)
+        #expect(record.responseSHA256 == SHA256.hash(data: body).map { String(format: "%02x", $0) }.joined())
+        let har = try await recorder.harData()
+        let root = try #require(try JSONSerialization.jsonObject(with: har) as? [String: Any])
+        let log = try #require(root["log"] as? [String: Any])
+        let entry = try #require((log["entries"] as? [[String: Any]])?.first)
+        let metadata = try #require(entry["_atsDiagnostic"] as? [String: Any])
+        #expect(metadata["requestBodyUnavailable"] as? Bool == true)
+    }
+
     @Test func tooSmallJournalCannotChangeSuccessfulResponse() async throws {
         let recorder = try RecordingClient(byteLimit: 2)
         let session = session(); defer { session.invalidateAndCancel() }
