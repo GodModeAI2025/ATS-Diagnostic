@@ -6,8 +6,8 @@
   "build": 41,
   "sourceCommit": "a3bf740",
   "archiveSucceeded": true,
-  "uploadCompleted": false,
-  "uploadState": "Running: waiting for Apple upload completion",
+  "uploadCompleted": true,
+  "uploadState": "Completed",
   "processingCompleted": null,
   "testflightState": "Not verified: browser sign-in required",
   "groupAssigned": false,
@@ -18,5 +18,6 @@
   "deviceInstallationVerified": false,
   "iPhoneHistoryRestartVerified": true,
   "betaNotesSaved": false,
-  "iPhoneAsyncHistoryRestartVerified": true
+  "iPhoneAsyncHistoryRestartVerified": true,
+  "uploadCompletedAt": "2026-10-12T02:44:35+02:00"
 }
