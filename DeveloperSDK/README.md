@@ -36,3 +36,7 @@ HAR-Export und App-Import sind implementiert. Fehlende Protokollangaben bleiben 
 Auf iOS kann eine host-eigene `UIWindowScene` eine `RecordingWindow` verwenden und ihr `recordingActivation` zuweisen. Der Host muss den Aktivierungscontroller selbst halten; die Window-Referenz darauf ist schwach. Eine aktivierte Shake-Aktion wird vom SDK-Hook konsumiert; sonst läuft die Bewegung durch UIKit weiter. Der Hook ersetzt in diesem eingeschalteten Fall die normale Shake-Aktion. Es gibt keine globale Methodenänderung und keine automatische Präsentation beim Start.
 
 Der native Beispielhost unter `Examples/ActivationDemo` demonstriert diese Verdrahtung pro Scene. Die API-Steuerung ist mit 13 kontrollierten Tests auf macOS und iOS geprüft; die echte Simulator-Shake-Prüfung des Beispielhosts läuft noch. Die automatische URLProtocol-Aufzeichnung und eine vollständige SDK-Diagnoseoberfläche bleiben offen.
+
+## Uploads aus Data
+
+`try await recorder.upload(for: request, from: body, using: session)` verwendet die bestehende URLSession direkt. Der explizite Upload-Body wird mit voller Bytezahl und begrenzter Vorschau protokolliert; der Aufrufer erhält die vollständige Antwort. Transportfehler bleiben unverändert. Datei-Uploads, Downloads und Streaming sind weiterhin offen.

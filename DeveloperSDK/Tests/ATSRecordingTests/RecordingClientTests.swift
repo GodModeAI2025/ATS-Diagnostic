@@ -9,7 +9,7 @@ private final class FixtureProtocol: URLProtocol, @unchecked Sendable {
     override class func canonicalRequest(for request: URLRequest) -> URLRequest { request }
     override func startLoading() {
         if request.url?.path == "/failure" { client?.urlProtocol(self,didFailWithError:URLError(.cannotConnectToHost));return }
-        let data = request.url?.path == "/echo" ? (request.httpBody ?? task?.originalRequest?.httpBody ?? readBodyStream()) : Data((0..<4096).map { UInt8($0 % 251) })
+        let data = request.url?.path == "/echo" ? ((request.httpBodyStream ?? task?.originalRequest?.httpBodyStream) != nil ? readBodyStream() : (request.httpBody ?? task?.originalRequest?.httpBody ?? Data())) : Data((0..<4096).map { UInt8($0 % 251) })
         let response = HTTPURLResponse(url:request.url!,statusCode:200,httpVersion:"HTTP/1.1",headerFields:["Content-Type":"application/octet-stream"])!
         client?.urlProtocol(self,didReceive:response,cacheStoragePolicy:.notAllowed)
         client?.urlProtocol(self,didLoad:data);client?.urlProtocolDidFinishLoading(self)
@@ -62,6 +62,35 @@ struct RecordingClientTests {
         #expect(record.method == "POST"); #expect(record.requestHeaders["X-Fixture"] == "original")
         #expect(record.requestBodyPreview == Data("com".utf8)); #expect(record.requestPreviewTruncated)
     }
+    @Test func uploadRecordsExplicitBodyAndPreservesResponse() async throws {
+        let recorder = try RecordingClient(previewLimit: 3)
+        let session = session(); defer { session.invalidateAndCancel() }
+        var request = URLRequest(url: URL(string: "https://fixture.invalid/echo")!)
+        request.httpMethod = "POST"; request.httpBody = Data("ignored".utf8)
+        let body = Data("uploaded body".utf8)
+        let (data, response) = try await recorder.upload(for: request, from: body, using: session)
+        #expect(data == body); #expect((response as? HTTPURLResponse)?.statusCode == 200)
+        let record = try #require(await recorder.records().first)
+        #expect(record.requestBodyBytes == body.count)
+        #expect(record.requestBodyPreview == Data("upl".utf8))
+        #expect(record.responseBytes == body.count)
+        #expect(record.responseSHA256 == SHA256.hash(data: body).map { String(format: "%02x", $0) }.joined())
+    }
+    @Test func uploadFailurePreservesTransportError() async throws {
+        let recorder = try RecordingClient()
+        let session = session(); defer { session.invalidateAndCancel() }
+        var request = URLRequest(url: URL(string: "https://fixture.invalid/failure")!)
+        request.httpMethod = "POST"
+        do {
+            _ = try await recorder.upload(for: request, from: Data("body".utf8), using: session)
+            Issue.record("Expected upload failure")
+        } catch { #expect((error as NSError).code == URLError.cannotConnectToHost.rawValue) }
+        let record = try #require(await recorder.records().first)
+        #expect(record.requestBodyBytes == 4); #expect(record.responseBytes == nil)
+        #expect(record.responseSHA256 == nil)
+        #expect(record.errorCode == URLError.cannotConnectToHost.rawValue)
+    }
+
     @Test func tooSmallJournalCannotChangeSuccessfulResponse() async throws {
         let recorder = try RecordingClient(byteLimit: 2)
         let session = session(); defer { session.invalidateAndCancel() }

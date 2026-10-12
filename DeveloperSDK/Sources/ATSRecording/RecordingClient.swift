@@ -71,6 +71,23 @@ public actor RecordingClient {
         }
     }
 
+    /// Uses the supplied session directly; the explicit upload body is authoritative.
+    public func upload(for request: URLRequest, from body: Data, using session: URLSession) async throws -> (Data, URLResponse) {
+        let began = ContinuousClock.now
+        let date = Date()
+        var recordedRequest = request
+        recordedRequest.httpBodyStream = nil
+        recordedRequest.httpBody = body
+        do {
+            let (data, response) = try await session.upload(for: request, from: body)
+            try? append(makeRecord(request: recordedRequest, date: date, began: began, data: data, response: response as? HTTPURLResponse, error: nil))
+            return (data, response)
+        } catch {
+            try? append(makeRecord(request: recordedRequest, date: date, began: began, data: nil, response: nil, error: error as NSError))
+            throw error
+        }
+    }
+
     public func records() -> [RecordedExchange] { journal.map(\.record) }
     public func clear() { journal.removeAll(); encodedBytes = 2; publish(.cleared) }
     /// Buffered metadata-only events; revision gaps require a records() reload.
