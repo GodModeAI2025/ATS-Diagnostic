@@ -123,3 +123,5 @@ System address lookup utility now displays device-resolver IPv4/IPv6 results, st
 Build 44 (source 09bb103) archived and uploaded successfully on 2026-10-12 at 04:28:46 CEST. 121 app tests passed; DNS lookup UI verified on iPhone simulator. Apple processing completion, owner-group assignment and physical TestFlight installation remain unverified. Browser authentication is required for feedback and distribution readback. See PreviewRecord-44-Pending.json and Upload-44.log.
 
 Build 45 (source 62f6a58) uploaded successfully 2026-10-12 04:36:16 CEST. Apple CT directory UI verified on iPhone simulator and all 123 app test methods passed. Processing completion, owner-group assignment and physical installation remain unverified pending browser authentication.
+
+Build 46 source 80dc69a uploaded successfully 2026-10-12 04:41:04 CEST. System CT true/false/nil display distinction tested; 124 app methods passed and positive native iPhone simulator view verified. Processing completion, owner-group assignment, physical installation and TestFlight feedback readback remain unverified pending browser authentication.
