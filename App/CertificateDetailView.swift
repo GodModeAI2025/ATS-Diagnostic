@@ -178,6 +178,14 @@ struct CertificateTransparencyView: View {
                         LabeledContent("Timestamp", value: timestamp.timestamp.formatted(date: .abbreviated, time: .standard))
                         LabeledContent("Signature", value: timestamp.signatureAlgorithm)
                         if let log { LabeledContent("Log’s current state", value: log.state.capitalized) }
+                        if let appleLog = AppleCTLogSnapshot.bundled?.log(id: timestamp.logID) {
+                            LabeledContent("Apple-Logstatus", value: appleLog.state.capitalized)
+                            Text(appleLog.statusExplanation(at: timestamp.timestamp)).font(.footnote).foregroundStyle(.secondary)
+                            LabeledContent("Apple-Logbetreiber", value: appleLog.operatorName)
+                            LabeledContent("Log-API", value: appleLog.api)
+                        } else {
+                            Text("In der hinterlegten Apple-Logliste nicht gefunden. Daraus allein folgt kein CT-Fehler.").font(.footnote).foregroundStyle(.secondary)
+                        }
                         DisclosureGroup("Log ID & signature") {
                             FingerprintRow(title: "Log ID · SHA-256", value: timestamp.logID)
                             Text(timestamp.signature.base64EncodedString()).font(.footnote.monospaced()).textSelection(.enabled)
@@ -185,6 +193,14 @@ struct CertificateTransparencyView: View {
                     }.padding(.vertical, 6)
                 }
             } header: { Text("Embedded signed timestamps · \(timestamps.count)") } footer: { Text("SCT contents are decoded, not independently signature-verified. The system CT result is separate; an SCT alone does not prove inclusion in a log.") }
+            if let apple = AppleCTLogSnapshot.bundled {
+                Section("Apple-Logverzeichnis") {
+                    LabeledContent("Version", value: apple.version)
+                    LabeledContent("Abgerufen", value: String(apple.retrievedAt.prefix(10)))
+                    Text("Datiertes Verzeichnis; der aktuelle Gerätestand kann abweichen.").font(.footnote).foregroundStyle(.secondary)
+                    Link("Apple-CT-Richtlinie", destination: URL(string: "https://support.apple.com/103214")!)
+                }
+            }
             if let snapshot = CTLogSnapshot.bundled { Section("Log directory") { LabeledContent("Version", value: snapshot.version); Text("Google CT log list · \(String(snapshot.date.prefix(10)))").font(.footnote).foregroundStyle(.secondary); Link("View log directory", destination: URL(string: "https://www.gstatic.com/ct/log_list/v3/log_list.json")!) } }
         }.navigationTitle("Transparency").navigationBarTitleDisplayMode(.inline)
     }

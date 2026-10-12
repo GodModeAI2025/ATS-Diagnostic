@@ -75,3 +75,33 @@ struct CTLogSnapshot: Decodable, Sendable {
     }
     static let bundled: CTLogSnapshot? = Bundle.main.url(forResource: "CTLogSnapshot", withExtension: "json").flatMap { try? JSONDecoder().decode(Self.self, from: Data(contentsOf: $0)) }
 }
+
+/// A dated Apple directory lookup, separate from cryptographic SCT verification.
+struct AppleCTLogSnapshot: Decodable, Sendable {
+    let sourceURL: String
+    let retrievedAt: String
+    let version: String
+    let logs: [Log]
+    struct Log: Decodable, Sendable {
+        let logID: String
+        let name: String
+        let operatorName: String
+        let state: String
+        let stateTimestamp: String
+        let publicKey: String
+        let api: String
+        func statusExplanation(at timestamp: Date) -> String {
+            switch state {
+            case "usable", "qualified", "readonly": return "Aktuell qualifiziert laut Apple-Listenstand. Die SCT-Signatur und weitere Richtlinienbedingungen sind damit noch nicht geprüft."
+            case "retired":
+                guard let retirement = ISO8601DateFormatter().date(from: stateTimestamp) else { return "Stillgelegt; Zeitgrenze nicht lesbar." }
+                return timestamp < retirement ? "SCT vor Stilllegung ausgestellt; kann als ehemals qualifiziert zählen. Weitere Prüfungen sind erforderlich." : "SCT ab Stilllegung ausgestellt; zählt nicht als ehemals qualifiziert."
+            case "pending": return "Aufnahme ausstehend; zählt nicht als qualifiziert."
+            case "rejected": return "Von Apple abgelehnt; zählt nicht als qualifiziert."
+            default: return "Unbekannter Status; keine Qualifikation bestätigt."
+            }
+        }
+    }
+    func log(id: String) -> Log? { logs.first { $0.logID == id } }
+    static let bundled: Self? = Bundle.main.url(forResource: "AppleCTLogSnapshot", withExtension: "json").flatMap { try? JSONDecoder().decode(Self.self, from: Data(contentsOf: $0)) }
+}

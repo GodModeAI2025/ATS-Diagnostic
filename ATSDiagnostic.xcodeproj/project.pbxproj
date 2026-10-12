@@ -21,6 +21,7 @@
 		12E4B0758037AF1C02025121 /* BadSSLCatalog.json in Resources */ = {isa = PBXBuildFile; fileRef = 9D694D65FB7B8DE61D1846A0 /* BadSSLCatalog.json */; };
 		18024BD207E9FB5600464F08 /* CertificateIssuerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D9A4044CD5FEABE4C3A7F19 /* CertificateIssuerTests.swift */; };
 		18581587FCA4E8B6FBCEA559 /* SignedCRL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 948315BB0FCB5247585725A2 /* SignedCRL.swift */; };
+		189B4EBC946612AC01BA7A66 /* AppleCTLogSnapshot.json in Resources */ = {isa = PBXBuildFile; fileRef = B42EAC35276350676B17BEFD /* AppleCTLogSnapshot.json */; };
 		1E76C1BD205F45EE63E51A92 /* ProxyLiveTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F7CB99775433E4D4A1F096F /* ProxyLiveTests.swift */; };
 		1F6D12F7661441F956747C02 /* ProxyMonitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8CC2E2ECD74EFAE9C3C2101 /* ProxyMonitor.swift */; };
 		221DC1D1E65ED9A8B3F628F2 /* SDK-Live-wrong.host.badssl.com.json in Resources */ = {isa = PBXBuildFile; fileRef = AE9DCAB53091977AB4E4AFCD /* SDK-Live-wrong.host.badssl.com.json */; };
@@ -118,6 +119,7 @@
 		D36018ADF1ED7A65B2F192AF /* DiagnosticSettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B23483D08F8289B1EEBDA828 /* DiagnosticSettingsView.swift */; };
 		DAD338AB51D878DA1BCF17E0 /* SDK-Post-Partial.json in Resources */ = {isa = PBXBuildFile; fileRef = 564023DD235D24ECA710F96D /* SDK-Post-Partial.json */; };
 		DBD6F73744A00D7409A10F86 /* LocalHTTPProxy.swift in Sources */ = {isa = PBXBuildFile; fileRef = F45C97FCFC49991D92C95A74 /* LocalHTTPProxy.swift */; };
+		DF1173F56EA359E8BDA4D3D2 /* AppleCTLogSnapshot.json in Resources */ = {isa = PBXBuildFile; fileRef = B42EAC35276350676B17BEFD /* AppleCTLogSnapshot.json */; };
 		E05CEECCBE5C7B79305282B2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D7FD6A27B7550D386C7632C8 /* Assets.xcassets */; };
 		E27198736FA91776E9ACED06 /* ImportedRecordSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3C307EBF4A75A452738313B /* ImportedRecordSection.swift */; };
 		E274583D6D6C84F180AF51A9 /* DiagnosticFailure.swift in Sources */ = {isa = PBXBuildFile; fileRef = 034C303F69B4D34EBD8BB1A1 /* DiagnosticFailure.swift */; };
@@ -231,6 +233,7 @@
 		B136DA93075DD990C98CAF78 /* SDK-Stream-Partial.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = "SDK-Stream-Partial.json"; sourceTree = "<group>"; };
 		B23483D08F8289B1EEBDA828 /* DiagnosticSettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiagnosticSettingsView.swift; sourceTree = "<group>"; };
 		B24D2A511693F1C3090D61F1 /* PolicyDirectives.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PolicyDirectives.swift; sourceTree = "<group>"; };
+		B42EAC35276350676B17BEFD /* AppleCTLogSnapshot.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = AppleCTLogSnapshot.json; sourceTree = "<group>"; };
 		B5571AEF32197ACDBF1475DB /* Integrity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Integrity.swift; sourceTree = "<group>"; };
 		B623A579ADD8FD75F9E64D2A /* Tools.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tools.swift; sourceTree = "<group>"; };
 		B840DD0519DE6227075BF662 /* CertificateIssuer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CertificateIssuer.swift; sourceTree = "<group>"; };
@@ -284,6 +287,7 @@
 		9D6DFA5FF1A6F559ABE45C62 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				B42EAC35276350676B17BEFD /* AppleCTLogSnapshot.json */,
 				9D694D65FB7B8DE61D1846A0 /* BadSSLCatalog.json */,
 				576B1BE5362059F67EF577F8 /* CCADB-License.txt */,
 				DA61C5840AE5296CF32F00F9 /* CTLogSnapshot.json */,
@@ -560,6 +564,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DF1173F56EA359E8BDA4D3D2 /* AppleCTLogSnapshot.json in Resources */,
 				E05CEECCBE5C7B79305282B2 /* Assets.xcassets in Resources */,
 				12E4B0758037AF1C02025121 /* BadSSLCatalog.json in Resources */,
 				2D4D12C09D75D149C65AECF5 /* CCADB-License.txt in Resources */,
@@ -573,6 +578,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				189B4EBC946612AC01BA7A66 /* AppleCTLogSnapshot.json in Resources */,
 				FE15A7008B4ECCB46EF7CB1B /* Assets.xcassets in Resources */,
 				BF07C549EB849D420428DC01 /* BadSSLCatalog.json in Resources */,
 				866076009DAB1AC03FD0D42D /* CCADB-License.txt in Resources */,

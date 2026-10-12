@@ -35,3 +35,20 @@ struct CertificateTransparencyTests {
         #expect(certificate.source == nil)
     }
 }
+
+struct AppleCTDirectoryTests {
+    @Test func directoryIntegrityAndAllStates() throws {
+        let snapshot = try #require(AppleCTLogSnapshot.bundled)
+        #expect(snapshot.logs.count == 166)
+        #expect(snapshot.logs.contains { $0.api == "static-ct-api" })
+        #expect(snapshot.logs.contains { $0.state == "rejected" })
+        #expect(snapshot.logs.contains { $0.state == "readonly" })
+        #expect(Set(snapshot.logs.map(\.logID)).count == snapshot.logs.count)
+    }
+    @Test func retirementBoundaryIsStrict() {
+        let log = AppleCTLogSnapshot.Log(logID: "id", name: "test", operatorName: "test", state: "retired", stateTimestamp: "2025-01-01T00:00:00Z", publicKey: "", api: "RFC6962")
+        let boundary = ISO8601DateFormatter().date(from: log.stateTimestamp)!
+        #expect(log.statusExplanation(at: boundary.addingTimeInterval(-1)).contains("vor Stilllegung"))
+        #expect(log.statusExplanation(at: boundary).contains("ab Stilllegung"))
+    }
+}
