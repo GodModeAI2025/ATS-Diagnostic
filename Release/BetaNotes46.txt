@@ -1,0 +1,5 @@
+ATS Diagnostic 2.0 (46)
+
+Certificate Transparency unterscheidet jetzt positive, negative und nicht gemeldete Apple-Systemwerte. Ein negativer CT-Wert wird nicht pauschal als abgelehnte Verbindung dargestellt; maßgeblich bleiben Systemvertrauen und ursprüngliche Fehlermeldung.
+
+Enthält die getrennte Apple-Logliste mit Betreiber, Status, Log-API und datiertem Verzeichnis. SCT-Signaturen und Log-Inklusionsnachweise werden nicht unabhängig geprüft.
