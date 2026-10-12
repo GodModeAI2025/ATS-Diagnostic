@@ -51,11 +51,11 @@ Application, pid: 81885, label: 'ATS Diagnostic'
                    Other, {{16.0, 316.3}, {370.0, 130.3}}, hitPoint: {201.0, 381.5}
                     Other, {{16.0, 316.3}, {370.0, 130.3}}, hitPoint: {201.0, 381.5}
                      Other, {{16.0, 316.3}, {370.0, 130.3}}, hitPoint: {201.0, 381.5}
-                      TextField, {{32.0, 331.3}, {338.0, 34.0}}, placeholderValue: 'example.com', hitPoint: {201.0, 348.3}
-                      Button, {{32.0, 381.3}, {338.0, 50.3}}, label: 'Inspect connection', Disabled, hitPoint: {201.0, 406.5}
-                       StaticText, {{32.0, 381.3}, {338.0, 50.3}}, label: 'Inspect connection', Disabled, hitPoint: {201.0, 406.5}
-                       Image, {{109.7, 396.0}, {21.0, 21.0}}, identifier: 'magnifyingglass', label: 'Search', Disabled, hitPoint: {120.2, 406.5}
-                  Other, {{-16.0, 464.0}, {434.0, 611.7}}, hitPoint: {201.0, 669.0}
+                      TextField, {{32.0, 331.3}, {338.0, 34.0}}, placeholderValue: 'example.com', value: example.com, hitPoint: {201.0, 348.3}
+                      Button, {{32.0, 381.3}, {338.0, 50.3}}, label: 'Inspect connection', hitPoint: {201.0, 406.5}
+                       StaticText, {{32.0, 381.3}, {338.0, 50.3}}, label: 'Inspect connection', hitPoint: {201.0, 406.5}
+                       Image, {{109.7, 396.0}, {21.0, 21.0}}, identifier: 'magnifyingglass', label: 'Search', hitPoint: {120.2, 406.5}
+                  Other, {{-16.0, 464.0}, {434.0, 408.3}}, hitPoint: {201.0, 668.2}
                   Cell, {{16.0, 464.0}, {370.0, 40.3}}, hitPoint: {201.0, 484.2}
                    Other, {{16.0, 464.0}, {370.0, 40.3}}, hitPoint: {201.0, 484.2}
                    Other, {{16.0, 464.0}, {370.0, 40.3}}, hitPoint: {201.0, 484.2}
@@ -68,39 +68,44 @@ Application, pid: 81885, label: 'ATS Diagnostic'
                    Other, {{16.0, 504.3}, {370.0, 245.3}}, hitPoint: {201.0, 627.0}
                     Other, {{16.0, 504.3}, {370.0, 245.3}}, hitPoint: {201.0, 627.0}
                      Other, {{16.0, 504.3}, {370.0, 245.3}}, hitPoint: {201.0, 627.0}
-                      Image, {{32.7, 527.3}, {22.7, 20.7}}, identifier: 'exclamationmark.triangle.fill', label: 'Warning', hitPoint: {44.0, 537.7}
-                      StaticText, {{32.7, 527.3}, {259.3, 20.7}}, label: 'Connection needs attention', hitPoint: {162.3, 537.7}
+                      StaticText, {{33.0, 526.3}, {189.3, 22.3}}, label: 'Response received', hitPoint: {127.7, 537.5}
+                      Image, {{33.0, 526.3}, {22.3, 22.3}}, identifier: 'checkmark.circle.fill', label: 'Selected', Selected, hitPoint: {44.2, 537.5}
                       Other, {{32.0, 563.7}, {338.0, 162.7}}, hitPoint: {201.0, 645.0}
-                       StaticText, {{32.0, 563.7}, {163.0, 75.3}}, label: 'HTTP status, Failed', hitPoint: {113.5, 601.3}
+                       StaticText, {{32.0, 563.7}, {163.0, 75.3}}, label: 'HTTP status, 200', hitPoint: {113.5, 601.3}
                         StaticText, {{50.3, 577.0}, {107.3, 15.7}}, label: 'HTTP status', hitPoint: {104.0, 584.8}
                         Image, {{50.3, 577.0}, {15.7, 15.7}}, identifier: 'arrow.down.circle', label: 'Arrow Down Circle', hitPoint: {58.2, 584.8}
-                        StaticText, {{46.0, 601.0}, {54.3, 24.0}}, label: 'Failed', hitPoint: {73.2, 613.0}
-                       StaticText, {{207.0, 563.7}, {163.0, 75.3}}, label: 'TLS version, TLS 1.2', hitPoint: {288.5, 601.3}
+                        StaticText, {{46.0, 601.0}, {38.0, 24.0}}, label: '200', hitPoint: {65.0, 613.0}
+                       StaticText, {{207.0, 563.7}, {163.0, 75.3}}, label: 'TLS version, TLS 1.3', hitPoint: {288.5, 601.3}
                         Image, {{227.7, 577.3}, {10.7, 15.0}}, identifier: 'lock', label: 'Lock', hitPoint: {233.0, 584.8}
                         StaticText, {{227.7, 577.3}, {101.3, 15.0}}, label: 'TLS version', hitPoint: {278.3, 584.8}
-                        StaticText, {{221.0, 601.0}, {71.3, 24.0}}, label: 'TLS 1.2', hitPoint: {256.7, 613.0}
-                       StaticText, {{32.0, 651.0}, {163.0, 75.3}}, label: 'Duration, 0,437 s', hitPoint: {113.5, 688.7}
+                        StaticText, {{221.0, 601.0}, {71.3, 24.0}}, label: 'TLS 1.3', hitPoint: {256.7, 613.0}
+                       StaticText, {{32.0, 651.0}, {163.0, 75.3}}, label: 'Duration, 0,646 s', hitPoint: {113.5, 688.7}
                         StaticText, {{50.3, 664.3}, {85.7, 15.7}}, label: 'Duration', hitPoint: {93.2, 672.2}
                         Image, {{50.3, 664.3}, {15.7, 15.7}}, identifier: 'timer', label: 'Timer', hitPoint: {58.2, 672.2}
-                        StaticText, {{46.0, 688.3}, {71.0, 24.0}}, label: '0,437 s', hitPoint: {81.5, 700.3}
-                       StaticText, {{207.0, 651.0}, {163.0, 75.3}}, label: 'Certificates, 3', hitPoint: {288.5, 688.7}
+                        StaticText, {{46.0, 688.3}, {71.0, 24.0}}, label: '0,646 s', hitPoint: {81.5, 700.3}
+                       StaticText, {{207.0, 651.0}, {163.0, 75.3}}, label: 'Certificates, 4', hitPoint: {288.5, 688.7}
                         StaticText, {{224.3, 663.3}, {104.3, 17.7}}, label: 'Certificates', hitPoint: {276.5, 672.2}
                         Image, {{224.3, 663.3}, {17.7, 17.7}}, identifier: 'checkmark.seal', label: 'Verified', Selected, hitPoint: {233.2, 672.2}
-                        StaticText, {{221.0, 688.3}, {12.7, 24.0}}, label: '3', hitPoint: {227.3, 700.3}
-                  Cell, {{16.0, 749.7}, {370.0, 256.3}}, hitPoint: {201.0, 811.8}
-                   Other, {{16.0, 749.7}, {370.0, 256.3}}, hitPoint: {201.0, 811.8}
-                    Other, {{16.0, 749.7}, {370.0, 256.3}}, hitPoint: {201.0, 811.8}
-                   Other, {{16.0, 749.7}, {370.0, 256.3}}, hitPoint: {201.0, 811.8}
-                    Other, {{16.0, 749.7}, {370.0, 256.3}}, hitPoint: {201.0, 811.8}
-                     Other, {{16.0, 749.7}, {370.0, 256.3}}, hitPoint: {201.0, 811.8}
-                      Image, {{35.0, 770.0}, {18.3, 22.0}}, identifier: 'exclamationmark.shield', label: 'Exclamation Mark In A Shield', hitPoint: {44.2, 781.0}
-                      StaticText, {{35.0, 770.0}, {203.0, 22.0}}, label: 'Zertifikat abgelaufen', hitPoint: {136.5, 781.0}
-                      StaticText, {{32.0, 805.0}, {314.0, 58.0}}, label: 'Mindestens ein Zertifikat der geprüften Kette liegt außerhalb seiner Gültigkeit. Eine vertrauenswürdige Verbindung kam nicht zustande.', hitPoint: {189.0, 834.0}
+                        StaticText, {{221.0, 688.3}, {12.7, 24.0}}, label: '4', hitPoint: {227.3, 700.3}
+                  Cell, {{16.0, 749.7}, {370.0, 105.0}}, hitPoint: {201.0, 802.2}
+                   Other, {{16.0, 749.7}, {370.0, 105.0}}, hitPoint: {201.0, 802.2}
+                    Other, {{16.0, 749.7}, {370.0, 105.0}}, hitPoint: {201.0, 802.2}
+                   Other, {{16.0, 749.7}, {370.0, 105.0}}, hitPoint: {201.0, 802.2}
+                    Other, {{16.0, 749.7}, {370.0, 105.0}}, hitPoint: {201.0, 802.2}
+                     Other, {{16.0, 749.7}, {370.0, 105.0}}, hitPoint: {201.0, 802.2}
+                      Button, {{16.0, 749.7}, {370.0, 105.0}}, label: 'https://example.com, GET · 200, 12. Oct at 08:34', hitPoint: {201.0, 802.2}
+                       Image, {{32.0, 768.7}, {36.0, 36.0}}, label: 'Illustration-traffic', hitPoint: {50.0, 786.7}
+                       StaticText, {{80.0, 768.7}, {163.3, 20.3}}, label: 'https://example.com', hitPoint: {161.7, 778.8}
+                       Image, {{81.3, 794.3}, {21.7, 21.7}}, identifier: 'checkmark.circle', label: 'Selected', Selected, hitPoint: {92.2, 805.2}
+                       StaticText, {{81.3, 794.3}, {114.7, 21.7}}, label: 'GET · 200', hitPoint: {138.7, 805.2}
+                       Image, {{360.7, 796.3}, {7.0, 12.0}}, identifier: 'chevron.forward', hitPoint: {364.2, 802.3}
+                       StaticText, {{80.0, 821.3}, {92.0, 14.3}}, label: '12. Oct at 08:34', hitPoint: {126.0, 828.5}
                   Other, {{72.0, 748.7}, {298.0, 1.0}}, hitPoint: {221.0, 749.2}
+                  Other, {{-16.0, 872.3}, {434.0, 1885.3}}, hitPoint: {201.0, 873.2}
                   Other, {{369.0, 116.0}, {30.0, 675.0}}, label: 'Vertical scroll bar, 2 pages', value: 0 %, hitPoint: {384.0, 453.5}
-                   Other, {{396.0, 308.7}, {3.0, 479.3}}, hitPoint: {397.5, 548.3}
+                   Other, {{396.0, 119.0}, {3.0, 535.3}}, hitPoint: {397.5, 386.7}
                   Other, {{369.0, 116.0}, {30.0, 675.0}}, label: 'Vertical scroll bar, 2 pages', value: 0 %, hitPoint: {384.0, 453.5}
-                   Other, {{396.0, 308.7}, {3.0, 479.3}}, hitPoint: {397.5, 548.3}
+                   Other, {{396.0, 119.0}, {3.0, 535.3}}, hitPoint: {397.5, 386.7}
              Toolbar, {{0.0, 0.0}, {402.0, 874.0}}, identifier: 'Toolbar', label: 'Toolbar', hitPoint: {201.0, 437.0}
               Other, {{0.0, 0.0}, {402.0, 874.0}}, hitPoint: {201.0, 437.0}
        Other, {{0.0, 0.0}, {402.0, 874.0}}, hitPoint: {201.0, 437.0}
@@ -110,15 +115,15 @@ Application, pid: 81885, label: 'ATS Diagnostic'
            Other, {{21.0, 791.0}, {360.0, 62.0}}, hitPoint: {201.0, 822.0}
             Other, {{21.0, 791.0}, {85.1, 54.0}}, hitPoint: {63.6, 818.0}
             Other, {{21.0, 791.0}, {360.0, 62.0}}, hitPoint: {201.0, 822.0}
-             Button, {{25.0, 795.0}, {85.1, 54.0}}, label: 'Inspect', Selected, hitPoint: {67.6, 822.0}
+             Button, {{25.0, 795.0}, {85.1, 54.0}}, identifier: 'checkmark.shield', label: 'Inspect', Selected, hitPoint: {67.6, 822.0}
               Image, {{55.3, 801.7}, {24.7, 26.7}}, identifier: 'checkmark.shield.fill', label: 'Checkmark in a filled shield', hitPoint: {67.7, 815.0}
-             Button, {{90.1, 795.0}, {89.9, 54.0}}, label: 'Requests', hitPoint: {135.1, 822.0}
+             Button, {{90.1, 795.0}, {89.9, 54.0}}, identifier: 'arrow.up.arrow.down', label: 'Requests', hitPoint: {135.1, 822.0}
               Image, {{118.4, 801.7}, {33.0, 26.3}}, identifier: 'arrow.up.arrow.down', label: 'sort', hitPoint: {134.9, 814.8}
-             Button, {{160.1, 795.0}, {86.7, 54.0}}, label: 'Erfassen', hitPoint: {203.4, 822.0}
+             Button, {{160.1, 795.0}, {86.7, 54.0}}, identifier: 'network', label: 'Erfassen', hitPoint: {203.4, 822.0}
               Image, {{189.7, 801.3}, {27.3, 27.3}}, identifier: 'network', label: 'Network nodes connected by lines', hitPoint: {203.4, 815.0}
-             Button, {{226.8, 795.0}, {85.1, 54.0}}, label: 'History', hitPoint: {269.3, 822.0}
+             Button, {{226.8, 795.0}, {85.1, 54.0}}, identifier: 'clock', label: 'History', hitPoint: {269.3, 822.0}
               Image, {{255.8, 801.3}, {27.3, 27.3}}, identifier: 'clock.fill', label: 'clock', hitPoint: {269.4, 815.0}
-             Button, {{291.9, 795.0}, {85.1, 54.0}}, label: 'Tools', hitPoint: {334.4, 822.0}
+             Button, {{291.9, 795.0}, {85.1, 54.0}}, identifier: 'wrench.and.screwdriver', label: 'Tools', hitPoint: {334.4, 822.0}
               Image, {{318.2, 799.3}, {32.7, 31.7}}, identifier: 'wrench.and.screwdriver.fill', label: 'Wrench and screwdriver, filled', hitPoint: {334.6, 815.2}
             Other, {{21.0, 791.0}, {360.0, 62.0}}, hitPoint: {201.0, 822.0}
             Other, {{25.0, 795.0}, {85.1, 54.0}}, hitPoint: {67.6, 822.0}
@@ -139,3 +144,6 @@ Application, pid: 81885, label: 'ATS Diagnostic'
             Other, {{0.0, 791.0}, {402.0, 83.0}}, hitPoint: {201.0, 832.5}
              Other, {{0.0, 791.0}, {402.0, 83.0}}, hitPoint: {201.0, 832.5}
       Other, {{0.0, 62.0}, {402.0, 778.0}}, hitPoint: {201.0, 451.0}
+ Window, {{0.0, 0.0}, {402.0, 874.0}}, hitPoint: {201.0, 437.0}
+  Other, {{0.0, 0.0}, {402.0, 874.0}}, hitPoint: {201.0, 437.0}
+   Other, {{0.0, 0.0}, {402.0, 874.0}}, hitPoint: {201.0, 437.0}
