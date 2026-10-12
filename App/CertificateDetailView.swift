@@ -164,8 +164,8 @@ struct CertificateTransparencyView: View {
                         Text("Public logs help reveal unexpected certificate issuance.").font(.subheadline).foregroundStyle(.secondary)
                     }
                 }.padding(.vertical, 6)
-                Label(systemCT == true ? "System CT qualified" : "System CT result not reported", systemImage: systemCT == true ? "checkmark.seal" : "questionmark.circle").foregroundStyle(systemCT == true ? Color.diagnosticAccent : Color.secondary)
-                Text(systemCT == true ? "Apple’s trust engine confirmed that this connection meets its CT policy." : "An absent CT result does not prove a CT failure. Roots and private certificates may not require CT.").font(.footnote).foregroundStyle(.secondary)
+                Label(SystemCTPresentation(value: systemCT).title, systemImage: systemCT == true ? "checkmark.seal" : "questionmark.circle").foregroundStyle(systemCT == true ? Color.diagnosticAccent : Color.secondary)
+                Text(SystemCTPresentation(value: systemCT).explanation).font(.footnote).foregroundStyle(.secondary)
             }
             Section {
                 if parseFailed { Label("Malformed SCT extension", systemImage: "exclamationmark.triangle").foregroundStyle(.orange) }

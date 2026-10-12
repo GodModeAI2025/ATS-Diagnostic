@@ -52,3 +52,12 @@ struct AppleCTDirectoryTests {
         #expect(log.statusExplanation(at: boundary).contains("ab Stilllegung"))
     }
 }
+
+struct SystemCTPresentationTests {
+    @Test func distinguishesReportedNegativeFromMissing() {
+        #expect(SystemCTPresentation(value: false).title != SystemCTPresentation(value: nil).title)
+        #expect(SystemCTPresentation(value: false).explanation.contains("does not prove a rejected connection"))
+        #expect(SystemCTPresentation(value: nil).title == "System CT result not reported")
+        #expect(SystemCTPresentation(value: true).title == "System CT qualified")
+    }
+}

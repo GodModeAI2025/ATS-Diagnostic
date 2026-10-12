@@ -105,3 +105,21 @@ struct AppleCTLogSnapshot: Decodable, Sendable {
     func log(id: String) -> Log? { logs.first { $0.logID == id } }
     static let bundled: Self? = Bundle.main.url(forResource: "AppleCTLogSnapshot", withExtension: "json").flatMap { try? JSONDecoder().decode(Self.self, from: Data(contentsOf: $0)) }
 }
+
+struct SystemCTPresentation: Sendable {
+    let value: Bool?
+    var title: String {
+        switch value {
+        case true: "System CT qualified"
+        case false: "System CT qualification not confirmed"
+        case nil: "System CT result not reported"
+        }
+    }
+    var explanation: String {
+        switch value {
+        case true: "Apple’s trust engine confirmed that this connection meets its CT policy."
+        case false: "Apple reported a negative CT qualification value. This alone does not prove a rejected connection: CT may not be required for this certificate. Check the separate system trust result and original error."
+        case nil: "An absent CT result does not prove a CT failure. Roots and private certificates may not require CT."
+        }
+    }
+}
