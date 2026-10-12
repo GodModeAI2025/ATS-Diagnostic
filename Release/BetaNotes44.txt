@@ -1,0 +1,7 @@
+ATS Diagnostic 2.0 (44)
+
+Neues Werkzeug unter Tools: Systemgestützte Adressauflösung für Hostnamen, URLs sowie IPv4-/IPv6-Literale. Die App zeigt die vom Gerät ermittelten Adressen und die Dauer; das Ergebnis lässt sich ausdrücklich teilen. Verständliche Resolvermeldungen helfen bei Fehlern.
+
+Enthält außerdem die geprüften HTTP-Feldmeldungen, Replay-Sperren bei ungültigen Importen, Teilantwort-Anzeige und asynchrone Verlaufsspeicherung.
+
+Testhinweis: Unter Tools → Adressauflösung 127.0.0.1, ::1 und einen öffentlichen Host prüfen. Ergebnisse folgen den DNS-/Netzwerkeinstellungen des Geräts.
