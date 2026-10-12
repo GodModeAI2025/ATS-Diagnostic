@@ -1,0 +1,351 @@
+Command line invocation:
+    /Applications/Xcode.app/Contents/Developer/usr/bin/xcodebuild -project ATSDiagnostic.xcodeproj -scheme ATSDiagnostic -destination "platform=iOS Simulator,id=60567F9D-DAD7-4445-84BF-F22C057FEA80" -derivedDataPath ../../work/HistoryAsyncDerived -resultBundlePath ../../work/HistoryLoad-Context.xcresult -collect-test-diagnostics never test
+
+Writing result bundle at path:
+	/Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/HistoryLoad-Context.xcresult
+
+ComputePackagePrebuildTargetDependencyGraph
+
+Prepare packages
+
+CreateBuildRequest
+
+SendProjectDescription
+
+CreateBuildOperation
+
+ComputeTargetDependencyGraph
+note: Building targets in dependency order
+note: Target dependency graph (2 targets)
+    Target 'ATSDiagnosticTests' in project 'ATSDiagnostic'
+        ➜ Explicit dependency on target 'ATSDiagnostic' in project 'ATSDiagnostic'
+    Target 'ATSDiagnostic' in project 'ATSDiagnostic' (no dependencies)
+
+GatherProvisioningInputs
+
+CreateBuildDescription
+
+ClangStatCache /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang-stat-cache /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator27.0.sdk /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/HistoryAsyncDerived/SDKStatCaches.noindex/iphonesimulator27.0-24A430-e829b21a6f8c9b70876ba0858053c0448dc58220667be655e1bcc261a7455254.sdkstatcache
+    cd /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/outputs/ATS-Diagnostic/ATSDiagnostic.xcodeproj
+    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang-stat-cache /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator27.0.sdk -o /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/HistoryAsyncDerived/SDKStatCaches.noindex/iphonesimulator27.0-24A430-e829b21a6f8c9b70876ba0858053c0448dc58220667be655e1bcc261a7455254.sdkstatcache
+
+PruneExplicitPrecompiledModules /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/HistoryAsyncDerived/Build/Intermediates.noindex/SwiftExplicitPrecompiledModules
+
+PruneExplicitPrecompiledModules /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/HistoryAsyncDerived/Build/Intermediates.noindex/ExplicitPrecompiledModules
+
+PruneExplicitPrecompiledModules /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/HistoryAsyncDerived/SDKExplicitPrecompiledModules
+
+2026-10-12 02:34:50.780133+0200 ATSDiagnostic[79867:22135595] [API] cannot add handler to 0 from 0 - dropping
+2026-10-12 02:34:50.780319+0200 ATSDiagnostic[79867:22135595] [API] cannot add handler to 0 from 0 - dropping
+2026-10-12 02:34:50.790994+0200 ATSDiagnostic[79867:22135595] [XPCErrors] non-launching port is incompatible with service identifier "com.apple.PointerUI.pointeruid.default-service"
+2026-10-12 02:34:50.791651+0200 ATSDiagnostic[79867:22135595] [API] cannot add handler to 0 from 0 - dropping
+2026-10-12 02:34:50.791706+0200 ATSDiagnostic[79867:22135595] [API] cannot add handler to 0 from 0 - dropping
+Test Suite 'All tests' started at 2026-10-12 02:34:50.874.
+Test Suite 'All tests' passed at 2026-10-12 02:34:50.875.
+	 Executed 0 tests, with 0 failures (0 unexpected) in 0.000 (0.000) seconds
+◇ Test run started.
+↳ Testing Library Version: 2084
+↳ Target Platform: arm64-apple-ios17.0-simulator
+◇ Suite ASN1Tests started.
+◇ Test rejectsTruncatedLength() started.
+✔ Test rejectsTruncatedLength() passed after 0.002 seconds.
+◇ Test rejectsLengthOverflow() started.
+✔ Test rejectsLengthOverflow() passed after 0.001 seconds.
+◇ Test decodesOID() started.
+✔ Test decodesOID() passed after 0.001 seconds.
+◇ Test decodesLargeSecondOIDArc() started.
+✔ Test decodesLargeSecondOIDArc() passed after 0.001 seconds.
+◇ Test readsSequence() started.
+✔ Test readsSequence() passed after 0.001 seconds.
+✔ Suite ASN1Tests passed after 0.004 seconds.
+◇ Suite CertificateFieldTests started.
+◇ Test utcCenturyBoundary() started.
+✔ Test utcCenturyBoundary() passed after 0.001 seconds.
+◇ Test decodesKeyUsage() started.
+✔ Test decodesKeyUsage() passed after 0.001 seconds.
+◇ Test alternativeNamesAreTyped() started.
+✔ Test alternativeNamesAreTyped() passed after 0.001 seconds.
+✔ Suite CertificateFieldTests passed after 0.001 seconds.
+◇ Suite CURLImportTests started.
+◇ Test importsQuotedPayload() started.
+✔ Test importsQuotedPayload() passed after 0.001 seconds.
+◇ Test rejectsShellExecution() started.
+✔ Test rejectsShellExecution() passed after 0.002 seconds.
+◇ Test rejectsFileRead() started.
+✔ Test rejectsFileRead() passed after 0.001 seconds.
+◇ Test roundTripsExport() started.
+✔ Test roundTripsExport() passed after 0.001 seconds.
+◇ Test rejectsIncompleteQuotes() started.
+✔ Test rejectsIncompleteQuotes() passed after 0.001 seconds.
+✔ Suite CURLImportTests passed after 0.003 seconds.
+◇ Suite CertificateFormatsTests started.
+◇ Test pemRoundTripsCertificateBytes() started.
+✔ Test pemRoundTripsCertificateBytes() passed after 0.001 seconds.
+◇ Test chainPreservesOrder() started.
+✔ Test chainPreservesOrder() passed after 0.001 seconds.
+◇ Test unsafeSubjectCannotBecomeAPath() started.
+✔ Test unsafeSubjectCannotBecomeAPath() passed after 0.001 seconds.
+✔ Suite CertificateFormatsTests passed after 0.001 seconds.
+◇ Suite CertificateIssuerTests started.
+◇ Test decodesOrganizationCountryAndUnicodeName() started.
+✔ Test decodesOrganizationCountryAndUnicodeName() passed after 0.001 seconds.
+◇ Test utf16DirectoryString() started.
+✔ Test utf16DirectoryString() passed after 0.001 seconds.
+✔ Suite CertificateIssuerTests passed after 0.001 seconds.
+◇ Suite CertificateReminderTests started.
+◇ Test defaultIsOneWeekBeforeExpiry() started.
+✔ Test defaultIsOneWeekBeforeExpiry() passed after 0.001 seconds.
+◇ Test soonExpirySchedulesFutureReminder() started.
+✔ Test soonExpirySchedulesFutureReminder() passed after 0.001 seconds.
+◇ Test refusesExpiredCertificate() started.
+✔ Test refusesExpiredCertificate() passed after 0.002 seconds.
+◇ Test refusesReminderAfterExpiry() started.
+✔ Test refusesReminderAfterExpiry() passed after 0.001 seconds.
+◇ Test replacementIdentifierIsStable() started.
+✔ Test replacementIdentifierIsStable() passed after 0.001 seconds.
+✔ Suite CertificateReminderTests passed after 0.003 seconds.
+◇ Suite CertificateTransparencyTests started.
+◇ Test decodesLogTimestampAndAlgorithm() started.
+✔ Test decodesLogTimestampAndAlgorithm() passed after 0.001 seconds.
+◇ Test rejectsTruncatedSCT() started.
+✔ Test rejectsTruncatedSCT() passed after 0.002 seconds.
+◇ Test rejectsUnknownSCTVersion() started.
+✔ Test rejectsUnknownSCTVersion() passed after 0.001 seconds.
+◇ Test rejectsEmptySignature() started.
+✔ Test rejectsEmptySignature() passed after 0.001 seconds.
+◇ Test rejectsTrailingDataOutsideList() started.
+✔ Test rejectsTrailingDataOutsideList() passed after 0.001 seconds.
+◇ Test bundledDataHasIndependentStoresAndConstraints() started.
+✔ Test bundledDataHasIndependentStoresAndConstraints() passed after 0.004 seconds.
+◇ Test fingerprintsUseDERBytes() started.
+✔ Test fingerprintsUseDERBytes() passed after 0.001 seconds.
+◇ Test oldHistoryDecodesWithoutNewMetadata() started.
+✔ Test oldHistoryDecodesWithoutNewMetadata() passed after 0.001 seconds.
+✔ Suite CertificateTransparencyTests passed after 0.009 seconds.
+◇ Suite DiagnosticFailureTests started.
+◇ Test noDiagnosisFromHostname() started.
+✔ Test noDiagnosisFromHostname() passed after 0.001 seconds.
+◇ Test specificTrustErrorWinsOverGenericTLSFailure() started.
+✔ Test specificTrustErrorWinsOverGenericTLSFailure() passed after 0.001 seconds.
+◇ Test expiryUsesSystemEvidence() started.
+✔ Test expiryUsesSystemEvidence() passed after 0.001 seconds.
+◇ Test tlsVersionUsesActualPeerAlert() started.
+✔ Test tlsVersionUsesActualPeerAlert() passed after 0.001 seconds.
+◇ Test genericHandshakeDoesNotGuessCipher() started.
+✔ Test genericHandshakeDoesNotGuessCipher() passed after 0.001 seconds.
+◇ Test httpAndClientCertificateAreSeparate() started.
+✔ Test httpAndClientCertificateAreSeparate() passed after 0.001 seconds.
+◇ Test failedExtraRevocationDoesNotRewriteSuccessfulTransport() started.
+✔ Test failedExtraRevocationDoesNotRewriteSuccessfulTransport() passed after 0.001 seconds.
+◇ Test evidenceCapturesNestedSSLCode() started.
+✔ Test evidenceCapturesNestedSSLCode() passed after 0.002 seconds.
+◇ Test oldRecordKeepsRawUnknownFailure() started.
+✔ Test oldRecordKeepsRawUnknownFailure() passed after 0.001 seconds.
+✔ Suite DiagnosticFailureTests passed after 0.003 seconds.
+◇ Suite DiagnosticOptionsTests started.
+◇ Test rejectsUnboundedOrNonFiniteValues() started.
+✔ Test rejectsUnboundedOrNonFiniteValues() passed after 0.002 seconds.
+◇ Test resourceDeadlineCanBeShorterThanIdleDeadline() started.
+✔ Test resourceDeadlineCanBeShorterThanIdleDeadline() passed after 0.001 seconds.
+◇ Test invalidPersistedValuesFallBackToStandard() started.
+✔ Test invalidPersistedValuesFallBackToStandard() passed after 0.001 seconds.
+◇ Test configurationAndActualRequestUseSelectedLimits() started.
+✔ Test configurationAndActualRequestUseSelectedLimits() passed after 0.001 seconds.
+◇ Test smallPreviewDoesNotChangeCompleteResponseHash() started.
+✔ Test smallPreviewDoesNotChangeCompleteResponseHash() passed after 0.024 seconds.
+◇ Test previewCanBeDisabledWithoutLosingHashOrByteCount() started.
+✔ Test previewCanBeDisabledWithoutLosingHashOrByteCount() passed after 0.003 seconds.
+◇ Test historicalRecordsWithoutOptionsStillDecode() started.
+✔ Test historicalRecordsWithoutOptionsStillDecode() passed after 0.001 seconds.
+✔ Suite DiagnosticOptionsTests passed after 0.033 seconds.
+◇ Suite EndpointTests started.
+◇ Test defaultsToHTTPS() started.
+✔ Test defaultsToHTTPS() passed after 0.001 seconds.
+◇ Test rejectsCredentials() started.
+✔ Test rejectsCredentials() passed after 0.002 seconds.
+◇ Test rejectsOtherSchemes() started.
+✔ Test rejectsOtherSchemes() passed after 0.001 seconds.
+◇ Test shellQuoteProtectsApostrophes() started.
+✔ Test shellQuoteProtectsApostrophes() passed after 0.001 seconds.
+✔ Suite EndpointTests passed after 0.003 seconds.
+◇ Suite HARTests started.
+◇ Test preservesReplayData() started.
+✔ Test preservesReplayData() passed after 0.005 seconds.
+✔ Suite HARTests passed after 0.005 seconds.
+◇ Suite ExternalHARTests started.
+◇ Test acceptsBrowserCookiesAndOptionalBodies() started.
+✔ Test acceptsBrowserCookiesAndOptionalBodies() passed after 0.001 seconds.
+◇ Test preservesBinaryEncoding() started.
+✔ Test preservesBinaryEncoding() passed after 0.001 seconds.
+✔ Suite ExternalHARTests passed after 0.001 seconds.
+◇ Suite HTTPProxyMessageTests started.
+◇ Test incompleteHeaderWaits() started.
+✔ Test incompleteHeaderWaits() passed after 0.001 seconds.
+◇ Test parsesChunkedWithTrailers() started.
+✔ Test parsesChunkedWithTrailers() passed after 0.001 seconds.
+◇ Test rejectsAmbiguousFraming() started.
+✔ Test rejectsAmbiguousFraming() passed after 0.001 seconds.
+◇ Test rejectsConflictingDuplicateLengths() started.
+✔ Test rejectsConflictingDuplicateLengths() passed after 0.001 seconds.
+◇ Test acceptsMatchingDuplicateLengths() started.
+✔ Test acceptsMatchingDuplicateLengths() passed after 0.001 seconds.
+◇ Test preservesPipelinedBytes() started.
+✔ Test preservesPipelinedBytes() passed after 0.001 seconds.
+◇ Test supportsIPv6Connect() started.
+✔ Test supportsIPv6Connect() passed after 0.001 seconds.
+◇ Test removesProxyCredentialsFromUpstream() started.
+✔ Test removesProxyCredentialsFromUpstream() passed after 0.001 seconds.
+◇ Test rejectsOversizedChunkWithoutAllocation() started.
+✔ Test rejectsOversizedChunkWithoutAllocation() passed after 0.001 seconds.
+◇ Test rejectsWhitespaceBeforeHeaderColon() started.
+✔ Test rejectsWhitespaceBeforeHeaderColon() passed after 0.001 seconds.
+✔ Suite HTTPProxyMessageTests passed after 0.003 seconds.
+◇ Suite HTTPProxyFramingSafetyTests started.
+◇ Test rejectsConnectionNominatedLength() started.
+✔ Test rejectsConnectionNominatedLength() passed after 0.001 seconds.
+◇ Test rejectsControlCharacterInChunkExtension() started.
+✔ Test rejectsControlCharacterInChunkExtension() passed after 0.001 seconds.
+◇ Test rejectsTrailerFramingOverride() started.
+✔ Test rejectsTrailerFramingOverride() passed after 0.001 seconds.
+✔ Suite HTTPProxyFramingSafetyTests passed after 0.001 seconds.
+◇ Suite HistoryPersistenceTests started.
+◇ Test lateSnapshotCannotUndoClear() started.
+✔ Test lateSnapshotCannotUndoClear() passed after 0.001 seconds.
+◇ Test rapidImportsThenClearFlushOnlyLatestState() started.
+✔ Test rapidImportsThenClearFlushOnlyLatestState() passed after 0.011 seconds.
+◇ Test immediateImportWaitsForSavedHistory() started.
+✔ Test immediateImportWaitsForSavedHistory() passed after 0.002 seconds.
+◇ Test immediateClearCannotBeUndoneByInitialLoad() started.
+✔ Test immediateClearCannotBeUndoneByInitialLoad() passed after 0.001 seconds.
+◇ Test latestSnapshotRoundTripsCertificateAndBody() started.
+✔ Test latestSnapshotRoundTripsCertificateAndBody() passed after 0.001 seconds.
+✔ Suite HistoryPersistenceTests passed after 0.019 seconds.
+◇ Suite HistoryRetentionTests started.
+◇ Test countLimitRetainsNewest() started.
+✔ Test countLimitRetainsNewest() passed after 0.001 seconds.
+◇ Test actualEncodedBytesIncludeCertificatesAndEscapedBodies() started.
+✔ Test actualEncodedBytesIncludeCertificatesAndEscapedBodies() passed after 0.001 seconds.
+◇ Test exactArrayBoundaryIncludesComma() started.
+✔ Test exactArrayBoundaryIncludesComma() passed after 0.001 seconds.
+◇ Test oversizedNewestDoesNotKeepAnOlderPrefix() started.
+✔ Test oversizedNewestDoesNotKeepAnOlderPrefix() passed after 0.001 seconds.
+✔ Suite HistoryRetentionTests passed after 0.001 seconds.
+◇ Suite IntegrityTests started.
+◇ Test acceptsColonSeparatedDigest() started.
+✔ Test acceptsColonSeparatedDigest() passed after 0.001 seconds.
+◇ Test rejectsTruncatedChecksum() started.
+✔ Test rejectsTruncatedChecksum() passed after 0.002 seconds.
+◇ Test rejectsNonHexadecimal() started.
+✔ Test rejectsNonHexadecimal() passed after 0.001 seconds.
+◇ Test emptyMeansNoExpectedChecksum() started.
+✔ Test emptyMeansNoExpectedChecksum() passed after 0.001 seconds.
+◇ Test copiedGroupedChecksumCanBeUsedAsExpectedDigest() started.
+✔ Test copiedGroupedChecksumCanBeUsedAsExpectedDigest() passed after 0.001 seconds.
+✔ Suite IntegrityTests passed after 0.003 seconds.
+◇ Suite LocalProxyTests started.
+◇ Test httpActuallyForwardsOriginFormAndStripsProxySecret() started.
+2026-10-12 02:34:50.981805+0200 ATSDiagnostic[79867:22135709] [] nw_listener_socket_inbox_create_socket setsockopt SO_NECP_LISTENUUID failed [2: No such file or directory]
+2026-10-12 02:34:50.982218+0200 ATSDiagnostic[79867:22135705] [] nw_listener_socket_inbox_create_socket setsockopt SO_NECP_LISTENUUID failed [2: No such file or directory]
+✔ Test httpActuallyForwardsOriginFormAndStripsProxySecret() passed after 0.009 seconds.
+◇ Test connectRelaysLargeOpaqueBytesAndHalfClose() started.
+2026-10-12 02:34:50.990923+0200 ATSDiagnostic[79867:22135705] [connection] [C4 127.0.0.1:63149 tcp, local: 127.0.0.1:63146, server, prohibit joining protocols, definite, attribution: developer] is already cancelled, ignoring cancel
+2026-10-12 02:34:50.991283+0200 ATSDiagnostic[79867:22135705] [] nw_listener_socket_inbox_create_socket setsockopt SO_NECP_LISTENUUID failed [2: No such file or directory]
+2026-10-12 02:34:50.991722+0200 ATSDiagnostic[79867:22135705] [] nw_listener_socket_inbox_create_socket setsockopt SO_NECP_LISTENUUID failed [2: No such file or directory]
+✔ Test connectRelaysLargeOpaqueBytesAndHalfClose() passed after 0.032 seconds.
+◇ Test ambiguousFramingRejectedBeforeConnecting() started.
+2026-10-12 02:34:51.022815+0200 ATSDiagnostic[79867:22135709] [connection] [C8 127.0.0.1:63153 tcp, local: 127.0.0.1:63150, server, prohibit joining protocols, definite, attribution: developer] is already cancelled, ignoring cancel
+2026-10-12 02:34:51.023261+0200 ATSDiagnostic[79867:22135709] [] nw_listener_socket_inbox_create_socket setsockopt SO_NECP_LISTENUUID failed [2: No such file or directory]
+✔ Test ambiguousFramingRejectedBeforeConnecting() passed after 0.002 seconds.
+◇ Test selfLoopRejectedAndIdleConnectionClosed() started.
+2026-10-12 02:34:51.025999+0200 ATSDiagnostic[79867:22135704] [] nw_listener_socket_inbox_create_socket setsockopt SO_NECP_LISTENUUID failed [2: No such file or directory]
+2026-10-12 02:34:51.027901+0200 ATSDiagnostic[79867:22135709] [connection] nw_protocol_socket_reset_linger [C11:1] setsockopt SO_LINGER failed [22: Invalid argument]
+✔ Test selfLoopRejectedAndIdleConnectionClosed() passed after 1.055 seconds.
+◇ Test interimResponseDoesNotHideFinalStatus() started.
+✔ Test interimResponseDoesNotHideFinalStatus() passed after 0.001 seconds.
+◇ Test upgradeHeadersArePreservedButProxyAuthIsNot() started.
+✔ Test upgradeHeadersArePreservedButProxyAuthIsNot() passed after 0.001 seconds.
+◇ Test serverHalfCloseDoesNotDiscardLaterClientBytes() started.
+2026-10-12 02:34:52.082751+0200 ATSDiagnostic[79867:22135704] [] nw_listener_socket_inbox_create_socket setsockopt SO_NECP_LISTENUUID failed [2: No such file or directory]
+2026-10-12 02:34:52.083696+0200 ATSDiagnostic[79867:22135704] [] nw_listener_socket_inbox_create_socket setsockopt SO_NECP_LISTENUUID failed [2: No such file or directory]
+2026-10-12 02:34:52.089916+0200 ATSDiagnostic[79867:22135705] [connection] nw_protocol_socket_reset_linger [C16:1] setsockopt SO_LINGER failed [22: Invalid argument]
+2026-10-12 02:34:52.090202+0200 ATSDiagnostic[79867:22135705] [connection] nw_protocol_socket_reset_linger [C17:1] setsockopt SO_LINGER failed [22: Invalid argument]
+✔ Test serverHalfCloseDoesNotDiscardLaterClientBytes() passed after 0.018 seconds.
+2026-10-12 02:34:52.100340+0200 ATSDiagnostic[79867:22135704] [connection] [C18 127.0.0.1:63162 tcp, local: 127.0.0.1:63159, server, prohibit joining protocols, definite, attribution: developer] is already cancelled, ignoring cancel
+◇ Test upgradeBecomesBidirectionalStream() started.
+2026-10-12 02:34:52.101074+0200 ATSDiagnostic[79867:22135704] [] nw_listener_socket_inbox_create_socket setsockopt SO_NECP_LISTENUUID failed [2: No such file or directory]
+2026-10-12 02:34:52.101596+0200 ATSDiagnostic[79867:22135704] [] nw_listener_socket_inbox_create_socket setsockopt SO_NECP_LISTENUUID failed [2: No such file or directory]
+2026-10-12 02:34:52.104957+0200 ATSDiagnostic[79867:22135684] [connection] nw_protocol_socket_reset_linger [C21:1] setsockopt SO_LINGER failed [22: Invalid argument]
+2026-10-12 02:34:52.105033+0200 ATSDiagnostic[79867:22135684] [connection] nw_flow_service_reads [C21 127.0.0.1:63163 failed socket-flow (satisfied (Path is satisfied), interface: lo0)] No output handler
+2026-10-12 02:34:52.105292+0200 ATSDiagnostic[79867:22135684] [connection] nw_protocol_socket_reset_linger [C19:1] setsockopt SO_LINGER failed [22: Invalid argument]
+✔ Test upgradeBecomesBidirectionalStream() passed after 0.004 seconds.
+◇ Test postBodyReallyReachesOriginWithNormalizedLength() started.
+2026-10-12 02:34:52.105682+0200 ATSDiagnostic[79867:22135684] [connection] [C22 127.0.0.1:63166 tcp, local: 127.0.0.1:63163, server, prohibit joining protocols, definite, attribution: developer] is already cancelled, ignoring cancel
+2026-10-12 02:34:52.106170+0200 ATSDiagnostic[79867:22135684] [] nw_listener_socket_inbox_create_socket setsockopt SO_NECP_LISTENUUID failed [2: No such file or directory]
+2026-10-12 02:34:52.106563+0200 ATSDiagnostic[79867:22135684] [] nw_listener_socket_inbox_create_socket setsockopt SO_NECP_LISTENUUID failed [2: No such file or directory]
+✔ Test postBodyReallyReachesOriginWithNormalizedLength() passed after 0.006 seconds.
+✔ Suite LocalProxyTests passed after 1.131 seconds.
+◇ Suite PolicyDirectivesTests started.
+◇ Test cspKeepsValuesTogether() started.
+✔ Test cspKeepsValuesTogether() passed after 0.001 seconds.
+2026-10-12 02:34:52.112282+0200 ATSDiagnostic[79867:22135679] [connection] [C26 127.0.0.1:63170 tcp, local: 127.0.0.1:63167, server, prohibit joining protocols, definite, attribution: developer] is already cancelled, ignoring cancel
+◇ Test permissionsKeepQuotedCommas() started.
+✔ Test permissionsKeepQuotedCommas() passed after 0.001 seconds.
+◇ Test otherHeadersAreNotInterpretedAsPolicies() started.
+✔ Test otherHeadersAreNotInterpretedAsPolicies() passed after 0.001 seconds.
+✔ Suite PolicyDirectivesTests passed after 0.001 seconds.
+◇ Suite RecordingSettingsTests started.
+◇ Test excludesRegexMatches() started.
+✔ Test excludesRegexMatches() passed after 0.001 seconds.
+◇ Test rejectsMalformedPattern() started.
+✔ Test rejectsMalformedPattern() passed after 0.001 seconds.
+◇ Test categoriesIgnoreHeaderCase() started.
+✔ Test categoriesIgnoreHeaderCase() passed after 0.001 seconds.
+◇ Test statisticsHaveNoDivideByZero() started.
+✔ Test statisticsHaveNoDivideByZero() passed after 0.001 seconds.
+✔ Suite RecordingSettingsTests passed after 0.002 seconds.
+◇ Suite SDKHARImportTests started.
+◇ Test actualSDKSuccessKeepsPreviewAndReportedHash() started.
+✔ Test actualSDKSuccessKeepsPreviewAndReportedHash() passed after 0.001 seconds.
+◇ Test actualSDKFailuresRetainErrorsWithoutInventingResponseBytes(_:) started.
+◇ Test case passing 1 argument name → "SDK-Live-expired.badssl.com" to actualSDKFailuresRetainErrorsWithoutInventingResponseBytes(_:) started.
+​◇ Test case passing 1 argument name → "SDK-Live-wrong.host.badssl.com" to actualSDKFailuresRetainErrorsWithoutInventingResponseBytes(_:) started.
+​✔ Test actualSDKFailuresRetainErrorsWithoutInventingResponseBytes(_:) with 2 test cases passed after 0.002 seconds.
+◇ Test incompleteSDKRequestCannotReplayEvenAfterAppReExport() started.
+✔ Test incompleteSDKRequestCannotReplayEvenAfterAppReExport() passed after 0.001 seconds.
+◇ Test importedClaimsNeverBecomeSystemTrustResults() started.
+✔ Test importedClaimsNeverBecomeSystemTrustResults() passed after 0.001 seconds.
+◇ Test incompleteBodyCannotBeEnabledByImportMetadata() started.
+✔ Test incompleteBodyCannotBeEnabledByImportMetadata() passed after 0.001 seconds.
+✔ Suite SDKHARImportTests passed after 0.007 seconds.
+◇ Suite SignedCRLTests started.
+◇ Test validatesSignatureAndFindsSerial() started.
+✔ Test validatesSignatureAndFindsSerial() passed after 0.002 seconds.
+◇ Test rejectsTamperedSignature() started.
+2026-10-12 02:34:52.126697+0200 ATSDiagnostic[79867:22135680] [seckey] SecKeyVerifySignature failed: Error Domain=NSOSStatusErrorDomain Code=-67808 "EC signature verification failed, no match" UserInfo={numberOfErrorsDeep=0, NSDescription=EC signature verification failed, no match}
+✔ Test rejectsTamperedSignature() passed after 0.002 seconds.
+◇ Test rejectsStaleList() started.
+✔ Test rejectsStaleList() passed after 0.001 seconds.
+◇ Test rejectsWrongIssuer() started.
+✔ Test rejectsWrongIssuer() passed after 0.001 seconds.
+◇ Test rejectsDeltaWithoutBase() started.
+✔ Test rejectsDeltaWithoutBase() passed after 0.001 seconds.
+◇ Test verifiesDistributionPointScope() started.
+✔ Test verifiesDistributionPointScope() passed after 0.002 seconds.
+◇ Test rejectsIndirectAndPartialReasonLists() started.
+✔ Test rejectsIndirectAndPartialReasonLists() passed after 0.003 seconds.
+✔ Suite SignedCRLTests passed after 0.015 seconds.
+◇ Suite StreamingIntegrityTests started.
+◇ Test hashesEntireResponseBeyondPreviewLimit() started.
+✔ Test hashesEntireResponseBeyondPreviewLimit() passed after 0.004 seconds.
+✔ Suite StreamingIntegrityTests passed after 0.004 seconds.
+✔ Test run with 110 tests in 23 suites passed after 1.261 seconds.
+2026-10-12 02:34:52.421 xcodebuild[79848:22135141] [MT] IDETestOperationsObserverDebug: 2.886 elapsed -- Testing started completed.
+2026-10-12 02:34:52.421 xcodebuild[79848:22135141] [MT] IDETestOperationsObserverDebug: 0.000 sec, +0.000 sec -- start
+2026-10-12 02:34:52.421 xcodebuild[79848:22135141] [MT] IDETestOperationsObserverDebug: 2.886 sec, +2.886 sec -- end
+
+Test session results, code coverage, and logs:
+	/Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/HistoryLoad-Context.xcresult
+
+** TEST SUCCEEDED **
+
+Testing started

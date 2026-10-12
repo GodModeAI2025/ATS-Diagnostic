@@ -198,13 +198,15 @@ struct HistoryView: View {
                         }.frame(width: 340)
                         List {
                             ForEach(filtered) { record in NavigationLink { RecordView(record: record, store: store) } label: { RecordRow(record: record) } }
-                            if store.records.isEmpty { emptyHistory.listRowBackground(Color.clear).listRowSeparator(.hidden) }
+                            if store.loadingHistory { ProgressView("Verlauf wird geladen…") }
+                            else if store.records.isEmpty { emptyHistory.listRowBackground(Color.clear).listRowSeparator(.hidden) }
                         }.scrollContentBackground(.hidden).background(Color(uiColor: .systemGroupedBackground)).frame(maxWidth: 760)
                     }.padding(24).frame(maxWidth: .infinity).background(Color(uiColor: .systemGroupedBackground))
                 } else {
                     List {
                         Section { filters; TrafficOverview(statistics: TrafficStatistics(filtered)) }
-                        if store.records.isEmpty { Section { emptyHistory }.listRowBackground(Color.clear) }
+                        if store.loadingHistory { Section { ProgressView("Verlauf wird geladen…") } }
+                        else if store.records.isEmpty { Section { emptyHistory }.listRowBackground(Color.clear) }
                         ForEach(filtered) { record in NavigationLink { RecordView(record: record, store: store) } label: { RecordRow(record: record) } }
                     }
                 }
@@ -214,8 +216,8 @@ struct HistoryView: View {
                 .navigationTitle("History")
                 .sheet(isPresented: $showSettings) { RecordingSettingsView(store: store) }
                 .toolbar { ShareLink(item: DiagnosticLogExport(records: store.records), preview: SharePreview("Diagnostic log")) { Label("Export log", systemImage: "doc.text") }; Button("Recording settings", systemImage: "gearshape") { showSettings = true }; ShareLink(item: HARArchive(records: store.records), preview: SharePreview("Diagnostics archive")) { Label("Export HAR", systemImage: "square.and.arrow.up") }; Button("Import HAR", systemImage: "square.and.arrow.down") { importHAR = true }; Button("Clear", systemImage: "trash") { confirmClear = true }.disabled(store.records.isEmpty) }
-                .confirmationDialog("Delete all local diagnostics?", isPresented: $confirmClear) { Button("Delete history", role: .destructive) { store.clear() } }
-                .fileImporter(isPresented: $importHAR, allowedContentTypes: [.json, .data]) { result in do { let url = try result.get(); let accessed = url.startAccessingSecurityScopedResource(); defer { if accessed { url.stopAccessingSecurityScopedResource() } }; try store.importHAR(Data(contentsOf: url)) } catch { store.error = error.localizedDescription } }
+                .confirmationDialog("Delete all local diagnostics?", isPresented: $confirmClear) { Button("Delete history", role: .destructive) { Task { await store.clear() } } }
+                .fileImporter(isPresented: $importHAR, allowedContentTypes: [.json, .data]) { result in Task { do { let url = try result.get(); let accessed = url.startAccessingSecurityScopedResource(); defer { if accessed { url.stopAccessingSecurityScopedResource() } }; try await store.importHAR(Data(contentsOf: url)) } catch { store.error = error.localizedDescription } } }
                 .onChange(of: query, initial: true) { refresh() }
                 .onChange(of: store.records.map(\.id)) { refresh() }
                 .onChange(of: category) { refresh() }

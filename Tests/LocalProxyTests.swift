@@ -80,8 +80,8 @@ private final class TCPExchange: @unchecked Sendable {
                         // Read concurrently: an echo peer may apply backpressure before
                         // the full upload completes. Waiting to read can deadlock duplex I/O.
                         receive()
-                        connection.send(content:request,contentContext:halfClose ? .finalMessage : .defaultMessage,isComplete:true,completion:.contentProcessed { [self] error in if let error { finish(.failure(error)) } })
-                    case .failed(let error): finish(.failure(error))
+                        connection.send(content:request,contentContext:halfClose ? .finalMessage : .defaultMessage,isComplete:true,completion:.contentProcessed { [self] error in if let error { finish(.failure(contextual(error, stage: "client send"))) } })
+                    case .failed(let error): finish(.failure(contextual(error, stage: "client connect")))
                     default: break
                     }
                 }
@@ -93,11 +93,15 @@ private final class TCPExchange: @unchecked Sendable {
     private func receive() {
         connection.receive(minimumIncompleteLength:1,maximumLength:65536) { [self] data,_,eof,error in
             if let data { response.append(data) }
-            if let error { finish(.failure(error)) } else if eof {
+            if let error { finish(.failure(contextual(error, stage: "client receive"))) } else if eof {
                 if let afterEOF { self.afterEOF = nil;connection.send(content:afterEOF,contentContext:.finalMessage,isComplete:true,completion:.contentProcessed { [self] error in if let error { finish(.failure(error)) } else { finish(.success(response)) } }) }
                 else { finish(.success(response)) }
             } else { receive() }
         }
+    }
+    private func contextual(_ error: NWError, stage: String) -> NSError {
+        let original = error as NSError
+        return NSError(domain: original.domain, code: original.code, userInfo: [NSLocalizedDescriptionKey: "\(stage): \(error)", NSUnderlyingErrorKey: error])
     }
     private func finish(_ result:Result<Data,any Error>) {
         guard let continuation else { return };self.continuation = nil;connection.stateUpdateHandler = nil;connection.cancel();continuation.resume(with:result)

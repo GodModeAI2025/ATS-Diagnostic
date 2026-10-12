@@ -6,24 +6,32 @@ import Observation
     var latest: DiagnosticRecord?
     var settings = RecordingSettings()
     var diagnosticOptions = DiagnosticOptions.standard
+    private(set) var loadingHistory = true
     var running = false
     var error: String?
     @ObservationIgnored private let persistence: HistoryPersistence
     @ObservationIgnored private var persistenceRevision: UInt64 = 0
     @ObservationIgnored private var pendingPersistence: (records: [DiagnosticRecord], revision: UInt64)?
     @ObservationIgnored private var persistenceTask: Task<Void, Never>?
-    private let file: URL
+    @ObservationIgnored private var loadingTask: Task<Void, Never>?
     private var settingsFile: URL { URL.documentsDirectory.appendingPathComponent("recording-settings.json") }
     private var optionsFile: URL { URL.documentsDirectory.appendingPathComponent("diagnostic-options.json") }
     init(historyFile: URL = URL.documentsDirectory.appendingPathComponent("diagnostics.json")) {
-        file = historyFile
         persistence = HistoryPersistence(file: historyFile)
         if let data = try? Data(contentsOf: optionsFile), let value = try? JSONDecoder().decode(DiagnosticOptions.self, from: data) { diagnosticOptions = value.validated }
         if let data = try? Data(contentsOf: settingsFile), let decoded = try? JSONDecoder().decode(RecordingSettings.self, from: data) { settings = decoded }
-        do { records = try HistoryRetention.retain(JSONDecoder().decode([DiagnosticRecord].self, from: Data(contentsOf: file)), countLimit: settings.recordLimit) }
-        catch { records = [] }
+        let countLimit = settings.recordLimit
+        loadingTask = Task { [weak self, persistence] in
+            let loaded = (try? await persistence.load(countLimit: countLimit)) ?? []
+            guard let self else { return }
+            self.records = loaded
+            self.loadingHistory = false
+            self.loadingTask = nil
+        }
     }
+    func loadHistory() async { await loadingTask?.value }
     func execute(url: String, method: String = "GET", headers: String = "", body: String = "", expectedSHA256: String = "") async {
+        await loadHistory()
         guard !running else { return }
         do {
             let checksum = try Integrity.normalizeSHA256(expectedSHA256)
@@ -48,7 +56,8 @@ import Observation
             running = false
         } catch { running = false; self.error = error.localizedDescription }
     }
-    func importHAR(_ data: Data) throws {
+    func importHAR(_ data: Data) async throws {
+        await loadHistory()
         guard data.count <= 20 * 1024 * 1024 else { throw CocoaError(.fileReadTooLarge) }
         let imported = try HARArchive.importRecords(data)
         records = try HistoryRetention.retain(imported + records, countLimit: settings.recordLimit)
@@ -69,8 +78,8 @@ import Observation
         if value.favorites.contains(id) { value.favorites.remove(id) } else { value.favorites.insert(id) }
         do { try updateSettings(value) } catch { self.error = error.localizedDescription }
     }
-    func clear() { records = []; save() }
-    func flushHistory() async { await persistenceTask?.value }
+    func clear() async { await loadHistory(); records = []; save() }
+    func flushHistory() async { await loadHistory(); await persistenceTask?.value }
     private func save() {
         persistenceRevision += 1
         pendingPersistence = (records, persistenceRevision)

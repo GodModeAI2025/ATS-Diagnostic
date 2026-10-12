@@ -7,6 +7,11 @@ actor HistoryPersistence {
     private var newestRevision: UInt64 = 0
     init(file: URL) { self.file = file }
 
+    func load(countLimit: Int) throws -> [DiagnosticRecord] {
+        let data = try Data(contentsOf: file)
+        return try HistoryRetention.retain(JSONDecoder().decode([DiagnosticRecord].self, from: data), countLimit: countLimit)
+    }
+
     @discardableResult
     func save(_ records: [DiagnosticRecord], revision: UInt64) throws -> Bool {
         guard revision >= newestRevision else { return false }
