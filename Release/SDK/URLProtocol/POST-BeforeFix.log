@@ -1,0 +1,60 @@
+Building for debugging...
+[2 / 11] ATSRecording
+[4 / 13] ATSRecording
+[7 / 13] ATSRecording
+[10 / 13] ATSRecordingTests-product
+[12 / 15] ATSRecordingTests-product
+[18 / 20] ATSRecordingTests-product
+Build complete! (1,84 Sek.)
+◇ Test run started.
+↳ Testing Library Version: 2084
+↳ Target Platform: arm64e-apple-macos14.0
+◇ Suite RecordingURLProtocolTests started.
+◇ Test automaticAsyncDataPreservesEveryByteAndBoundsJournal() started.
+PROTOCOL_BODY_PROBE nil false nil false
+✔ Test automaticAsyncDataPreservesEveryByteAndBoundsJournal() passed after 0.028 seconds.
+◇ Test automaticCompletionHandlerPreservesOriginalFailure() started.
+PROTOCOL_BODY_PROBE nil false nil false
+✔ Test automaticCompletionHandlerPreservesOriginalFailure() passed after 0.001 seconds.
+◇ Test automaticPostPreservesRequestBodyAndHeaders() started.
+PROTOCOL_BODY_PROBE nil true Optional(13) false
+✘ Test automaticPostPreservesRequestBodyAndHeaders() recorded an issue at RecordingURLProtocolTests.swift:79:9: Expectation failed: data == request.httpBody
+↳ data == request.httpBody → false
+↳   data → 0 bytes
+↳     count → 0
+↳     pointer → 0x000000016ba5cf20
+↳       pointerValue → 6100995872
+↳     bytes → []
+↳   request.httpBody → 13 bytes
+↳     some → 13 bytes
+↳       count → 13
+↳       pointer → 0x000000016ba5cbc0
+↳         pointerValue → 6100995008
+↳       bytes → [111, 114, 105, 103, 105, 110, 97, 108, 32, 98, 111, 100, 121]
+✘ Test automaticPostPreservesRequestBodyAndHeaders() recorded an issue at RecordingURLProtocolTests.swift:81:9: Expectation failed: record.requestBodyBytes == request.httpBody?.count
+↳ record.requestBodyBytes == request.httpBody?.count → false
+↳   record.requestBodyBytes → nil
+↳   request.httpBody?.count → 13
+↳     some → 13
+✘ Test automaticPostPreservesRequestBodyAndHeaders() recorded an issue at RecordingURLProtocolTests.swift:82:9: Expectation failed: record.requestBodyPreview == Data("ori".utf8)
+↳ record.requestBodyPreview == Data("ori".utf8) → false
+↳   record.requestBodyPreview → 0 bytes
+↳     count → 0
+↳     pointer → 0x000000016ba5cca0
+↳       pointerValue → 6100995232
+↳     bytes → []
+↳   Data("ori".utf8) → 3 bytes
+↳     count → 3
+↳     pointer → 0x000000016ba5cca0
+↳       pointerValue → 6100995232
+↳     bytes → [111, 114, 105]
+✘ Test automaticPostPreservesRequestBodyAndHeaders() failed after 0.001 seconds with 3 issues.
+◇ Test partialTransportFailureKeepsObservedBytesWithoutCompleteHash() started.
+PROTOCOL_BODY_PROBE nil false nil false
+✔ Test partialTransportFailureKeepsObservedBytesWithoutCompleteHash() passed after 0.223 seconds.
+◇ Test configurationRequiresMatchingContextAndKeepsOriginalUntouched() started.
+✔ Test configurationRequiresMatchingContextAndKeepsOriginalUntouched() passed after 0.001 seconds.
+✘ Suite RecordingURLProtocolTests failed after 0.255 seconds with 3 issues.
+✘ Test run with 5 tests in 1 suite failed after 0.255 seconds with 3 issues.
+Note: Some test targets reported failures:
+  - ATSRecordingTests (Swift Testing)

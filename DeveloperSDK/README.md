@@ -15,7 +15,7 @@ Die bestehende Session behält ihre Cookies, Weiterleitungen, Cache-, Proxy- und
 
 Standard: 200 Einträge, 64 KiB Vorschau je Körper, 64 MiB kodiertes Journal. Zu große Einträge werden ausgelassen; abgeschlossene ältere Einträge werden zur Einhaltung der Grenzen entfernt. `clear()` leert abgeschlossene Einträge und beendet keine laufenden Anfragen. Das Journal bleibt im Arbeitsspeicher. Exporte können vertrauliche Header oder Körper enthalten und müssen von der integrierenden App ausdrücklich geteilt werden.
 
-Noch offen: automatische URLProtocol-Integration, automatische Erfassung vorhandener Sessions, Vorschau tatsächlich übertragener Datei-Uploads und Abschluss abgebrochener Stream-Konsumenten, vollständige Redirect- und Verbindungsmetriken sowie eine vollständige SDK-Diagnoseoberfläche. Optionale Aktivierungshooks sind unten beschrieben. Dieses Paket ist noch nicht in Build 39 eingebettet. Die vollständige historische SDK-Parität ist damit nicht erreicht.
+Die URLProtocol-Integration für neu erzeugte Sessions und native Redirect-/Verbindungsmetriken sind unten beschrieben. Noch offen sind automatische Erfassung vorhandener Sessions, globale Registrierung, Vorschau tatsächlich übertragener Datei-Uploads und eine vollständige SDK-Diagnoseoberfläche. Ein früh verlassener Low-Level-Stream benötigt weiterhin einen expliziten Abschluss oder `withBytes`. Das separate Paket ist nicht in TestFlight Build 54 eingebettet. Vollständige historische SDK-Parität ist nicht erreicht.
 
 Prüfung: `swift test`. Die Tests verwenden eine kontrollierte URLProtocol-Gegenstelle in der vom Aufrufer bereitgestellten Session und prüfen vollständige Rückgabe trotz leerer Vorschau, unveränderte Fehler, tatsächliche POST-Daten, begrenztes Journal und explizites Leeren.
 
@@ -82,3 +82,30 @@ Die SDK-Erweiterung ist nicht Bestandteil des bereits eingereichten beziehungswe
 Keep the wrapper alive through the session. Existing sessions cannot have their delegate replaced. Per-task delegates can supersede the session delegate. Completion-handler and async bodies, upload/download tasks, background sessions and automatic URLProtocol/global capture are not covered by this API; use the explicit RecordingClient APIs where applicable. No empty-body hash is invented when Foundation has not delivered response data (except HTTP semantics that require no body). Native buffering can discard bytes before an error reaches the data delegate.
 
 At most 64 active tasks retain previews, each at most 64 KiB; `omittedTaskCount` reports capacity omissions. The journal has its own configured retention budget. Each task is keyed by object identity, including when one wrapper serves multiple sessions with identical numeric task identifiers. Journal insertion is asynchronous after the host completion callback; await a recorded event before exporting. Record duration spans task creation through completion, including suspension; native task metrics remain separate.
+
+## Automatische URLProtocol-Erfassung in neuen Sessions
+
+Die Host-App definiert eine eigene Protokollklasse mit einem stabilen Kontext. Verschiedene Klassen können voneinander unabhängige Recorder und Konfigurationen verwenden. Es gibt weder eine globale Registrierung noch versteckte HTTP-Markierungsheader.
+
+```swift
+import Foundation
+import ATSRecording
+
+final class AppHTTPRecording: RecordingURLProtocol, @unchecked Sendable {
+    static let recorder = try! RecordingClient()
+    static let context = try! RecordingProtocolContext(recorder: recorder)
+    override class var recordingContext: RecordingProtocolContext? { context }
+}
+let session = try AppHTTPRecording.context.makeSession(protocolClass: AppHTTPRecording.self)
+let (body, response) = try await session.data(from: URL(string: "https://example.com/")!)
+// Auch completion-handler-basierte dataTask-Aufrufe werden automatisch erfasst.
+let journal = await AppHTTPRecording.recorder.records()
+```
+
+Der Kontext kopiert die übergebene Vordergrund-Konfiguration. Die interne Forwarding-Session entfernt ausschließlich ATSRecording-Protokollklassen, damit keine Rekursion entsteht; andere Protokollklassen und Konfigurationswerte bleiben erhalten. Die Originalkonfiguration wird nicht verändert. Die Session nutzt normale Foundation-Weiterleitungen und Systemvertrauen. Native Metriken der tatsächlichen Forwarding-Task enthalten deren Redirect-Hops. Die von außen sichtbare Task-Metrik ist keine zweite direkte Socket-Messung.
+
+HTTP-Datenanfragen über async und Completion Handler sind geprüft. Data-backed POST-Bodies werden aus der Original-Task wiederhergestellt, wenn Foundation sie im URLProtocol als Stream darstellt. Antworten werden in Chunks unverändert weitergegeben; Vorschau maximal64KiB pro aktiver Antwort, SHA-256 über alle empfangenen Bytes. Höchstens64 aktive Antworten werden gleichzeitig beobachtet; zusätzliche Übertragungen laufen weiter, erhöhen aber `omittedCaptureCount`. Der Recorder hat zusätzlich eigene Journalgrenzen.
+
+Bei Transportfehler oder Abbruch bleibt der ursprüngliche Domain/Code erhalten. Bereits beobachtete Teilbytes bleiben im Journal, ohne vollständigen Hash; `responseComplete` ist false. Foundation-Abschluss und anschließendes `stopLoading` erzeugen keinen zweiten Eintrag. Das Einfügen ins Actor-Journal erfolgt asynchron; für neue Ergebnisse `observe()` verwenden. Während der Übertragung wird nicht der gesamte Antwortkörper für das Journal gesammelt.
+
+Diese Integration ändert vorhandene Sessions nicht. Hintergrundkonfigurationen werden abgewiesen. Upload-Tasks und vom Aufrufer bereitgestellte Request-Streams werden nicht übernommen oder vorab konsumiert. Eigene Authentifizierungs-/Redirect-Delegates, task-spezifische Delegate-Entscheidungen, Download-Tasks und transparente Cache-/Cookie-Parität sind für diese Integration nicht vollständig geprüft; bei solchen Anforderungen die vorhandenen Session-Wrapper beziehungsweise `RecordingSessionDelegate` verwenden. Die Forwarding-Session installiert keinen eigenen Trust-Handler.

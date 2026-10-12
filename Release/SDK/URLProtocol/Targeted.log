@@ -1,0 +1,23 @@
+Building for debugging...
+[2 / 11] ATSRecording
+[4 / 13] ATSRecording
+[11 / 14] ATSRecordingTests-product
+[13 / 16] ATSRecordingTests-product
+[18 / 20] ATSRecordingTests-product
+Build complete! (1,33 Sek.)
+◇ Test run started.
+↳ Testing Library Version: 2084
+↳ Target Platform: arm64e-apple-macos14.0
+◇ Suite RecordingURLProtocolTests started.
+◇ Test automaticAsyncDataPreservesEveryByteAndBoundsJournal() started.
+✔ Test automaticAsyncDataPreservesEveryByteAndBoundsJournal() passed after 0.026 seconds.
+◇ Test automaticCompletionHandlerPreservesOriginalFailure() started.
+✔ Test automaticCompletionHandlerPreservesOriginalFailure() passed after 0.001 seconds.
+◇ Test automaticPostPreservesRequestBodyAndHeaders() started.
+✔ Test automaticPostPreservesRequestBodyAndHeaders() passed after 0.001 seconds.
+◇ Test partialTransportFailureKeepsObservedBytesWithoutCompleteHash() started.
+✔ Test partialTransportFailureKeepsObservedBytesWithoutCompleteHash() passed after 0.222 seconds.
+◇ Test configurationRequiresMatchingContextAndKeepsOriginalUntouched() started.
+✔ Test configurationRequiresMatchingContextAndKeepsOriginalUntouched() passed after 0.001 seconds.
+✔ Suite RecordingURLProtocolTests passed after 0.251 seconds.
+✔ Test run with 5 tests in 1 suite passed after 0.251 seconds.
