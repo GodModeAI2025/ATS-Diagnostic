@@ -28,6 +28,7 @@
 		2A5754DAECFC18D4B434D0F2 /* BackgroundWriteLease.swift in Sources */ = {isa = PBXBuildFile; fileRef = 647945BB215181112C4706B2 /* BackgroundWriteLease.swift */; };
 		2C2AEEE90F31E4BA71B21532 /* VisualComponents.swift in Sources */ = {isa = PBXBuildFile; fileRef = 687B5C8DC9BA142303849330 /* VisualComponents.swift */; };
 		2C6A9B2F1CC537D485940B4A /* HAR.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E46CE5231D8CC42A1587A78 /* HAR.swift */; };
+		2C9DF7749D26EB73CC9B75B1 /* History-Legacy33.json in Resources */ = {isa = PBXBuildFile; fileRef = 4CDAF4C177EEEC846261D444 /* History-Legacy33.json */; };
 		2D4D12C09D75D149C65AECF5 /* CCADB-License.txt in Resources */ = {isa = PBXBuildFile; fileRef = 576B1BE5362059F67EF577F8 /* CCADB-License.txt */; };
 		2FCA13441C543680773D12B0 /* Integrity.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5571AEF32197ACDBF1475DB /* Integrity.swift */; };
 		301E84353E23A840EC17D81B /* CertificateTransparency.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D7F7CC311325E64284BF162 /* CertificateTransparency.swift */; };
@@ -173,6 +174,7 @@
 		306C387A89FF92AF8E550A38 /* CertificateFormats.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CertificateFormats.swift; sourceTree = "<group>"; };
 		3AA82D275D1C50A55AA9F83A /* HTTPProxyMessage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPProxyMessage.swift; sourceTree = "<group>"; };
 		3E94985D0FEBCCA700CA4190 /* HistoryRetention.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryRetention.swift; sourceTree = "<group>"; };
+		4CDAF4C177EEEC846261D444 /* History-Legacy33.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = "History-Legacy33.json"; sourceTree = "<group>"; };
 		4D6467264A0E56E47E993F93 /* HistoryRetentionTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryRetentionTests.swift; sourceTree = "<group>"; };
 		4FD94992AC92529EADD0595D /* ATSDiagnosticProxyTests.xctest */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.cfbundle; path = ATSDiagnosticProxyTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		50E6B91F56AB4DD248EAA064 /* RecordingSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordingSettings.swift; sourceTree = "<group>"; };
@@ -246,6 +248,7 @@
 		1A2E8BEF4EB2DD1AB4ABB5A9 /* Fixtures */ = {
 			isa = PBXGroup;
 			children = (
+				4CDAF4C177EEEC846261D444 /* History-Legacy33.json */,
 				960C7CE9492F2F4DBADC03AB /* SDK-Live-Example.json */,
 				DD7E726B18C28B33FFD73D71 /* SDK-Live-expired.badssl.com.json */,
 				AE9DCAB53091977AB4E4AFCD /* SDK-Live-wrong.host.badssl.com.json */,
@@ -523,6 +526,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2C9DF7749D26EB73CC9B75B1 /* History-Legacy33.json in Resources */,
 				76C5C9427F917BB03D17A8C3 /* SDK-Live-Example.json in Resources */,
 				B5574A9300DE2D61D7E7AB8F /* SDK-Live-expired.badssl.com.json in Resources */,
 				221DC1D1E65ED9A8B3F628F2 /* SDK-Live-wrong.host.badssl.com.json in Resources */,

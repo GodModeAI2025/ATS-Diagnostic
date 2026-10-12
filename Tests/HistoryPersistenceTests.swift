@@ -2,6 +2,7 @@ import Foundation
 import Testing
 @testable import ATSDiagnostic
 
+private final class LegacyHistoryResourceScope: NSObject {}
 struct HistoryPersistenceTests {
     @Test func lateSnapshotCannotUndoClear() async throws {
         let file = FileManager.default.temporaryDirectory.appendingPathComponent(UUID().uuidString)
@@ -52,6 +53,33 @@ struct HistoryPersistenceTests {
         await store.flushHistory()
         #expect(store.records.isEmpty)
         #expect(try JSONDecoder().decode([DiagnosticRecord].self, from: Data(contentsOf: file)).isEmpty)
+    }
+
+    @MainActor @Test func build33EncodedHistoryLoadsAndRoundTripsWithoutDataLoss() async throws {
+        // Synthetic fixture encoded by our archived e77e565 model, not today's encoder.
+        let fixture = try #require(Bundle(for: LegacyHistoryResourceScope.self).url(forResource: "History-Legacy33", withExtension: "json"))
+        let file = FileManager.default.temporaryDirectory.appendingPathComponent(UUID().uuidString)
+        defer { try? FileManager.default.removeItem(at: file) }
+        try Data(contentsOf: fixture).write(to: file)
+        let store = DiagnosticStore(historyFile: file)
+        await store.loadHistory()
+        let record = try #require(store.records.first)
+        #expect(record.id.uuidString == "00000000-0000-0000-0000-000000000033")
+        #expect(record.date == Date(timeIntervalSince1970: 1_700_000_000))
+        #expect(record.requestBody == "original request body")
+        #expect(record.requestHeaders["X-Fixture"] == "legacy33")
+        #expect(record.certificates.first?.der == Data([0, 1, 255]))
+        #expect(record.trustValid == false)
+        #expect(record.error == "Synthetic legacy transport failure")
+        #expect(record.origin == nil); #expect(record.diagnosticOptions == nil)
+        #expect(record.networkErrors == nil); #expect(record.requestBodyUnavailable == nil)
+        let writer = HistoryPersistence(file: file)
+        try await writer.save(store.records, revision: 1)
+        let restored = DiagnosticStore(historyFile: file)
+        await restored.loadHistory()
+        #expect(restored.records.first?.id == record.id)
+        #expect(restored.records.first?.requestBody == record.requestBody)
+        #expect(restored.records.first?.certificates.first?.der == record.certificates.first?.der)
     }
 
     @Test func latestSnapshotRoundTripsCertificateAndBody() async throws {
