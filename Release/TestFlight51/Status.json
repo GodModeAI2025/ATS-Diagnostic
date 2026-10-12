@@ -1,0 +1,13 @@
+{
+  "appId": "6821686996",
+  "bundleId": "com.mobilebox.atsdiagnostic.preview",
+  "version": "2.0",
+  "build": "51",
+  "sourceCommit": "8d4330b",
+  "archive": "succeeded",
+  "upload": "succeeded",
+  "testFlightAssignment": "not_yet_verified",
+  "intendedTester": "mark_zimmermann@mac.com",
+  "storeBuild50": "unchanged_waiting_for_review",
+  "processing": "processing_in_app_store_connect"
+}
