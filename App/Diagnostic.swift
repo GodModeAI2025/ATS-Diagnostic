@@ -33,6 +33,7 @@ struct DiagnosticRecord: Identifiable, Codable, Sendable {
     var dnsDuration: Double?
     var connectDuration: Double?
     var tlsDuration: Double?
+    var connectionMetrics: ConnectionMetrics?
     var certificates: [CertificateRecord] = []
     var trustValid: Bool?
     var trustMessage: String?
@@ -146,6 +147,7 @@ final class DiagnosticEngine: NSObject, URLSessionDataDelegate, @unchecked Senda
     func urlSession(_ session: URLSession, task: URLSessionTask, didFinishCollecting metrics: URLSessionTaskMetrics) {
         lock.withLock {
             record.duration = metrics.taskInterval.duration
+            record.connectionMetrics = ConnectionMetrics(metrics)
             if let m = metrics.transactionMetrics.last {
                 record.protocolName = m.networkProtocolName
                 record.remoteAddress = m.remoteAddress

@@ -273,6 +273,7 @@ struct RecordView: View {
                     if let matches = record.integrityMatches { Label(matches ? "Checksum matches" : "Checksum mismatch", systemImage: matches ? "checkmark.shield" : "exclamationmark.shield").foregroundStyle(matches ? Color.diagnosticAccent : Color.red) }
                 }
             }
+            if record.connectionMetrics != nil { Section { NavigationLink { ConnectionMetricsView(record:record) } label: { Label("Weiterleitungen und Verbindungsweg",systemImage:"point.3.connected.trianglepath.dotted") } } }
             Section("Timings") {
                 if includeOverview { ConnectionTimingChart(record: record) }
                 LabeledContent("Total", value: record.duration.formatted(.number.precision(.fractionLength(3))) + " s")
