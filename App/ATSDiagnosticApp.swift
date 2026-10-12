@@ -320,6 +320,7 @@ struct RecordView: View {
             Section("Response headers · \(record.responseHeaders.count)") {
                 ForEach(record.responseHeaders.keys.sorted().prefix(3), id: \.self) { key in HeaderRow(item: HeaderItem(name: key, value: record.responseHeaders[key] ?? "")) }
                 NavigationLink("All headers") { HeadersView(headers: record.responseHeaders) }
+                NavigationLink { HSTSPolicyView(record: record) } label: { Label("HSTS verstehen", systemImage: "shield.lefthalf.filled") }
             }
             ResponseBodySection(body: record.responseBody, encoding: record.responseEncoding, bytes: record.bytes, previewLimit: record.diagnosticOptions?.bodyPreviewBytes, hasCompleteHash: record.origin == nil && record.responseSHA256 != nil, byteCountKnown: record.responseByteCountKnown != false, incomplete: record.importedResponseComplete == false && (record.status != nil || record.importedObservedResponseBytes != nil), observedBytes: record.importedObservedResponseBytes)
             Section {
