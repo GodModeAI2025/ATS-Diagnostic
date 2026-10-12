@@ -1,4 +1,5 @@
 import Foundation
+import CryptoKit
 import Testing
 @testable import ATSDiagnostic
 
@@ -40,6 +41,12 @@ struct AppleCTDirectoryTests {
     @Test func directoryIntegrityAndAllStates() throws {
         let snapshot = try #require(AppleCTLogSnapshot.bundled)
         #expect(snapshot.logs.count == 166)
+        for log in snapshot.logs {
+            let key = try #require(Data(base64Encoded: log.publicKey))
+            let computedID = SHA256.hash(data: key).map { String(format: "%02x", $0) }.joined()
+            #expect(computedID == log.logID)
+            #expect(ISO8601DateFormatter().date(from: log.stateTimestamp) != nil)
+        }
         #expect(snapshot.logs.contains { $0.api == "static-ct-api" })
         #expect(snapshot.logs.contains { $0.state == "rejected" })
         #expect(snapshot.logs.contains { $0.state == "readonly" })
