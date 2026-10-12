@@ -1,0 +1,7 @@
+ATS Diagnostic 2.0 (45)
+
+Zertifikatstransparenz: getrennte Apple-Logstatusanzeige mit Betreiber, Log-API und datiertem Verzeichnis. Vollständige Apple-Liste einschließlich Static-CT-Logs. Bei stillgelegten Logs wird der Zeitpunkt des SCT berücksichtigt.
+
+Die Anzeige unterscheidet Verzeichniseintrag, SCT-Inhalt und Apples Systemvertrauen. SCT-Signaturen und Log-Inklusionsnachweise werden noch nicht unabhängig geprüft.
+
+Bitte Zertifikatsansichten und Lesbarkeit auf iPhone und iPad prüfen.
