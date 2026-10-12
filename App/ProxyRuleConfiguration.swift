@@ -1,7 +1,7 @@
 import Foundation
 
-struct ProxyRuleConfiguration: Identifiable, Sendable {
-    enum BodyMode: String, CaseIterable { case unchanged = "Unverändert", text = "UTF-8-Text", base64 = "Base64" }
+struct ProxyRuleConfiguration: Identifiable, Codable, Sendable {
+    enum BodyMode: String, CaseIterable, Codable, Sendable { case unchanged = "Unverändert", text = "UTF-8-Text", base64 = "Base64" }
     var id = UUID()
     var enabled = true
     var matchURL = ""

@@ -1,0 +1,39 @@
+import Foundation
+import Testing
+@testable import ATSDiagnostic
+struct ProxyRulePersistenceTests {
+    @Test func persistsOrderIdentityBinaryModeAndEnabledStateWithoutStaleOverwrite() async throws {
+        let directory = FileManager.default.temporaryDirectory.appendingPathComponent(UUID().uuidString)
+        defer { try? FileManager.default.removeItem(at: directory) }
+        let file = directory.appendingPathComponent("rules.json")
+        let store = ProxyRulePersistence(file: file)
+        #expect(try await store.load().isEmpty)
+        var first = ProxyRuleConfiguration(); first.matchURL = "https://example.com/a"
+        first.bodyMode = .base64; first.bodyText = "AAH/"; first.headerText = "X-Test: original"
+        var second = ProxyRuleConfiguration(); second.matchURL = "https://example.com/b"; second.enabled = false
+        #expect(try await store.save([second, first], revision: 2))
+        #expect(try await !store.save([first], revision: 1))
+        let fresh = ProxyRulePersistence(file: file)
+        let loaded = try await fresh.load()
+        #expect(loaded.map(\.id) == [second.id, first.id])
+        #expect(!loaded[0].enabled)
+        #expect(loaded[1].bodyMode == .base64)
+        #expect(loaded[1].bodyText == "AAH/")
+        #expect(loaded[1].headerText == "X-Test: original")
+    }
+    @Test func invalidOrDuplicateProfilesNeverReplaceExistingFile() async throws {
+        let directory = FileManager.default.temporaryDirectory.appendingPathComponent(UUID().uuidString)
+        defer { try? FileManager.default.removeItem(at: directory) }
+        let file = directory.appendingPathComponent("rules.json")
+        let store = ProxyRulePersistence(file: file)
+        var rule = ProxyRuleConfiguration(); rule.matchURL = "https://example.com/a"
+        try await store.save([rule], revision: 1)
+        do { try await store.save([rule, rule], revision: 2); Issue.record("Duplicate IDs accepted") }
+        catch { #expect(error is ProxyRulePersistence.Failure) }
+        #expect(try await store.load().count == 1)
+        var invalid = rule; invalid.matchURL = "file:///tmp/fixture"
+        do { try await store.save([invalid], revision: 3); Issue.record("Invalid rule accepted") }
+        catch {}
+        #expect(try await store.load().first?.id == rule.id)
+    }
+}
