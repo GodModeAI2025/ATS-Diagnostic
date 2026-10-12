@@ -361,3 +361,32 @@ private func detachedObservation() async throws -> (RecordingObservation, WeakRe
     let client = try RecordingClient()
     return (try await client.observe(), WeakRecordingOwner(client))
 }
+
+extension RecordingClientTests {
+    @Test func metricObserversPreserveAllControlledTransferResults() async throws {
+        let recorder = try RecordingClient(previewLimit: 8)
+        let session = session(); defer { session.invalidateAndCancel() }
+        let echo = URLRequest(url: URL(string: "https://fixture.invalid/echo")!)
+        let body = Data("metric upload body".utf8)
+        let (uploaded, _) = try await recorder.upload(for: echo, from: body, using: session, collectMetrics: true)
+        #expect(uploaded == body)
+        let source = FileManager.default.temporaryDirectory.appendingPathComponent("ATSRecording-Metrics-\(UUID())")
+        try body.write(to: source); defer { try? FileManager.default.removeItem(at: source) }
+        let (fileUploaded, _) = try await recorder.upload(for: echo, fromFile: source, using: session, collectMetrics: true)
+        #expect(fileUploaded == body)
+        #expect(try Data(contentsOf: source) == body)
+        let (download, _) = try await recorder.download(for: URLRequest(url: URL(string: "https://fixture.invalid/large")!), using: session, collectMetrics: true)
+        defer { try? FileManager.default.removeItem(at: download) }
+        #expect(try Data(contentsOf: download).count == 150_017)
+        let count = try await recorder.withBytes(for: URLRequest(url: URL(string: "https://fixture.invalid/body")!), using: session, collectMetrics: true) { stream, _ in
+            var count = 0
+            for try await _ in stream { count += 1 }
+            return count
+        }
+        #expect(count == 4096)
+        let records = await recorder.records()
+        #expect(records.count == 4)
+        #expect(records.allSatisfy { $0.status == 200 && $0.responseComplete == true && $0.errorCode == nil })
+        #expect(records.first?.responseBytes == 4096)
+    }
+}

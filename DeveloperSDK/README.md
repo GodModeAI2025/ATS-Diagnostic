@@ -62,3 +62,15 @@ Die Streaming-API ist zusätzlich gegen echte HTTPS-Gegenstellen auf macOS und i
 `try await recorder.withBytes(for: request, using: session) { stream, response in ... }` finalisiert die Aufzeichnung beim Verlassen des Consumer-Scopes, einschließlich früher Rückgabe und Parserfehlern. Der Consumer kann auf dem MainActor laufen. Ein Parserfehler bleibt der originale Consumer-Fehler und wird nicht als Transportfehler gespeichert. Bei regulärem EOF bleibt der vollständige Eintrag erhalten, ohne zweite Aufzeichnung.
 
 Bei früher Beendigung enthält `responseBytes` die tatsächlich beobachteten Bytes, `responseComplete` ist false und der vollständige Hash fehlt. HAR stellt die gesamte Antwortgröße als unbekannt (-1) dar; `_atsDiagnostic.observedResponseBytes` bewahrt die beobachtete Anzahl. Dadurch behaupten auch ältere App-Importer keine vollständige Antwortgröße. `stream.finishRecording()` bietet diesen Abschluss auch explizit für die Low-Level-API. Er beendet die Beobachtung und cancelt die Netzwerk-Task nicht; später konsumierte Bytes ändern den abgeschlossenen Eintrag nicht. Ohne strukturierten Scope oder expliziten Abschluss bleibt ein früh verlassener Low-Level-Stream weiterhin ohne abgeschlossenen Eintrag.
+
+## Foundation-Verbindungsmetriken
+
+`try await recorder.dataWithMetrics(for: request, using: session)` erfasst zusätzlich die von Foundation gemeldeten Task-Metriken. Uploads (Data/Datei), Downloads, `bytes` und `withBytes` bieten dafür `collectMetrics: true`. Die bisherigen Aufrufe behalten standardmäßig ihr Verhalten. Ein optionaler `delegate:` erhält die aufgabenspezifischen Callbacks; ohne diesen Parameter wird der vorhandene Task-Delegate der Session berücksichtigt.
+
+Der Beobachter speichert Metriken und leitet die übrigen Objective-C-Delegate-Callbacks an die Host-Implementierung weiter, darunter Weiterleitungsentscheidungen. Es wird kein eigener Authentifizierungs- oder Trust-Handler implementiert. Der Metrik-Callback wird zusätzlich an den Host weitergeleitet. Die integrierende App muss dies gegen ihre tatsächlichen Delegate-Implementierungen prüfen.
+
+`RecordedExchange.metrics` enthält native Task-Dauer, Redirect-Anzahl und einzelne Transaktionen mit URL, Status, gemeldetem Protokoll, lokalen/entfernten Adressen und DNS-/TCP-/TLS-/Sende-/Warte-/Empfangszeiten. Fehlende Zeitwerte bleiben unbekannt. Höchstens128 Transaktionen werden gespeichert; Gesamtzahl und Kürzung werden ausgewiesen. Die lokale Adresse kann eine private Netzwerkadresse sein; URLs und Exporte können vertrauliche Angaben enthalten.
+
+Diese Transportmetriken sind getrennt von der Dauer des Stream-Konsumenten und von den tatsächlich konsumierten Körperbytes. Bei frühem Stream-Abschluss können Metriken noch fehlen; ein späterer Callback verändert den bereits abgeschlossenen Journaleintrag nicht. HAR bewahrt die Metriken unter `_atsDiagnostic.taskMetrics`, ohne die Zeiten eines einzelnen Redirect-Hops als Gesamtzeit der HAR-Anfrage auszugeben.
+
+Die SDK-Erweiterung ist nicht Bestandteil des bereits eingereichten beziehungsweise in TestFlight freigegebenen App-Builds50.

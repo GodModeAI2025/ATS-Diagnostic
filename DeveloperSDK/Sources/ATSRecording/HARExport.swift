@@ -16,6 +16,7 @@ extension RecordingClient {
             if requestUnavailable { metadata["requestBodyPreviewBase64"] = record.requestBodyPreview.base64EncodedString() }
             if let complete = record.responseComplete { metadata["responseComplete"] = complete }
             if record.responseComplete == false, let observed = record.responseBytes { metadata["observedResponseBytes"] = observed }
+            if let metrics = record.metrics, let data = try? JSONEncoder().encode(metrics), let object = try? JSONSerialization.jsonObject(with: data) { metadata["taskMetrics"] = object }
             if let hash = record.responseSHA256 { metadata["responseSHA256"] = hash }
             if let domain = record.errorDomain { metadata["errorDomain"] = domain }
             if let code = record.errorCode { metadata["errorCode"] = code }

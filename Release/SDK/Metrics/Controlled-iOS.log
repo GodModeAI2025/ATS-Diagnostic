@@ -1,0 +1,597 @@
+Command line invocation:
+    /Applications/Xcode.app/Contents/Developer/usr/bin/xcodebuild -scheme ATSRecording -destination "platform=iOS Simulator,id=BDBC34EC-62D8-4394-8D9D-B74C32DF20D0" -derivedDataPath ../../../work/SDKMetricsiOS -collect-test-diagnostics never -resultBundlePath ../../../work/SDK-Metrics-iOS.xcresult test
+
+Resolve Package Graph
+2026-10-12 10:09:53.032 xcodebuild[47807:25094931] [MT] IDERunDestination: Supported platforms for the buildables in the current scheme is empty.
+
+
+Resolved source packages:
+  ATSRecording: /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/outputs/ATS-Diagnostic/DeveloperSDK
+
+Writing result bundle at path:
+	/Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/SDK-Metrics-iOS.xcresult
+
+ComputePackagePrebuildTargetDependencyGraph
+
+Prepare packages
+
+CreateBuildRequest
+
+SendProjectDescription
+
+CreateBuildOperation
+
+ComputeTargetDependencyGraph
+note: Building targets in dependency order
+note: Target dependency graph (3 targets)
+    Target 'ATSRecording-product' in project 'ATSRecording'
+        ➜ Explicit dependency on target 'ATSRecording' in project 'ATSRecording'
+    Target 'ATSRecordingTests-product' in project 'ATSRecording'
+        ➜ Explicit dependency on target 'ATSRecording' in project 'ATSRecording'
+    Target 'ATSRecording' in project 'ATSRecording' (no dependencies)
+
+GatherProvisioningInputs
+
+CreateBuildDescription
+
+ExecuteExternalTool /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -v -E -dM -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator27.0.sdk -x c -c /dev/null
+
+ExecuteExternalTool /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc --version
+
+ExecuteExternalTool /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/ld -version_details
+
+Build description signature: f1caa9d5979e1222238f6ae115cd5d5c
+Build description path: /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/SDKMetricsiOS/Build/Intermediates.noindex/XCBuildData/f1caa9d5979e1222238f6ae115cd5d5c.xcbuilddata
+CreateBuildDirectory /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/SDKMetricsiOS/ModuleCache.noindex
+    cd /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/outputs/ATS-Diagnostic/DeveloperSDK/.swiftpm/xcode
+    builtin-create-build-directory /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/SDKMetricsiOS/ModuleCache.noindex
+
+CreateBuildDirectory /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/SDKMetricsiOS/SDKExplicitPrecompiledModules
+    cd /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/outputs/ATS-Diagnostic/DeveloperSDK/.swiftpm/xcode
+    builtin-create-build-directory /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/SDKMetricsiOS/SDKExplicitPrecompiledModules
+
+CreateBuildDirectory /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/SDKMetricsiOS/CompilationCache.noindex
+    cd /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/outputs/ATS-Diagnostic/DeveloperSDK/.swiftpm/xcode
+    builtin-create-build-directory /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/SDKMetricsiOS/CompilationCache.noindex
+
+CreateBuildDirectory /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/SDKMetricsiOS/Build/Intermediates.noindex
+    cd /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/outputs/ATS-Diagnostic/DeveloperSDK/.swiftpm/xcode
+    builtin-create-build-directory /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/SDKMetricsiOS/Build/Intermediates.noindex
+
+CreateBuildDirectory /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/SDKMetricsiOS/Build/Products
+    cd /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/outputs/ATS-Diagnostic/DeveloperSDK/.swiftpm/xcode
+    builtin-create-build-directory /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/SDKMetricsiOS/Build/Products
+
+ClangStatCache /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang-stat-cache /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator27.0.sdk /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/SDKMetricsiOS/SDKStatCaches.noindex/iphonesimulator27.0-24A430-e829b21a6f8c9b70876ba0858053c0448dc58220667be655e1bcc261a7455254.sdkstatcache
+    cd /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/outputs/ATS-Diagnostic/DeveloperSDK/.swiftpm/xcode
+    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang-stat-cache /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator27.0.sdk -o /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/SDKMetricsiOS/SDKStatCaches.noindex/iphonesimulator27.0-24A430-e829b21a6f8c9b70876ba0858053c0448dc58220667be655e1bcc261a7455254.sdkstatcache
+
+CreateBuildDirectory /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/SDKMetricsiOS/Build/Intermediates.noindex/SwiftExplicitPrecompiledModules
+    cd /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/outputs/ATS-Diagnostic/DeveloperSDK/.swiftpm/xcode
+    builtin-create-build-directory /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/SDKMetricsiOS/Build/Intermediates.noindex/SwiftExplicitPrecompiledModules
+
+CreateBuildDirectory /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/SDKMetricsiOS/Build/Intermediates.noindex/PrecompiledHeaders
+    cd /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/outputs/ATS-Diagnostic/DeveloperSDK/.swiftpm/xcode
+    builtin-create-build-directory /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/SDKMetricsiOS/Build/Intermediates.noindex/PrecompiledHeaders
+
+CreateBuildDirectory /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/SDKMetricsiOS/Build/Intermediates.noindex/ExplicitPrecompiledModules
+    cd /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/outputs/ATS-Diagnostic/DeveloperSDK/.swiftpm/xcode
+    builtin-create-build-directory /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/SDKMetricsiOS/Build/Intermediates.noindex/ExplicitPrecompiledModules
+
+CreateBuildDirectory /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/SDKMetricsiOS/Build/Intermediates.noindex/EagerLinkingTBDs/Debug-iphonesimulator
+    cd /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/outputs/ATS-Diagnostic/DeveloperSDK/.swiftpm/xcode
+    builtin-create-build-directory /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/SDKMetricsiOS/Build/Intermediates.noindex/EagerLinkingTBDs/Debug-iphonesimulator
+
+CreateBuildDirectory /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/SDKMetricsiOS/Build/Products/Debug-iphonesimulator
+    cd /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/outputs/ATS-Diagnostic/DeveloperSDK/.swiftpm/xcode
+    builtin-create-build-directory /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/SDKMetricsiOS/Build/Products/Debug-iphonesimulator
+
+CreateBuildDirectory /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/SDKMetricsiOS/Build/Products/Debug-iphonesimulator/PackageFrameworks
+    cd /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/outputs/ATS-Diagnostic/DeveloperSDK/.swiftpm/xcode
+    builtin-create-build-directory /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/SDKMetricsiOS/Build/Products/Debug-iphonesimulator/PackageFrameworks
+
+MkDir /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/SDKMetricsiOS/Build/Products/Debug-iphonesimulator/ATSRecordingTests.xctest (in target 'ATSRecordingTests-product' from project 'ATSRecording')
+    cd /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/outputs/ATS-Diagnostic/DeveloperSDK
+    /bin/mkdir -p /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/SDKMetricsiOS/Build/Products/Debug-iphonesimulator/ATSRecordingTests.xctest
+
+WriteAuxiliaryFile /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/SDKMetricsiOS/Build/Intermediates.noindex/ATSRecording.build/Debug-iphonesimulator/ATSRecordingTests-p.build/ATSRecordingTests.DependencyMetadataFileList (in target 'ATSRecordingTests-product' from project 'ATSRecording')
+    cd /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/outputs/ATS-Diagnostic/DeveloperSDK
+    write-file /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/SDKMetricsiOS/Build/Intermediates.noindex/ATSRecording.build/Debug-iphonesimulator/ATSRecordingTests-p.build/ATSRecordingTests.DependencyMetadataFileList
+
+WriteAuxiliaryFile /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/SDKMetricsiOS/Build/Intermediates.noindex/ATSRecording.build/Debug-iphonesimulator/ATSRecordingTests-p.build/empty-ATSRecordingTests.plist (in target 'ATSRecordingTests-product' from project 'ATSRecording')
+    cd /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/outputs/ATS-Diagnostic/DeveloperSDK
+    write-file /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/SDKMetricsiOS/Build/Intermediates.noindex/ATSRecording.build/Debug-iphonesimulator/ATSRecordingTests-p.build/empty-ATSRecordingTests.plist
+
+WriteAuxiliaryFile /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/SDKMetricsiOS/Build/Intermediates.noindex/ATSRecording.build/Debug-iphonesimulator/ATSRecordingTests-p.build/ATSRecordingTests.DependencyStaticMetadataFileList (in target 'ATSRecordingTests-product' from project 'ATSRecording')
+    cd /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/outputs/ATS-Diagnostic/DeveloperSDK
+    write-file /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/SDKMetricsiOS/Build/Intermediates.noindex/ATSRecording.build/Debug-iphonesimulator/ATSRecordingTests-p.build/ATSRecordingTests.DependencyStaticMetadataFileList
+
+WriteAuxiliaryFile /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/SDKMetricsiOS/Build/Intermediates.noindex/ATSRecording.build/Debug-iphonesimulator/ATSRecording-t.build/ATSRecording.DependencyStaticMetadataFileList (in target 'ATSRecording' from project 'ATSRecording')
+    cd /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/outputs/ATS-Diagnostic/DeveloperSDK
+    write-file /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/SDKMetricsiOS/Build/Intermediates.noindex/ATSRecording.build/Debug-iphonesimulator/ATSRecording-t.build/ATSRecording.DependencyStaticMetadataFileList
+
+WriteAuxiliaryFile /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/SDKMetricsiOS/Build/Intermediates.noindex/ATSRecording.build/Debug-iphonesimulator/ATSRecording-t.build/ATSRecording.modulemap (in target 'ATSRecording' from project 'ATSRecording')
+    cd /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/outputs/ATS-Diagnostic/DeveloperSDK
+    write-file /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/SDKMetricsiOS/Build/Intermediates.noindex/ATSRecording.build/Debug-iphonesimulator/ATSRecording-t.build/ATSRecording.modulemap
+
+WriteAuxiliaryFile /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/SDKMetricsiOS/Build/Intermediates.noindex/ATSRecording.build/Debug-iphonesimulator/ATSRecordingTests-p.build/Objects-normal/arm64/ATSRecordingTests.SwiftFileList (in target 'ATSRecordingTests-product' from project 'ATSRecording')
+    cd /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/outputs/ATS-Diagnostic/DeveloperSDK
+    write-file /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/SDKMetricsiOS/Build/Intermediates.noindex/ATSRecording.build/Debug-iphonesimulator/ATSRecordingTests-p.build/Objects-normal/arm64/ATSRecordingTests.SwiftFileList
+
+WriteAuxiliaryFile /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/SDKMetricsiOS/Build/Intermediates.noindex/ATSRecording.build/Debug-iphonesimulator/ATSRecordingTests-p.build/Objects-normal/arm64/ATSRecordingTests.SwiftConstValuesFileList (in target 'ATSRecordingTests-product' from project 'ATSRecording')
+    cd /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/outputs/ATS-Diagnostic/DeveloperSDK
+    write-file /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/SDKMetricsiOS/Build/Intermediates.noindex/ATSRecording.build/Debug-iphonesimulator/ATSRecordingTests-p.build/Objects-normal/arm64/ATSRecordingTests.SwiftConstValuesFileList
+
+WriteAuxiliaryFile /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/SDKMetricsiOS/Build/Intermediates.noindex/ATSRecording.build/Debug-iphonesimulator/ATSRecordingTests-p.build/Objects-normal/arm64/ATSRecordingTests.LinkFileList (in target 'ATSRecordingTests-product' from project 'ATSRecording')
+    cd /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/outputs/ATS-Diagnostic/DeveloperSDK
+    write-file /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/SDKMetricsiOS/Build/Intermediates.noindex/ATSRecording.build/Debug-iphonesimulator/ATSRecordingTests-p.build/Objects-normal/arm64/ATSRecordingTests.LinkFileList
+
+WriteAuxiliaryFile /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/SDKMetricsiOS/Build/Intermediates.noindex/ATSRecording.build/Debug-iphonesimulator/ATSRecordingTests-p.build/Objects-normal/arm64/ATSRecordingTests-OutputFileMap.json (in target 'ATSRecordingTests-product' from project 'ATSRecording')
+    cd /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/outputs/ATS-Diagnostic/DeveloperSDK
+    write-file /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/SDKMetricsiOS/Build/Intermediates.noindex/ATSRecording.build/Debug-iphonesimulator/ATSRecordingTests-p.build/Objects-normal/arm64/ATSRecordingTests-OutputFileMap.json
+
+WriteAuxiliaryFile /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/SDKMetricsiOS/Build/Intermediates.noindex/ATSRecording.build/Debug-iphonesimulator/ATSRecordingTests-p.build/Objects-normal/arm64/ATSRecordingTests_const_extract_protocols.json (in target 'ATSRecordingTests-product' from project 'ATSRecording')
+    cd /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/outputs/ATS-Diagnostic/DeveloperSDK
+    write-file /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/SDKMetricsiOS/Build/Intermediates.noindex/ATSRecording.build/Debug-iphonesimulator/ATSRecordingTests-p.build/Objects-normal/arm64/ATSRecordingTests_const_extract_protocols.json
+
+WriteAuxiliaryFile /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/SDKMetricsiOS/Build/Intermediates.noindex/ATSRecording.build/Debug-iphonesimulator/ATSRecording-t.build/Objects-normal/arm64/ATSRecording-OutputFileMap.json (in target 'ATSRecording' from project 'ATSRecording')
+    cd /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/outputs/ATS-Diagnostic/DeveloperSDK
+    write-file /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/SDKMetricsiOS/Build/Intermediates.noindex/ATSRecording.build/Debug-iphonesimulator/ATSRecording-t.build/Objects-normal/arm64/ATSRecording-OutputFileMap.json
+
+WriteAuxiliaryFile /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/SDKMetricsiOS/Build/Intermediates.noindex/ATSRecording.build/Debug-iphonesimulator/ATSRecording-t.build/Objects-normal/arm64/ATSRecording.SwiftConstValuesFileList (in target 'ATSRecording' from project 'ATSRecording')
+    cd /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/outputs/ATS-Diagnostic/DeveloperSDK
+    write-file /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/SDKMetricsiOS/Build/Intermediates.noindex/ATSRecording.build/Debug-iphonesimulator/ATSRecording-t.build/Objects-normal/arm64/ATSRecording.SwiftConstValuesFileList
+
+WriteAuxiliaryFile /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/SDKMetricsiOS/Build/Intermediates.noindex/ATSRecording.build/Debug-iphonesimulator/ATSRecording-t.build/Objects-normal/arm64/ATSRecording_const_extract_protocols.json (in target 'ATSRecording' from project 'ATSRecording')
+    cd /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/outputs/ATS-Diagnostic/DeveloperSDK
+    write-file /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/SDKMetricsiOS/Build/Intermediates.noindex/ATSRecording.build/Debug-iphonesimulator/ATSRecording-t.build/Objects-normal/arm64/ATSRecording_const_extract_protocols.json
+
+WriteAuxiliaryFile /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/SDKMetricsiOS/Build/Intermediates.noindex/ATSRecording.build/Debug-iphonesimulator/ATSRecording-t.build/Objects-normal/arm64/ATSRecording.SwiftFileList (in target 'ATSRecording' from project 'ATSRecording')
+    cd /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/outputs/ATS-Diagnostic/DeveloperSDK
+    write-file /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/SDKMetricsiOS/Build/Intermediates.noindex/ATSRecording.build/Debug-iphonesimulator/ATSRecording-t.build/Objects-normal/arm64/ATSRecording.SwiftFileList
+
+WriteAuxiliaryFile /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/SDKMetricsiOS/Build/Intermediates.noindex/ATSRecording.build/Debug-iphonesimulator/ATSRecording-t.build/Objects-normal/arm64/ATSRecording.LinkFileList (in target 'ATSRecording' from project 'ATSRecording')
+    cd /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/outputs/ATS-Diagnostic/DeveloperSDK
+    write-file /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/SDKMetricsiOS/Build/Intermediates.noindex/ATSRecording.build/Debug-iphonesimulator/ATSRecording-t.build/Objects-normal/arm64/ATSRecording.LinkFileList
+
+WriteAuxiliaryFile /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/SDKMetricsiOS/Build/Intermediates.noindex/ATSRecording.build/Debug-iphonesimulator/ATSRecording-t.build/ATSRecording.DependencyMetadataFileList (in target 'ATSRecording' from project 'ATSRecording')
+    cd /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/outputs/ATS-Diagnostic/DeveloperSDK
+    write-file /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/SDKMetricsiOS/Build/Intermediates.noindex/ATSRecording.build/Debug-iphonesimulator/ATSRecording-t.build/ATSRecording.DependencyMetadataFileList
+
+Copy /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/SDKMetricsiOS/Build/Intermediates.noindex/GeneratedModuleMaps-iphonesimulator/ATSRecording.modulemap /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/SDKMetricsiOS/Build/Intermediates.noindex/ATSRecording.build/Debug-iphonesimulator/ATSRecording-t.build/ATSRecording.modulemap (in target 'ATSRecording' from project 'ATSRecording')
+    cd /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/outputs/ATS-Diagnostic/DeveloperSDK
+    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/SDKMetricsiOS/Build/Intermediates.noindex/ATSRecording.build/Debug-iphonesimulator/ATSRecording-t.build/ATSRecording.modulemap /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/SDKMetricsiOS/Build/Intermediates.noindex/GeneratedModuleMaps-iphonesimulator
+
+SwiftDriver ATSRecording normal arm64 com.apple.xcode.tools.swift.compiler (in target 'ATSRecording' from project 'ATSRecording')
+    cd /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/outputs/ATS-Diagnostic/DeveloperSDK/.swiftpm/xcode
+    builtin-SwiftDriver -- /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc -parse-as-library -module-name ATSRecording -Onone @/Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/SDKMetricsiOS/Build/Intermediates.noindex/ATSRecording.build/Debug-iphonesimulator/ATSRecording-t.build/Objects-normal/arm64/ATSRecording.SwiftFileList -DSWIFT_PACKAGE -DDEBUG -DSWIFT_MODULE_RESOURCE_BUNDLE_UNAVAILABLE -DXcode -plugin-path /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/host/plugins/testing -enable-experimental-feature DebugDescriptionMacro -sdk /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator27.0.sdk -target arm64-apple-ios18.0-simulator -g -module-cache-path /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/SDKMetricsiOS/ModuleCache.noindex -Xfrontend -serialize-debugging-options -profile-coverage-mapping -profile-generate -enable-testing -index-store-path /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/SDKMetricsiOS/Index.noindex/DataStore -Xcc -D_LIBCPP_HARDENING_MODE\=_LIBCPP_HARDENING_MODE_DEBUG -swift-version 6 -I /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/SDKMetricsiOS/Build/Products/Debug-iphonesimulator -Isystem /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/lib -F /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/SDKMetricsiOS/Build/Products/Debug-iphonesimulator -F /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/Library/Frameworks -F /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator27.0.sdk/Developer/Library/Frameworks -c -j18 -enable-batch-mode -incremental -Xcc -ivfsstatcache -Xcc /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/SDKMetricsiOS/SDKStatCaches.noindex/iphonesimulator27.0-24A430-e829b21a6f8c9b70876ba0858053c0448dc58220667be655e1bcc261a7455254.sdkstatcache -output-file-map /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/SDKMetricsiOS/Build/Intermediates.noindex/ATSRecording.build/Debug-iphonesimulator/ATSRecording-t.build/Objects-normal/arm64/ATSRecording-OutputFileMap.json -save-temps -no-color-diagnostics -explicit-module-build -module-cache-path /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/SDKMetricsiOS/Build/Intermediates.noindex/SwiftExplicitPrecompiledModules -clang-scanner-module-cache-path /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/SDKMetricsiOS/ModuleCache.noindex -sdk-module-cache-path /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/SDKMetricsiOS/SDKExplicitPrecompiledModules -emit-dependencies -emit-module -emit-module-path /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/SDKMetricsiOS/Build/Intermediates.noindex/ATSRecording.build/Debug-iphonesimulator/ATSRecording-t.build/Objects-normal/arm64/ATSRecording.swiftmodule -serialize-diagnostics -dependency-scan-serialize-diagnostics-path /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/SDKMetricsiOS/Build/Intermediates.noindex/ATSRecording.build/Debug-iphonesimulator/ATSRecording-t.build/Objects-normal/arm64/ATSRecording-dependency-scan.dia -validate-clang-modules-once -clang-build-session-file /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/SDKMetricsiOS/ModuleCache.noindex/Session.modulevalidation -Xcc -fmodules-prune-interval\=86400 -Xcc -fmodules-prune-after\=345600 -package-name developersdk -emit-const-values -const-gather-protocols-list /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/SDKMetricsiOS/Build/Intermediates.noindex/ATSRecording.build/Debug-iphonesimulator/ATSRecording-t.build/Objects-normal/arm64/ATSRecording_const_extract_protocols.json -Xcc -I/Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/SDKMetricsiOS/Build/Products/Debug-iphonesimulator/include -Xcc -I/Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/SDKMetricsiOS/Build/Intermediates.noindex/ATSRecording.build/Debug-iphonesimulator/ATSRecording-t.build/DerivedSources-normal/arm64 -Xcc -I/Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/SDKMetricsiOS/Build/Intermediates.noindex/ATSRecording.build/Debug-iphonesimulator/ATSRecording-t.build/DerivedSources/arm64 -Xcc -I/Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/SDKMetricsiOS/Build/Intermediates.noindex/ATSRecording.build/Debug-iphonesimulator/ATSRecording-t.build/DerivedSources -Xcc -DSWIFT_PACKAGE -Xcc -DDEBUG\=1 -emit-objc-header -emit-objc-header-path /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/SDKMetricsiOS/Build/Intermediates.noindex/ATSRecording.build/Debug-iphonesimulator/ATSRecording-t.build/Objects-normal/arm64/ATSRecording-Swift.h -working-directory /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/outputs/ATS-Diagnostic/DeveloperSDK/.swiftpm/xcode -experimental-emit-module-separately -disable-cmo
+
+SwiftExplicitDependencyGeneratePcm arm64 /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/SDKMetricsiOS/SDKExplicitPrecompiledModules/_Builtin_stdarg-1BCX68N6LA1VE6E2F11UJBECD.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/SDKMetricsiOS/SDKExplicitPrecompiledModules/ptrauth-4UTOMLZPKAOJYIXYGYYULYCTP.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/SDKMetricsiOS/SDKExplicitPrecompiledModules/SwiftShims-5T9FCCL8VFC83DSZTVVACRA9J.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/SDKMetricsiOS/SDKExplicitPrecompiledModules/_Builtin_float-E474RQ08YFIS2F9BWMSH9YI1O.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/SDKMetricsiOS/SDKExplicitPrecompiledModules/_Builtin_stdbool-9YLIWGL55KUPP3OLJZ5ELJNVC.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/SDKMetricsiOS/SDKExplicitPrecompiledModules/_Builtin_stddef-1E4QQWNH91LDP9LKY0PUEVQHW.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/SDKMetricsiOS/SDKExplicitPrecompiledModules/_SwiftConcurrencyShims-3K4UH5J1SWTEK48P76NF7B162.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/SDKMetricsiOS/SDKExplicitPrecompiledModules/_AvailabilityInternal-189MBNT2QZN516QPB4KQAWD75.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/SDKMetricsiOS/SDKExplicitPrecompiledModules/ptrcheck-60FR0930B0NKC31P6M65J1CEB.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/SDKMetricsiOS/SDKExplicitPrecompiledModules/DeveloperToolsSupport-DVYO5I75Y5MVTYEA1HQTWHNKB.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/SDKMetricsiOS/SDKExplicitPrecompiledModules/_DarwinFoundation1-5RBDKWO80LJNZUUOR8Z8EFM65.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/SDKMetricsiOS/SDKExplicitPrecompiledModules/_DarwinFoundation2-59NY0HK5Z55WKH277NAXB6H1Y.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/SDKMetricsiOS/SDKExplicitPrecompiledModules/_Builtin_limits-8RRT8OW3XM24B2ZWDON1JNRW2.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/SDKMetricsiOS/SDKExplicitPrecompiledModules/string_h-DQMOVLONQWL9X2KTK4T747YSC.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/SDKMetricsiOS/SDKExplicitPrecompiledModules/_Builtin_stdint-BETT8AJALKBZ7SI0DEGYBI188.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/SDKMetricsiOS/SDKExplicitPrecompiledModules/sys_types-7CYXWGZVGN2QPTOG38J1R4U7T.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/SDKMetricsiOS/SDKExplicitPrecompiledModules/_Builtin_tgmath-EAZ5GAS9XDEE507GP3H1CA249.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/SDKMetricsiOS/SDKExplicitPrecompiledModules/_Builtin_stdatomic-BEDBZUPCFNXWUJQHB351CNU7T.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/SDKMetricsiOS/SDKExplicitPrecompiledModules/_Builtin_intrinsics-BFR0MF02UJAKQFLWJCCJUCZED.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/SDKMetricsiOS/SDKExplicitPrecompiledModules/_DarwinFoundation3-C5ND8GWY35UZQGR4VFDXWU3DJ.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/SDKMetricsiOS/SDKExplicitPrecompiledModules/_Builtin_inttypes-AJBY0UO6U32FP7MT9B1JYKJE4.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/SDKMetricsiOS/SDKExplicitPrecompiledModules/simd-7D6VWN8GXHC171RURJ2FO5XW8.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/SDKMetricsiOS/SDKExplicitPrecompiledModules/Darwin-1IPTPJBUPYXN4ABVKB15CX4HV.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/SDKMetricsiOS/SDKExplicitPrecompiledModules/MachO-AAPX32MLF8EFL2USSFVEM1BSW.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/SDKMetricsiOS/SDKExplicitPrecompiledModules/ObjectiveC-9N381F9QDWSKO4ZNRAIFFOKEK.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/SDKMetricsiOS/SDKExplicitPrecompiledModules/Spatial-B5EPXE8GH21AG3A4G13OTC59O.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/SDKMetricsiOS/SDKExplicitPrecompiledModules/os_object-9P2IJP72G7JYRPCCMRYQQWHY7.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/SDKMetricsiOS/SDKExplicitPrecompiledModules/os_workgroup-5KCXOS1NIVGZFEVM1JAA3ZIKT.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/SDKMetricsiOS/SDKExplicitPrecompiledModules/Dispatch-CYWKBG3152CJ5J2PQ2CV2ZAMS.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/SDKMetricsiOS/SDKExplicitPrecompiledModules/CoreFoundation-74UXBWF1HZNI6P0HVSNBNYS5W.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/SDKMetricsiOS/SDKExplicitPrecompiledModules/XPC-9JLILJ0SH7JE00XC6I2CU17ED.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/SDKMetricsiOS/SDKExplicitPrecompiledModules/os-3OFLMY2SH9CIAYAPZJC0O9M6L.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/SDKMetricsiOS/SDKExplicitPrecompiledModules/Security-27CHDO1TMS12EACJ1RHZD5I1X.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/SDKMetricsiOS/SDKExplicitPrecompiledModules/CoreGraphics-4HJXQZIX0H1DM5KUVL821I9K1.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/SDKMetricsiOS/SDKExplicitPrecompiledModules/CFNetwork-4GZ6WRNOTKBZO7GUVCQATWYB6.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/SDKMetricsiOS/SDKExplicitPrecompiledModules/CoreText-2PZ4VEXF7SJ57BLF58N4DF3TO.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/SDKMetricsiOS/SDKExplicitPrecompiledModules/ImageIO-6UM8O462M5TXUC2CHM1KZ34MA.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/SDKMetricsiOS/SDKExplicitPrecompiledModules/Foundation-9B66AF9UX1T6AXXZEMGC3I8C0.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/SDKMetricsiOS/SDKExplicitPrecompiledModules/UIUtilities-DOXTZPHBHT8AFH9L56LQVKAMU.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/SDKMetricsiOS/SDKExplicitPrecompiledModules/CoreTransferable-2JPFFFKAEDZCEU2FKU1888B46.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/SDKMetricsiOS/SDKExplicitPrecompiledModules/_LocationEssentials-B7N1NR23J3BJ6TDKQFJ9KM9MF.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/SDKMetricsiOS/SDKExplicitPrecompiledModules/DataDetection-8N6Q2HG4Y3Z2U7SATE6X3C8GY.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/SDKMetricsiOS/SDKExplicitPrecompiledModules/IOSurface-364XUAMW9GNAE7N1XAIW2SV1O.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/SDKMetricsiOS/SDKExplicitPrecompiledModules/OpenGLES-9EP3R4C97I5FZW9FBVC7SY9T2.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/SDKMetricsiOS/SDKExplicitPrecompiledModules/UniformTypeIdentifiers-1BPGOLB8PLS1ATWSJUZTXAJFN.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/SDKMetricsiOS/SDKExplicitPrecompiledModules/Accessibility-2TPCN6I1131AESKXA6427CRVT.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/SDKMetricsiOS/SDKExplicitPrecompiledModules/LocalAuthentication-EH9HW9AAVFIWDX2QFMNAYDHUG.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/SDKMetricsiOS/SDKExplicitPrecompiledModules/OSLog-3N8QPBA50ANWDCRD4OBTWMGEY.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/SDKMetricsiOS/SDKExplicitPrecompiledModules/UserNotifications-Z9652GTNCM2WIFW7Z45J3NG9.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/SDKMetricsiOS/SDKExplicitPrecompiledModules/FileProvider-AMODKLKR5A6XUFDXKOKUBVTJ0.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/SDKMetricsiOS/SDKExplicitPrecompiledModules/Symbols-1GNNM2L9BPBGSPKX19G95DOPN.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/SDKMetricsiOS/SDKExplicitPrecompiledModules/CoreLocation-39YY3K0EZTQ1BIG10IQJHSKMV.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/SDKMetricsiOS/SDKExplicitPrecompiledModules/Metal-9P98DQOND8E287W1TZWPT2UUI.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/SDKMetricsiOS/SDKExplicitPrecompiledModules/CoreMotion-3MSWNQUOOGEMIGPMY3353YSVG.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/SDKMetricsiOS/SDKExplicitPrecompiledModules/CoreVideo-5LPT9HR3JN22NS4RM56PWIPK9.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/SDKMetricsiOS/SDKExplicitPrecompiledModules/QuartzCore-78M9106OACPTZDI6H6CBPZHQW.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/SDKMetricsiOS/SDKExplicitPrecompiledModules/CoreImage-81XO2GCTXPQBU7PBDUMUWKGLD.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/SDKMetricsiOS/SDKExplicitPrecompiledModules/SwiftUICore-2XZD8RA7PJKOA8BRV1C6J1Y4.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/SDKMetricsiOS/SDKExplicitPrecompiledModules/UIKit-DVEA8XAGEV229DJBVU1ZIEUW6.pcm
+
+SwiftCompile normal arm64 Compiling\ RecordingActivation.swift /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/outputs/ATS-Diagnostic/DeveloperSDK/Sources/ATSRecording/RecordingActivation.swift (in target 'ATSRecording' from project 'ATSRecording')
+
+SwiftCompile normal arm64 /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/outputs/ATS-Diagnostic/DeveloperSDK/Sources/ATSRecording/RecordingActivation.swift (in target 'ATSRecording' from project 'ATSRecording')
+    cd /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/outputs/ATS-Diagnostic/DeveloperSDK/.swiftpm/xcode
+    builtin-SwiftPerFileCompile RecordingActivation.swift
+
+SwiftCompile normal arm64 Compiling\ RecordingMetrics.swift /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/outputs/ATS-Diagnostic/DeveloperSDK/Sources/ATSRecording/RecordingMetrics.swift (in target 'ATSRecording' from project 'ATSRecording')
+
+SwiftCompile normal arm64 /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/outputs/ATS-Diagnostic/DeveloperSDK/Sources/ATSRecording/RecordingMetrics.swift (in target 'ATSRecording' from project 'ATSRecording')
+    cd /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/outputs/ATS-Diagnostic/DeveloperSDK/.swiftpm/xcode
+    builtin-SwiftPerFileCompile RecordingMetrics.swift
+
+SwiftEmitModule normal arm64 Emitting\ module\ for\ ATSRecording (in target 'ATSRecording' from project 'ATSRecording')
+
+SwiftCompile normal arm64 (in target 'ATSRecording' from project 'ATSRecording')
+    cd /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/outputs/ATS-Diagnostic/DeveloperSDK/.swiftpm/xcode
+    
+
+SwiftCompile normal arm64 Compiling\ HARExport.swift /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/outputs/ATS-Diagnostic/DeveloperSDK/Sources/ATSRecording/HARExport.swift (in target 'ATSRecording' from project 'ATSRecording')
+
+SwiftCompile normal arm64 /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/outputs/ATS-Diagnostic/DeveloperSDK/Sources/ATSRecording/HARExport.swift (in target 'ATSRecording' from project 'ATSRecording')
+    cd /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/outputs/ATS-Diagnostic/DeveloperSDK/.swiftpm/xcode
+    builtin-SwiftPerFileCompile HARExport.swift
+
+SwiftCompile normal arm64 Compiling\ RecordingClient.swift /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/outputs/ATS-Diagnostic/DeveloperSDK/Sources/ATSRecording/RecordingClient.swift (in target 'ATSRecording' from project 'ATSRecording')
+
+SwiftCompile normal arm64 /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/outputs/ATS-Diagnostic/DeveloperSDK/Sources/ATSRecording/RecordingClient.swift (in target 'ATSRecording' from project 'ATSRecording')
+    cd /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/outputs/ATS-Diagnostic/DeveloperSDK/.swiftpm/xcode
+    builtin-SwiftPerFileCompile RecordingClient.swift
+
+SwiftCompile normal arm64 Compiling\ RecordingByteStream.swift /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/outputs/ATS-Diagnostic/DeveloperSDK/Sources/ATSRecording/RecordingByteStream.swift (in target 'ATSRecording' from project 'ATSRecording')
+
+SwiftCompile normal arm64 /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/outputs/ATS-Diagnostic/DeveloperSDK/Sources/ATSRecording/RecordingByteStream.swift (in target 'ATSRecording' from project 'ATSRecording')
+    cd /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/outputs/ATS-Diagnostic/DeveloperSDK/.swiftpm/xcode
+    builtin-SwiftPerFileCompile RecordingByteStream.swift
+
+SwiftDriverJobDiscovery normal arm64 Emitting module for ATSRecording (in target 'ATSRecording' from project 'ATSRecording')
+
+SwiftDriver\ Compilation\ Requirements ATSRecording normal arm64 com.apple.xcode.tools.swift.compiler (in target 'ATSRecording' from project 'ATSRecording')
+    cd /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/outputs/ATS-Diagnostic/DeveloperSDK/.swiftpm/xcode
+    builtin-Swift-Compilation-Requirements -- /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc -parse-as-library -module-name ATSRecording -Onone @/Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/SDKMetricsiOS/Build/Intermediates.noindex/ATSRecording.build/Debug-iphonesimulator/ATSRecording-t.build/Objects-normal/arm64/ATSRecording.SwiftFileList -DSWIFT_PACKAGE -DDEBUG -DSWIFT_MODULE_RESOURCE_BUNDLE_UNAVAILABLE -DXcode -plugin-path /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/host/plugins/testing -enable-experimental-feature DebugDescriptionMacro -sdk /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator27.0.sdk -target arm64-apple-ios18.0-simulator -g -module-cache-path /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/SDKMetricsiOS/ModuleCache.noindex -Xfrontend -serialize-debugging-options -profile-coverage-mapping -profile-generate -enable-testing -index-store-path /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/SDKMetricsiOS/Index.noindex/DataStore -Xcc -D_LIBCPP_HARDENING_MODE\=_LIBCPP_HARDENING_MODE_DEBUG -swift-version 6 -I /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/SDKMetricsiOS/Build/Products/Debug-iphonesimulator -Isystem /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/lib -F /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/SDKMetricsiOS/Build/Products/Debug-iphonesimulator -F /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/Library/Frameworks -F /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator27.0.sdk/Developer/Library/Frameworks -c -j18 -enable-batch-mode -incremental -Xcc -ivfsstatcache -Xcc /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/SDKMetricsiOS/SDKStatCaches.noindex/iphonesimulator27.0-24A430-e829b21a6f8c9b70876ba0858053c0448dc58220667be655e1bcc261a7455254.sdkstatcache -output-file-map /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/SDKMetricsiOS/Build/Intermediates.noindex/ATSRecording.build/Debug-iphonesimulator/ATSRecording-t.build/Objects-normal/arm64/ATSRecording-OutputFileMap.json -save-temps -no-color-diagnostics -explicit-module-build -module-cache-path /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/SDKMetricsiOS/Build/Intermediates.noindex/SwiftExplicitPrecompiledModules -clang-scanner-module-cache-path /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/SDKMetricsiOS/ModuleCache.noindex -sdk-module-cache-path /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/SDKMetricsiOS/SDKExplicitPrecompiledModules -emit-dependencies -emit-module -emit-module-path /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/SDKMetricsiOS/Build/Intermediates.noindex/ATSRecording.build/Debug-iphonesimulator/ATSRecording-t.build/Objects-normal/arm64/ATSRecording.swiftmodule -serialize-diagnostics -dependency-scan-serialize-diagnostics-path /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/SDKMetricsiOS/Build/Intermediates.noindex/ATSRecording.build/Debug-iphonesimulator/ATSRecording-t.build/Objects-normal/arm64/ATSRecording-dependency-scan.dia -validate-clang-modules-once -clang-build-session-file /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/SDKMetricsiOS/ModuleCache.noindex/Session.modulevalidation -Xcc -fmodules-prune-interval\=86400 -Xcc -fmodules-prune-after\=345600 -package-name developersdk -emit-const-values -const-gather-protocols-list /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/SDKMetricsiOS/Build/Intermediates.noindex/ATSRecording.build/Debug-iphonesimulator/ATSRecording-t.build/Objects-normal/arm64/ATSRecording_const_extract_protocols.json -Xcc -I/Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/SDKMetricsiOS/Build/Products/Debug-iphonesimulator/include -Xcc -I/Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/SDKMetricsiOS/Build/Intermediates.noindex/ATSRecording.build/Debug-iphonesimulator/ATSRecording-t.build/DerivedSources-normal/arm64 -Xcc -I/Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/SDKMetricsiOS/Build/Intermediates.noindex/ATSRecording.build/Debug-iphonesimulator/ATSRecording-t.build/DerivedSources/arm64 -Xcc -I/Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/SDKMetricsiOS/Build/Intermediates.noindex/ATSRecording.build/Debug-iphonesimulator/ATSRecording-t.build/DerivedSources -Xcc -DSWIFT_PACKAGE -Xcc -DDEBUG\=1 -emit-objc-header -emit-objc-header-path /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/SDKMetricsiOS/Build/Intermediates.noindex/ATSRecording.build/Debug-iphonesimulator/ATSRecording-t.build/Objects-normal/arm64/ATSRecording-Swift.h -working-directory /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/outputs/ATS-Diagnostic/DeveloperSDK/.swiftpm/xcode -experimental-emit-module-separately -disable-cmo
+
+SwiftMergeGeneratedHeaders /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/SDKMetricsiOS/Build/Intermediates.noindex/GeneratedModuleMaps-iphonesimulator/ATSRecording-Swift.h /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/SDKMetricsiOS/Build/Intermediates.noindex/ATSRecording.build/Debug-iphonesimulator/ATSRecording-t.build/Objects-normal/arm64/ATSRecording-Swift.h (in target 'ATSRecording' from project 'ATSRecording')
+    cd /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/outputs/ATS-Diagnostic/DeveloperSDK
+    builtin-swiftHeaderTool -arch arm64 /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/SDKMetricsiOS/Build/Intermediates.noindex/ATSRecording.build/Debug-iphonesimulator/ATSRecording-t.build/Objects-normal/arm64/ATSRecording-Swift.h -o /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/SDKMetricsiOS/Build/Intermediates.noindex/GeneratedModuleMaps-iphonesimulator/ATSRecording-Swift.h
+
+Copy /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/SDKMetricsiOS/Build/Products/Debug-iphonesimulator/ATSRecording.swiftmodule/arm64-apple-ios-simulator.swiftmodule /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/SDKMetricsiOS/Build/Intermediates.noindex/ATSRecording.build/Debug-iphonesimulator/ATSRecording-t.build/Objects-normal/arm64/ATSRecording.swiftmodule (in target 'ATSRecording' from project 'ATSRecording')
+    cd /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/outputs/ATS-Diagnostic/DeveloperSDK
+    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks -rename /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/SDKMetricsiOS/Build/Intermediates.noindex/ATSRecording.build/Debug-iphonesimulator/ATSRecording-t.build/Objects-normal/arm64/ATSRecording.swiftmodule /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/SDKMetricsiOS/Build/Products/Debug-iphonesimulator/ATSRecording.swiftmodule/arm64-apple-ios-simulator.swiftmodule
+
+Copy /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/SDKMetricsiOS/Build/Products/Debug-iphonesimulator/ATSRecording.swiftmodule/arm64-apple-ios-simulator.swiftdoc /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/SDKMetricsiOS/Build/Intermediates.noindex/ATSRecording.build/Debug-iphonesimulator/ATSRecording-t.build/Objects-normal/arm64/ATSRecording.swiftdoc (in target 'ATSRecording' from project 'ATSRecording')
+    cd /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/outputs/ATS-Diagnostic/DeveloperSDK
+    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks -rename /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/SDKMetricsiOS/Build/Intermediates.noindex/ATSRecording.build/Debug-iphonesimulator/ATSRecording-t.build/Objects-normal/arm64/ATSRecording.swiftdoc /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/SDKMetricsiOS/Build/Products/Debug-iphonesimulator/ATSRecording.swiftmodule/arm64-apple-ios-simulator.swiftdoc
+
+Copy /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/SDKMetricsiOS/Build/Products/Debug-iphonesimulator/ATSRecording.swiftmodule/arm64-apple-ios-simulator.abi.json /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/SDKMetricsiOS/Build/Intermediates.noindex/ATSRecording.build/Debug-iphonesimulator/ATSRecording-t.build/Objects-normal/arm64/ATSRecording.abi.json (in target 'ATSRecording' from project 'ATSRecording')
+    cd /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/outputs/ATS-Diagnostic/DeveloperSDK
+    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks -rename /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/SDKMetricsiOS/Build/Intermediates.noindex/ATSRecording.build/Debug-iphonesimulator/ATSRecording-t.build/Objects-normal/arm64/ATSRecording.abi.json /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/SDKMetricsiOS/Build/Products/Debug-iphonesimulator/ATSRecording.swiftmodule/arm64-apple-ios-simulator.abi.json
+
+Copy /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/SDKMetricsiOS/Build/Products/Debug-iphonesimulator/ATSRecording.swiftmodule/Project/arm64-apple-ios-simulator.swiftsourceinfo /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/SDKMetricsiOS/Build/Intermediates.noindex/ATSRecording.build/Debug-iphonesimulator/ATSRecording-t.build/Objects-normal/arm64/ATSRecording.swiftsourceinfo (in target 'ATSRecording' from project 'ATSRecording')
+    cd /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/outputs/ATS-Diagnostic/DeveloperSDK
+    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks -rename /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/SDKMetricsiOS/Build/Intermediates.noindex/ATSRecording.build/Debug-iphonesimulator/ATSRecording-t.build/Objects-normal/arm64/ATSRecording.swiftsourceinfo /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/SDKMetricsiOS/Build/Products/Debug-iphonesimulator/ATSRecording.swiftmodule/Project/arm64-apple-ios-simulator.swiftsourceinfo
+
+SwiftDriver ATSRecordingTests normal arm64 com.apple.xcode.tools.swift.compiler (in target 'ATSRecordingTests-product' from project 'ATSRecording')
+    cd /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/outputs/ATS-Diagnostic/DeveloperSDK/.swiftpm/xcode
+    builtin-SwiftDriver -- /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc -parse-as-library -module-name ATSRecordingTests -Onone @/Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/SDKMetricsiOS/Build/Intermediates.noindex/ATSRecording.build/Debug-iphonesimulator/ATSRecordingTests-p.build/Objects-normal/arm64/ATSRecordingTests.SwiftFileList -DSWIFT_PACKAGE -DDEBUG -DXcode -plugin-path /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/host/plugins/testing -enable-experimental-feature DebugDescriptionMacro -sdk /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator27.0.sdk -target arm64-apple-ios18.0-simulator -g -module-cache-path /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/SDKMetricsiOS/ModuleCache.noindex -Xfrontend -serialize-debugging-options -profile-coverage-mapping -profile-generate -enable-testing -index-store-path /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/SDKMetricsiOS/Index.noindex/DataStore -Xcc -D_LIBCPP_HARDENING_MODE\=_LIBCPP_HARDENING_MODE_DEBUG -swift-version 6 -I /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/SDKMetricsiOS/Build/Products/Debug-iphonesimulator -Isystem /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/lib -F /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/SDKMetricsiOS/Build/Products/Debug-iphonesimulator/PackageFrameworks -F /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/SDKMetricsiOS/Build/Products/Debug-iphonesimulator -F /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/Library/Frameworks -F /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator27.0.sdk/Developer/Library/Frameworks -c -j18 -enable-batch-mode -incremental -Xcc -ivfsstatcache -Xcc /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/SDKMetricsiOS/SDKStatCaches.noindex/iphonesimulator27.0-24A430-e829b21a6f8c9b70876ba0858053c0448dc58220667be655e1bcc261a7455254.sdkstatcache -output-file-map /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/SDKMetricsiOS/Build/Intermediates.noindex/ATSRecording.build/Debug-iphonesimulator/ATSRecordingTests-p.build/Objects-normal/arm64/ATSRecordingTests-OutputFileMap.json -save-temps -no-color-diagnostics -explicit-module-build -module-cache-path /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/SDKMetricsiOS/Build/Intermediates.noindex/SwiftExplicitPrecompiledModules -clang-scanner-module-cache-path /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/SDKMetricsiOS/ModuleCache.noindex -sdk-module-cache-path /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/SDKMetricsiOS/SDKExplicitPrecompiledModules -emit-dependencies -emit-module -emit-module-path /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/SDKMetricsiOS/Build/Intermediates.noindex/ATSRecording.build/Debug-iphonesimulator/ATSRecordingTests-p.build/Objects-normal/arm64/ATSRecordingTests.swiftmodule -serialize-diagnostics -dependency-scan-serialize-diagnostics-path /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/SDKMetricsiOS/Build/Intermediates.noindex/ATSRecording.build/Debug-iphonesimulator/ATSRecordingTests-p.build/Objects-normal/arm64/ATSRecordingTests-dependency-scan.dia -validate-clang-modules-once -clang-build-session-file /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/SDKMetricsiOS/ModuleCache.noindex/Session.modulevalidation -Xcc -fmodules-prune-interval\=86400 -Xcc -fmodules-prune-after\=345600 -package-name developersdk -emit-const-values -const-gather-protocols-list /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/SDKMetricsiOS/Build/Intermediates.noindex/ATSRecording.build/Debug-iphonesimulator/ATSRecordingTests-p.build/Objects-normal/arm64/ATSRecordingTests_const_extract_protocols.json -Xcc -I/Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/SDKMetricsiOS/Build/Products/Debug-iphonesimulator/include -Xcc -I/Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/SDKMetricsiOS/Build/Intermediates.noindex/ATSRecording.build/Debug-iphonesimulator/ATSRecordingTests-p.build/DerivedSources-normal/arm64 -Xcc -I/Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/SDKMetricsiOS/Build/Intermediates.noindex/ATSRecording.build/Debug-iphonesimulator/ATSRecordingTests-p.build/DerivedSources/arm64 -Xcc -I/Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/SDKMetricsiOS/Build/Intermediates.noindex/ATSRecording.build/Debug-iphonesimulator/ATSRecordingTests-p.build/DerivedSources -Xcc -DSWIFT_PACKAGE -Xcc -DDEBUG\=1 -working-directory /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/outputs/ATS-Diagnostic/DeveloperSDK/.swiftpm/xcode -experimental-emit-module-separately -disable-cmo
+
+SwiftExplicitDependencyCompileModuleFromInterface arm64 /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/SDKMetricsiOS/Build/Intermediates.noindex/SwiftExplicitPrecompiledModules/Testing-2BEUE88XJQC2U.swiftmodule
+
+SwiftExplicitDependencyCompileModuleFromInterface arm64 /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/SDKMetricsiOS/Build/Intermediates.noindex/SwiftExplicitPrecompiledModules/_Testing_Foundation-19O96C4KHW1QL.swiftmodule
+
+SwiftEmitModule normal arm64 Emitting\ module\ for\ ATSRecordingTests (in target 'ATSRecordingTests-product' from project 'ATSRecording')
+
+SwiftCompile normal arm64 (in target 'ATSRecordingTests-product' from project 'ATSRecording')
+    cd /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/outputs/ATS-Diagnostic/DeveloperSDK/.swiftpm/xcode
+    
+
+SwiftCompile normal arm64 Compiling\ RecordingClientTests.swift /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/outputs/ATS-Diagnostic/DeveloperSDK/Tests/ATSRecordingTests/RecordingClientTests.swift (in target 'ATSRecordingTests-product' from project 'ATSRecording')
+
+SwiftCompile normal arm64 /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/outputs/ATS-Diagnostic/DeveloperSDK/Tests/ATSRecordingTests/RecordingClientTests.swift (in target 'ATSRecordingTests-product' from project 'ATSRecording')
+    cd /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/outputs/ATS-Diagnostic/DeveloperSDK/.swiftpm/xcode
+    builtin-SwiftPerFileCompile RecordingClientTests.swift
+
+SwiftCompile normal arm64 Compiling\ LiveHTTPSRecordingTests.swift /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/outputs/ATS-Diagnostic/DeveloperSDK/Tests/ATSRecordingTests/LiveHTTPSRecordingTests.swift (in target 'ATSRecordingTests-product' from project 'ATSRecording')
+
+SwiftCompile normal arm64 /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/outputs/ATS-Diagnostic/DeveloperSDK/Tests/ATSRecordingTests/LiveHTTPSRecordingTests.swift (in target 'ATSRecordingTests-product' from project 'ATSRecording')
+    cd /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/outputs/ATS-Diagnostic/DeveloperSDK/.swiftpm/xcode
+    builtin-SwiftPerFileCompile LiveHTTPSRecordingTests.swift
+
+SwiftCompile normal arm64 Compiling\ RecordingActivationTests.swift /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/outputs/ATS-Diagnostic/DeveloperSDK/Tests/ATSRecordingTests/RecordingActivationTests.swift (in target 'ATSRecordingTests-product' from project 'ATSRecording')
+
+SwiftCompile normal arm64 /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/outputs/ATS-Diagnostic/DeveloperSDK/Tests/ATSRecordingTests/RecordingActivationTests.swift (in target 'ATSRecordingTests-product' from project 'ATSRecording')
+    cd /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/outputs/ATS-Diagnostic/DeveloperSDK/.swiftpm/xcode
+    builtin-SwiftPerFileCompile RecordingActivationTests.swift
+
+SwiftCompile normal arm64 Compiling\ RecordingMetricsTests.swift /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/outputs/ATS-Diagnostic/DeveloperSDK/Tests/ATSRecordingTests/RecordingMetricsTests.swift (in target 'ATSRecordingTests-product' from project 'ATSRecording')
+
+SwiftCompile normal arm64 /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/outputs/ATS-Diagnostic/DeveloperSDK/Tests/ATSRecordingTests/RecordingMetricsTests.swift (in target 'ATSRecordingTests-product' from project 'ATSRecording')
+    cd /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/outputs/ATS-Diagnostic/DeveloperSDK/.swiftpm/xcode
+    builtin-SwiftPerFileCompile RecordingMetricsTests.swift
+
+SwiftDriverJobDiscovery normal arm64 Emitting module for ATSRecordingTests (in target 'ATSRecordingTests-product' from project 'ATSRecording')
+
+SwiftDriver\ Compilation\ Requirements ATSRecordingTests normal arm64 com.apple.xcode.tools.swift.compiler (in target 'ATSRecordingTests-product' from project 'ATSRecording')
+    cd /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/outputs/ATS-Diagnostic/DeveloperSDK/.swiftpm/xcode
+    builtin-Swift-Compilation-Requirements -- /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc -parse-as-library -module-name ATSRecordingTests -Onone @/Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/SDKMetricsiOS/Build/Intermediates.noindex/ATSRecording.build/Debug-iphonesimulator/ATSRecordingTests-p.build/Objects-normal/arm64/ATSRecordingTests.SwiftFileList -DSWIFT_PACKAGE -DDEBUG -DXcode -plugin-path /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/host/plugins/testing -enable-experimental-feature DebugDescriptionMacro -sdk /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator27.0.sdk -target arm64-apple-ios18.0-simulator -g -module-cache-path /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/SDKMetricsiOS/ModuleCache.noindex -Xfrontend -serialize-debugging-options -profile-coverage-mapping -profile-generate -enable-testing -index-store-path /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/SDKMetricsiOS/Index.noindex/DataStore -Xcc -D_LIBCPP_HARDENING_MODE\=_LIBCPP_HARDENING_MODE_DEBUG -swift-version 6 -I /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/SDKMetricsiOS/Build/Products/Debug-iphonesimulator -Isystem /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/lib -F /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/SDKMetricsiOS/Build/Products/Debug-iphonesimulator/PackageFrameworks -F /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/SDKMetricsiOS/Build/Products/Debug-iphonesimulator -F /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/Library/Frameworks -F /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator27.0.sdk/Developer/Library/Frameworks -c -j18 -enable-batch-mode -incremental -Xcc -ivfsstatcache -Xcc /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/SDKMetricsiOS/SDKStatCaches.noindex/iphonesimulator27.0-24A430-e829b21a6f8c9b70876ba0858053c0448dc58220667be655e1bcc261a7455254.sdkstatcache -output-file-map /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/SDKMetricsiOS/Build/Intermediates.noindex/ATSRecording.build/Debug-iphonesimulator/ATSRecordingTests-p.build/Objects-normal/arm64/ATSRecordingTests-OutputFileMap.json -save-temps -no-color-diagnostics -explicit-module-build -module-cache-path /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/SDKMetricsiOS/Build/Intermediates.noindex/SwiftExplicitPrecompiledModules -clang-scanner-module-cache-path /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/SDKMetricsiOS/ModuleCache.noindex -sdk-module-cache-path /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/SDKMetricsiOS/SDKExplicitPrecompiledModules -emit-dependencies -emit-module -emit-module-path /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/SDKMetricsiOS/Build/Intermediates.noindex/ATSRecording.build/Debug-iphonesimulator/ATSRecordingTests-p.build/Objects-normal/arm64/ATSRecordingTests.swiftmodule -serialize-diagnostics -dependency-scan-serialize-diagnostics-path /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/SDKMetricsiOS/Build/Intermediates.noindex/ATSRecording.build/Debug-iphonesimulator/ATSRecordingTests-p.build/Objects-normal/arm64/ATSRecordingTests-dependency-scan.dia -validate-clang-modules-once -clang-build-session-file /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/SDKMetricsiOS/ModuleCache.noindex/Session.modulevalidation -Xcc -fmodules-prune-interval\=86400 -Xcc -fmodules-prune-after\=345600 -package-name developersdk -emit-const-values -const-gather-protocols-list /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/SDKMetricsiOS/Build/Intermediates.noindex/ATSRecording.build/Debug-iphonesimulator/ATSRecordingTests-p.build/Objects-normal/arm64/ATSRecordingTests_const_extract_protocols.json -Xcc -I/Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/SDKMetricsiOS/Build/Products/Debug-iphonesimulator/include -Xcc -I/Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/SDKMetricsiOS/Build/Intermediates.noindex/ATSRecording.build/Debug-iphonesimulator/ATSRecordingTests-p.build/DerivedSources-normal/arm64 -Xcc -I/Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/SDKMetricsiOS/Build/Intermediates.noindex/ATSRecording.build/Debug-iphonesimulator/ATSRecordingTests-p.build/DerivedSources/arm64 -Xcc -I/Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/SDKMetricsiOS/Build/Intermediates.noindex/ATSRecording.build/Debug-iphonesimulator/ATSRecordingTests-p.build/DerivedSources -Xcc -DSWIFT_PACKAGE -Xcc -DDEBUG\=1 -working-directory /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/outputs/ATS-Diagnostic/DeveloperSDK/.swiftpm/xcode -experimental-emit-module-separately -disable-cmo
+
+Copy /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/SDKMetricsiOS/Build/Products/Debug-iphonesimulator/ATSRecordingTests.swiftmodule/arm64-apple-ios-simulator.swiftmodule /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/SDKMetricsiOS/Build/Intermediates.noindex/ATSRecording.build/Debug-iphonesimulator/ATSRecordingTests-p.build/Objects-normal/arm64/ATSRecordingTests.swiftmodule (in target 'ATSRecordingTests-product' from project 'ATSRecording')
+    cd /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/outputs/ATS-Diagnostic/DeveloperSDK
+    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks -rename /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/SDKMetricsiOS/Build/Intermediates.noindex/ATSRecording.build/Debug-iphonesimulator/ATSRecordingTests-p.build/Objects-normal/arm64/ATSRecordingTests.swiftmodule /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/SDKMetricsiOS/Build/Products/Debug-iphonesimulator/ATSRecordingTests.swiftmodule/arm64-apple-ios-simulator.swiftmodule
+
+Copy /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/SDKMetricsiOS/Build/Products/Debug-iphonesimulator/ATSRecordingTests.swiftmodule/arm64-apple-ios-simulator.swiftdoc /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/SDKMetricsiOS/Build/Intermediates.noindex/ATSRecording.build/Debug-iphonesimulator/ATSRecordingTests-p.build/Objects-normal/arm64/ATSRecordingTests.swiftdoc (in target 'ATSRecordingTests-product' from project 'ATSRecording')
+    cd /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/outputs/ATS-Diagnostic/DeveloperSDK
+    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks -rename /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/SDKMetricsiOS/Build/Intermediates.noindex/ATSRecording.build/Debug-iphonesimulator/ATSRecordingTests-p.build/Objects-normal/arm64/ATSRecordingTests.swiftdoc /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/SDKMetricsiOS/Build/Products/Debug-iphonesimulator/ATSRecordingTests.swiftmodule/arm64-apple-ios-simulator.swiftdoc
+
+Copy /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/SDKMetricsiOS/Build/Products/Debug-iphonesimulator/ATSRecordingTests.swiftmodule/arm64-apple-ios-simulator.abi.json /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/SDKMetricsiOS/Build/Intermediates.noindex/ATSRecording.build/Debug-iphonesimulator/ATSRecordingTests-p.build/Objects-normal/arm64/ATSRecordingTests.abi.json (in target 'ATSRecordingTests-product' from project 'ATSRecording')
+    cd /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/outputs/ATS-Diagnostic/DeveloperSDK
+    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks -rename /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/SDKMetricsiOS/Build/Intermediates.noindex/ATSRecording.build/Debug-iphonesimulator/ATSRecordingTests-p.build/Objects-normal/arm64/ATSRecordingTests.abi.json /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/SDKMetricsiOS/Build/Products/Debug-iphonesimulator/ATSRecordingTests.swiftmodule/arm64-apple-ios-simulator.abi.json
+
+Copy /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/SDKMetricsiOS/Build/Products/Debug-iphonesimulator/ATSRecordingTests.swiftmodule/Project/arm64-apple-ios-simulator.swiftsourceinfo /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/SDKMetricsiOS/Build/Intermediates.noindex/ATSRecording.build/Debug-iphonesimulator/ATSRecordingTests-p.build/Objects-normal/arm64/ATSRecordingTests.swiftsourceinfo (in target 'ATSRecordingTests-product' from project 'ATSRecording')
+    cd /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/outputs/ATS-Diagnostic/DeveloperSDK
+    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks -rename /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/SDKMetricsiOS/Build/Intermediates.noindex/ATSRecording.build/Debug-iphonesimulator/ATSRecordingTests-p.build/Objects-normal/arm64/ATSRecordingTests.swiftsourceinfo /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/SDKMetricsiOS/Build/Products/Debug-iphonesimulator/ATSRecordingTests.swiftmodule/Project/arm64-apple-ios-simulator.swiftsourceinfo
+
+SwiftDriverJobDiscovery normal arm64 Compiling RecordingActivationTests.swift (in target 'ATSRecordingTests-product' from project 'ATSRecording')
+
+SwiftDriverJobDiscovery normal arm64 Compiling HARExport.swift (in target 'ATSRecording' from project 'ATSRecording')
+
+SwiftDriverJobDiscovery normal arm64 Compiling RecordingMetrics.swift (in target 'ATSRecording' from project 'ATSRecording')
+
+SwiftDriverJobDiscovery normal arm64 Compiling RecordingMetricsTests.swift (in target 'ATSRecordingTests-product' from project 'ATSRecording')
+
+SwiftDriverJobDiscovery normal arm64 Compiling RecordingByteStream.swift (in target 'ATSRecording' from project 'ATSRecording')
+
+SwiftDriverJobDiscovery normal arm64 Compiling RecordingClient.swift (in target 'ATSRecording' from project 'ATSRecording')
+
+SwiftDriverJobDiscovery normal arm64 Compiling LiveHTTPSRecordingTests.swift (in target 'ATSRecordingTests-product' from project 'ATSRecording')
+
+SwiftDriverJobDiscovery normal arm64 Compiling RecordingClientTests.swift (in target 'ATSRecordingTests-product' from project 'ATSRecording')
+
+SwiftDriver\ Compilation ATSRecordingTests normal arm64 com.apple.xcode.tools.swift.compiler (in target 'ATSRecordingTests-product' from project 'ATSRecording')
+    cd /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/outputs/ATS-Diagnostic/DeveloperSDK/.swiftpm/xcode
+    builtin-Swift-Compilation -- /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc -parse-as-library -module-name ATSRecordingTests -Onone @/Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/SDKMetricsiOS/Build/Intermediates.noindex/ATSRecording.build/Debug-iphonesimulator/ATSRecordingTests-p.build/Objects-normal/arm64/ATSRecordingTests.SwiftFileList -DSWIFT_PACKAGE -DDEBUG -DXcode -plugin-path /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/host/plugins/testing -enable-experimental-feature DebugDescriptionMacro -sdk /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator27.0.sdk -target arm64-apple-ios18.0-simulator -g -module-cache-path /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/SDKMetricsiOS/ModuleCache.noindex -Xfrontend -serialize-debugging-options -profile-coverage-mapping -profile-generate -enable-testing -index-store-path /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/SDKMetricsiOS/Index.noindex/DataStore -Xcc -D_LIBCPP_HARDENING_MODE\=_LIBCPP_HARDENING_MODE_DEBUG -swift-version 6 -I /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/SDKMetricsiOS/Build/Products/Debug-iphonesimulator -Isystem /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/lib -F /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/SDKMetricsiOS/Build/Products/Debug-iphonesimulator/PackageFrameworks -F /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/SDKMetricsiOS/Build/Products/Debug-iphonesimulator -F /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/Library/Frameworks -F /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator27.0.sdk/Developer/Library/Frameworks -c -j18 -enable-batch-mode -incremental -Xcc -ivfsstatcache -Xcc /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/SDKMetricsiOS/SDKStatCaches.noindex/iphonesimulator27.0-24A430-e829b21a6f8c9b70876ba0858053c0448dc58220667be655e1bcc261a7455254.sdkstatcache -output-file-map /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/SDKMetricsiOS/Build/Intermediates.noindex/ATSRecording.build/Debug-iphonesimulator/ATSRecordingTests-p.build/Objects-normal/arm64/ATSRecordingTests-OutputFileMap.json -save-temps -no-color-diagnostics -explicit-module-build -module-cache-path /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/SDKMetricsiOS/Build/Intermediates.noindex/SwiftExplicitPrecompiledModules -clang-scanner-module-cache-path /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/SDKMetricsiOS/ModuleCache.noindex -sdk-module-cache-path /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/SDKMetricsiOS/SDKExplicitPrecompiledModules -emit-dependencies -emit-module -emit-module-path /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/SDKMetricsiOS/Build/Intermediates.noindex/ATSRecording.build/Debug-iphonesimulator/ATSRecordingTests-p.build/Objects-normal/arm64/ATSRecordingTests.swiftmodule -serialize-diagnostics -dependency-scan-serialize-diagnostics-path /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/SDKMetricsiOS/Build/Intermediates.noindex/ATSRecording.build/Debug-iphonesimulator/ATSRecordingTests-p.build/Objects-normal/arm64/ATSRecordingTests-dependency-scan.dia -validate-clang-modules-once -clang-build-session-file /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/SDKMetricsiOS/ModuleCache.noindex/Session.modulevalidation -Xcc -fmodules-prune-interval\=86400 -Xcc -fmodules-prune-after\=345600 -package-name developersdk -emit-const-values -const-gather-protocols-list /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/SDKMetricsiOS/Build/Intermediates.noindex/ATSRecording.build/Debug-iphonesimulator/ATSRecordingTests-p.build/Objects-normal/arm64/ATSRecordingTests_const_extract_protocols.json -Xcc -I/Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/SDKMetricsiOS/Build/Products/Debug-iphonesimulator/include -Xcc -I/Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/SDKMetricsiOS/Build/Intermediates.noindex/ATSRecording.build/Debug-iphonesimulator/ATSRecordingTests-p.build/DerivedSources-normal/arm64 -Xcc -I/Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/SDKMetricsiOS/Build/Intermediates.noindex/ATSRecording.build/Debug-iphonesimulator/ATSRecordingTests-p.build/DerivedSources/arm64 -Xcc -I/Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/SDKMetricsiOS/Build/Intermediates.noindex/ATSRecording.build/Debug-iphonesimulator/ATSRecordingTests-p.build/DerivedSources -Xcc -DSWIFT_PACKAGE -Xcc -DDEBUG\=1 -working-directory /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/outputs/ATS-Diagnostic/DeveloperSDK/.swiftpm/xcode -experimental-emit-module-separately -disable-cmo
+
+SwiftDriverJobDiscovery normal arm64 Compiling RecordingActivation.swift (in target 'ATSRecording' from project 'ATSRecording')
+
+SwiftDriver\ Compilation ATSRecording normal arm64 com.apple.xcode.tools.swift.compiler (in target 'ATSRecording' from project 'ATSRecording')
+    cd /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/outputs/ATS-Diagnostic/DeveloperSDK/.swiftpm/xcode
+    builtin-Swift-Compilation -- /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc -parse-as-library -module-name ATSRecording -Onone @/Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/SDKMetricsiOS/Build/Intermediates.noindex/ATSRecording.build/Debug-iphonesimulator/ATSRecording-t.build/Objects-normal/arm64/ATSRecording.SwiftFileList -DSWIFT_PACKAGE -DDEBUG -DSWIFT_MODULE_RESOURCE_BUNDLE_UNAVAILABLE -DXcode -plugin-path /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/host/plugins/testing -enable-experimental-feature DebugDescriptionMacro -sdk /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator27.0.sdk -target arm64-apple-ios18.0-simulator -g -module-cache-path /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/SDKMetricsiOS/ModuleCache.noindex -Xfrontend -serialize-debugging-options -profile-coverage-mapping -profile-generate -enable-testing -index-store-path /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/SDKMetricsiOS/Index.noindex/DataStore -Xcc -D_LIBCPP_HARDENING_MODE\=_LIBCPP_HARDENING_MODE_DEBUG -swift-version 6 -I /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/SDKMetricsiOS/Build/Products/Debug-iphonesimulator -Isystem /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/lib -F /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/SDKMetricsiOS/Build/Products/Debug-iphonesimulator -F /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/Library/Frameworks -F /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator27.0.sdk/Developer/Library/Frameworks -c -j18 -enable-batch-mode -incremental -Xcc -ivfsstatcache -Xcc /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/SDKMetricsiOS/SDKStatCaches.noindex/iphonesimulator27.0-24A430-e829b21a6f8c9b70876ba0858053c0448dc58220667be655e1bcc261a7455254.sdkstatcache -output-file-map /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/SDKMetricsiOS/Build/Intermediates.noindex/ATSRecording.build/Debug-iphonesimulator/ATSRecording-t.build/Objects-normal/arm64/ATSRecording-OutputFileMap.json -save-temps -no-color-diagnostics -explicit-module-build -module-cache-path /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/SDKMetricsiOS/Build/Intermediates.noindex/SwiftExplicitPrecompiledModules -clang-scanner-module-cache-path /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/SDKMetricsiOS/ModuleCache.noindex -sdk-module-cache-path /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/SDKMetricsiOS/SDKExplicitPrecompiledModules -emit-dependencies -emit-module -emit-module-path /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/SDKMetricsiOS/Build/Intermediates.noindex/ATSRecording.build/Debug-iphonesimulator/ATSRecording-t.build/Objects-normal/arm64/ATSRecording.swiftmodule -serialize-diagnostics -dependency-scan-serialize-diagnostics-path /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/SDKMetricsiOS/Build/Intermediates.noindex/ATSRecording.build/Debug-iphonesimulator/ATSRecording-t.build/Objects-normal/arm64/ATSRecording-dependency-scan.dia -validate-clang-modules-once -clang-build-session-file /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/SDKMetricsiOS/ModuleCache.noindex/Session.modulevalidation -Xcc -fmodules-prune-interval\=86400 -Xcc -fmodules-prune-after\=345600 -package-name developersdk -emit-const-values -const-gather-protocols-list /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/SDKMetricsiOS/Build/Intermediates.noindex/ATSRecording.build/Debug-iphonesimulator/ATSRecording-t.build/Objects-normal/arm64/ATSRecording_const_extract_protocols.json -Xcc -I/Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/SDKMetricsiOS/Build/Products/Debug-iphonesimulator/include -Xcc -I/Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/SDKMetricsiOS/Build/Intermediates.noindex/ATSRecording.build/Debug-iphonesimulator/ATSRecording-t.build/DerivedSources-normal/arm64 -Xcc -I/Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/SDKMetricsiOS/Build/Intermediates.noindex/ATSRecording.build/Debug-iphonesimulator/ATSRecording-t.build/DerivedSources/arm64 -Xcc -I/Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/SDKMetricsiOS/Build/Intermediates.noindex/ATSRecording.build/Debug-iphonesimulator/ATSRecording-t.build/DerivedSources -Xcc -DSWIFT_PACKAGE -Xcc -DDEBUG\=1 -emit-objc-header -emit-objc-header-path /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/SDKMetricsiOS/Build/Intermediates.noindex/ATSRecording.build/Debug-iphonesimulator/ATSRecording-t.build/Objects-normal/arm64/ATSRecording-Swift.h -working-directory /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/outputs/ATS-Diagnostic/DeveloperSDK/.swiftpm/xcode -experimental-emit-module-separately -disable-cmo
+
+Ld /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/SDKMetricsiOS/Build/Products/Debug-iphonesimulator/ATSRecording.o normal (in target 'ATSRecording' from project 'ATSRecording')
+    cd /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/outputs/ATS-Diagnostic/DeveloperSDK
+    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -Xlinker -reproducible -target arm64-apple-ios18.0-simulator -r -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator27.0.sdk -O0 -Xlinker -no_warn_duplicate_libraries -F/Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/SDKMetricsiOS/Build/Intermediates.noindex/EagerLinkingTBDs/Debug-iphonesimulator -F/Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/SDKMetricsiOS/Build/Products/Debug-iphonesimulator -iframework /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/Library/Frameworks -iframework /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator27.0.sdk/Developer/Library/Frameworks -filelist /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/SDKMetricsiOS/Build/Intermediates.noindex/ATSRecording.build/Debug-iphonesimulator/ATSRecording-t.build/Objects-normal/arm64/ATSRecording.LinkFileList -nostdlib -Xlinker -object_path_lto -Xlinker /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/SDKMetricsiOS/Build/Intermediates.noindex/ATSRecording.build/Debug-iphonesimulator/ATSRecording-t.build/Objects-normal/arm64/ATSRecording_lto.o -Xlinker -no_deduplicate -Xlinker -objc_abi_version -Xlinker 2 -Xlinker -debug_variant -Xlinker -dependency_info -Xlinker /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/SDKMetricsiOS/Build/Intermediates.noindex/ATSRecording.build/Debug-iphonesimulator/ATSRecording-t.build/Objects-normal/arm64/ATSRecording_dependency_info.dat -fobjc-link-runtime -L/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator -L/usr/lib/swift -Xlinker -add_ast_path -Xlinker /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/SDKMetricsiOS/Build/Intermediates.noindex/ATSRecording.build/Debug-iphonesimulator/ATSRecording-t.build/Objects-normal/arm64/ATSRecording.swiftmodule -o /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/SDKMetricsiOS/Build/Products/Debug-iphonesimulator/ATSRecording.o
+
+ExtractAppIntentsMetadata (in target 'ATSRecording' from project 'ATSRecording')
+    cd /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/outputs/ATS-Diagnostic/DeveloperSDK
+    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/appintentsmetadataprocessor --toolchain-dir /var/run/com.apple.security.cryptexd/mnt/com.apple.MobileAsset.MetalToolchain-v27.1.266.1.vUJ43u/Metal.xctoolchain --module-name ATSRecording --sdk-root /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator27.0.sdk --xcode-version 27A266a --platform-family iOS --deployment-target 18.0 --bundle-identifier developersdk.ATSRecording --output /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/SDKMetricsiOS/Build/Products/Debug-iphonesimulator/ATSRecording.appintents --target-triple arm64-apple-ios18.0-simulator --binary-file /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/SDKMetricsiOS/Build/Products/Debug-iphonesimulator/ATSRecording.o --dependency-file /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/SDKMetricsiOS/Build/Intermediates.noindex/ATSRecording.build/Debug-iphonesimulator/ATSRecording-t.build/Objects-normal/arm64/ATSRecording_dependency_info.dat --stringsdata-file /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/SDKMetricsiOS/Build/Intermediates.noindex/ATSRecording.build/Debug-iphonesimulator/ATSRecording-t.build/Objects-normal/arm64/ExtractedAppShortcutsMetadata.stringsdata --source-file-list /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/SDKMetricsiOS/Build/Intermediates.noindex/ATSRecording.build/Debug-iphonesimulator/ATSRecording-t.build/Objects-normal/arm64/ATSRecording.SwiftFileList --metadata-file-list /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/SDKMetricsiOS/Build/Intermediates.noindex/ATSRecording.build/Debug-iphonesimulator/ATSRecording-t.build/ATSRecording.DependencyMetadataFileList --static-metadata-file-list /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/SDKMetricsiOS/Build/Intermediates.noindex/ATSRecording.build/Debug-iphonesimulator/ATSRecording-t.build/ATSRecording.DependencyStaticMetadataFileList --swift-const-vals-list /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/SDKMetricsiOS/Build/Intermediates.noindex/ATSRecording.build/Debug-iphonesimulator/ATSRecording-t.build/Objects-normal/arm64/ATSRecording.SwiftConstValuesFileList --force --compile-time-extraction --deployment-aware-processing --no-app-shortcuts-localization
+2026-10-12 10:09:59.539 appintentsmetadataprocessor[47929:25095859] Starting appintentsmetadataprocessor export
+2026-10-12 10:09:59.571 appintentsmetadataprocessor[47929:25095859] Extracted no relevant App Intents symbols, skipping writing output
+
+ProcessInfoPlistFile /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/SDKMetricsiOS/Build/Products/Debug-iphonesimulator/ATSRecordingTests.xctest/Info.plist /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/SDKMetricsiOS/Build/Intermediates.noindex/ATSRecording.build/Debug-iphonesimulator/ATSRecordingTests-p.build/empty-ATSRecordingTests.plist (in target 'ATSRecordingTests-product' from project 'ATSRecording')
+    cd /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/outputs/ATS-Diagnostic/DeveloperSDK
+    builtin-infoPlistUtility /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/SDKMetricsiOS/Build/Intermediates.noindex/ATSRecording.build/Debug-iphonesimulator/ATSRecordingTests-p.build/empty-ATSRecordingTests.plist -producttype com.apple.product-type.bundle.unit-test -expandbuildsettings -format binary -platform iphonesimulator -o /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/SDKMetricsiOS/Build/Products/Debug-iphonesimulator/ATSRecordingTests.xctest/Info.plist
+
+Ld /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/SDKMetricsiOS/Build/Products/Debug-iphonesimulator/ATSRecordingTests.xctest/ATSRecordingTests normal (in target 'ATSRecordingTests-product' from project 'ATSRecording')
+    cd /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/outputs/ATS-Diagnostic/DeveloperSDK
+    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc -Xlinker -reproducible -target arm64-apple-ios18.0-simulator -Xlinker -bundle -sdk /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator27.0.sdk -Xlinker -no_warn_duplicate_libraries -L/Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/SDKMetricsiOS/Build/Intermediates.noindex/EagerLinkingTBDs/Debug-iphonesimulator -L/Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/SDKMetricsiOS/Build/Products/Debug-iphonesimulator -L/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/lib -F/Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/SDKMetricsiOS/Build/Intermediates.noindex/EagerLinkingTBDs/Debug-iphonesimulator -F/Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/SDKMetricsiOS/Build/Products/Debug-iphonesimulator/PackageFrameworks -F/Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/SDKMetricsiOS/Build/Products/Debug-iphonesimulator -Fsystem /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/Library/Frameworks -Fsystem /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator27.0.sdk/Developer/Library/Frameworks @/Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/SDKMetricsiOS/Build/Intermediates.noindex/ATSRecording.build/Debug-iphonesimulator/ATSRecordingTests-p.build/Objects-normal/arm64/ATSRecordingTests.LinkFileList -Xlinker -rpath -Xlinker /usr/lib/swift -Xlinker -rpath -Xlinker @loader_path -Xlinker -rpath -Xlinker /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/SDKMetricsiOS/Build/Products/Debug-iphonesimulator/PackageFrameworks -Xlinker -rpath -Xlinker @loader_path/../.. -Xlinker -rpath -Xlinker @loader_path/Frameworks -Xlinker -rpath -Xlinker @loader_path/../Frameworks -Xlinker -dead_strip -Xlinker -object_path_lto -Xlinker /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/SDKMetricsiOS/Build/Intermediates.noindex/ATSRecording.build/Debug-iphonesimulator/ATSRecordingTests-p.build/Objects-normal/arm64/ATSRecordingTests_lto.o -Xclang-linker -rdynamic -Xlinker -no_deduplicate -Xlinker -objc_abi_version -Xlinker 2 -Xlinker -debug_variant -Xlinker -dependency_info -Xlinker /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/SDKMetricsiOS/Build/Intermediates.noindex/ATSRecording.build/Debug-iphonesimulator/ATSRecordingTests-p.build/Objects-normal/arm64/ATSRecordingTests_dependency_info.dat -link-objc-runtime -profile-generate -L/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator -L/usr/lib/swift -Xlinker -add_ast_path -Xlinker /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/SDKMetricsiOS/Build/Intermediates.noindex/ATSRecording.build/Debug-iphonesimulator/ATSRecordingTests-p.build/Objects-normal/arm64/ATSRecordingTests.swiftmodule -Xlinker -needed_framework -Xlinker XCTest -framework XCTest -Xlinker -needed-lXCTestSwiftSupport -lXCTestSwiftSupport -Xlinker -no_adhoc_codesign -o /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/SDKMetricsiOS/Build/Products/Debug-iphonesimulator/ATSRecordingTests.xctest/ATSRecordingTests -no-stdlib-rpath
+
+CopySwiftLibs /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/SDKMetricsiOS/Build/Products/Debug-iphonesimulator/ATSRecordingTests.xctest (in target 'ATSRecordingTests-product' from project 'ATSRecording')
+    cd /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/outputs/ATS-Diagnostic/DeveloperSDK
+    builtin-swiftStdLibTool --copy --verbose --sign - --scan-executable /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/SDKMetricsiOS/Build/Products/Debug-iphonesimulator/ATSRecordingTests.xctest/ATSRecordingTests --scan-folder /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/SDKMetricsiOS/Build/Products/Debug-iphonesimulator/ATSRecordingTests.xctest/Frameworks --scan-folder /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/SDKMetricsiOS/Build/Products/Debug-iphonesimulator/ATSRecordingTests.xctest/PlugIns --scan-folder /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/SDKMetricsiOS/Build/Products/Debug-iphonesimulator/ATSRecordingTests.xctest/SystemExtensions --scan-folder /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/SDKMetricsiOS/Build/Products/Debug-iphonesimulator/ATSRecordingTests.xctest/Extensions --platform iphonesimulator --toolchain /var/run/com.apple.security.cryptexd/mnt/com.apple.MobileAsset.MetalToolchain-v27.1.266.1.vUJ43u/Metal.xctoolchain --toolchain /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain --destination /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/SDKMetricsiOS/Build/Products/Debug-iphonesimulator/ATSRecordingTests.xctest/Frameworks --strip-bitcode --scan-executable /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/lib/libXCTestSwiftSupport.dylib --strip-bitcode-tool /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/bitcode_strip --emit-dependency-info /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/SDKMetricsiOS/Build/Intermediates.noindex/ATSRecording.build/Debug-iphonesimulator/ATSRecordingTests-p.build/SwiftStdLibToolInputDependencies.dep --filter-for-swift-os
+
+ExtractAppIntentsMetadata (in target 'ATSRecordingTests-product' from project 'ATSRecording')
+    cd /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/outputs/ATS-Diagnostic/DeveloperSDK
+    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/appintentsmetadataprocessor --toolchain-dir /var/run/com.apple.security.cryptexd/mnt/com.apple.MobileAsset.MetalToolchain-v27.1.266.1.vUJ43u/Metal.xctoolchain --module-name ATSRecordingTests --sdk-root /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator27.0.sdk --xcode-version 27A266a --platform-family iOS --deployment-target 18.0 --bundle-identifier developersdk.ATSRecordingTests --output /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/SDKMetricsiOS/Build/Products/Debug-iphonesimulator/ATSRecordingTests.xctest --target-triple arm64-apple-ios18.0-simulator --binary-file /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/SDKMetricsiOS/Build/Products/Debug-iphonesimulator/ATSRecordingTests.xctest/ATSRecordingTests --dependency-file /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/SDKMetricsiOS/Build/Intermediates.noindex/ATSRecording.build/Debug-iphonesimulator/ATSRecordingTests-p.build/Objects-normal/arm64/ATSRecordingTests_dependency_info.dat --stringsdata-file /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/SDKMetricsiOS/Build/Intermediates.noindex/ATSRecording.build/Debug-iphonesimulator/ATSRecordingTests-p.build/Objects-normal/arm64/ExtractedAppShortcutsMetadata.stringsdata --source-file-list /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/SDKMetricsiOS/Build/Intermediates.noindex/ATSRecording.build/Debug-iphonesimulator/ATSRecordingTests-p.build/Objects-normal/arm64/ATSRecordingTests.SwiftFileList --metadata-file-list /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/SDKMetricsiOS/Build/Intermediates.noindex/ATSRecording.build/Debug-iphonesimulator/ATSRecordingTests-p.build/ATSRecordingTests.DependencyMetadataFileList --static-metadata-file-list /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/SDKMetricsiOS/Build/Intermediates.noindex/ATSRecording.build/Debug-iphonesimulator/ATSRecordingTests-p.build/ATSRecordingTests.DependencyStaticMetadataFileList --swift-const-vals-list /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/SDKMetricsiOS/Build/Intermediates.noindex/ATSRecording.build/Debug-iphonesimulator/ATSRecordingTests-p.build/Objects-normal/arm64/ATSRecordingTests.SwiftConstValuesFileList --compile-time-extraction --deployment-aware-processing --no-app-shortcuts-localization
+2026-10-12 10:09:59.797 appintentsmetadataprocessor[47948:25095912] Starting appintentsmetadataprocessor export
+2026-10-12 10:09:59.798 appintentsmetadataprocessor[47948:25095912] warning: Metadata extraction skipped, no AppIntents.framework dependency found
+
+AppIntentsSSUTraining (in target 'ATSRecordingTests-product' from project 'ATSRecording')
+    cd /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/outputs/ATS-Diagnostic/DeveloperSDK
+    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/appintentsnltrainingprocessor --infoplist-path /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/SDKMetricsiOS/Build/Products/Debug-iphonesimulator/ATSRecordingTests.xctest/Info.plist --temp-dir-path /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/SDKMetricsiOS/Build/Intermediates.noindex/ATSRecording.build/Debug-iphonesimulator/ATSRecordingTests-p.build/ssu --bundle-id developersdk.ATSRecordingTests --product-path /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/SDKMetricsiOS/Build/Products/Debug-iphonesimulator/ATSRecordingTests.xctest --extracted-metadata-path /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/SDKMetricsiOS/Build/Products/Debug-iphonesimulator/ATSRecordingTests.xctest/Metadata.appintents --metadata-file-list /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/SDKMetricsiOS/Build/Intermediates.noindex/ATSRecording.build/Debug-iphonesimulator/ATSRecordingTests-p.build/ATSRecordingTests.DependencyMetadataFileList --source-file /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/SDKMetricsiOS/Build/Products/Debug-iphonesimulator/ATSRecordingTests.xctest/Info.plist --archive-ssu-assets
+2026-10-12 10:09:59.821 appintentsnltrainingprocessor[47950:25095915] Parsing options for appintentsnltrainingprocessor
+2026-10-12 10:09:59.821 appintentsnltrainingprocessor[47950:25095915] Starting AppIntents SSU YAML Generation
+2026-10-12 10:09:59.821 appintentsnltrainingprocessor[47950:25095915] No AppShortcuts found - Skipping.
+
+CodeSign /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/SDKMetricsiOS/Build/Products/Debug-iphonesimulator/ATSRecordingTests.xctest (in target 'ATSRecordingTests-product' from project 'ATSRecording')
+    cd /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/outputs/ATS-Diagnostic/DeveloperSDK
+    
+    Signing Identity:     "Sign to Run Locally"
+    
+    /usr/bin/codesign --force --sign - --timestamp\=none --generate-entitlement-der /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/SDKMetricsiOS/Build/Products/Debug-iphonesimulator/ATSRecordingTests.xctest
+
+RegisterExecutionPolicyException /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/SDKMetricsiOS/Build/Products/Debug-iphonesimulator/ATSRecordingTests.xctest (in target 'ATSRecordingTests-product' from project 'ATSRecording')
+    cd /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/outputs/ATS-Diagnostic/DeveloperSDK
+    builtin-RegisterExecutionPolicyException /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/SDKMetricsiOS/Build/Products/Debug-iphonesimulator/ATSRecordingTests.xctest
+
+Touch /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/SDKMetricsiOS/Build/Products/Debug-iphonesimulator/ATSRecordingTests.xctest (in target 'ATSRecordingTests-product' from project 'ATSRecording')
+    cd /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/outputs/ATS-Diagnostic/DeveloperSDK
+    /usr/bin/touch -c /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/SDKMetricsiOS/Build/Products/Debug-iphonesimulator/ATSRecordingTests.xctest
+
+PruneExplicitPrecompiledModules /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/SDKMetricsiOS/SDKExplicitPrecompiledModules
+
+PruneExplicitPrecompiledModules /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/SDKMetricsiOS/Build/Intermediates.noindex/SwiftExplicitPrecompiledModules
+
+PruneExplicitPrecompiledModules /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/SDKMetricsiOS/Build/Intermediates.noindex/ExplicitPrecompiledModules
+
+Test Suite 'All tests' started at 2026-10-12 10:10:02.705.
+Test Suite 'All tests' passed at 2026-10-12 10:10:02.705.
+	 Executed 0 tests, with 0 failures (0 unexpected) in 0.000 (0.001) seconds
+◇ Test run started.
+↳ Testing Library Version: 2084
+↳ Target Platform: arm64-apple-ios17.0-simulator
+​➜ Suite LiveHTTPSRecordingTests skipped.
+​◇ Suite RecordingActivationTests started.
+◇ Suite RecordingClientTests started.
+​◇ Suite RecordingMetricsTests started.
+​➜ Test streamingCertificateFailurePreservesDefaultSessionRejection(_:) skipped.
+​​➜ Test certificateFailureMatchesTheUnwrappedSession(_:) skipped.
+​​➜ Test liveResponseIsReturnedAndRecorded() skipped.
+​​➜ Test liveStreamingResponseKeepsEveryByteAndFullHash() skipped.
+​◇ Test hostReceivesTheCorrectTriggerAndCanDisableIt() started.
+◇ Test noHandlerLeavesMotionUnhandled() started.
+◇ Test disabledActivationDoesNotPresentAnything() started.
+◇ Test streamingZeroPreviewStillCountsAndHashesFullBody() started.
+◇ Test fileUploadKeepsBodyFileBackedAndMarksJournalUnavailable() started.
+◇ Test fullResponseSurvivesZeroPreview() started.
+➜ Suite LiveRecordingMetricsTests skipped.
+​◇ Test structuredStreamEarlyReturnRecordsPartialWithoutInventingFailure() started.
+◇ Test uploadRecordsExplicitBodyAndPreservesResponse() started.
+◇ Test downloadFailurePreservesOriginalError() started.
+◇ Test countAndEncodedBudgetAreRespected() started.
+◇ Test structuredEOFDoesNotDowngradeOrDuplicateCompleteRecord() started.
+◇ Test streamingFailureRecordsObservedPartialBytesWithoutCompleteHash() started.
+◇ Test structuredNeverConsumedBodyRemainsUnknownInHAR() started.
+◇ Test downloadPreservesFileAndHashesBeyondPreview() started.
+◇ Test harMarksPartialRequestsAndUnknownProtocol() started.
+◇ Test slowObserverCanDetectGapsAndReloadCurrentJournal() started.
+◇ Test streamingInitialFailureRetainsUnknownResponse() started.
+◇ Test uploadFailurePreservesTransportError() started.
+◇ Test downloadWithZeroPreviewKeepsFullFileAndDigest() started.
+◇ Test tooSmallJournalCannotChangeSuccessfulResponse() started.
+◇ Test originalFailureIsPreservedAndRecorded() started.
+◇ Test observerLimitCanBeReleasedExplicitly() started.
+◇ Test structuredConsumerErrorIsNotMisreportedAsTransportError() started.
+◇ Test observationDoesNotRetainItsProducer() started.
+◇ Test observationsReportRecordingAndClearThenFinish() started.
+◇ Test missingAndInvalidIntervalsStayUnknown() started.
+◇ Test originalPostBodyAndHeadersReachTheSession() started.
+◇ Test streamingPreservesEveryByteAndFullMultiChunkHash() started.
+◇ Test metricObserversPreserveAllControlledTransferResults() started.
+◇ Test hostRedirectAndCompletionCallbacksAreForwarded() started.
+​➜ Test realHTTPSMetricsAndCompleteResponse() skipped.
+​​➜ Test liveHostRedirectDecisionIsPreserved() skipped.
+​​➜ Test metricsKeepOriginalCertificateRejection(_:) skipped.
+​✔ Test observerLimitCanBeReleasedExplicitly() passed after 0.035 seconds.
+✔ Test missingAndInvalidIntervalsStayUnknown() passed after 0.035 seconds.
+✔ Test observationDoesNotRetainItsProducer() passed after 0.037 seconds.
+✔ Test hostRedirectAndCompletionCallbacksAreForwarded() passed after 0.035 seconds.
+✔ Suite RecordingMetricsTests passed after 0.039 seconds.
+✔ Test hostReceivesTheCorrectTriggerAndCanDisableIt() passed after 0.043 seconds.
+✔ Test noHandlerLeavesMotionUnhandled() passed after 0.043 seconds.
+✔ Test disabledActivationDoesNotPresentAnything() passed after 0.043 seconds.
+✔ Suite RecordingActivationTests passed after 0.043 seconds.
+✔ Test structuredConsumerErrorIsNotMisreportedAsTransportError() passed after 0.044 seconds.
+2026-10-12 10:10:02.759672+0200 xctest[48027:25097077] [Default] Task <0A297B17-1127-4A37-858A-C980674A9455>.<1> finished with error [-1004] Error Domain=NSURLErrorDomain Code=-1004 "(null)" UserInfo={_NSURLErrorRelatedURLSessionTaskErrorKey=(
+    "LocalDownloadTask <0A297B17-1127-4A37-858A-C980674A9455>.<1>"
+), _NSURLErrorFailingURLSessionTaskErrorKey=LocalDownloadTask <0A297B17-1127-4A37-858A-C980674A9455>.<1>}
+2026-10-12 10:10:02.759699+0200 xctest[48027:25097108] [Default] Task <23CD92D0-F44B-4013-B9ED-2D88C975B0CC>.<1> finished with error [-1004] Error Domain=NSURLErrorDomain Code=-1004 "(null)" UserInfo={_NSURLErrorRelatedURLSessionTaskErrorKey=(
+    "LocalUploadTask <23CD92D0-F44B-4013-B9ED-2D88C975B0CC>.<1>"
+), _NSURLErrorFailingURLSessionTaskErrorKey=LocalUploadTask <23CD92D0-F44B-4013-B9ED-2D88C975B0CC>.<1>}
+✔ Test downloadWithZeroPreviewKeepsFullFileAndDigest() passed after 0.047 seconds.
+✔ Test harMarksPartialRequestsAndUnknownProtocol() passed after 0.047 seconds.
+2026-10-12 10:10:02.759698+0200 xctest[48027:25097111] [Default] Task <CD41808A-271D-4AF0-971A-434B54C10D3B>.<1> finished with error [-1004] Error Domain=NSURLErrorDomain Code=-1004 "(null)" UserInfo={_NSURLErrorRelatedURLSessionTaskErrorKey=(
+    "LocalDataTask <CD41808A-271D-4AF0-971A-434B54C10D3B>.<1>"
+), _NSURLErrorFailingURLSessionTaskErrorKey=LocalDataTask <CD41808A-271D-4AF0-971A-434B54C10D3B>.<1>}
+✔ Test observationsReportRecordingAndClearThenFinish() passed after 0.048 seconds.
+✔ Test slowObserverCanDetectGapsAndReloadCurrentJournal() passed after 0.048 seconds.
+✔ Test tooSmallJournalCannotChangeSuccessfulResponse() passed after 0.050 seconds.
+✔ Test uploadFailurePreservesTransportError() passed after 0.052 seconds.
+✔ Test downloadFailurePreservesOriginalError() passed after 0.053 seconds.
+✔ Test streamingInitialFailureRetainsUnknownResponse() passed after 0.052 seconds.
+✔ Test structuredEOFDoesNotDowngradeOrDuplicateCompleteRecord() passed after 0.053 seconds.
+✔ Test uploadRecordsExplicitBodyAndPreservesResponse() passed after 0.054 seconds.
+✔ Test structuredNeverConsumedBodyRemainsUnknownInHAR() passed after 0.054 seconds.
+✔ Test downloadPreservesFileAndHashesBeyondPreview() passed after 0.056 seconds.
+✔ Test structuredStreamEarlyReturnRecordsPartialWithoutInventingFailure() passed after 0.057 seconds.
+2026-10-12 10:10:02.777513+0200 xctest[48027:25097112] [Default] Task <466F67A9-BD7B-4623-8DB1-FE65ACF845DE>.<1> finished with error [-1004] Error Domain=NSURLErrorDomain Code=-1004 "(null)" UserInfo={_NSURLErrorRelatedURLSessionTaskErrorKey=(
+    "LocalDataTask <466F67A9-BD7B-4623-8DB1-FE65ACF845DE>.<1>"
+), _NSURLErrorFailingURLSessionTaskErrorKey=LocalDataTask <466F67A9-BD7B-4623-8DB1-FE65ACF845DE>.<1>}
+✔ Test originalPostBodyAndHeadersReachTheSession() passed after 0.064 seconds.
+✔ Test fullResponseSurvivesZeroPreview() passed after 0.066 seconds.
+✔ Test originalFailureIsPreservedAndRecorded() passed after 0.066 seconds.
+✔ Test fileUploadKeepsBodyFileBackedAndMarksJournalUnavailable() passed after 0.067 seconds.
+✔ Test countAndEncodedBudgetAreRespected() passed after 0.078 seconds.
+✔ Test metricObserversPreserveAllControlledTransferResults() passed after 0.079 seconds.
+✔ Test streamingPreservesEveryByteAndFullMultiChunkHash() passed after 0.097 seconds.
+2026-10-12 10:10:02.967776+0200 xctest[48027:25096972] [Default] Task <947868C1-01C6-452E-950D-D6F8C00D94A9>.<1> finished with error [-1005] Error Domain=NSURLErrorDomain Code=-1005 "(null)" UserInfo={_NSURLErrorRelatedURLSessionTaskErrorKey=(
+    "LocalDataTask <947868C1-01C6-452E-950D-D6F8C00D94A9>.<1>"
+), _NSURLErrorFailingURLSessionTaskErrorKey=LocalDataTask <947868C1-01C6-452E-950D-D6F8C00D94A9>.<1>}
+✔ Test streamingFailureRecordsObservedPartialBytesWithoutCompleteHash() passed after 0.256 seconds.
+✔ Test streamingZeroPreviewStillCountsAndHashesFullBody() passed after 0.336 seconds.
+✔ Suite RecordingClientTests passed after 0.336 seconds.
+✔ Test run with 37 tests in 5 suites passed after 0.337 seconds.
+2026-10-12 10:10:03.327 xcodebuild[47807:25094931] [MT] IDETestOperationsObserverDebug: 3.458 elapsed -- Testing started completed.
+2026-10-12 10:10:03.327 xcodebuild[47807:25094931] [MT] IDETestOperationsObserverDebug: 0.000 sec, +0.000 sec -- start
+2026-10-12 10:10:03.327 xcodebuild[47807:25094931] [MT] IDETestOperationsObserverDebug: 3.458 sec, +3.458 sec -- end
+
+Test session results, code coverage, and logs:
+	/Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/SDK-Metrics-iOS.xcresult
+
+** TEST SUCCEEDED **
+
+Testing started

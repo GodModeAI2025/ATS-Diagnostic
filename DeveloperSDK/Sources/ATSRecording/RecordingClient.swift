@@ -16,6 +16,7 @@ public struct RecordedExchange: Codable, Sendable, Identifiable {
     public let responseSHA256: String?
     public let responseComplete: Bool?
     public let duration: Double
+    public let metrics: RecordedTaskMetrics?
     public let errorDomain: String?
     public let errorCode: Int?
     public let errorDescription: String?
@@ -72,10 +73,26 @@ public actor RecordingClient {
         }
     }
 
-    /// Uses the supplied session directly; the explicit upload body is authoritative.
-    public func upload(for request: URLRequest, from body: Data, using session: URLSession) async throws -> (Data, URLResponse) {
+    /// Captures Foundation task metrics while forwarding the host's delegate callbacks.
+    public func dataWithMetrics(for request: URLRequest, using session: URLSession, delegate: (any URLSessionTaskDelegate)? = nil) async throws -> (Data, URLResponse) {
         let began = ContinuousClock.now
         let date = Date()
+        let observer = RecordingMetricsDelegate(target: delegate ?? (session.delegate as? any URLSessionTaskDelegate))
+        do {
+            let (data, response) = try await session.data(for: request, delegate: observer)
+            try? append(makeRecord(request: request, date: date, began: began, data: data, response: response as? HTTPURLResponse, error: nil, metrics: observer.snapshot()))
+            return (data, response)
+        } catch {
+            try? append(makeRecord(request: request, date: date, began: began, data: nil, response: nil, error: error as NSError, metrics: observer.snapshot()))
+            throw error
+        }
+    }
+
+    /// Uses the supplied session directly; the explicit upload body is authoritative.
+    public func upload(for request: URLRequest, from body: Data, using session: URLSession, collectMetrics: Bool = false, delegate: (any URLSessionTaskDelegate)? = nil) async throws -> (Data, URLResponse) {
+        let began = ContinuousClock.now
+        let date = Date()
+        let observer = collectMetrics ? RecordingMetricsDelegate(target: delegate ?? (session.delegate as? any URLSessionTaskDelegate)) : nil
         var uploadRequest = request
         uploadRequest.httpBody = nil
         uploadRequest.httpBodyStream = nil
@@ -83,45 +100,47 @@ public actor RecordingClient {
         recordedRequest.httpBodyStream = nil
         recordedRequest.httpBody = body
         do {
-            let (data, response) = try await session.upload(for: uploadRequest, from: body)
-            try? append(makeRecord(request: recordedRequest, date: date, began: began, data: data, response: response as? HTTPURLResponse, error: nil))
+            let (data, response) = try await session.upload(for: uploadRequest, from: body, delegate: observer ?? delegate)
+            try? append(makeRecord(request: recordedRequest, date: date, began: began, data: data, response: response as? HTTPURLResponse, error: nil, metrics: observer?.snapshot()))
             return (data, response)
         } catch {
-            try? append(makeRecord(request: recordedRequest, date: date, began: began, data: nil, response: nil, error: error as NSError))
+            try? append(makeRecord(request: recordedRequest, date: date, began: began, data: nil, response: nil, error: error as NSError, metrics: observer?.snapshot()))
             throw error
         }
     }
 
     /// File upload stays file-backed. The journal does not claim to know bytes sent.
-    public func upload(for request: URLRequest, fromFile file: URL, using session: URLSession) async throws -> (Data, URLResponse) {
+    public func upload(for request: URLRequest, fromFile file: URL, using session: URLSession, collectMetrics: Bool = false, delegate: (any URLSessionTaskDelegate)? = nil) async throws -> (Data, URLResponse) {
         let began = ContinuousClock.now
         let date = Date()
+        let observer = collectMetrics ? RecordingMetricsDelegate(target: delegate ?? (session.delegate as? any URLSessionTaskDelegate)) : nil
         var uploadRequest = request
         uploadRequest.httpBody = nil
         uploadRequest.httpBodyStream = nil
         do {
-            let (data, response) = try await session.upload(for: uploadRequest, fromFile: file)
-            try? append(makeRecord(request: uploadRequest, date: date, began: began, data: data, response: response as? HTTPURLResponse, error: nil, requestBodyUnknown: true))
+            let (data, response) = try await session.upload(for: uploadRequest, fromFile: file, delegate: observer ?? delegate)
+            try? append(makeRecord(request: uploadRequest, date: date, began: began, data: data, response: response as? HTTPURLResponse, error: nil, requestBodyUnknown: true, metrics: observer?.snapshot()))
             return (data, response)
         } catch {
-            try? append(makeRecord(request: uploadRequest, date: date, began: began, data: nil, response: nil, error: error as NSError, requestBodyUnknown: true))
+            try? append(makeRecord(request: uploadRequest, date: date, began: began, data: nil, response: nil, error: error as NSError, requestBodyUnknown: true, metrics: observer?.snapshot()))
             throw error
         }
     }
 
     /// Returns URLSession's download file unchanged; journal hashing uses bounded reads.
-    public func download(for request: URLRequest, using session: URLSession) async throws -> (URL, URLResponse) {
+    public func download(for request: URLRequest, using session: URLSession, collectMetrics: Bool = false, delegate: (any URLSessionTaskDelegate)? = nil) async throws -> (URL, URLResponse) {
         let began = ContinuousClock.now
         let date = Date()
+        let observer = collectMetrics ? RecordingMetricsDelegate(target: delegate ?? (session.delegate as? any URLSessionTaskDelegate)) : nil
         let result: (URL, URLResponse)
-        do { result = try await session.download(for: request) }
+        do { result = try await session.download(for: request, delegate: observer ?? delegate) }
         catch {
-            try? append(makeRecord(request: request, date: date, began: began, data: nil, response: nil, error: error as NSError))
+            try? append(makeRecord(request: request, date: date, began: began, data: nil, response: nil, error: error as NSError, metrics: observer?.snapshot()))
             throw error
         }
         // Journal I/O cannot turn a successful transport into an application error.
         if let body = try? readDownloadedBody(result.0) {
-            try? append(makeRecord(request: request, date: date, began: began, data: body.preview, response: result.1 as? HTTPURLResponse, error: nil, responseByteCount: body.count, responseHash: body.hash))
+            try? append(makeRecord(request: request, date: date, began: began, data: body.preview, response: result.1 as? HTTPURLResponse, error: nil, responseByteCount: body.count, responseHash: body.hash, metrics: observer?.snapshot()))
         } else { publish(.recordingOmitted(UUID())) }
         return result
     }
@@ -142,20 +161,21 @@ public actor RecordingClient {
     }
 
     /// Observes a single consumption of the supplied session's streaming response.
-    public func bytes(for request: URLRequest, using session: URLSession) async throws -> (RecordingByteStream, URLResponse) {
+    public func bytes(for request: URLRequest, using session: URLSession, collectMetrics: Bool = false, delegate: (any URLSessionTaskDelegate)? = nil) async throws -> (RecordingByteStream, URLResponse) {
         let began = ContinuousClock.now
         let date = Date()
+        let observer = collectMetrics ? RecordingMetricsDelegate(target: delegate ?? (session.delegate as? any URLSessionTaskDelegate)) : nil
         do {
-            let (bytes, response) = try await session.bytes(for: request)
-            return (RecordingByteStream(bytes: bytes, owner: self, request: request, response: response, date: date, began: began, previewLimit: previewLimit), response)
+            let (bytes, response) = try await session.bytes(for: request, delegate: observer ?? delegate)
+            return (RecordingByteStream(bytes: bytes, owner: self, request: request, response: response, date: date, began: began, previewLimit: previewLimit, metricsObserver: observer), response)
         } catch {
-            try? append(makeRecord(request: request, date: date, began: began, data: nil, response: nil, error: error as NSError))
+            try? append(makeRecord(request: request, date: date, began: began, data: nil, response: nil, error: error as NSError, metrics: observer?.snapshot()))
             throw error
         }
     }
     /// Finalizes observation when the consumer scope ends, including early returns.
-    public func withBytes<Result: Sendable>(for request: URLRequest, using session: URLSession, consume: @Sendable @isolated(any) (RecordingByteStream, URLResponse) async throws -> Result) async throws -> Result {
-        let (stream, response) = try await bytes(for: request, using: session)
+    public func withBytes<Result: Sendable>(for request: URLRequest, using session: URLSession, collectMetrics: Bool = false, delegate: (any URLSessionTaskDelegate)? = nil, consume: @Sendable @isolated(any) (RecordingByteStream, URLResponse) async throws -> Result) async throws -> Result {
+        let (stream, response) = try await bytes(for: request, using: session, collectMetrics: collectMetrics, delegate: delegate)
         do {
             let result = try await consume(stream, response)
             await stream.finishRecording()
@@ -166,8 +186,8 @@ public actor RecordingClient {
             throw error
         }
     }
-    func recordStream(request: URLRequest, response: URLResponse, date: Date, began: ContinuousClock.Instant, preview: Data, count: Int, hash: String?, error: NSError?) {
-        try? append(makeRecord(request: request, date: date, began: began, data: preview, response: response as? HTTPURLResponse, error: error, responseByteCount: count, responseHash: hash, completeResponse: hash != nil))
+    func recordStream(request: URLRequest, response: URLResponse, date: Date, began: ContinuousClock.Instant, preview: Data, count: Int, hash: String?, error: NSError?, metrics: RecordedTaskMetrics? = nil) {
+        try? append(makeRecord(request: request, date: date, began: began, data: preview, response: response as? HTTPURLResponse, error: error, responseByteCount: count, responseHash: hash, completeResponse: hash != nil, metrics: metrics))
     }
 
     public func records() -> [RecordedExchange] { journal.map(\.record) }
@@ -212,10 +232,10 @@ public actor RecordingClient {
         guard let data, !data.isEmpty, previewLimit > 0 else { return Data() }
         return data.withUnsafeBytes { buffer in Data(bytes: buffer.baseAddress!, count: min(buffer.count, previewLimit)) }
     }
-    private func makeRecord(request: URLRequest, date: Date, began: ContinuousClock.Instant, data: Data?, response: HTTPURLResponse?, error: NSError?, responseByteCount: Int? = nil, responseHash: String? = nil, requestBodyUnknown: Bool = false, completeResponse: Bool = true) -> RecordedExchange {
+    private func makeRecord(request: URLRequest, date: Date, began: ContinuousClock.Instant, data: Data?, response: HTTPURLResponse?, error: NSError?, responseByteCount: Int? = nil, responseHash: String? = nil, requestBodyUnknown: Bool = false, completeResponse: Bool = true, metrics: RecordedTaskMetrics? = nil) -> RecordedExchange {
         let time = began.duration(to: .now).components
         let headers = response?.allHeaderFields.reduce(into: [String: String]()) { result, item in result[String(describing: item.key)] = String(describing: item.value) } ?? [:]
         let body = requestBodyUnknown ? nil : request.httpBody
-        return RecordedExchange(id: UUID(), date: date, url: request.url?.absoluteString ?? "", method: request.httpMethod ?? "GET", requestHeaders: request.allHTTPHeaderFields ?? [:], requestBodyPreview: preview(body), requestBodyBytes: requestBodyUnknown ? nil : (body?.count ?? (request.httpBodyStream == nil ? 0 : nil)), status: response?.statusCode, responseHeaders: headers, responseBodyPreview: preview(data), responseBytes: responseByteCount ?? data?.count, responseSHA256: completeResponse ? (responseHash ?? data.map { SHA256.hash(data: $0).map { String(format: "%02x", $0) }.joined() }) : nil, responseComplete: data != nil && completeResponse && error == nil, duration: Double(time.seconds) + Double(time.attoseconds) / 1e18, errorDomain: error?.domain, errorCode: error?.code, errorDescription: error?.localizedDescription)
+        return RecordedExchange(id: UUID(), date: date, url: request.url?.absoluteString ?? "", method: request.httpMethod ?? "GET", requestHeaders: request.allHTTPHeaderFields ?? [:], requestBodyPreview: preview(body), requestBodyBytes: requestBodyUnknown ? nil : (body?.count ?? (request.httpBodyStream == nil ? 0 : nil)), status: response?.statusCode, responseHeaders: headers, responseBodyPreview: preview(data), responseBytes: responseByteCount ?? data?.count, responseSHA256: completeResponse ? (responseHash ?? data.map { SHA256.hash(data: $0).map { String(format: "%02x", $0) }.joined() }) : nil, responseComplete: data != nil && completeResponse && error == nil, duration: Double(time.seconds) + Double(time.attoseconds) / 1e18, metrics: metrics, errorDomain: error?.domain, errorCode: error?.code, errorDescription: error?.localizedDescription)
     }
 }
