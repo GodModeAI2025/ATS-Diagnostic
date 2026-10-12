@@ -7,7 +7,7 @@
   "sourceCommit": "8619bf8",
   "archiveSucceeded": true,
   "uploadCompleted": false,
-  "uploadState": "Uploading",
+  "uploadState": "Failed: Xcode App Store Connect account authentication required",
   "processingCompleted": null,
   "testflightState": "Not verified: browser sign-in required",
   "groupAssigned": false,
