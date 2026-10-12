@@ -1,0 +1,130 @@
+Building for debugging...
+Build complete! (0,18 Sek.)
+Test Suite 'All tests' started at 2026-10-12 10:56:34.461.
+Test Suite 'All tests' passed at 2026-10-12 10:56:34.462.
+	 Executed 0 tests, with 0 failures (0 unexpected) in 0.000 (0.001) seconds
+◇ Test run started.
+↳ Testing Library Version: 2084
+↳ Target Platform: arm64e-apple-macos14.0
+◇ Suite ResponseAccumulatorTests started.
+◇ Suite LiveRecordingMetricsTests started.
+◇ Suite RecordingSessionDelegateLiveTests started.
+◇ Suite LiveHTTPSRecordingTests started.
+◇ Suite RecordingMetricsTests started.
+◇ Suite RecordingActivationTests started.
+◇ Test missingAndInvalidIntervalsStayUnknown() started.
+◇ Test emptySuccessHasEmptyDigest() started.
+◇ Test chunksPreserveFullDigestAndBoundedPrefix() started.
+◇ Test nativeHTTPSPreservesBodyOrOriginalTrustFailure(_:) started.
+◇ Test streamingCertificateFailurePreservesDefaultSessionRejection(_:) started.
+◇ Test certificateFailureMatchesTheUnwrappedSession(_:) started.
+◇ Test partialFailureKeepsCountWithoutHash() started.
+◇ Suite RecordingSessionDelegateTests started.
+◇ Test liveHostRedirectDecisionIsPreserved() started.
+◇ Suite RecordingClientTests started.
+◇ Test liveResponseIsReturnedAndRecorded() started.
+◇ Test case passing 1 argument url → "https://example.com/" to nativeHTTPSPreservesBodyOrOriginalTrustFailure(_:) started.
+◇ Test case passing 1 argument target → "https://expired.badssl.com/" to streamingCertificateFailurePreservesDefaultSessionRejection(_:) started.
+◇ Test case passing 1 argument target → "https://expired.badssl.com/" to certificateFailureMatchesTheUnwrappedSession(_:) started.
+◇ Test realHTTPSMetricsAndCompleteResponse() started.
+◇ Test case passing 1 argument url → "https://wrong.host.badssl.com/" to nativeHTTPSPreservesBodyOrOriginalTrustFailure(_:) started.
+◇ Test case passing 1 argument target → "https://wrong.host.badssl.com/" to certificateFailureMatchesTheUnwrappedSession(_:) started.
+◇ Test liveStreamingResponseKeepsEveryByteAndFullHash() started.
+◇ Test case passing 1 argument url → "https://expired.badssl.com/" to nativeHTTPSPreservesBodyOrOriginalTrustFailure(_:) started.
+◇ Test case passing 1 argument target → "https://wrong.host.badssl.com/" to streamingCertificateFailurePreservesDefaultSessionRejection(_:) started.
+◇ Test hostRedirectAndCompletionCallbacksAreForwarded() started.
+◇ Test disabledActivationDoesNotPresentAnything() started.
+◇ Test hostCanRejectRedirectThroughObserver() started.
+◇ Test metricsKeepOriginalCertificateRejection(_:) started.
+◇ Test noHandlerLeavesMotionUnhandled() started.
+◇ Test hostReceivesTheCorrectTriggerAndCanDisableIt() started.
+◇ Test observerLimitCanBeReleasedExplicitly() started.
+◇ Test delegateReceivesUnchangedBodyAndOriginalFailure(partial:) started.
+◇ Test sharedObserverSeparatesIdenticalTaskNumbersAcrossSessions() started.
+◇ Test streamingPreservesEveryByteAndFullMultiChunkHash() started.
+◇ Test uploadFailurePreservesTransportError() started.
+◇ Test structuredConsumerErrorIsNotMisreportedAsTransportError() started.
+◇ Test originalPostBodyAndHeadersReachTheSession() started.
+✔ Test missingAndInvalidIntervalsStayUnknown() passed after 0.001 seconds.
+◇ Test structuredEOFDoesNotDowngradeOrDuplicateCompleteRecord() started.
+◇ Test downloadFailurePreservesOriginalError() started.
+◇ Test tooSmallJournalCannotChangeSuccessfulResponse() started.
+◇ Test streamingFailureRecordsObservedPartialBytesWithoutCompleteHash() started.
+◇ Test observationDoesNotRetainItsProducer() started.
+◇ Test case passing 1 argument target → "https://expired.badssl.com/" to metricsKeepOriginalCertificateRejection(_:) started.
+◇ Test structuredNeverConsumedBodyRemainsUnknownInHAR() started.
+◇ Test harMarksPartialRequestsAndUnknownProtocol() started.
+◇ Test fileUploadKeepsBodyFileBackedAndMarksJournalUnavailable() started.
+◇ Test originalFailureIsPreservedAndRecorded() started.
+◇ Test case passing 1 argument target → "https://wrong.host.badssl.com/" to metricsKeepOriginalCertificateRejection(_:) started.
+◇ Test uploadRecordsExplicitBodyAndPreservesResponse() started.
+◇ Test metricObserversPreserveAllControlledTransferResults() started.
+◇ Test fullResponseSurvivesZeroPreview() started.
+◇ Test downloadWithZeroPreviewKeepsFullFileAndDigest() started.
+◇ Test structuredStreamEarlyReturnRecordsPartialWithoutInventingFailure() started.
+◇ Test countAndEncodedBudgetAreRespected() started.
+◇ Test streamingInitialFailureRetainsUnknownResponse() started.
+◇ Test downloadPreservesFileAndHashesBeyondPreview() started.
+◇ Test slowObserverCanDetectGapsAndReloadCurrentJournal() started.
+◇ Test streamingZeroPreviewStillCountsAndHashesFullBody() started.
+✔ Test partialFailureKeepsCountWithoutHash() passed after 0.001 seconds.
+◇ Test observationsReportRecordingAndClearThenFinish() started.
+◇ Test case passing 1 argument partial → false to delegateReceivesUnchangedBodyAndOriginalFailure(partial:) started.
+◇ Test case passing 1 argument partial → true to delegateReceivesUnchangedBodyAndOriginalFailure(partial:) started.
+✔ Test emptySuccessHasEmptyDigest() passed after 0.008 seconds.
+✔ Test chunksPreserveFullDigestAndBoundedPrefix() passed after 0.008 seconds.
+✔ Test observerLimitCanBeReleasedExplicitly() passed after 0.008 seconds.
+✔ Test hostRedirectAndCompletionCallbacksAreForwarded() passed after 0.008 seconds.
+✔ Test observationDoesNotRetainItsProducer() passed after 0.008 seconds.
+✔ Suite ResponseAccumulatorTests passed after 0.008 seconds.
+✔ Suite RecordingMetricsTests passed after 0.008 seconds.
+✔ Test disabledActivationDoesNotPresentAnything() passed after 0.008 seconds.
+✔ Test noHandlerLeavesMotionUnhandled() passed after 0.008 seconds.
+✔ Test hostReceivesTheCorrectTriggerAndCanDisableIt() passed after 0.008 seconds.
+✔ Suite RecordingActivationTests passed after 0.009 seconds.
+✔ Test structuredNeverConsumedBodyRemainsUnknownInHAR() passed after 0.011 seconds.
+✔ Test originalPostBodyAndHeadersReachTheSession() passed after 0.011 seconds.
+✔ Test downloadWithZeroPreviewKeepsFullFileAndDigest() passed after 0.011 seconds.
+✔ Test harMarksPartialRequestsAndUnknownProtocol() passed after 0.012 seconds.
+✔ Test uploadRecordsExplicitBodyAndPreservesResponse() passed after 0.022 seconds.
+✔ Test uploadFailurePreservesTransportError() passed after 0.023 seconds.
+✔ Test downloadFailurePreservesOriginalError() passed after 0.023 seconds.
+✔ Test structuredEOFDoesNotDowngradeOrDuplicateCompleteRecord() passed after 0.023 seconds.
+✔ Test structuredConsumerErrorIsNotMisreportedAsTransportError() passed after 0.024 seconds.
+✔ Test originalFailureIsPreservedAndRecorded() passed after 0.024 seconds.
+✔ Test sharedObserverSeparatesIdenticalTaskNumbersAcrossSessions() passed after 0.024 seconds.
+✔ Test fullResponseSurvivesZeroPreview() passed after 0.024 seconds.
+✔ Test structuredStreamEarlyReturnRecordsPartialWithoutInventingFailure() passed after 0.024 seconds.
+✔ Test streamingInitialFailureRetainsUnknownResponse() passed after 0.025 seconds.
+✔ Test slowObserverCanDetectGapsAndReloadCurrentJournal() passed after 0.025 seconds.
+✔ Test observationsReportRecordingAndClearThenFinish() passed after 0.025 seconds.
+✔ Test tooSmallJournalCannotChangeSuccessfulResponse() passed after 0.025 seconds.
+✔ Test downloadPreservesFileAndHashesBeyondPreview() passed after 0.036 seconds.
+✔ Test fileUploadKeepsBodyFileBackedAndMarksJournalUnavailable() passed after 0.036 seconds.
+✔ Test countAndEncodedBudgetAreRespected() passed after 0.036 seconds.
+✔ Test streamingPreservesEveryByteAndFullMultiChunkHash() passed after 0.046 seconds.
+✔ Test metricObserversPreserveAllControlledTransferResults() passed after 0.048 seconds.
+SDK_LIVE_PROOF example.com HTTP 200 bytes 577 preview 16
+✔ Test liveResponseIsReturnedAndRecorded() passed after 0.062 seconds.
+✔ Test realHTTPSMetricsAndCompleteResponse() passed after 0.067 seconds.
+✔ Test streamingZeroPreviewStillCountsAndHashesFullBody() passed after 0.068 seconds.
+✔ Test hostCanRejectRedirectThroughObserver() passed after 0.072 seconds.
+✔ Test liveHostRedirectDecisionIsPreserved() passed after 0.073 seconds.
+SDK_STREAM_LIVE_PROOF example.com HTTP 200 bytes 577 full SHA256 matched
+✔ Test liveStreamingResponseKeepsEveryByteAndFullHash() passed after 0.078 seconds.
+✔ Test delegateReceivesUnchangedBodyAndOriginalFailure(partial:) with 2 test cases passed after 0.237 seconds.
+✔ Test streamingFailureRecordsObservedPartialBytesWithoutCompleteHash() passed after 0.237 seconds.
+✔ Suite RecordingSessionDelegateTests passed after 0.237 seconds.
+✔ Suite RecordingClientTests passed after 0.237 seconds.
+✔ Test nativeHTTPSPreservesBodyOrOriginalTrustFailure(_:) with 3 test cases passed after 0.288 seconds.
+✔ Suite RecordingSessionDelegateLiveTests passed after 0.288 seconds.
+✔ Test metricsKeepOriginalCertificateRejection(_:) with 2 test cases passed after 0.290 seconds.
+✔ Suite LiveRecordingMetricsTests passed after 0.290 seconds.
+SDK_LIVE_PROOF https://expired.badssl.com/ baseline -1202; returned/recorded NSURLErrorDomain -1202
+SDK_STREAM_LIVE_PROOF https://wrong.host.badssl.com/ baseline -1202; returned/recorded NSURLErrorDomain -1202
+SDK_LIVE_PROOF https://wrong.host.badssl.com/ baseline -1202; returned/recorded NSURLErrorDomain -1202
+✔ Test certificateFailureMatchesTheUnwrappedSession(_:) with 2 test cases passed after 0.548 seconds.
+SDK_STREAM_LIVE_PROOF https://expired.badssl.com/ baseline -1202; returned/recorded NSURLErrorDomain -1202
+✔ Test streamingCertificateFailurePreservesDefaultSessionRejection(_:) with 2 test cases passed after 0.551 seconds.
+✔ Suite LiveHTTPSRecordingTests passed after 0.551 seconds.
+✔ Test run with 44 tests in 8 suites passed after 0.551 seconds.

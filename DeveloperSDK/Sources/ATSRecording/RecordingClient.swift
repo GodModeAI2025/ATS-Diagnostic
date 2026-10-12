@@ -190,6 +190,14 @@ public actor RecordingClient {
         try? append(makeRecord(request: request, date: date, began: began, data: preview, response: response as? HTTPURLResponse, error: error, responseByteCount: count, responseHash: hash, completeResponse: hash != nil, metrics: metrics))
     }
 
+    func recordDelegateTask(request: URLRequest, response: HTTPURLResponse?, date: Date, began: ContinuousClock.Instant,
+                            body: RecordingResponseAccumulator.Snapshot, observed: Bool, error: NSError?, metrics: RecordedTaskMetrics?) {
+        try? append(makeRecord(request: request, date: date, began: began,
+                               data: observed ? body.preview : nil, response: response, error: error,
+                               responseByteCount: observed ? body.observedBytes : nil, responseHash: body.sha256,
+                               completeResponse: body.complete, metrics: metrics))
+    }
+
     public func records() -> [RecordedExchange] { journal.map(\.record) }
     public func clear() { journal.removeAll(); encodedBytes = 2; publish(.cleared) }
     /// Buffered metadata-only events; revision gaps require a records() reload.

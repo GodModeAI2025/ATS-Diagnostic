@@ -74,3 +74,11 @@ Der Beobachter speichert Metriken und leitet die übrigen Objective-C-Delegate-C
 Diese Transportmetriken sind getrennt von der Dauer des Stream-Konsumenten und von den tatsächlich konsumierten Körperbytes. Bei frühem Stream-Abschluss können Metriken noch fehlen; ein späterer Callback verändert den bereits abgeschlossenen Journaleintrag nicht. HAR bewahrt die Metriken unter `_atsDiagnostic.taskMetrics`, ohne die Zeiten eines einzelnen Redirect-Hops als Gesamtzeit der HAR-Anfrage auszugeben.
 
 Die SDK-Erweiterung ist nicht Bestandteil des bereits eingereichten beziehungsweise in TestFlight freigegebenen App-Builds50.
+
+### Delegate-delivered data tasks
+
+`RecordingSessionDelegate(recorder:forwardingTo:previewLimit:)` can be supplied as the delegate when the host creates a URLSession with its own configuration. The wrapper observes newly created delegate-based data tasks, bounded response chunks, native metrics and completion; other optional Objective-C callbacks are forwarded to the host delegate. No new authentication handler or trust override is installed. The host still receives the original data and error.
+
+Keep the wrapper alive through the session. Existing sessions cannot have their delegate replaced. Per-task delegates can supersede the session delegate. Completion-handler and async bodies, upload/download tasks, background sessions and automatic URLProtocol/global capture are not covered by this API; use the explicit RecordingClient APIs where applicable. No empty-body hash is invented when Foundation has not delivered response data (except HTTP semantics that require no body). Native buffering can discard bytes before an error reaches the data delegate.
+
+At most 64 active tasks retain previews, each at most 64 KiB; `omittedTaskCount` reports capacity omissions. The journal has its own configured retention budget. Each task is keyed by object identity, including when one wrapper serves multiple sessions with identical numeric task identifiers. Journal insertion is asynchronous after the host completion callback; await a recorded event before exporting. Record duration spans task creation through completion, including suspension; native task metrics remain separate.

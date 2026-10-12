@@ -1,0 +1,106 @@
+Building for debugging...
+[2 / 5] ATSRecordingTests-product
+[4 / 7] ATSRecordingTests-product
+[10 / 12] ATSRecordingTests-product
+Build complete! (1,03 Sek.)
+Test Suite 'All tests' started at 2026-10-12 10:55:53.209.
+Test Suite 'All tests' passed at 2026-10-12 10:55:53.209.
+	 Executed 0 tests, with 0 failures (0 unexpected) in 0.000 (0.001) seconds
+◇ Test run started.
+↳ Testing Library Version: 2084
+↳ Target Platform: arm64e-apple-macos14.0
+➜ Suite LiveRecordingMetricsTests skipped.
+◇ Suite RecordingClientTests started.
+◇ Suite RecordingActivationTests started.
+➜ Suite RecordingSessionDelegateLiveTests skipped.
+◇ Suite RecordingSessionDelegateTests started.
+◇ Suite RecordingMetricsTests started.
+➜ Suite LiveHTTPSRecordingTests skipped.
+➜ Test metricsKeepOriginalCertificateRejection(_:) skipped.
+➜ Test liveHostRedirectDecisionIsPreserved() skipped.
+◇ Suite ResponseAccumulatorTests started.
+➜ Test realHTTPSMetricsAndCompleteResponse() skipped.
+◇ Test structuredNeverConsumedBodyRemainsUnknownInHAR() started.
+◇ Test downloadPreservesFileAndHashesBeyondPreview() started.
+◇ Test downloadWithZeroPreviewKeepsFullFileAndDigest() started.
+◇ Test originalPostBodyAndHeadersReachTheSession() started.
+◇ Test countAndEncodedBudgetAreRespected() started.
+◇ Test fileUploadKeepsBodyFileBackedAndMarksJournalUnavailable() started.
+◇ Test originalFailureIsPreservedAndRecorded() started.
+◇ Test observerLimitCanBeReleasedExplicitly() started.
+◇ Test uploadFailurePreservesTransportError() started.
+◇ Test disabledActivationDoesNotPresentAnything() started.
+◇ Test noHandlerLeavesMotionUnhandled() started.
+◇ Test metricObserversPreserveAllControlledTransferResults() started.
+◇ Test fullResponseSurvivesZeroPreview() started.
+◇ Test streamingFailureRecordsObservedPartialBytesWithoutCompleteHash() started.
+◇ Test streamingInitialFailureRetainsUnknownResponse() started.
+◇ Test observationDoesNotRetainItsProducer() started.
+◇ Test downloadFailurePreservesOriginalError() started.
+◇ Test structuredConsumerErrorIsNotMisreportedAsTransportError() started.
+➜ Test hostCanRejectRedirectThroughObserver() skipped.
+◇ Test delegateReceivesUnchangedBodyAndOriginalFailure(partial:) started.
+◇ Test structuredStreamEarlyReturnRecordsPartialWithoutInventingFailure() started.
+◇ Test uploadRecordsExplicitBodyAndPreservesResponse() started.
+◇ Test streamingZeroPreviewStillCountsAndHashesFullBody() started.
+◇ Test sharedObserverSeparatesIdenticalTaskNumbersAcrossSessions() started.
+◇ Test harMarksPartialRequestsAndUnknownProtocol() started.
+➜ Test nativeHTTPSPreservesBodyOrOriginalTrustFailure(_:) skipped.
+◇ Test observationsReportRecordingAndClearThenFinish() started.
+◇ Test streamingPreservesEveryByteAndFullMultiChunkHash() started.
+➜ Test certificateFailureMatchesTheUnwrappedSession(_:) skipped.
+◇ Test missingAndInvalidIntervalsStayUnknown() started.
+◇ Test tooSmallJournalCannotChangeSuccessfulResponse() started.
+◇ Test structuredEOFDoesNotDowngradeOrDuplicateCompleteRecord() started.
+◇ Test hostRedirectAndCompletionCallbacksAreForwarded() started.
+➜ Test liveStreamingResponseKeepsEveryByteAndFullHash() skipped.
+➜ Test streamingCertificateFailurePreservesDefaultSessionRejection(_:) skipped.
+◇ Test slowObserverCanDetectGapsAndReloadCurrentJournal() started.
+◇ Test partialFailureKeepsCountWithoutHash() started.
+◇ Test hostReceivesTheCorrectTriggerAndCanDisableIt() started.
+➜ Test liveResponseIsReturnedAndRecorded() skipped.
+◇ Test emptySuccessHasEmptyDigest() started.
+◇ Test chunksPreserveFullDigestAndBoundedPrefix() started.
+◇ Test case passing 1 argument partial → false to delegateReceivesUnchangedBodyAndOriginalFailure(partial:) started.
+◇ Test case passing 1 argument partial → true to delegateReceivesUnchangedBodyAndOriginalFailure(partial:) started.
+✔ Test missingAndInvalidIntervalsStayUnknown() passed after 0.007 seconds.
+✔ Test disabledActivationDoesNotPresentAnything() passed after 0.007 seconds.
+✔ Test partialFailureKeepsCountWithoutHash() passed after 0.007 seconds.
+✔ Test observationDoesNotRetainItsProducer() passed after 0.007 seconds.
+✔ Test observerLimitCanBeReleasedExplicitly() passed after 0.007 seconds.
+✔ Test noHandlerLeavesMotionUnhandled() passed after 0.007 seconds.
+✔ Test hostRedirectAndCompletionCallbacksAreForwarded() passed after 0.007 seconds.
+✔ Test hostReceivesTheCorrectTriggerAndCanDisableIt() passed after 0.007 seconds.
+✔ Test emptySuccessHasEmptyDigest() passed after 0.007 seconds.
+✔ Suite RecordingMetricsTests passed after 0.007 seconds.
+✔ Test chunksPreserveFullDigestAndBoundedPrefix() passed after 0.007 seconds.
+✔ Suite RecordingActivationTests passed after 0.007 seconds.
+✔ Suite ResponseAccumulatorTests passed after 0.007 seconds.
+✔ Test structuredNeverConsumedBodyRemainsUnknownInHAR() passed after 0.010 seconds.
+✔ Test structuredStreamEarlyReturnRecordsPartialWithoutInventingFailure() passed after 0.010 seconds.
+✔ Test originalPostBodyAndHeadersReachTheSession() passed after 0.020 seconds.
+✔ Test tooSmallJournalCannotChangeSuccessfulResponse() passed after 0.020 seconds.
+✔ Test uploadRecordsExplicitBodyAndPreservesResponse() passed after 0.020 seconds.
+✔ Test downloadPreservesFileAndHashesBeyondPreview() passed after 0.020 seconds.
+✔ Test downloadFailurePreservesOriginalError() passed after 0.020 seconds.
+✔ Test slowObserverCanDetectGapsAndReloadCurrentJournal() passed after 0.020 seconds.
+✔ Test structuredConsumerErrorIsNotMisreportedAsTransportError() passed after 0.030 seconds.
+✔ Test streamingInitialFailureRetainsUnknownResponse() passed after 0.030 seconds.
+✔ Test observationsReportRecordingAndClearThenFinish() passed after 0.030 seconds.
+✔ Test downloadWithZeroPreviewKeepsFullFileAndDigest() passed after 0.031 seconds.
+✔ Test sharedObserverSeparatesIdenticalTaskNumbersAcrossSessions() passed after 0.031 seconds.
+✔ Test originalFailureIsPreservedAndRecorded() passed after 0.031 seconds.
+✔ Test harMarksPartialRequestsAndUnknownProtocol() passed after 0.031 seconds.
+✔ Test uploadFailurePreservesTransportError() passed after 0.032 seconds.
+✔ Test fullResponseSurvivesZeroPreview() passed after 0.032 seconds.
+✔ Test structuredEOFDoesNotDowngradeOrDuplicateCompleteRecord() passed after 0.032 seconds.
+✔ Test fileUploadKeepsBodyFileBackedAndMarksJournalUnavailable() passed after 0.032 seconds.
+✔ Test countAndEncodedBudgetAreRespected() passed after 0.033 seconds.
+✔ Test metricObserversPreserveAllControlledTransferResults() passed after 0.043 seconds.
+✔ Test streamingPreservesEveryByteAndFullMultiChunkHash() passed after 0.051 seconds.
+✔ Test streamingZeroPreviewStillCountsAndHashesFullBody() passed after 0.060 seconds.
+✔ Test streamingFailureRecordsObservedPartialBytesWithoutCompleteHash() passed after 0.232 seconds.
+✔ Test delegateReceivesUnchangedBodyAndOriginalFailure(partial:) with 2 test cases passed after 0.232 seconds.
+✔ Suite RecordingClientTests passed after 0.233 seconds.
+✔ Suite RecordingSessionDelegateTests passed after 0.233 seconds.
+✔ Test run with 44 tests in 8 suites passed after 0.233 seconds.

@@ -1,0 +1,7 @@
+# Native session delegate observation
+
+The developer package adds opt-in automatic observation of delegate-delivered data tasks in host-created sessions. Original callbacks are forwarded, including a real host redirect rejection. The wrapper does not create a new transport session or install an authentication/trust handler. Body capture is bounded and records only native delivered data; task object identity prevents cross-session numeric-ID collisions. Capacity omissions are exposed separately.
+
+Final macOS Swift suite: 44 test methods passed with live tests enabled, no skipped methods. New native checks cover successful body delivery, original failure, two sessions with identical task numbers, example.com HTTPS and expired/wrong-host rejection, and enbw.com redirect cancellation. Native Foundation may buffer a small response until completion: the synthetic partial-failure test verifies against the host's actual delivered bytes rather than claiming unobserved bytes were captured.
+
+iOS verification of this new delegate API is pending. Main App/TestFlight52 does not embed this separate package. Automatic URLProtocol/global capture, existing-session interception, background capture and full historical SDK parity remain open.

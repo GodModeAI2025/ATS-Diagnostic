@@ -1,0 +1,27 @@
+Building for debugging...
+[1 / 10]
+[2 / 11] ATSRecording
+[4 / 13] ATSRecording
+[11 / 14] ATSRecordingTests-product
+[13 / 16] ATSRecordingTests-product
+[19 / 21] ATSRecordingTests-product
+Build complete! (1,53 Sek.)
+◇ Test run started.
+↳ Testing Library Version: 2084
+↳ Target Platform: arm64e-apple-macos14.0
+◇ Suite RecordingSessionDelegateTests started.
+◇ Suite RecordingSessionDelegateLiveTests started.
+◇ Test delegateReceivesUnchangedBodyAndOriginalFailure(partial:) started.
+◇ Test hostCanRejectRedirectThroughObserver() started.
+◇ Test nativeHTTPSPreservesBodyOrOriginalTrustFailure(_:) started.
+◇ Test case passing 1 argument partial → true to delegateReceivesUnchangedBodyAndOriginalFailure(partial:) started.
+◇ Test case passing 1 argument partial → false to delegateReceivesUnchangedBodyAndOriginalFailure(partial:) started.
+◇ Test case passing 1 argument url → "https://example.com/" to nativeHTTPSPreservesBodyOrOriginalTrustFailure(_:) started.
+◇ Test case passing 1 argument url → "https://expired.badssl.com/" to nativeHTTPSPreservesBodyOrOriginalTrustFailure(_:) started.
+◇ Test case passing 1 argument url → "https://wrong.host.badssl.com/" to nativeHTTPSPreservesBodyOrOriginalTrustFailure(_:) started.
+✔ Test hostCanRejectRedirectThroughObserver() passed after 0.074 seconds.
+✔ Test delegateReceivesUnchangedBodyAndOriginalFailure(partial:) with 2 test cases passed after 0.222 seconds.
+✔ Suite RecordingSessionDelegateTests passed after 0.222 seconds.
+✔ Test nativeHTTPSPreservesBodyOrOriginalTrustFailure(_:) with 3 test cases passed after 0.443 seconds.
+✔ Suite RecordingSessionDelegateLiveTests passed after 0.443 seconds.
+✔ Test run with 3 tests in 2 suites passed after 0.443 seconds.
