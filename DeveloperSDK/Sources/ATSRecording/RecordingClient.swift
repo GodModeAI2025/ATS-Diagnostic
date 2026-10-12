@@ -75,17 +75,52 @@ public actor RecordingClient {
     public func upload(for request: URLRequest, from body: Data, using session: URLSession) async throws -> (Data, URLResponse) {
         let began = ContinuousClock.now
         let date = Date()
+        var uploadRequest = request
+        uploadRequest.httpBody = nil
+        uploadRequest.httpBodyStream = nil
         var recordedRequest = request
         recordedRequest.httpBodyStream = nil
         recordedRequest.httpBody = body
         do {
-            let (data, response) = try await session.upload(for: request, from: body)
+            let (data, response) = try await session.upload(for: uploadRequest, from: body)
             try? append(makeRecord(request: recordedRequest, date: date, began: began, data: data, response: response as? HTTPURLResponse, error: nil))
             return (data, response)
         } catch {
             try? append(makeRecord(request: recordedRequest, date: date, began: began, data: nil, response: nil, error: error as NSError))
             throw error
         }
+    }
+
+    /// Returns URLSession's download file unchanged; journal hashing uses bounded reads.
+    public func download(for request: URLRequest, using session: URLSession) async throws -> (URL, URLResponse) {
+        let began = ContinuousClock.now
+        let date = Date()
+        let result: (URL, URLResponse)
+        do { result = try await session.download(for: request) }
+        catch {
+            try? append(makeRecord(request: request, date: date, began: began, data: nil, response: nil, error: error as NSError))
+            throw error
+        }
+        // Journal I/O cannot turn a successful transport into an application error.
+        if let body = try? readDownloadedBody(result.0) {
+            try? append(makeRecord(request: request, date: date, began: began, data: body.preview, response: result.1 as? HTTPURLResponse, error: nil, responseByteCount: body.count, responseHash: body.hash))
+        } else { publish(.recordingOmitted(UUID())) }
+        return result
+    }
+
+    private func readDownloadedBody(_ url: URL) throws -> (preview: Data, count: Int, hash: String) {
+        let file = try FileHandle(forReadingFrom: url)
+        defer { try? file.close() }
+        var hash = SHA256()
+        var count = 0
+        var stored = Data()
+        while let chunk = try file.read(upToCount: 64 * 1024), !chunk.isEmpty {
+            hash.update(data: chunk)
+            count += chunk.count
+            let remaining = previewLimit - stored.count
+            if remaining > 0 { stored.append(chunk.prefix(remaining)) }
+        }
+        return (stored, count, hash.finalize().map { String(format: "%02x", $0) }.joined())
     }
 
     public func records() -> [RecordedExchange] { journal.map(\.record) }
@@ -130,10 +165,10 @@ public actor RecordingClient {
         guard let data, !data.isEmpty, previewLimit > 0 else { return Data() }
         return data.withUnsafeBytes { buffer in Data(bytes: buffer.baseAddress!, count: min(buffer.count, previewLimit)) }
     }
-    private func makeRecord(request: URLRequest, date: Date, began: ContinuousClock.Instant, data: Data?, response: HTTPURLResponse?, error: NSError?) -> RecordedExchange {
+    private func makeRecord(request: URLRequest, date: Date, began: ContinuousClock.Instant, data: Data?, response: HTTPURLResponse?, error: NSError?, responseByteCount: Int? = nil, responseHash: String? = nil) -> RecordedExchange {
         let time = began.duration(to: .now).components
         let headers = response?.allHeaderFields.reduce(into: [String: String]()) { result, item in result[String(describing: item.key)] = String(describing: item.value) } ?? [:]
         let body = request.httpBody
-        return RecordedExchange(id: UUID(), date: date, url: request.url?.absoluteString ?? "", method: request.httpMethod ?? "GET", requestHeaders: request.allHTTPHeaderFields ?? [:], requestBodyPreview: preview(body), requestBodyBytes: body?.count ?? (request.httpBodyStream == nil ? 0 : nil), status: response?.statusCode, responseHeaders: headers, responseBodyPreview: preview(data), responseBytes: data?.count, responseSHA256: data.map { SHA256.hash(data: $0).map { String(format: "%02x", $0) }.joined() }, duration: Double(time.seconds) + Double(time.attoseconds) / 1e18, errorDomain: error?.domain, errorCode: error?.code, errorDescription: error?.localizedDescription)
+        return RecordedExchange(id: UUID(), date: date, url: request.url?.absoluteString ?? "", method: request.httpMethod ?? "GET", requestHeaders: request.allHTTPHeaderFields ?? [:], requestBodyPreview: preview(body), requestBodyBytes: body?.count ?? (request.httpBodyStream == nil ? 0 : nil), status: response?.statusCode, responseHeaders: headers, responseBodyPreview: preview(data), responseBytes: responseByteCount ?? data?.count, responseSHA256: responseHash ?? data.map { SHA256.hash(data: $0).map { String(format: "%02x", $0) }.joined() }, duration: Double(time.seconds) + Double(time.attoseconds) / 1e18, errorDomain: error?.domain, errorCode: error?.code, errorDescription: error?.localizedDescription)
     }
 }

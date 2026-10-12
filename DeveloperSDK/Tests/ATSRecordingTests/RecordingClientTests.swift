@@ -91,6 +91,41 @@ struct RecordingClientTests {
         #expect(record.errorCode == URLError.cannotConnectToHost.rawValue)
     }
 
+    @Test func downloadPreservesFileAndHashesBeyondPreview() async throws {
+        let recorder = try RecordingClient(previewLimit: 3)
+        let session = session(); defer { session.invalidateAndCancel() }
+        let (url, response) = try await recorder.download(for: URLRequest(url: URL(string: "https://fixture.invalid/body")!), using: session)
+        defer { try? FileManager.default.removeItem(at: url) }
+        let body = try Data(contentsOf: url)
+        #expect(body.count == 4096); #expect((response as? HTTPURLResponse)?.statusCode == 200)
+        let record = try #require(await recorder.records().first)
+        #expect(record.responseBodyPreview == body.prefix(3))
+        #expect(record.responseBytes == 4096); #expect(record.responsePreviewTruncated)
+        #expect(record.responseSHA256 == SHA256.hash(data: body).map { String(format: "%02x", $0) }.joined())
+    }
+
+    @Test func downloadWithZeroPreviewKeepsFullFileAndDigest() async throws {
+        let recorder = try RecordingClient(previewLimit: 0)
+        let session = session(); defer { session.invalidateAndCancel() }
+        let (url, _) = try await recorder.download(for: URLRequest(url: URL(string: "https://fixture.invalid/body")!), using: session)
+        defer { try? FileManager.default.removeItem(at: url) }
+        let body = try Data(contentsOf: url)
+        let record = try #require(await recorder.records().first)
+        #expect(record.responseBodyPreview.isEmpty); #expect(record.responseBytes == body.count)
+        #expect(record.responseSHA256 == SHA256.hash(data: body).map { String(format: "%02x", $0) }.joined())
+    }
+    @Test func downloadFailurePreservesOriginalError() async throws {
+        let recorder = try RecordingClient()
+        let session = session(); defer { session.invalidateAndCancel() }
+        do {
+            _ = try await recorder.download(for: URLRequest(url: URL(string: "https://fixture.invalid/failure")!), using: session)
+            Issue.record("Expected download failure")
+        } catch { #expect((error as NSError).code == URLError.cannotConnectToHost.rawValue) }
+        let record = try #require(await recorder.records().first)
+        #expect(record.errorCode == URLError.cannotConnectToHost.rawValue)
+        #expect(record.responseBytes == nil); #expect(record.responseSHA256 == nil)
+    }
+
     @Test func tooSmallJournalCannotChangeSuccessfulResponse() async throws {
         let recorder = try RecordingClient(byteLimit: 2)
         let session = session(); defer { session.invalidateAndCancel() }

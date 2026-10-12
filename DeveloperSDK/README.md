@@ -15,7 +15,7 @@ Die bestehende Session behält ihre Cookies, Weiterleitungen, Cache-, Proxy- und
 
 Standard: 200 Einträge, 64 KiB Vorschau je Körper, 64 MiB kodiertes Journal. Zu große Einträge werden ausgelassen; abgeschlossene ältere Einträge werden zur Einhaltung der Grenzen entfernt. `clear()` leert abgeschlossene Einträge und beendet keine laufenden Anfragen. Das Journal bleibt im Arbeitsspeicher. Exporte können vertrauliche Header oder Körper enthalten und müssen von der integrierenden App ausdrücklich geteilt werden.
 
-Noch offen: automatische URLProtocol-Integration, Streaming-/Upload-/Download-Aufzeichnung, vollständige Redirect- und Verbindungsmetriken sowie eine vollständige SDK-Diagnoseoberfläche. Optionale Aktivierungshooks sind unten beschrieben. Dieses Paket ist noch nicht in Build 39 eingebettet. Die vollständige historische SDK-Parität ist damit nicht erreicht.
+Noch offen: automatische URLProtocol-Integration, Streaming- und Datei-Upload-Aufzeichnung, vollständige Redirect- und Verbindungsmetriken sowie eine vollständige SDK-Diagnoseoberfläche. Optionale Aktivierungshooks sind unten beschrieben. Dieses Paket ist noch nicht in Build 39 eingebettet. Die vollständige historische SDK-Parität ist damit nicht erreicht.
 
 Prüfung: `swift test`. Die Tests verwenden eine kontrollierte URLProtocol-Gegenstelle in der vom Aufrufer bereitgestellten Session und prüfen vollständige Rückgabe trotz leerer Vorschau, unveränderte Fehler, tatsächliche POST-Daten, begrenztes Journal und explizites Leeren.
 
@@ -39,4 +39,8 @@ Der native Beispielhost unter `Examples/ActivationDemo` demonstriert diese Verdr
 
 ## Uploads aus Data
 
-`try await recorder.upload(for: request, from: body, using: session)` verwendet die bestehende URLSession direkt. Der explizite Upload-Body wird mit voller Bytezahl und begrenzter Vorschau protokolliert; der Aufrufer erhält die vollständige Antwort. Transportfehler bleiben unverändert. Datei-Uploads, Downloads und Streaming sind weiterhin offen.
+`try await recorder.upload(for: request, from: body, using: session)` verwendet die bestehende URLSession direkt. Der explizite Upload-Body wird mit voller Bytezahl und begrenzter Vorschau protokolliert; der Aufrufer erhält die vollständige Antwort. Transportfehler bleiben unverändert. Datei-Uploads und Streaming sind weiterhin offen.
+
+## Downloads
+
+`try await recorder.download(for: request, using: session)` gibt die von URLSession erzeugte Datei und Antwort unverändert zurück. Die SDK-Aufzeichnung liest die Datei in 64-KiB-Blöcken, berechnet SHA-256 über den vollständigen Inhalt und speichert nur die konfigurierte Vorschau. Auch bei Vorschaugröße null bleiben Dateigröße und Hash erhalten. Falls das nachgelagerte Lesen für das Journal scheitert, bleibt der erfolgreiche Download erfolgreich und ein `recordingOmitted`-Ereignis wird gemeldet. Die aufrufende App ist weiter für den Umgang mit der temporären Datei verantwortlich.
