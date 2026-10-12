@@ -6,11 +6,16 @@
   "sourceCommit": "d15be2d",
   "archive": "succeeded",
   "upload": "succeeded",
-  "processing": "started_per_xcode_upload",
-  "testFlightAssignment": "not_verified",
+  "processing": "completed",
+  "testFlightAssignment": "verified",
   "intendedTester": "mark_zimmermann@mac.com",
   "unitTestMethodsPassed": 136,
   "simulatorUIVerified": true,
   "deviceInstallationVerified": false,
-  "uploadCompletedAt": "2026-10-12T10:42:53+02:00"
+  "uploadCompletedAt": "2026-10-12T10:42:53+02:00",
+  "testflightState": "Im Test",
+  "buildId": "7b03bd94-3f92-450b-bcde-96cce85e206a",
+  "testerCount": 1,
+  "betaNotesSaved": true,
+  "verifiedAt": "2026-10-12T10:46:36.796935+02:00"
 }

@@ -139,3 +139,5 @@ Preview51 source8d4330b adds native per-transaction redirect connection metrics 
 Preview51 processing completed and manual Mark–Intern assignment verified: Im Test, exactly one tester mark_zimmermann@mac.com, beta notes saved. Physical installation of51 remains unverified. Store50 submission remains unchanged.
 
 Preview52 source d15be2d adds native system reverse IPv4/IPv6 lookup. All136 app test methods passed. Native iPhone simulator verified8.8.8.8→dns.google, ::1→localhost, invalid-hostname explanation and forward lookup returning four addresses. Archive succeeded; current upload is running and awaiting Apple's asset-description completion. Owner-group assignment and physical installation are not yet verified. TestFlight51 remains available and Store50 remains submitted.
+
+Preview52 now processed, beta notes saved and manually assigned to Mark–Intern: Im Test, exactly one tester mark_zimmermann@mac.com. Physical installation remains unverified. Store50 remains unchanged.
