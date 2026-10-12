@@ -1,0 +1,101 @@
+Device orientation: Unknown
+------------------------
+Application bundle identifier: com.mobilebox.atsdiagnostic
+Application UI orientation: Portrait
+Application, pid: 81181, label: 'ATS Diagnostic'
+ Window, {{0.0, 0.0}, {402.0, 874.0}}, hitPoint: {201.0, 437.0}
+  Other, {{0.0, 0.0}, {402.0, 874.0}}, hitPoint: {201.0, 437.0}
+  Other, {{0.0, 0.0}, {402.0, 874.0}}, hitPoint: {201.0, 437.0}
+   Other, {{0.0, 0.0}, {402.0, 874.0}}, hitPoint: {201.0, 437.0}
+    Other, {{0.0, 0.0}, {402.0, 874.0}}, hitPoint: {201.0, 437.0}
+     Other, {{0.0, 0.0}, {402.0, 874.0}}, hitPoint: {201.0, 437.0}
+      Other, {{0.0, 0.0}, {402.0, 874.0}}, hitPoint: {201.0, 437.0}
+       Other, {{0.0, 0.0}, {402.0, 874.0}}, hitPoint: {201.0, 437.0}
+        Other, {{0.0, 0.0}, {402.0, 874.0}}, hitPoint: {201.0, 437.0}
+         Other, {{0.0, 0.0}, {402.0, 874.0}}, hitPoint: {201.0, 437.0}
+          Other, {{0.0, 0.0}, {402.0, 874.0}}, hitPoint: {201.0, 437.0}
+           Other, {{0.0, 0.0}, {402.0, 874.0}}, hitPoint: {201.0, 437.0}
+            Other, {{0.0, 0.0}, {402.0, 874.0}}, hitPoint: {201.0, 437.0}
+             NavigationBar, {{0.0, 62.0}, {402.0, 54.0}}, identifier: 'TLS-Versionen', hitPoint: {201.0, 89.0}
+              Button, {{16.0, 62.0}, {44.0, 44.0}}, identifier: 'BackButton', label: 'Connection details', hitPoint: {38.0, 84.0}
+              StaticText, {{142.3, 73.7}, {117.3, 20.7}}, label: 'TLS-Versionen', hitPoint: {201.0, 84.0}
+             Other, {{0.0, 0.0}, {402.0, 874.0}}, hitPoint: {201.0, 437.0}
+              Other, {{0.0, 0.0}, {402.0, 874.0}}, hitPoint: {201.0, 437.0}
+               Other, {{0.0, 0.0}, {402.0, 874.0}}, hitPoint: {201.0, 437.0}
+                Other, {{0.0, 0.0}, {402.0, 874.0}}, hitPoint: {201.0, 437.0}
+                 CollectionView, {{0.0, 0.0}, {402.0, 874.0}}, hitPoint: {201.0, 437.0}
+                  Other, {{-16.0, -1632.0}, {434.0, 3736.7}}, hitPoint: {201.0, 437.0}
+                  Other, {{0.0, 0.0}, {402.0, 874.0}}, hitPoint: {201.0, 437.0}
+                   Other, {{0.0, 0.0}, {402.0, 156.0}}, hitPoint: {201.0, 78.0}
+                   Other, {{0.0, 741.0}, {402.0, 133.0}}, hitPoint: {201.0, 807.5}
+                  Other, {{0.0, 0.0}, {402.0, 874.0}}, hitPoint: {201.0, 437.0}
+                  Cell, {{16.0, 151.0}, {370.0, 52.0}}, hitPoint: {201.0, 177.0}
+                   Other, {{16.0, 151.0}, {370.0, 52.0}}, hitPoint: {201.0, 177.0}
+                    Other, {{16.0, 151.0}, {370.0, 52.0}}, hitPoint: {201.0, 177.0}
+                   Other, {{16.0, 151.0}, {370.0, 52.0}}, hitPoint: {201.0, 177.0}
+                    Other, {{16.0, 151.0}, {370.0, 52.0}}, hitPoint: {201.0, 177.0}
+                     Other, {{16.0, 151.0}, {370.0, 52.0}}, hitPoint: {201.0, 177.0}
+                      StaticText, {{16.0, 151.0}, {370.0, 52.0}}, label: 'https://www.enbw.com/', hitPoint: {201.0, 177.0}
+                  Cell, {{16.0, 203.0}, {370.0, 52.0}}, hitPoint: {201.0, 229.0}
+                   Other, {{16.0, 203.0}, {370.0, 52.0}}, hitPoint: {201.0, 229.0}
+                    Other, {{16.0, 203.0}, {370.0, 52.0}}, hitPoint: {201.0, 229.0}
+                   Other, {{16.0, 203.0}, {370.0, 52.0}}, hitPoint: {201.0, 229.0}
+                    Other, {{16.0, 203.0}, {370.0, 52.0}}, hitPoint: {201.0, 229.0}
+                     Other, {{16.0, 203.0}, {370.0, 52.0}}, hitPoint: {201.0, 229.0}
+                      Button, {{16.0, 203.0}, {370.0, 52.0}}, label: 'Test individual TLS versions', hitPoint: {201.0, 229.0}
+                       StaticText, {{30.7, 216.7}, {252.0, 24.7}}, label: 'Test individual TLS versions', hitPoint: {156.7, 229.0}
+                       Image, {{30.7, 216.7}, {26.7, 24.7}}, identifier: 'waveform.path', label: 'Waveform', hitPoint: {44.0, 229.0}
+                  Other, {{32.0, 202.0}, {338.0, 1.0}}, hitPoint: {201.0, 202.5}
+                  Cell, {{16.0, 255.0}, {370.0, 81.7}}, hitPoint: {201.0, 295.8}
+                   Other, {{16.0, 255.0}, {370.0, 81.7}}, hitPoint: {201.0, 295.8}
+                    Other, {{16.0, 255.0}, {370.0, 81.7}}, hitPoint: {201.0, 295.8}
+                   Other, {{16.0, 255.0}, {370.0, 81.7}}, hitPoint: {201.0, 295.8}
+                    Other, {{16.0, 255.0}, {370.0, 81.7}}, hitPoint: {201.0, 295.8}
+                     Other, {{16.0, 255.0}, {370.0, 81.7}}, hitPoint: {201.0, 295.8}
+                      StaticText, {{16.0, 255.0}, {370.0, 81.7}}, label: 'A failed probe can result from client policy, server configuration or network conditions. No HTTP request is sent during these probes.', hitPoint: {201.0, 295.8}
+                  Other, {{72.0, 254.0}, {298.0, 1.0}}, hitPoint: {221.0, 254.5}
+                  Other, {{369.0, 116.0}, {30.0, 675.0}}, label: 'Vertical scroll bar, 1 page', value: 0 %, hitPoint: {384.0, 453.5}
+                   Other, {{396.0, 781.0}, {3.0, 7.0}}, hitPoint: {397.5, 784.5}
+                  Other, {{369.0, 116.0}, {30.0, 675.0}}, label: 'Vertical scroll bar, 1 page', value: 0 %, hitPoint: {384.0, 453.5}
+                   Other, {{396.0, 781.0}, {3.0, 7.0}}, hitPoint: {397.5, 784.5}
+             Toolbar, {{0.0, 0.0}, {402.0, 874.0}}, identifier: 'Toolbar', label: 'Toolbar', hitPoint: {201.0, 437.0}
+              Other, {{0.0, 0.0}, {402.0, 874.0}}, hitPoint: {201.0, 437.0}
+       Other, {{0.0, 0.0}, {402.0, 874.0}}, hitPoint: {201.0, 437.0}
+        Other, {{0.0, 791.0}, {402.0, 83.0}}, hitPoint: {201.0, 832.5}
+         Other, {{0.0, 0.0}, {402.0, 874.0}}, hitPoint: {201.0, 437.0}
+          TabBar, {{0.0, 791.0}, {402.0, 83.0}}, label: 'Tab Bar', hitPoint: {201.0, 832.5}
+           Other, {{21.0, 791.0}, {360.0, 62.0}}, hitPoint: {201.0, 822.0}
+            Other, {{21.0, 791.0}, {85.1, 54.0}}, hitPoint: {63.6, 818.0}
+            Other, {{21.0, 791.0}, {360.0, 62.0}}, hitPoint: {201.0, 822.0}
+             Button, {{25.0, 795.0}, {85.1, 54.0}}, identifier: 'checkmark.shield', label: 'Inspect', Selected, hitPoint: {67.6, 822.0}
+              Image, {{55.3, 801.7}, {24.7, 26.7}}, identifier: 'checkmark.shield.fill', label: 'Checkmark in a filled shield', hitPoint: {67.7, 815.0}
+             Button, {{90.1, 795.0}, {89.9, 54.0}}, identifier: 'arrow.up.arrow.down', label: 'Requests', hitPoint: {135.1, 822.0}
+              Image, {{118.4, 801.7}, {33.0, 26.3}}, identifier: 'arrow.up.arrow.down', label: 'sort', hitPoint: {134.9, 814.8}
+             Button, {{160.1, 795.0}, {86.7, 54.0}}, identifier: 'network', label: 'Erfassen', hitPoint: {203.4, 822.0}
+              Image, {{189.7, 801.3}, {27.3, 27.3}}, identifier: 'network', label: 'Network nodes connected by lines', hitPoint: {203.4, 815.0}
+             Button, {{226.8, 795.0}, {85.1, 54.0}}, identifier: 'clock', label: 'History', hitPoint: {269.3, 822.0}
+              Image, {{255.8, 801.3}, {27.3, 27.3}}, identifier: 'clock.fill', label: 'clock', hitPoint: {269.4, 815.0}
+             Button, {{291.9, 795.0}, {85.1, 54.0}}, identifier: 'wrench.and.screwdriver', label: 'Tools', hitPoint: {334.4, 822.0}
+              Image, {{318.2, 799.3}, {32.7, 31.7}}, identifier: 'wrench.and.screwdriver.fill', label: 'Wrench and screwdriver, filled', hitPoint: {334.6, 815.2}
+            Other, {{21.0, 791.0}, {360.0, 62.0}}, hitPoint: {201.0, 822.0}
+            Other, {{25.0, 795.0}, {85.1, 54.0}}, hitPoint: {67.6, 822.0}
+             Other, {{25.0, 795.0}, {85.0, 54.0}}, hitPoint: {67.5, 822.0}
+              Other, {{25.0, 795.0}, {85.0, 54.0}}, hitPoint: {67.5, 822.0}
+              Other, {{25.0, 795.0}, {85.0, 54.0}}, hitPoint: {67.5, 822.0}
+               Other, {{25.0, 795.0}, {85.0, 54.0}}, hitPoint: {67.5, 822.0}
+                Other, {{25.0, 795.0}, {85.0, 54.0}}, hitPoint: {67.5, 822.0}
+                 Other, {{25.0, 795.0}, {85.0, 54.0}}, hitPoint: {67.5, 822.0}
+                Other, {{25.0, 795.0}, {85.0, 54.0}}, hitPoint: {67.5, 822.0}
+               Other, {{25.0, 795.0}, {85.0, 54.0}}, hitPoint: {67.5, 822.0}
+         Other, {{0.0, 791.0}, {402.0, 83.0}}, hitPoint: {201.0, 832.5}
+          Other, {{0.0, 791.0}, {402.0, 83.0}}, hitPoint: {201.0, 832.5}
+           Other, {{0.0, 791.0}, {402.0, 83.0}}, hitPoint: {201.0, 832.5}
+            Other, {{0.0, 791.0}, {402.0, 83.0}}, hitPoint: {201.0, 832.5}
+             Other, {{0.0, 791.0}, {402.0, 83.0}}, hitPoint: {201.0, 832.5}
+              Other, {{0.0, 791.0}, {402.0, 83.0}}, hitPoint: {201.0, 832.5}
+            Other, {{0.0, 791.0}, {402.0, 83.0}}, hitPoint: {201.0, 832.5}
+             Other, {{0.0, 791.0}, {402.0, 83.0}}, hitPoint: {201.0, 832.5}
+      Other, {{0.0, 62.0}, {402.0, 778.0}}, hitPoint: {201.0, 451.0}
+ Window, {{0.0, 0.0}, {402.0, 874.0}}, hitPoint: {201.0, 437.0}
+  Other, {{0.0, 0.0}, {402.0, 874.0}}, hitPoint: {201.0, 437.0}
+   Other, {{0.0, 0.0}, {402.0, 874.0}}, hitPoint: {201.0, 437.0}
