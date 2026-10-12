@@ -1,0 +1,3 @@
+Neu in Build 51: Einzelne Weiterleitungen und Verbindungen sind in den Prüfergebnissen sichtbar. Öffne „Weiterleitungen und Verbindungsweg“ für Ziel-URLs, HTTP-Status, TLS, Protokoll und gemessene Phasen. Wiederverwendete Verbindungen und fehlende Messwerte werden getrennt erklärt. HAR-Export und -Import erhalten diese Angaben; importierte Berichte bleiben als übernommene Ergebnisse gekennzeichnet.
+
+Bitte mit einem weiterleitenden Ziel wie enbw.com und einem ungültigen Zertifikat testen. Zwischenziele erhalten keine eigenständige Zertifikats-Vertrauensbewertung.
