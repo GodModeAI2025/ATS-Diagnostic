@@ -18,8 +18,14 @@
   "privacyTextsCommit": "8037f58",
   "privacyTextsPushed": true,
   "worldwideSelectionPrepared": 175,
-  "worldwideAvailabilitySaved": false,
+  "worldwideAvailabilitySaved": true,
   "requestedBasePrice": "0.99 EUR",
-  "priceSaved": false,
-  "baseCountryChangeAwaitingConfirmation": true
+  "priceSaved": true,
+  "baseCountryChangeAwaitingConfirmation": false,
+  "selectedTerritories": 175,
+  "territoriesCurrentlySellable": 0,
+  "saleState": "Apple removed app: update approval required",
+  "baseCountry": "Germany",
+  "baseCurrency": "EUR",
+  "basePrice": "0.99"
 }

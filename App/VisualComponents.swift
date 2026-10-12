@@ -8,7 +8,7 @@ struct InspectionHero: View {
     let record: DiagnosticRecord?
     var body: some View {
         HStack(alignment: .top, spacing: 14) {
-            SupportingIllustration(kind: .server)
+            Image("BrandMark").resizable().scaledToFit().frame(width: 48, height: 48).clipShape(RoundedRectangle(cornerRadius: 12)).accessibilityHidden(true)
             VStack(alignment: .leading, spacing: 7) {
                 Text("Verbindungen verständlich prüfen").font(.headline)
                 Text("Zertifikate, TLS und HTTP-Antworten im Überblick.").font(.subheadline).foregroundStyle(.secondary).fixedSize(horizontal: false, vertical: true)
