@@ -1,0 +1,32 @@
+name: ATSActivationDemo
+options:
+  deploymentTarget:
+    iOS: '18.0'
+packages:
+  ATSRecording:
+    path: ../..
+targets:
+  ATSActivationDemo:
+    type: application
+    platform: iOS
+    sources: [App]
+    dependencies:
+      - package: ATSRecording
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: com.mobilebox.atsdiagnostic.sdkdemo
+        GENERATE_INFOPLIST_FILE: YES
+        INFOPLIST_KEY_CFBundleDisplayName: ATS SDK Demo
+        INFOPLIST_KEY_UILaunchScreen_Generation: YES
+        TARGETED_DEVICE_FAMILY: '1,2'
+        SWIFT_VERSION: '6.0'
+    info:
+      path: App/Info.plist
+      properties:
+        UIApplicationSceneManifest:
+          UIApplicationSupportsMultipleScenes: true
+schemes:
+  ATSActivationDemo:
+    build:
+      targets:
+        ATSActivationDemo: all

@@ -28,3 +28,11 @@ HAR-Export und App-Import sind implementiert. Fehlende Protokollangaben bleiben 
 `let observation = try await recorder.observe()` liefert `observation.events`. Ereignisse melden den aktuellen Stand (`initial`), abgeschlossene Aufzeichnungen (`recorded` mit ID), wegen des Speicherlimits ausgelassene Aufzeichnungen (`recordingOmitted`) und das Leeren (`cleared`). Die Nutzdaten enthalten nur Revision/Typ/ID, keine Körperkopien. Jede Beobachtung puffert die neuesten 32 Ereignisse; maximal 16 Beobachter pro Recorder. Bei einer Revisionslücke `await recorder.records()` neu laden, statt alte Änderungen einzeln anzuwenden.
 
 `await observation.cancel()` meldet einen Beobachter explizit ab. Task-Abbruch beendet die AsyncStream-Beobachtung ebenfalls; bereits gepufferte Ereignisse können nach explizitem Abschluss noch ausgelesen werden. Ein Beobachter hält den Recorder nicht am Leben. Wird der Recorder freigegeben, enden seine Streams. Die aufrufende App entscheidet über Darstellung und Aktivierung.
+
+## Eigene Aktivierung und Schütteln
+
+`RecordingActivation` läuft auf dem MainActor. Mit `isEnabled = true` und einem `handler` bestimmt die integrierende App ihre Präsentation. `activate()` löst eine eigene Aktion aus; der Handler erhält `.custom` oder `.shake`. Ohne Freigabe oder Handler bleibt die Aktivierung unbehandelt.
+
+Auf iOS kann eine host-eigene `UIWindowScene` eine `RecordingWindow` verwenden und ihr `recordingActivation` zuweisen. Der Host muss den Aktivierungscontroller selbst halten; die Window-Referenz darauf ist schwach. Eine aktivierte Shake-Aktion wird vom SDK-Hook konsumiert; sonst läuft die Bewegung durch UIKit weiter. Der Hook ersetzt in diesem eingeschalteten Fall die normale Shake-Aktion. Es gibt keine globale Methodenänderung und keine automatische Präsentation beim Start.
+
+Der native Beispielhost unter `Examples/ActivationDemo` demonstriert diese Verdrahtung pro Scene. Die API-Steuerung ist mit 13 kontrollierten Tests auf macOS und iOS geprüft; die echte Simulator-Shake-Prüfung des Beispielhosts läuft noch. Die automatische URLProtocol-Aufzeichnung und eine vollständige SDK-Diagnoseoberfläche bleiben offen.
