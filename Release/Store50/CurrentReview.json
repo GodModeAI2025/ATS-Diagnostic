@@ -1,0 +1,17 @@
+{
+  "verifiedAt": "2026-10-12T12:56:54.613546+02:00",
+  "verification": "Authenticated App Store Connect page reloaded, rendered DOM readback",
+  "appleId": "1297164068",
+  "version": "2.0",
+  "build": 50,
+  "reviewState": "Warten auf Prüfung",
+  "releaseAfterApproval": true,
+  "phasedRelease": false,
+  "removedFromSale": true,
+  "publicAvailabilityVerified": false,
+  "submissionReplaced": false,
+  "proof": "Waiting-Current.png",
+  "latestPreviewBuild": 54,
+  "previewRecord": "../PreviewRecord.json",
+  "previewIsSeparateBundle": true
+}
