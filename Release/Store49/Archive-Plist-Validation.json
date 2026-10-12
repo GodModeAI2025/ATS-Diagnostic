@@ -1,0 +1,9 @@
+{
+  "CFBundleIdentifier": "com.mobilebox.atsdiagnostic",
+  "CFBundleShortVersionString": "2.0",
+  "CFBundleVersion": "49",
+  "NSLocalNetworkUsageDescription": "ATS Diagnostic prüft von dir ausgewählte Geräte und Server im lokalen Netzwerk, um HTTP, TLS und Zertifikate zu untersuchen.",
+  "NSAppTransportSecurity": {
+    "NSAllowsArbitraryLoads": true
+  }
+}

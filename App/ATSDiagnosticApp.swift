@@ -72,7 +72,7 @@ struct InspectView: View {
             if let error = store.error { Text(error).foregroundStyle(.red) }
         }
     }
-    private var trustExplanation: some View { Text("System trust validation stays enabled. A successful request describes this connection; it does not certify every ATS requirement of another app.").font(.footnote).foregroundStyle(.secondary) }
+    private var trustExplanation: some View { Text("Systemvertrauen wird weiterhin geprüft. Für die Diagnose fremder Server sind HTTP und ältere TLS-Konfigurationen zugelassen. Ein erfolgreicher Aufruf bestätigt deshalb keine ATS-Konformität.").font(.footnote).foregroundStyle(.secondary) }
     private func run() { Task { await store.execute(url: host) } }
 }
 struct RequestView: View {

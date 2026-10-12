@@ -22,7 +22,7 @@ targets:
         CFBundleVersion: $(CURRENT_PROJECT_VERSION)
         NSLocalNetworkUsageDescription: "ATS Diagnostic prüft von dir ausgewählte Geräte und Server im lokalen Netzwerk, um HTTP, TLS und Zertifikate zu untersuchen."
         NSAppTransportSecurity:
-          NSAllowsLocalNetworking: true
+          NSAllowsArbitraryLoads: true
     settings:
       base:
         PRODUCT_BUNDLE_IDENTIFIER: com.mobilebox.atsdiagnostic
@@ -44,7 +44,7 @@ targets:
         CFBundleVersion: $(CURRENT_PROJECT_VERSION)
         NSLocalNetworkUsageDescription: "ATS Diagnostic prüft von dir ausgewählte Geräte und Server im lokalen Netzwerk, um HTTP, TLS und Zertifikate zu untersuchen."
         NSAppTransportSecurity:
-          NSAllowsLocalNetworking: true
+          NSAllowsArbitraryLoads: true
     settings:
       base:
         PRODUCT_BUNDLE_IDENTIFIER: com.mobilebox.atsdiagnostic.preview
