@@ -1,0 +1,7 @@
+ATS Diagnostic 2.0 (42)
+
+Importierte Teilantworten werden jetzt ausdrücklich als Teilaufnahme angezeigt. Die App unterscheidet gemeldete aufgezeichnete Bytes von einer unbekannten Gesamtgröße. Übersicht und Verbindungsbaum zeigen keine falsche Nullgröße; unvollständige Antworten erhalten keinen vollständigen Hash. Widersprüchliche Importangaben werden verworfen.
+
+Enthält außerdem die Verbesserungen der Verlaufsspeicherung: asynchrones Laden, zusammengefasste atomare Schreibvorgänge und Schutz vor Überschreiben früher Import-/Löschaktionen.
+
+Testhinweis: Eine unvollständige SDK-HAR-Aufzeichnung importieren. HTTP 200 bestätigt nur den Status; Gesamtgröße bleibt unbekannt und die beobachteten Bytes werden separat ausgewiesen.
