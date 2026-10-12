@@ -6,8 +6,14 @@
   "sourceCommit": "8d4330b",
   "archive": "succeeded",
   "upload": "succeeded",
-  "testFlightAssignment": "not_yet_verified",
+  "testFlightAssignment": "verified",
   "intendedTester": "mark_zimmermann@mac.com",
   "storeBuild50": "unchanged_waiting_for_review",
-  "processing": "processing_in_app_store_connect"
+  "processing": "completed",
+  "testflightState": "Im Test",
+  "buildId": "47d711cf-191e-4661-ad3e-f712f3dd093f",
+  "testerCount": 1,
+  "betaNotesSaved": true,
+  "deviceInstallationVerified": false,
+  "verifiedAt": "2026-10-12T10:33:53.559103+02:00"
 }

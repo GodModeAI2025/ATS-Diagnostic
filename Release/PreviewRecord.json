@@ -1,17 +1,17 @@
 {
-  "verifiedAt": "2026-10-12T09:54:27+02:00",
+  "verifiedAt": "2026-10-12T10:33:53.559103+02:00",
   "appStoreName": "ATS Diagnostic Preview",
   "displayName": "ATS Diagnostic",
   "appleId": "6821686996",
   "bundleId": "com.mobilebox.atsdiagnostic.preview",
   "version": "2.0",
-  "build": 50,
-  "sourceCommit": "13ecd38",
+  "build": 51,
+  "sourceCommit": "8d4330b",
   "archiveSucceeded": true,
   "uploadCompleted": true,
-  "uploadCompletedAt": "2026-10-12T08:47:37+02:00",
+  "uploadCompletedAt": "2026-10-12T10:29:48+02:00",
   "processingCompleted": true,
-  "buildId": "67af25d6-525a-4f03-9450-1b102257b678",
+  "buildId": "47d711cf-191e-4661-ad3e-f712f3dd093f",
   "internalGroupId": "a1bcebc2-c662-4040-9ffc-f9c3f8f7898f",
   "groupAssigned": true,
   "testflightState": "Im Test",
@@ -22,5 +22,6 @@
   "deviceInstallationVerified": false,
   "lastPortalReportedInstalledBuild": 36,
   "device": "iPhone17 Pro Max / iOS27.2",
-  "unitTestMethodsPassed": 128
+  "unitTestMethodsPassed": 128,
+  "targetedInteropMethodsPassed": 5
 }
