@@ -22,16 +22,13 @@ struct RootView: View {
             Tab("Erfassen", systemImage: "network") { CaptureView(monitor:proxy,store:store) }
             Tab("History", systemImage: "clock") { HistoryView(store: store) }
             Tab("Tools", systemImage: "wrench.and.screwdriver") { ToolsView(store:store) }
-        }.tint(Color.diagnosticAccent)
+        }.tint(Color.diagnosticAccent).background(KeyboardDismissSurface())
     }
 }
 struct InspectView: View {
     let store: DiagnosticStore
     @Environment(\.dynamicTypeSize) private var dynamicTypeSize
     @State private var host = ""
-    @State private var probing = false
-    @State private var probes: [TLSProbeResult] = []
-    @State private var probeError: String?
     var body: some View {
         NavigationStack {
             GeometryReader { geometry in
@@ -40,7 +37,6 @@ struct InspectView: View {
                         HStack(alignment: .top, spacing: 24) {
                             VStack(spacing: 20) {
                                 DiagnosticPanel(title: "Inspect a connection", illustration: .server) { InspectionHero(record: store.latest ?? store.records.first); inspectionInput }
-                                DiagnosticPanel(title: "TLS version probes", illustration: .certificate) { probeControls }
                             }.frame(width: 340)
                             VStack(spacing: 20) {
                                 if let record = store.latest ?? store.records.first {
@@ -62,33 +58,18 @@ struct InspectView: View {
                         Section { InspectionHero(record: store.latest ?? store.records.first) }
                         Section("Host or URL") { inspectionInput }
                         if let record = store.latest ?? store.records.first { Section("Latest inspection") { ConnectionOverview(record: record); DiagnosticIssueView(record:record); NavigationLink { RecordView(record: record, store: store) } label: { RecordRow(record: record) } } }
-                        Section { DisclosureGroup("TLS version probes") { probeControls } }
                         Section { trustExplanation }
                     }
                 }
-            }.navigationTitle("ATS Diagnostic").navigationBarTitleDisplayMode(.inline).onChange(of: host) { probes = []; probeError = nil }
+            }.navigationTitle("ATS Diagnostic").navigationBarTitleDisplayMode(.inline)
         }
     }
     private var inspectionInput: some View {
         VStack(alignment: .leading, spacing: 16) {
-            TextField("example.com", text: $host).textInputAutocapitalization(.never).autocorrectionDisabled().keyboardType(.URL).disabled(probing).onSubmit { run() }.textFieldStyle(.roundedBorder)
+            TextField("example.com", text: $host).textInputAutocapitalization(.never).autocorrectionDisabled().keyboardType(.URL).onSubmit { run() }.textFieldStyle(.roundedBorder)
             Button(action: run) { Label(store.running ? "Inspecting…" : "Inspect connection", systemImage: "magnifyingglass").frame(maxWidth: .infinity) }.buttonStyle(.borderedProminent).controlSize(.large).disabled(store.running || host.isEmpty)
             if store.running { ProgressView("Connecting…") }
             if let error = store.error { Text(error).foregroundStyle(.red) }
-        }
-    }
-    private var probeControls: some View {
-        VStack(alignment: .leading, spacing: 12) {
-            Button("Test individual TLS versions", systemImage: "waveform.path") { Task { probing = true; defer { probing = false }; do { probes = try await TLSProbe.allVersions(host); probeError = nil } catch { probeError = error.localizedDescription } } }.disabled(probing || host.isEmpty)
-            if probing { ProgressView("Testing TLS handshakes…") }
-            if let probeError { Text(probeError).foregroundStyle(.red) }
-            ForEach(probes) { probe in
-                DisclosureGroup {
-                    Text(probe.detail).font(.footnote).foregroundStyle(.secondary)
-                    ForEach(probe.certificates) { certificate in NavigationLink(certificate.subject) { CertificateDetailView(certificate: certificate, isLeaf: certificate.id == probe.certificates.first?.id, systemCT: nil, issuerCertificate: probe.certificates.nextIssuer(after:certificate)) } }
-                } label: { Label(probe.id + (probe.completed ? " · Supported" : " · Unavailable"), systemImage: probe.completed ? "checkmark.circle" : "exclamationmark.circle") }
-            }
-            Text("A failed probe can result from client policy, server configuration or network conditions. No HTTP request is sent during these probes.").font(.footnote).foregroundStyle(.secondary)
         }
     }
     private var trustExplanation: some View { Text("System trust validation stays enabled. A successful request describes this connection; it does not certify every ATS requirement of another app.").font(.footnote).foregroundStyle(.secondary) }
@@ -316,6 +297,7 @@ struct RecordView: View {
                 }
                 if !record.certificates.isEmpty { ShareLink("Export complete chain as PEM", item: CertificateChainExport(certificates: record.certificates), preview: SharePreview("Certificate chain")) }
             } header: { Text("Certificates & trust") }
+            Section { NavigationLink("TLS-Versionen dieses Servers prüfen") { TLSVersionProbeView(host: record.finalURL ?? record.url) } }
             RevocationView(record:record,assessment:$additionalRevocation)
             Section("Response headers · \(record.responseHeaders.count)") {
                 ForEach(record.responseHeaders.keys.sorted().prefix(3), id: \.self) { key in HeaderRow(item: HeaderItem(name: key, value: record.responseHeaders[key] ?? "")) }

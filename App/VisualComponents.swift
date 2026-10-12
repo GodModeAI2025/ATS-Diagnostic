@@ -10,8 +10,8 @@ struct InspectionHero: View {
         HStack(alignment: .top, spacing: 14) {
             SupportingIllustration(kind: .server)
             VStack(alignment: .leading, spacing: 7) {
-                Text("TLS & certificate inspector").font(.headline)
-                Text("Enter a host to examine its certificates, system trust and connection timings.").font(.subheadline).foregroundStyle(.secondary).fixedSize(horizontal: false, vertical: true)
+                Text("Verbindungen verständlich prüfen").font(.headline)
+                Text("Zertifikate, TLS und HTTP-Antworten im Überblick.").font(.subheadline).foregroundStyle(.secondary).fixedSize(horizontal: false, vertical: true)
             }
         }.padding(.vertical, 6)
     }

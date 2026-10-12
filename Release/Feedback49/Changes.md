@@ -1,0 +1,7 @@
+TestFlight screenshot feedback, read 2026-10-12
+
+New feedback on build 2.0 (36): add splash screen; dismiss keyboard when tapping outside fields; improve subtitle. Additional build36 feedback: remove BadSSL catalog from product navigation; move TLS probes into an individual inspection.
+
+Implemented: native adaptive launch storyboard; concise connection-oriented subtitle; window-scoped keyboard dismissal preserving controls and text editing; BadSSL navigation removed while internal test suite remains; TLS probe view uses the selected record's final URL or original URL.
+
+128 app test methods passed before the launch storyboard resource was added. Native compilation and device interaction checks are in progress. No new feedback build uploaded yet. Build48 remains archived with prior Xcode upload authentication failure. Existing CT, issuer, grouped header and compact layout work addresses earlier feedback, but EnBW trust-color comparison still requires renewed native inspection rather than assuming all platforms should agree.
