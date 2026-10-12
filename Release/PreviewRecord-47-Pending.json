@@ -6,8 +6,8 @@
   "build": 47,
   "sourceCommit": "2726098",
   "archiveSucceeded": true,
-  "uploadCompleted": false,
-  "uploadState": "Uploading",
+  "uploadCompleted": true,
+  "uploadState": "Completed",
   "processingCompleted": null,
   "testflightState": "Not verified: browser sign-in required",
   "groupAssigned": false,
@@ -23,5 +23,7 @@
   "iPhoneRequestValidationVerified": true,
   "iPhoneDNSLookupVerified": true,
   "iPhoneAppleCTUIVerified": true,
-  "iPhoneSystemCTUIVerified": true
+  "iPhoneSystemCTUIVerified": true,
+  "uploadCompletedAt": "2026-10-12T04:51:26+02:00",
+  "iPhoneHSTSUIVerified": true
 }

@@ -125,3 +125,5 @@ Build 44 (source 09bb103) archived and uploaded successfully on 2026-10-12 at 04
 Build 45 (source 62f6a58) uploaded successfully 2026-10-12 04:36:16 CEST. Apple CT directory UI verified on iPhone simulator and all 123 app test methods passed. Processing completion, owner-group assignment and physical installation remain unverified pending browser authentication.
 
 Build 46 source 80dc69a uploaded successfully 2026-10-12 04:41:04 CEST. System CT true/false/nil display distinction tested; 124 app methods passed and positive native iPhone simulator view verified. Processing completion, owner-group assignment, physical installation and TestFlight feedback readback remain unverified pending browser authentication.
+
+Build47 source2726098 upload succeeded 2026-10-12 04:51:26 CEST, 128 app methods passed. Native HSTS missing/positive cases verified. QA observed artificial visual hyphenation of original field; correction is in worktree and native recheck pending, not in Build47. Processing and owner assignment remain unverified pending authentication.
