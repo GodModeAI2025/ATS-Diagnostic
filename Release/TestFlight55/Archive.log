@@ -156,15 +156,15 @@ ProcessProductPackaging /Users/markzimmermann/Library/Developer/Xcode/UserData/P
 
 ProcessProductPackaging "" /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/Preview55Archive/Build/Intermediates.noindex/ArchiveIntermediates/ATSDiagnosticPreview/IntermediateBuildFilesPath/ATSDiagnostic.build/Release-iphoneos/ATSDiagnosticPreview.build/ATSDiagnosticPreview.app.xcent (in target 'ATSDiagnosticPreview' from project 'ATSDiagnostic')
     cd /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/outputs/ATS-Diagnostic
-    
+
     Entitlements:
-    
+
     {
     "application-identifier" = "SP73Z8JWXM.com.mobilebox.atsdiagnostic.preview";
     "com.apple.developer.team-identifier" = SP73Z8JWXM;
     "get-task-allow" = 1;
 }
-    
+
     builtin-productPackagingUtility -entitlements -format xml -o /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/Preview55Archive/Build/Intermediates.noindex/ArchiveIntermediates/ATSDiagnosticPreview/IntermediateBuildFilesPath/ATSDiagnostic.build/Release-iphoneos/ATSDiagnosticPreview.build/ATSDiagnosticPreview.app.xcent
 
 ProcessProductPackagingDER /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/Preview55Archive/Build/Intermediates.noindex/ArchiveIntermediates/ATSDiagnosticPreview/IntermediateBuildFilesPath/ATSDiagnostic.build/Release-iphoneos/ATSDiagnosticPreview.build/ATSDiagnosticPreview.app.xcent /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/Preview55Archive/Build/Intermediates.noindex/ArchiveIntermediates/ATSDiagnosticPreview/IntermediateBuildFilesPath/ATSDiagnostic.build/Release-iphoneos/ATSDiagnosticPreview.build/ATSDiagnosticPreview.app.xcent.der (in target 'ATSDiagnosticPreview' from project 'ATSDiagnostic')
@@ -385,7 +385,7 @@ SwiftCompile normal arm64 Compiling\ ATSDiagnosticApp.swift,\ BackgroundWriteLea
 
 SwiftCompile normal arm64 (in target 'ATSDiagnosticPreview' from project 'ATSDiagnostic')
     cd /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/outputs/ATS-Diagnostic
-    
+
 
 /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/outputs/ATS-Diagnostic/App/TLSProbe.swift:78:74: warning: 'TLSv10' was deprecated in iOS 15.0: Use tls_protocol_version_TLSv12 or tls_protocol_version_TLSv13 instead. [#DeprecatedDeclaration]
 76 |         let url = try Endpoint.parse(input)
@@ -466,11 +466,11 @@ SetMode u+w,go-w,a+rX /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20
 
 CodeSign /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/Preview55Archive/Build/Intermediates.noindex/ArchiveIntermediates/ATSDiagnosticPreview/InstallationBuildProductsLocation/Applications/ATSDiagnosticPreview.app (in target 'ATSDiagnosticPreview' from project 'ATSDiagnostic')
     cd /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/outputs/ATS-Diagnostic
-    
+
     Signing Identity:     "Apple Development: Mark Zimmermann (7C5BQ547JU)"
     Provisioning Profile: "iOS Team Provisioning Profile: *"
                           (d79a9f40-1569-4e4f-8195-6e997f8c232e)
-    
+
     /usr/bin/codesign --force --sign BD9994FB5B6407D518A2C1EA5F786318F4EFD530 --entitlements /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/Preview55Archive/Build/Intermediates.noindex/ArchiveIntermediates/ATSDiagnosticPreview/IntermediateBuildFilesPath/ATSDiagnostic.build/Release-iphoneos/ATSDiagnosticPreview.build/ATSDiagnosticPreview.app.xcent --generate-entitlement-der /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/Preview55Archive/Build/Intermediates.noindex/ArchiveIntermediates/ATSDiagnosticPreview/InstallationBuildProductsLocation/Applications/ATSDiagnosticPreview.app
 
 RegisterExecutionPolicyException /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/Preview55Archive/Build/Intermediates.noindex/ArchiveIntermediates/ATSDiagnosticPreview/InstallationBuildProductsLocation/Applications/ATSDiagnosticPreview.app (in target 'ATSDiagnosticPreview' from project 'ATSDiagnostic')
@@ -492,4 +492,3 @@ PruneExplicitPrecompiledModules /Users/markzimmermann/Documents/Codex/2026-10-11
 PruneExplicitPrecompiledModules /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/Preview55Archive/SDKExplicitPrecompiledModules
 
 ** ARCHIVE SUCCEEDED **
-

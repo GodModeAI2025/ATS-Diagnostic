@@ -31,25 +31,25 @@ ClangStatCache /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefaul
 
 CodeSign /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/QueryParametersTests/Build/Products/Debug-iphonesimulator/ATSDiagnostic.app/ATSDiagnostic.debug.dylib (in target 'ATSDiagnostic' from project 'ATSDiagnostic')
     cd /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/outputs/ATS-Diagnostic
-    
+
     Signing Identity:     "Sign to Run Locally"
-    
+
     /usr/bin/codesign --force --sign - --timestamp\=none --generate-entitlement-der /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/QueryParametersTests/Build/Products/Debug-iphonesimulator/ATSDiagnostic.app/ATSDiagnostic.debug.dylib
 /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/QueryParametersTests/Build/Products/Debug-iphonesimulator/ATSDiagnostic.app/ATSDiagnostic.debug.dylib: replacing existing signature
 
 CodeSign /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/QueryParametersTests/Build/Products/Debug-iphonesimulator/ATSDiagnostic.app/__preview.dylib (in target 'ATSDiagnostic' from project 'ATSDiagnostic')
     cd /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/outputs/ATS-Diagnostic
-    
+
     Signing Identity:     "Sign to Run Locally"
-    
+
     /usr/bin/codesign --force --sign - --timestamp\=none --generate-entitlement-der /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/QueryParametersTests/Build/Products/Debug-iphonesimulator/ATSDiagnostic.app/__preview.dylib
 /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/QueryParametersTests/Build/Products/Debug-iphonesimulator/ATSDiagnostic.app/__preview.dylib: replacing existing signature
 
 CodeSign /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/QueryParametersTests/Build/Products/Debug-iphonesimulator/ATSDiagnostic.app (in target 'ATSDiagnostic' from project 'ATSDiagnostic')
     cd /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/outputs/ATS-Diagnostic
-    
+
     Signing Identity:     "Sign to Run Locally"
-    
+
     /usr/bin/codesign --force --sign - --timestamp\=none --generate-entitlement-der /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/QueryParametersTests/Build/Products/Debug-iphonesimulator/ATSDiagnostic.app
 /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/QueryParametersTests/Build/Products/Debug-iphonesimulator/ATSDiagnostic.app: replacing existing signature
 

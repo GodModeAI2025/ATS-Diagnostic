@@ -1,0 +1,124 @@
+Device orientation: Unknown
+------------------------
+Application bundle identifier: com.mobilebox.atsdiagnostic
+Application UI orientation: Portrait
+Application, pid: 66206, label: 'ATS Diagnostic'
+ Window, {{0.0, 0.0}, {402.0, 874.0}}, hitPoint: {201.0, 437.0}
+  Other, {{0.0, 0.0}, {402.0, 874.0}}, hitPoint: {201.0, 437.0}
+  Other, {{0.0, 0.0}, {402.0, 874.0}}, hitPoint: {201.0, 437.0}
+   Other, {{0.0, 0.0}, {402.0, 874.0}}, hitPoint: {201.0, 437.0}
+    Other, {{0.0, 0.0}, {402.0, 874.0}}, hitPoint: {201.0, 437.0}
+     Other, {{0.0, 0.0}, {402.0, 874.0}}, hitPoint: {201.0, 437.0}
+      Other, {{0.0, 0.0}, {402.0, 874.0}}, hitPoint: {201.0, 437.0}
+       Other, {{0.0, 0.0}, {402.0, 874.0}}, hitPoint: {201.0, 437.0}
+        Other, {{0.0, 0.0}, {402.0, 874.0}}, hitPoint: {201.0, 437.0}
+         Other, {{0.0, 0.0}, {402.0, 874.0}}, hitPoint: {201.0, 437.0}
+          Other, {{0.0, 0.0}, {402.0, 874.0}}, hitPoint: {201.0, 437.0}
+           Other, {{0.0, 0.0}, {402.0, 874.0}}, hitPoint: {201.0, 437.0}
+            Other, {{0.0, 0.0}, {402.0, 874.0}}, hitPoint: {201.0, 437.0}
+             NavigationBar, {{0.0, 62.0}, {402.0, 54.0}}, identifier: 'URL-Parameter', hitPoint: {201.0, 89.0}
+              Button, {{16.0, 62.0}, {44.0, 44.0}}, identifier: 'BackButton', label: 'Connection details', hitPoint: {38.0, 84.0}
+              StaticText, {{139.7, 73.7}, {122.3, 20.7}}, label: 'URL-Parameter', hitPoint: {200.8, 84.0}
+             Other, {{0.0, 0.0}, {402.0, 874.0}}, hitPoint: {201.0, 437.0}
+              Other, {{0.0, 0.0}, {402.0, 874.0}}, hitPoint: {201.0, 437.0}
+               Other, {{0.0, 0.0}, {402.0, 874.0}}, hitPoint: {201.0, 437.0}
+                Other, {{0.0, 0.0}, {402.0, 874.0}}, hitPoint: {201.0, 437.0}
+                 CollectionView, {{0.0, 0.0}, {402.0, 874.0}}, hitPoint: {201.0, 437.0}
+                  Other, {{-16.0, -1632.0}, {434.0, 1910.0}}, hitPoint: {201.0, 139.0}
+                  Other, {{0.0, 0.0}, {402.0, 874.0}}, hitPoint: {201.0, 437.0}
+                   Other, {{0.0, 0.0}, {402.0, 156.0}}, hitPoint: {201.0, 78.0}
+                   Other, {{0.0, 741.0}, {402.0, 133.0}}, hitPoint: {201.0, 807.5}
+                  Other, {{0.0, 0.0}, {402.0, 874.0}}, hitPoint: {201.0, 437.0}
+                  Cell, {{16.0, 116.0}, {370.0, 40.3}}, hitPoint: {201.0, 136.2}
+                   Other, {{16.0, 116.0}, {370.0, 40.3}}, hitPoint: {201.0, 136.2}
+                   Other, {{16.0, 116.0}, {370.0, 40.3}}, hitPoint: {201.0, 136.2}
+                    Other, {{16.0, 116.0}, {370.0, 40.3}}, hitPoint: {201.0, 136.2}
+                     Other, {{16.0, 116.0}, {370.0, 40.3}}, hitPoint: {201.0, 136.2}
+                      StaticText, {{16.0, 116.0}, {370.0, 40.3}}, label: 'URL', hitPoint: {201.0, 136.2}
+                  Cell, {{16.0, 156.3}, {370.0, 52.0}}, hitPoint: {201.0, 182.3}
+                   Other, {{16.0, 156.3}, {370.0, 52.0}}, hitPoint: {201.0, 182.3}
+                    Other, {{16.0, 156.3}, {370.0, 52.0}}, hitPoint: {201.0, 182.3}
+                   Other, {{16.0, 156.3}, {370.0, 52.0}}, hitPoint: {201.0, 182.3}
+                    Other, {{16.0, 156.3}, {370.0, 52.0}}, hitPoint: {201.0, 182.3}
+                     Other, {{16.0, 156.3}, {370.0, 52.0}}, hitPoint: {201.0, 182.3}
+                      StaticText, {{16.0, 156.3}, {370.0, 52.0}}, label: 'https://example.com', hitPoint: {201.0, 182.3}
+                  Cell, {{16.0, 208.3}, {370.0, 52.0}}, hitPoint: {201.0, 234.3}
+                   Other, {{16.0, 208.3}, {370.0, 52.0}}, hitPoint: {201.0, 234.3}
+                    Other, {{16.0, 208.3}, {370.0, 52.0}}, hitPoint: {201.0, 234.3}
+                   Other, {{16.0, 208.3}, {370.0, 52.0}}, hitPoint: {201.0, 234.3}
+                    Other, {{16.0, 208.3}, {370.0, 52.0}}, hitPoint: {201.0, 234.3}
+                     Other, {{16.0, 208.3}, {370.0, 52.0}}, hitPoint: {201.0, 234.3}
+                      Button, {{16.0, 208.3}, {370.0, 52.0}}, label: 'Original-URL kopieren', hitPoint: {201.0, 234.3}
+                       Image, {{33.0, 221.0}, {22.0, 27.0}}, identifier: 'doc.on.doc', label: 'Copy', hitPoint: {44.0, 234.5}
+                       StaticText, {{33.0, 221.0}, {207.0, 27.0}}, label: 'Original-URL kopieren', hitPoint: {136.5, 234.5}
+                  Other, {{32.0, 207.3}, {338.0, 1.0}}, hitPoint: {201.0, 207.8}
+                  Other, {{-16.0, 278.0}, {434.0, 139.0}}, hitPoint: {201.0, 347.5}
+                  Cell, {{16.0, 295.3}, {370.0, 52.0}}, hitPoint: {201.0, 321.3}
+                   Other, {{16.0, 295.3}, {370.0, 52.0}}, hitPoint: {201.0, 321.3}
+                    Other, {{16.0, 295.3}, {370.0, 52.0}}, hitPoint: {201.0, 321.3}
+                   Other, {{16.0, 295.3}, {370.0, 52.0}}, hitPoint: {201.0, 321.3}
+                    Other, {{16.0, 295.3}, {370.0, 52.0}}, hitPoint: {201.0, 321.3}
+                     Other, {{16.0, 295.3}, {370.0, 52.0}}, hitPoint: {201.0, 321.3}
+                      StaticText, {{16.0, 295.3}, {370.0, 52.0}}, label: 'Keine Query-Parameter', hitPoint: {201.0, 321.3}
+                      Image, {{31.3, 311.7}, {25.3, 19.7}}, identifier: 'list.bullet.rectangle', label: 'Bulleted List In A Rectangle', hitPoint: {44.0, 321.5}
+                  Cell, {{16.0, 347.3}, {370.0, 52.0}}, hitPoint: {201.0, 373.3}
+                   Other, {{16.0, 347.3}, {370.0, 52.0}}, hitPoint: {201.0, 373.3}
+                    Other, {{16.0, 347.3}, {370.0, 52.0}}, hitPoint: {201.0, 373.3}
+                   Other, {{16.0, 347.3}, {370.0, 52.0}}, hitPoint: {201.0, 373.3}
+                    Other, {{16.0, 347.3}, {370.0, 52.0}}, hitPoint: {201.0, 373.3}
+                     Other, {{16.0, 347.3}, {370.0, 52.0}}, hitPoint: {201.0, 373.3}
+                      StaticText, {{16.0, 347.3}, {370.0, 52.0}}, label: 'Diese URL enthält keine Abfrage.', hitPoint: {201.0, 373.3}
+                  Other, {{72.0, 346.3}, {298.0, 1.0}}, hitPoint: {221.0, 346.8}
+                  Other, {{-16.0, 417.0}, {434.0, 1885.3}}, hitPoint: {201.0, 645.5}
+                  Cell, {{16.0, 434.3}, {370.0, 99.7}}, hitPoint: {201.0, 484.2}
+                   Other, {{16.0, 434.3}, {370.0, 99.7}}, hitPoint: {201.0, 484.2}
+                    Other, {{16.0, 434.3}, {370.0, 99.7}}, hitPoint: {201.0, 484.2}
+                   Other, {{16.0, 434.3}, {370.0, 99.7}}, hitPoint: {201.0, 484.2}
+                    Other, {{16.0, 434.3}, {370.0, 99.7}}, hitPoint: {201.0, 484.2}
+                     Other, {{16.0, 434.3}, {370.0, 99.7}}, hitPoint: {201.0, 484.2}
+                      StaticText, {{16.0, 434.3}, {370.0, 99.7}}, label: 'Gleiche Namen bleiben als einzelne Parameter erhalten. Pluszeichen bleiben „+“. Prozent-Codierung wird einmal dekodiert; Steuerzeichen werden sichtbar maskiert; Backslashes erscheinen verdoppelt.', hitPoint: {201.0, 484.2}
+                  Other, {{369.0, 116.0}, {30.0, 675.0}}, label: 'Vertical scroll bar, 1 page', value: 0 %, hitPoint: {384.0, 453.5}
+                   Other, {{396.0, 781.0}, {3.0, 7.0}}, hitPoint: {397.5, 784.5}
+                  Other, {{369.0, 116.0}, {30.0, 675.0}}, label: 'Vertical scroll bar, 1 page', value: 0 %, hitPoint: {384.0, 453.5}
+                   Other, {{396.0, 781.0}, {3.0, 7.0}}, hitPoint: {397.5, 784.5}
+             Toolbar, {{0.0, 0.0}, {402.0, 874.0}}, identifier: 'Toolbar', label: 'Toolbar', hitPoint: {201.0, 437.0}
+              Other, {{0.0, 0.0}, {402.0, 874.0}}, hitPoint: {201.0, 437.0}
+       Other, {{0.0, 0.0}, {402.0, 874.0}}, hitPoint: {201.0, 437.0}
+        Other, {{0.0, 791.0}, {402.0, 83.0}}, hitPoint: {201.0, 832.5}
+         Other, {{0.0, 0.0}, {402.0, 874.0}}, hitPoint: {201.0, 437.0}
+          TabBar, {{0.0, 791.0}, {402.0, 83.0}}, label: 'Tab Bar', hitPoint: {201.0, 832.5}
+           Other, {{21.0, 791.0}, {360.0, 62.0}}, hitPoint: {201.0, 822.0}
+            Other, {{21.0, 791.0}, {85.1, 54.0}}, hitPoint: {63.6, 818.0}
+            Other, {{21.0, 791.0}, {360.0, 62.0}}, hitPoint: {201.0, 822.0}
+             Button, {{25.0, 795.0}, {85.1, 54.0}}, identifier: 'checkmark.shield', label: 'Inspect', hitPoint: {67.6, 822.0}
+              Image, {{55.3, 801.7}, {24.7, 26.7}}, identifier: 'checkmark.shield.fill', label: 'Checkmark in a filled shield', hitPoint: {67.7, 815.0}
+             Button, {{90.1, 795.0}, {89.9, 54.0}}, identifier: 'arrow.up.arrow.down', label: 'Requests', hitPoint: {135.1, 822.0}
+              Image, {{118.4, 801.7}, {33.0, 26.3}}, identifier: 'arrow.up.arrow.down', label: 'sort', hitPoint: {134.9, 814.8}
+             Button, {{160.1, 795.0}, {86.7, 54.0}}, identifier: 'network', label: 'Erfassen', hitPoint: {203.4, 822.0}
+              Image, {{189.7, 801.3}, {27.3, 27.3}}, identifier: 'network', label: 'Network nodes connected by lines', hitPoint: {203.4, 815.0}
+             Button, {{226.8, 795.0}, {85.1, 54.0}}, identifier: 'clock', label: 'History', Selected, hitPoint: {269.3, 822.0}
+              Image, {{255.8, 801.3}, {27.3, 27.3}}, identifier: 'clock.fill', label: 'clock', hitPoint: {269.4, 815.0}
+             Button, {{291.9, 795.0}, {85.1, 54.0}}, identifier: 'wrench.and.screwdriver', label: 'Tools', hitPoint: {334.4, 822.0}
+              Image, {{318.2, 799.3}, {32.7, 31.7}}, identifier: 'wrench.and.screwdriver.fill', label: 'Wrench and screwdriver, filled', hitPoint: {334.6, 815.2}
+            Other, {{21.0, 791.0}, {360.0, 62.0}}, hitPoint: {201.0, 822.0}
+            Other, {{226.8, 795.0}, {85.1, 54.0}}, hitPoint: {269.3, 822.0}
+             Other, {{226.8, 795.0}, {85.0, 54.0}}, hitPoint: {269.3, 822.0}
+              Other, {{226.8, 795.0}, {85.0, 54.0}}, hitPoint: {269.3, 822.0}
+              Other, {{226.8, 795.0}, {85.0, 54.0}}, hitPoint: {269.3, 822.0}
+               Other, {{226.8, 795.0}, {85.0, 54.0}}, hitPoint: {269.3, 822.0}
+                Other, {{226.8, 795.0}, {85.0, 54.0}}, hitPoint: {269.3, 822.0}
+                 Other, {{226.8, 795.0}, {85.0, 54.0}}, hitPoint: {269.3, 822.0}
+                Other, {{226.8, 795.0}, {85.0, 54.0}}, hitPoint: {269.3, 822.0}
+               Other, {{226.8, 795.0}, {85.0, 54.0}}, hitPoint: {269.3, 822.0}
+         Other, {{0.0, 791.0}, {402.0, 83.0}}, hitPoint: {201.0, 832.5}
+          Other, {{0.0, 791.0}, {402.0, 83.0}}, hitPoint: {201.0, 832.5}
+           Other, {{0.0, 791.0}, {402.0, 83.0}}, hitPoint: {201.0, 832.5}
+            Other, {{0.0, 791.0}, {402.0, 83.0}}, hitPoint: {201.0, 832.5}
+             Other, {{0.0, 791.0}, {402.0, 83.0}}, hitPoint: {201.0, 832.5}
+              Other, {{0.0, 791.0}, {402.0, 83.0}}, hitPoint: {201.0, 832.5}
+            Other, {{0.0, 791.0}, {402.0, 83.0}}, hitPoint: {201.0, 832.5}
+             Other, {{0.0, 791.0}, {402.0, 83.0}}, hitPoint: {201.0, 832.5}
+      Other, {{0.0, 62.0}, {402.0, 778.0}}, hitPoint: {201.0, 451.0}
+ Window, {{0.0, 0.0}, {402.0, 874.0}}, hitPoint: {201.0, 437.0}
+  Other, {{0.0, 0.0}, {402.0, 874.0}}, hitPoint: {201.0, 437.0}
+   Other, {{0.0, 0.0}, {402.0, 874.0}}, hitPoint: {201.0, 437.0}
