@@ -208,6 +208,68 @@ struct RecordingClientTests {
         #expect(record.responseSHA256 == nil)
     }
 
+    @MainActor @Test func structuredStreamEarlyReturnRecordsPartialWithoutInventingFailure() async throws {
+        let recorder = try RecordingClient(previewLimit: 2)
+        let session = session(); defer { session.invalidateAndCancel() }
+        let result = try await recorder.withBytes(for: URLRequest(url: URL(string: "https://fixture.invalid/body")!), using: session) { @MainActor stream, _ in
+            var result = Data()
+            for try await byte in stream { result.append(byte); if result.count == 3 { break } }
+            return result
+        }
+        #expect(result == Data([0, 1, 2]))
+        let record = try #require(await recorder.records().first)
+        #expect(record.responseBytes == 3); #expect(record.responseComplete == false)
+        #expect(record.responseBodyPreview == Data([0, 1]))
+        #expect(record.responseSHA256 == nil); #expect(record.errorCode == nil)
+        let har = try await recorder.harData()
+        let root = try #require(try JSONSerialization.jsonObject(with: har) as? [String: Any])
+        let log = try #require(root["log"] as? [String: Any])
+        let entry = try #require((log["entries"] as? [[String: Any]])?.first)
+        let metadata = try #require(entry["_atsDiagnostic"] as? [String: Any])
+        let response = try #require(entry["response"] as? [String: Any])
+        #expect(metadata["responseComplete"] as? Bool == false)
+        #expect(metadata["responseBytesKnown"] as? Bool == false)
+        #expect(metadata["observedResponseBytes"] as? Int == 3)
+        #expect(response["bodySize"] as? Int == -1)
+    }
+    @Test func structuredConsumerErrorIsNotMisreportedAsTransportError() async throws {
+        enum ConsumerFailure: Error { case parsing }
+        let recorder = try RecordingClient()
+        let session = session(); defer { session.invalidateAndCancel() }
+        do {
+            let _: Int = try await recorder.withBytes(for: URLRequest(url: URL(string: "https://fixture.invalid/body")!), using: session) { stream, _ in
+                for try await _ in stream { throw ConsumerFailure.parsing }
+                return 0
+            }
+            Issue.record("Expected consumer error")
+        } catch { #expect(error is ConsumerFailure) }
+        let record = try #require(await recorder.records().first)
+        #expect(record.responseBytes == 1); #expect(record.responseComplete == false)
+        #expect(record.errorDomain == nil); #expect(record.responseSHA256 == nil)
+    }
+    @Test func structuredEOFDoesNotDowngradeOrDuplicateCompleteRecord() async throws {
+        let recorder = try RecordingClient(previewLimit: 0)
+        let session = session(); defer { session.invalidateAndCancel() }
+        let count = try await recorder.withBytes(for: URLRequest(url: URL(string: "https://fixture.invalid/body")!), using: session) { stream, _ in
+            var count = 0
+            for try await _ in stream { count += 1 }
+            return count
+        }
+        #expect(count == 4096)
+        let records = await recorder.records(); #expect(records.count == 1)
+        #expect(records.first?.responseComplete == true)
+        #expect(records.first?.responseSHA256 != nil)
+    }
+    @Test func structuredNeverConsumedBodyRemainsUnknownInHAR() async throws {
+        let recorder = try RecordingClient()
+        let session = session(); defer { session.invalidateAndCancel() }
+        let result = try await recorder.withBytes(for: URLRequest(url: URL(string: "https://fixture.invalid/body")!), using: session) { _, _ in "headers only" }
+        #expect(result == "headers only")
+        let record = try #require(await recorder.records().first)
+        #expect(record.responseBytes == 0); #expect(record.responseComplete == false)
+        #expect(record.responseSHA256 == nil); #expect(record.errorCode == nil)
+    }
+
     @Test func tooSmallJournalCannotChangeSuccessfulResponse() async throws {
         let recorder = try RecordingClient(byteLimit: 2)
         let session = session(); defer { session.invalidateAndCancel() }

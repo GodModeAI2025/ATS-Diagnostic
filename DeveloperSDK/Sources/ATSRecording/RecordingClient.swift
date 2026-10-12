@@ -14,6 +14,7 @@ public struct RecordedExchange: Codable, Sendable, Identifiable {
     public let responseBodyPreview: Data
     public let responseBytes: Int?
     public let responseSHA256: String?
+    public let responseComplete: Bool?
     public let duration: Double
     public let errorDomain: String?
     public let errorCode: Int?
@@ -152,8 +153,21 @@ public actor RecordingClient {
             throw error
         }
     }
+    /// Finalizes observation when the consumer scope ends, including early returns.
+    public func withBytes<Result: Sendable>(for request: URLRequest, using session: URLSession, consume: @Sendable @isolated(any) (RecordingByteStream, URLResponse) async throws -> Result) async throws -> Result {
+        let (stream, response) = try await bytes(for: request, using: session)
+        do {
+            let result = try await consume(stream, response)
+            await stream.finishRecording()
+            return result
+        } catch {
+            // A parser/consumer error is not a server transport error.
+            await stream.finishRecording()
+            throw error
+        }
+    }
     func recordStream(request: URLRequest, response: URLResponse, date: Date, began: ContinuousClock.Instant, preview: Data, count: Int, hash: String?, error: NSError?) {
-        try? append(makeRecord(request: request, date: date, began: began, data: preview, response: response as? HTTPURLResponse, error: error, responseByteCount: count, responseHash: hash, completeResponse: error == nil))
+        try? append(makeRecord(request: request, date: date, began: began, data: preview, response: response as? HTTPURLResponse, error: error, responseByteCount: count, responseHash: hash, completeResponse: hash != nil))
     }
 
     public func records() -> [RecordedExchange] { journal.map(\.record) }
@@ -202,6 +216,6 @@ public actor RecordingClient {
         let time = began.duration(to: .now).components
         let headers = response?.allHeaderFields.reduce(into: [String: String]()) { result, item in result[String(describing: item.key)] = String(describing: item.value) } ?? [:]
         let body = requestBodyUnknown ? nil : request.httpBody
-        return RecordedExchange(id: UUID(), date: date, url: request.url?.absoluteString ?? "", method: request.httpMethod ?? "GET", requestHeaders: request.allHTTPHeaderFields ?? [:], requestBodyPreview: preview(body), requestBodyBytes: requestBodyUnknown ? nil : (body?.count ?? (request.httpBodyStream == nil ? 0 : nil)), status: response?.statusCode, responseHeaders: headers, responseBodyPreview: preview(data), responseBytes: responseByteCount ?? data?.count, responseSHA256: completeResponse ? (responseHash ?? data.map { SHA256.hash(data: $0).map { String(format: "%02x", $0) }.joined() }) : nil, duration: Double(time.seconds) + Double(time.attoseconds) / 1e18, errorDomain: error?.domain, errorCode: error?.code, errorDescription: error?.localizedDescription)
+        return RecordedExchange(id: UUID(), date: date, url: request.url?.absoluteString ?? "", method: request.httpMethod ?? "GET", requestHeaders: request.allHTTPHeaderFields ?? [:], requestBodyPreview: preview(body), requestBodyBytes: requestBodyUnknown ? nil : (body?.count ?? (request.httpBodyStream == nil ? 0 : nil)), status: response?.statusCode, responseHeaders: headers, responseBodyPreview: preview(data), responseBytes: responseByteCount ?? data?.count, responseSHA256: completeResponse ? (responseHash ?? data.map { SHA256.hash(data: $0).map { String(format: "%02x", $0) }.joined() }) : nil, responseComplete: data != nil && completeResponse && error == nil, duration: Double(time.seconds) + Double(time.attoseconds) / 1e18, errorDomain: error?.domain, errorCode: error?.code, errorDescription: error?.localizedDescription)
     }
 }
