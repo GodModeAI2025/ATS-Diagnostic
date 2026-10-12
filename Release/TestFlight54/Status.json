@@ -5,9 +5,9 @@
   "build": 54,
   "sourceCommit": "850cbd2",
   "archive": "succeeded",
-  "upload": "in_progress",
-  "processing": "not_verified",
-  "testFlightAssignment": "not_verified",
+  "upload": "failed_account_access",
+  "processing": "not_uploaded",
+  "testFlightAssignment": "not_assigned",
   "intendedTester": "mark_zimmermann@mac.com",
   "unitTestMethodsPassed": 151,
   "connectStressExecutions": 8,
@@ -15,5 +15,6 @@
   "simulatorUIAndRuleRestartVerified": true,
   "privacyManifestContainerReason": "C617.1",
   "deviceInstallationVerified": false,
-  "storeBuild50": "unchanged"
+  "storeBuild50": "unchanged",
+  "blockingCondition": "Xcode requires App Store Connect access; Mac locked prevents account UI inspection"
 }
