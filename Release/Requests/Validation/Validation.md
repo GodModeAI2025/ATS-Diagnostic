@@ -4,4 +4,4 @@ Methoden und Header-Namen werden vor URLRequest-Settern als nicht leere HTTP-Tok
 
 Importierte ungültige Anfragefelder bleiben lesbar, deaktivieren jedoch Replay/cURL. Der Formatfehler wird unabhängig von einem fehlenden Anfragekörper erklärt. Vier neue Tests und die volle 118-Methoden-App-Suite bestehen auf dem isolierten iPad ohne Fehler/Warnungen.
 
-Native Files-Picker-/Disabled-Button-Prüfung läuft noch. Diese Änderung ist nicht in hochgeladenem Build42 enthalten.
+Native iPhone-Files-Picker-Prüfung bestanden: Ungültige Anfragefelder/konkrete Header-Wert-Meldung sichtbar, Replay und cURL AX-disabled, kein falscher Missing-Body-Hinweis. Bericht bleibt lesbar, keine Anfrage ausgelöst. Session geschlossen; PNG/AX unter Release/Screenshots/Request-Validation-*. Diese Änderung ist nicht in hochgeladenem Build42 enthalten.

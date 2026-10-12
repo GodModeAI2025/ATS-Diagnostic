@@ -1,0 +1,7 @@
+ATS Diagnostic 2.0 (43)
+
+Ungültige HTTP-Methoden oder Header werden vor der Netzwerkausführung verständlich erklärt. Importierte Anfragefelder bleiben lesbar; bei ungültigem Format sind Wiederholung und cURL-Ausgabe deaktiviert. Fehlende Anfragekörper und ungültige Felder werden getrennt erläutert. Gültige eigene HTTP-Methoden, UTF-8-Werte und Windows-Zeilenenden bleiben nutzbar.
+
+Enthält außerdem die Teilantwort-Anzeige aus Build 42 sowie asynchrones Laden und geschützte Verlaufsspeicherung.
+
+Testhinweis: Ungültige importierte Header müssen eine klare Formatmeldung statt einer ausgeführten Wiederholung zeigen.
