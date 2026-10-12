@@ -36,7 +36,7 @@ struct HSTSPolicyView: View {
                     Text("Importierter Bericht: Transportvertrauen und Browserwirkung sind hier nicht unabhängig bestätigt.").foregroundStyle(.secondary)
                 }
             }
-            if let raw = fields.first { Section("Originalwert") { Text(raw).font(.callout.monospaced()).textSelection(.enabled) } }
+            if let raw = fields.first { Section("Originalwert") { ScrollView(.horizontal) { Text(raw).font(.callout.monospaced()).textSelection(.enabled).fixedSize(horizontal: true, vertical: false) } } }
             Section { Link("HSTS-Spezifikation · RFC 6797", destination: URL(string: "https://www.rfc-editor.org/rfc/rfc6797.html")!) }
         }.navigationTitle("HSTS").navigationBarTitleDisplayMode(.inline)
     }
