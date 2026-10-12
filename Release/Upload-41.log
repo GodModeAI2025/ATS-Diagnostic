@@ -160,10 +160,10 @@
 2026-10-12 02:44:30.745 xcodebuild[81942:22165903] Progress 0 %: Uploading to App Store Connect…
 2026-10-12 02:44:30.746 xcodebuild[81942:22165903] Progress 0 %: Uploading to App Store Connect…
 2026-10-12 02:44:30.746 xcodebuild[81942:22165903] Progress 0 %: Uploading to App Store Connect…
-2026-10-12 02:44:30.746 xcodebuild[81942:22165903] Progress 0 %: 
-2026-10-12 02:44:31.165 xcodebuild[81942:22165903] Progress 100 %: 
-2026-10-12 02:44:31.166 xcodebuild[81942:22165903] Progress 100 %: 
-2026-10-12 02:44:32.434 xcodebuild[81942:22165903] Progress 0 %: 
+2026-10-12 02:44:30.746 xcodebuild[81942:22165903] Progress 0 %:
+2026-10-12 02:44:31.165 xcodebuild[81942:22165903] Progress 100 %:
+2026-10-12 02:44:31.166 xcodebuild[81942:22165903] Progress 100 %:
+2026-10-12 02:44:32.434 xcodebuild[81942:22165903] Progress 0 %:
 2026-10-12 02:44:32.435 xcodebuild[81942:22165903] Progress 0 %: Getting upload status…
 2026-10-12 02:44:32.956 xcodebuild[81942:22165903] Progress 0 %: Completing upload…
 2026-10-12 02:44:34.665 xcodebuild[81942:22165903] Progress 0 %: Uploading “ATSDiagnosticPreview.ipa” is complete.
@@ -175,4 +175,3 @@
 2026-10-12 02:44:35.018 xcodebuild[81942:22165903] Progress 100 %: Upload succeeded.
 Uploaded ATSDiagnosticPreview
 ** EXPORT SUCCEEDED **
-
