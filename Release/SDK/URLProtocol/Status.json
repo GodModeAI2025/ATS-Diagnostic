@@ -1,15 +1,19 @@
 {
-  "verifiedAt": "2026-10-12T13:18:30.306318+02:00",
+  "verifiedAt": "2026-10-12T13:25:18.816729+02:00",
   "baseCommit": "3102ccb",
-  "feature": "Automatic URLProtocol recording, with explicit forwarding-transport policies",
-  "macOSTestMethodsPassed": 55,
-  "iOSTestMethodsPassed": 55,
-  "iOSExecutionsPassed": 63,
+  "feature": "Automatic URLProtocol recording with transport-policy and seeded-cache verification",
+  "macOSTestMethodsPassed": 57,
+  "iOSTestMethodsPassed": 57,
+  "iOSExecutionsPassed": 66,
   "failed": 0,
   "skipped": 0,
   "runtimeWarnings": 0,
   "appBinaryChanged": false,
   "uploadedPreviewBuildUnchanged": 54,
   "existingSessionDelegateParity": false,
-  "proofDirectory": "TransportPolicy"
+  "proofDirectory": "CacheBehavior",
+  "codeBaseCommit": "248a520",
+  "productionCodeChanged": false,
+  "completeCacheParity": false,
+  "completeHistoricalParity": false
 }

@@ -1,0 +1,173 @@
+Building for debugging...
+[1 / 5]
+Build complete! (0,23 Sek.)
+Test Suite 'All tests' started at 2026-10-12 13:22:31.516.
+Test Suite 'All tests' passed at 2026-10-12 13:22:31.516.
+	 Executed 0 tests, with 0 failures (0 unexpected) in 0.000 (0.001) seconds
+◇ Test run started.
+↳ Testing Library Version: 2084
+↳ Target Platform: arm64e-apple-macos14.0
+◇ Suite RecordingActivationTests started.
+◇ Suite RecordingMetricsTests started.
+◇ Suite RecordingSessionDelegateLiveTests started.
+◇ Suite URLProtocolCacheTests started.
+◇ Suite LiveHTTPSRecordingTests started.
+◇ Suite RecordingClientTests started.
+◇ Suite RecordingSessionDelegateTests started.
+◇ Suite LiveRecordingMetricsTests started.
+◇ Test cacheHitsKeepResponseAndProduceIndividualJournalEntries(_:) started.
+◇ Suite RecordingURLProtocolTests started.
+◇ Test nativeHTTPSPreservesBodyOrOriginalTrustFailure(_:) started.
+◇ Test hostCanRejectRedirectThroughObserver() started.
+◇ Test missingAndInvalidIntervalsStayUnknown() started.
+◇ Test hostRedirectAndCompletionCallbacksAreForwarded() started.
+◇ Test liveResponseIsReturnedAndRecorded() started.
+◇ Test streamingCertificateFailurePreservesDefaultSessionRejection(_:) started.
+◇ Suite LiveURLProtocolTests started.
+◇ Test certificateFailureMatchesTheUnwrappedSession(_:) started.
+◇ Test sharedObserverSeparatesIdenticalTaskNumbersAcrossSessions() started.
+◇ Test metricsKeepOriginalCertificateRejection(_:) started.
+◇ Test realHTTPSMetricsAndCompleteResponse() started.
+◇ Suite ResponseAccumulatorTests started.
+◇ Test liveHostRedirectDecisionIsPreserved() started.
+◇ Test delegateReceivesUnchangedBodyAndOriginalFailure(partial:) started.
+◇ Test case passing 1 argument policy → NSURLRequestCachePolicy(rawValue: 3) to cacheHitsKeepResponseAndProduceIndividualJournalEntries(_:) started.
+◇ Test liveStreamingResponseKeepsEveryByteAndFullHash() started.
+◇ Test streamingPreservesEveryByteAndFullMultiChunkHash() started.
+◇ Test observerLimitCanBeReleasedExplicitly() started.
+◇ Test hostReceivesTheCorrectTriggerAndCanDisableIt() started.
+◇ Test case passing 1 argument url → "https://expired.badssl.com/" to nativeHTTPSPreservesBodyOrOriginalTrustFailure(_:) started.
+◇ Test case passing 1 argument url → "https://wrong.host.badssl.com/" to nativeHTTPSPreservesBodyOrOriginalTrustFailure(_:) started.
+◇ Test originalPostBodyAndHeadersReachTheSession() started.
+◇ Test structuredStreamEarlyReturnRecordsPartialWithoutInventingFailure() started.
+◇ Test disabledActivationDoesNotPresentAnything() started.
+◇ Test case passing 1 argument target → "https://expired.badssl.com/" to certificateFailureMatchesTheUnwrappedSession(_:) started.
+◇ Test case passing 1 argument target → "https://expired.badssl.com/" to streamingCertificateFailurePreservesDefaultSessionRejection(_:) started.
+◇ Test structuredConsumerErrorIsNotMisreportedAsTransportError() started.
+◇ Test noHandlerLeavesMotionUnhandled() started.
+◇ Test uploadRecordsExplicitBodyAndPreservesResponse() started.
+◇ Test downloadWithZeroPreviewKeepsFullFileAndDigest() started.
+◇ Test case passing 1 argument target → "https://wrong.host.badssl.com/" to certificateFailureMatchesTheUnwrappedSession(_:) started.
+◇ Test fileUploadKeepsBodyFileBackedAndMarksJournalUnavailable() started.
+◇ Test case passing 1 argument url → "https://example.com/" to nativeHTTPSPreservesBodyOrOriginalTrustFailure(_:) started.
+◇ Test case passing 1 argument target → "https://wrong.host.badssl.com/" to streamingCertificateFailurePreservesDefaultSessionRejection(_:) started.
+◇ Test case passing 1 argument target → "https://expired.badssl.com/" to metricsKeepOriginalCertificateRejection(_:) started.
+◇ Test countAndEncodedBudgetAreRespected() started.
+◇ Test structuredNeverConsumedBodyRemainsUnknownInHAR() started.
+◇ Test harMarksPartialRequestsAndUnknownProtocol() started.
+◇ Test automaticAsyncDataPreservesEveryByteAndBoundsJournal() started.
+◇ Test downloadPreservesFileAndHashesBeyondPreview() started.
+◇ Test uploadFailurePreservesTransportError() started.
+◇ Test case passing 1 argument target → "https://wrong.host.badssl.com/" to metricsKeepOriginalCertificateRejection(_:) started.
+◇ Test structuredEOFDoesNotDowngradeOrDuplicateCompleteRecord() started.
+◇ Test tooSmallJournalCannotChangeSuccessfulResponse() started.
+◇ Test originalFailureIsPreservedAndRecorded() started.
+◇ Test fullResponseSurvivesZeroPreview() started.
+◇ Test downloadFailurePreservesOriginalError() started.
+◇ Test streamingInitialFailureRetainsUnknownResponse() started.
+◇ Test slowObserverCanDetectGapsAndReloadCurrentJournal() started.
+◇ Test observationsReportRecordingAndClearThenFinish() started.
+◇ Test streamingZeroPreviewStillCountsAndHashesFullBody() started.
+◇ Test streamingFailureRecordsObservedPartialBytesWithoutCompleteHash() started.
+◇ Test metricObserversPreserveAllControlledTransferResults() started.
+◇ Test observationDoesNotRetainItsProducer() started.
+◇ Test case passing 1 argument partial → false to delegateReceivesUnchangedBodyAndOriginalFailure(partial:) started.
+◇ Test case passing 1 argument partial → true to delegateReceivesUnchangedBodyAndOriginalFailure(partial:) started.
+◇ Test nativeHTTPResponseAndRedirectMetrics(_:) started.
+◇ Test partialFailureKeepsCountWithoutHash() started.
+✔ Test missingAndInvalidIntervalsStayUnknown() passed after 0.006 seconds.
+◇ Test emptySuccessHasEmptyDigest() started.
+◇ Test chunksPreserveFullDigestAndBoundedPrefix() started.
+✔ Test hostRedirectAndCompletionCallbacksAreForwarded() passed after 0.006 seconds.
+◇ Test case passing 1 argument target → "https://example.com/" to nativeHTTPResponseAndRedirectMetrics(_:) started.
+✔ Suite RecordingMetricsTests passed after 0.006 seconds.
+✔ Test observationDoesNotRetainItsProducer() passed after 0.006 seconds.
+✔ Test partialFailureKeepsCountWithoutHash() passed after 0.001 seconds.
+✔ Test observerLimitCanBeReleasedExplicitly() passed after 0.006 seconds.
+✔ Test noHandlerLeavesMotionUnhandled() passed after 0.006 seconds.
+✔ Test hostReceivesTheCorrectTriggerAndCanDisableIt() passed after 0.006 seconds.
+✔ Test disabledActivationDoesNotPresentAnything() passed after 0.006 seconds.
+✔ Test emptySuccessHasEmptyDigest() passed after 0.001 seconds.
+✔ Suite RecordingActivationTests passed after 0.006 seconds.
+✔ Test chunksPreserveFullDigestAndBoundedPrefix() passed after 0.001 seconds.
+✔ Suite ResponseAccumulatorTests passed after 0.006 seconds.
+✔ Test downloadFailurePreservesOriginalError() passed after 0.008 seconds.
+✔ Test downloadWithZeroPreviewKeepsFullFileAndDigest() passed after 0.009 seconds.
+✔ Test uploadFailurePreservesTransportError() passed after 0.018 seconds.
+✔ Test originalFailureIsPreservedAndRecorded() passed after 0.018 seconds.
+✔ Test originalPostBodyAndHeadersReachTheSession() passed after 0.018 seconds.
+✔ Test downloadPreservesFileAndHashesBeyondPreview() passed after 0.018 seconds.
+✔ Test harMarksPartialRequestsAndUnknownProtocol() passed after 0.019 seconds.
+✔ Test structuredStreamEarlyReturnRecordsPartialWithoutInventingFailure() passed after 0.019 seconds.
+✔ Test uploadRecordsExplicitBodyAndPreservesResponse() passed after 0.027 seconds.
+✔ Test streamingInitialFailureRetainsUnknownResponse() passed after 0.028 seconds.
+✔ Test structuredNeverConsumedBodyRemainsUnknownInHAR() passed after 0.028 seconds.
+✔ Test structuredEOFDoesNotDowngradeOrDuplicateCompleteRecord() passed after 0.028 seconds.
+✔ Test fullResponseSurvivesZeroPreview() passed after 0.028 seconds.
+✔ Test observationsReportRecordingAndClearThenFinish() passed after 0.029 seconds.
+✔ Test slowObserverCanDetectGapsAndReloadCurrentJournal() passed after 0.029 seconds.
+✔ Test tooSmallJournalCannotChangeSuccessfulResponse() passed after 0.029 seconds.
+✔ Test structuredConsumerErrorIsNotMisreportedAsTransportError() passed after 0.030 seconds.
+✔ Test sharedObserverSeparatesIdenticalTaskNumbersAcrossSessions() passed after 0.030 seconds.
+✔ Test fileUploadKeepsBodyFileBackedAndMarksJournalUnavailable() passed after 0.030 seconds.
+✔ Test countAndEncodedBudgetAreRespected() passed after 0.040 seconds.
+✔ Test automaticAsyncDataPreservesEveryByteAndBoundsJournal() passed after 0.048 seconds.
+◇ Test automaticCompletionHandlerPreservesOriginalFailure() started.
+◇ Test case passing 1 argument policy → NSURLRequestCachePolicy(rawValue: 0) to cacheHitsKeepResponseAndProduceIndividualJournalEntries(_:) started.
+✔ Test streamingPreservesEveryByteAndFullMultiChunkHash() passed after 0.049 seconds.
+✔ Test automaticCompletionHandlerPreservesOriginalFailure() passed after 0.001 seconds.
+◇ Test automaticPostPreservesRequestBodyAndHeaders() started.
+✔ Test automaticPostPreservesRequestBodyAndHeaders() passed after 0.001 seconds.
+◇ Test partialTransportFailureKeepsObservedBytesWithoutCompleteHash() started.
+✔ Test metricObserversPreserveAllControlledTransferResults() passed after 0.050 seconds.
+✔ Test cacheHitsKeepResponseAndProduceIndividualJournalEntries(_:) with 2 test cases passed after 0.059 seconds.
+SDK_LIVE_PROOF example.com HTTP 200 bytes 577 preview 16
+✔ Test liveResponseIsReturnedAndRecorded() passed after 0.059 seconds.
+◇ Test explicitCacheBypassKeepsTheActualNetworkFailure() started.
+✔ Test realHTTPSMetricsAndCompleteResponse() passed after 0.065 seconds.
+✔ Test explicitCacheBypassKeepsTheActualNetworkFailure() passed after 0.008 seconds.
+✔ Suite URLProtocolCacheTests passed after 0.068 seconds.
+SDK_STREAM_LIVE_PROOF example.com HTTP 200 bytes 577 full SHA256 matched
+✔ Test liveStreamingResponseKeepsEveryByteAndFullHash() passed after 0.068 seconds.
+✔ Test streamingZeroPreviewStillCountsAndHashesFullBody() passed after 0.071 seconds.
+✔ Test hostCanRejectRedirectThroughObserver() passed after 0.116 seconds.
+✔ Test liveHostRedirectDecisionIsPreserved() passed after 0.118 seconds.
+SDK_PROTOCOL_NATIVE https://example.com/ status200 bytes577 redirects0
+◇ Test case passing 1 argument target → "https://enbw.com/" to nativeHTTPResponseAndRedirectMetrics(_:) started.
+✔ Test delegateReceivesUnchangedBodyAndOriginalFailure(partial:) with 2 test cases passed after 0.230 seconds.
+✔ Test streamingFailureRecordsObservedPartialBytesWithoutCompleteHash() passed after 0.230 seconds.
+✔ Suite RecordingSessionDelegateTests passed after 0.231 seconds.
+✔ Suite RecordingClientTests passed after 0.230 seconds.
+✔ Test partialTransportFailureKeepsObservedBytesWithoutCompleteHash() passed after 0.221 seconds.
+◇ Test streamCancellationKeepsPartialEvidenceAndFinishesOnce() started.
+✔ Test streamCancellationKeepsPartialEvidenceAndFinishesOnce() passed after 0.020 seconds.
+◇ Test distinctProtocolContextsKeepJournalsSeparate() started.
+✔ Test distinctProtocolContextsKeepJournalsSeparate() passed after 0.009 seconds.
+◇ Test configurationRequiresMatchingContextAndKeepsOriginalUntouched() started.
+✔ Test configurationRequiresMatchingContextAndKeepsOriginalUntouched() passed after 0.001 seconds.
+✔ Suite RecordingURLProtocolTests passed after 0.302 seconds.
+SDK_PROTOCOL_NATIVE https://enbw.com/ status200 bytes199958 redirects1
+✔ Test nativeHTTPResponseAndRedirectMetrics(_:) with 2 test cases passed after 0.529 seconds.
+◇ Test nativeCertificateRejectionIsPreserved(_:) started.
+◇ Test case passing 1 argument target → "https://expired.badssl.com/" to nativeCertificateRejectionIsPreserved(_:) started.
+✔ Test nativeHTTPSPreservesBodyOrOriginalTrustFailure(_:) with 3 test cases passed after 0.830 seconds.
+✔ Suite RecordingSessionDelegateLiveTests passed after 0.830 seconds.
+SDK_STREAM_LIVE_PROOF https://wrong.host.badssl.com/ baseline -1202; returned/recorded NSURLErrorDomain -1202
+✔ Test metricsKeepOriginalCertificateRejection(_:) with 2 test cases passed after 1.006 seconds.
+✔ Suite LiveRecordingMetricsTests passed after 1.006 seconds.
+SDK_PROTOCOL_NATIVE https://expired.badssl.com/ system rejection-1202 preserved
+◇ Test case passing 1 argument target → "https://wrong.host.badssl.com/" to nativeCertificateRejectionIsPreserved(_:) started.
+SDK_LIVE_PROOF https://wrong.host.badssl.com/ baseline -1202; returned/recorded NSURLErrorDomain -1202
+SDK_STREAM_LIVE_PROOF https://expired.badssl.com/ baseline -1202; returned/recorded NSURLErrorDomain -1202
+✔ Test streamingCertificateFailurePreservesDefaultSessionRejection(_:) with 2 test cases passed after 1.415 seconds.
+SDK_LIVE_PROOF https://expired.badssl.com/ baseline -1200; returned/recorded NSURLErrorDomain -1202
+✔ Test certificateFailureMatchesTheUnwrappedSession(_:) with 2 test cases passed after 1.624 seconds.
+✔ Suite LiveHTTPSRecordingTests passed after 1.624 seconds.
+SDK_PROTOCOL_NATIVE https://wrong.host.badssl.com/ system rejection-1202 preserved
+✔ Test nativeCertificateRejectionIsPreserved(_:) with 2 test cases passed after 1.918 seconds.
+◇ Test nativeTransportDelegateCanRejectRedirectWithoutLosingResponse() started.
+✔ Test nativeTransportDelegateCanRejectRedirectWithoutLosingResponse() passed after 0.141 seconds.
+◇ Test nativeTransportDelegateCanCancelAuthenticationWithoutOverride() started.
+✔ Test nativeTransportDelegateCanCancelAuthenticationWithoutOverride() passed after 0.018 seconds.
+✔ Suite LiveURLProtocolTests passed after 2.613 seconds.
+✔ Test run with 57 tests in 11 suites passed after 2.614 seconds.

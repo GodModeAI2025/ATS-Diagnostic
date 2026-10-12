@@ -1,0 +1,522 @@
+Command line invocation:
+    /Applications/Xcode.app/Contents/Developer/usr/bin/xcodebuild -xctestrun ../../../work/SDKCacheiOS/Build/Products/ATSRecording-Cache-Live.xctestrun -destination "platform=iOS Simulator,id=60567F9D-DAD7-4445-84BF-F22C057FEA80" -collect-test-diagnostics never -resultBundlePath ../../../work/SDK-Cache-Live-iOS.xcresult test-without-building
+
+Writing result bundle at path:
+	/Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/SDK-Cache-Live-iOS.xcresult
+
+Test Suite 'All tests' started at 2026-10-12 13:23:36.174.
+Test Suite 'All tests' passed at 2026-10-12 13:23:36.174.
+	 Executed 0 tests, with 0 failures (0 unexpected) in 0.000 (0.001) seconds
+◇ Test run started.
+↳ Testing Library Version: 2084
+↳ Target Platform: arm64-apple-ios17.0-simulator
+◇ Suite LiveURLProtocolTests started.
+◇ Test nativeHTTPResponseAndRedirectMetrics(_:) started.
+◇ Test case passing 1 argument target → "https://example.com/" to nativeHTTPResponseAndRedirectMetrics(_:) started.
+◇ Suite RecordingSessionDelegateTests started.
+◇ Suite RecordingURLProtocolTests started.
+◇ Suite LiveRecordingMetricsTests started.
+◇ Suite RecordingActivationTests started.
+◇ Suite LiveHTTPSRecordingTests started.
+◇ Suite URLProtocolCacheTests started.
+◇ Test realHTTPSMetricsAndCompleteResponse() started.
+◇ Test metricsKeepOriginalCertificateRejection(_:) started.
+◇ Suite RecordingSessionDelegateLiveTests started.
+◇ Suite ResponseAccumulatorTests started.
+◇ Test streamingCertificateFailurePreservesDefaultSessionRejection(_:) started.
+◇ Test liveHostRedirectDecisionIsPreserved() started.
+◇ Test certificateFailureMatchesTheUnwrappedSession(_:) started.
+◇ Test case passing 1 argument target → "https://expired.badssl.com/" to metricsKeepOriginalCertificateRejection(_:) started.
+◇ Test case passing 1 argument target → "https://wrong.host.badssl.com/" to metricsKeepOriginalCertificateRejection(_:) started.
+◇ Suite RecordingMetricsTests started.
+◇ Test hostCanRejectRedirectThroughObserver() started.
+◇ Test case passing 1 argument target → "https://expired.badssl.com/" to streamingCertificateFailurePreservesDefaultSessionRejection(_:) started.
+◇ Test case passing 1 argument target → "https://wrong.host.badssl.com/" to streamingCertificateFailurePreservesDefaultSessionRejection(_:) started.
+◇ Test liveResponseIsReturnedAndRecorded() started.
+◇ Test hostReceivesTheCorrectTriggerAndCanDisableIt() started.
+◇ Test liveStreamingResponseKeepsEveryByteAndFullHash() started.
+◇ Test cacheHitsKeepResponseAndProduceIndividualJournalEntries(_:) started.
+◇ Test case passing 1 argument target → "https://wrong.host.badssl.com/" to certificateFailureMatchesTheUnwrappedSession(_:) started.
+◇ Test automaticAsyncDataPreservesEveryByteAndBoundsJournal() started.
+◇ Test nativeHTTPSPreservesBodyOrOriginalTrustFailure(_:) started.
+◇ Test case passing 1 argument target → "https://expired.badssl.com/" to certificateFailureMatchesTheUnwrappedSession(_:) started.
+◇ Test disabledActivationDoesNotPresentAnything() started.
+◇ Test noHandlerLeavesMotionUnhandled() started.
+◇ Test case passing 1 argument policy → NSURLRequestCachePolicy(rawValue: 3) to cacheHitsKeepResponseAndProduceIndividualJournalEntries(_:) started.
+◇ Test partialFailureKeepsCountWithoutHash() started.
+◇ Test hostRedirectAndCompletionCallbacksAreForwarded() started.
+◇ Test emptySuccessHasEmptyDigest() started.
+◇ Test missingAndInvalidIntervalsStayUnknown() started.
+◇ Test chunksPreserveFullDigestAndBoundedPrefix() started.
+◇ Test case passing 1 argument url → "https://example.com/" to nativeHTTPSPreservesBodyOrOriginalTrustFailure(_:) started.
+◇ Test case passing 1 argument url → "https://expired.badssl.com/" to nativeHTTPSPreservesBodyOrOriginalTrustFailure(_:) started.
+◇ Test case passing 1 argument url → "https://wrong.host.badssl.com/" to nativeHTTPSPreservesBodyOrOriginalTrustFailure(_:) started.
+◇ Suite RecordingClientTests started.
+✔ Test partialFailureKeepsCountWithoutHash() passed after 0.003 seconds.
+✔ Test emptySuccessHasEmptyDigest() passed after 0.004 seconds.
+✔ Test missingAndInvalidIntervalsStayUnknown() passed after 0.004 seconds.
+◇ Test sharedObserverSeparatesIdenticalTaskNumbersAcrossSessions() started.
+◇ Test delegateReceivesUnchangedBodyAndOriginalFailure(partial:) started.
+✔ Test chunksPreserveFullDigestAndBoundedPrefix() passed after 0.004 seconds.
+◇ Test downloadPreservesFileAndHashesBeyondPreview() started.
+◇ Test streamingInitialFailureRetainsUnknownResponse() started.
+◇ Test streamingPreservesEveryByteAndFullMultiChunkHash() started.
+◇ Test fullResponseSurvivesZeroPreview() started.
+◇ Test harMarksPartialRequestsAndUnknownProtocol() started.
+◇ Test streamingZeroPreviewStillCountsAndHashesFullBody() started.
+◇ Test uploadFailurePreservesTransportError() started.
+◇ Test structuredStreamEarlyReturnRecordsPartialWithoutInventingFailure() started.
+◇ Test structuredConsumerErrorIsNotMisreportedAsTransportError() started.
+◇ Test tooSmallJournalCannotChangeSuccessfulResponse() started.
+◇ Test slowObserverCanDetectGapsAndReloadCurrentJournal() started.
+◇ Test streamingFailureRecordsObservedPartialBytesWithoutCompleteHash() started.
+◇ Test metricObserversPreserveAllControlledTransferResults() started.
+◇ Test structuredEOFDoesNotDowngradeOrDuplicateCompleteRecord() started.
+◇ Test fileUploadKeepsBodyFileBackedAndMarksJournalUnavailable() started.
+◇ Test structuredNeverConsumedBodyRemainsUnknownInHAR() started.
+◇ Test countAndEncodedBudgetAreRespected() started.
+◇ Test originalFailureIsPreservedAndRecorded() started.
+◇ Test downloadWithZeroPreviewKeepsFullFileAndDigest() started.
+◇ Test observationsReportRecordingAndClearThenFinish() started.
+◇ Test observationDoesNotRetainItsProducer() started.
+◇ Test uploadRecordsExplicitBodyAndPreservesResponse() started.
+◇ Test observerLimitCanBeReleasedExplicitly() started.
+◇ Test downloadFailurePreservesOriginalError() started.
+◇ Test originalPostBodyAndHeadersReachTheSession() started.
+◇ Test case passing 1 argument partial → false to delegateReceivesUnchangedBodyAndOriginalFailure(partial:) started.
+◇ Test case passing 1 argument partial → true to delegateReceivesUnchangedBodyAndOriginalFailure(partial:) started.
+✔ Suite ResponseAccumulatorTests passed after 0.020 seconds.
+✔ Test observationDoesNotRetainItsProducer() passed after 0.015 seconds.
+2026-10-12 13:23:36.202746+0200 xctest[57127:26185283] [Default] Task <9A818FA4-569A-4952-9EDE-EE3D5B2E8DBD>.<1> finished with error [-1004] Error Domain=NSURLErrorDomain Code=-1004 "(null)" UserInfo={_NSURLErrorRelatedURLSessionTaskErrorKey=(
+    "LocalDataTask <9A818FA4-569A-4952-9EDE-EE3D5B2E8DBD>.<1>"
+), _NSURLErrorFailingURLSessionTaskErrorKey=LocalDataTask <9A818FA4-569A-4952-9EDE-EE3D5B2E8DBD>.<1>}
+✔ Test hostRedirectAndCompletionCallbacksAreForwarded() passed after 0.022 seconds.
+✔ Suite RecordingMetricsTests passed after 0.023 seconds.
+✔ Test observerLimitCanBeReleasedExplicitly() passed after 0.017 seconds.
+✔ Test structuredConsumerErrorIsNotMisreportedAsTransportError() passed after 0.018 seconds.
+​✔ Test structuredEOFDoesNotDowngradeOrDuplicateCompleteRecord() passed after 0.019 seconds.
+2026-10-12 13:23:36.205812+0200 xctest[57127:26185271] [Default] Task <72C4BB67-978B-4BF9-9F30-1285A4496158>.<1> finished with error [-1004] Error Domain=NSURLErrorDomain Code=-1004 "(null)" UserInfo={_NSURLErrorRelatedURLSessionTaskErrorKey=(
+    "LocalDownloadTask <72C4BB67-978B-4BF9-9F30-1285A4496158>.<1>"
+), _NSURLErrorFailingURLSessionTaskErrorKey=LocalDownloadTask <72C4BB67-978B-4BF9-9F30-1285A4496158>.<1>}
+✔ Test tooSmallJournalCannotChangeSuccessfulResponse() passed after 0.020 seconds.
+✔ Test sharedObserverSeparatesIdenticalTaskNumbersAcrossSessions() passed after 0.020 seconds.
+2026-10-12 13:23:36.206164+0200 xctest[57127:26185251] [Default] Task <505E8C96-7B14-47D7-8483-FAEEEBFF8461>.<1> finished with error [-1004] Error Domain=NSURLErrorDomain Code=-1004 "(null)" UserInfo={_NSURLErrorRelatedURLSessionTaskErrorKey=(
+    "LocalDataTask <505E8C96-7B14-47D7-8483-FAEEEBFF8461>.<1>"
+), _NSURLErrorFailingURLSessionTaskErrorKey=LocalDataTask <505E8C96-7B14-47D7-8483-FAEEEBFF8461>.<1>}
+✔ Test uploadRecordsExplicitBodyAndPreservesResponse() passed after 0.020 seconds.
+✔ Test structuredNeverConsumedBodyRemainsUnknownInHAR() passed after 0.021 seconds.
+✔ Test fullResponseSurvivesZeroPreview() passed after 0.022 seconds.
+2026-10-12 13:23:36.207830+0200 xctest[57127:26185282] [Default] Task <8C065DB9-6555-4E91-B5F4-8B3F13F6E976>.<1> finished with error [-1004] Error Domain=NSURLErrorDomain Code=-1004 "(null)" UserInfo={_NSURLErrorRelatedURLSessionTaskErrorKey=(
+    "LocalUploadTask <8C065DB9-6555-4E91-B5F4-8B3F13F6E976>.<1>"
+), _NSURLErrorFailingURLSessionTaskErrorKey=LocalUploadTask <8C065DB9-6555-4E91-B5F4-8B3F13F6E976>.<1>}
+✔ Test harMarksPartialRequestsAndUnknownProtocol() passed after 0.022 seconds.
+✔ Test observationsReportRecordingAndClearThenFinish() passed after 0.021 seconds.
+✔ Test noHandlerLeavesMotionUnhandled() passed after 0.027 seconds.
+✔ Test hostReceivesTheCorrectTriggerAndCanDisableIt() passed after 0.028 seconds.
+✔ Test disabledActivationDoesNotPresentAnything() passed after 0.027 seconds.
+✔ Suite RecordingActivationTests passed after 0.028 seconds.
+✔ Test downloadWithZeroPreviewKeepsFullFileAndDigest() passed after 0.025 seconds.
+✔ Test originalPostBodyAndHeadersReachTheSession() passed after 0.025 seconds.
+✔ Test originalFailureIsPreservedAndRecorded() passed after 0.028 seconds.
+✔ Test uploadFailurePreservesTransportError() passed after 0.029 seconds.
+✔ Test streamingInitialFailureRetainsUnknownResponse() passed after 0.029 seconds.
+✔ Test downloadFailurePreservesOriginalError() passed after 0.029 seconds.
+✔ Test downloadPreservesFileAndHashesBeyondPreview() passed after 0.032 seconds.
+✔ Test slowObserverCanDetectGapsAndReloadCurrentJournal() passed after 0.040 seconds.
+✔ Test structuredStreamEarlyReturnRecordsPartialWithoutInventingFailure() passed after 0.059 seconds.
+✔ Test automaticAsyncDataPreservesEveryByteAndBoundsJournal() passed after 0.067 seconds.
+◇ Test automaticCompletionHandlerPreservesOriginalFailure() started.
+✔ Test fileUploadKeepsBodyFileBackedAndMarksJournalUnavailable() passed after 0.065 seconds.
+✔ Test streamingPreservesEveryByteAndFullMultiChunkHash() passed after 0.070 seconds.
+✔ Test countAndEncodedBudgetAreRespected() passed after 0.071 seconds.
+2026-10-12 13:23:36.279815+0200 xctest[57127:26185282] [Default] Task <B2B24840-70EF-4994-B08B-94E48C578228>.<1> finished with error [-1005] Error Domain=NSURLErrorDomain Code=-1005 "(null)" UserInfo={_NSURLErrorRelatedURLSessionTaskErrorKey=(
+    "LocalDataTask <B2B24840-70EF-4994-B08B-94E48C578228>.<1>"
+), _NSURLErrorFailingURLSessionTaskErrorKey=LocalDataTask <B2B24840-70EF-4994-B08B-94E48C578228>.<1>}
+2026-10-12 13:23:36.288977+0200 xctest[57127:26185236] [Default] Task <52A246ED-F1CA-4CA2-855D-259584169223>.<1> finished with error [-1005] Error Domain=NSURLErrorDomain Code=-1005 "(null)" UserInfo={_NSURLErrorRelatedURLSessionTaskErrorKey=(
+    "LocalDataTask <52A246ED-F1CA-4CA2-855D-259584169223>.<1>",
+    "LocalDataTask <B2B24840-70EF-4994-B08B-94E48C578228>.<1>"
+), _NSURLErrorFailingURLSessionTaskErrorKey=LocalDataTask <52A246ED-F1CA-4CA2-855D-259584169223>.<1>}
+✔ Test automaticCompletionHandlerPreservesOriginalFailure() passed after 0.042 seconds.
+◇ Test automaticPostPreservesRequestBodyAndHeaders() started.
+​◇ Test case passing 1 argument policy → NSURLRequestCachePolicy(rawValue: 0) to cacheHitsKeepResponseAndProduceIndividualJournalEntries(_:) started.
+✔ Test automaticPostPreservesRequestBodyAndHeaders() passed after 0.006 seconds.
+◇ Test partialTransportFailureKeepsObservedBytesWithoutCompleteHash() started.
+✔ Test metricObserversPreserveAllControlledTransferResults() passed after 0.113 seconds.
+​✔ Test cacheHitsKeepResponseAndProduceIndividualJournalEntries(_:) with 2 test cases passed after 0.139 seconds.
+◇ Test explicitCacheBypassKeepsTheActualNetworkFailure() started.
+2026-10-12 13:23:36.357823+0200 xctest[57127:26185270] [Default] Connection 16: received failure notification
+2026-10-12 13:23:36.357941+0200 xctest[57127:26185270] [Default] Connection 16: failed to connect 12:8, reason -1
+2026-10-12 13:23:36.358058+0200 xctest[57127:26185270] [Default] Connection 16: encountered error(12:8)
+​2026-10-12 13:23:36.362563+0200 xctest[57127:26185270] [Default] Task <6A6E3C70-219F-4681-9C25-3913D99EBE38>.<1> HTTP load failed, 0/0 bytes (error code: -1003 [12:8])
+2026-10-12 13:23:36.362844+0200 xctest[57127:26185236] [Default] Task <6A6E3C70-219F-4681-9C25-3913D99EBE38>.<1> finished with error [-1003] Error Domain=NSURLErrorDomain Code=-1003 "Es wurde kein Server mit dem angegebenen Hostnamen gefunden." UserInfo={_kCFStreamErrorCodeKey=8, NSUnderlyingError=0x10be78e10 {Error Domain=kCFErrorDomainCFNetwork Code=-1003 "(null)" UserInfo={_kCFStreamErrorDomainKey=12, _kCFStreamErrorCodeKey=8, _NSURLErrorNWResolutionReportKey=Resolved 0 endpoints in 14ms using unknown from cache, _NSURLErrorNWPathKey=satisfied (Path is satisfied), interface: en0[802.11], uses wifi, LQM: unknown}}, _NSURLErrorFailingURLSessionTaskErrorKey=LocalDataTask <6A6E3C70-219F-4681-9C25-3913D99EBE38>.<1>, _NSURLErrorRelatedURLSessionTaskErrorKey=(
+    "LocalDataTask <6A6E3C70-219F-4681-9C25-3913D99EBE38>.<1>"
+), NSLocalizedDescription=Es wurde kein Server mit dem angegebenen Hostnamen gefunden., NSErrorFailingURLStringKey=https://cache-origin.invalid/seed, NSErrorFailingURLKey=https://cache-origin.invalid/seed, _kCFStreamErrorDomainKey=12}
+SDK_PROTOCOL_NATIVE https://example.com/ status200 bytes577 redirects0
+​◇ Test case passing 1 argument target → "https://enbw.com/" to nativeHTTPResponseAndRedirectMetrics(_:) started.
+✔ Test realHTTPSMetricsAndCompleteResponse() passed after 0.201 seconds.
+SDK_LIVE_PROOF example.com HTTP 200 bytes 577 preview 16
+✔ Test liveResponseIsReturnedAndRecorded() passed after 0.209 seconds.
+✔ Test liveHostRedirectDecisionIsPreserved() passed after 0.211 seconds.
+✔ Test hostCanRejectRedirectThroughObserver() passed after 0.211 seconds.
+2026-10-12 13:23:36.393001+0200 xctest[57127:26185270] [Default] Connection 17: received failure notification
+2026-10-12 13:23:36.393182+0200 xctest[57127:26185270] [Default] Connection 17: failed to connect 12:8, reason -1
+2026-10-12 13:23:36.393325+0200 xctest[57127:26185270] [Default] Connection 17: encountered error(12:8)
+2026-10-12 13:23:36.394860+0200 xctest[57127:26185270] [Default] Task <3986551F-DF73-4F22-AA9B-8876AA37F863>.<1> HTTP load failed, 0/0 bytes (error code: -1003 [12:8])
+2026-10-12 13:23:36.395160+0200 xctest[57127:26185260] [Default] Task <3986551F-DF73-4F22-AA9B-8876AA37F863>.<1> finished with error [-1003] Error Domain=NSURLErrorDomain Code=-1003 "Es wurde kein Server mit dem angegebenen Hostnamen gefunden." UserInfo={_kCFStreamErrorCodeKey=8, NSUnderlyingError=0x10bafc570 {Error Domain=kCFErrorDomainCFNetwork Code=-1003 "(null)" UserInfo={_kCFStreamErrorDomainKey=12, _kCFStreamErrorCodeKey=8, _NSURLErrorNWResolutionReportKey=Resolved 0 endpoints in 10ms using unknown from cache, _NSURLErrorNWPathKey=satisfied (Path is satisfied), interface: en0[802.11], uses wifi, LQM: unknown}}, _NSURLErrorFailingURLSessionTaskErrorKey=LocalDataTask <3986551F-DF73-4F22-AA9B-8876AA37F863>.<1>, _NSURLErrorRelatedURLSessionTaskErrorKey=(
+    "LocalDataTask <3986551F-DF73-4F22-AA9B-8876AA37F863>.<1>"
+), NSLocalizedDescription=Es wurde kein Server mit dem angegebenen Hostnamen gefunden., NSErrorFailingURLStringKey=https://cache-origin.invalid/seed, NSErrorFailingURLKey=https://cache-origin.invalid/seed, _kCFStreamErrorDomainKey=12}
+2026-10-12 13:23:36.395411+0200 xctest[57127:26185260] [Default] Task <8C03C2D0-B1AA-4DEA-BD2D-49EF01E67FC2>.<1> finished with error [-1003] Error Domain=NSURLErrorDomain Code=-1003 "Es wurde kein Server mit dem angegebenen Hostnamen gefunden." UserInfo={_kCFStreamErrorCodeKey=8, NSUnderlyingError=0x10bafc570 {Error Domain=kCFErrorDomainCFNetwork Code=-1003 "(null)" UserInfo={_kCFStreamErrorDomainKey=12, _kCFStreamErrorCodeKey=8, _NSURLErrorNWResolutionReportKey=Resolved 0 endpoints in 10ms using unknown from cache, _NSURLErrorNWPathKey=satisfied (Path is satisfied), interface: en0[802.11], uses wifi, LQM: unknown}}, _NSURLErrorFailingURLSessionTaskErrorKey=LocalDataTask <8C03C2D0-B1AA-4DEA-BD2D-49EF01E67FC2>.<1>, _NSURLErrorRelatedURLSessionTaskErrorKey=(
+    "LocalDataTask <8C03C2D0-B1AA-4DEA-BD2D-49EF01E67FC2>.<1>",
+    "LocalDataTask <3986551F-DF73-4F22-AA9B-8876AA37F863>.<1>"
+), NSLocalizedDescription=Es wurde kein Server mit dem angegebenen Hostnamen gefunden., NSErrorFailingURLStringKey=https://cache-origin.invalid/seed, NSErrorFailingURLKey=https://cache-origin.invalid/seed, _kCFStreamErrorDomainKey=12}
+✔ Test explicitCacheBypassKeepsTheActualNetworkFailure() passed after 0.075 seconds.
+✔ Suite URLProtocolCacheTests passed after 0.215 seconds.
+SDK_STREAM_LIVE_PROOF example.com HTTP 200 bytes 577 full SHA256 matched
+✔ Test liveStreamingResponseKeepsEveryByteAndFullHash() passed after 0.218 seconds.
+2026-10-12 13:23:36.402343+0200 xctest[57127:26185270] [Default] Task <48EF2975-5A50-4BAA-978C-BC0D701C39C7>.<1> finished with error [-1005] Error Domain=NSURLErrorDomain Code=-1005 "(null)" UserInfo={_NSURLErrorRelatedURLSessionTaskErrorKey=(
+    "LocalDataTask <48EF2975-5A50-4BAA-978C-BC0D701C39C7>.<1>"
+), _NSURLErrorFailingURLSessionTaskErrorKey=LocalDataTask <48EF2975-5A50-4BAA-978C-BC0D701C39C7>.<1>}
+✔ Test streamingFailureRecordsObservedPartialBytesWithoutCompleteHash() passed after 0.216 seconds.
+✔ Test streamingZeroPreviewStillCountsAndHashesFullBody() passed after 0.237 seconds.
+✔ Suite RecordingClientTests passed after 0.241 seconds.
+2026-10-12 13:23:36.431275+0200 xctest[57127:26185251] [Default] Task <C21968FE-EA25-4EF8-8C36-4B4D0388D7D4>.<1> finished with error [-1005] Error Domain=NSURLErrorDomain Code=-1005 "(null)" UserInfo={_NSURLErrorRelatedURLSessionTaskErrorKey=(
+    "LocalDataTask <C21968FE-EA25-4EF8-8C36-4B4D0388D7D4>.<1>"
+), _NSURLErrorFailingURLSessionTaskErrorKey=LocalDataTask <C21968FE-EA25-4EF8-8C36-4B4D0388D7D4>.<1>}
+​✔ Test delegateReceivesUnchangedBodyAndOriginalFailure(partial:) with 2 test cases passed after 0.246 seconds.
+✔ Suite RecordingSessionDelegateTests passed after 0.251 seconds.
+2026-10-12 13:23:36.517341+0200 xctest[57127:26185270] [connection] nw_endpoint_flow_failed_with_error [C19.1.1.1 195.35.76.231:443 in_progress socket-flow (satisfied (Path is satisfied), interface: en0[802.11], uses wifi, LQM: unknown)] already failing, returning
+2026-10-12 13:23:36.517875+0200 xctest[57127:26185270] [connection] nw_endpoint_flow_failed_with_error [C19.1.1.1 195.35.76.231:443 cancelled socket-flow ((null))] already failing, returning
+2026-10-12 13:23:36.522543+0200 xctest[57127:26185251] [Default] Task <B12AAEB6-8E97-471F-B62C-DF2C94A56C4A>.<1> finished with error [-1005] Error Domain=NSURLErrorDomain Code=-1005 "(null)" UserInfo={_NSURLErrorRelatedURLSessionTaskErrorKey=(
+    "LocalDataTask <B12AAEB6-8E97-471F-B62C-DF2C94A56C4A>.<1>"
+), _NSURLErrorFailingURLSessionTaskErrorKey=LocalDataTask <B12AAEB6-8E97-471F-B62C-DF2C94A56C4A>.<1>}
+2026-10-12 13:23:36.522941+0200 xctest[57127:26185257] [Default] Task <E77B94B4-FF0C-4B01-B3AD-5A85E2701A69>.<1> finished with error [-1005] Error Domain=NSURLErrorDomain Code=-1005 "(null)" UserInfo={_NSURLErrorRelatedURLSessionTaskErrorKey=(
+    "LocalDataTask <E77B94B4-FF0C-4B01-B3AD-5A85E2701A69>.<1>",
+    "LocalDataTask <B12AAEB6-8E97-471F-B62C-DF2C94A56C4A>.<1>"
+), _NSURLErrorFailingURLSessionTaskErrorKey=LocalDataTask <E77B94B4-FF0C-4B01-B3AD-5A85E2701A69>.<1>}
+✔ Test partialTransportFailureKeepsObservedBytesWithoutCompleteHash() passed after 0.226 seconds.
+◇ Test streamCancellationKeepsPartialEvidenceAndFinishesOnce() started.
+2026-10-12 13:23:36.524646+0200 xctest[57127:26185281] [connection] nw_connection_copy_protocol_metadata_internal_block_invoke [C19] Client called nw_connection_copy_protocol_metadata_internal on unconnected nw_connection
+2026-10-12 13:23:36.525007+0200 xctest[57127:26185281] [connection] nw_connection_copy_protocol_metadata_internal_block_invoke [C19] Client called nw_connection_copy_protocol_metadata_internal on unconnected nw_connection
+2026-10-12 13:23:36.525155+0200 xctest[57127:26185281] [connection] nw_connection_copy_protocol_metadata_internal_block_invoke [C19] Client called nw_connection_copy_protocol_metadata_internal on unconnected nw_connection
+2026-10-12 13:23:36.525274+0200 xctest[57127:26185281] [connection] nw_connection_copy_protocol_metadata_internal_block_invoke [C19] Client called nw_connection_copy_protocol_metadata_internal on unconnected nw_connection
+2026-10-12 13:23:36.525368+0200 xctest[57127:26185281] [connection] nw_connection_copy_connected_local_endpoint_block_invoke [C19] Client called nw_connection_copy_connected_local_endpoint on unconnected nw_connection
+2026-10-12 13:23:36.525481+0200 xctest[57127:26185281] [connection] nw_connection_copy_connected_path_block_invoke [C19] Client called nw_connection_copy_connected_path on unconnected nw_connection
+2026-10-12 13:23:36.525634+0200 xctest[57127:26185281] [connection] nw_connection_copy_connected_remote_endpoint_block_invoke [C19] Client called nw_connection_copy_connected_remote_endpoint on unconnected nw_connection
+2026-10-12 13:23:36.525702+0200 xctest[57127:26185281] [connection] nw_connection_copy_protocol_metadata_internal_block_invoke [C19] Client called nw_connection_copy_protocol_metadata_internal on unconnected nw_connection
+2026-10-12 13:23:36.526047+0200 xctest[57127:26185281] [connection] nw_connection_copy_protocol_metadata_internal_block_invoke [C19] Client called nw_connection_copy_protocol_metadata_internal on unconnected nw_connection
+2026-10-12 13:23:36.526156+0200 xctest[57127:26185281] [connection] nw_flow_add_write_request [C19 www.enbw.com:443 failed parent-flow (satisfied (Path is satisfied), interface: en0[802.11], uses wifi, LQM: unknown)] cannot accept write requests
+2026-10-12 13:23:36.526253+0200 xctest[57127:26185281] [connection] nw_write_request_report [C19] Send failed with error "Socket is not connected"
+2026-10-12 13:23:36.526373+0200 xctest[57127:26185281] [connection] nw_connection_copy_metadata_block_invoke [C19] Client called nw_connection_copy_metadata on unconnected nw_connection
+✔ Test streamCancellationKeepsPartialEvidenceAndFinishesOnce() passed after 0.025 seconds.
+◇ Test distinctProtocolContextsKeepJournalsSeparate() started.
+✔ Test distinctProtocolContextsKeepJournalsSeparate() passed after 0.010 seconds.
+◇ Test configurationRequiresMatchingContextAndKeepsOriginalUntouched() started.
+✔ Test configurationRequiresMatchingContextAndKeepsOriginalUntouched() passed after 0.003 seconds.
+✔ Suite RecordingURLProtocolTests passed after 0.384 seconds.
+SDK_PROTOCOL_NATIVE https://enbw.com/ status200 bytes199958 redirects1
+​✔ Test nativeHTTPResponseAndRedirectMetrics(_:) with 2 test cases passed after 0.476 seconds.
+◇ Test nativeCertificateRejectionIsPreserved(_:) started.
+◇ Test case passing 1 argument target → "https://expired.badssl.com/" to nativeCertificateRejectionIsPreserved(_:) started.
+2026-10-12 13:23:36.715639+0200 xctest[57127:26185270] [Default] Connection 2: default TLS Trust evaluation failed(-9843)
+2026-10-12 13:23:36.716928+0200 xctest[57127:26185270] [Default] Connection 2: TLS Trust encountered error 3:-9843
+2026-10-12 13:23:36.717995+0200 xctest[57127:26185270] [Default] Connection 2: encountered error(3:-9843)
+2026-10-12 13:23:36.720318+0200 xctest[57127:26185270] [Default] Task <88607BBB-6034-40CA-9196-C1476AFDBAF1>.<1> HTTP load failed, 0/0 bytes (error code: -1202 [3:-9843])
+2026-10-12 13:23:36.721775+0200 xctest[57127:26185257] [Default] Task <88607BBB-6034-40CA-9196-C1476AFDBAF1>.<1> finished with error [-1202] Error Domain=NSURLErrorDomain Code=-1202 "Das Zertifikat für diesen Server ist ungültig. Eventuell wird eine Verbindung mit einem Server hergestellt, der vorgibt, „wrong.host.badssl.com“ zu sein und vertrauliche Daten gefährdet." UserInfo={NSLocalizedRecoverySuggestion=Soll die Verbindung zum Server trotzdem hergestellt werden?, _kCFStreamErrorDomainKey=3, NSErrorPeerCertificateChainKey=(
+    "<cert(0x1076a7000) s: *.badssl.com i: YR1>",
+    "<cert(0x10bd18800) s: YR1 i: Root YR>",
+    "<cert(0x10759ca00) s: Root YR i: ISRG Root X1>"
+), NSErrorClientCertificateStateKey=0, NSErrorFailingURLKey=https://wrong.host.badssl.com/, NSErrorFailingURLStringKey=https://wrong.host.badssl.com/, NSUnderlyingError=0x10bb09590 {Error Domain=kCFErrorDomainCFNetwork Code=-1202 "(null)" UserInfo={_kCFStreamPropertySSLClientCertificateState=0, kCFStreamPropertySSLPeerTrust=<SecTrustRef: 0x1074ddd40>, _kCFNetworkCFStreamSSLErrorOriginalValue=-9843, _kCFStreamErrorDomainKey=3, _kCFStreamErrorCodeKey=-9843, kCFStreamPropertySSLPeerCertificates=(
+    "<cert(0x1076a7000) s: *.badssl.com i: YR1>",
+    "<cert(0x10bd18800) s: YR1 i: Root YR>",
+    "<cert(0x10759ca00) s: Root YR i: ISRG Root X1>"
+)}}, _NSURLErrorRelatedURLSessionTaskErrorKey=(
+    "LocalDataTask <88607BBB-6034-40CA-9196-C1476AFDBAF1>.<1>"
+), _kCFStreamErrorCodeKey=-9843, _NSURLErrorFailingURLSessionTaskErrorKey=LocalDataTask <88607BBB-6034-40CA-9196-C1476AFDBAF1>.<1>, NSURLErrorFailingURLPeerTrustErrorKey=<SecTrustRef: 0x1074ddd40>, NSLocalizedDescription=Das Zertifikat für diesen Server ist ungültig. Eventuell wird eine Verbindung mit einem Server hergestellt, der vorgibt, „wrong.host.badssl.com“ zu sein und vertrauliche Daten gefährdet.}
+2026-10-12 13:23:36.722758+0200 xctest[57127:26185270] [Default] Connection 10: default TLS Trust evaluation failed(-9814)
+2026-10-12 13:23:36.723900+0200 xctest[57127:26185270] [Default] Connection 10: TLS Trust encountered error 3:-9814
+2026-10-12 13:23:36.724589+0200 xctest[57127:26185270] [Default] Connection 10: encountered error(3:-9814)
+2026-10-12 13:23:36.725573+0200 xctest[57127:26185270] [Default] Task <40ADEBA9-06BA-4931-8317-B6E7766198E5>.<1> HTTP load failed, 0/0 bytes (error code: -1202 [3:-9814])
+2026-10-12 13:23:36.726507+0200 xctest[57127:26185209] [Default] Task <40ADEBA9-06BA-4931-8317-B6E7766198E5>.<1> finished with error [-1202] Error Domain=NSURLErrorDomain Code=-1202 "Das Zertifikat für diesen Server ist ungültig. Eventuell wird eine Verbindung mit einem Server hergestellt, der vorgibt, „expired.badssl.com“ zu sein und vertrauliche Daten gefährdet." UserInfo={NSLocalizedRecoverySuggestion=Soll die Verbindung zum Server trotzdem hergestellt werden?, _kCFStreamErrorDomainKey=3, NSErrorPeerCertificateChainKey=(
+    "<cert(0x10bee6800) s: *.badssl.com i: COMODO RSA Domain Validation Secure Server CA>",
+    "<cert(0x10759e800) s: COMODO RSA Domain Validation Secure Server CA i: COMODO RSA Certification Authority>",
+    "<cert(0x10bee6000) s: COMODO RSA Certification Authority i: AddTrust External CA Root>"
+), NSErrorClientCertificateStateKey=0, NSErrorFailingURLKey=https://expired.badssl.com/, NSErrorFailingURLStringKey=https://expired.badssl.com/, NSUnderlyingError=0x10bb0d230 {Error Domain=kCFErrorDomainCFNetwork Code=-1202 "(null)" UserInfo={_kCFStreamPropertySSLClientCertificateState=0, kCFStreamPropertySSLPeerTrust=<SecTrustRef: 0x1074df480>, _kCFNetworkCFStreamSSLErrorOriginalValue=-9814, _kCFStreamErrorDomainKey=3, _kCFStreamErrorCodeKey=-9814, kCFStreamPropertySSLPeerCertificates=(
+    "<cert(0x10bee6800) s: *.badssl.com i: COMODO RSA Domain Validation Secure Server CA>",
+    "<cert(0x10759e800) s: COMODO RSA Domain Validation Secure Server CA i: COMODO RSA Certification Authority>",
+    "<cert(0x10bee6000) s: COMODO RSA Certification Authority i: AddTrust External CA Root>"
+)}}, _NSURLErrorRelatedURLSessionTaskErrorKey=(
+    "LocalDataTask <40ADEBA9-06BA-4931-8317-B6E7766198E5>.<1>"
+), _kCFStreamErrorCodeKey=-9814, _NSURLErrorFailingURLSessionTaskErrorKey=LocalDataTask <40ADEBA9-06BA-4931-8317-B6E7766198E5>.<1>, NSURLErrorFailingURLPeerTrustErrorKey=<SecTrustRef: 0x1074df480>, NSLocalizedDescription=Das Zertifikat für diesen Server ist ungültig. Eventuell wird eine Verbindung mit einem Server hergestellt, der vorgibt, „expired.badssl.com“ zu sein und vertrauliche Daten gefährdet.}
+2026-10-12 13:23:36.730119+0200 xctest[57127:26185251] [Default] Connection 11: default TLS Trust evaluation failed(-9843)
+2026-10-12 13:23:36.731423+0200 xctest[57127:26185251] [Default] Connection 11: TLS Trust encountered error 3:-9843
+2026-10-12 13:23:36.732469+0200 xctest[57127:26185251] [Default] Connection 11: encountered error(3:-9843)
+2026-10-12 13:23:36.733932+0200 xctest[57127:26185251] [Default] Task <93348A0F-1C94-4811-912A-FDB0EC68C671>.<1> HTTP load failed, 0/0 bytes (error code: -1202 [3:-9843])
+2026-10-12 13:23:36.734698+0200 xctest[57127:26185281] [Default] Task <93348A0F-1C94-4811-912A-FDB0EC68C671>.<1> finished with error [-1202] Error Domain=NSURLErrorDomain Code=-1202 "Das Zertifikat für diesen Server ist ungültig. Eventuell wird eine Verbindung mit einem Server hergestellt, der vorgibt, „wrong.host.badssl.com“ zu sein und vertrauliche Daten gefährdet." UserInfo={NSLocalizedRecoverySuggestion=Soll die Verbindung zum Server trotzdem hergestellt werden?, _kCFStreamErrorDomainKey=3, NSErrorPeerCertificateChainKey=(
+    "<cert(0x10bee7800) s: *.badssl.com i: YR1>",
+    "<cert(0x10bf14000) s: YR1 i: Root YR>",
+    "<cert(0x10b959e00) s: Root YR i: ISRG Root X1>"
+), NSErrorClientCertificateStateKey=0, NSErrorFailingURLKey=https://wrong.host.badssl.com/, NSErrorFailingURLStringKey=https://wrong.host.badssl.com/, NSUnderlyingError=0x10baf1020 {Error Domain=kCFErrorDomainCFNetwork Code=-1202 "(null)" UserInfo={_kCFStreamPropertySSLClientCertificateState=0, kCFStreamPropertySSLPeerTrust=<SecTrustRef: 0x1074df6c0>, _kCFNetworkCFStreamSSLErrorOriginalValue=-9843, _kCFStreamErrorDomainKey=3, _kCFStreamErrorCodeKey=-9843, kCFStreamPropertySSLPeerCertificates=(
+    "<cert(0x10bee7800) s: *.badssl.com i: YR1>",
+    "<cert(0x10bf14000) s: YR1 i: Root YR>",
+    "<cert(0x10b959e00) s: Root YR i: ISRG Root X1>"
+)}}, _NSURLErrorRelatedURLSessionTaskErrorKey=(
+    "LocalDataTask <93348A0F-1C94-4811-912A-FDB0EC68C671>.<1>"
+), _kCFStreamErrorCodeKey=-9843, _NSURLErrorFailingURLSessionTaskErrorKey=LocalDataTask <93348A0F-1C94-4811-912A-FDB0EC68C671>.<1>, NSURLErrorFailingURLPeerTrustErrorKey=<SecTrustRef: 0x1074df6c0>, NSLocalizedDescription=Das Zertifikat für diesen Server ist ungültig. Eventuell wird eine Verbindung mit einem Server hergestellt, der vorgibt, „wrong.host.badssl.com“ zu sein und vertrauliche Daten gefährdet.}
+2026-10-12 13:23:36.782022+0200 xctest[57127:26185251] [connection] nw_socket_handle_socket_event [C6.1.1.1:3] Socket SO_ERROR [54: Connection reset by peer]
+2026-10-12 13:23:36.785549+0200 xctest[57127:26185251] [connection] nw_protocol_socket_reset_linger [C6.1.1.1:3] setsockopt SO_LINGER failed [22: Invalid argument]
+2026-10-12 13:23:36.785707+0200 xctest[57127:26185251] [connection] nw_endpoint_flow_failed_with_error [C6.1.1.1 104.154.89.105:443 in_progress socket-flow (satisfied (Path is satisfied), interface: en0[802.11], uses wifi, LQM: unknown)] already failing, returning
+2026-10-12 13:23:36.786369+0200 xctest[57127:26185251] [connection] nw_endpoint_flow_failed_with_error [C6.1.1.1 104.154.89.105:443 cancelled socket-flow ((null))] already failing, returning
+2026-10-12 13:23:36.786508+0200 xctest[57127:26185251] [Default] Connection 6: received failure notification
+2026-10-12 13:23:36.786693+0200 xctest[57127:26185251] [Default] Connection 6: received ECONNRESET with incomplete TLS handshake - generating errSSLClosedNoNotify
+2026-10-12 13:23:36.786740+0200 xctest[57127:26185251] [Default] Connection 6: failed to connect 3:-9816, reason -1
+2026-10-12 13:23:36.786850+0200 xctest[57127:26185251] [Default] Connection 6: encountered error(3:-9816)
+2026-10-12 13:23:37.130199+0200 xctest[57127:26185251] [Default] Connection 20: default TLS Trust evaluation failed(-9814)
+2026-10-12 13:23:37.130648+0200 xctest[57127:26185251] [Default] Connection 20: TLS Trust encountered error 3:-9814
+2026-10-12 13:23:37.131672+0200 xctest[57127:26185251] [Default] Connection 20: encountered error(3:-9814)
+2026-10-12 13:23:37.134021+0200 xctest[57127:26185251] [Default] Task <C7C2DA4D-B255-4010-BE49-3C779DE0A6AF>.<1> HTTP load failed, 0/0 bytes (error code: -1202 [3:-9814])
+2026-10-12 13:23:37.135339+0200 xctest[57127:26185251] [Default] Task <C7C2DA4D-B255-4010-BE49-3C779DE0A6AF>.<1> finished with error [-1202] Error Domain=NSURLErrorDomain Code=-1202 "Das Zertifikat für diesen Server ist ungültig. Eventuell wird eine Verbindung mit einem Server hergestellt, der vorgibt, „expired.badssl.com“ zu sein und vertrauliche Daten gefährdet." UserInfo={NSLocalizedRecoverySuggestion=Soll die Verbindung zum Server trotzdem hergestellt werden?, _kCFStreamErrorDomainKey=3, NSErrorPeerCertificateChainKey=(
+    "<cert(0x10bf22000) s: *.badssl.com i: COMODO RSA Domain Validation Secure Server CA>",
+    "<cert(0x10bf44a00) s: COMODO RSA Domain Validation Secure Server CA i: COMODO RSA Certification Authority>",
+    "<cert(0x10bf23800) s: COMODO RSA Certification Authority i: AddTrust External CA Root>"
+), NSErrorClientCertificateStateKey=0, NSErrorFailingURLKey=https://expired.badssl.com/, NSErrorFailingURLStringKey=https://expired.badssl.com/, NSUnderlyingError=0x10bc30060 {Error Domain=kCFErrorDomainCFNetwork Code=-1202 "(null)" UserInfo={_kCFStreamPropertySSLClientCertificateState=0, kCFStreamPropertySSLPeerTrust=<SecTrustRef: 0x1074dd980>, _kCFNetworkCFStreamSSLErrorOriginalValue=-9814, _kCFStreamErrorDomainKey=3, _kCFStreamErrorCodeKey=-9814, kCFStreamPropertySSLPeerCertificates=(
+    "<cert(0x10bf22000) s: *.badssl.com i: COMODO RSA Domain Validation Secure Server CA>",
+    "<cert(0x10bf44a00) s: COMODO RSA Domain Validation Secure Server CA i: COMODO RSA Certification Authority>",
+    "<cert(0x10bf23800) s: COMODO RSA Certification Authority i: AddTrust External CA Root>"
+)}}, _NSURLErrorRelatedURLSessionTaskErrorKey=(
+    "LocalDataTask <C7C2DA4D-B255-4010-BE49-3C779DE0A6AF>.<1>"
+), _kCFStreamErrorCodeKey=-9814, _NSURLErrorFailingURLSessionTaskErrorKey=LocalDataTask <C7C2DA4D-B255-4010-BE49-3C779DE0A6AF>.<1>, NSURLErrorFailingURLPeerTrustErrorKey=<SecTrustRef: 0x1074dd980>, NSLocalizedDescription=Das Zertifikat für diesen Server ist ungültig. Eventuell wird eine Verbindung mit einem Server hergestellt, der vorgibt, „expired.badssl.com“ zu sein und vertrauliche Daten gefährdet.}
+2026-10-12 13:23:37.156299+0200 xctest[57127:26185281] [Default] Connection 21: default TLS Trust evaluation failed(-9843)
+2026-10-12 13:23:37.156474+0200 xctest[57127:26185281] [Default] Connection 21: TLS Trust encountered error 3:-9843
+2026-10-12 13:23:37.156547+0200 xctest[57127:26185281] [Default] Connection 21: encountered error(3:-9843)
+2026-10-12 13:23:37.157693+0200 xctest[57127:26185281] [Default] Task <B488343F-F027-4F04-A2A3-AB69630BEFEC>.<2> HTTP load failed, 0/0 bytes (error code: -1202 [3:-9843])
+2026-10-12 13:23:37.157887+0200 xctest[57127:26185270] [Default] Task <B488343F-F027-4F04-A2A3-AB69630BEFEC>.<2> finished with error [-1202] Error Domain=NSURLErrorDomain Code=-1202 "Das Zertifikat für diesen Server ist ungültig. Eventuell wird eine Verbindung mit einem Server hergestellt, der vorgibt, „wrong.host.badssl.com“ zu sein und vertrauliche Daten gefährdet." UserInfo={NSLocalizedRecoverySuggestion=Soll die Verbindung zum Server trotzdem hergestellt werden?, _kCFStreamErrorDomainKey=3, NSErrorPeerCertificateChainKey=(
+    "<cert(0x10bf4d000) s: *.badssl.com i: YR1>",
+    "<cert(0x10bf4d800) s: YR1 i: Root YR>",
+    "<cert(0x10bf46800) s: Root YR i: ISRG Root X1>"
+), NSErrorClientCertificateStateKey=0, NSErrorFailingURLKey=https://wrong.host.badssl.com/, NSErrorFailingURLStringKey=https://wrong.host.badssl.com/, NSUnderlyingError=0x10bafd110 {Error Domain=kCFErrorDomainCFNetwork Code=-1202 "(null)" UserInfo={_kCFStreamPropertySSLClientCertificateState=0, kCFStreamPropertySSLPeerTrust=<SecTrustRef: 0x1074dc600>, _kCFNetworkCFStreamSSLErrorOriginalValue=-9843, _kCFStreamErrorDomainKey=3, _kCFStreamErrorCodeKey=-9843, kCFStreamPropertySSLPeerCertificates=(
+    "<cert(0x10bf4d000) s: *.badssl.com i: YR1>",
+    "<cert(0x10bf4d800) s: YR1 i: Root YR>",
+    "<cert(0x10bf46800) s: Root YR i: ISRG Root X1>"
+)}}, _NSURLErrorRelatedURLSessionTaskErrorKey=(
+    "LocalDataTask <B488343F-F027-4F04-A2A3-AB69630BEFEC>.<2>"
+), _kCFStreamErrorCodeKey=-9843, _NSURLErrorFailingURLSessionTaskErrorKey=LocalDataTask <B488343F-F027-4F04-A2A3-AB69630BEFEC>.<2>, NSURLErrorFailingURLPeerTrustErrorKey=<SecTrustRef: 0x1074dc600>, NSLocalizedDescription=Das Zertifikat für diesen Server ist ungültig. Eventuell wird eine Verbindung mit einem Server hergestellt, der vorgibt, „wrong.host.badssl.com“ zu sein und vertrauliche Daten gefährdet.}
+SDK_STREAM_LIVE_PROOF https://wrong.host.badssl.com/ baseline -1202; returned/recorded NSURLErrorDomain -1202
+​2026-10-12 13:23:37.159540+0200 xctest[57127:26185281] [Default] Connection 22: default TLS Trust evaluation failed(-9814)
+2026-10-12 13:23:37.159696+0200 xctest[57127:26185281] [Default] Connection 22: TLS Trust encountered error 3:-9814
+2026-10-12 13:23:37.159791+0200 xctest[57127:26185281] [Default] Connection 22: encountered error(3:-9814)
+2026-10-12 13:23:37.160188+0200 xctest[57127:26185281] [Default] Task <B4BAE48D-1874-4939-A877-454E1C5F6AD9>.<2> HTTP load failed, 0/0 bytes (error code: -1202 [3:-9814])
+2026-10-12 13:23:37.160485+0200 xctest[57127:26185270] [Default] Task <B4BAE48D-1874-4939-A877-454E1C5F6AD9>.<2> finished with error [-1202] Error Domain=NSURLErrorDomain Code=-1202 "Das Zertifikat für diesen Server ist ungültig. Eventuell wird eine Verbindung mit einem Server hergestellt, der vorgibt, „expired.badssl.com“ zu sein und vertrauliche Daten gefährdet." UserInfo={NSLocalizedRecoverySuggestion=Soll die Verbindung zum Server trotzdem hergestellt werden?, _kCFStreamErrorDomainKey=3, NSErrorPeerCertificateChainKey=(
+    "<cert(0x10bf4e000) s: *.badssl.com i: COMODO RSA Domain Validation Secure Server CA>",
+    "<cert(0x10bf47200) s: COMODO RSA Domain Validation Secure Server CA i: COMODO RSA Certification Authority>",
+    "<cert(0x10bf4e800) s: COMODO RSA Certification Authority i: AddTrust External CA Root>"
+), NSErrorClientCertificateStateKey=0, NSErrorFailingURLKey=https://expired.badssl.com/, NSErrorFailingURLStringKey=https://expired.badssl.com/, NSUnderlyingError=0x10bb38900 {Error Domain=kCFErrorDomainCFNetwork Code=-1202 "(null)" UserInfo={_kCFStreamPropertySSLClientCertificateState=0, kCFStreamPropertySSLPeerTrust=<SecTrustRef: 0x10bdb7240>, _kCFNetworkCFStreamSSLErrorOriginalValue=-9814, _kCFStreamErrorDomainKey=3, _kCFStreamErrorCodeKey=-9814, kCFStreamPropertySSLPeerCertificates=(
+    "<cert(0x10bf4e000) s: *.badssl.com i: COMODO RSA Domain Validation Secure Server CA>",
+    "<cert(0x10bf47200) s: COMODO RSA Domain Validation Secure Server CA i: COMODO RSA Certification Authority>",
+    "<cert(0x10bf4e800) s: COMODO RSA Certification Authority i: AddTrust External CA Root>"
+)}}, _NSURLErrorRelatedURLSessionTaskErrorKey=(
+    "LocalDataTask <B4BAE48D-1874-4939-A877-454E1C5F6AD9>.<2>"
+), _kCFStreamErrorCodeKey=-9814, _NSURLErrorFailingURLSessionTaskErrorKey=LocalDataTask <B4BAE48D-1874-4939-A877-454E1C5F6AD9>.<2>, NSURLErrorFailingURLPeerTrustErrorKey=<SecTrustRef: 0x10bdb7240>, NSLocalizedDescription=Das Zertifikat für diesen Server ist ungültig. Eventuell wird eine Verbindung mit einem Server hergestellt, der vorgibt, „expired.badssl.com“ zu sein und vertrauliche Daten gefährdet.}
+SDK_LIVE_PROOF https://expired.badssl.com/ baseline -1202; returned/recorded NSURLErrorDomain -1202
+​2026-10-12 13:23:37.165270+0200 xctest[57127:26185251] [Default] Connection 23: default TLS Trust evaluation failed(-9843)
+2026-10-12 13:23:37.165371+0200 xctest[57127:26185251] [Default] Connection 23: TLS Trust encountered error 3:-9843
+2026-10-12 13:23:37.165618+0200 xctest[57127:26185251] [Default] Connection 23: encountered error(3:-9843)
+2026-10-12 13:23:37.166264+0200 xctest[57127:26185251] [Default] Task <F31CA693-CBEA-4A83-A2CB-D50ECB7331ED>.<2> HTTP load failed, 0/0 bytes (error code: -1202 [3:-9843])
+2026-10-12 13:23:37.166730+0200 xctest[57127:26185281] [Default] Task <F31CA693-CBEA-4A83-A2CB-D50ECB7331ED>.<2> finished with error [-1202] Error Domain=NSURLErrorDomain Code=-1202 "Das Zertifikat für diesen Server ist ungültig. Eventuell wird eine Verbindung mit einem Server hergestellt, der vorgibt, „wrong.host.badssl.com“ zu sein und vertrauliche Daten gefährdet." UserInfo={NSLocalizedRecoverySuggestion=Soll die Verbindung zum Server trotzdem hergestellt werden?, _kCFStreamErrorDomainKey=3, NSErrorPeerCertificateChainKey=(
+    "<cert(0x10bf4f000) s: *.badssl.com i: YR1>",
+    "<cert(0x10bf4f800) s: YR1 i: Root YR>",
+    "<cert(0x10bf44000) s: Root YR i: ISRG Root X1>"
+), NSErrorClientCertificateStateKey=0, NSErrorFailingURLKey=https://wrong.host.badssl.com/, NSErrorFailingURLStringKey=https://wrong.host.badssl.com/, NSUnderlyingError=0x10ba81b00 {Error Domain=kCFErrorDomainCFNetwork Code=-1202 "(null)" UserInfo={_kCFStreamPropertySSLClientCertificateState=0, kCFStreamPropertySSLPeerTrust=<SecTrustRef: 0x10bdb49c0>, _kCFNetworkCFStreamSSLErrorOriginalValue=-9843, _kCFStreamErrorDomainKey=3, _kCFStreamErrorCodeKey=-9843, kCFStreamPropertySSLPeerCertificates=(
+    "<cert(0x10bf4f000) s: *.badssl.com i: YR1>",
+    "<cert(0x10bf4f800) s: YR1 i: Root YR>",
+    "<cert(0x10bf44000) s: Root YR i: ISRG Root X1>"
+)}}, _NSURLErrorRelatedURLSessionTaskErrorKey=(
+    "LocalDataTask <F31CA693-CBEA-4A83-A2CB-D50ECB7331ED>.<2>"
+), _kCFStreamErrorCodeKey=-9843, _NSURLErrorFailingURLSessionTaskErrorKey=LocalDataTask <F31CA693-CBEA-4A83-A2CB-D50ECB7331ED>.<2>, NSURLErrorFailingURLPeerTrustErrorKey=<SecTrustRef: 0x10bdb49c0>, NSLocalizedDescription=Das Zertifikat für diesen Server ist ungültig. Eventuell wird eine Verbindung mit einem Server hergestellt, der vorgibt, „wrong.host.badssl.com“ zu sein und vertrauliche Daten gefährdet.}
+SDK_LIVE_PROOF https://wrong.host.badssl.com/ baseline -1202; returned/recorded NSURLErrorDomain -1202
+​✔ Test certificateFailureMatchesTheUnwrappedSession(_:) with 2 test cases passed after 0.987 seconds.
+2026-10-12 13:23:37.567069+0200 xctest[57127:26185251] [Default] Connection 25: default TLS Trust evaluation failed(-9814)
+2026-10-12 13:23:37.567285+0200 xctest[57127:26185251] [Default] Connection 25: TLS Trust encountered error 3:-9814
+2026-10-12 13:23:37.567664+0200 xctest[57127:26185251] [Default] Connection 25: encountered error(3:-9814)
+2026-10-12 13:23:37.568282+0200 xctest[57127:26185251] [Default] Task <55F3E5AB-D25B-45A8-9FE4-FE4BACBE2C91>.<1> HTTP load failed, 0/0 bytes (error code: -1202 [3:-9814])
+2026-10-12 13:23:37.568710+0200 xctest[57127:26185209] [Default] Task <55F3E5AB-D25B-45A8-9FE4-FE4BACBE2C91>.<1> finished with error [-1202] Error Domain=NSURLErrorDomain Code=-1202 "Das Zertifikat für diesen Server ist ungültig. Eventuell wird eine Verbindung mit einem Server hergestellt, der vorgibt, „expired.badssl.com“ zu sein und vertrauliche Daten gefährdet." UserInfo={NSLocalizedRecoverySuggestion=Soll die Verbindung zum Server trotzdem hergestellt werden?, _kCFStreamErrorDomainKey=3, NSErrorPeerCertificateChainKey=(
+    "<cert(0x10bf23000) s: *.badssl.com i: COMODO RSA Domain Validation Secure Server CA>",
+    "<cert(0x10bf1e800) s: COMODO RSA Domain Validation Secure Server CA i: COMODO RSA Certification Authority>",
+    "<cert(0x10bf4e000) s: COMODO RSA Certification Authority i: AddTrust External CA Root>"
+), NSErrorClientCertificateStateKey=0, NSErrorFailingURLKey=https://expired.badssl.com/, NSErrorFailingURLStringKey=https://expired.badssl.com/, NSUnderlyingError=0x1074830f0 {Error Domain=kCFErrorDomainCFNetwork Code=-1202 "(null)" UserInfo={_kCFStreamPropertySSLClientCertificateState=0, kCFStreamPropertySSLPeerTrust=<SecTrustRef: 0x10bdb4240>, _kCFNetworkCFStreamSSLErrorOriginalValue=-9814, _kCFStreamErrorDomainKey=3, _kCFStreamErrorCodeKey=-9814, kCFStreamPropertySSLPeerCertificates=(
+    "<cert(0x10bf23000) s: *.badssl.com i: COMODO RSA Domain Validation Secure Server CA>",
+    "<cert(0x10bf1e800) s: COMODO RSA Domain Validation Secure Server CA i: COMODO RSA Certification Authority>",
+    "<cert(0x10bf4e000) s: COMODO RSA Certification Authority i: AddTrust External CA Root>"
+)}}, _NSURLErrorRelatedURLSessionTaskErrorKey=(
+    "LocalDataTask <55F3E5AB-D25B-45A8-9FE4-FE4BACBE2C91>.<1>"
+), _kCFStreamErrorCodeKey=-9814, _NSURLErrorFailingURLSessionTaskErrorKey=LocalDataTask <55F3E5AB-D25B-45A8-9FE4-FE4BACBE2C91>.<1>, NSURLErrorFailingURLPeerTrustErrorKey=<SecTrustRef: 0x10bdb4240>, NSLocalizedDescription=Das Zertifikat für diesen Server ist ungültig. Eventuell wird eine Verbindung mit einem Server hergestellt, der vorgibt, „expired.badssl.com“ zu sein und vertrauliche Daten gefährdet.}
+2026-10-12 13:23:37.572697+0200 xctest[57127:26185209] [Default] Task <0E07AC3D-0ADE-4D94-B095-C3B4660C4D7A>.<1> finished with error [-1202] Error Domain=NSURLErrorDomain Code=-1202 "Das Zertifikat für diesen Server ist ungültig. Eventuell wird eine Verbindung mit einem Server hergestellt, der vorgibt, „expired.badssl.com“ zu sein und vertrauliche Daten gefährdet." UserInfo={NSLocalizedRecoverySuggestion=Soll die Verbindung zum Server trotzdem hergestellt werden?, _kCFStreamErrorDomainKey=3, NSErrorPeerCertificateChainKey=(
+    "<cert(0x10bf23000) s: *.badssl.com i: COMODO RSA Domain Validation Secure Server CA>",
+    "<cert(0x10bf1e800) s: COMODO RSA Domain Validation Secure Server CA i: COMODO RSA Certification Authority>",
+    "<cert(0x10bf4e000) s: COMODO RSA Certification Authority i: AddTrust External CA Root>"
+), NSErrorClientCertificateStateKey=0, NSErrorFailingURLKey=https://expired.badssl.com/, NSErrorFailingURLStringKey=https://expired.badssl.com/, NSUnderlyingError=0x1074830f0 {Error Domain=kCFErrorDomainCFNetwork Code=-1202 "(null)" UserInfo={_kCFStreamPropertySSLClientCertificateState=0, kCFStreamPropertySSLPeerTrust=<SecTrustRef: 0x10bdb4240>, _kCFNetworkCFStreamSSLErrorOriginalValue=-9814, _kCFStreamErrorDomainKey=3, _kCFStreamErrorCodeKey=-9814, kCFStreamPropertySSLPeerCertificates=(
+    "<cert(0x10bf23000) s: *.badssl.com i: COMODO RSA Domain Validation Secure Server CA>",
+    "<cert(0x10bf1e800) s: COMODO RSA Domain Validation Secure Server CA i: COMODO RSA Certification Authority>",
+    "<cert(0x10bf4e000) s: COMODO RSA Certification Authority i: AddTrust External CA Root>"
+)}}, _NSURLErrorRelatedURLSessionTaskErrorKey=(
+    "LocalDataTask <0E07AC3D-0ADE-4D94-B095-C3B4660C4D7A>.<1>",
+    "LocalDataTask <55F3E5AB-D25B-45A8-9FE4-FE4BACBE2C91>.<1>"
+), _kCFStreamErrorCodeKey=-9814, _NSURLErrorFailingURLSessionTaskErrorKey=LocalDataTask <0E07AC3D-0ADE-4D94-B095-C3B4660C4D7A>.<1>, NSURLErrorFailingURLPeerTrustErrorKey=<SecTrustRef: 0x10bdb4240>, NSLocalizedDescription=Das Zertifikat für diesen Server ist ungültig. Eventuell wird eine Verbindung mit einem Server hergestellt, der vorgibt, „expired.badssl.com“ zu sein und vertrauliche Daten gefährdet.}
+SDK_PROTOCOL_NATIVE https://expired.badssl.com/ system rejection-1202 preserved
+​◇ Test case passing 1 argument target → "https://wrong.host.badssl.com/" to nativeCertificateRejectionIsPreserved(_:) started.
+2026-10-12 13:23:37.731337+0200 xctest[57127:26185281] [Default] Connection 1: default TLS Trust evaluation failed(-9814)
+2026-10-12 13:23:37.733969+0200 xctest[57127:26185281] [Default] Connection 1: TLS Trust encountered error 3:-9814
+2026-10-12 13:23:37.735087+0200 xctest[57127:26185281] [Default] Connection 1: encountered error(3:-9814)
+2026-10-12 13:23:37.737017+0200 xctest[57127:26185281] [Default] Task <2A86916E-082D-4205-97C6-433B2051FDF3>.<1> HTTP load failed, 0/0 bytes (error code: -1202 [3:-9814])
+2026-10-12 13:23:37.737722+0200 xctest[57127:26185251] [Default] Task <2A86916E-082D-4205-97C6-433B2051FDF3>.<1> finished with error [-1202] Error Domain=NSURLErrorDomain Code=-1202 "Das Zertifikat für diesen Server ist ungültig. Eventuell wird eine Verbindung mit einem Server hergestellt, der vorgibt, „expired.badssl.com“ zu sein und vertrauliche Daten gefährdet." UserInfo={NSLocalizedRecoverySuggestion=Soll die Verbindung zum Server trotzdem hergestellt werden?, _kCFStreamErrorDomainKey=3, NSErrorPeerCertificateChainKey=(
+    "<cert(0x10bf4c800) s: *.badssl.com i: COMODO RSA Domain Validation Secure Server CA>",
+    "<cert(0x10bf6ca00) s: COMODO RSA Domain Validation Secure Server CA i: COMODO RSA Certification Authority>",
+    "<cert(0x10bf4d000) s: COMODO RSA Certification Authority i: AddTrust External CA Root>"
+), NSErrorClientCertificateStateKey=0, NSErrorFailingURLKey=https://expired.badssl.com/, NSErrorFailingURLStringKey=https://expired.badssl.com/, NSUnderlyingError=0x10baf5d10 {Error Domain=kCFErrorDomainCFNetwork Code=-1202 "(null)" UserInfo={_kCFStreamPropertySSLClientCertificateState=0, kCFStreamPropertySSLPeerTrust=<SecTrustRef: 0x10bdb4000>, _kCFNetworkCFStreamSSLErrorOriginalValue=-9814, _kCFStreamErrorDomainKey=3, _kCFStreamErrorCodeKey=-9814, kCFStreamPropertySSLPeerCertificates=(
+    "<cert(0x10bf4c800) s: *.badssl.com i: COMODO RSA Domain Validation Secure Server CA>",
+    "<cert(0x10bf6ca00) s: COMODO RSA Domain Validation Secure Server CA i: COMODO RSA Certification Authority>",
+    "<cert(0x10bf4d000) s: COMODO RSA Certification Authority i: AddTrust External CA Root>"
+)}}, _NSURLErrorRelatedURLSessionTaskErrorKey=(
+    "LocalDataTask <2A86916E-082D-4205-97C6-433B2051FDF3>.<1>"
+), _kCFStreamErrorCodeKey=-9814, _NSURLErrorFailingURLSessionTaskErrorKey=LocalDataTask <2A86916E-082D-4205-97C6-433B2051FDF3>.<1>, NSURLErrorFailingURLPeerTrustErrorKey=<SecTrustRef: 0x10bdb4000>, NSLocalizedDescription=Das Zertifikat für diesen Server ist ungültig. Eventuell wird eine Verbindung mit einem Server hergestellt, der vorgibt, „expired.badssl.com“ zu sein und vertrauliche Daten gefährdet.}
+2026-10-12 13:23:37.739819+0200 xctest[57127:26185209] [Default] Connection 13: default TLS Trust evaluation failed(-9843)
+​2026-10-12 13:23:37.740883+0200 xctest[57127:26185209] [Default] Connection 13: TLS Trust encountered error 3:-9843
+2026-10-12 13:23:37.742261+0200 xctest[57127:26185209] [Default] Connection 13: encountered error(3:-9843)
+2026-10-12 13:23:37.743506+0200 xctest[57127:26185209] [Default] Task <B5DD6BF3-7289-42DF-A17F-5D2AA8678808>.<1> HTTP load failed, 0/0 bytes (error code: -1202 [3:-9843])
+2026-10-12 13:23:37.744802+0200 xctest[57127:26185209] [Default] Task <B5DD6BF3-7289-42DF-A17F-5D2AA8678808>.<1> finished with error [-1202] Error Domain=NSURLErrorDomain Code=-1202 "Das Zertifikat für diesen Server ist ungültig. Eventuell wird eine Verbindung mit einem Server hergestellt, der vorgibt, „wrong.host.badssl.com“ zu sein und vertrauliche Daten gefährdet." UserInfo={NSLocalizedRecoverySuggestion=Soll die Verbindung zum Server trotzdem hergestellt werden?, _kCFStreamErrorDomainKey=3, NSErrorPeerCertificateChainKey=(
+    "<cert(0x10bf19800) s: *.badssl.com i: YR1>",
+    "<cert(0x10bf18800) s: YR1 i: Root YR>",
+    "<cert(0x10bf6de00) s: Root YR i: ISRG Root X1>"
+), NSErrorClientCertificateStateKey=0, NSErrorFailingURLKey=https://wrong.host.badssl.com/, NSErrorFailingURLStringKey=https://wrong.host.badssl.com/, NSUnderlyingError=0x10bafcae0 {Error Domain=kCFErrorDomainCFNetwork Code=-1202 "(null)" UserInfo={_kCFStreamPropertySSLClientCertificateState=0, kCFStreamPropertySSLPeerTrust=<SecTrustRef: 0x10bdb7600>, _kCFNetworkCFStreamSSLErrorOriginalValue=-9843, _kCFStreamErrorDomainKey=3, _kCFStreamErrorCodeKey=-9843, kCFStreamPropertySSLPeerCertificates=(
+    "<cert(0x10bf19800) s: *.badssl.com i: YR1>",
+    "<cert(0x10bf18800) s: YR1 i: Root YR>",
+    "<cert(0x10bf6de00) s: Root YR i: ISRG Root X1>"
+)}}, _NSURLErrorRelatedURLSessionTaskErrorKey=(
+    "LocalDataTask <B5DD6BF3-7289-42DF-A17F-5D2AA8678808>.<1>"
+), _kCFStreamErrorCodeKey=-9843, _NSURLErrorFailingURLSessionTaskErrorKey=LocalDataTask <B5DD6BF3-7289-42DF-A17F-5D2AA8678808>.<1>, NSURLErrorFailingURLPeerTrustErrorKey=<SecTrustRef: 0x10bdb7600>, NSLocalizedDescription=Das Zertifikat für diesen Server ist ungültig. Eventuell wird eine Verbindung mit einem Server hergestellt, der vorgibt, „wrong.host.badssl.com“ zu sein und vertrauliche Daten gefährdet.}
+​✔ Test metricsKeepOriginalCertificateRejection(_:) with 2 test cases passed after 1.566 seconds.
+✔ Suite LiveRecordingMetricsTests passed after 1.566 seconds.
+2026-10-12 13:23:37.754249+0200 xctest[57127:26185281] [Default] Connection 15: default TLS Trust evaluation failed(-9814)
+2026-10-12 13:23:37.758151+0200 xctest[57127:26185281] [Default] Connection 15: TLS Trust encountered error 3:-9814
+2026-10-12 13:23:37.759747+0200 xctest[57127:26185281] [Default] Connection 15: encountered error(3:-9814)
+2026-10-12 13:23:37.760977+0200 xctest[57127:26185281] [Default] Task <377077AF-350E-4759-9717-7A7A80C3CFA7>.<1> HTTP load failed, 0/0 bytes (error code: -1202 [3:-9814])
+2026-10-12 13:23:37.762665+0200 xctest[57127:26185251] [Default] Task <377077AF-350E-4759-9717-7A7A80C3CFA7>.<1> finished with error [-1202] Error Domain=NSURLErrorDomain Code=-1202 "Das Zertifikat für diesen Server ist ungültig. Eventuell wird eine Verbindung mit einem Server hergestellt, der vorgibt, „expired.badssl.com“ zu sein und vertrauliche Daten gefährdet." UserInfo={NSLocalizedRecoverySuggestion=Soll die Verbindung zum Server trotzdem hergestellt werden?, _kCFStreamErrorDomainKey=3, NSErrorPeerCertificateChainKey=(
+    "<cert(0x10bf5c000) s: *.badssl.com i: COMODO RSA Domain Validation Secure Server CA>",
+    "<cert(0x10bf6e800) s: COMODO RSA Domain Validation Secure Server CA i: COMODO RSA Certification Authority>",
+    "<cert(0x10bf5c800) s: COMODO RSA Certification Authority i: AddTrust External CA Root>"
+), NSErrorClientCertificateStateKey=0, NSErrorFailingURLKey=https://expired.badssl.com/, NSErrorFailingURLStringKey=https://expired.badssl.com/, NSUnderlyingError=0x10bb14c30 {Error Domain=kCFErrorDomainCFNetwork Code=-1202 "(null)" UserInfo={_kCFStreamPropertySSLClientCertificateState=0, kCFStreamPropertySSLPeerTrust=<SecTrustRef: 0x10bdb46c0>, _kCFNetworkCFStreamSSLErrorOriginalValue=-9814, _kCFStreamErrorDomainKey=3, _kCFStreamErrorCodeKey=-9814, kCFStreamPropertySSLPeerCertificates=(
+    "<cert(0x10bf5c000) s: *.badssl.com i: COMODO RSA Domain Validation Secure Server CA>",
+    "<cert(0x10bf6e800) s: COMODO RSA Domain Validation Secure Server CA i: COMODO RSA Certification Authority>",
+    "<cert(0x10bf5c800) s: COMODO RSA Certification Authority i: AddTrust External CA Root>"
+)}}, _NSURLErrorRelatedURLSessionTaskErrorKey=(
+    "LocalDataTask <377077AF-350E-4759-9717-7A7A80C3CFA7>.<1>"
+), _kCFStreamErrorCodeKey=-9814, _NSURLErrorFailingURLSessionTaskErrorKey=LocalDataTask <377077AF-350E-4759-9717-7A7A80C3CFA7>.<1>, NSURLErrorFailingURLPeerTrustErrorKey=<SecTrustRef: 0x10bdb46c0>, NSLocalizedDescription=Das Zertifikat für diesen Server ist ungültig. Eventuell wird eine Verbindung mit einem Server hergestellt, der vorgibt, „expired.badssl.com“ zu sein und vertrauliche Daten gefährdet.}
+​2026-10-12 13:23:37.765312+0200 xctest[57127:26185281] [Default] Connection 8: default TLS Trust evaluation failed(-9814)
+2026-10-12 13:23:37.766190+0200 xctest[57127:26185281] [Default] Connection 8: TLS Trust encountered error 3:-9814
+2026-10-12 13:23:37.766830+0200 xctest[57127:26185281] [Default] Connection 8: encountered error(3:-9814)
+2026-10-12 13:23:37.769329+0200 xctest[57127:26185281] [Default] Task <B6E3B6D6-8FD8-4FBF-A0F5-537D79C237C5>.<1> HTTP load failed, 0/0 bytes (error code: -1202 [3:-9814])
+2026-10-12 13:23:37.769732+0200 xctest[57127:26185251] [Default] Task <B6E3B6D6-8FD8-4FBF-A0F5-537D79C237C5>.<1> finished with error [-1202] Error Domain=NSURLErrorDomain Code=-1202 "Das Zertifikat für diesen Server ist ungültig. Eventuell wird eine Verbindung mit einem Server hergestellt, der vorgibt, „expired.badssl.com“ zu sein und vertrauliche Daten gefährdet." UserInfo={NSLocalizedRecoverySuggestion=Soll die Verbindung zum Server trotzdem hergestellt werden?, _kCFStreamErrorDomainKey=3, NSErrorPeerCertificateChainKey=(
+    "<cert(0x10bf4f800) s: *.badssl.com i: COMODO RSA Domain Validation Secure Server CA>",
+    "<cert(0x10bf6d400) s: COMODO RSA Domain Validation Secure Server CA i: COMODO RSA Certification Authority>",
+    "<cert(0x10bf1b800) s: COMODO RSA Certification Authority i: AddTrust External CA Root>"
+), NSErrorClientCertificateStateKey=0, NSErrorFailingURLKey=https://expired.badssl.com/, NSErrorFailingURLStringKey=https://expired.badssl.com/, NSUnderlyingError=0x10bb0c780 {Error Domain=kCFErrorDomainCFNetwork Code=-1202 "(null)" UserInfo={_kCFStreamPropertySSLClientCertificateState=0, kCFStreamPropertySSLPeerTrust=<SecTrustRef: 0x10bdb4180>, _kCFNetworkCFStreamSSLErrorOriginalValue=-9814, _kCFStreamErrorDomainKey=3, _kCFStreamErrorCodeKey=-9814, kCFStreamPropertySSLPeerCertificates=(
+    "<cert(0x10bf4f800) s: *.badssl.com i: COMODO RSA Domain Validation Secure Server CA>",
+    "<cert(0x10bf6d400) s: COMODO RSA Domain Validation Secure Server CA i: COMODO RSA Certification Authority>",
+    "<cert(0x10bf1b800) s: COMODO RSA Certification Authority i: AddTrust External CA Root>"
+)}}, _NSURLErrorRelatedURLSessionTaskErrorKey=(
+    "LocalDataTask <B6E3B6D6-8FD8-4FBF-A0F5-537D79C237C5>.<1>"
+), _kCFStreamErrorCodeKey=-9814, _NSURLErrorFailingURLSessionTaskErrorKey=LocalDataTask <B6E3B6D6-8FD8-4FBF-A0F5-537D79C237C5>.<1>, NSURLErrorFailingURLPeerTrustErrorKey=<SecTrustRef: 0x10bdb4180>, NSLocalizedDescription=Das Zertifikat für diesen Server ist ungültig. Eventuell wird eine Verbindung mit einem Server hergestellt, der vorgibt, „expired.badssl.com“ zu sein und vertrauliche Daten gefährdet.}
+2026-10-12 13:23:38.175440+0200 xctest[57127:26185251] [Default] Connection 24: default TLS Trust evaluation failed(-9843)
+2026-10-12 13:23:38.176111+0200 xctest[57127:26185251] [Default] Connection 24: TLS Trust encountered error 3:-9843
+2026-10-12 13:23:38.177381+0200 xctest[57127:26185251] [Default] Connection 24: encountered error(3:-9843)
+2026-10-12 13:23:38.177726+0200 xctest[57127:26185251] [Default] Task <8D0AC09C-9961-4558-B19C-7031CECF168C>.<1> HTTP load failed, 0/0 bytes (error code: -1202 [3:-9843])
+2026-10-12 13:23:38.178727+0200 xctest[57127:26185209] [Default] Task <8D0AC09C-9961-4558-B19C-7031CECF168C>.<1> finished with error [-1202] Error Domain=NSURLErrorDomain Code=-1202 "Das Zertifikat für diesen Server ist ungültig. Eventuell wird eine Verbindung mit einem Server hergestellt, der vorgibt, „wrong.host.badssl.com“ zu sein und vertrauliche Daten gefährdet." UserInfo={NSLocalizedRecoverySuggestion=Soll die Verbindung zum Server trotzdem hergestellt werden?, _kCFStreamErrorDomainKey=3, NSErrorPeerCertificateChainKey=(
+    "<cert(0x10bf81000) s: *.badssl.com i: YR1>",
+    "<cert(0x10bf81800) s: YR1 i: Root YR>",
+    "<cert(0x10bf7de00) s: Root YR i: ISRG Root X1>"
+), NSErrorClientCertificateStateKey=0, NSErrorFailingURLKey=https://wrong.host.badssl.com/, NSErrorFailingURLStringKey=https://wrong.host.badssl.com/, NSUnderlyingError=0x10bf64570 {Error Domain=kCFErrorDomainCFNetwork Code=-1202 "(null)" UserInfo={_kCFStreamPropertySSLClientCertificateState=0, kCFStreamPropertySSLPeerTrust=<SecTrustRef: 0x10bdb4840>, _kCFNetworkCFStreamSSLErrorOriginalValue=-9843, _kCFStreamErrorDomainKey=3, _kCFStreamErrorCodeKey=-9843, kCFStreamPropertySSLPeerCertificates=(
+    "<cert(0x10bf81000) s: *.badssl.com i: YR1>",
+    "<cert(0x10bf81800) s: YR1 i: Root YR>",
+    "<cert(0x10bf7de00) s: Root YR i: ISRG Root X1>"
+)}}, _NSURLErrorRelatedURLSessionTaskErrorKey=(
+    "LocalDataTask <8D0AC09C-9961-4558-B19C-7031CECF168C>.<1>"
+), _kCFStreamErrorCodeKey=-9843, _NSURLErrorFailingURLSessionTaskErrorKey=LocalDataTask <8D0AC09C-9961-4558-B19C-7031CECF168C>.<1>, NSURLErrorFailingURLPeerTrustErrorKey=<SecTrustRef: 0x10bdb4840>, NSLocalizedDescription=Das Zertifikat für diesen Server ist ungültig. Eventuell wird eine Verbindung mit einem Server hergestellt, der vorgibt, „wrong.host.badssl.com“ zu sein und vertrauliche Daten gefährdet.}
+​✔ Test nativeHTTPSPreservesBodyOrOriginalTrustFailure(_:) with 3 test cases passed after 2.000 seconds.
+✔ Suite RecordingSessionDelegateLiveTests passed after 2.001 seconds.
+2026-10-12 13:23:38.187406+0200 xctest[57127:26185209] [Default] Connection 27: default TLS Trust evaluation failed(-9814)
+2026-10-12 13:23:38.189164+0200 xctest[57127:26185209] [Default] Connection 27: TLS Trust encountered error 3:-9814
+2026-10-12 13:23:38.189214+0200 xctest[57127:26185209] [Default] Connection 27: encountered error(3:-9814)
+2026-10-12 13:23:38.189684+0200 xctest[57127:26185209] [Default] Task <1CDBC24C-F0B4-4C96-A290-CD738732D97B>.<2> HTTP load failed, 0/0 bytes (error code: -1202 [3:-9814])
+2026-10-12 13:23:38.192863+0200 xctest[57127:26185251] [Default] Task <1CDBC24C-F0B4-4C96-A290-CD738732D97B>.<2> finished with error [-1202] Error Domain=NSURLErrorDomain Code=-1202 "Das Zertifikat für diesen Server ist ungültig. Eventuell wird eine Verbindung mit einem Server hergestellt, der vorgibt, „expired.badssl.com“ zu sein und vertrauliche Daten gefährdet." UserInfo={NSLocalizedRecoverySuggestion=Soll die Verbindung zum Server trotzdem hergestellt werden?, _kCFStreamErrorDomainKey=3, NSErrorPeerCertificateChainKey=(
+    "<cert(0x10bf82000) s: *.badssl.com i: COMODO RSA Domain Validation Secure Server CA>",
+    "<cert(0x10bf7e800) s: COMODO RSA Domain Validation Secure Server CA i: COMODO RSA Certification Authority>",
+    "<cert(0x10bf82800) s: COMODO RSA Certification Authority i: AddTrust External CA Root>"
+), NSErrorClientCertificateStateKey=0, NSErrorFailingURLKey=https://expired.badssl.com/, NSErrorFailingURLStringKey=https://expired.badssl.com/, NSUnderlyingError=0x10ba841e0 {Error Domain=kCFErrorDomainCFNetwork Code=-1202 "(null)" UserInfo={_kCFStreamPropertySSLClientCertificateState=0, kCFStreamPropertySSLPeerTrust=<SecTrustRef: 0x10bdb7180>, _kCFNetworkCFStreamSSLErrorOriginalValue=-9814, _kCFStreamErrorDomainKey=3, _kCFStreamErrorCodeKey=-9814, kCFStreamPropertySSLPeerCertificates=(
+    "<cert(0x10bf82000) s: *.badssl.com i: COMODO RSA Domain Validation Secure Server CA>",
+    "<cert(0x10bf7e800) s: COMODO RSA Domain Validation Secure Server CA i: COMODO RSA Certification Authority>",
+    "<cert(0x10bf82800) s: COMODO RSA Certification Authority i: AddTrust External CA Root>"
+)}}, _NSURLErrorRelatedURLSessionTaskErrorKey=(
+    "LocalDataTask <1CDBC24C-F0B4-4C96-A290-CD738732D97B>.<2>"
+), _kCFStreamErrorCodeKey=-9814, _NSURLErrorFailingURLSessionTaskErrorKey=LocalDataTask <1CDBC24C-F0B4-4C96-A290-CD738732D97B>.<2>, NSURLErrorFailingURLPeerTrustErrorKey=<SecTrustRef: 0x10bdb7180>, NSLocalizedDescription=Das Zertifikat für diesen Server ist ungültig. Eventuell wird eine Verbindung mit einem Server hergestellt, der vorgibt, „expired.badssl.com“ zu sein und vertrauliche Daten gefährdet.}
+SDK_STREAM_LIVE_PROOF https://expired.badssl.com/ baseline -1202; returned/recorded NSURLErrorDomain -1202
+​✔ Test streamingCertificateFailurePreservesDefaultSessionRejection(_:) with 2 test cases passed after 2.013 seconds.
+✔ Suite LiveHTTPSRecordingTests passed after 2.014 seconds.
+2026-10-12 13:23:39.010660+0200 xctest[57127:26185270] [Default] Connection 26: default TLS Trust evaluation failed(-9843)
+2026-10-12 13:23:39.010725+0200 xctest[57127:26185270] [Default] Connection 26: TLS Trust encountered error 3:-9843
+2026-10-12 13:23:39.010767+0200 xctest[57127:26185270] [Default] Connection 26: encountered error(3:-9843)
+2026-10-12 13:23:39.011189+0200 xctest[57127:26185270] [Default] Task <34B3BFEE-AAA2-47CD-A3B8-3F4DC0505672>.<1> HTTP load failed, 0/0 bytes (error code: -1202 [3:-9843])
+2026-10-12 13:23:39.011457+0200 xctest[57127:26185209] [Default] Task <34B3BFEE-AAA2-47CD-A3B8-3F4DC0505672>.<1> finished with error [-1202] Error Domain=NSURLErrorDomain Code=-1202 "Das Zertifikat für diesen Server ist ungültig. Eventuell wird eine Verbindung mit einem Server hergestellt, der vorgibt, „wrong.host.badssl.com“ zu sein und vertrauliche Daten gefährdet." UserInfo={NSLocalizedRecoverySuggestion=Soll die Verbindung zum Server trotzdem hergestellt werden?, _kCFStreamErrorDomainKey=3, NSErrorPeerCertificateChainKey=(
+    "<cert(0x10bf84800) s: *.badssl.com i: YR1>",
+    "<cert(0x10bf85800) s: YR1 i: Root YR>",
+    "<cert(0x10bf7e800) s: Root YR i: ISRG Root X1>"
+), NSErrorClientCertificateStateKey=0, NSErrorFailingURLKey=https://wrong.host.badssl.com/, NSErrorFailingURLStringKey=https://wrong.host.badssl.com/, NSUnderlyingError=0x107483060 {Error Domain=kCFErrorDomainCFNetwork Code=-1202 "(null)" UserInfo={_kCFStreamPropertySSLClientCertificateState=0, kCFStreamPropertySSLPeerTrust=<SecTrustRef: 0x10bdb4a80>, _kCFNetworkCFStreamSSLErrorOriginalValue=-9843, _kCFStreamErrorDomainKey=3, _kCFStreamErrorCodeKey=-9843, kCFStreamPropertySSLPeerCertificates=(
+    "<cert(0x10bf84800) s: *.badssl.com i: YR1>",
+    "<cert(0x10bf85800) s: YR1 i: Root YR>",
+    "<cert(0x10bf7e800) s: Root YR i: ISRG Root X1>"
+)}}, _NSURLErrorRelatedURLSessionTaskErrorKey=(
+    "LocalDataTask <34B3BFEE-AAA2-47CD-A3B8-3F4DC0505672>.<1>"
+), _kCFStreamErrorCodeKey=-9843, _NSURLErrorFailingURLSessionTaskErrorKey=LocalDataTask <34B3BFEE-AAA2-47CD-A3B8-3F4DC0505672>.<1>, NSURLErrorFailingURLPeerTrustErrorKey=<SecTrustRef: 0x10bdb4a80>, NSLocalizedDescription=Das Zertifikat für diesen Server ist ungültig. Eventuell wird eine Verbindung mit einem Server hergestellt, der vorgibt, „wrong.host.badssl.com“ zu sein und vertrauliche Daten gefährdet.}
+2026-10-12 13:23:39.441611+0200 xctest[57127:26185209] [Default] Connection 28: default TLS Trust evaluation failed(-9843)
+2026-10-12 13:23:39.443243+0200 xctest[57127:26185209] [Default] Connection 28: TLS Trust encountered error 3:-9843
+2026-10-12 13:23:39.446685+0200 xctest[57127:26185209] [Default] Connection 28: encountered error(3:-9843)
+2026-10-12 13:23:39.449171+0200 xctest[57127:26185209] [Default] Task <8134F907-2979-4870-842C-ADC94001B309>.<1> HTTP load failed, 0/0 bytes (error code: -1202 [3:-9843])
+2026-10-12 13:23:39.450307+0200 xctest[57127:26185209] [Default] Task <8134F907-2979-4870-842C-ADC94001B309>.<1> finished with error [-1202] Error Domain=NSURLErrorDomain Code=-1202 "Das Zertifikat für diesen Server ist ungültig. Eventuell wird eine Verbindung mit einem Server hergestellt, der vorgibt, „wrong.host.badssl.com“ zu sein und vertrauliche Daten gefährdet." UserInfo={NSLocalizedRecoverySuggestion=Soll die Verbindung zum Server trotzdem hergestellt werden?, _kCFStreamErrorDomainKey=3, NSErrorPeerCertificateChainKey=(
+    "<cert(0x10bf90000) s: *.badssl.com i: YR1>",
+    "<cert(0x10bf90800) s: YR1 i: Root YR>",
+    "<cert(0x10bf88000) s: Root YR i: ISRG Root X1>"
+), NSErrorClientCertificateStateKey=0, NSErrorFailingURLKey=https://wrong.host.badssl.com/, NSErrorFailingURLStringKey=https://wrong.host.badssl.com/, NSUnderlyingError=0x10bb147e0 {Error Domain=kCFErrorDomainCFNetwork Code=-1202 "(null)" UserInfo={_kCFStreamPropertySSLClientCertificateState=0, kCFStreamPropertySSLPeerTrust=<SecTrustRef: 0x10bdb4600>, _kCFNetworkCFStreamSSLErrorOriginalValue=-9843, _kCFStreamErrorDomainKey=3, _kCFStreamErrorCodeKey=-9843, kCFStreamPropertySSLPeerCertificates=(
+    "<cert(0x10bf90000) s: *.badssl.com i: YR1>",
+    "<cert(0x10bf90800) s: YR1 i: Root YR>",
+    "<cert(0x10bf88000) s: Root YR i: ISRG Root X1>"
+)}}, _NSURLErrorRelatedURLSessionTaskErrorKey=(
+    "LocalDataTask <8134F907-2979-4870-842C-ADC94001B309>.<1>"
+), _kCFStreamErrorCodeKey=-9843, _NSURLErrorFailingURLSessionTaskErrorKey=LocalDataTask <8134F907-2979-4870-842C-ADC94001B309>.<1>, NSURLErrorFailingURLPeerTrustErrorKey=<SecTrustRef: 0x10bdb4600>, NSLocalizedDescription=Das Zertifikat für diesen Server ist ungültig. Eventuell wird eine Verbindung mit einem Server hergestellt, der vorgibt, „wrong.host.badssl.com“ zu sein und vertrauliche Daten gefährdet.}
+2026-10-12 13:23:39.454856+0200 xctest[57127:26185281] [Default] Task <9759CB88-4F3E-4075-8B6C-14AB7959DE97>.<1> finished with error [-1202] Error Domain=NSURLErrorDomain Code=-1202 "Das Zertifikat für diesen Server ist ungültig. Eventuell wird eine Verbindung mit einem Server hergestellt, der vorgibt, „wrong.host.badssl.com“ zu sein und vertrauliche Daten gefährdet." UserInfo={NSLocalizedRecoverySuggestion=Soll die Verbindung zum Server trotzdem hergestellt werden?, _kCFStreamErrorDomainKey=3, NSErrorPeerCertificateChainKey=(
+    "<cert(0x10bf90000) s: *.badssl.com i: YR1>",
+    "<cert(0x10bf90800) s: YR1 i: Root YR>",
+    "<cert(0x10bf88000) s: Root YR i: ISRG Root X1>"
+), NSErrorClientCertificateStateKey=0, NSErrorFailingURLKey=https://wrong.host.badssl.com/, NSErrorFailingURLStringKey=https://wrong.host.badssl.com/, NSUnderlyingError=0x10bb147e0 {Error Domain=kCFErrorDomainCFNetwork Code=-1202 "(null)" UserInfo={_kCFStreamPropertySSLClientCertificateState=0, kCFStreamPropertySSLPeerTrust=<SecTrustRef: 0x10bdb4600>, _kCFNetworkCFStreamSSLErrorOriginalValue=-9843, _kCFStreamErrorDomainKey=3, _kCFStreamErrorCodeKey=-9843, kCFStreamPropertySSLPeerCertificates=(
+    "<cert(0x10bf90000) s: *.badssl.com i: YR1>",
+    "<cert(0x10bf90800) s: YR1 i: Root YR>",
+    "<cert(0x10bf88000) s: Root YR i: ISRG Root X1>"
+)}}, _NSURLErrorRelatedURLSessionTaskErrorKey=(
+    "LocalDataTask <9759CB88-4F3E-4075-8B6C-14AB7959DE97>.<1>",
+    "LocalDataTask <8134F907-2979-4870-842C-ADC94001B309>.<1>"
+), _kCFStreamErrorCodeKey=-9843, _NSURLErrorFailingURLSessionTaskErrorKey=LocalDataTask <9759CB88-4F3E-4075-8B6C-14AB7959DE97>.<1>, NSURLErrorFailingURLPeerTrustErrorKey=<SecTrustRef: 0x10bdb4600>, NSLocalizedDescription=Das Zertifikat für diesen Server ist ungültig. Eventuell wird eine Verbindung mit einem Server hergestellt, der vorgibt, „wrong.host.badssl.com“ zu sein und vertrauliche Daten gefährdet.}
+SDK_PROTOCOL_NATIVE https://wrong.host.badssl.com/ system rejection-1202 preserved
+​✔ Test nativeCertificateRejectionIsPreserved(_:) with 2 test cases passed after 2.800 seconds.
+◇ Test nativeTransportDelegateCanRejectRedirectWithoutLosingResponse() started.
+✔ Test nativeTransportDelegateCanRejectRedirectWithoutLosingResponse() passed after 0.058 seconds.
+◇ Test nativeTransportDelegateCanCancelAuthenticationWithoutOverride() started.
+✔ Test nativeTransportDelegateCanCancelAuthenticationWithoutOverride() passed after 0.056 seconds.
+✔ Suite LiveURLProtocolTests passed after 3.392 seconds.
+✔ Test run with 57 tests in 11 suites passed after 3.392 seconds.
+2026-10-12 13:23:39.880 xcodebuild[56999:26184043] [MT] IDETestOperationsObserverDebug: 6.523 elapsed -- Testing started completed.
+2026-10-12 13:23:39.880 xcodebuild[56999:26184043] [MT] IDETestOperationsObserverDebug: 0.000 sec, +0.000 sec -- start
+2026-10-12 13:23:39.880 xcodebuild[56999:26184043] [MT] IDETestOperationsObserverDebug: 6.523 sec, +6.523 sec -- end
+
+Test session results, code coverage, and logs:
+	/Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/SDK-Cache-Live-iOS.xcresult
+
+** TEST EXECUTE SUCCEEDED **
+
+Testing started

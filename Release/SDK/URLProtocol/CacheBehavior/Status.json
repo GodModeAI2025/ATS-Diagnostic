@@ -1,0 +1,16 @@
+{
+  "verifiedAt": "2026-10-12T13:25:18.816729+02:00",
+  "codeBaseCommit": "248a520",
+  "feature": "Seeded Foundation cache hits and explicit cache bypass",
+  "macOSTestMethodsPassed": 57,
+  "iOSTestMethodsPassed": 57,
+  "iOSExecutionsPassed": 66,
+  "failed": 0,
+  "skipped": 0,
+  "runtimeWarnings": 0,
+  "productionCodeChanged": false,
+  "appBinaryChanged": false,
+  "uploadedPreviewBuildUnchanged": 54,
+  "completeCacheParity": false,
+  "completeHistoricalParity": false
+}
