@@ -1,0 +1,5 @@
+ATS Diagnostic 2.0 (48)
+
+HSTS-Originalwerte bleiben unverändert und werden horizontal scrollbar angezeigt. Künstliche Darstellungstrennstriche entfallen.
+
+Enthält die verständliche HSTS-Diagnose und die getrennte Apple-CT-Loganzeige. Browsercache, Preload-Mitgliedschaft und unabhängige SCT-Signaturprüfung werden nicht behauptet.
