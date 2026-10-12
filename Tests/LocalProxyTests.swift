@@ -76,7 +76,11 @@ private final class TCPExchange: @unchecked Sendable {
                 self.afterEOF = afterEOF
                 connection.stateUpdateHandler = { [self] state in
                     switch state {
-                    case .ready: connection.send(content:request,contentContext:halfClose ? .finalMessage : .defaultMessage,isComplete:true,completion:.contentProcessed { [self] error in if let error { finish(.failure(error)) } else { receive() } })
+                    case .ready:
+                        // Read concurrently: an echo peer may apply backpressure before
+                        // the full upload completes. Waiting to read can deadlock duplex I/O.
+                        receive()
+                        connection.send(content:request,contentContext:halfClose ? .finalMessage : .defaultMessage,isComplete:true,completion:.contentProcessed { [self] error in if let error { finish(.failure(error)) } })
                     case .failed(let error): finish(.failure(error))
                     default: break
                     }
