@@ -14,5 +14,12 @@
   "privacyURL": "https://www.mobilebox-consulting.de/datenschutzerklärung-privacy-policy/",
   "privacyURLSavedAsDraft": true,
   "policyContentOwnerUpdating": true,
-  "inAppPrivacyLinkAddedAfterBuild49": true
+  "inAppPrivacyLinkAddedAfterBuild49": true,
+  "privacyTextsCommit": "8037f58",
+  "privacyTextsPushed": true,
+  "worldwideSelectionPrepared": 175,
+  "worldwideAvailabilitySaved": false,
+  "requestedBasePrice": "0.99 EUR",
+  "priceSaved": false,
+  "baseCountryChangeAwaitingConfirmation": true
 }
