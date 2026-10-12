@@ -1,0 +1,7 @@
+ATS Diagnostic 2.0 (40)
+
+Verlaufsspeicherung verbessert: Diagnoseberichte werden außerhalb der Oberfläche kodiert und atomar gespeichert. Schnelle Änderungen werden zusammengefasst. Ein verspäteter Speicherauftrag kann einen geleerten Verlauf nicht wiederherstellen. Beim Wechsel in den Hintergrund wartet die App innerhalb der vom System gewährten Zeit auf laufende Schreibvorgänge.
+
+Weiter enthalten: Zertifikatdetails und Ausstellerinformationen, verständliche TLS-/ATS-Fehler, BadSSL-Testübersicht, lokaler HTTP-/CONNECT-Proxy sowie HAR-Import mit Herkunftsangaben und geschütztem Replay unvollständiger Anfragekörper.
+
+Testhinweis: Einen Diagnosebericht speichern, App in den Hintergrund wechseln und erneut öffnen. Verlauf anschließend löschen und prüfen, dass er nach erneutem Öffnen leer bleibt.

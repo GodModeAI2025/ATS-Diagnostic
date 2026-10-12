@@ -185,6 +185,9 @@ struct HistoryView: View {
     @State private var category = ResponseCategory.all
     @State private var favoritesOnly = false
     @State private var showSettings = false
+    private var emptyHistory: some View {
+        ContentUnavailableView("No connections yet", systemImage: "network", description: Text("Inspect a host or send a request to begin."))
+    }
     var body: some View {
         NavigationStack {
             GeometryReader { geometry in
@@ -193,17 +196,20 @@ struct HistoryView: View {
                         ScrollView {
                             DiagnosticPanel(title: "Traffic overview", illustration: .traffic) { filters; TrafficOverview(statistics: TrafficStatistics(filtered)) }
                         }.frame(width: 340)
-                        List(filtered) { record in NavigationLink { RecordView(record: record, store: store) } label: { RecordRow(record: record) } }.scrollContentBackground(.hidden).background(Color(uiColor: .systemGroupedBackground)).frame(maxWidth: 760)
+                        List {
+                            ForEach(filtered) { record in NavigationLink { RecordView(record: record, store: store) } label: { RecordRow(record: record) } }
+                            if store.records.isEmpty { emptyHistory.listRowBackground(Color.clear).listRowSeparator(.hidden) }
+                        }.scrollContentBackground(.hidden).background(Color(uiColor: .systemGroupedBackground)).frame(maxWidth: 760)
                     }.padding(24).frame(maxWidth: .infinity).background(Color(uiColor: .systemGroupedBackground))
                 } else {
                     List {
                         Section { filters; TrafficOverview(statistics: TrafficStatistics(filtered)) }
+                        if store.records.isEmpty { Section { emptyHistory }.listRowBackground(Color.clear) }
                         ForEach(filtered) { record in NavigationLink { RecordView(record: record, store: store) } label: { RecordRow(record: record) } }
                     }
                 }
             }
 
-                .overlay { if store.records.isEmpty { ContentUnavailableView("No connections yet", systemImage: "network", description: Text("Inspect a host or send a request to begin.")) } }
                 .searchable(text: $query, prompt: "URL, method or status")
                 .navigationTitle("History")
                 .sheet(isPresented: $showSettings) { RecordingSettingsView(store: store) }
