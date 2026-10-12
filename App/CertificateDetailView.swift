@@ -37,7 +37,17 @@ struct CertificateDetailView: View {
                 FingerprintRow(title: "SHA-1", value: Insecure.SHA1.hash(data: certificate.der).map { String(format: "%02x", $0) }.joined())
                 if showExplanation { Text("Fingerprints identify the exact certificate bytes. SHA-1 is shown for comparison with older tools; it is not used to establish trust.").font(.footnote).foregroundStyle(.secondary) }
             }
-            Section("Root-store inclusion") { RootStoreRows(certificate: certificate, showLicense: { showDataLicense = true }) }
+            Section("Root-store inclusion") {
+                if isLeaf {
+                    Label("Vertrauen über die Zertifikatskette", systemImage: "link")
+                    Text("Serverzertifikate stehen normalerweise nicht selbst in Root-Stores. Ihr Vertrauen wird über Aussteller und Wurzelzertifikat geprüft. Ein fehlender direkter Listeneintrag ist deshalb kein Vertrauensfehler.").font(.footnote).foregroundStyle(.secondary)
+                    if let issuerCertificate {
+                        NavigationLink("Ausstellerzertifikat ansehen") { CertificateDetailView(certificate: issuerCertificate, isLeaf: false, systemCT: nil) }
+                    }
+                } else {
+                    RootStoreRows(certificate: certificate, showLicense: { showDataLicense = true })
+                }
+            }
             Section("Certificate Transparency") {
                 NavigationLink { CertificateTransparencyView(certificate: certificate, systemCT: isLeaf ? systemCT : nil, isLeaf: isLeaf) } label: {
                     HStack(alignment: .top, spacing: 12) {
