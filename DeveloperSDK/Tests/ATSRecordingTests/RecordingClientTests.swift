@@ -9,7 +9,7 @@ private final class FixtureProtocol: URLProtocol, @unchecked Sendable {
     override class func canonicalRequest(for request: URLRequest) -> URLRequest { request }
     override func startLoading() {
         if request.url?.path == "/failure" { client?.urlProtocol(self,didFailWithError:URLError(.cannotConnectToHost));return }
-        let data = request.url?.path == "/echo" ? ((request.httpBodyStream ?? task?.originalRequest?.httpBodyStream) != nil ? readBodyStream() : (request.httpBody ?? task?.originalRequest?.httpBody ?? Data())) : Data((0..<4096).map { UInt8($0 % 251) })
+        let data = request.url?.path == "/echo" ? ((request.httpBodyStream ?? task?.originalRequest?.httpBodyStream) != nil ? readBodyStream() : (request.httpBody ?? task?.originalRequest?.httpBody ?? Data())) : Data((0..<(request.url?.path == "/large" ? 150_017 : 4096)).map { UInt8($0 % 251) })
         let response = HTTPURLResponse(url:request.url!,statusCode:200,httpVersion:"HTTP/1.1",headerFields:["Content-Type":"application/octet-stream"])!
         client?.urlProtocol(self,didReceive:response,cacheStoragePolicy:.notAllowed)
         client?.urlProtocol(self,didLoad:data);client?.urlProtocolDidFinishLoading(self)
@@ -94,13 +94,13 @@ struct RecordingClientTests {
     @Test func downloadPreservesFileAndHashesBeyondPreview() async throws {
         let recorder = try RecordingClient(previewLimit: 3)
         let session = session(); defer { session.invalidateAndCancel() }
-        let (url, response) = try await recorder.download(for: URLRequest(url: URL(string: "https://fixture.invalid/body")!), using: session)
+        let (url, response) = try await recorder.download(for: URLRequest(url: URL(string: "https://fixture.invalid/large")!), using: session)
         defer { try? FileManager.default.removeItem(at: url) }
         let body = try Data(contentsOf: url)
-        #expect(body.count == 4096); #expect((response as? HTTPURLResponse)?.statusCode == 200)
+        #expect(body.count == 150_017); #expect((response as? HTTPURLResponse)?.statusCode == 200)
         let record = try #require(await recorder.records().first)
         #expect(record.responseBodyPreview == body.prefix(3))
-        #expect(record.responseBytes == 4096); #expect(record.responsePreviewTruncated)
+        #expect(record.responseBytes == 150_017); #expect(record.responsePreviewTruncated)
         #expect(record.responseSHA256 == SHA256.hash(data: body).map { String(format: "%02x", $0) }.joined())
     }
 
