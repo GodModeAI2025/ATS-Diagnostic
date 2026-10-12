@@ -1,0 +1,3 @@
+Neu in Build 53: Eine vollständige Verlaufsanfrage lässt sich als Kopie öffnen und vor dem erneuten Senden bearbeiten. In den Verbindungsdetails „Kopie vor dem Senden bearbeiten“ wählen, URL, Methode, Header oder Body anpassen und ausdrücklich senden. Öffnen und Schließen senden nichts; die ursprüngliche Aufzeichnung bleibt erhalten. Unvollständige importierte Anfragen ohne wiederholbaren Body bleiben gesperrt.
+
+Bitte Abbrechen ohne Senden sowie das gezielte Senden einer geänderten Anfrage prüfen. Rückwärtsauflösung und einzelne Weiterleitungsschritte bleiben enthalten.

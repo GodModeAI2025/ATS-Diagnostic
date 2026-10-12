@@ -75,8 +75,30 @@ struct InspectView: View {
     private var trustExplanation: some View { Text("Systemvertrauen wird weiterhin geprüft. Für die Diagnose fremder Server sind HTTP und ältere TLS-Konfigurationen zugelassen. Ein erfolgreicher Aufruf bestätigt deshalb keine ATS-Konformität.").font(.footnote).foregroundStyle(.secondary) }
     private func run() { Task { await store.execute(url: host) } }
 }
+struct RequestDraft {
+    let url: String
+    let method: String
+    let headers: String
+    let body: String
+    init(record: DiagnosticRecord) {
+        url = record.url; method = record.method
+        headers = record.requestHeaders.keys.sorted().map { "\($0): \(record.requestHeaders[$0] ?? "")" }.joined(separator: "\n")
+        body = record.requestBody
+    }
+}
 struct RequestView: View {
     let store: DiagnosticStore
+    private let isEditedCopy: Bool
+    @Environment(\.dismiss) private var dismiss
+    init(store: DiagnosticStore, draft: RequestDraft? = nil) {
+        self.store = store; isEditedCopy = draft != nil
+        _url = State(initialValue: draft?.url ?? "")
+        _method = State(initialValue: draft?.method ?? "GET")
+        _headers = State(initialValue: draft?.headers ?? "")
+        _bodyText = State(initialValue: draft?.body ?? "")
+        _headerExpanded = State(initialValue: !(draft?.headers.isEmpty ?? true))
+        _bodyExpanded = State(initialValue: !(draft?.body.isEmpty ?? true))
+    }
     @Environment(\.dynamicTypeSize) private var dynamicTypeSize
     @State private var url = ""
     @State private var method = "GET"
@@ -118,11 +140,12 @@ struct RequestView: View {
                     Button("Import request") { do { let request = try CURLImport.parse(curlText); url = request.url; method = request.method; headers = request.headers; bodyText = request.body; importError = nil; importCURL = false } catch { importError = error.localizedDescription } }
                 }.navigationTitle("Import cURL").toolbar { Button("Cancel") { importCURL = false } } }
             }
-            .toolbar { ToolbarItem(placement: .topBarTrailing) { Button("Import cURL", systemImage: "square.and.arrow.down") { importCURL = true } }; ToolbarItemGroup(placement: .keyboard) { Spacer(); Button("Done") { editing = false } } }
+            .toolbar { ToolbarItem(placement: .cancellationAction) { if isEditedCopy { Button("Schließen") { dismiss() } } }; ToolbarItem(placement: .topBarTrailing) { Button("Import cURL", systemImage: "square.and.arrow.down") { importCURL = true } }; ToolbarItemGroup(placement: .keyboard) { Spacer(); Button("Done") { editing = false } } }
         }
     }
     private func requestForm(showLatest: Bool) -> some View {
         Form {
+                if isEditedCopy { Text("Du bearbeitest eine Kopie. Erst „Send request“ sendet sie; die ursprüngliche Aufzeichnung bleibt erhalten.").font(.footnote).foregroundStyle(.secondary) }
                 Section("Request") {
                     TextField("https://example.com/api", text: $url).keyboardType(.URL).textInputAutocapitalization(.never).autocorrectionDisabled()
                     Picker("Method", selection: $method) { ForEach(["GET", "HEAD", "POST", "PUT", "PATCH", "DELETE", "OPTIONS"], id: \.self) { Text($0) } }
@@ -229,6 +252,7 @@ struct RecordRow: View {
     }
 }
 struct RecordView: View {
+    @State private var editRequest = false
     @State private var additionalRevocation: RevocationAssessment?
     private var displayedRecord: DiagnosticRecord { var value = record;if let additionalRevocation { value.revocationAssessment = additionalRevocation };return value }
         let record: DiagnosticRecord
@@ -247,7 +271,8 @@ struct RecordView: View {
                     detailList(includeOverview: false).frame(maxWidth: 760)
                 }.padding(24).frame(maxWidth: .infinity).background(Color(uiColor: .systemGroupedBackground))
             } else { detailList(includeOverview: true) }
-        }.navigationTitle("Connection details").navigationBarTitleDisplayMode(.inline).toolbar { Button("Favorite", systemImage: store.settings.favorites.contains(record.id) ? "star.fill" : "star") { store.toggleFavorite(record.id) } }
+        }.sheet(isPresented: $editRequest) { RequestView(store: store, draft: RequestDraft(record: record)) }
+        .navigationTitle("Connection details").navigationBarTitleDisplayMode(.inline).toolbar { Button("Favorite", systemImage: store.settings.favorites.contains(record.id) ? "star.fill" : "star") { store.toggleFavorite(record.id) } }
     }
     private var checksumExplanation: LocalizedStringKey { record.origin == nil ? "SHA-256 of the complete received response" : "SHA-256 laut importierter Aufzeichnung · nicht neu geprüft" }
     private func detailList(includeOverview: Bool) -> some View {
@@ -308,6 +333,7 @@ struct RecordView: View {
             ResponseBodySection(body: record.responseBody, encoding: record.responseEncoding, bytes: record.bytes, previewLimit: record.diagnosticOptions?.bodyPreviewBytes, hasCompleteHash: record.origin == nil && record.responseSHA256 != nil, byteCountKnown: record.responseByteCountKnown != false, incomplete: record.importedResponseComplete == false && (record.status != nil || record.importedObservedResponseBytes != nil), observedBytes: record.importedObservedResponseBytes)
             Section {
                 ShareLink("Copy or share as cURL", item: record.curl).disabled(!record.canReplay)
+                Button("Kopie vor dem Senden bearbeiten", systemImage: "square.and.pencil") { editRequest = true }.disabled(!record.canReplay)
                 Button("Replay request") { Task { await store.execute(url: record.url, method: record.method, headers: record.requestHeaders.map { "\($0.key): \($0.value)" }.joined(separator: "\n"), body: record.requestBody) } }.disabled(store.running || !record.canReplay)
             }
         }.scrollContentBackground(.hidden).background(Color(uiColor: .systemGroupedBackground))
