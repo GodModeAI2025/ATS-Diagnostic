@@ -81,6 +81,7 @@
 		971CAD037C91068142652229 /* ProxyCapture.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BE50945D8B4124C39214F62 /* ProxyCapture.swift */; };
 		98742F0DA603062B176B4B0E /* TLSProbe.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABC8F829F66AF685D8859DC0 /* TLSProbe.swift */; };
 		9EC117912282E1ECDB045049 /* CertificateFindings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FB8348535345EC1A56E1F14 /* CertificateFindings.swift */; };
+		A038E67CA289B16ED89D5F59 /* HistoryPersistenceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDC71A0A7F76360F74169CED /* HistoryPersistenceTests.swift */; };
 		A1D329C2B08FE63A1D9E56C9 /* CertificateReminderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59E847A30CD68F6D73D2CD42 /* CertificateReminderTests.swift */; };
 		A6B6B5EA6FA5D4483DC6A2F4 /* HTTPProxyMessageTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAA192DD5325997D4603D365 /* HTTPProxyMessageTests.swift */; };
 		ACDA30D9DB4F1BB6FBB266B3 /* DiagnosticFailureTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A4D779A854D30AAF1836C77 /* DiagnosticFailureTests.swift */; };
@@ -112,12 +113,14 @@
 		E05CEECCBE5C7B79305282B2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D7FD6A27B7550D386C7632C8 /* Assets.xcassets */; };
 		E27198736FA91776E9ACED06 /* ImportedRecordSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3C307EBF4A75A452738313B /* ImportedRecordSection.swift */; };
 		E274583D6D6C84F180AF51A9 /* DiagnosticFailure.swift in Sources */ = {isa = PBXBuildFile; fileRef = 034C303F69B4D34EBD8BB1A1 /* DiagnosticFailure.swift */; };
+		E2C7B9A0B262CBA53881B560 /* HistoryPersistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAA33C1C93B935A4E25F3B42 /* HistoryPersistence.swift */; };
 		E69A2493585758DC7BFB6509 /* CertificateFormats.swift in Sources */ = {isa = PBXBuildFile; fileRef = 306C387A89FF92AF8E550A38 /* CertificateFormats.swift */; };
 		E7F88C72B0A0FBD40949F4E9 /* VisualComponents.swift in Sources */ = {isa = PBXBuildFile; fileRef = 687B5C8DC9BA142303849330 /* VisualComponents.swift */; };
 		E8E0B14A37A3221A3914BD93 /* BadSSLView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00CDFFB17F51EC96E7E8D7EF /* BadSSLView.swift */; };
 		EC87C05D22670AF92C2D9FDE /* BadSSLSuite.swift in Sources */ = {isa = PBXBuildFile; fileRef = 706B5102F961F60CA9E9BE97 /* BadSSLSuite.swift */; };
 		ED25B8DCC7D3B3248750CD7F /* PolicyDirectives.swift in Sources */ = {isa = PBXBuildFile; fileRef = B24D2A511693F1C3090D61F1 /* PolicyDirectives.swift */; };
 		F1F1C375B80BF4C13DE010B6 /* IntegrityTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98BF98AF90961C96D6E0AB2B /* IntegrityTests.swift */; };
+		F50BCDE9B12AD890E5318501 /* HistoryPersistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAA33C1C93B935A4E25F3B42 /* HistoryPersistence.swift */; };
 		F7F5E9D9AAB9A9DDCC04267F /* DiagnosticOptions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CAB7A4A887A022BE790CC74 /* DiagnosticOptions.swift */; };
 		FE15A7008B4ECCB46EF7CB1B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D7FD6A27B7550D386C7632C8 /* Assets.xcassets */; };
 		FE80928B90B86C4EE633C496 /* RootStoreSnapshot.json in Resources */ = {isa = PBXBuildFile; fileRef = 5270ECD0BD1CD881958FABD3 /* RootStoreSnapshot.json */; };
@@ -214,6 +217,7 @@
 		B8CC2E2ECD74EFAE9C3C2101 /* ProxyMonitor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProxyMonitor.swift; sourceTree = "<group>"; };
 		BAA06F59CA7F407DB1257EED /* HTTPDetailViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPDetailViews.swift; sourceTree = "<group>"; };
 		BBFDF97001FEC55463E871E0 /* HARTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HARTests.swift; sourceTree = "<group>"; };
+		BDC71A0A7F76360F74169CED /* HistoryPersistenceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryPersistenceTests.swift; sourceTree = "<group>"; };
 		D0F97E508554E43B0CDABA22 /* ASN1Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ASN1Tests.swift; sourceTree = "<group>"; };
 		D23B04393A327FEE67D7F180 /* RecordingSettingsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordingSettingsTests.swift; sourceTree = "<group>"; };
 		D7FD6A27B7550D386C7632C8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -222,6 +226,7 @@
 		DD7E726B18C28B33FFD73D71 /* SDK-Live-expired.badssl.com.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = "SDK-Live-expired.badssl.com.json"; sourceTree = "<group>"; };
 		E031D20D2B393480C2B3A4CF /* ATSDiagnosticPreview.app */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.application; path = ATSDiagnosticPreview.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EAA192DD5325997D4603D365 /* HTTPProxyMessageTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPProxyMessageTests.swift; sourceTree = "<group>"; };
+		EAA33C1C93B935A4E25F3B42 /* HistoryPersistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryPersistence.swift; sourceTree = "<group>"; };
 		F45C97FCFC49991D92C95A74 /* LocalHTTPProxy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalHTTPProxy.swift; sourceTree = "<group>"; };
 		FA48D7B93B862A0646236C1B /* ATSDiagnosticApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ATSDiagnosticApp.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -278,6 +283,7 @@
 				8BD71BB4443DD67B3D667E5C /* DiagnosticOptionsTests.swift */,
 				6F416B595E31C21C933D4911 /* EndpointTests.swift */,
 				BBFDF97001FEC55463E871E0 /* HARTests.swift */,
+				BDC71A0A7F76360F74169CED /* HistoryPersistenceTests.swift */,
 				4D6467264A0E56E47E993F93 /* HistoryRetentionTests.swift */,
 				EAA192DD5325997D4603D365 /* HTTPProxyMessageTests.swift */,
 				98BF98AF90961C96D6E0AB2B /* IntegrityTests.swift */,
@@ -338,6 +344,7 @@
 				5CAB7A4A887A022BE790CC74 /* DiagnosticOptions.swift */,
 				B23483D08F8289B1EEBDA828 /* DiagnosticSettingsView.swift */,
 				8E46CE5231D8CC42A1587A78 /* HAR.swift */,
+				EAA33C1C93B935A4E25F3B42 /* HistoryPersistence.swift */,
 				3E94985D0FEBCCA700CA4190 /* HistoryRetention.swift */,
 				BAA06F59CA7F407DB1257EED /* HTTPDetailViews.swift */,
 				3AA82D275D1C50A55AA9F83A /* HTTPProxyMessage.swift */,
@@ -573,6 +580,7 @@
 				2C6A9B2F1CC537D485940B4A /* HAR.swift in Sources */,
 				89D5B454689C2C103A4F4D3B /* HTTPDetailViews.swift in Sources */,
 				B924E34D3C99DDB24D926116 /* HTTPProxyMessage.swift in Sources */,
+				F50BCDE9B12AD890E5318501 /* HistoryPersistence.swift in Sources */,
 				B8BBBA6048FDD004D4C8F20B /* HistoryRetention.swift in Sources */,
 				E27198736FA91776E9ACED06 /* ImportedRecordSection.swift in Sources */,
 				55353EB6457378815E588805 /* Integrity.swift in Sources */,
@@ -627,6 +635,7 @@
 				BF6307C82B4BDB21AE152F13 /* HAR.swift in Sources */,
 				8A921EC296645270E2EB0A83 /* HTTPDetailViews.swift in Sources */,
 				3189B213A050C5CA5E2FAF86 /* HTTPProxyMessage.swift in Sources */,
+				E2C7B9A0B262CBA53881B560 /* HistoryPersistence.swift in Sources */,
 				B4D274B683F5DE606BC54D3D /* HistoryRetention.swift in Sources */,
 				035D026530724683CB0399C9 /* ImportedRecordSection.swift in Sources */,
 				2FCA13441C543680773D12B0 /* Integrity.swift in Sources */,
@@ -663,6 +672,7 @@
 				117F3FD22732F020EEE3C5E1 /* EndpointTests.swift in Sources */,
 				12B5FC44B53A012A2E7B0ACC /* HARTests.swift in Sources */,
 				A6B6B5EA6FA5D4483DC6A2F4 /* HTTPProxyMessageTests.swift in Sources */,
+				A038E67CA289B16ED89D5F59 /* HistoryPersistenceTests.swift in Sources */,
 				788F3B299F032DAEBE98254A /* HistoryRetentionTests.swift in Sources */,
 				F1F1C375B80BF4C13DE010B6 /* IntegrityTests.swift in Sources */,
 				6C09E3A6C1F3668CE8AC701C /* LocalProxyTests.swift in Sources */,

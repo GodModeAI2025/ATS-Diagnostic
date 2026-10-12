@@ -8,6 +8,8 @@ import Observation
     var diagnosticOptions = DiagnosticOptions.standard
     var running = false
     var error: String?
+    private let persistence = HistoryPersistence(file: URL.documentsDirectory.appendingPathComponent("diagnostics.json"))
+    private var persistenceRevision: UInt64 = 0
     private var file: URL {
         URL.documentsDirectory.appendingPathComponent("diagnostics.json")
     }
@@ -67,8 +69,16 @@ import Observation
     }
     func clear() { records = []; save() }
     private func save() {
-        do { try JSONEncoder().encode(records).write(to: file, options: [.atomic, .completeFileProtection]) }
-        catch { self.error = error.localizedDescription }
+        persistenceRevision += 1
+        let revision = persistenceRevision
+        let snapshot = records
+        Task { [weak self, persistence] in
+            do { try await persistence.save(snapshot, revision: revision) }
+            catch {
+                guard let self, self.persistenceRevision == revision else { return }
+                self.error = error.localizedDescription
+            }
+        }
     }
     enum HeaderError: LocalizedError { case invalid; var errorDescription: String? { "Enter headers as Name: Value, one per line." } }
 }
