@@ -8,14 +8,16 @@ import Observation
     var diagnosticOptions = DiagnosticOptions.standard
     var running = false
     var error: String?
-    private let persistence = HistoryPersistence(file: URL.documentsDirectory.appendingPathComponent("diagnostics.json"))
-    private var persistenceRevision: UInt64 = 0
-    private var file: URL {
-        URL.documentsDirectory.appendingPathComponent("diagnostics.json")
-    }
+    @ObservationIgnored private let persistence: HistoryPersistence
+    @ObservationIgnored private var persistenceRevision: UInt64 = 0
+    @ObservationIgnored private var pendingPersistence: (records: [DiagnosticRecord], revision: UInt64)?
+    @ObservationIgnored private var persistenceTask: Task<Void, Never>?
+    private let file: URL
     private var settingsFile: URL { URL.documentsDirectory.appendingPathComponent("recording-settings.json") }
     private var optionsFile: URL { URL.documentsDirectory.appendingPathComponent("diagnostic-options.json") }
-    init() {
+    init(historyFile: URL = URL.documentsDirectory.appendingPathComponent("diagnostics.json")) {
+        file = historyFile
+        persistence = HistoryPersistence(file: historyFile)
         if let data = try? Data(contentsOf: optionsFile), let value = try? JSONDecoder().decode(DiagnosticOptions.self, from: data) { diagnosticOptions = value.validated }
         if let data = try? Data(contentsOf: settingsFile), let decoded = try? JSONDecoder().decode(RecordingSettings.self, from: data) { settings = decoded }
         do { records = try HistoryRetention.retain(JSONDecoder().decode([DiagnosticRecord].self, from: Data(contentsOf: file)), countLimit: settings.recordLimit) }
@@ -68,16 +70,23 @@ import Observation
         do { try updateSettings(value) } catch { self.error = error.localizedDescription }
     }
     func clear() { records = []; save() }
+    func flushHistory() async { await persistenceTask?.value }
     private func save() {
         persistenceRevision += 1
-        let revision = persistenceRevision
-        let snapshot = records
-        Task { [weak self, persistence] in
-            do { try await persistence.save(snapshot, revision: revision) }
-            catch {
-                guard let self, self.persistenceRevision == revision else { return }
-                self.error = error.localizedDescription
+        pendingPersistence = (records, persistenceRevision)
+        guard persistenceTask == nil else { return }
+        let lease = BackgroundWriteLease()
+        lease.begin()
+        persistenceTask = Task { [weak self, persistence] in
+            defer { lease.end() }
+            while let self, let pending = self.pendingPersistence {
+                self.pendingPersistence = nil
+                do { try await persistence.save(pending.records, revision: pending.revision) }
+                catch {
+                    if self.persistenceRevision == pending.revision { self.error = error.localizedDescription }
+                }
             }
+            self?.persistenceTask = nil
         }
     }
     enum HeaderError: LocalizedError { case invalid; var errorDescription: String? { "Enter headers as Name: Value, one per line." } }

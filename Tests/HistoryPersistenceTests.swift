@@ -14,6 +14,21 @@ struct HistoryPersistenceTests {
         let saved = try JSONDecoder().decode([DiagnosticRecord].self, from: Data(contentsOf: file))
         #expect(saved.isEmpty)
     }
+    @MainActor @Test func rapidImportsThenClearFlushOnlyLatestState() async throws {
+        let file = FileManager.default.temporaryDirectory.appendingPathComponent(UUID().uuidString)
+        defer { try? FileManager.default.removeItem(at: file) }
+        let store = DiagnosticStore(historyFile: file)
+        let record = DiagnosticRecord(url: "https://example.com/import", method: "GET")
+        let har = try JSONEncoder().encode(HARArchive(records: [record]))
+        for _ in 0..<20 { try store.importHAR(har) }
+        store.clear()
+        await store.flushHistory()
+        #expect(store.records.isEmpty)
+        #expect(try JSONDecoder().decode([DiagnosticRecord].self, from: Data(contentsOf: file)).isEmpty)
+        let reloaded = DiagnosticStore(historyFile: file)
+        #expect(reloaded.records.isEmpty)
+    }
+
     @Test func latestSnapshotRoundTripsCertificateAndBody() async throws {
         let file = FileManager.default.temporaryDirectory.appendingPathComponent(UUID().uuidString)
         defer { try? FileManager.default.removeItem(at: file) }

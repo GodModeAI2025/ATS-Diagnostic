@@ -25,6 +25,7 @@
 		221DC1D1E65ED9A8B3F628F2 /* SDK-Live-wrong.host.badssl.com.json in Resources */ = {isa = PBXBuildFile; fileRef = AE9DCAB53091977AB4E4AFCD /* SDK-Live-wrong.host.badssl.com.json */; };
 		265C9852AF9B889929805B2F /* RootStoreSnapshot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 593FCAF2F7741A75C32A3854 /* RootStoreSnapshot.swift */; };
 		278E7C9032D85DBD8D084D09 /* CertificateDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B1A39C75564C7E5F42B7323 /* CertificateDetailView.swift */; };
+		2A5754DAECFC18D4B434D0F2 /* BackgroundWriteLease.swift in Sources */ = {isa = PBXBuildFile; fileRef = 647945BB215181112C4706B2 /* BackgroundWriteLease.swift */; };
 		2C2AEEE90F31E4BA71B21532 /* VisualComponents.swift in Sources */ = {isa = PBXBuildFile; fileRef = 687B5C8DC9BA142303849330 /* VisualComponents.swift */; };
 		2C6A9B2F1CC537D485940B4A /* HAR.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E46CE5231D8CC42A1587A78 /* HAR.swift */; };
 		2D4D12C09D75D149C65AECF5 /* CCADB-License.txt in Resources */ = {isa = PBXBuildFile; fileRef = 576B1BE5362059F67EF577F8 /* CCADB-License.txt */; };
@@ -120,6 +121,7 @@
 		EC87C05D22670AF92C2D9FDE /* BadSSLSuite.swift in Sources */ = {isa = PBXBuildFile; fileRef = 706B5102F961F60CA9E9BE97 /* BadSSLSuite.swift */; };
 		ED25B8DCC7D3B3248750CD7F /* PolicyDirectives.swift in Sources */ = {isa = PBXBuildFile; fileRef = B24D2A511693F1C3090D61F1 /* PolicyDirectives.swift */; };
 		F1F1C375B80BF4C13DE010B6 /* IntegrityTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98BF98AF90961C96D6E0AB2B /* IntegrityTests.swift */; };
+		F372717F60A20CA93078034E /* BackgroundWriteLease.swift in Sources */ = {isa = PBXBuildFile; fileRef = 647945BB215181112C4706B2 /* BackgroundWriteLease.swift */; };
 		F50BCDE9B12AD890E5318501 /* HistoryPersistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAA33C1C93B935A4E25F3B42 /* HistoryPersistence.swift */; };
 		F7F5E9D9AAB9A9DDCC04267F /* DiagnosticOptions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CAB7A4A887A022BE790CC74 /* DiagnosticOptions.swift */; };
 		FE15A7008B4ECCB46EF7CB1B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D7FD6A27B7550D386C7632C8 /* Assets.xcassets */; };
@@ -184,6 +186,7 @@
 		59E847A30CD68F6D73D2CD42 /* CertificateReminderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CertificateReminderTests.swift; sourceTree = "<group>"; };
 		5CAB7A4A887A022BE790CC74 /* DiagnosticOptions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiagnosticOptions.swift; sourceTree = "<group>"; };
 		5F7CB99775433E4D4A1F096F /* ProxyLiveTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProxyLiveTests.swift; sourceTree = "<group>"; };
+		647945BB215181112C4706B2 /* BackgroundWriteLease.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundWriteLease.swift; sourceTree = "<group>"; };
 		687B5C8DC9BA142303849330 /* VisualComponents.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VisualComponents.swift; sourceTree = "<group>"; };
 		6A5AE58CCEBB77DC8A9F1E7C /* ATSDiagnosticLiveTests.xctest */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.cfbundle; path = ATSDiagnosticLiveTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		6AB56752BCD5D28B97DB8C7E /* ATSDiagnostic.app */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.application; path = ATSDiagnostic.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -326,6 +329,7 @@
 			children = (
 				D7FD6A27B7550D386C7632C8 /* Assets.xcassets */,
 				FA48D7B93B862A0646236C1B /* ATSDiagnosticApp.swift */,
+				647945BB215181112C4706B2 /* BackgroundWriteLease.swift */,
 				706B5102F961F60CA9E9BE97 /* BadSSLSuite.swift */,
 				00CDFFB17F51EC96E7E8D7EF /* BadSSLView.swift */,
 				287C93DA26E28D4037185486 /* CaptureView.swift */,
@@ -560,6 +564,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				04C1CEE76848FE669B747E2A /* ATSDiagnosticApp.swift in Sources */,
+				F372717F60A20CA93078034E /* BackgroundWriteLease.swift in Sources */,
 				96DA7487D858332661F18204 /* BadSSLSuite.swift in Sources */,
 				E8E0B14A37A3221A3914BD93 /* BadSSLView.swift in Sources */,
 				81186C01D4A82C1DB7B04CD8 /* CURLImport.swift in Sources */,
@@ -615,6 +620,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C20E1B5DF3B19D588AD83858 /* ATSDiagnosticApp.swift in Sources */,
+				2A5754DAECFC18D4B434D0F2 /* BackgroundWriteLease.swift in Sources */,
 				EC87C05D22670AF92C2D9FDE /* BadSSLSuite.swift in Sources */,
 				616544E83DC843EF89FB659C /* BadSSLView.swift in Sources */,
 				43F40D97F182CD3182318204 /* CURLImport.swift in Sources */,
