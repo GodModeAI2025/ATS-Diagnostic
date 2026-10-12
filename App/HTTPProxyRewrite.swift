@@ -8,13 +8,14 @@ struct HTTPProxyRewriteRule: Sendable {
     let headers: [String: String]
     let body: Data?
     enum Failure: LocalizedError {
-        case target, framingHeader, duplicateHeader, opaqueTransport, bodyLimit
+        case target, framingHeader, duplicateHeader, opaqueTransport, bodyLimit, headerLimit
         var errorDescription: String? {
             switch self {
             case .target: "Ein Umschreibungsziel muss eine gültige HTTP- oder HTTPS-URL ohne Zugangsdaten sein."
             case .framingHeader: "Host-, Verbindungs- und Nachrichtenlängen-Header werden vom Proxy verwaltet."
             case .duplicateHeader: "Eine Umschreibung enthält denselben Header-Namen mehrfach."
             case .opaqueTransport: "CONNECT-Tunnel und Upgrade-Verbindungen können hier nicht umgeschrieben werden."
+            case .headerLimit: "Die umgeschriebenen Anfrage-Header überschreiten das Limit von 64 KiB."
             case .bodyLimit: "Der neue Anfrageinhalt überschreitet das Proxy-Limit von 16 MiB."
             }
         }
@@ -49,11 +50,14 @@ struct HTTPProxyRewriteRule: Sendable {
             fields.removeAll { ["content-length", "transfer-encoding", "trailer"].contains($0.name.lowercased()) }
             fields.append(HTTPHeader(name: "Content-Length", value: String(body.count)))
         }
-        return ProxyHTTPRequest(method: method ?? request.method, target: url.absoluteString, version: request.version,
+        let result = ProxyHTTPRequest(method: method ?? request.method, target: url.absoluteString, version: request.version,
                                 url: url, headers: fields, body: body ?? request.body, wireBody: body ?? request.wireBody,
                                 consumedBytes: request.consumedBytes)
+        guard result.upstreamHeaderBytes().count <= HTTPProxyMessage.headerLimit else { throw Failure.headerLimit }
+        return result
     }
     private static func target(_ text: String) throws -> URL {
+        guard text.utf8.count <= HTTPProxyMessage.headerLimit else { throw Failure.headerLimit }
         guard let literal = URL(string: text), ["http", "https"].contains(literal.scheme?.lowercased() ?? ""), literal.host != nil else { throw Failure.target }
         let url = try Endpoint.parse(text)
         guard ["http", "https"].contains(url.scheme?.lowercased() ?? ""), url.user == nil, url.password == nil,

@@ -7,6 +7,8 @@ struct ProxyCapture: Identifiable, Codable, Sendable, Equatable {
     var revision = 0
     var method = ""
     var target = ""
+    var originalTarget: String?
+    var rewriteRuleApplied: Bool?
     var state = State.receiving
     var sentBytes = 0
     var receivedBytes = 0

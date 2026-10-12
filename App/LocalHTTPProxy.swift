@@ -13,8 +13,9 @@ final class LocalHTTPProxy: @unchecked Sendable {
     private var startupWork: DispatchWorkItem?
     private let idleTimeout: Double
     private let maximumDuration: Double
-    init(idleTimeout: Double = 60, maximumDuration: Double = 3600, event: @escaping @Sendable (LocalProxyEvent) -> Void) {
-        self.idleTimeout = max(1,min(idleTimeout,3600)); self.maximumDuration = max(1,min(maximumDuration,86400)); self.event = event
+    private let rewriteRules: [HTTPProxyRewriteRule]
+    init(idleTimeout: Double = 60, maximumDuration: Double = 3600, rewriteRules: [HTTPProxyRewriteRule] = [], event: @escaping @Sendable (LocalProxyEvent) -> Void) {
+        self.idleTimeout = max(1,min(idleTimeout,3600)); self.maximumDuration = max(1,min(maximumDuration,86400)); self.rewriteRules = rewriteRules; self.event = event
     }
     func start(port: UInt16 = 0) {
         queue.async { [self] in
@@ -38,7 +39,7 @@ final class LocalHTTPProxy: @unchecked Sendable {
                         connection.start(queue:queue)
                         connection.send(content:ProxyWire.errorResponse(503,message:"Alle acht Proxy-Verbindungen sind belegt."),completion:.contentProcessed { _ in connection.cancel() }); return
                     }
-                    let worker = ProxyRelay(client:connection,proxyPort:self.listener?.port?.rawValue ?? port,queue:queue,idleTimeout:idleTimeout,maximumDuration:maximumDuration,event:event,closed:{ [weak self] id in self?.workers.removeValue(forKey:id) })
+                    let worker = ProxyRelay(client:connection,proxyPort:self.listener?.port?.rawValue ?? port,queue:queue,idleTimeout:idleTimeout,maximumDuration:maximumDuration,rewriteRules:rewriteRules,event:event,closed:{ [weak self] id in self?.workers.removeValue(forKey:id) })
                     workers[worker.id] = worker; worker.start()
                 }
                 listener.start(queue:queue)
@@ -48,6 +49,8 @@ final class LocalHTTPProxy: @unchecked Sendable {
         }
     }
     func stop(reason: String = "Proxy gestoppt") { queue.async { [self] in shutdown(reason:reason) } }
+    /// Used by synchronous fixture teardown; do not call from the proxy queue.
+    func stopAndDrain(reason: String = "Proxy gestoppt") { queue.sync { shutdown(reason: reason) } }
     deinit {
         listener?.cancel()
         let active = Array(workers.values)
@@ -72,6 +75,7 @@ private final class ProxyRelay: @unchecked Sendable {
     private let queue: DispatchQueue
     private let idleTimeout: Double
     private let maximumDuration: Double
+    private let rewriteRules: [HTTPProxyRewriteRule]
     private let event: @Sendable (LocalProxyEvent) -> Void
     private let closed: (UUID) -> Void
     private var input = Data()
@@ -92,8 +96,8 @@ private final class ProxyRelay: @unchecked Sendable {
     private let clock = ContinuousClock()
     private var began: ContinuousClock.Instant?
     private var lastProgress: ContinuousClock.Instant?
-    init(client: NWConnection,proxyPort:UInt16,queue:DispatchQueue,idleTimeout:Double,maximumDuration:Double,event:@escaping @Sendable(LocalProxyEvent)->Void,closed:@escaping(UUID)->Void) {
-        self.client = client; self.proxyPort = proxyPort; self.queue = queue; self.idleTimeout = idleTimeout; self.maximumDuration = maximumDuration; self.event = event; self.closed = closed
+    init(client: NWConnection,proxyPort:UInt16,queue:DispatchQueue,idleTimeout:Double,maximumDuration:Double,rewriteRules:[HTTPProxyRewriteRule],event:@escaping @Sendable(LocalProxyEvent)->Void,closed:@escaping(UUID)->Void) {
+        self.client = client; self.proxyPort = proxyPort; self.queue = queue; self.idleTimeout = idleTimeout; self.maximumDuration = maximumDuration; self.rewriteRules = rewriteRules; self.event = event; self.closed = closed
     }
     func start() {
         began = clock.now; emit(force:true)
@@ -130,7 +134,17 @@ private final class ProxyRelay: @unchecked Sendable {
             if eof { reject(400,"Die Verbindung endete vor einer vollständigen HTTP-Anfrage.") } else { receiveRequest() }
         }
     }
-    private func connect(_ request: ProxyHTTPRequest) {
+    private func connect(_ received: ProxyHTTPRequest) {
+        record.method = received.method; record.target = received.url.absoluteString
+        let request: ProxyHTTPRequest
+        do {
+            if let rule = rewriteRules.first(where: { $0.matchURL == received.url.absoluteString }) {
+                request = try rule.applying(to: received)
+                record.originalTarget = received.url.absoluteString
+                record.rewriteRuleApplied = true
+            } else { request = received }
+        } catch { reject(422, error.localizedDescription); return }
+
         wantsUpgrade = request.requestsUpgrade
         let host = ProxyWire.host(request.url), port = UInt16(request.url.port ?? (request.url.scheme == "https" ? 443 : 80))
         guard !host.isEmpty else { reject(400,"Kein gültiges Ziel."); return }

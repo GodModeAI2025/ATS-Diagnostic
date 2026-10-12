@@ -72,6 +72,7 @@ private final class TCPExchange: @unchecked Sendable {
     private var continuation: CheckedContinuation<Data,any Error>?
     private var response = Data()
     private var afterEOF: Data?
+    private var becameReady = false
     private let keepOpenAfterResponse: Bool
     init(port: UInt16, keepOpenAfterResponse: Bool = false) { self.keepOpenAfterResponse = keepOpenAfterResponse; connection = NWConnection(host:"127.0.0.1",port:NWEndpoint.Port(rawValue:port)!,using:.tcp) }
     func exchange(_ request:Data,halfClose:Bool = true,afterEOF:Data? = nil) async throws -> Data {
@@ -82,11 +83,12 @@ private final class TCPExchange: @unchecked Sendable {
                 connection.stateUpdateHandler = { [self] state in
                     switch state {
                     case .ready:
+                        becameReady = true
                         // Read concurrently: an echo peer may apply backpressure before
                         // the full upload completes. Waiting to read can deadlock duplex I/O.
                         receive()
                         connection.send(content:request,contentContext:halfClose ? .finalMessage : .defaultMessage,isComplete:true,completion:.contentProcessed { [self] error in if let error { finish(.failure(contextual(error, stage: "client send"))) } })
-                    case .failed(let error): finish(.failure(contextual(error, stage: "client connect")))
+                    case .failed(let error): finish(.failure(contextual(error, stage: becameReady ? "client state after ready, received \(response.count) bytes" : "client connect")))
                     default: break
                     }
                 }
@@ -124,11 +126,53 @@ private func proxyPort(_ stream:AsyncStream<LocalProxyEvent>) async throws -> UI
     }
     throw URLError(.cannotConnectToHost)
 }
+@Suite(.serialized)
 struct LocalProxyTests {
+    @Test func exactRuleActuallyMapsTargetReframesBodyAndRecordsOrigin() async throws {
+        let fixture = try TCPFixture(mode: .http)
+        let origin = try await fixture.start(); defer { fixture.stop() }
+        let original = "http://original.invalid/source"
+        let mapped = "http://127.0.0.1:\(origin)/mapped?q=1"
+        let rule = try HTTPProxyRewriteRule(matchURL: original, replacementURL: mapped, method: "PUT", headers: ["X-Rewrite":"first"], body: Data("edited".utf8))
+        let later = try HTTPProxyRewriteRule(matchURL: original, replacementURL: mapped, headers: ["X-Rewrite":"later"])
+        let pair = AsyncStream<LocalProxyEvent>.makeStream()
+        let proxy = LocalHTTPProxy(idleTimeout: 3, maximumDuration: 5, rewriteRules: [rule, later], event: { pair.continuation.yield($0) })
+        proxy.start(); defer { proxy.stopAndDrain(); pair.continuation.finish() }
+        let port = try await proxyPort(pair.stream)
+        let input = Data("POST \(original) HTTP/1.1\r\nHost: original.invalid\r\nAuthorization: Bearer old-secret\r\nCookie: old=secret\r\nTransfer-Encoding: chunked\r\n\r\n3\r\nold\r\n0\r\n\r\n".utf8)
+        let response = try await TCPExchange(port: port).exchange(input)
+        #expect(ProxyWire.responseStatus(response) == 200)
+        let received = try #require(try HTTPProxyMessage.parseRequest(fixture.received()))
+        #expect(received.method == "PUT")
+        #expect(received.url.path == "/mapped"); #expect(received.url.query == "q=1")
+        #expect(received.body == Data("edited".utf8))
+        #expect(received.headers.contains { $0.name == "X-Rewrite" && $0.value == "first" })
+        #expect(!received.headers.contains { ["authorization", "cookie", "transfer-encoding"].contains($0.name.lowercased()) })
+        for await event in pair.stream {
+            if case .capture(let record) = event, !record.active {
+                #expect(record.originalTarget == original); #expect(record.target == mapped)
+                #expect(record.rewriteRuleApplied == true); #expect(record.status == 200)
+                break
+            }
+        }
+    }
+    @Test func oversizedRewrittenHeadersAreRejectedBeforeOriginConnect() async throws {
+        let fixture = try TCPFixture(mode: .http)
+        let origin = try await fixture.start(); defer { fixture.stop() }
+        let target = "http://127.0.0.1:\(origin)/too-large"
+        let rule = try HTTPProxyRewriteRule(matchURL: target, headers: ["X-Padding":String(repeating: "x", count: HTTPProxyMessage.headerLimit)])
+        let pair = AsyncStream<LocalProxyEvent>.makeStream()
+        let proxy = LocalHTTPProxy(idleTimeout: 3, maximumDuration: 5, rewriteRules: [rule], event: { pair.continuation.yield($0) })
+        proxy.start(); defer { proxy.stopAndDrain(); pair.continuation.finish() }
+        let port = try await proxyPort(pair.stream)
+        let response = try await TCPExchange(port: port).exchange(Data("GET \(target) HTTP/1.1\r\nHost: fixture\r\n\r\n".utf8))
+        #expect(ProxyWire.responseStatus(response) == 422)
+        #expect(fixture.received().isEmpty)
+    }
     @Test func httpActuallyForwardsOriginFormAndStripsProxySecret() async throws {
         let fixture = try TCPFixture(mode:.http); let origin = try await fixture.start(); defer { fixture.stop() }
         let pair = AsyncStream<LocalProxyEvent>.makeStream()
-        let proxy = LocalHTTPProxy(idleTimeout:3,maximumDuration:5,event:{ pair.continuation.yield($0) });proxy.start();defer { proxy.stop();pair.continuation.finish() }
+        let proxy = LocalHTTPProxy(idleTimeout:3,maximumDuration:5,event:{ pair.continuation.yield($0) });proxy.start();defer { proxy.stopAndDrain();pair.continuation.finish() }
         let port = try await proxyPort(pair.stream)
         let request = Data("GET http://127.0.0.1:\(origin)/one?q=1 HTTP/1.1\r\nHost: wrong.test\r\nProxy-Authorization: secret\r\n\r\n".utf8)
         let response = try await TCPExchange(port:port).exchange(request)
@@ -140,7 +184,7 @@ struct LocalProxyTests {
     @Test func connectRelaysLargeOpaqueBytesAndHalfClose() async throws {
         let fixture = try TCPFixture(mode:.echo);let origin = try await fixture.start();defer { fixture.stop() }
         let pair = AsyncStream<LocalProxyEvent>.makeStream()
-        let proxy = LocalHTTPProxy(idleTimeout:3,maximumDuration:5,event:{ pair.continuation.yield($0) });proxy.start();defer { proxy.stop();pair.continuation.finish() }
+        let proxy = LocalHTTPProxy(idleTimeout:3,maximumDuration:5,event:{ pair.continuation.yield($0) });proxy.start();defer { proxy.stopAndDrain();pair.continuation.finish() }
         let port = try await proxyPort(pair.stream)
         let payload = Data((0..<(512*1024)).map { UInt8($0 % 251) })
         var request = Data("CONNECT 127.0.0.1:\(origin) HTTP/1.1\r\nHost: 127.0.0.1:\(origin)\r\n\r\n".utf8);request.append(payload)
@@ -151,13 +195,13 @@ struct LocalProxyTests {
         for await event in pair.stream { if case .capture(let record) = event,!record.active { #expect(record.state == .completed, "Terminal state: \(record.state), error: \(record.error ?? "none")");#expect(record.sentBytes == payload.count);#expect(record.receivedBytes == payload.count);#expect(record.requestPreview.isEmpty && record.responsePreview.isEmpty);break } }
     }
     @Test func ambiguousFramingRejectedBeforeConnecting() async throws {
-        let pair = AsyncStream<LocalProxyEvent>.makeStream();let proxy = LocalHTTPProxy(idleTimeout:3,maximumDuration:5,event:{ pair.continuation.yield($0) });proxy.start();defer { proxy.stop();pair.continuation.finish() }
+        let pair = AsyncStream<LocalProxyEvent>.makeStream();let proxy = LocalHTTPProxy(idleTimeout:3,maximumDuration:5,event:{ pair.continuation.yield($0) });proxy.start();defer { proxy.stopAndDrain();pair.continuation.finish() }
         let port = try await proxyPort(pair.stream)
         let response = try await TCPExchange(port:port).exchange(Data("POST http://example.com/ HTTP/1.1\r\nHost: example.com\r\nContent-Length: 1\r\nTransfer-Encoding: chunked\r\n\r\nx".utf8))
         #expect(ProxyWire.responseStatus(response) == 400)
     }
     @Test func selfLoopRejectedAndIdleConnectionClosed() async throws {
-        let pair = AsyncStream<LocalProxyEvent>.makeStream();let proxy = LocalHTTPProxy(idleTimeout:1,maximumDuration:4,event:{ pair.continuation.yield($0) });proxy.start();defer { proxy.stop();pair.continuation.finish() }
+        let pair = AsyncStream<LocalProxyEvent>.makeStream();let proxy = LocalHTTPProxy(idleTimeout:1,maximumDuration:4,event:{ pair.continuation.yield($0) });proxy.start();defer { proxy.stopAndDrain();pair.continuation.finish() }
         let port = try await proxyPort(pair.stream)
         let loop = try await TCPExchange(port:port).exchange(Data("CONNECT 127.0.0.1:\(port) HTTP/1.1\r\nHost: 127.0.0.1:\(port)\r\n\r\n".utf8))
         #expect(ProxyWire.responseStatus(loop) == 508)
@@ -172,7 +216,7 @@ struct LocalProxyTests {
     }
     @Test func serverHalfCloseDoesNotDiscardLaterClientBytes() async throws {
         let fixture = try TCPFixture(mode:.serverHalfClose);let origin = try await fixture.start();defer { fixture.stop() }
-        let pair = AsyncStream<LocalProxyEvent>.makeStream();let proxy = LocalHTTPProxy(idleTimeout:3,maximumDuration:5,event:{ pair.continuation.yield($0) });proxy.start();defer { proxy.stop();pair.continuation.finish() }
+        let pair = AsyncStream<LocalProxyEvent>.makeStream();let proxy = LocalHTTPProxy(idleTimeout:3,maximumDuration:5,event:{ pair.continuation.yield($0) });proxy.start();defer { proxy.stopAndDrain();pair.continuation.finish() }
         let port = try await proxyPort(pair.stream)
         let request = Data("CONNECT 127.0.0.1:\(origin) HTTP/1.1\r\nHost: 127.0.0.1:\(origin)\r\n\r\n".utf8)
         let late = Data("client sends after server EOF".utf8)
@@ -183,7 +227,7 @@ struct LocalProxyTests {
     }
     @Test func upgradeBecomesBidirectionalStream() async throws {
         let fixture = try TCPFixture(mode:.upgrade);let origin = try await fixture.start();defer { fixture.stop() }
-        let pair = AsyncStream<LocalProxyEvent>.makeStream();let proxy = LocalHTTPProxy(idleTimeout:3,maximumDuration:5,event:{ pair.continuation.yield($0) });proxy.start();defer { proxy.stop();pair.continuation.finish() }
+        let pair = AsyncStream<LocalProxyEvent>.makeStream();let proxy = LocalHTTPProxy(idleTimeout:3,maximumDuration:5,event:{ pair.continuation.yield($0) });proxy.start();defer { proxy.stopAndDrain();pair.continuation.finish() }
         let port = try await proxyPort(pair.stream)
         let payload = Data("opaque upgraded frames".utf8)
         var request = Data("GET http://127.0.0.1:\(origin)/ HTTP/1.1\r\nHost: 127.0.0.1:\(origin)\r\nConnection: Upgrade\r\nUpgrade: echo\r\n\r\n".utf8);request.append(payload)
@@ -192,7 +236,7 @@ struct LocalProxyTests {
     }
     @Test func postBodyReallyReachesOriginWithNormalizedLength() async throws {
         let fixture = try TCPFixture(mode:.http);let origin = try await fixture.start();defer { fixture.stop() }
-        let pair = AsyncStream<LocalProxyEvent>.makeStream();let proxy = LocalHTTPProxy(idleTimeout:3,maximumDuration:5,event:{ pair.continuation.yield($0) });proxy.start();defer { proxy.stop();pair.continuation.finish() }
+        let pair = AsyncStream<LocalProxyEvent>.makeStream();let proxy = LocalHTTPProxy(idleTimeout:3,maximumDuration:5,event:{ pair.continuation.yield($0) });proxy.start();defer { proxy.stopAndDrain();pair.continuation.finish() }
         let port = try await proxyPort(pair.stream)
         let payload = Data(repeating:65,count:256*1024)
         var request = Data("POST http://127.0.0.1:\(origin)/upload HTTP/1.1\r\nHost: wrong.test\r\nContent-Length: \(payload.count), \(payload.count)\r\n\r\n".utf8);request.append(payload)

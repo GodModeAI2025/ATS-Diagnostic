@@ -15,7 +15,7 @@ struct ProxyHTTPRequest: Sendable {
     let consumedBytes: Int
     var isTunnel: Bool { method == "CONNECT" }
     var requestsUpgrade: Bool { headers.contains { $0.name.lowercased() == "upgrade" } && headers.contains { $0.name.lowercased() == "connection" && $0.value.lowercased().split(separator:",").contains { $0.trimmingCharacters(in:.whitespaces) == "upgrade" } } }
-    func upstreamBytes() -> Data {
+    func upstreamHeaderBytes() -> Data {
         var components = URLComponents(url: url, resolvingAgainstBaseURL: false)
         components?.fragment = nil
         let path = (components?.percentEncodedPath.isEmpty == false ? components?.percentEncodedPath : "/") ?? "/"
@@ -34,7 +34,12 @@ struct ProxyHTTPRequest: Sendable {
         filtered.append(HTTPHeader(name: "Connection", value: requestsUpgrade ? "Upgrade" : "close"))
         var bytes = Data("\(method) \(origin) HTTP/1.1\r\n".utf8)
         for header in filtered { bytes.append(Data("\(header.name): \(header.value)\r\n".utf8)) }
-        bytes.append(Data("\r\n".utf8)); bytes.append(wireBody)
+        bytes.append(Data("\r\n".utf8))
+        return bytes
+    }
+    func upstreamBytes() -> Data {
+        var bytes = upstreamHeaderBytes()
+        bytes.append(wireBody)
         return bytes
     }
 }
