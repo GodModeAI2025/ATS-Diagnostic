@@ -1,0 +1,3 @@
+Neu in Build 52: Die Adressauflösung unterstützt nun auch die Rückwärtsauflösung von IPv4- und IPv6-Adressen. Gib eine IP-Adresse ein und wähle „Hostname zur IP ermitteln“. Der gemeldete Name und die Dauer stammen aus dem Systemresolver; lokale Namensquellen können beteiligt sein. Ein fehlender Rückwärtseintrag bedeutet keinen TLS- oder Zertifikatsfehler.
+
+Bitte Vorwärts- und Rückwärtsauflösung sowie die Erklärung bei ungültigen Eingaben prüfen. Die Einzelverbindungen aus Build 51 bleiben enthalten.

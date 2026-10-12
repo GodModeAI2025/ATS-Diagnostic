@@ -1,0 +1,124 @@
+Device orientation: Unknown
+------------------------
+Application bundle identifier: com.mobilebox.atsdiagnostic
+Application UI orientation: Portrait
+Application, pid: 78461, label: 'ATS Diagnostic'
+ Window, {{0.0, 0.0}, {402.0, 874.0}}, hitPoint: {201.0, 437.0}
+  Other, {{0.0, 0.0}, {402.0, 874.0}}, hitPoint: {201.0, 437.0}
+  Other, {{0.0, 0.0}, {402.0, 874.0}}, hitPoint: {201.0, 437.0}
+   Other, {{0.0, 0.0}, {402.0, 874.0}}, hitPoint: {201.0, 437.0}
+    Other, {{0.0, 0.0}, {402.0, 874.0}}, hitPoint: {201.0, 437.0}
+     Other, {{0.0, 0.0}, {402.0, 874.0}}, hitPoint: {201.0, 437.0}
+      Other, {{0.0, 0.0}, {402.0, 874.0}}, hitPoint: {201.0, 437.0}
+       Other, {{0.0, 0.0}, {402.0, 874.0}}, hitPoint: {201.0, 437.0}
+        Other, {{0.0, 0.0}, {402.0, 874.0}}, hitPoint: {201.0, 437.0}
+         Other, {{0.0, 0.0}, {402.0, 874.0}}, hitPoint: {201.0, 437.0}
+          Other, {{0.0, 0.0}, {402.0, 874.0}}, hitPoint: {201.0, 437.0}
+           Other, {{0.0, 0.0}, {402.0, 874.0}}, hitPoint: {201.0, 437.0}
+            Other, {{0.0, 0.0}, {402.0, 874.0}}, hitPoint: {201.0, 437.0}
+             NavigationBar, {{0.0, 62.0}, {402.0, 106.0}}, identifier: 'Adressauflösung', hitPoint: {201.0, 115.0}
+              Button, {{16.0, 62.0}, {44.0, 44.0}}, identifier: 'BackButton', label: 'Tools', hitPoint: {38.0, 84.0}
+              StaticText, {{16.0, 119.7}, {269.3, 40.7}}, label: 'Adressauflösung', hitPoint: {150.7, 140.0}
+             Other, {{0.0, 0.0}, {402.0, 874.0}}, hitPoint: {201.0, 437.0}
+              Other, {{0.0, 0.0}, {402.0, 874.0}}, hitPoint: {201.0, 437.0}
+               Other, {{0.0, 0.0}, {402.0, 874.0}}, hitPoint: {201.0, 437.0}
+                Other, {{0.0, 0.0}, {402.0, 874.0}}, hitPoint: {201.0, 437.0}
+                 CollectionView, {{0.0, 0.0}, {402.0, 874.0}}, hitPoint: {201.0, 437.0}
+                  Other, {{-16.0, -1580.0}, {434.0, 3860.0}}, hitPoint: {201.0, 437.0}
+                  Other, {{0.0, 0.0}, {402.0, 874.0}}, hitPoint: {201.0, 437.0}
+                   Other, {{0.0, 0.0}, {402.0, 156.0}}, hitPoint: {201.0, 78.0}
+                   Other, {{0.0, 741.0}, {402.0, 133.0}}, hitPoint: {201.0, 807.5}
+                  Other, {{0.0, 0.0}, {402.0, 874.0}}, hitPoint: {201.0, 437.0}
+                  Cell, {{16.0, 168.0}, {370.0, 52.0}}, hitPoint: {201.0, 194.0}
+                   Other, {{16.0, 168.0}, {370.0, 52.0}}, hitPoint: {201.0, 194.0}
+                    Other, {{16.0, 168.0}, {370.0, 52.0}}, hitPoint: {201.0, 194.0}
+                   Other, {{16.0, 168.0}, {370.0, 52.0}}, hitPoint: {201.0, 194.0}
+                    Other, {{16.0, 168.0}, {370.0, 52.0}}, hitPoint: {201.0, 194.0}
+                     Other, {{16.0, 168.0}, {370.0, 52.0}}, hitPoint: {201.0, 194.0}
+                      StaticText, {{16.0, 168.0}, {370.0, 52.0}}, label: 'Systemgestützte Adressauflösung', hitPoint: {201.0, 194.0}
+                      Image, {{33.0, 183.0}, {22.3, 22.3}}, identifier: 'network', label: 'Network Nodes Connected By Lines', hitPoint: {44.2, 194.2}
+                  Cell, {{16.0, 220.0}, {370.0, 63.7}}, hitPoint: {201.0, 251.8}
+                   Other, {{16.0, 220.0}, {370.0, 63.7}}, hitPoint: {201.0, 251.8}
+                    Other, {{16.0, 220.0}, {370.0, 63.7}}, hitPoint: {201.0, 251.8}
+                   Other, {{16.0, 220.0}, {370.0, 63.7}}, hitPoint: {201.0, 251.8}
+                    Other, {{16.0, 220.0}, {370.0, 63.7}}, hitPoint: {201.0, 251.8}
+                     Other, {{16.0, 220.0}, {370.0, 63.7}}, hitPoint: {201.0, 251.8}
+                      StaticText, {{16.0, 220.0}, {370.0, 63.7}}, label: 'IPv4- und IPv6-Adressen werden nach den aktuellen Resolver-Einstellungen des Geräts ermittelt.', hitPoint: {201.0, 251.8}
+                  Other, {{72.0, 219.0}, {298.0, 1.0}}, hitPoint: {221.0, 219.5}
+                  Cell, {{16.0, 283.7}, {370.0, 52.0}}, hitPoint: {201.0, 309.7}
+                   Other, {{16.0, 283.7}, {370.0, 52.0}}, hitPoint: {201.0, 309.7}
+                    Other, {{16.0, 283.7}, {370.0, 52.0}}, hitPoint: {201.0, 309.7}
+                   Other, {{16.0, 283.7}, {370.0, 52.0}}, hitPoint: {201.0, 309.7}
+                    Other, {{16.0, 283.7}, {370.0, 52.0}}, hitPoint: {201.0, 309.7}
+                     Other, {{16.0, 283.7}, {370.0, 52.0}}, hitPoint: {201.0, 309.7}
+                      TextField, {{32.0, 298.7}, {338.0, 22.0}}, placeholderValue: 'Hostname oder URL', value: example.com, hitPoint: {201.0, 309.7}
+                  Other, {{32.0, 282.7}, {338.0, 1.0}}, hitPoint: {201.0, 283.2}
+                  Cell, {{16.0, 335.7}, {370.0, 52.0}}, hitPoint: {201.0, 361.7}
+                   Other, {{16.0, 335.7}, {370.0, 52.0}}, hitPoint: {201.0, 361.7}
+                    Other, {{16.0, 335.7}, {370.0, 52.0}}, hitPoint: {201.0, 361.7}
+                   Other, {{16.0, 335.7}, {370.0, 52.0}}, hitPoint: {201.0, 361.7}
+                    Other, {{16.0, 335.7}, {370.0, 52.0}}, hitPoint: {201.0, 361.7}
+                     Other, {{16.0, 335.7}, {370.0, 52.0}}, hitPoint: {201.0, 361.7}
+                      Button, {{16.0, 335.7}, {370.0, 52.0}}, label: 'Adressen ermitteln', hitPoint: {201.0, 361.7}
+                  Other, {{32.0, 334.7}, {338.0, 1.0}}, hitPoint: {201.0, 335.2}
+                  Cell, {{16.0, 387.7}, {370.0, 52.0}}, hitPoint: {201.0, 413.7}
+                   Other, {{16.0, 387.7}, {370.0, 52.0}}, hitPoint: {201.0, 413.7}
+                    Other, {{16.0, 387.7}, {370.0, 52.0}}, hitPoint: {201.0, 413.7}
+                   Other, {{16.0, 387.7}, {370.0, 52.0}}, hitPoint: {201.0, 413.7}
+                    Other, {{16.0, 387.7}, {370.0, 52.0}}, hitPoint: {201.0, 413.7}
+                     Other, {{16.0, 387.7}, {370.0, 52.0}}, hitPoint: {201.0, 413.7}
+                      Button, {{16.0, 387.7}, {370.0, 52.0}}, label: 'Hostname zur IP ermitteln', hitPoint: {201.0, 413.7}
+                  Other, {{32.0, 386.7}, {338.0, 1.0}}, hitPoint: {201.0, 387.2}
+                  Cell, {{16.0, 439.7}, {370.0, 72.3}}, hitPoint: {201.0, 475.8}
+                   Other, {{16.0, 439.7}, {370.0, 72.3}}, hitPoint: {201.0, 475.8}
+                    Other, {{16.0, 439.7}, {370.0, 72.3}}, hitPoint: {201.0, 475.8}
+                   Other, {{16.0, 439.7}, {370.0, 72.3}}, hitPoint: {201.0, 475.8}
+                    Other, {{16.0, 439.7}, {370.0, 72.3}}, hitPoint: {201.0, 475.8}
+                     Other, {{16.0, 439.7}, {370.0, 72.3}}, hitPoint: {201.0, 475.8}
+                      StaticText, {{16.0, 439.7}, {370.0, 72.3}}, label: 'Gib für die Rückwärtsauflösung eine IPv4- oder IPv6-Adresse ein, ohne URL oder Port.', hitPoint: {201.0, 475.8}
+                  Other, {{32.0, 438.7}, {338.0, 1.0}}, hitPoint: {201.0, 439.2}
+                  Other, {{369.0, 116.0}, {30.0, 675.0}}, label: 'Vertical scroll bar, 1 page', value: 0 %, hitPoint: {384.0, 453.5}
+                   Other, {{396.0, 119.0}, {3.0, 609.0}}, hitPoint: {397.5, 423.5}
+                  Other, {{369.0, 116.0}, {30.0, 675.0}}, label: 'Vertical scroll bar, 1 page', value: 0 %, hitPoint: {384.0, 453.5}
+                   Other, {{396.0, 119.0}, {3.0, 609.0}}, hitPoint: {397.5, 423.5}
+             Toolbar, {{0.0, 0.0}, {402.0, 874.0}}, identifier: 'Toolbar', label: 'Toolbar', hitPoint: {201.0, 437.0}
+              Other, {{0.0, 0.0}, {402.0, 874.0}}, hitPoint: {201.0, 437.0}
+       Other, {{0.0, 0.0}, {402.0, 874.0}}, hitPoint: {201.0, 437.0}
+        Other, {{0.0, 791.0}, {402.0, 83.0}}, hitPoint: {201.0, 832.5}
+         Other, {{0.0, 0.0}, {402.0, 874.0}}, hitPoint: {201.0, 437.0}
+          TabBar, {{0.0, 791.0}, {402.0, 83.0}}, label: 'Tab Bar', hitPoint: {201.0, 832.5}
+           Other, {{21.0, 791.0}, {360.0, 62.0}}, hitPoint: {201.0, 822.0}
+            Other, {{21.0, 791.0}, {85.1, 54.0}}, hitPoint: {63.6, 818.0}
+            Other, {{21.0, 791.0}, {360.0, 62.0}}, hitPoint: {201.0, 822.0}
+             Button, {{25.0, 795.0}, {85.1, 54.0}}, identifier: 'checkmark.shield', label: 'Inspect', hitPoint: {67.6, 822.0}
+              Image, {{55.3, 801.7}, {24.7, 26.7}}, identifier: 'checkmark.shield.fill', label: 'Checkmark in a filled shield', hitPoint: {67.7, 815.0}
+             Button, {{90.1, 795.0}, {89.9, 54.0}}, identifier: 'arrow.up.arrow.down', label: 'Requests', hitPoint: {135.1, 822.0}
+              Image, {{118.4, 801.7}, {33.0, 26.3}}, identifier: 'arrow.up.arrow.down', label: 'sort', hitPoint: {134.9, 814.8}
+             Button, {{160.1, 795.0}, {86.7, 54.0}}, identifier: 'network', label: 'Erfassen', hitPoint: {203.4, 822.0}
+              Image, {{189.7, 801.3}, {27.3, 27.3}}, identifier: 'network', label: 'Network nodes connected by lines', hitPoint: {203.4, 815.0}
+             Button, {{226.8, 795.0}, {85.1, 54.0}}, identifier: 'clock', label: 'History', hitPoint: {269.3, 822.0}
+              Image, {{255.8, 801.3}, {27.3, 27.3}}, identifier: 'clock.fill', label: 'clock', hitPoint: {269.4, 815.0}
+             Button, {{291.9, 795.0}, {85.1, 54.0}}, identifier: 'wrench.and.screwdriver', label: 'Tools', Selected, hitPoint: {334.4, 822.0}
+              Image, {{318.2, 799.3}, {32.7, 31.7}}, identifier: 'wrench.and.screwdriver.fill', label: 'Wrench and screwdriver, filled', hitPoint: {334.6, 815.2}
+            Other, {{21.0, 791.0}, {360.0, 62.0}}, hitPoint: {201.0, 822.0}
+            Other, {{291.9, 795.0}, {85.1, 54.0}}, hitPoint: {334.4, 822.0}
+             Other, {{291.9, 795.0}, {85.0, 54.0}}, hitPoint: {334.4, 822.0}
+              Other, {{291.9, 795.0}, {85.0, 54.0}}, hitPoint: {334.4, 822.0}
+              Other, {{291.9, 795.0}, {85.0, 54.0}}, hitPoint: {334.4, 822.0}
+               Other, {{291.9, 795.0}, {85.0, 54.0}}, hitPoint: {334.4, 822.0}
+                Other, {{291.9, 795.0}, {85.0, 54.0}}, hitPoint: {334.4, 822.0}
+                 Other, {{291.9, 795.0}, {85.0, 54.0}}, hitPoint: {334.4, 822.0}
+                Other, {{291.9, 795.0}, {85.0, 54.0}}, hitPoint: {334.4, 822.0}
+               Other, {{291.9, 795.0}, {85.0, 54.0}}, hitPoint: {334.4, 822.0}
+         Other, {{0.0, 791.0}, {402.0, 83.0}}, hitPoint: {201.0, 832.5}
+          Other, {{0.0, 791.0}, {402.0, 83.0}}, hitPoint: {201.0, 832.5}
+           Other, {{0.0, 791.0}, {402.0, 83.0}}, hitPoint: {201.0, 832.5}
+            Other, {{0.0, 791.0}, {402.0, 83.0}}, hitPoint: {201.0, 832.5}
+             Other, {{0.0, 791.0}, {402.0, 83.0}}, hitPoint: {201.0, 832.5}
+              Other, {{0.0, 791.0}, {402.0, 83.0}}, hitPoint: {201.0, 832.5}
+            Other, {{0.0, 791.0}, {402.0, 83.0}}, hitPoint: {201.0, 832.5}
+             Other, {{0.0, 791.0}, {402.0, 83.0}}, hitPoint: {201.0, 832.5}
+      Other, {{0.0, 62.0}, {402.0, 778.0}}, hitPoint: {201.0, 451.0}
+ Window, {{0.0, 0.0}, {402.0, 874.0}}, hitPoint: {201.0, 437.0}
+  Other, {{0.0, 0.0}, {402.0, 874.0}}, hitPoint: {201.0, 437.0}
+   Other, {{0.0, 0.0}, {402.0, 874.0}}, hitPoint: {201.0, 437.0}
