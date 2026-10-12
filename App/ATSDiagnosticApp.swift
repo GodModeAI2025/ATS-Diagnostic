@@ -290,6 +290,7 @@ struct RecordView: View {
                 LabeledContent("Remote address", value: record.remoteAddress ?? "Not reported")
                 if let error = record.error { Text(error).foregroundStyle(.red) }
             }
+            QueryParameterLinks(requestedURL: record.url, finalURL: record.finalURL)
             if let options = record.diagnosticOptions { DiagnosticOptionsSummary(options:options) }
             if let checksum = record.responseSHA256 {
                 Section("Download integrity") {

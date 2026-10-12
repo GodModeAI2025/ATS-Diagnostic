@@ -39,6 +39,7 @@
 		2EE8040A55977E20FDF2A825 /* KeyboardDismissSurface.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F9BF09AA6044A489C8DD665 /* KeyboardDismissSurface.swift */; };
 		2FCA13441C543680773D12B0 /* Integrity.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5571AEF32197ACDBF1475DB /* Integrity.swift */; };
 		301E84353E23A840EC17D81B /* CertificateTransparency.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D7F7CC311325E64284BF162 /* CertificateTransparency.swift */; };
+		30331B8C42BB84AB9BA37AE1 /* URLQueryDetailsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D63D4E0C5D02E36563B04041 /* URLQueryDetailsTests.swift */; };
 		30EEBEF949A53CC75C7070F3 /* ConnectionMapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57F9EAAA85FD34BDFD306CDA /* ConnectionMapView.swift */; };
 		3189B213A050C5CA5E2FAF86 /* HTTPProxyMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AA82D275D1C50A55AA9F83A /* HTTPProxyMessage.swift */; };
 		319F161D4D0BBCFD1CE27375 /* Store.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBB74451B3AEAD1F53388754 /* Store.swift */; };
@@ -49,6 +50,7 @@
 		3AF916B03824A8D13DDA9C89 /* SDKHARImportTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B73ED70D903B1752F319415 /* SDKHARImportTests.swift */; };
 		3BDB3960EE634DA09E55BD61 /* HSTSPolicy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24DBF19779BFD59CEA5F31DC /* HSTSPolicy.swift */; };
 		3BEA09AEF69591C9E9CA8DAF /* StreamingIntegrityTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25717A33CD7A96A36B57D11D /* StreamingIntegrityTests.swift */; };
+		3E3C878399CB7AA7F264DD90 /* QueryParametersView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC246D17A926A0DEA6446FE3 /* QueryParametersView.swift */; };
 		3F78480A298DB828FDF890B5 /* SignedCRL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 948315BB0FCB5247585725A2 /* SignedCRL.swift */; };
 		43F40D97F182CD3182318204 /* CURLImport.swift in Sources */ = {isa = PBXBuildFile; fileRef = 515483A147B28C641EE47456 /* CURLImport.swift */; };
 		465E23091DBAED9680CA4159 /* RevocationAssessment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2376A40FF8D615A5635F72D1 /* RevocationAssessment.swift */; };
@@ -75,7 +77,9 @@
 		7B494C1CEF9C7D5BF5A8817A /* RecordingSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50E6B91F56AB4DD248EAA064 /* RecordingSettings.swift */; };
 		7D99C4A6AF0AA34BBAF953BA /* DiagnosticIssueView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FADD3EDC9C9B0F550BA9CFE /* DiagnosticIssueView.swift */; };
 		80CE999D038ECC92CAE08925 /* LocalHTTPProxy.swift in Sources */ = {isa = PBXBuildFile; fileRef = F45C97FCFC49991D92C95A74 /* LocalHTTPProxy.swift */; };
+		80DE524D31E9FBF99BC394AA /* QueryParametersView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC246D17A926A0DEA6446FE3 /* QueryParametersView.swift */; };
 		81186C01D4A82C1DB7B04CD8 /* CURLImport.swift in Sources */ = {isa = PBXBuildFile; fileRef = 515483A147B28C641EE47456 /* CURLImport.swift */; };
+		8227E52494791024262E9EB9 /* URLQueryDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12501A4BB1ADC71735549BB4 /* URLQueryDetails.swift */; };
 		825AE0C0DC75E4C6F1613DE1 /* CertificateFormats.swift in Sources */ = {isa = PBXBuildFile; fileRef = 306C387A89FF92AF8E550A38 /* CertificateFormats.swift */; };
 		82C1C6215863FC604B0070AD /* CertificateTransparency.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D7F7CC311325E64284BF162 /* CertificateTransparency.swift */; };
 		83B826EF7E2839521365D64F /* ProxyRulePersistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17AA61658FB90A65F0376693 /* ProxyRulePersistence.swift */; };
@@ -84,6 +88,7 @@
 		87DE6E61A7476D73E5506DFC /* DNSLookupTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57B3E0C2183A9DE09DA5BA1F /* DNSLookupTests.swift */; };
 		8807BD7716946293292CF465 /* RecordingSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50E6B91F56AB4DD248EAA064 /* RecordingSettings.swift */; };
 		89D5B454689C2C103A4F4D3B /* HTTPDetailViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAA06F59CA7F407DB1257EED /* HTTPDetailViews.swift */; };
+		8A6A04A6E784C2E3A2A0F7C0 /* URLQueryDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12501A4BB1ADC71735549BB4 /* URLQueryDetails.swift */; };
 		8A921EC296645270E2EB0A83 /* HTTPDetailViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAA06F59CA7F407DB1257EED /* HTTPDetailViews.swift */; };
 		8BAD952AAC5CB40FAB7BAC78 /* CertificateReminders.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91225691ACBDD43921BC9414 /* CertificateReminders.swift */; };
 		8BF0AF8FD65A7893B743CD82 /* CertificateIssuer.swift in Sources */ = {isa = PBXBuildFile; fileRef = B840DD0519DE6227075BF662 /* CertificateIssuer.swift */; };
@@ -201,6 +206,7 @@
 		0354E181C7AA4FB81B16BEBB /* Diagnostic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Diagnostic.swift; sourceTree = "<group>"; };
 		0D7F7CC311325E64284BF162 /* CertificateTransparency.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CertificateTransparency.swift; sourceTree = "<group>"; };
 		10B4D516E71AC67F1804E89D /* ProxyRuleConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProxyRuleConfiguration.swift; sourceTree = "<group>"; };
+		12501A4BB1ADC71735549BB4 /* URLQueryDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLQueryDetails.swift; sourceTree = "<group>"; };
 		13F40BB71BB1BC14A4ADA7F5 /* HTTPProxyRewriteTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPProxyRewriteTests.swift; sourceTree = "<group>"; };
 		140438702E17A5D8B0E39955 /* ATSDiagnosticTests.xctest */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.cfbundle; path = ATSDiagnosticTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1674A595E76AB8616445BEBF /* PrivacyInfo.xcprivacy */ = {isa = PBXFileReference; path = PrivacyInfo.xcprivacy; sourceTree = "<group>"; };
@@ -285,6 +291,7 @@
 		D0F97E508554E43B0CDABA22 /* ASN1Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ASN1Tests.swift; sourceTree = "<group>"; };
 		D23B04393A327FEE67D7F180 /* RecordingSettingsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordingSettingsTests.swift; sourceTree = "<group>"; };
 		D42C8014505D9708E3D7BA72 /* HSTSPolicyTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HSTSPolicyTests.swift; sourceTree = "<group>"; };
+		D63D4E0C5D02E36563B04041 /* URLQueryDetailsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLQueryDetailsTests.swift; sourceTree = "<group>"; };
 		D7FD6A27B7550D386C7632C8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D9CCB91852D1C2F549C67ACC /* HSTSPolicyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HSTSPolicyView.swift; sourceTree = "<group>"; };
 		DA61C5840AE5296CF32F00F9 /* CTLogSnapshot.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = CTLogSnapshot.json; sourceTree = "<group>"; };
@@ -294,6 +301,7 @@
 		EAA192DD5325997D4603D365 /* HTTPProxyMessageTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPProxyMessageTests.swift; sourceTree = "<group>"; };
 		EAA33C1C93B935A4E25F3B42 /* HistoryPersistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryPersistence.swift; sourceTree = "<group>"; };
 		EB89D263179CE8DD0A4EF985 /* ReverseDNSLookupTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReverseDNSLookupTests.swift; sourceTree = "<group>"; };
+		EC246D17A926A0DEA6446FE3 /* QueryParametersView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QueryParametersView.swift; sourceTree = "<group>"; };
 		EE39A081A4262769FA62949A /* ProxyRulePersistenceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProxyRulePersistenceTests.swift; sourceTree = "<group>"; };
 		F45C97FCFC49991D92C95A74 /* LocalHTTPProxy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalHTTPProxy.swift; sourceTree = "<group>"; };
 		FA48D7B93B862A0646236C1B /* ATSDiagnosticApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ATSDiagnosticApp.swift; sourceTree = "<group>"; };
@@ -372,6 +380,7 @@
 				1B73ED70D903B1752F319415 /* SDKHARImportTests.swift */,
 				260C1CF7F732EF44D22E72DA /* SignedCRLTests.swift */,
 				25717A33CD7A96A36B57D11D /* StreamingIntegrityTests.swift */,
+				D63D4E0C5D02E36563B04041 /* URLQueryDetailsTests.swift */,
 				1A2E8BEF4EB2DD1AB4ABB5A9 /* Fixtures */,
 			);
 			path = Tests;
@@ -448,6 +457,7 @@
 				10B4D516E71AC67F1804E89D /* ProxyRuleConfiguration.swift */,
 				17AA61658FB90A65F0376693 /* ProxyRulePersistence.swift */,
 				25E124BB9B9A7DD4BEC89D4E /* ProxyRulesView.swift */,
+				EC246D17A926A0DEA6446FE3 /* QueryParametersView.swift */,
 				50E6B91F56AB4DD248EAA064 /* RecordingSettings.swift */,
 				2376A40FF8D615A5635F72D1 /* RevocationAssessment.swift */,
 				ADFBB0848E1250019868E7F3 /* RevocationView.swift */,
@@ -458,6 +468,7 @@
 				ABC8F829F66AF685D8859DC0 /* TLSProbe.swift */,
 				59E3EB89F895108488C30C16 /* TLSVersionProbeView.swift */,
 				B623A579ADD8FD75F9E64D2A /* Tools.swift */,
+				12501A4BB1ADC71735549BB4 /* URLQueryDetails.swift */,
 				687B5C8DC9BA142303849330 /* VisualComponents.swift */,
 				8CFCC8BF2582B5E1B8F4E4A1 /* X509.swift */,
 				9D6DFA5FF1A6F559ABE45C62 /* Resources */,
@@ -701,6 +712,7 @@
 				CC88113277BF4067F6DFD238 /* ProxyRuleConfiguration.swift in Sources */,
 				83B826EF7E2839521365D64F /* ProxyRulePersistence.swift in Sources */,
 				54C10D1536E6FB3037E4E700 /* ProxyRulesView.swift in Sources */,
+				3E3C878399CB7AA7F264DD90 /* QueryParametersView.swift in Sources */,
 				8807BD7716946293292CF465 /* RecordingSettings.swift in Sources */,
 				10BC66014A678974AA9A6383 /* RevocationAssessment.swift in Sources */,
 				96AB84149625E39AAEF89159 /* RevocationView.swift in Sources */,
@@ -711,6 +723,7 @@
 				98742F0DA603062B176B4B0E /* TLSProbe.swift in Sources */,
 				9FAFF49921A5D631E562CB2C /* TLSVersionProbeView.swift in Sources */,
 				B89827E3E63739044284C76A /* Tools.swift in Sources */,
+				8A6A04A6E784C2E3A2A0F7C0 /* URLQueryDetails.swift in Sources */,
 				E7F88C72B0A0FBD40949F4E9 /* VisualComponents.swift in Sources */,
 				AF276C8B265A3534BCCDA3A9 /* X509.swift in Sources */,
 			);
@@ -770,6 +783,7 @@
 				DE05A8ED6E2013C66E409454 /* ProxyRuleConfiguration.swift in Sources */,
 				14F269AC0D2A060DDEF56707 /* ProxyRulePersistence.swift in Sources */,
 				D925A10ECC1D2E5684458CE5 /* ProxyRulesView.swift in Sources */,
+				80DE524D31E9FBF99BC394AA /* QueryParametersView.swift in Sources */,
 				7B494C1CEF9C7D5BF5A8817A /* RecordingSettings.swift in Sources */,
 				465E23091DBAED9680CA4159 /* RevocationAssessment.swift in Sources */,
 				BEA745643220C24E7F8E71C1 /* RevocationView.swift in Sources */,
@@ -780,6 +794,7 @@
 				6A83545CBDCFF1C00351EE98 /* TLSProbe.swift in Sources */,
 				F37B064B276CF0A78155BA08 /* TLSVersionProbeView.swift in Sources */,
 				34C6567F9501B5FF3ED2FD6C /* Tools.swift in Sources */,
+				8227E52494791024262E9EB9 /* URLQueryDetails.swift in Sources */,
 				2C2AEEE90F31E4BA71B21532 /* VisualComponents.swift in Sources */,
 				08F33130CBECF29A05201EE6 /* X509.swift in Sources */,
 			);
@@ -817,6 +832,7 @@
 				3AF916B03824A8D13DDA9C89 /* SDKHARImportTests.swift in Sources */,
 				D2EACD1C8C02F6241D3DD599 /* SignedCRLTests.swift in Sources */,
 				3BEA09AEF69591C9E9CA8DAF /* StreamingIntegrityTests.swift in Sources */,
+				30331B8C42BB84AB9BA37AE1 /* URLQueryDetailsTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -922,7 +938,7 @@
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
-				CURRENT_PROJECT_VERSION = 54;
+				CURRENT_PROJECT_VERSION = 55;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEVELOPMENT_TEAM = SP73Z8JWXM;
 				ENABLE_NS_ASSERTIONS = NO;
@@ -1043,7 +1059,7 @@
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
-				CURRENT_PROJECT_VERSION = 54;
+				CURRENT_PROJECT_VERSION = 55;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				DEVELOPMENT_TEAM = SP73Z8JWXM;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
