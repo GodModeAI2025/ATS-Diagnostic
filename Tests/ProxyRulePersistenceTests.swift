@@ -75,4 +75,27 @@ struct ProxyRulePersistenceTests {
         #expect(try Data(contentsOf: blocking) == sentinel)
     }
 
+    @Test @MainActor func corruptProfileBlocksStartAndRetryLoadsRepairedFile() async throws {
+        let directory = FileManager.default.temporaryDirectory.appendingPathComponent(UUID().uuidString)
+        try FileManager.default.createDirectory(at: directory, withIntermediateDirectories: true)
+        defer { try? FileManager.default.removeItem(at: directory) }
+        let file = directory.appendingPathComponent("rules.json")
+        try Data("invalid-json-fixture".utf8).write(to: file)
+        let persistence = ProxyRulePersistence(file: file)
+        let monitor = ProxyMonitor(persistence: persistence)
+        await monitor.loadRules()
+        #expect(monitor.rulesLoadFailed)
+        #expect(monitor.rulesPersistenceError != nil)
+        monitor.start(port: 0)
+        #expect(!monitor.running); #expect(monitor.port == nil)
+        var rule = ProxyRuleConfiguration(); rule.matchURL = "https://example.com/recovered"
+        #expect(throws: ProxyMonitor.RuleEditError.self) { try monitor.saveRewriteConfiguration(rule) }
+        try await persistence.save([rule], revision: 1)
+        monitor.retryLoadingRules()
+        await monitor.loadRules()
+        #expect(!monitor.rulesLoadFailed); #expect(!monitor.rulesLoading)
+        #expect(monitor.rulesPersistenceError == nil)
+        #expect(monitor.rewriteConfigurations.first?.id == rule.id)
+    }
+
 }

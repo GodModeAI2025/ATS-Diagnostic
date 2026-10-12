@@ -9,3 +9,5 @@ The monitor integration is now connected. Initial loading gates editing and prox
 The full148-method app suite passed. Four targeted persistence methods passed afterward, including two new monitor-level cases: fresh monitor reload retains the latest edit/disabled state and subsequent deletion, and a blocked destination keeps a visible write error without replacing the blocking file. Native app restart UI verification is in progress. TestFlight53 does not contain this integration.
 
 Native iPhone process-restart QA passed: active rule/URL/X-Testpersist retained, disabled state survived restart as0active/1rule, deletion survived restart as0rules. Multiple-rule order/IDs remain validated at model/file level; no artificial UI retry failure was injected. Session closed.
+
+An additional native monitor test verifies failed/corrupt loading blocks proxy start and rule edits, and that retry loads a valid repaired fixture with the original stable rule identity. All five targeted persistence methods passed. This test-only addition does not change the signed54 binary.
