@@ -1,0 +1,754 @@
+Command line invocation:
+    /Applications/Xcode.app/Contents/Developer/usr/bin/xcodebuild -project ATSDiagnostic.xcodeproj -scheme ATSDiagnostic -destination "platform=iOS Simulator,id=60567F9D-DAD7-4445-84BF-F22C057FEA80" "-only-testing:ATSDiagnosticTests" -collect-test-diagnostics never -resultBundlePath ../../work/ProxyRules-Guarded.xcresult test
+
+Writing result bundle at path:
+	/Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/ProxyRules-Guarded.xcresult
+
+ComputePackagePrebuildTargetDependencyGraph
+
+Prepare packages
+
+CreateBuildRequest
+
+SendProjectDescription
+
+CreateBuildOperation
+
+ComputeTargetDependencyGraph
+note: Building targets in dependency order
+note: Target dependency graph (2 targets)
+    Target 'ATSDiagnosticTests' in project 'ATSDiagnostic'
+        ➜ Explicit dependency on target 'ATSDiagnostic' in project 'ATSDiagnostic'
+    Target 'ATSDiagnostic' in project 'ATSDiagnostic' (no dependencies)
+
+GatherProvisioningInputs
+
+CreateBuildDescription
+
+ExecuteExternalTool /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -v -E -dM -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator27.0.sdk -x c -c /dev/null
+
+ExecuteExternalTool /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc --version
+
+ExecuteExternalTool /Applications/Xcode.app/Contents/Developer/usr/bin/ibtool --version --output-format xml1
+
+ExecuteExternalTool /Applications/Xcode.app/Contents/Developer/usr/bin/actool --print-asset-tag-combinations --output-format xml1 /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/outputs/ATS-Diagnostic/App/Assets.xcassets
+
+ExecuteExternalTool /Applications/Xcode.app/Contents/Developer/usr/bin/actool --version --output-format xml1
+
+ExecuteExternalTool /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/ld -version_details
+
+Build description signature: a0de198d1133389f1fac194fd9e877f5
+Build description path: /Users/markzimmermann/Library/Developer/Xcode/DerivedData/ATSDiagnostic-dwqsvugqytkzgnfrfturllqkowje/Build/Intermediates.noindex/XCBuildData/a0de198d1133389f1fac194fd9e877f5.xcbuilddata
+ClangStatCache /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang-stat-cache /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator27.0.sdk /Users/markzimmermann/Library/Developer/Xcode/DerivedData/SDKStatCaches.noindex/iphonesimulator27.0-24A430-e829b21a6f8c9b70876ba0858053c0448dc58220667be655e1bcc261a7455254.sdkstatcache
+    cd /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/outputs/ATS-Diagnostic/ATSDiagnostic.xcodeproj
+    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang-stat-cache /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator27.0.sdk -o /Users/markzimmermann/Library/Developer/Xcode/DerivedData/SDKStatCaches.noindex/iphonesimulator27.0-24A430-e829b21a6f8c9b70876ba0858053c0448dc58220667be655e1bcc261a7455254.sdkstatcache
+
+WriteAuxiliaryFile /Users/markzimmermann/Library/Developer/Xcode/DerivedData/ATSDiagnostic-dwqsvugqytkzgnfrfturllqkowje/Build/Intermediates.noindex/ATSDiagnostic.build/Debug-iphonesimulator/ATSDiagnosticTests.build/Objects-normal/arm64/ATSDiagnosticTests.SwiftFileList (in target 'ATSDiagnosticTests' from project 'ATSDiagnostic')
+    cd /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/outputs/ATS-Diagnostic
+    write-file /Users/markzimmermann/Library/Developer/Xcode/DerivedData/ATSDiagnostic-dwqsvugqytkzgnfrfturllqkowje/Build/Intermediates.noindex/ATSDiagnostic.build/Debug-iphonesimulator/ATSDiagnosticTests.build/Objects-normal/arm64/ATSDiagnosticTests.SwiftFileList
+
+WriteAuxiliaryFile /Users/markzimmermann/Library/Developer/Xcode/DerivedData/ATSDiagnostic-dwqsvugqytkzgnfrfturllqkowje/Build/Intermediates.noindex/ATSDiagnostic.build/Debug-iphonesimulator/ATSDiagnosticTests.build/Objects-normal/arm64/ATSDiagnosticTests.SwiftConstValuesFileList (in target 'ATSDiagnosticTests' from project 'ATSDiagnostic')
+    cd /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/outputs/ATS-Diagnostic
+    write-file /Users/markzimmermann/Library/Developer/Xcode/DerivedData/ATSDiagnostic-dwqsvugqytkzgnfrfturllqkowje/Build/Intermediates.noindex/ATSDiagnostic.build/Debug-iphonesimulator/ATSDiagnosticTests.build/Objects-normal/arm64/ATSDiagnosticTests.SwiftConstValuesFileList
+
+WriteAuxiliaryFile /Users/markzimmermann/Library/Developer/Xcode/DerivedData/ATSDiagnostic-dwqsvugqytkzgnfrfturllqkowje/Build/Intermediates.noindex/ATSDiagnostic.build/Debug-iphonesimulator/ATSDiagnosticTests.build/Objects-normal/arm64/ATSDiagnosticTests.LinkFileList (in target 'ATSDiagnosticTests' from project 'ATSDiagnostic')
+    cd /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/outputs/ATS-Diagnostic
+    write-file /Users/markzimmermann/Library/Developer/Xcode/DerivedData/ATSDiagnostic-dwqsvugqytkzgnfrfturllqkowje/Build/Intermediates.noindex/ATSDiagnostic.build/Debug-iphonesimulator/ATSDiagnosticTests.build/Objects-normal/arm64/ATSDiagnosticTests.LinkFileList
+
+WriteAuxiliaryFile /Users/markzimmermann/Library/Developer/Xcode/DerivedData/ATSDiagnostic-dwqsvugqytkzgnfrfturllqkowje/Build/Intermediates.noindex/ATSDiagnostic.build/Debug-iphonesimulator/ATSDiagnosticTests.build/Objects-normal/arm64/ATSDiagnosticTests-OutputFileMap.json (in target 'ATSDiagnosticTests' from project 'ATSDiagnostic')
+    cd /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/outputs/ATS-Diagnostic
+    write-file /Users/markzimmermann/Library/Developer/Xcode/DerivedData/ATSDiagnostic-dwqsvugqytkzgnfrfturllqkowje/Build/Intermediates.noindex/ATSDiagnostic.build/Debug-iphonesimulator/ATSDiagnosticTests.build/Objects-normal/arm64/ATSDiagnosticTests-OutputFileMap.json
+
+MkDir /Users/markzimmermann/Library/Developer/Xcode/DerivedData/ATSDiagnostic-dwqsvugqytkzgnfrfturllqkowje/Build/Products/Debug-iphonesimulator/ATSDiagnostic.app/PlugIns (in target 'ATSDiagnostic' from project 'ATSDiagnostic')
+    cd /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/outputs/ATS-Diagnostic
+    /bin/mkdir -p /Users/markzimmermann/Library/Developer/Xcode/DerivedData/ATSDiagnostic-dwqsvugqytkzgnfrfturllqkowje/Build/Products/Debug-iphonesimulator/ATSDiagnostic.app/PlugIns
+
+MkDir /Users/markzimmermann/Library/Developer/Xcode/DerivedData/ATSDiagnostic-dwqsvugqytkzgnfrfturllqkowje/Build/Products/Debug-iphonesimulator/ATSDiagnostic.app/PlugIns/ATSDiagnosticTests.xctest (in target 'ATSDiagnosticTests' from project 'ATSDiagnostic')
+    cd /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/outputs/ATS-Diagnostic
+    /bin/mkdir -p /Users/markzimmermann/Library/Developer/Xcode/DerivedData/ATSDiagnostic-dwqsvugqytkzgnfrfturllqkowje/Build/Products/Debug-iphonesimulator/ATSDiagnostic.app/PlugIns/ATSDiagnosticTests.xctest
+
+ProcessProductPackaging "" /Users/markzimmermann/Library/Developer/Xcode/DerivedData/ATSDiagnostic-dwqsvugqytkzgnfrfturllqkowje/Build/Intermediates.noindex/ATSDiagnostic.build/Debug-iphonesimulator/ATSDiagnostic.build/ATSDiagnostic.app-Simulated.xcent (in target 'ATSDiagnostic' from project 'ATSDiagnostic')
+    cd /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/outputs/ATS-Diagnostic
+    
+    Entitlements:
+    
+    {
+    "application-identifier" = "SP73Z8JWXM.com.mobilebox.atsdiagnostic";
+}
+    
+    builtin-productPackagingUtility -entitlements -format xml -o /Users/markzimmermann/Library/Developer/Xcode/DerivedData/ATSDiagnostic-dwqsvugqytkzgnfrfturllqkowje/Build/Intermediates.noindex/ATSDiagnostic.build/Debug-iphonesimulator/ATSDiagnostic.build/ATSDiagnostic.app-Simulated.xcent
+
+ProcessProductPackagingDER /Users/markzimmermann/Library/Developer/Xcode/DerivedData/ATSDiagnostic-dwqsvugqytkzgnfrfturllqkowje/Build/Intermediates.noindex/ATSDiagnostic.build/Debug-iphonesimulator/ATSDiagnostic.build/ATSDiagnostic.app-Simulated.xcent /Users/markzimmermann/Library/Developer/Xcode/DerivedData/ATSDiagnostic-dwqsvugqytkzgnfrfturllqkowje/Build/Intermediates.noindex/ATSDiagnostic.build/Debug-iphonesimulator/ATSDiagnostic.build/ATSDiagnostic.app-Simulated.xcent.der (in target 'ATSDiagnostic' from project 'ATSDiagnostic')
+    cd /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/outputs/ATS-Diagnostic
+    /usr/bin/derq query -f xml -i /Users/markzimmermann/Library/Developer/Xcode/DerivedData/ATSDiagnostic-dwqsvugqytkzgnfrfturllqkowje/Build/Intermediates.noindex/ATSDiagnostic.build/Debug-iphonesimulator/ATSDiagnostic.build/ATSDiagnostic.app-Simulated.xcent -o /Users/markzimmermann/Library/Developer/Xcode/DerivedData/ATSDiagnostic-dwqsvugqytkzgnfrfturllqkowje/Build/Intermediates.noindex/ATSDiagnostic.build/Debug-iphonesimulator/ATSDiagnostic.build/ATSDiagnostic.app-Simulated.xcent.der --raw
+
+Ld /Users/markzimmermann/Library/Developer/Xcode/DerivedData/ATSDiagnostic-dwqsvugqytkzgnfrfturllqkowje/Build/Products/Debug-iphonesimulator/ATSDiagnostic.app/__preview.dylib normal (in target 'ATSDiagnostic' from project 'ATSDiagnostic')
+    cd /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/outputs/ATS-Diagnostic
+    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -Xlinker -reproducible -target arm64-apple-ios18.0-simulator -dynamiclib -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator27.0.sdk -O0 -Xlinker -no_warn_duplicate_libraries -L/Users/markzimmermann/Library/Developer/Xcode/DerivedData/ATSDiagnostic-dwqsvugqytkzgnfrfturllqkowje/Build/Products/Debug-iphonesimulator -F/Users/markzimmermann/Library/Developer/Xcode/DerivedData/ATSDiagnostic-dwqsvugqytkzgnfrfturllqkowje/Build/Products/Debug-iphonesimulator -install_name @rpath/ATSDiagnostic.debug.dylib -Xlinker -dead_strip -rdynamic -Xlinker -no_deduplicate -Xlinker -objc_abi_version -Xlinker 2 -Xlinker -dependency_info -Xlinker /Users/markzimmermann/Library/Developer/Xcode/DerivedData/ATSDiagnostic-dwqsvugqytkzgnfrfturllqkowje/Build/Intermediates.noindex/ATSDiagnostic.build/Debug-iphonesimulator/ATSDiagnostic.build/Objects-normal/arm64/ATSDiagnostic_dependency_info.dat -Xlinker -sectcreate -Xlinker __TEXT -Xlinker __entitlements -Xlinker /Users/markzimmermann/Library/Developer/Xcode/DerivedData/ATSDiagnostic-dwqsvugqytkzgnfrfturllqkowje/Build/Intermediates.noindex/ATSDiagnostic.build/Debug-iphonesimulator/ATSDiagnostic.build/ATSDiagnostic.app-Simulated.xcent -Xlinker -sectcreate -Xlinker __TEXT -Xlinker __ents_der -Xlinker /Users/markzimmermann/Library/Developer/Xcode/DerivedData/ATSDiagnostic-dwqsvugqytkzgnfrfturllqkowje/Build/Intermediates.noindex/ATSDiagnostic.build/Debug-iphonesimulator/ATSDiagnostic.build/ATSDiagnostic.app-Simulated.xcent.der -Xlinker -no_adhoc_codesign -o /Users/markzimmermann/Library/Developer/Xcode/DerivedData/ATSDiagnostic-dwqsvugqytkzgnfrfturllqkowje/Build/Products/Debug-iphonesimulator/ATSDiagnostic.app/__preview.dylib
+
+CompileAssetCatalogVariant thinned /Users/markzimmermann/Library/Developer/Xcode/DerivedData/ATSDiagnostic-dwqsvugqytkzgnfrfturllqkowje/Build/Products/Debug-iphonesimulator/ATSDiagnostic.app /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/outputs/ATS-Diagnostic/App/Assets.xcassets (in target 'ATSDiagnostic' from project 'ATSDiagnostic')
+    cd /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/outputs/ATS-Diagnostic
+    /Applications/Xcode.app/Contents/Developer/usr/bin/actool /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/outputs/ATS-Diagnostic/App/Assets.xcassets --compile /Users/markzimmermann/Library/Developer/Xcode/DerivedData/ATSDiagnostic-dwqsvugqytkzgnfrfturllqkowje/Build/Intermediates.noindex/ATSDiagnostic.build/Debug-iphonesimulator/ATSDiagnostic.build/assetcatalog_output/thinned --output-format human-readable-text --notices --warnings --export-dependency-info /Users/markzimmermann/Library/Developer/Xcode/DerivedData/ATSDiagnostic-dwqsvugqytkzgnfrfturllqkowje/Build/Intermediates.noindex/ATSDiagnostic.build/Debug-iphonesimulator/ATSDiagnostic.build/assetcatalog_dependencies_thinned --output-partial-info-plist /Users/markzimmermann/Library/Developer/Xcode/DerivedData/ATSDiagnostic-dwqsvugqytkzgnfrfturllqkowje/Build/Intermediates.noindex/ATSDiagnostic.build/Debug-iphonesimulator/ATSDiagnostic.build/assetcatalog_generated_info.plist_thinned --app-icon AppIcon --compress-pngs --enable-on-demand-resources YES --filter-for-thinning-device-configuration iPad17,4-A --filter-for-device-os-version 27.0 --development-region en --target-device iphone --target-device ipad --minimum-deployment-target 18.0 --platform iphonesimulator
+/* com.apple.actool.compilation-results */
+/Users/markzimmermann/Library/Developer/Xcode/DerivedData/ATSDiagnostic-dwqsvugqytkzgnfrfturllqkowje/Build/Intermediates.noindex/ATSDiagnostic.build/Debug-iphonesimulator/ATSDiagnostic.build/assetcatalog_generated_info.plist_thinned
+/Users/markzimmermann/Library/Developer/Xcode/DerivedData/ATSDiagnostic-dwqsvugqytkzgnfrfturllqkowje/Build/Intermediates.noindex/ATSDiagnostic.build/Debug-iphonesimulator/ATSDiagnostic.build/assetcatalog_output/thinned/AppIcon60x60@2x.png
+/Users/markzimmermann/Library/Developer/Xcode/DerivedData/ATSDiagnostic-dwqsvugqytkzgnfrfturllqkowje/Build/Intermediates.noindex/ATSDiagnostic.build/Debug-iphonesimulator/ATSDiagnostic.build/assetcatalog_output/thinned/AppIcon76x76@2x~ipad.png
+/Users/markzimmermann/Library/Developer/Xcode/DerivedData/ATSDiagnostic-dwqsvugqytkzgnfrfturllqkowje/Build/Intermediates.noindex/ATSDiagnostic.build/Debug-iphonesimulator/ATSDiagnostic.build/assetcatalog_output/thinned/Assets.car
+
+
+SwiftDriver ATSDiagnostic normal arm64 com.apple.xcode.tools.swift.compiler (in target 'ATSDiagnostic' from project 'ATSDiagnostic')
+    cd /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/outputs/ATS-Diagnostic
+    builtin-SwiftDriver -- /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc -module-name ATSDiagnostic -Onone @/Users/markzimmermann/Library/Developer/Xcode/DerivedData/ATSDiagnostic-dwqsvugqytkzgnfrfturllqkowje/Build/Intermediates.noindex/ATSDiagnostic.build/Debug-iphonesimulator/ATSDiagnostic.build/Objects-normal/arm64/ATSDiagnostic.SwiftFileList -DDEBUG -enable-experimental-feature DebugDescriptionMacro -sdk /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator27.0.sdk -target arm64-apple-ios18.0-simulator -g -module-cache-path /Users/markzimmermann/Library/Developer/Xcode/DerivedData/ModuleCache.noindex -Xfrontend -serialize-debugging-options -enable-testing -index-store-path /Users/markzimmermann/Library/Developer/Xcode/DerivedData/ATSDiagnostic-dwqsvugqytkzgnfrfturllqkowje/Index.noindex/DataStore -Xcc -D_LIBCPP_HARDENING_MODE\=_LIBCPP_HARDENING_MODE_DEBUG -swift-version 6 -I /Users/markzimmermann/Library/Developer/Xcode/DerivedData/ATSDiagnostic-dwqsvugqytkzgnfrfturllqkowje/Build/Products/Debug-iphonesimulator -F /Users/markzimmermann/Library/Developer/Xcode/DerivedData/ATSDiagnostic-dwqsvugqytkzgnfrfturllqkowje/Build/Products/Debug-iphonesimulator -c -j18 -enable-batch-mode -incremental -Xcc -ivfsstatcache -Xcc /Users/markzimmermann/Library/Developer/Xcode/DerivedData/SDKStatCaches.noindex/iphonesimulator27.0-24A430-e829b21a6f8c9b70876ba0858053c0448dc58220667be655e1bcc261a7455254.sdkstatcache -output-file-map /Users/markzimmermann/Library/Developer/Xcode/DerivedData/ATSDiagnostic-dwqsvugqytkzgnfrfturllqkowje/Build/Intermediates.noindex/ATSDiagnostic.build/Debug-iphonesimulator/ATSDiagnostic.build/Objects-normal/arm64/ATSDiagnostic-OutputFileMap.json -save-temps -no-color-diagnostics -explicit-module-build -module-cache-path /Users/markzimmermann/Library/Developer/Xcode/DerivedData/ATSDiagnostic-dwqsvugqytkzgnfrfturllqkowje/Build/Intermediates.noindex/SwiftExplicitPrecompiledModules -clang-scanner-module-cache-path /Users/markzimmermann/Library/Developer/Xcode/DerivedData/ModuleCache.noindex -sdk-module-cache-path /Users/markzimmermann/Library/Developer/Xcode/DerivedData/SDKExplicitPrecompiledModules -emit-dependencies -emit-module -emit-module-path /Users/markzimmermann/Library/Developer/Xcode/DerivedData/ATSDiagnostic-dwqsvugqytkzgnfrfturllqkowje/Build/Intermediates.noindex/ATSDiagnostic.build/Debug-iphonesimulator/ATSDiagnostic.build/Objects-normal/arm64/ATSDiagnostic.swiftmodule -serialize-diagnostics -dependency-scan-serialize-diagnostics-path /Users/markzimmermann/Library/Developer/Xcode/DerivedData/ATSDiagnostic-dwqsvugqytkzgnfrfturllqkowje/Build/Intermediates.noindex/ATSDiagnostic.build/Debug-iphonesimulator/ATSDiagnostic.build/Objects-normal/arm64/ATSDiagnostic-dependency-scan.dia -validate-clang-modules-once -clang-build-session-file /Users/markzimmermann/Library/Developer/Xcode/DerivedData/ModuleCache.noindex/Session.modulevalidation -Xcc -fmodules-prune-interval\=86400 -Xcc -fmodules-prune-after\=345600 -emit-const-values -const-gather-protocols-list /Users/markzimmermann/Library/Developer/Xcode/DerivedData/ATSDiagnostic-dwqsvugqytkzgnfrfturllqkowje/Build/Intermediates.noindex/ATSDiagnostic.build/Debug-iphonesimulator/ATSDiagnostic.build/Objects-normal/arm64/ATSDiagnostic_const_extract_protocols.json -Xcc -iquote -Xcc /Users/markzimmermann/Library/Developer/Xcode/DerivedData/ATSDiagnostic-dwqsvugqytkzgnfrfturllqkowje/Build/Intermediates.noindex/ATSDiagnostic.build/Debug-iphonesimulator/ATSDiagnostic.build/ATSDiagnostic-generated-files.hmap -Xcc -I/Users/markzimmermann/Library/Developer/Xcode/DerivedData/ATSDiagnostic-dwqsvugqytkzgnfrfturllqkowje/Build/Intermediates.noindex/ATSDiagnostic.build/Debug-iphonesimulator/ATSDiagnostic.build/ATSDiagnostic-own-target-headers.hmap -Xcc -I/Users/markzimmermann/Library/Developer/Xcode/DerivedData/ATSDiagnostic-dwqsvugqytkzgnfrfturllqkowje/Build/Intermediates.noindex/ATSDiagnostic.build/Debug-iphonesimulator/ATSDiagnostic.build/ATSDiagnostic-all-target-headers.hmap -Xcc -iquote -Xcc /Users/markzimmermann/Library/Developer/Xcode/DerivedData/ATSDiagnostic-dwqsvugqytkzgnfrfturllqkowje/Build/Intermediates.noindex/ATSDiagnostic.build/Debug-iphonesimulator/ATSDiagnostic.build/ATSDiagnostic-project-headers.hmap -Xcc -I/Users/markzimmermann/Library/Developer/Xcode/DerivedData/ATSDiagnostic-dwqsvugqytkzgnfrfturllqkowje/Build/Products/Debug-iphonesimulator/include -Xcc -I/Users/markzimmermann/Library/Developer/Xcode/DerivedData/ATSDiagnostic-dwqsvugqytkzgnfrfturllqkowje/Build/Intermediates.noindex/ATSDiagnostic.build/Debug-iphonesimulator/ATSDiagnostic.build/DerivedSources-normal/arm64 -Xcc -I/Users/markzimmermann/Library/Developer/Xcode/DerivedData/ATSDiagnostic-dwqsvugqytkzgnfrfturllqkowje/Build/Intermediates.noindex/ATSDiagnostic.build/Debug-iphonesimulator/ATSDiagnostic.build/DerivedSources/arm64 -Xcc -I/Users/markzimmermann/Library/Developer/Xcode/DerivedData/ATSDiagnostic-dwqsvugqytkzgnfrfturllqkowje/Build/Intermediates.noindex/ATSDiagnostic.build/Debug-iphonesimulator/ATSDiagnostic.build/DerivedSources -Xcc -DDEBUG\=1 -emit-objc-header -emit-objc-header-path /Users/markzimmermann/Library/Developer/Xcode/DerivedData/ATSDiagnostic-dwqsvugqytkzgnfrfturllqkowje/Build/Intermediates.noindex/ATSDiagnostic.build/Debug-iphonesimulator/ATSDiagnostic.build/Objects-normal/arm64/ATSDiagnostic-Swift.h -working-directory /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/outputs/ATS-Diagnostic -experimental-emit-module-separately -disable-cmo
+
+SwiftEmitModule normal arm64 Emitting\ module\ for\ ATSDiagnostic (in target 'ATSDiagnostic' from project 'ATSDiagnostic')
+
+SwiftCompile normal arm64 (in target 'ATSDiagnostic' from project 'ATSDiagnostic')
+    cd /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/outputs/ATS-Diagnostic
+    
+
+SwiftCompile normal arm64 Compiling\ ProxyMonitor.swift /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/outputs/ATS-Diagnostic/App/ProxyMonitor.swift (in target 'ATSDiagnostic' from project 'ATSDiagnostic')
+
+SwiftCompile normal arm64 /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/outputs/ATS-Diagnostic/App/ProxyMonitor.swift (in target 'ATSDiagnostic' from project 'ATSDiagnostic')
+    cd /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/outputs/ATS-Diagnostic
+    builtin-SwiftPerFileCompile ProxyMonitor.swift
+
+SwiftCompile normal arm64 Compiling\ ProxyRulesView.swift /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/outputs/ATS-Diagnostic/App/ProxyRulesView.swift (in target 'ATSDiagnostic' from project 'ATSDiagnostic')
+
+SwiftCompile normal arm64 /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/outputs/ATS-Diagnostic/App/ProxyRulesView.swift (in target 'ATSDiagnostic' from project 'ATSDiagnostic')
+    cd /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/outputs/ATS-Diagnostic
+    builtin-SwiftPerFileCompile ProxyRulesView.swift
+
+SwiftDriverJobDiscovery normal arm64 Compiling ProxyMonitor.swift (in target 'ATSDiagnostic' from project 'ATSDiagnostic')
+
+SwiftCompile normal arm64 Compiling\ CaptureView.swift /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/outputs/ATS-Diagnostic/App/CaptureView.swift (in target 'ATSDiagnostic' from project 'ATSDiagnostic')
+
+SwiftCompile normal arm64 /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/outputs/ATS-Diagnostic/App/CaptureView.swift (in target 'ATSDiagnostic' from project 'ATSDiagnostic')
+    cd /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/outputs/ATS-Diagnostic
+    builtin-SwiftPerFileCompile CaptureView.swift
+
+SwiftCompile normal arm64 Compiling\ ATSDiagnosticApp.swift /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/outputs/ATS-Diagnostic/App/ATSDiagnosticApp.swift (in target 'ATSDiagnostic' from project 'ATSDiagnostic')
+
+SwiftCompile normal arm64 /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/outputs/ATS-Diagnostic/App/ATSDiagnosticApp.swift (in target 'ATSDiagnostic' from project 'ATSDiagnostic')
+    cd /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/outputs/ATS-Diagnostic
+    builtin-SwiftPerFileCompile ATSDiagnosticApp.swift
+
+SwiftDriverJobDiscovery normal arm64 Compiling ProxyRulesView.swift (in target 'ATSDiagnostic' from project 'ATSDiagnostic')
+
+LinkAssetCatalog /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/outputs/ATS-Diagnostic/App/Assets.xcassets (in target 'ATSDiagnostic' from project 'ATSDiagnostic')
+    cd /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/outputs/ATS-Diagnostic
+    builtin-linkAssetCatalog --thinned /Users/markzimmermann/Library/Developer/Xcode/DerivedData/ATSDiagnostic-dwqsvugqytkzgnfrfturllqkowje/Build/Intermediates.noindex/ATSDiagnostic.build/Debug-iphonesimulator/ATSDiagnostic.build/assetcatalog_output/thinned --thinned-dependencies /Users/markzimmermann/Library/Developer/Xcode/DerivedData/ATSDiagnostic-dwqsvugqytkzgnfrfturllqkowje/Build/Intermediates.noindex/ATSDiagnostic.build/Debug-iphonesimulator/ATSDiagnostic.build/assetcatalog_dependencies_thinned --thinned-info-plist-content /Users/markzimmermann/Library/Developer/Xcode/DerivedData/ATSDiagnostic-dwqsvugqytkzgnfrfturllqkowje/Build/Intermediates.noindex/ATSDiagnostic.build/Debug-iphonesimulator/ATSDiagnostic.build/assetcatalog_generated_info.plist_thinned --unthinned /Users/markzimmermann/Library/Developer/Xcode/DerivedData/ATSDiagnostic-dwqsvugqytkzgnfrfturllqkowje/Build/Intermediates.noindex/ATSDiagnostic.build/Debug-iphonesimulator/ATSDiagnostic.build/assetcatalog_output/unthinned --unthinned-dependencies /Users/markzimmermann/Library/Developer/Xcode/DerivedData/ATSDiagnostic-dwqsvugqytkzgnfrfturllqkowje/Build/Intermediates.noindex/ATSDiagnostic.build/Debug-iphonesimulator/ATSDiagnostic.build/assetcatalog_dependencies_unthinned --unthinned-info-plist-content /Users/markzimmermann/Library/Developer/Xcode/DerivedData/ATSDiagnostic-dwqsvugqytkzgnfrfturllqkowje/Build/Intermediates.noindex/ATSDiagnostic.build/Debug-iphonesimulator/ATSDiagnostic.build/assetcatalog_generated_info.plist_unthinned --output /Users/markzimmermann/Library/Developer/Xcode/DerivedData/ATSDiagnostic-dwqsvugqytkzgnfrfturllqkowje/Build/Products/Debug-iphonesimulator/ATSDiagnostic.app --plist-output /Users/markzimmermann/Library/Developer/Xcode/DerivedData/ATSDiagnostic-dwqsvugqytkzgnfrfturllqkowje/Build/Intermediates.noindex/ATSDiagnostic.build/Debug-iphonesimulator/ATSDiagnostic.build/assetcatalog_generated_info.plist
+note: Emplaced /Users/markzimmermann/Library/Developer/Xcode/DerivedData/ATSDiagnostic-dwqsvugqytkzgnfrfturllqkowje/Build/Products/Debug-iphonesimulator/ATSDiagnostic.app/AppIcon60x60@2x.png (in target 'ATSDiagnostic' from project 'ATSDiagnostic')
+note: Emplaced /Users/markzimmermann/Library/Developer/Xcode/DerivedData/ATSDiagnostic-dwqsvugqytkzgnfrfturllqkowje/Build/Products/Debug-iphonesimulator/ATSDiagnostic.app/Assets.car (in target 'ATSDiagnostic' from project 'ATSDiagnostic')
+note: Emplaced /Users/markzimmermann/Library/Developer/Xcode/DerivedData/ATSDiagnostic-dwqsvugqytkzgnfrfturllqkowje/Build/Products/Debug-iphonesimulator/ATSDiagnostic.app/AppIcon76x76@2x~ipad.png (in target 'ATSDiagnostic' from project 'ATSDiagnostic')
+
+ProcessInfoPlistFile /Users/markzimmermann/Library/Developer/Xcode/DerivedData/ATSDiagnostic-dwqsvugqytkzgnfrfturllqkowje/Build/Products/Debug-iphonesimulator/ATSDiagnostic.app/Info.plist /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/outputs/ATS-Diagnostic/Configuration/ATSDiagnostic-Info.plist (in target 'ATSDiagnostic' from project 'ATSDiagnostic')
+    cd /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/outputs/ATS-Diagnostic
+    builtin-infoPlistUtility /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/outputs/ATS-Diagnostic/Configuration/ATSDiagnostic-Info.plist -producttype com.apple.product-type.application -genpkginfo /Users/markzimmermann/Library/Developer/Xcode/DerivedData/ATSDiagnostic-dwqsvugqytkzgnfrfturllqkowje/Build/Products/Debug-iphonesimulator/ATSDiagnostic.app/PkgInfo -expandbuildsettings -format binary -platform iphonesimulator -additionalcontentfile /Users/markzimmermann/Library/Developer/Xcode/DerivedData/ATSDiagnostic-dwqsvugqytkzgnfrfturllqkowje/Build/Intermediates.noindex/ATSDiagnostic.build/Debug-iphonesimulator/ATSDiagnostic.build/LaunchScreen-SBPartialInfo.plist -additionalcontentfile /Users/markzimmermann/Library/Developer/Xcode/DerivedData/ATSDiagnostic-dwqsvugqytkzgnfrfturllqkowje/Build/Intermediates.noindex/ATSDiagnostic.build/Debug-iphonesimulator/ATSDiagnostic.build/assetcatalog_generated_info.plist -o /Users/markzimmermann/Library/Developer/Xcode/DerivedData/ATSDiagnostic-dwqsvugqytkzgnfrfturllqkowje/Build/Products/Debug-iphonesimulator/ATSDiagnostic.app/Info.plist
+
+SwiftDriverJobDiscovery normal arm64 Emitting module for ATSDiagnostic (in target 'ATSDiagnostic' from project 'ATSDiagnostic')
+
+SwiftDriver\ Compilation\ Requirements ATSDiagnostic normal arm64 com.apple.xcode.tools.swift.compiler (in target 'ATSDiagnostic' from project 'ATSDiagnostic')
+    cd /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/outputs/ATS-Diagnostic
+    builtin-Swift-Compilation-Requirements -- /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc -module-name ATSDiagnostic -Onone @/Users/markzimmermann/Library/Developer/Xcode/DerivedData/ATSDiagnostic-dwqsvugqytkzgnfrfturllqkowje/Build/Intermediates.noindex/ATSDiagnostic.build/Debug-iphonesimulator/ATSDiagnostic.build/Objects-normal/arm64/ATSDiagnostic.SwiftFileList -DDEBUG -enable-experimental-feature DebugDescriptionMacro -sdk /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator27.0.sdk -target arm64-apple-ios18.0-simulator -g -module-cache-path /Users/markzimmermann/Library/Developer/Xcode/DerivedData/ModuleCache.noindex -Xfrontend -serialize-debugging-options -enable-testing -index-store-path /Users/markzimmermann/Library/Developer/Xcode/DerivedData/ATSDiagnostic-dwqsvugqytkzgnfrfturllqkowje/Index.noindex/DataStore -Xcc -D_LIBCPP_HARDENING_MODE\=_LIBCPP_HARDENING_MODE_DEBUG -swift-version 6 -I /Users/markzimmermann/Library/Developer/Xcode/DerivedData/ATSDiagnostic-dwqsvugqytkzgnfrfturllqkowje/Build/Products/Debug-iphonesimulator -F /Users/markzimmermann/Library/Developer/Xcode/DerivedData/ATSDiagnostic-dwqsvugqytkzgnfrfturllqkowje/Build/Products/Debug-iphonesimulator -c -j18 -enable-batch-mode -incremental -Xcc -ivfsstatcache -Xcc /Users/markzimmermann/Library/Developer/Xcode/DerivedData/SDKStatCaches.noindex/iphonesimulator27.0-24A430-e829b21a6f8c9b70876ba0858053c0448dc58220667be655e1bcc261a7455254.sdkstatcache -output-file-map /Users/markzimmermann/Library/Developer/Xcode/DerivedData/ATSDiagnostic-dwqsvugqytkzgnfrfturllqkowje/Build/Intermediates.noindex/ATSDiagnostic.build/Debug-iphonesimulator/ATSDiagnostic.build/Objects-normal/arm64/ATSDiagnostic-OutputFileMap.json -save-temps -no-color-diagnostics -explicit-module-build -module-cache-path /Users/markzimmermann/Library/Developer/Xcode/DerivedData/ATSDiagnostic-dwqsvugqytkzgnfrfturllqkowje/Build/Intermediates.noindex/SwiftExplicitPrecompiledModules -clang-scanner-module-cache-path /Users/markzimmermann/Library/Developer/Xcode/DerivedData/ModuleCache.noindex -sdk-module-cache-path /Users/markzimmermann/Library/Developer/Xcode/DerivedData/SDKExplicitPrecompiledModules -emit-dependencies -emit-module -emit-module-path /Users/markzimmermann/Library/Developer/Xcode/DerivedData/ATSDiagnostic-dwqsvugqytkzgnfrfturllqkowje/Build/Intermediates.noindex/ATSDiagnostic.build/Debug-iphonesimulator/ATSDiagnostic.build/Objects-normal/arm64/ATSDiagnostic.swiftmodule -serialize-diagnostics -dependency-scan-serialize-diagnostics-path /Users/markzimmermann/Library/Developer/Xcode/DerivedData/ATSDiagnostic-dwqsvugqytkzgnfrfturllqkowje/Build/Intermediates.noindex/ATSDiagnostic.build/Debug-iphonesimulator/ATSDiagnostic.build/Objects-normal/arm64/ATSDiagnostic-dependency-scan.dia -validate-clang-modules-once -clang-build-session-file /Users/markzimmermann/Library/Developer/Xcode/DerivedData/ModuleCache.noindex/Session.modulevalidation -Xcc -fmodules-prune-interval\=86400 -Xcc -fmodules-prune-after\=345600 -emit-const-values -const-gather-protocols-list /Users/markzimmermann/Library/Developer/Xcode/DerivedData/ATSDiagnostic-dwqsvugqytkzgnfrfturllqkowje/Build/Intermediates.noindex/ATSDiagnostic.build/Debug-iphonesimulator/ATSDiagnostic.build/Objects-normal/arm64/ATSDiagnostic_const_extract_protocols.json -Xcc -iquote -Xcc /Users/markzimmermann/Library/Developer/Xcode/DerivedData/ATSDiagnostic-dwqsvugqytkzgnfrfturllqkowje/Build/Intermediates.noindex/ATSDiagnostic.build/Debug-iphonesimulator/ATSDiagnostic.build/ATSDiagnostic-generated-files.hmap -Xcc -I/Users/markzimmermann/Library/Developer/Xcode/DerivedData/ATSDiagnostic-dwqsvugqytkzgnfrfturllqkowje/Build/Intermediates.noindex/ATSDiagnostic.build/Debug-iphonesimulator/ATSDiagnostic.build/ATSDiagnostic-own-target-headers.hmap -Xcc -I/Users/markzimmermann/Library/Developer/Xcode/DerivedData/ATSDiagnostic-dwqsvugqytkzgnfrfturllqkowje/Build/Intermediates.noindex/ATSDiagnostic.build/Debug-iphonesimulator/ATSDiagnostic.build/ATSDiagnostic-all-target-headers.hmap -Xcc -iquote -Xcc /Users/markzimmermann/Library/Developer/Xcode/DerivedData/ATSDiagnostic-dwqsvugqytkzgnfrfturllqkowje/Build/Intermediates.noindex/ATSDiagnostic.build/Debug-iphonesimulator/ATSDiagnostic.build/ATSDiagnostic-project-headers.hmap -Xcc -I/Users/markzimmermann/Library/Developer/Xcode/DerivedData/ATSDiagnostic-dwqsvugqytkzgnfrfturllqkowje/Build/Products/Debug-iphonesimulator/include -Xcc -I/Users/markzimmermann/Library/Developer/Xcode/DerivedData/ATSDiagnostic-dwqsvugqytkzgnfrfturllqkowje/Build/Intermediates.noindex/ATSDiagnostic.build/Debug-iphonesimulator/ATSDiagnostic.build/DerivedSources-normal/arm64 -Xcc -I/Users/markzimmermann/Library/Developer/Xcode/DerivedData/ATSDiagnostic-dwqsvugqytkzgnfrfturllqkowje/Build/Intermediates.noindex/ATSDiagnostic.build/Debug-iphonesimulator/ATSDiagnostic.build/DerivedSources/arm64 -Xcc -I/Users/markzimmermann/Library/Developer/Xcode/DerivedData/ATSDiagnostic-dwqsvugqytkzgnfrfturllqkowje/Build/Intermediates.noindex/ATSDiagnostic.build/Debug-iphonesimulator/ATSDiagnostic.build/DerivedSources -Xcc -DDEBUG\=1 -emit-objc-header -emit-objc-header-path /Users/markzimmermann/Library/Developer/Xcode/DerivedData/ATSDiagnostic-dwqsvugqytkzgnfrfturllqkowje/Build/Intermediates.noindex/ATSDiagnostic.build/Debug-iphonesimulator/ATSDiagnostic.build/Objects-normal/arm64/ATSDiagnostic-Swift.h -working-directory /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/outputs/ATS-Diagnostic -experimental-emit-module-separately -disable-cmo
+
+Copy /Users/markzimmermann/Library/Developer/Xcode/DerivedData/ATSDiagnostic-dwqsvugqytkzgnfrfturllqkowje/Build/Products/Debug-iphonesimulator/ATSDiagnostic.swiftmodule/arm64-apple-ios-simulator.swiftmodule /Users/markzimmermann/Library/Developer/Xcode/DerivedData/ATSDiagnostic-dwqsvugqytkzgnfrfturllqkowje/Build/Intermediates.noindex/ATSDiagnostic.build/Debug-iphonesimulator/ATSDiagnostic.build/Objects-normal/arm64/ATSDiagnostic.swiftmodule (in target 'ATSDiagnostic' from project 'ATSDiagnostic')
+    cd /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/outputs/ATS-Diagnostic
+    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks -rename /Users/markzimmermann/Library/Developer/Xcode/DerivedData/ATSDiagnostic-dwqsvugqytkzgnfrfturllqkowje/Build/Intermediates.noindex/ATSDiagnostic.build/Debug-iphonesimulator/ATSDiagnostic.build/Objects-normal/arm64/ATSDiagnostic.swiftmodule /Users/markzimmermann/Library/Developer/Xcode/DerivedData/ATSDiagnostic-dwqsvugqytkzgnfrfturllqkowje/Build/Products/Debug-iphonesimulator/ATSDiagnostic.swiftmodule/arm64-apple-ios-simulator.swiftmodule
+
+Copy /Users/markzimmermann/Library/Developer/Xcode/DerivedData/ATSDiagnostic-dwqsvugqytkzgnfrfturllqkowje/Build/Products/Debug-iphonesimulator/ATSDiagnostic.swiftmodule/arm64-apple-ios-simulator.abi.json /Users/markzimmermann/Library/Developer/Xcode/DerivedData/ATSDiagnostic-dwqsvugqytkzgnfrfturllqkowje/Build/Intermediates.noindex/ATSDiagnostic.build/Debug-iphonesimulator/ATSDiagnostic.build/Objects-normal/arm64/ATSDiagnostic.abi.json (in target 'ATSDiagnostic' from project 'ATSDiagnostic')
+    cd /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/outputs/ATS-Diagnostic
+    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks -rename /Users/markzimmermann/Library/Developer/Xcode/DerivedData/ATSDiagnostic-dwqsvugqytkzgnfrfturllqkowje/Build/Intermediates.noindex/ATSDiagnostic.build/Debug-iphonesimulator/ATSDiagnostic.build/Objects-normal/arm64/ATSDiagnostic.abi.json /Users/markzimmermann/Library/Developer/Xcode/DerivedData/ATSDiagnostic-dwqsvugqytkzgnfrfturllqkowje/Build/Products/Debug-iphonesimulator/ATSDiagnostic.swiftmodule/arm64-apple-ios-simulator.abi.json
+
+Copy /Users/markzimmermann/Library/Developer/Xcode/DerivedData/ATSDiagnostic-dwqsvugqytkzgnfrfturllqkowje/Build/Products/Debug-iphonesimulator/ATSDiagnostic.swiftmodule/Project/arm64-apple-ios-simulator.swiftsourceinfo /Users/markzimmermann/Library/Developer/Xcode/DerivedData/ATSDiagnostic-dwqsvugqytkzgnfrfturllqkowje/Build/Intermediates.noindex/ATSDiagnostic.build/Debug-iphonesimulator/ATSDiagnostic.build/Objects-normal/arm64/ATSDiagnostic.swiftsourceinfo (in target 'ATSDiagnostic' from project 'ATSDiagnostic')
+    cd /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/outputs/ATS-Diagnostic
+    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks -rename /Users/markzimmermann/Library/Developer/Xcode/DerivedData/ATSDiagnostic-dwqsvugqytkzgnfrfturllqkowje/Build/Intermediates.noindex/ATSDiagnostic.build/Debug-iphonesimulator/ATSDiagnostic.build/Objects-normal/arm64/ATSDiagnostic.swiftsourceinfo /Users/markzimmermann/Library/Developer/Xcode/DerivedData/ATSDiagnostic-dwqsvugqytkzgnfrfturllqkowje/Build/Products/Debug-iphonesimulator/ATSDiagnostic.swiftmodule/Project/arm64-apple-ios-simulator.swiftsourceinfo
+
+SwiftDriver ATSDiagnosticTests normal arm64 com.apple.xcode.tools.swift.compiler (in target 'ATSDiagnosticTests' from project 'ATSDiagnostic')
+    cd /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/outputs/ATS-Diagnostic
+    builtin-SwiftDriver -- /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc -module-name ATSDiagnosticTests -Onone @/Users/markzimmermann/Library/Developer/Xcode/DerivedData/ATSDiagnostic-dwqsvugqytkzgnfrfturllqkowje/Build/Intermediates.noindex/ATSDiagnostic.build/Debug-iphonesimulator/ATSDiagnosticTests.build/Objects-normal/arm64/ATSDiagnosticTests.SwiftFileList -DDEBUG -plugin-path /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/host/plugins/testing -enable-experimental-feature DebugDescriptionMacro -sdk /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator27.0.sdk -target arm64-apple-ios18.0-simulator -g -module-cache-path /Users/markzimmermann/Library/Developer/Xcode/DerivedData/ModuleCache.noindex -Xfrontend -serialize-debugging-options -enable-testing -index-store-path /Users/markzimmermann/Library/Developer/Xcode/DerivedData/ATSDiagnostic-dwqsvugqytkzgnfrfturllqkowje/Index.noindex/DataStore -Xcc -D_LIBCPP_HARDENING_MODE\=_LIBCPP_HARDENING_MODE_DEBUG -swift-version 6 -I /Users/markzimmermann/Library/Developer/Xcode/DerivedData/ATSDiagnostic-dwqsvugqytkzgnfrfturllqkowje/Build/Products/Debug-iphonesimulator -Isystem /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/lib -F /Users/markzimmermann/Library/Developer/Xcode/DerivedData/ATSDiagnostic-dwqsvugqytkzgnfrfturllqkowje/Build/Products/Debug-iphonesimulator -F /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/Library/Frameworks -F /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator27.0.sdk/Developer/Library/Frameworks -c -j18 -enable-batch-mode -incremental -Xcc -ivfsstatcache -Xcc /Users/markzimmermann/Library/Developer/Xcode/DerivedData/SDKStatCaches.noindex/iphonesimulator27.0-24A430-e829b21a6f8c9b70876ba0858053c0448dc58220667be655e1bcc261a7455254.sdkstatcache -output-file-map /Users/markzimmermann/Library/Developer/Xcode/DerivedData/ATSDiagnostic-dwqsvugqytkzgnfrfturllqkowje/Build/Intermediates.noindex/ATSDiagnostic.build/Debug-iphonesimulator/ATSDiagnosticTests.build/Objects-normal/arm64/ATSDiagnosticTests-OutputFileMap.json -save-temps -no-color-diagnostics -explicit-module-build -module-cache-path /Users/markzimmermann/Library/Developer/Xcode/DerivedData/ATSDiagnostic-dwqsvugqytkzgnfrfturllqkowje/Build/Intermediates.noindex/SwiftExplicitPrecompiledModules -clang-scanner-module-cache-path /Users/markzimmermann/Library/Developer/Xcode/DerivedData/ModuleCache.noindex -sdk-module-cache-path /Users/markzimmermann/Library/Developer/Xcode/DerivedData/SDKExplicitPrecompiledModules -emit-dependencies -emit-module -emit-module-path /Users/markzimmermann/Library/Developer/Xcode/DerivedData/ATSDiagnostic-dwqsvugqytkzgnfrfturllqkowje/Build/Intermediates.noindex/ATSDiagnostic.build/Debug-iphonesimulator/ATSDiagnosticTests.build/Objects-normal/arm64/ATSDiagnosticTests.swiftmodule -serialize-diagnostics -dependency-scan-serialize-diagnostics-path /Users/markzimmermann/Library/Developer/Xcode/DerivedData/ATSDiagnostic-dwqsvugqytkzgnfrfturllqkowje/Build/Intermediates.noindex/ATSDiagnostic.build/Debug-iphonesimulator/ATSDiagnosticTests.build/Objects-normal/arm64/ATSDiagnosticTests-dependency-scan.dia -validate-clang-modules-once -clang-build-session-file /Users/markzimmermann/Library/Developer/Xcode/DerivedData/ModuleCache.noindex/Session.modulevalidation -Xcc -fmodules-prune-interval\=86400 -Xcc -fmodules-prune-after\=345600 -emit-const-values -const-gather-protocols-list /Users/markzimmermann/Library/Developer/Xcode/DerivedData/ATSDiagnostic-dwqsvugqytkzgnfrfturllqkowje/Build/Intermediates.noindex/ATSDiagnostic.build/Debug-iphonesimulator/ATSDiagnosticTests.build/Objects-normal/arm64/ATSDiagnosticTests_const_extract_protocols.json -Xcc -iquote -Xcc /Users/markzimmermann/Library/Developer/Xcode/DerivedData/ATSDiagnostic-dwqsvugqytkzgnfrfturllqkowje/Build/Intermediates.noindex/ATSDiagnostic.build/Debug-iphonesimulator/ATSDiagnosticTests.build/ATSDiagnosticTests-generated-files.hmap -Xcc -I/Users/markzimmermann/Library/Developer/Xcode/DerivedData/ATSDiagnostic-dwqsvugqytkzgnfrfturllqkowje/Build/Intermediates.noindex/ATSDiagnostic.build/Debug-iphonesimulator/ATSDiagnosticTests.build/ATSDiagnosticTests-own-target-headers.hmap -Xcc -I/Users/markzimmermann/Library/Developer/Xcode/DerivedData/ATSDiagnostic-dwqsvugqytkzgnfrfturllqkowje/Build/Intermediates.noindex/ATSDiagnostic.build/Debug-iphonesimulator/ATSDiagnosticTests.build/ATSDiagnosticTests-all-target-headers.hmap -Xcc -iquote -Xcc /Users/markzimmermann/Library/Developer/Xcode/DerivedData/ATSDiagnostic-dwqsvugqytkzgnfrfturllqkowje/Build/Intermediates.noindex/ATSDiagnostic.build/Debug-iphonesimulator/ATSDiagnosticTests.build/ATSDiagnosticTests-project-headers.hmap -Xcc -I/Users/markzimmermann/Library/Developer/Xcode/DerivedData/ATSDiagnostic-dwqsvugqytkzgnfrfturllqkowje/Build/Products/Debug-iphonesimulator/include -Xcc -I/Users/markzimmermann/Library/Developer/Xcode/DerivedData/ATSDiagnostic-dwqsvugqytkzgnfrfturllqkowje/Build/Intermediates.noindex/ATSDiagnostic.build/Debug-iphonesimulator/ATSDiagnosticTests.build/DerivedSources-normal/arm64 -Xcc -I/Users/markzimmermann/Library/Developer/Xcode/DerivedData/ATSDiagnostic-dwqsvugqytkzgnfrfturllqkowje/Build/Intermediates.noindex/ATSDiagnostic.build/Debug-iphonesimulator/ATSDiagnosticTests.build/DerivedSources/arm64 -Xcc -I/Users/markzimmermann/Library/Developer/Xcode/DerivedData/ATSDiagnostic-dwqsvugqytkzgnfrfturllqkowje/Build/Intermediates.noindex/ATSDiagnostic.build/Debug-iphonesimulator/ATSDiagnosticTests.build/DerivedSources -Xcc -DDEBUG\=1 -emit-objc-header -emit-objc-header-path /Users/markzimmermann/Library/Developer/Xcode/DerivedData/ATSDiagnostic-dwqsvugqytkzgnfrfturllqkowje/Build/Intermediates.noindex/ATSDiagnostic.build/Debug-iphonesimulator/ATSDiagnosticTests.build/Objects-normal/arm64/ATSDiagnosticTests-Swift.h -working-directory /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/outputs/ATS-Diagnostic -experimental-emit-module-separately -disable-cmo
+
+SwiftDriverJobDiscovery normal arm64 Compiling CaptureView.swift (in target 'ATSDiagnostic' from project 'ATSDiagnostic')
+
+SwiftCompile normal arm64 Compiling\ ProxyRuleConfigurationTests.swift /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/outputs/ATS-Diagnostic/Tests/ProxyRuleConfigurationTests.swift (in target 'ATSDiagnosticTests' from project 'ATSDiagnostic')
+
+SwiftCompile normal arm64 /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/outputs/ATS-Diagnostic/Tests/ProxyRuleConfigurationTests.swift (in target 'ATSDiagnosticTests' from project 'ATSDiagnostic')
+    cd /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/outputs/ATS-Diagnostic
+    builtin-SwiftPerFileCompile ProxyRuleConfigurationTests.swift
+
+SwiftEmitModule normal arm64 Emitting\ module\ for\ ATSDiagnosticTests (in target 'ATSDiagnosticTests' from project 'ATSDiagnostic')
+
+SwiftCompile normal arm64 (in target 'ATSDiagnosticTests' from project 'ATSDiagnostic')
+    cd /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/outputs/ATS-Diagnostic
+    
+
+SwiftDriverJobDiscovery normal arm64 Compiling ProxyRuleConfigurationTests.swift (in target 'ATSDiagnosticTests' from project 'ATSDiagnostic')
+
+SwiftDriverJobDiscovery normal arm64 Emitting module for ATSDiagnosticTests (in target 'ATSDiagnosticTests' from project 'ATSDiagnostic')
+
+SwiftDriver\ Compilation\ Requirements ATSDiagnosticTests normal arm64 com.apple.xcode.tools.swift.compiler (in target 'ATSDiagnosticTests' from project 'ATSDiagnostic')
+    cd /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/outputs/ATS-Diagnostic
+    builtin-Swift-Compilation-Requirements -- /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc -module-name ATSDiagnosticTests -Onone @/Users/markzimmermann/Library/Developer/Xcode/DerivedData/ATSDiagnostic-dwqsvugqytkzgnfrfturllqkowje/Build/Intermediates.noindex/ATSDiagnostic.build/Debug-iphonesimulator/ATSDiagnosticTests.build/Objects-normal/arm64/ATSDiagnosticTests.SwiftFileList -DDEBUG -plugin-path /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/host/plugins/testing -enable-experimental-feature DebugDescriptionMacro -sdk /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator27.0.sdk -target arm64-apple-ios18.0-simulator -g -module-cache-path /Users/markzimmermann/Library/Developer/Xcode/DerivedData/ModuleCache.noindex -Xfrontend -serialize-debugging-options -enable-testing -index-store-path /Users/markzimmermann/Library/Developer/Xcode/DerivedData/ATSDiagnostic-dwqsvugqytkzgnfrfturllqkowje/Index.noindex/DataStore -Xcc -D_LIBCPP_HARDENING_MODE\=_LIBCPP_HARDENING_MODE_DEBUG -swift-version 6 -I /Users/markzimmermann/Library/Developer/Xcode/DerivedData/ATSDiagnostic-dwqsvugqytkzgnfrfturllqkowje/Build/Products/Debug-iphonesimulator -Isystem /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/lib -F /Users/markzimmermann/Library/Developer/Xcode/DerivedData/ATSDiagnostic-dwqsvugqytkzgnfrfturllqkowje/Build/Products/Debug-iphonesimulator -F /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/Library/Frameworks -F /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator27.0.sdk/Developer/Library/Frameworks -c -j18 -enable-batch-mode -incremental -Xcc -ivfsstatcache -Xcc /Users/markzimmermann/Library/Developer/Xcode/DerivedData/SDKStatCaches.noindex/iphonesimulator27.0-24A430-e829b21a6f8c9b70876ba0858053c0448dc58220667be655e1bcc261a7455254.sdkstatcache -output-file-map /Users/markzimmermann/Library/Developer/Xcode/DerivedData/ATSDiagnostic-dwqsvugqytkzgnfrfturllqkowje/Build/Intermediates.noindex/ATSDiagnostic.build/Debug-iphonesimulator/ATSDiagnosticTests.build/Objects-normal/arm64/ATSDiagnosticTests-OutputFileMap.json -save-temps -no-color-diagnostics -explicit-module-build -module-cache-path /Users/markzimmermann/Library/Developer/Xcode/DerivedData/ATSDiagnostic-dwqsvugqytkzgnfrfturllqkowje/Build/Intermediates.noindex/SwiftExplicitPrecompiledModules -clang-scanner-module-cache-path /Users/markzimmermann/Library/Developer/Xcode/DerivedData/ModuleCache.noindex -sdk-module-cache-path /Users/markzimmermann/Library/Developer/Xcode/DerivedData/SDKExplicitPrecompiledModules -emit-dependencies -emit-module -emit-module-path /Users/markzimmermann/Library/Developer/Xcode/DerivedData/ATSDiagnostic-dwqsvugqytkzgnfrfturllqkowje/Build/Intermediates.noindex/ATSDiagnostic.build/Debug-iphonesimulator/ATSDiagnosticTests.build/Objects-normal/arm64/ATSDiagnosticTests.swiftmodule -serialize-diagnostics -dependency-scan-serialize-diagnostics-path /Users/markzimmermann/Library/Developer/Xcode/DerivedData/ATSDiagnostic-dwqsvugqytkzgnfrfturllqkowje/Build/Intermediates.noindex/ATSDiagnostic.build/Debug-iphonesimulator/ATSDiagnosticTests.build/Objects-normal/arm64/ATSDiagnosticTests-dependency-scan.dia -validate-clang-modules-once -clang-build-session-file /Users/markzimmermann/Library/Developer/Xcode/DerivedData/ModuleCache.noindex/Session.modulevalidation -Xcc -fmodules-prune-interval\=86400 -Xcc -fmodules-prune-after\=345600 -emit-const-values -const-gather-protocols-list /Users/markzimmermann/Library/Developer/Xcode/DerivedData/ATSDiagnostic-dwqsvugqytkzgnfrfturllqkowje/Build/Intermediates.noindex/ATSDiagnostic.build/Debug-iphonesimulator/ATSDiagnosticTests.build/Objects-normal/arm64/ATSDiagnosticTests_const_extract_protocols.json -Xcc -iquote -Xcc /Users/markzimmermann/Library/Developer/Xcode/DerivedData/ATSDiagnostic-dwqsvugqytkzgnfrfturllqkowje/Build/Intermediates.noindex/ATSDiagnostic.build/Debug-iphonesimulator/ATSDiagnosticTests.build/ATSDiagnosticTests-generated-files.hmap -Xcc -I/Users/markzimmermann/Library/Developer/Xcode/DerivedData/ATSDiagnostic-dwqsvugqytkzgnfrfturllqkowje/Build/Intermediates.noindex/ATSDiagnostic.build/Debug-iphonesimulator/ATSDiagnosticTests.build/ATSDiagnosticTests-own-target-headers.hmap -Xcc -I/Users/markzimmermann/Library/Developer/Xcode/DerivedData/ATSDiagnostic-dwqsvugqytkzgnfrfturllqkowje/Build/Intermediates.noindex/ATSDiagnostic.build/Debug-iphonesimulator/ATSDiagnosticTests.build/ATSDiagnosticTests-all-target-headers.hmap -Xcc -iquote -Xcc /Users/markzimmermann/Library/Developer/Xcode/DerivedData/ATSDiagnostic-dwqsvugqytkzgnfrfturllqkowje/Build/Intermediates.noindex/ATSDiagnostic.build/Debug-iphonesimulator/ATSDiagnosticTests.build/ATSDiagnosticTests-project-headers.hmap -Xcc -I/Users/markzimmermann/Library/Developer/Xcode/DerivedData/ATSDiagnostic-dwqsvugqytkzgnfrfturllqkowje/Build/Products/Debug-iphonesimulator/include -Xcc -I/Users/markzimmermann/Library/Developer/Xcode/DerivedData/ATSDiagnostic-dwqsvugqytkzgnfrfturllqkowje/Build/Intermediates.noindex/ATSDiagnostic.build/Debug-iphonesimulator/ATSDiagnosticTests.build/DerivedSources-normal/arm64 -Xcc -I/Users/markzimmermann/Library/Developer/Xcode/DerivedData/ATSDiagnostic-dwqsvugqytkzgnfrfturllqkowje/Build/Intermediates.noindex/ATSDiagnostic.build/Debug-iphonesimulator/ATSDiagnosticTests.build/DerivedSources/arm64 -Xcc -I/Users/markzimmermann/Library/Developer/Xcode/DerivedData/ATSDiagnostic-dwqsvugqytkzgnfrfturllqkowje/Build/Intermediates.noindex/ATSDiagnostic.build/Debug-iphonesimulator/ATSDiagnosticTests.build/DerivedSources -Xcc -DDEBUG\=1 -emit-objc-header -emit-objc-header-path /Users/markzimmermann/Library/Developer/Xcode/DerivedData/ATSDiagnostic-dwqsvugqytkzgnfrfturllqkowje/Build/Intermediates.noindex/ATSDiagnostic.build/Debug-iphonesimulator/ATSDiagnosticTests.build/Objects-normal/arm64/ATSDiagnosticTests-Swift.h -working-directory /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/outputs/ATS-Diagnostic -experimental-emit-module-separately -disable-cmo
+
+SwiftDriver\ Compilation ATSDiagnosticTests normal arm64 com.apple.xcode.tools.swift.compiler (in target 'ATSDiagnosticTests' from project 'ATSDiagnostic')
+    cd /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/outputs/ATS-Diagnostic
+    builtin-Swift-Compilation -- /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc -module-name ATSDiagnosticTests -Onone @/Users/markzimmermann/Library/Developer/Xcode/DerivedData/ATSDiagnostic-dwqsvugqytkzgnfrfturllqkowje/Build/Intermediates.noindex/ATSDiagnostic.build/Debug-iphonesimulator/ATSDiagnosticTests.build/Objects-normal/arm64/ATSDiagnosticTests.SwiftFileList -DDEBUG -plugin-path /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/host/plugins/testing -enable-experimental-feature DebugDescriptionMacro -sdk /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator27.0.sdk -target arm64-apple-ios18.0-simulator -g -module-cache-path /Users/markzimmermann/Library/Developer/Xcode/DerivedData/ModuleCache.noindex -Xfrontend -serialize-debugging-options -enable-testing -index-store-path /Users/markzimmermann/Library/Developer/Xcode/DerivedData/ATSDiagnostic-dwqsvugqytkzgnfrfturllqkowje/Index.noindex/DataStore -Xcc -D_LIBCPP_HARDENING_MODE\=_LIBCPP_HARDENING_MODE_DEBUG -swift-version 6 -I /Users/markzimmermann/Library/Developer/Xcode/DerivedData/ATSDiagnostic-dwqsvugqytkzgnfrfturllqkowje/Build/Products/Debug-iphonesimulator -Isystem /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/lib -F /Users/markzimmermann/Library/Developer/Xcode/DerivedData/ATSDiagnostic-dwqsvugqytkzgnfrfturllqkowje/Build/Products/Debug-iphonesimulator -F /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/Library/Frameworks -F /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator27.0.sdk/Developer/Library/Frameworks -c -j18 -enable-batch-mode -incremental -Xcc -ivfsstatcache -Xcc /Users/markzimmermann/Library/Developer/Xcode/DerivedData/SDKStatCaches.noindex/iphonesimulator27.0-24A430-e829b21a6f8c9b70876ba0858053c0448dc58220667be655e1bcc261a7455254.sdkstatcache -output-file-map /Users/markzimmermann/Library/Developer/Xcode/DerivedData/ATSDiagnostic-dwqsvugqytkzgnfrfturllqkowje/Build/Intermediates.noindex/ATSDiagnostic.build/Debug-iphonesimulator/ATSDiagnosticTests.build/Objects-normal/arm64/ATSDiagnosticTests-OutputFileMap.json -save-temps -no-color-diagnostics -explicit-module-build -module-cache-path /Users/markzimmermann/Library/Developer/Xcode/DerivedData/ATSDiagnostic-dwqsvugqytkzgnfrfturllqkowje/Build/Intermediates.noindex/SwiftExplicitPrecompiledModules -clang-scanner-module-cache-path /Users/markzimmermann/Library/Developer/Xcode/DerivedData/ModuleCache.noindex -sdk-module-cache-path /Users/markzimmermann/Library/Developer/Xcode/DerivedData/SDKExplicitPrecompiledModules -emit-dependencies -emit-module -emit-module-path /Users/markzimmermann/Library/Developer/Xcode/DerivedData/ATSDiagnostic-dwqsvugqytkzgnfrfturllqkowje/Build/Intermediates.noindex/ATSDiagnostic.build/Debug-iphonesimulator/ATSDiagnosticTests.build/Objects-normal/arm64/ATSDiagnosticTests.swiftmodule -serialize-diagnostics -dependency-scan-serialize-diagnostics-path /Users/markzimmermann/Library/Developer/Xcode/DerivedData/ATSDiagnostic-dwqsvugqytkzgnfrfturllqkowje/Build/Intermediates.noindex/ATSDiagnostic.build/Debug-iphonesimulator/ATSDiagnosticTests.build/Objects-normal/arm64/ATSDiagnosticTests-dependency-scan.dia -validate-clang-modules-once -clang-build-session-file /Users/markzimmermann/Library/Developer/Xcode/DerivedData/ModuleCache.noindex/Session.modulevalidation -Xcc -fmodules-prune-interval\=86400 -Xcc -fmodules-prune-after\=345600 -emit-const-values -const-gather-protocols-list /Users/markzimmermann/Library/Developer/Xcode/DerivedData/ATSDiagnostic-dwqsvugqytkzgnfrfturllqkowje/Build/Intermediates.noindex/ATSDiagnostic.build/Debug-iphonesimulator/ATSDiagnosticTests.build/Objects-normal/arm64/ATSDiagnosticTests_const_extract_protocols.json -Xcc -iquote -Xcc /Users/markzimmermann/Library/Developer/Xcode/DerivedData/ATSDiagnostic-dwqsvugqytkzgnfrfturllqkowje/Build/Intermediates.noindex/ATSDiagnostic.build/Debug-iphonesimulator/ATSDiagnosticTests.build/ATSDiagnosticTests-generated-files.hmap -Xcc -I/Users/markzimmermann/Library/Developer/Xcode/DerivedData/ATSDiagnostic-dwqsvugqytkzgnfrfturllqkowje/Build/Intermediates.noindex/ATSDiagnostic.build/Debug-iphonesimulator/ATSDiagnosticTests.build/ATSDiagnosticTests-own-target-headers.hmap -Xcc -I/Users/markzimmermann/Library/Developer/Xcode/DerivedData/ATSDiagnostic-dwqsvugqytkzgnfrfturllqkowje/Build/Intermediates.noindex/ATSDiagnostic.build/Debug-iphonesimulator/ATSDiagnosticTests.build/ATSDiagnosticTests-all-target-headers.hmap -Xcc -iquote -Xcc /Users/markzimmermann/Library/Developer/Xcode/DerivedData/ATSDiagnostic-dwqsvugqytkzgnfrfturllqkowje/Build/Intermediates.noindex/ATSDiagnostic.build/Debug-iphonesimulator/ATSDiagnosticTests.build/ATSDiagnosticTests-project-headers.hmap -Xcc -I/Users/markzimmermann/Library/Developer/Xcode/DerivedData/ATSDiagnostic-dwqsvugqytkzgnfrfturllqkowje/Build/Products/Debug-iphonesimulator/include -Xcc -I/Users/markzimmermann/Library/Developer/Xcode/DerivedData/ATSDiagnostic-dwqsvugqytkzgnfrfturllqkowje/Build/Intermediates.noindex/ATSDiagnostic.build/Debug-iphonesimulator/ATSDiagnosticTests.build/DerivedSources-normal/arm64 -Xcc -I/Users/markzimmermann/Library/Developer/Xcode/DerivedData/ATSDiagnostic-dwqsvugqytkzgnfrfturllqkowje/Build/Intermediates.noindex/ATSDiagnostic.build/Debug-iphonesimulator/ATSDiagnosticTests.build/DerivedSources/arm64 -Xcc -I/Users/markzimmermann/Library/Developer/Xcode/DerivedData/ATSDiagnostic-dwqsvugqytkzgnfrfturllqkowje/Build/Intermediates.noindex/ATSDiagnostic.build/Debug-iphonesimulator/ATSDiagnosticTests.build/DerivedSources -Xcc -DDEBUG\=1 -emit-objc-header -emit-objc-header-path /Users/markzimmermann/Library/Developer/Xcode/DerivedData/ATSDiagnostic-dwqsvugqytkzgnfrfturllqkowje/Build/Intermediates.noindex/ATSDiagnostic.build/Debug-iphonesimulator/ATSDiagnosticTests.build/Objects-normal/arm64/ATSDiagnosticTests-Swift.h -working-directory /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/outputs/ATS-Diagnostic -experimental-emit-module-separately -disable-cmo
+
+Copy /Users/markzimmermann/Library/Developer/Xcode/DerivedData/ATSDiagnostic-dwqsvugqytkzgnfrfturllqkowje/Build/Products/Debug-iphonesimulator/ATSDiagnosticTests.swiftmodule/arm64-apple-ios-simulator.swiftmodule /Users/markzimmermann/Library/Developer/Xcode/DerivedData/ATSDiagnostic-dwqsvugqytkzgnfrfturllqkowje/Build/Intermediates.noindex/ATSDiagnostic.build/Debug-iphonesimulator/ATSDiagnosticTests.build/Objects-normal/arm64/ATSDiagnosticTests.swiftmodule (in target 'ATSDiagnosticTests' from project 'ATSDiagnostic')
+    cd /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/outputs/ATS-Diagnostic
+    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks -rename /Users/markzimmermann/Library/Developer/Xcode/DerivedData/ATSDiagnostic-dwqsvugqytkzgnfrfturllqkowje/Build/Intermediates.noindex/ATSDiagnostic.build/Debug-iphonesimulator/ATSDiagnosticTests.build/Objects-normal/arm64/ATSDiagnosticTests.swiftmodule /Users/markzimmermann/Library/Developer/Xcode/DerivedData/ATSDiagnostic-dwqsvugqytkzgnfrfturllqkowje/Build/Products/Debug-iphonesimulator/ATSDiagnosticTests.swiftmodule/arm64-apple-ios-simulator.swiftmodule
+
+Copy /Users/markzimmermann/Library/Developer/Xcode/DerivedData/ATSDiagnostic-dwqsvugqytkzgnfrfturllqkowje/Build/Products/Debug-iphonesimulator/ATSDiagnosticTests.swiftmodule/arm64-apple-ios-simulator.abi.json /Users/markzimmermann/Library/Developer/Xcode/DerivedData/ATSDiagnostic-dwqsvugqytkzgnfrfturllqkowje/Build/Intermediates.noindex/ATSDiagnostic.build/Debug-iphonesimulator/ATSDiagnosticTests.build/Objects-normal/arm64/ATSDiagnosticTests.abi.json (in target 'ATSDiagnosticTests' from project 'ATSDiagnostic')
+    cd /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/outputs/ATS-Diagnostic
+    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks -rename /Users/markzimmermann/Library/Developer/Xcode/DerivedData/ATSDiagnostic-dwqsvugqytkzgnfrfturllqkowje/Build/Intermediates.noindex/ATSDiagnostic.build/Debug-iphonesimulator/ATSDiagnosticTests.build/Objects-normal/arm64/ATSDiagnosticTests.abi.json /Users/markzimmermann/Library/Developer/Xcode/DerivedData/ATSDiagnostic-dwqsvugqytkzgnfrfturllqkowje/Build/Products/Debug-iphonesimulator/ATSDiagnosticTests.swiftmodule/arm64-apple-ios-simulator.abi.json
+
+Copy /Users/markzimmermann/Library/Developer/Xcode/DerivedData/ATSDiagnostic-dwqsvugqytkzgnfrfturllqkowje/Build/Products/Debug-iphonesimulator/ATSDiagnosticTests.swiftmodule/Project/arm64-apple-ios-simulator.swiftsourceinfo /Users/markzimmermann/Library/Developer/Xcode/DerivedData/ATSDiagnostic-dwqsvugqytkzgnfrfturllqkowje/Build/Intermediates.noindex/ATSDiagnostic.build/Debug-iphonesimulator/ATSDiagnosticTests.build/Objects-normal/arm64/ATSDiagnosticTests.swiftsourceinfo (in target 'ATSDiagnosticTests' from project 'ATSDiagnostic')
+    cd /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/outputs/ATS-Diagnostic
+    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks -rename /Users/markzimmermann/Library/Developer/Xcode/DerivedData/ATSDiagnostic-dwqsvugqytkzgnfrfturllqkowje/Build/Intermediates.noindex/ATSDiagnostic.build/Debug-iphonesimulator/ATSDiagnosticTests.build/Objects-normal/arm64/ATSDiagnosticTests.swiftsourceinfo /Users/markzimmermann/Library/Developer/Xcode/DerivedData/ATSDiagnostic-dwqsvugqytkzgnfrfturllqkowje/Build/Products/Debug-iphonesimulator/ATSDiagnosticTests.swiftmodule/Project/arm64-apple-ios-simulator.swiftsourceinfo
+
+SwiftDriverJobDiscovery normal arm64 Compiling ATSDiagnosticApp.swift (in target 'ATSDiagnostic' from project 'ATSDiagnostic')
+
+SwiftDriver\ Compilation ATSDiagnostic normal arm64 com.apple.xcode.tools.swift.compiler (in target 'ATSDiagnostic' from project 'ATSDiagnostic')
+    cd /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/outputs/ATS-Diagnostic
+    builtin-Swift-Compilation -- /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc -module-name ATSDiagnostic -Onone @/Users/markzimmermann/Library/Developer/Xcode/DerivedData/ATSDiagnostic-dwqsvugqytkzgnfrfturllqkowje/Build/Intermediates.noindex/ATSDiagnostic.build/Debug-iphonesimulator/ATSDiagnostic.build/Objects-normal/arm64/ATSDiagnostic.SwiftFileList -DDEBUG -enable-experimental-feature DebugDescriptionMacro -sdk /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator27.0.sdk -target arm64-apple-ios18.0-simulator -g -module-cache-path /Users/markzimmermann/Library/Developer/Xcode/DerivedData/ModuleCache.noindex -Xfrontend -serialize-debugging-options -enable-testing -index-store-path /Users/markzimmermann/Library/Developer/Xcode/DerivedData/ATSDiagnostic-dwqsvugqytkzgnfrfturllqkowje/Index.noindex/DataStore -Xcc -D_LIBCPP_HARDENING_MODE\=_LIBCPP_HARDENING_MODE_DEBUG -swift-version 6 -I /Users/markzimmermann/Library/Developer/Xcode/DerivedData/ATSDiagnostic-dwqsvugqytkzgnfrfturllqkowje/Build/Products/Debug-iphonesimulator -F /Users/markzimmermann/Library/Developer/Xcode/DerivedData/ATSDiagnostic-dwqsvugqytkzgnfrfturllqkowje/Build/Products/Debug-iphonesimulator -c -j18 -enable-batch-mode -incremental -Xcc -ivfsstatcache -Xcc /Users/markzimmermann/Library/Developer/Xcode/DerivedData/SDKStatCaches.noindex/iphonesimulator27.0-24A430-e829b21a6f8c9b70876ba0858053c0448dc58220667be655e1bcc261a7455254.sdkstatcache -output-file-map /Users/markzimmermann/Library/Developer/Xcode/DerivedData/ATSDiagnostic-dwqsvugqytkzgnfrfturllqkowje/Build/Intermediates.noindex/ATSDiagnostic.build/Debug-iphonesimulator/ATSDiagnostic.build/Objects-normal/arm64/ATSDiagnostic-OutputFileMap.json -save-temps -no-color-diagnostics -explicit-module-build -module-cache-path /Users/markzimmermann/Library/Developer/Xcode/DerivedData/ATSDiagnostic-dwqsvugqytkzgnfrfturllqkowje/Build/Intermediates.noindex/SwiftExplicitPrecompiledModules -clang-scanner-module-cache-path /Users/markzimmermann/Library/Developer/Xcode/DerivedData/ModuleCache.noindex -sdk-module-cache-path /Users/markzimmermann/Library/Developer/Xcode/DerivedData/SDKExplicitPrecompiledModules -emit-dependencies -emit-module -emit-module-path /Users/markzimmermann/Library/Developer/Xcode/DerivedData/ATSDiagnostic-dwqsvugqytkzgnfrfturllqkowje/Build/Intermediates.noindex/ATSDiagnostic.build/Debug-iphonesimulator/ATSDiagnostic.build/Objects-normal/arm64/ATSDiagnostic.swiftmodule -serialize-diagnostics -dependency-scan-serialize-diagnostics-path /Users/markzimmermann/Library/Developer/Xcode/DerivedData/ATSDiagnostic-dwqsvugqytkzgnfrfturllqkowje/Build/Intermediates.noindex/ATSDiagnostic.build/Debug-iphonesimulator/ATSDiagnostic.build/Objects-normal/arm64/ATSDiagnostic-dependency-scan.dia -validate-clang-modules-once -clang-build-session-file /Users/markzimmermann/Library/Developer/Xcode/DerivedData/ModuleCache.noindex/Session.modulevalidation -Xcc -fmodules-prune-interval\=86400 -Xcc -fmodules-prune-after\=345600 -emit-const-values -const-gather-protocols-list /Users/markzimmermann/Library/Developer/Xcode/DerivedData/ATSDiagnostic-dwqsvugqytkzgnfrfturllqkowje/Build/Intermediates.noindex/ATSDiagnostic.build/Debug-iphonesimulator/ATSDiagnostic.build/Objects-normal/arm64/ATSDiagnostic_const_extract_protocols.json -Xcc -iquote -Xcc /Users/markzimmermann/Library/Developer/Xcode/DerivedData/ATSDiagnostic-dwqsvugqytkzgnfrfturllqkowje/Build/Intermediates.noindex/ATSDiagnostic.build/Debug-iphonesimulator/ATSDiagnostic.build/ATSDiagnostic-generated-files.hmap -Xcc -I/Users/markzimmermann/Library/Developer/Xcode/DerivedData/ATSDiagnostic-dwqsvugqytkzgnfrfturllqkowje/Build/Intermediates.noindex/ATSDiagnostic.build/Debug-iphonesimulator/ATSDiagnostic.build/ATSDiagnostic-own-target-headers.hmap -Xcc -I/Users/markzimmermann/Library/Developer/Xcode/DerivedData/ATSDiagnostic-dwqsvugqytkzgnfrfturllqkowje/Build/Intermediates.noindex/ATSDiagnostic.build/Debug-iphonesimulator/ATSDiagnostic.build/ATSDiagnostic-all-target-headers.hmap -Xcc -iquote -Xcc /Users/markzimmermann/Library/Developer/Xcode/DerivedData/ATSDiagnostic-dwqsvugqytkzgnfrfturllqkowje/Build/Intermediates.noindex/ATSDiagnostic.build/Debug-iphonesimulator/ATSDiagnostic.build/ATSDiagnostic-project-headers.hmap -Xcc -I/Users/markzimmermann/Library/Developer/Xcode/DerivedData/ATSDiagnostic-dwqsvugqytkzgnfrfturllqkowje/Build/Products/Debug-iphonesimulator/include -Xcc -I/Users/markzimmermann/Library/Developer/Xcode/DerivedData/ATSDiagnostic-dwqsvugqytkzgnfrfturllqkowje/Build/Intermediates.noindex/ATSDiagnostic.build/Debug-iphonesimulator/ATSDiagnostic.build/DerivedSources-normal/arm64 -Xcc -I/Users/markzimmermann/Library/Developer/Xcode/DerivedData/ATSDiagnostic-dwqsvugqytkzgnfrfturllqkowje/Build/Intermediates.noindex/ATSDiagnostic.build/Debug-iphonesimulator/ATSDiagnostic.build/DerivedSources/arm64 -Xcc -I/Users/markzimmermann/Library/Developer/Xcode/DerivedData/ATSDiagnostic-dwqsvugqytkzgnfrfturllqkowje/Build/Intermediates.noindex/ATSDiagnostic.build/Debug-iphonesimulator/ATSDiagnostic.build/DerivedSources -Xcc -DDEBUG\=1 -emit-objc-header -emit-objc-header-path /Users/markzimmermann/Library/Developer/Xcode/DerivedData/ATSDiagnostic-dwqsvugqytkzgnfrfturllqkowje/Build/Intermediates.noindex/ATSDiagnostic.build/Debug-iphonesimulator/ATSDiagnostic.build/Objects-normal/arm64/ATSDiagnostic-Swift.h -working-directory /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/outputs/ATS-Diagnostic -experimental-emit-module-separately -disable-cmo
+
+Ld /Users/markzimmermann/Library/Developer/Xcode/DerivedData/ATSDiagnostic-dwqsvugqytkzgnfrfturllqkowje/Build/Products/Debug-iphonesimulator/ATSDiagnostic.app/ATSDiagnostic.debug.dylib normal (in target 'ATSDiagnostic' from project 'ATSDiagnostic')
+    cd /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/outputs/ATS-Diagnostic
+    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -Xlinker -reproducible -target arm64-apple-ios18.0-simulator -dynamiclib -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator27.0.sdk -O0 -Xlinker -no_warn_duplicate_libraries -L/Users/markzimmermann/Library/Developer/Xcode/DerivedData/ATSDiagnostic-dwqsvugqytkzgnfrfturllqkowje/Build/Intermediates.noindex/EagerLinkingTBDs/Debug-iphonesimulator -L/Users/markzimmermann/Library/Developer/Xcode/DerivedData/ATSDiagnostic-dwqsvugqytkzgnfrfturllqkowje/Build/Products/Debug-iphonesimulator -F/Users/markzimmermann/Library/Developer/Xcode/DerivedData/ATSDiagnostic-dwqsvugqytkzgnfrfturllqkowje/Build/Intermediates.noindex/EagerLinkingTBDs/Debug-iphonesimulator -F/Users/markzimmermann/Library/Developer/Xcode/DerivedData/ATSDiagnostic-dwqsvugqytkzgnfrfturllqkowje/Build/Products/Debug-iphonesimulator -filelist /Users/markzimmermann/Library/Developer/Xcode/DerivedData/ATSDiagnostic-dwqsvugqytkzgnfrfturllqkowje/Build/Intermediates.noindex/ATSDiagnostic.build/Debug-iphonesimulator/ATSDiagnostic.build/Objects-normal/arm64/ATSDiagnostic.LinkFileList -install_name @rpath/ATSDiagnostic.debug.dylib -Xlinker -rpath -Xlinker /usr/lib/swift -Xlinker -rpath -Xlinker @executable_path/Frameworks -Xlinker -dead_strip -Xlinker -object_path_lto -Xlinker /Users/markzimmermann/Library/Developer/Xcode/DerivedData/ATSDiagnostic-dwqsvugqytkzgnfrfturllqkowje/Build/Intermediates.noindex/ATSDiagnostic.build/Debug-iphonesimulator/ATSDiagnostic.build/Objects-normal/arm64/ATSDiagnostic_lto.o -rdynamic -Xlinker -no_deduplicate -Xlinker -objc_abi_version -Xlinker 2 -Xlinker -dependency_info -Xlinker /Users/markzimmermann/Library/Developer/Xcode/DerivedData/ATSDiagnostic-dwqsvugqytkzgnfrfturllqkowje/Build/Intermediates.noindex/ATSDiagnostic.build/Debug-iphonesimulator/ATSDiagnostic.build/Objects-normal/arm64/ATSDiagnostic_dependency_info.dat -fobjc-link-runtime -L/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator -L/usr/lib/swift -Xlinker -add_ast_path -Xlinker /Users/markzimmermann/Library/Developer/Xcode/DerivedData/ATSDiagnostic-dwqsvugqytkzgnfrfturllqkowje/Build/Intermediates.noindex/ATSDiagnostic.build/Debug-iphonesimulator/ATSDiagnostic.build/Objects-normal/arm64/ATSDiagnostic.swiftmodule -Xlinker -alias -Xlinker _main -Xlinker ___debug_main_executable_dylib_entry_point -Xlinker -no_adhoc_codesign -o /Users/markzimmermann/Library/Developer/Xcode/DerivedData/ATSDiagnostic-dwqsvugqytkzgnfrfturllqkowje/Build/Products/Debug-iphonesimulator/ATSDiagnostic.app/ATSDiagnostic.debug.dylib
+
+ConstructStubExecutorLinkFileList /Users/markzimmermann/Library/Developer/Xcode/DerivedData/ATSDiagnostic-dwqsvugqytkzgnfrfturllqkowje/Build/Intermediates.noindex/ATSDiagnostic.build/Debug-iphonesimulator/ATSDiagnostic.build/ATSDiagnostic-ExecutorLinkFileList-normal-arm64.txt (in target 'ATSDiagnostic' from project 'ATSDiagnostic')
+    cd /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/outputs/ATS-Diagnostic
+    construct-stub-executor-link-file-list /Users/markzimmermann/Library/Developer/Xcode/DerivedData/ATSDiagnostic-dwqsvugqytkzgnfrfturllqkowje/Build/Products/Debug-iphonesimulator/ATSDiagnostic.app/ATSDiagnostic.debug.dylib /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/lib/libPreviewsJITStubExecutor_no_swift_entry_point.a /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/lib/libPreviewsJITStubExecutor.a --output /Users/markzimmermann/Library/Developer/Xcode/DerivedData/ATSDiagnostic-dwqsvugqytkzgnfrfturllqkowje/Build/Intermediates.noindex/ATSDiagnostic.build/Debug-iphonesimulator/ATSDiagnostic.build/ATSDiagnostic-ExecutorLinkFileList-normal-arm64.txt
+note: Using stub executor library with Swift entry point. (in target 'ATSDiagnostic' from project 'ATSDiagnostic')
+
+Ld /Users/markzimmermann/Library/Developer/Xcode/DerivedData/ATSDiagnostic-dwqsvugqytkzgnfrfturllqkowje/Build/Products/Debug-iphonesimulator/ATSDiagnostic.app/ATSDiagnostic normal (in target 'ATSDiagnostic' from project 'ATSDiagnostic')
+    cd /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/outputs/ATS-Diagnostic
+    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -Xlinker -reproducible -target arm64-apple-ios18.0-simulator -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator27.0.sdk -O0 -Xlinker -no_warn_duplicate_libraries -L/Users/markzimmermann/Library/Developer/Xcode/DerivedData/ATSDiagnostic-dwqsvugqytkzgnfrfturllqkowje/Build/Products/Debug-iphonesimulator -F/Users/markzimmermann/Library/Developer/Xcode/DerivedData/ATSDiagnostic-dwqsvugqytkzgnfrfturllqkowje/Build/Products/Debug-iphonesimulator -Xlinker -rpath -Xlinker @executable_path -Xlinker -rpath -Xlinker @executable_path/Frameworks -rdynamic -Xlinker -no_deduplicate -Xlinker -objc_abi_version -Xlinker 2 -e ___debug_blank_executor_main -Xlinker -sectcreate -Xlinker __TEXT -Xlinker __debug_dylib -Xlinker /Users/markzimmermann/Library/Developer/Xcode/DerivedData/ATSDiagnostic-dwqsvugqytkzgnfrfturllqkowje/Build/Intermediates.noindex/ATSDiagnostic.build/Debug-iphonesimulator/ATSDiagnostic.build/ATSDiagnostic-DebugDylibPath-normal-arm64.txt -Xlinker -sectcreate -Xlinker __TEXT -Xlinker __debug_instlnm -Xlinker /Users/markzimmermann/Library/Developer/Xcode/DerivedData/ATSDiagnostic-dwqsvugqytkzgnfrfturllqkowje/Build/Intermediates.noindex/ATSDiagnostic.build/Debug-iphonesimulator/ATSDiagnostic.build/ATSDiagnostic-DebugDylibInstallName-normal-arm64.txt -Xlinker -filelist -Xlinker /Users/markzimmermann/Library/Developer/Xcode/DerivedData/ATSDiagnostic-dwqsvugqytkzgnfrfturllqkowje/Build/Intermediates.noindex/ATSDiagnostic.build/Debug-iphonesimulator/ATSDiagnostic.build/ATSDiagnostic-ExecutorLinkFileList-normal-arm64.txt -Xlinker -sectcreate -Xlinker __TEXT -Xlinker __entitlements -Xlinker /Users/markzimmermann/Library/Developer/Xcode/DerivedData/ATSDiagnostic-dwqsvugqytkzgnfrfturllqkowje/Build/Intermediates.noindex/ATSDiagnostic.build/Debug-iphonesimulator/ATSDiagnostic.build/ATSDiagnostic.app-Simulated.xcent -Xlinker -sectcreate -Xlinker __TEXT -Xlinker __ents_der -Xlinker /Users/markzimmermann/Library/Developer/Xcode/DerivedData/ATSDiagnostic-dwqsvugqytkzgnfrfturllqkowje/Build/Intermediates.noindex/ATSDiagnostic.build/Debug-iphonesimulator/ATSDiagnostic.build/ATSDiagnostic.app-Simulated.xcent.der /Users/markzimmermann/Library/Developer/Xcode/DerivedData/ATSDiagnostic-dwqsvugqytkzgnfrfturllqkowje/Build/Products/Debug-iphonesimulator/ATSDiagnostic.app/ATSDiagnostic.debug.dylib -Xlinker -no_adhoc_codesign -o /Users/markzimmermann/Library/Developer/Xcode/DerivedData/ATSDiagnostic-dwqsvugqytkzgnfrfturllqkowje/Build/Products/Debug-iphonesimulator/ATSDiagnostic.app/ATSDiagnostic
+
+CopySwiftLibs /Users/markzimmermann/Library/Developer/Xcode/DerivedData/ATSDiagnostic-dwqsvugqytkzgnfrfturllqkowje/Build/Products/Debug-iphonesimulator/ATSDiagnostic.app (in target 'ATSDiagnostic' from project 'ATSDiagnostic')
+    cd /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/outputs/ATS-Diagnostic
+    builtin-swiftStdLibTool --copy --verbose --sign - --scan-executable /Users/markzimmermann/Library/Developer/Xcode/DerivedData/ATSDiagnostic-dwqsvugqytkzgnfrfturllqkowje/Build/Products/Debug-iphonesimulator/ATSDiagnostic.app/ATSDiagnostic.debug.dylib --scan-folder /Users/markzimmermann/Library/Developer/Xcode/DerivedData/ATSDiagnostic-dwqsvugqytkzgnfrfturllqkowje/Build/Products/Debug-iphonesimulator/ATSDiagnostic.app/Frameworks --scan-folder /Users/markzimmermann/Library/Developer/Xcode/DerivedData/ATSDiagnostic-dwqsvugqytkzgnfrfturllqkowje/Build/Products/Debug-iphonesimulator/ATSDiagnostic.app/PlugIns --scan-folder /Users/markzimmermann/Library/Developer/Xcode/DerivedData/ATSDiagnostic-dwqsvugqytkzgnfrfturllqkowje/Build/Products/Debug-iphonesimulator/ATSDiagnostic.app/SystemExtensions --scan-folder /Users/markzimmermann/Library/Developer/Xcode/DerivedData/ATSDiagnostic-dwqsvugqytkzgnfrfturllqkowje/Build/Products/Debug-iphonesimulator/ATSDiagnostic.app/Extensions --platform iphonesimulator --toolchain /var/run/com.apple.security.cryptexd/mnt/com.apple.MobileAsset.MetalToolchain-v27.1.266.1.vUJ43u/Metal.xctoolchain --toolchain /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain --destination /Users/markzimmermann/Library/Developer/Xcode/DerivedData/ATSDiagnostic-dwqsvugqytkzgnfrfturllqkowje/Build/Products/Debug-iphonesimulator/ATSDiagnostic.app/Frameworks --strip-bitcode --strip-bitcode-tool /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/bitcode_strip --emit-dependency-info /Users/markzimmermann/Library/Developer/Xcode/DerivedData/ATSDiagnostic-dwqsvugqytkzgnfrfturllqkowje/Build/Intermediates.noindex/ATSDiagnostic.build/Debug-iphonesimulator/ATSDiagnostic.build/SwiftStdLibToolInputDependencies.dep --filter-for-swift-os
+
+ExtractAppIntentsMetadata (in target 'ATSDiagnostic' from project 'ATSDiagnostic')
+    cd /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/outputs/ATS-Diagnostic
+    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/appintentsmetadataprocessor --toolchain-dir /var/run/com.apple.security.cryptexd/mnt/com.apple.MobileAsset.MetalToolchain-v27.1.266.1.vUJ43u/Metal.xctoolchain --module-name ATSDiagnostic --sdk-root /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator27.0.sdk --xcode-version 27A266a --platform-family iOS --deployment-target 18.0 --bundle-identifier com.mobilebox.atsdiagnostic --output /Users/markzimmermann/Library/Developer/Xcode/DerivedData/ATSDiagnostic-dwqsvugqytkzgnfrfturllqkowje/Build/Products/Debug-iphonesimulator/ATSDiagnostic.app --target-triple arm64-apple-ios18.0-simulator --binary-file /Users/markzimmermann/Library/Developer/Xcode/DerivedData/ATSDiagnostic-dwqsvugqytkzgnfrfturllqkowje/Build/Products/Debug-iphonesimulator/ATSDiagnostic.app/ATSDiagnostic --dependency-file /Users/markzimmermann/Library/Developer/Xcode/DerivedData/ATSDiagnostic-dwqsvugqytkzgnfrfturllqkowje/Build/Intermediates.noindex/ATSDiagnostic.build/Debug-iphonesimulator/ATSDiagnostic.build/Objects-normal/arm64/ATSDiagnostic_dependency_info.dat --stringsdata-file /Users/markzimmermann/Library/Developer/Xcode/DerivedData/ATSDiagnostic-dwqsvugqytkzgnfrfturllqkowje/Build/Intermediates.noindex/ATSDiagnostic.build/Debug-iphonesimulator/ATSDiagnostic.build/Objects-normal/arm64/ExtractedAppShortcutsMetadata.stringsdata --source-file-list /Users/markzimmermann/Library/Developer/Xcode/DerivedData/ATSDiagnostic-dwqsvugqytkzgnfrfturllqkowje/Build/Intermediates.noindex/ATSDiagnostic.build/Debug-iphonesimulator/ATSDiagnostic.build/Objects-normal/arm64/ATSDiagnostic.SwiftFileList --metadata-file-list /Users/markzimmermann/Library/Developer/Xcode/DerivedData/ATSDiagnostic-dwqsvugqytkzgnfrfturllqkowje/Build/Intermediates.noindex/ATSDiagnostic.build/Debug-iphonesimulator/ATSDiagnostic.build/ATSDiagnostic.DependencyMetadataFileList --static-metadata-file-list /Users/markzimmermann/Library/Developer/Xcode/DerivedData/ATSDiagnostic-dwqsvugqytkzgnfrfturllqkowje/Build/Intermediates.noindex/ATSDiagnostic.build/Debug-iphonesimulator/ATSDiagnostic.build/ATSDiagnostic.DependencyStaticMetadataFileList --swift-const-vals-list /Users/markzimmermann/Library/Developer/Xcode/DerivedData/ATSDiagnostic-dwqsvugqytkzgnfrfturllqkowje/Build/Intermediates.noindex/ATSDiagnostic.build/Debug-iphonesimulator/ATSDiagnostic.build/Objects-normal/arm64/ATSDiagnostic.SwiftConstValuesFileList --compile-time-extraction --deployment-aware-processing --no-app-shortcuts-localization
+2026-10-12 11:42:56.471 appintentsmetadataprocessor[7284:25646163] Starting appintentsmetadataprocessor export
+2026-10-12 11:42:56.472 appintentsmetadataprocessor[7284:25646163] warning: Metadata extraction skipped, no AppIntents.framework dependency found
+
+ProcessInfoPlistFile /Users/markzimmermann/Library/Developer/Xcode/DerivedData/ATSDiagnostic-dwqsvugqytkzgnfrfturllqkowje/Build/Products/Debug-iphonesimulator/ATSDiagnostic.app/PlugIns/ATSDiagnosticTests.xctest/Info.plist /Users/markzimmermann/Library/Developer/Xcode/DerivedData/ATSDiagnostic-dwqsvugqytkzgnfrfturllqkowje/Build/Intermediates.noindex/ATSDiagnostic.build/Debug-iphonesimulator/ATSDiagnosticTests.build/empty-ATSDiagnosticTests.plist (in target 'ATSDiagnosticTests' from project 'ATSDiagnostic')
+    cd /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/outputs/ATS-Diagnostic
+    builtin-infoPlistUtility /Users/markzimmermann/Library/Developer/Xcode/DerivedData/ATSDiagnostic-dwqsvugqytkzgnfrfturllqkowje/Build/Intermediates.noindex/ATSDiagnostic.build/Debug-iphonesimulator/ATSDiagnosticTests.build/empty-ATSDiagnosticTests.plist -producttype com.apple.product-type.bundle.unit-test -expandbuildsettings -format binary -platform iphonesimulator -o /Users/markzimmermann/Library/Developer/Xcode/DerivedData/ATSDiagnostic-dwqsvugqytkzgnfrfturllqkowje/Build/Products/Debug-iphonesimulator/ATSDiagnostic.app/PlugIns/ATSDiagnosticTests.xctest/Info.plist
+
+CpResource /Users/markzimmermann/Library/Developer/Xcode/DerivedData/ATSDiagnostic-dwqsvugqytkzgnfrfturllqkowje/Build/Products/Debug-iphonesimulator/ATSDiagnostic.app/PlugIns/ATSDiagnosticTests.xctest/SDK-Stream-Partial.json /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/outputs/ATS-Diagnostic/Tests/Fixtures/SDK-Stream-Partial.json (in target 'ATSDiagnosticTests' from project 'ATSDiagnostic')
+    cd /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/outputs/ATS-Diagnostic
+    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/outputs/ATS-Diagnostic/Tests/Fixtures/SDK-Stream-Partial.json /Users/markzimmermann/Library/Developer/Xcode/DerivedData/ATSDiagnostic-dwqsvugqytkzgnfrfturllqkowje/Build/Products/Debug-iphonesimulator/ATSDiagnostic.app/PlugIns/ATSDiagnosticTests.xctest
+
+CpResource /Users/markzimmermann/Library/Developer/Xcode/DerivedData/ATSDiagnostic-dwqsvugqytkzgnfrfturllqkowje/Build/Products/Debug-iphonesimulator/ATSDiagnostic.app/PlugIns/ATSDiagnosticTests.xctest/SDK-Post-Partial.json /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/outputs/ATS-Diagnostic/Tests/Fixtures/SDK-Post-Partial.json (in target 'ATSDiagnosticTests' from project 'ATSDiagnostic')
+    cd /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/outputs/ATS-Diagnostic
+    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/outputs/ATS-Diagnostic/Tests/Fixtures/SDK-Post-Partial.json /Users/markzimmermann/Library/Developer/Xcode/DerivedData/ATSDiagnostic-dwqsvugqytkzgnfrfturllqkowje/Build/Products/Debug-iphonesimulator/ATSDiagnostic.app/PlugIns/ATSDiagnosticTests.xctest
+
+Ld /Users/markzimmermann/Library/Developer/Xcode/DerivedData/ATSDiagnostic-dwqsvugqytkzgnfrfturllqkowje/Build/Products/Debug-iphonesimulator/ATSDiagnostic.app/PlugIns/ATSDiagnosticTests.xctest/ATSDiagnosticTests normal (in target 'ATSDiagnosticTests' from project 'ATSDiagnostic')
+    cd /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/outputs/ATS-Diagnostic
+    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -Xlinker -reproducible -target arm64-apple-ios18.0-simulator -bundle -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator27.0.sdk -O0 -Xlinker -no_warn_duplicate_libraries -L/Users/markzimmermann/Library/Developer/Xcode/DerivedData/ATSDiagnostic-dwqsvugqytkzgnfrfturllqkowje/Build/Intermediates.noindex/EagerLinkingTBDs/Debug-iphonesimulator -L/Users/markzimmermann/Library/Developer/Xcode/DerivedData/ATSDiagnostic-dwqsvugqytkzgnfrfturllqkowje/Build/Products/Debug-iphonesimulator -L/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/lib -F/Users/markzimmermann/Library/Developer/Xcode/DerivedData/ATSDiagnostic-dwqsvugqytkzgnfrfturllqkowje/Build/Intermediates.noindex/EagerLinkingTBDs/Debug-iphonesimulator -F/Users/markzimmermann/Library/Developer/Xcode/DerivedData/ATSDiagnostic-dwqsvugqytkzgnfrfturllqkowje/Build/Products/Debug-iphonesimulator -iframework /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/Library/Frameworks -iframework /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator27.0.sdk/Developer/Library/Frameworks -filelist /Users/markzimmermann/Library/Developer/Xcode/DerivedData/ATSDiagnostic-dwqsvugqytkzgnfrfturllqkowje/Build/Intermediates.noindex/ATSDiagnostic.build/Debug-iphonesimulator/ATSDiagnosticTests.build/Objects-normal/arm64/ATSDiagnosticTests.LinkFileList -Xlinker -rpath -Xlinker /usr/lib/swift -Xlinker -rpath -Xlinker @loader_path/Frameworks -Xlinker -rpath -Xlinker @executable_path/Frameworks -Xlinker -dead_strip -bundle_loader /Users/markzimmermann/Library/Developer/Xcode/DerivedData/ATSDiagnostic-dwqsvugqytkzgnfrfturllqkowje/Build/Products/Debug-iphonesimulator/ATSDiagnostic.app/ATSDiagnostic -Xlinker -object_path_lto -Xlinker /Users/markzimmermann/Library/Developer/Xcode/DerivedData/ATSDiagnostic-dwqsvugqytkzgnfrfturllqkowje/Build/Intermediates.noindex/ATSDiagnostic.build/Debug-iphonesimulator/ATSDiagnosticTests.build/Objects-normal/arm64/ATSDiagnosticTests_lto.o -rdynamic -Xlinker -no_deduplicate -Xlinker -objc_abi_version -Xlinker 2 -Xlinker -dependency_info -Xlinker /Users/markzimmermann/Library/Developer/Xcode/DerivedData/ATSDiagnostic-dwqsvugqytkzgnfrfturllqkowje/Build/Intermediates.noindex/ATSDiagnostic.build/Debug-iphonesimulator/ATSDiagnosticTests.build/Objects-normal/arm64/ATSDiagnosticTests_dependency_info.dat -fobjc-link-runtime -L/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator -L/usr/lib/swift -Xlinker -add_ast_path -Xlinker /Users/markzimmermann/Library/Developer/Xcode/DerivedData/ATSDiagnostic-dwqsvugqytkzgnfrfturllqkowje/Build/Intermediates.noindex/ATSDiagnostic.build/Debug-iphonesimulator/ATSDiagnosticTests.build/Objects-normal/arm64/ATSDiagnosticTests.swiftmodule -Xlinker -needed_framework -Xlinker XCTest -framework XCTest -Xlinker -needed-lXCTestSwiftSupport -lXCTestSwiftSupport /Users/markzimmermann/Library/Developer/Xcode/DerivedData/ATSDiagnostic-dwqsvugqytkzgnfrfturllqkowje/Build/Products/Debug-iphonesimulator/ATSDiagnostic.app/ATSDiagnostic.debug.dylib -Xlinker -no_adhoc_codesign -o /Users/markzimmermann/Library/Developer/Xcode/DerivedData/ATSDiagnostic-dwqsvugqytkzgnfrfturllqkowje/Build/Products/Debug-iphonesimulator/ATSDiagnostic.app/PlugIns/ATSDiagnosticTests.xctest/ATSDiagnosticTests
+
+CpResource /Users/markzimmermann/Library/Developer/Xcode/DerivedData/ATSDiagnostic-dwqsvugqytkzgnfrfturllqkowje/Build/Products/Debug-iphonesimulator/ATSDiagnostic.app/PlugIns/ATSDiagnosticTests.xctest/SDK-Live-wrong.host.badssl.com.json /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/outputs/ATS-Diagnostic/Tests/Fixtures/SDK-Live-wrong.host.badssl.com.json (in target 'ATSDiagnosticTests' from project 'ATSDiagnostic')
+    cd /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/outputs/ATS-Diagnostic
+    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/outputs/ATS-Diagnostic/Tests/Fixtures/SDK-Live-wrong.host.badssl.com.json /Users/markzimmermann/Library/Developer/Xcode/DerivedData/ATSDiagnostic-dwqsvugqytkzgnfrfturllqkowje/Build/Products/Debug-iphonesimulator/ATSDiagnostic.app/PlugIns/ATSDiagnosticTests.xctest
+
+CpResource /Users/markzimmermann/Library/Developer/Xcode/DerivedData/ATSDiagnostic-dwqsvugqytkzgnfrfturllqkowje/Build/Products/Debug-iphonesimulator/ATSDiagnostic.app/PlugIns/ATSDiagnosticTests.xctest/SDK-Live-expired.badssl.com.json /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/outputs/ATS-Diagnostic/Tests/Fixtures/SDK-Live-expired.badssl.com.json (in target 'ATSDiagnosticTests' from project 'ATSDiagnostic')
+    cd /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/outputs/ATS-Diagnostic
+    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/outputs/ATS-Diagnostic/Tests/Fixtures/SDK-Live-expired.badssl.com.json /Users/markzimmermann/Library/Developer/Xcode/DerivedData/ATSDiagnostic-dwqsvugqytkzgnfrfturllqkowje/Build/Products/Debug-iphonesimulator/ATSDiagnostic.app/PlugIns/ATSDiagnosticTests.xctest
+
+CpResource /Users/markzimmermann/Library/Developer/Xcode/DerivedData/ATSDiagnostic-dwqsvugqytkzgnfrfturllqkowje/Build/Products/Debug-iphonesimulator/ATSDiagnostic.app/PlugIns/ATSDiagnosticTests.xctest/History-Legacy33.json /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/outputs/ATS-Diagnostic/Tests/Fixtures/History-Legacy33.json (in target 'ATSDiagnosticTests' from project 'ATSDiagnostic')
+    cd /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/outputs/ATS-Diagnostic
+    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/outputs/ATS-Diagnostic/Tests/Fixtures/History-Legacy33.json /Users/markzimmermann/Library/Developer/Xcode/DerivedData/ATSDiagnostic-dwqsvugqytkzgnfrfturllqkowje/Build/Products/Debug-iphonesimulator/ATSDiagnostic.app/PlugIns/ATSDiagnosticTests.xctest
+
+CpResource /Users/markzimmermann/Library/Developer/Xcode/DerivedData/ATSDiagnostic-dwqsvugqytkzgnfrfturllqkowje/Build/Products/Debug-iphonesimulator/ATSDiagnostic.app/PlugIns/ATSDiagnosticTests.xctest/SDK-Live-Example.json /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/outputs/ATS-Diagnostic/Tests/Fixtures/SDK-Live-Example.json (in target 'ATSDiagnosticTests' from project 'ATSDiagnostic')
+    cd /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/outputs/ATS-Diagnostic
+    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/outputs/ATS-Diagnostic/Tests/Fixtures/SDK-Live-Example.json /Users/markzimmermann/Library/Developer/Xcode/DerivedData/ATSDiagnostic-dwqsvugqytkzgnfrfturllqkowje/Build/Products/Debug-iphonesimulator/ATSDiagnostic.app/PlugIns/ATSDiagnosticTests.xctest
+
+CopySwiftLibs /Users/markzimmermann/Library/Developer/Xcode/DerivedData/ATSDiagnostic-dwqsvugqytkzgnfrfturllqkowje/Build/Products/Debug-iphonesimulator/ATSDiagnostic.app/PlugIns/ATSDiagnosticTests.xctest (in target 'ATSDiagnosticTests' from project 'ATSDiagnostic')
+    cd /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/outputs/ATS-Diagnostic
+    builtin-swiftStdLibTool --copy --verbose --sign - --scan-executable /Users/markzimmermann/Library/Developer/Xcode/DerivedData/ATSDiagnostic-dwqsvugqytkzgnfrfturllqkowje/Build/Products/Debug-iphonesimulator/ATSDiagnostic.app/PlugIns/ATSDiagnosticTests.xctest/ATSDiagnosticTests --scan-folder /Users/markzimmermann/Library/Developer/Xcode/DerivedData/ATSDiagnostic-dwqsvugqytkzgnfrfturllqkowje/Build/Products/Debug-iphonesimulator/ATSDiagnostic.app/PlugIns/ATSDiagnosticTests.xctest/Frameworks --scan-folder /Users/markzimmermann/Library/Developer/Xcode/DerivedData/ATSDiagnostic-dwqsvugqytkzgnfrfturllqkowje/Build/Products/Debug-iphonesimulator/ATSDiagnostic.app/PlugIns/ATSDiagnosticTests.xctest/PlugIns --scan-folder /Users/markzimmermann/Library/Developer/Xcode/DerivedData/ATSDiagnostic-dwqsvugqytkzgnfrfturllqkowje/Build/Products/Debug-iphonesimulator/ATSDiagnostic.app/PlugIns/ATSDiagnosticTests.xctest/SystemExtensions --scan-folder /Users/markzimmermann/Library/Developer/Xcode/DerivedData/ATSDiagnostic-dwqsvugqytkzgnfrfturllqkowje/Build/Products/Debug-iphonesimulator/ATSDiagnostic.app/PlugIns/ATSDiagnosticTests.xctest/Extensions --platform iphonesimulator --toolchain /var/run/com.apple.security.cryptexd/mnt/com.apple.MobileAsset.MetalToolchain-v27.1.266.1.vUJ43u/Metal.xctoolchain --toolchain /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain --destination /Users/markzimmermann/Library/Developer/Xcode/DerivedData/ATSDiagnostic-dwqsvugqytkzgnfrfturllqkowje/Build/Products/Debug-iphonesimulator/ATSDiagnostic.app/PlugIns/ATSDiagnosticTests.xctest/Frameworks --strip-bitcode --scan-executable /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/lib/libXCTestSwiftSupport.dylib --strip-bitcode-tool /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/bitcode_strip --emit-dependency-info /Users/markzimmermann/Library/Developer/Xcode/DerivedData/ATSDiagnostic-dwqsvugqytkzgnfrfturllqkowje/Build/Intermediates.noindex/ATSDiagnostic.build/Debug-iphonesimulator/ATSDiagnosticTests.build/SwiftStdLibToolInputDependencies.dep --filter-for-swift-os
+
+ExtractAppIntentsMetadata (in target 'ATSDiagnosticTests' from project 'ATSDiagnostic')
+    cd /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/outputs/ATS-Diagnostic
+    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/appintentsmetadataprocessor --toolchain-dir /var/run/com.apple.security.cryptexd/mnt/com.apple.MobileAsset.MetalToolchain-v27.1.266.1.vUJ43u/Metal.xctoolchain --module-name ATSDiagnosticTests --sdk-root /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator27.0.sdk --xcode-version 27A266a --platform-family iOS --deployment-target 18.0 --bundle-identifier com.mobilebox.ATSDiagnosticTests --output /Users/markzimmermann/Library/Developer/Xcode/DerivedData/ATSDiagnostic-dwqsvugqytkzgnfrfturllqkowje/Build/Products/Debug-iphonesimulator/ATSDiagnostic.app/PlugIns/ATSDiagnosticTests.xctest --target-triple arm64-apple-ios18.0-simulator --binary-file /Users/markzimmermann/Library/Developer/Xcode/DerivedData/ATSDiagnostic-dwqsvugqytkzgnfrfturllqkowje/Build/Products/Debug-iphonesimulator/ATSDiagnostic.app/PlugIns/ATSDiagnosticTests.xctest/ATSDiagnosticTests --dependency-file /Users/markzimmermann/Library/Developer/Xcode/DerivedData/ATSDiagnostic-dwqsvugqytkzgnfrfturllqkowje/Build/Intermediates.noindex/ATSDiagnostic.build/Debug-iphonesimulator/ATSDiagnosticTests.build/Objects-normal/arm64/ATSDiagnosticTests_dependency_info.dat --stringsdata-file /Users/markzimmermann/Library/Developer/Xcode/DerivedData/ATSDiagnostic-dwqsvugqytkzgnfrfturllqkowje/Build/Intermediates.noindex/ATSDiagnostic.build/Debug-iphonesimulator/ATSDiagnosticTests.build/Objects-normal/arm64/ExtractedAppShortcutsMetadata.stringsdata --source-file-list /Users/markzimmermann/Library/Developer/Xcode/DerivedData/ATSDiagnostic-dwqsvugqytkzgnfrfturllqkowje/Build/Intermediates.noindex/ATSDiagnostic.build/Debug-iphonesimulator/ATSDiagnosticTests.build/Objects-normal/arm64/ATSDiagnosticTests.SwiftFileList --metadata-file-list /Users/markzimmermann/Library/Developer/Xcode/DerivedData/ATSDiagnostic-dwqsvugqytkzgnfrfturllqkowje/Build/Intermediates.noindex/ATSDiagnostic.build/Debug-iphonesimulator/ATSDiagnosticTests.build/ATSDiagnosticTests.DependencyMetadataFileList --static-metadata-file-list /Users/markzimmermann/Library/Developer/Xcode/DerivedData/ATSDiagnostic-dwqsvugqytkzgnfrfturllqkowje/Build/Intermediates.noindex/ATSDiagnostic.build/Debug-iphonesimulator/ATSDiagnosticTests.build/ATSDiagnosticTests.DependencyStaticMetadataFileList --swift-const-vals-list /Users/markzimmermann/Library/Developer/Xcode/DerivedData/ATSDiagnostic-dwqsvugqytkzgnfrfturllqkowje/Build/Intermediates.noindex/ATSDiagnostic.build/Debug-iphonesimulator/ATSDiagnosticTests.build/Objects-normal/arm64/ATSDiagnosticTests.SwiftConstValuesFileList --compile-time-extraction --deployment-aware-processing --no-app-shortcuts-localization
+2026-10-12 11:42:56.670 appintentsmetadataprocessor[7308:25646264] Starting appintentsmetadataprocessor export
+2026-10-12 11:42:56.671 appintentsmetadataprocessor[7308:25646264] warning: Metadata extraction skipped, no AppIntents.framework dependency found
+
+AppIntentsSSUTraining (in target 'ATSDiagnosticTests' from project 'ATSDiagnostic')
+    cd /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/outputs/ATS-Diagnostic
+    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/appintentsnltrainingprocessor --infoplist-path /Users/markzimmermann/Library/Developer/Xcode/DerivedData/ATSDiagnostic-dwqsvugqytkzgnfrfturllqkowje/Build/Products/Debug-iphonesimulator/ATSDiagnostic.app/PlugIns/ATSDiagnosticTests.xctest/Info.plist --temp-dir-path /Users/markzimmermann/Library/Developer/Xcode/DerivedData/ATSDiagnostic-dwqsvugqytkzgnfrfturllqkowje/Build/Intermediates.noindex/ATSDiagnostic.build/Debug-iphonesimulator/ATSDiagnosticTests.build/ssu --bundle-id com.mobilebox.ATSDiagnosticTests --product-path /Users/markzimmermann/Library/Developer/Xcode/DerivedData/ATSDiagnostic-dwqsvugqytkzgnfrfturllqkowje/Build/Products/Debug-iphonesimulator/ATSDiagnostic.app/PlugIns/ATSDiagnosticTests.xctest --extracted-metadata-path /Users/markzimmermann/Library/Developer/Xcode/DerivedData/ATSDiagnostic-dwqsvugqytkzgnfrfturllqkowje/Build/Products/Debug-iphonesimulator/ATSDiagnostic.app/PlugIns/ATSDiagnosticTests.xctest/Metadata.appintents --metadata-file-list /Users/markzimmermann/Library/Developer/Xcode/DerivedData/ATSDiagnostic-dwqsvugqytkzgnfrfturllqkowje/Build/Intermediates.noindex/ATSDiagnostic.build/Debug-iphonesimulator/ATSDiagnosticTests.build/ATSDiagnosticTests.DependencyMetadataFileList --source-file /Users/markzimmermann/Library/Developer/Xcode/DerivedData/ATSDiagnostic-dwqsvugqytkzgnfrfturllqkowje/Build/Products/Debug-iphonesimulator/ATSDiagnostic.app/PlugIns/ATSDiagnosticTests.xctest/Info.plist --archive-ssu-assets
+2026-10-12 11:42:56.697 appintentsnltrainingprocessor[7309:25646272] Parsing options for appintentsnltrainingprocessor
+2026-10-12 11:42:56.698 appintentsnltrainingprocessor[7309:25646272] Starting AppIntents SSU YAML Generation
+2026-10-12 11:42:56.698 appintentsnltrainingprocessor[7309:25646272] No AppShortcuts found - Skipping.
+
+CodeSign /Users/markzimmermann/Library/Developer/Xcode/DerivedData/ATSDiagnostic-dwqsvugqytkzgnfrfturllqkowje/Build/Products/Debug-iphonesimulator/ATSDiagnostic.app/PlugIns/ATSDiagnosticTests.xctest (in target 'ATSDiagnosticTests' from project 'ATSDiagnostic')
+    cd /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/outputs/ATS-Diagnostic
+    
+    Signing Identity:     "Sign to Run Locally"
+    
+    /usr/bin/codesign --force --sign - --timestamp\=none --generate-entitlement-der /Users/markzimmermann/Library/Developer/Xcode/DerivedData/ATSDiagnostic-dwqsvugqytkzgnfrfturllqkowje/Build/Products/Debug-iphonesimulator/ATSDiagnostic.app/PlugIns/ATSDiagnosticTests.xctest
+
+RegisterExecutionPolicyException /Users/markzimmermann/Library/Developer/Xcode/DerivedData/ATSDiagnostic-dwqsvugqytkzgnfrfturllqkowje/Build/Products/Debug-iphonesimulator/ATSDiagnostic.app/PlugIns/ATSDiagnosticTests.xctest (in target 'ATSDiagnosticTests' from project 'ATSDiagnostic')
+    cd /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/outputs/ATS-Diagnostic
+    builtin-RegisterExecutionPolicyException /Users/markzimmermann/Library/Developer/Xcode/DerivedData/ATSDiagnostic-dwqsvugqytkzgnfrfturllqkowje/Build/Products/Debug-iphonesimulator/ATSDiagnostic.app/PlugIns/ATSDiagnosticTests.xctest
+
+Touch /Users/markzimmermann/Library/Developer/Xcode/DerivedData/ATSDiagnostic-dwqsvugqytkzgnfrfturllqkowje/Build/Products/Debug-iphonesimulator/ATSDiagnostic.app/PlugIns/ATSDiagnosticTests.xctest (in target 'ATSDiagnosticTests' from project 'ATSDiagnostic')
+    cd /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/outputs/ATS-Diagnostic
+    /usr/bin/touch -c /Users/markzimmermann/Library/Developer/Xcode/DerivedData/ATSDiagnostic-dwqsvugqytkzgnfrfturllqkowje/Build/Products/Debug-iphonesimulator/ATSDiagnostic.app/PlugIns/ATSDiagnosticTests.xctest
+
+CodeSign /Users/markzimmermann/Library/Developer/Xcode/DerivedData/ATSDiagnostic-dwqsvugqytkzgnfrfturllqkowje/Build/Products/Debug-iphonesimulator/ATSDiagnostic.app/ATSDiagnostic.debug.dylib (in target 'ATSDiagnostic' from project 'ATSDiagnostic')
+    cd /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/outputs/ATS-Diagnostic
+    
+    Signing Identity:     "Sign to Run Locally"
+    
+    /usr/bin/codesign --force --sign - --timestamp\=none --generate-entitlement-der /Users/markzimmermann/Library/Developer/Xcode/DerivedData/ATSDiagnostic-dwqsvugqytkzgnfrfturllqkowje/Build/Products/Debug-iphonesimulator/ATSDiagnostic.app/ATSDiagnostic.debug.dylib
+
+CodeSign /Users/markzimmermann/Library/Developer/Xcode/DerivedData/ATSDiagnostic-dwqsvugqytkzgnfrfturllqkowje/Build/Products/Debug-iphonesimulator/ATSDiagnostic.app/__preview.dylib (in target 'ATSDiagnostic' from project 'ATSDiagnostic')
+    cd /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/outputs/ATS-Diagnostic
+    
+    Signing Identity:     "Sign to Run Locally"
+    
+    /usr/bin/codesign --force --sign - --timestamp\=none --generate-entitlement-der /Users/markzimmermann/Library/Developer/Xcode/DerivedData/ATSDiagnostic-dwqsvugqytkzgnfrfturllqkowje/Build/Products/Debug-iphonesimulator/ATSDiagnostic.app/__preview.dylib
+
+CodeSign /Users/markzimmermann/Library/Developer/Xcode/DerivedData/ATSDiagnostic-dwqsvugqytkzgnfrfturllqkowje/Build/Products/Debug-iphonesimulator/ATSDiagnostic.app (in target 'ATSDiagnostic' from project 'ATSDiagnostic')
+    cd /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/outputs/ATS-Diagnostic
+    
+    Signing Identity:     "Sign to Run Locally"
+    
+    /usr/bin/codesign --force --sign - --timestamp\=none --generate-entitlement-der /Users/markzimmermann/Library/Developer/Xcode/DerivedData/ATSDiagnostic-dwqsvugqytkzgnfrfturllqkowje/Build/Products/Debug-iphonesimulator/ATSDiagnostic.app
+
+Validate /Users/markzimmermann/Library/Developer/Xcode/DerivedData/ATSDiagnostic-dwqsvugqytkzgnfrfturllqkowje/Build/Products/Debug-iphonesimulator/ATSDiagnostic.app (in target 'ATSDiagnostic' from project 'ATSDiagnostic')
+    cd /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/outputs/ATS-Diagnostic
+    builtin-validationUtility /Users/markzimmermann/Library/Developer/Xcode/DerivedData/ATSDiagnostic-dwqsvugqytkzgnfrfturllqkowje/Build/Products/Debug-iphonesimulator/ATSDiagnostic.app -shallow-bundle -infoplist-subpath Info.plist
+
+PruneExplicitPrecompiledModules /Users/markzimmermann/Library/Developer/Xcode/DerivedData/ATSDiagnostic-dwqsvugqytkzgnfrfturllqkowje/Build/Intermediates.noindex/SwiftExplicitPrecompiledModules
+
+PruneExplicitPrecompiledModules /Users/markzimmermann/Library/Developer/Xcode/DerivedData/SDKExplicitPrecompiledModules
+
+PruneExplicitPrecompiledModules /Users/markzimmermann/Library/Developer/Xcode/DerivedData/ATSDiagnostic-dwqsvugqytkzgnfrfturllqkowje/Build/Intermediates.noindex/ExplicitPrecompiledModules
+
+2026-10-12 11:43:10.176310+0200 ATSDiagnostic[7738:25649009] [API] cannot add handler to 0 from 0 - dropping
+2026-10-12 11:43:10.176604+0200 ATSDiagnostic[7738:25649009] [API] cannot add handler to 0 from 0 - dropping
+2026-10-12 11:43:10.196395+0200 ATSDiagnostic[7738:25649009] [XPCErrors] non-launching port is incompatible with service identifier "com.apple.PointerUI.pointeruid.default-service"
+2026-10-12 11:43:10.197762+0200 ATSDiagnostic[7738:25649009] [API] cannot add handler to 0 from 0 - dropping
+2026-10-12 11:43:10.197901+0200 ATSDiagnostic[7738:25649009] [API] cannot add handler to 0 from 0 - dropping
+Test Suite 'All tests' started at 2026-10-12 11:43:10.743.
+Test Suite 'All tests' passed at 2026-10-12 11:43:10.743.
+	 Executed 0 tests, with 0 failures (0 unexpected) in 0.000 (0.001) seconds
+◇ Test run started.
+↳ Testing Library Version: 2084
+↳ Target Platform: arm64-apple-ios17.0-simulator
+◇ Suite ASN1Tests started.
+◇ Test rejectsTruncatedLength() started.
+✔ Test rejectsTruncatedLength() passed after 0.004 seconds.
+◇ Test rejectsLengthOverflow() started.
+✔ Test rejectsLengthOverflow() passed after 0.001 seconds.
+◇ Test decodesOID() started.
+✔ Test decodesOID() passed after 0.001 seconds.
+◇ Test decodesLargeSecondOIDArc() started.
+✔ Test decodesLargeSecondOIDArc() passed after 0.001 seconds.
+◇ Test readsSequence() started.
+✔ Test readsSequence() passed after 0.001 seconds.
+✔ Suite ASN1Tests passed after 0.007 seconds.
+◇ Suite CertificateFieldTests started.
+◇ Test utcCenturyBoundary() started.
+✔ Test utcCenturyBoundary() passed after 0.002 seconds.
+◇ Test decodesKeyUsage() started.
+✔ Test decodesKeyUsage() passed after 0.003 seconds.
+◇ Test alternativeNamesAreTyped() started.
+✔ Test alternativeNamesAreTyped() passed after 0.001 seconds.
+✔ Suite CertificateFieldTests passed after 0.006 seconds.
+◇ Suite CURLImportTests started.
+◇ Test importsQuotedPayload() started.
+✔ Test importsQuotedPayload() passed after 0.001 seconds.
+◇ Test rejectsShellExecution() started.
+✔ Test rejectsShellExecution() passed after 0.009 seconds.
+◇ Test rejectsFileRead() started.
+✔ Test rejectsFileRead() passed after 0.001 seconds.
+◇ Test roundTripsExport() started.
+✔ Test roundTripsExport() passed after 0.001 seconds.
+◇ Test rejectsIncompleteQuotes() started.
+✔ Test rejectsIncompleteQuotes() passed after 0.001 seconds.
+✔ Suite CURLImportTests passed after 0.010 seconds.
+◇ Suite CertificateFormatsTests started.
+◇ Test pemRoundTripsCertificateBytes() started.
+✔ Test pemRoundTripsCertificateBytes() passed after 0.001 seconds.
+◇ Test chainPreservesOrder() started.
+✔ Test chainPreservesOrder() passed after 0.001 seconds.
+◇ Test unsafeSubjectCannotBecomeAPath() started.
+✔ Test unsafeSubjectCannotBecomeAPath() passed after 0.001 seconds.
+✔ Suite CertificateFormatsTests passed after 0.001 seconds.
+◇ Suite CertificateIssuerTests started.
+◇ Test decodesOrganizationCountryAndUnicodeName() started.
+✔ Test decodesOrganizationCountryAndUnicodeName() passed after 0.001 seconds.
+◇ Test utf16DirectoryString() started.
+✔ Test utf16DirectoryString() passed after 0.001 seconds.
+✔ Suite CertificateIssuerTests passed after 0.007 seconds.
+◇ Suite CertificateReminderTests started.
+◇ Test defaultIsOneWeekBeforeExpiry() started.
+✔ Test defaultIsOneWeekBeforeExpiry() passed after 0.001 seconds.
+◇ Test soonExpirySchedulesFutureReminder() started.
+✔ Test soonExpirySchedulesFutureReminder() passed after 0.001 seconds.
+◇ Test refusesExpiredCertificate() started.
+✔ Test refusesExpiredCertificate() passed after 0.003 seconds.
+◇ Test refusesReminderAfterExpiry() started.
+✔ Test refusesReminderAfterExpiry() passed after 0.001 seconds.
+◇ Test replacementIdentifierIsStable() started.
+✔ Test replacementIdentifierIsStable() passed after 0.001 seconds.
+✔ Suite CertificateReminderTests passed after 0.004 seconds.
+◇ Suite CertificateTransparencyTests started.
+◇ Test decodesLogTimestampAndAlgorithm() started.
+✔ Test decodesLogTimestampAndAlgorithm() passed after 0.001 seconds.
+◇ Test rejectsTruncatedSCT() started.
+✔ Test rejectsTruncatedSCT() passed after 0.003 seconds.
+◇ Test rejectsUnknownSCTVersion() started.
+✔ Test rejectsUnknownSCTVersion() passed after 0.001 seconds.
+◇ Test rejectsEmptySignature() started.
+✔ Test rejectsEmptySignature() passed after 0.001 seconds.
+◇ Test rejectsTrailingDataOutsideList() started.
+✔ Test rejectsTrailingDataOutsideList() passed after 0.001 seconds.
+◇ Test bundledDataHasIndependentStoresAndConstraints() started.
+✔ Test bundledDataHasIndependentStoresAndConstraints() passed after 0.005 seconds.
+◇ Test fingerprintsUseDERBytes() started.
+✔ Test fingerprintsUseDERBytes() passed after 0.001 seconds.
+◇ Test oldHistoryDecodesWithoutNewMetadata() started.
+✔ Test oldHistoryDecodesWithoutNewMetadata() passed after 0.001 seconds.
+✔ Suite CertificateTransparencyTests passed after 0.011 seconds.
+◇ Suite AppleCTDirectoryTests started.
+◇ Test directoryIntegrityAndAllStates() started.
+✔ Test directoryIntegrityAndAllStates() passed after 0.076 seconds.
+◇ Test retirementBoundaryIsStrict() started.
+✔ Test retirementBoundaryIsStrict() passed after 0.001 seconds.
+✔ Suite AppleCTDirectoryTests passed after 0.077 seconds.
+◇ Suite SystemCTPresentationTests started.
+◇ Test distinguishesReportedNegativeFromMissing() started.
+✔ Test distinguishesReportedNegativeFromMissing() passed after 0.001 seconds.
+✔ Suite SystemCTPresentationTests passed after 0.001 seconds.
+◇ Suite ConnectionMetricsTests started.
+◇ Test preservesIndividualStepsThroughHARWithoutInventingPhases() started.
+✔ Test preservesIndividualStepsThroughHARWithoutInventingPhases() passed after 0.011 seconds.
+◇ Test rejectsNegativeOverallDuration() started.
+✔ Test rejectsNegativeOverallDuration() passed after 0.011 seconds.
+◇ Test boundsImportedTransactionsAndPreservesTotal() started.
+✔ Test boundsImportedTransactionsAndPreservesTotal() passed after 0.002 seconds.
+◇ Test malformedMetricsDoNotDiscardOtherwiseValidHAR() started.
+✔ Test malformedMetricsDoNotDiscardOtherwiseValidHAR() passed after 0.002 seconds.
+◇ Test missingOrReversedNativeIntervalsRemainUnknown() started.
+✔ Test missingOrReversedNativeIntervalsRemainUnknown() passed after 0.001 seconds.
+✔ Suite ConnectionMetricsTests passed after 0.028 seconds.
+◇ Suite DNSLookupTests started.
+◇ Test numericIPv4IsReturnedBySystemResolver() started.
+✔ Test numericIPv4IsReturnedBySystemResolver() passed after 0.001 seconds.
+◇ Test rawIPv6LiteralIsSupported() started.
+✔ Test rawIPv6LiteralIsSupported() passed after 0.001 seconds.
+◇ Test credentialsAndNonNetworkURLsAreRejectedBeforeLookup() started.
+✔ Test credentialsAndNonNetworkURLsAreRejectedBeforeLookup() passed after 0.015 seconds.
+✔ Suite DNSLookupTests passed after 0.015 seconds.
+◇ Suite DiagnosticFailureTests started.
+◇ Test noDiagnosisFromHostname() started.
+✔ Test noDiagnosisFromHostname() passed after 0.001 seconds.
+◇ Test specificTrustErrorWinsOverGenericTLSFailure() started.
+✔ Test specificTrustErrorWinsOverGenericTLSFailure() passed after 0.001 seconds.
+◇ Test expiryUsesSystemEvidence() started.
+✔ Test expiryUsesSystemEvidence() passed after 0.001 seconds.
+◇ Test tlsVersionUsesActualPeerAlert() started.
+✔ Test tlsVersionUsesActualPeerAlert() passed after 0.001 seconds.
+◇ Test genericHandshakeDoesNotGuessCipher() started.
+✔ Test genericHandshakeDoesNotGuessCipher() passed after 0.001 seconds.
+◇ Test httpAndClientCertificateAreSeparate() started.
+✔ Test httpAndClientCertificateAreSeparate() passed after 0.001 seconds.
+◇ Test failedExtraRevocationDoesNotRewriteSuccessfulTransport() started.
+✔ Test failedExtraRevocationDoesNotRewriteSuccessfulTransport() passed after 0.001 seconds.
+◇ Test evidenceCapturesNestedSSLCode() started.
+✔ Test evidenceCapturesNestedSSLCode() passed after 0.003 seconds.
+◇ Test oldRecordKeepsRawUnknownFailure() started.
+✔ Test oldRecordKeepsRawUnknownFailure() passed after 0.001 seconds.
+✔ Suite DiagnosticFailureTests passed after 0.014 seconds.
+◇ Suite DiagnosticOptionsTests started.
+◇ Test rejectsUnboundedOrNonFiniteValues() started.
+✔ Test rejectsUnboundedOrNonFiniteValues() passed after 0.003 seconds.
+◇ Test resourceDeadlineCanBeShorterThanIdleDeadline() started.
+✔ Test resourceDeadlineCanBeShorterThanIdleDeadline() passed after 0.001 seconds.
+◇ Test invalidPersistedValuesFallBackToStandard() started.
+✔ Test invalidPersistedValuesFallBackToStandard() passed after 0.001 seconds.
+◇ Test configurationAndActualRequestUseSelectedLimits() started.
+✔ Test configurationAndActualRequestUseSelectedLimits() passed after 0.001 seconds.
+◇ Test smallPreviewDoesNotChangeCompleteResponseHash() started.
+✔ Test smallPreviewDoesNotChangeCompleteResponseHash() passed after 0.048 seconds.
+◇ Test previewCanBeDisabledWithoutLosingHashOrByteCount() started.
+✔ Test previewCanBeDisabledWithoutLosingHashOrByteCount() passed after 0.016 seconds.
+◇ Test historicalRecordsWithoutOptionsStillDecode() started.
+✔ Test historicalRecordsWithoutOptionsStillDecode() passed after 0.001 seconds.
+✔ Suite DiagnosticOptionsTests passed after 0.071 seconds.
+◇ Suite EndpointTests started.
+◇ Test defaultsToHTTPS() started.
+✔ Test defaultsToHTTPS() passed after 0.001 seconds.
+◇ Test rejectsCredentials() started.
+✔ Test rejectsCredentials() passed after 0.001 seconds.
+◇ Test rejectsOtherSchemes() started.
+✔ Test rejectsOtherSchemes() passed after 0.001 seconds.
+◇ Test shellQuoteProtectsApostrophes() started.
+✔ Test shellQuoteProtectsApostrophes() passed after 0.001 seconds.
+✔ Suite EndpointTests passed after 0.001 seconds.
+◇ Suite HARTests started.
+◇ Test preservesReplayData() started.
+✔ Test preservesReplayData() passed after 0.003 seconds.
+✔ Suite HARTests passed after 0.004 seconds.
+◇ Suite ExternalHARTests started.
+◇ Test acceptsBrowserCookiesAndOptionalBodies() started.
+✔ Test acceptsBrowserCookiesAndOptionalBodies() passed after 0.001 seconds.
+◇ Test preservesBinaryEncoding() started.
+✔ Test preservesBinaryEncoding() passed after 0.001 seconds.
+✔ Suite ExternalHARTests passed after 0.002 seconds.
+◇ Suite HSTSPolicyTests started.
+◇ Test distinguishesMissingInvalidAndZero() started.
+✔ Test distinguishesMissingInvalidAndZero() passed after 0.001 seconds.
+◇ Test acceptsQuotedAgeAndCaseInsensitiveDirectives() started.
+✔ Test acceptsQuotedAgeAndCaseInsensitiveDirectives() passed after 0.001 seconds.
+◇ Test rejectsMalformedFields(_:) started.
+◇ Test case passing 1 argument field → "max-age=-1" to rejectsMalformedFields(_:) started.
+​◇ Test case passing 1 argument field → "max-age=1; MAX-age=2" to rejectsMalformedFields(_:) started.
+​◇ Test case passing 1 argument field → "max-age=1;includeSubDomains=true" to rejectsMalformedFields(_:) started.
+​◇ Test case passing 1 argument field → "max-age=1, max-age=2" to rejectsMalformedFields(_:) started.
+​◇ Test case passing 1 argument field → "max-age="1" to rejectsMalformedFields(_:) started.
+​◇ Test case passing 1 argument field → "max-age=1;bad name=x" to rejectsMalformedFields(_:) started.
+​◇ Test case passing 1 argument field → "max-age=1
+" to rejectsMalformedFields(_:) started.
+​✔ Test rejectsMalformedFields(_:) with 7 test cases passed after 0.002 seconds.
+◇ Test unknownExtensionsAndLargeAge() started.
+✔ Test unknownExtensionsAndLargeAge() passed after 0.001 seconds.
+✔ Suite HSTSPolicyTests passed after 0.004 seconds.
+◇ Suite HTTPProxyMessageTests started.
+◇ Test incompleteHeaderWaits() started.
+✔ Test incompleteHeaderWaits() passed after 0.001 seconds.
+◇ Test parsesChunkedWithTrailers() started.
+✔ Test parsesChunkedWithTrailers() passed after 0.001 seconds.
+◇ Test rejectsAmbiguousFraming() started.
+✔ Test rejectsAmbiguousFraming() passed after 0.003 seconds.
+◇ Test rejectsConflictingDuplicateLengths() started.
+✔ Test rejectsConflictingDuplicateLengths() passed after 0.001 seconds.
+◇ Test acceptsMatchingDuplicateLengths() started.
+✔ Test acceptsMatchingDuplicateLengths() passed after 0.001 seconds.
+◇ Test preservesPipelinedBytes() started.
+✔ Test preservesPipelinedBytes() passed after 0.001 seconds.
+◇ Test supportsIPv6Connect() started.
+✔ Test supportsIPv6Connect() passed after 0.001 seconds.
+◇ Test removesProxyCredentialsFromUpstream() started.
+✔ Test removesProxyCredentialsFromUpstream() passed after 0.001 seconds.
+◇ Test rejectsOversizedChunkWithoutAllocation() started.
+✔ Test rejectsOversizedChunkWithoutAllocation() passed after 0.001 seconds.
+◇ Test rejectsWhitespaceBeforeHeaderColon() started.
+✔ Test rejectsWhitespaceBeforeHeaderColon() passed after 0.001 seconds.
+✔ Suite HTTPProxyMessageTests passed after 0.015 seconds.
+◇ Suite HTTPProxyFramingSafetyTests started.
+◇ Test rejectsConnectionNominatedLength() started.
+✔ Test rejectsConnectionNominatedLength() passed after 0.001 seconds.
+◇ Test rejectsControlCharacterInChunkExtension() started.
+✔ Test rejectsControlCharacterInChunkExtension() passed after 0.001 seconds.
+◇ Test rejectsTrailerFramingOverride() started.
+✔ Test rejectsTrailerFramingOverride() passed after 0.001 seconds.
+✔ Suite HTTPProxyFramingSafetyTests passed after 0.001 seconds.
+◇ Suite HTTPProxyRewriteTests started.
+◇ Test replacedBodyReframesChunkedRequestAndKeepsOriginal() started.
+✔ Test replacedBodyReframesChunkedRequestAndKeepsOriginal() passed after 0.005 seconds.
+◇ Test targetMapDoesNotTransferOldCredentials() started.
+✔ Test targetMapDoesNotTransferOldCredentials() passed after 0.001 seconds.
+◇ Test nonMatchPreservesWireAndManagedHeadersCannotBeOverridden() started.
+✔ Test nonMatchPreservesWireAndManagedHeadersCannotBeOverridden() passed after 0.003 seconds.
+◇ Test sameOriginMapKeepsCredentialsAndOriginalChunkFraming() started.
+✔ Test sameOriginMapKeepsCredentialsAndOriginalChunkFraming() passed after 0.001 seconds.
+◇ Test opaqueTunnelAndUpgradeCannotBeRewritten() started.
+✔ Test opaqueTunnelAndUpgradeCannotBeRewritten() passed after 0.001 seconds.
+◇ Test mappingRequiresExplicitURLWithoutFragmentOrCredentials() started.
+✔ Test mappingRequiresExplicitURLWithoutFragmentOrCredentials() passed after 0.001 seconds.
+✔ Suite HTTPProxyRewriteTests passed after 0.017 seconds.
+◇ Suite HTTPRequestFieldsTests started.
+◇ Test validCustomMethodAndWindowsHeadersAreAccepted() started.
+✔ Test validCustomMethodAndWindowsHeadersAreAccepted() passed after 0.001 seconds.
+◇ Test controlCharactersCannotReachNativeRequestSetters() started.
+✔ Test controlCharactersCannotReachNativeRequestSetters() passed after 0.002 seconds.
+◇ Test malformedImportedRequestRemainsReadableButCannotReplay() started.
+✔ Test malformedImportedRequestRemainsReadableButCannotReplay() passed after 0.001 seconds.
+◇ Test invalidDirectRequestIsExplainedBeforeNetworkExecution() started.
+✔ Test invalidDirectRequestIsExplainedBeforeNetworkExecution() passed after 0.001 seconds.
+✔ Suite HTTPRequestFieldsTests passed after 0.005 seconds.
+◇ Suite HistoryPersistenceTests started.
+◇ Test lateSnapshotCannotUndoClear() started.
+✔ Test lateSnapshotCannotUndoClear() passed after 0.003 seconds.
+◇ Test rapidImportsThenClearFlushOnlyLatestState() started.
+✔ Test rapidImportsThenClearFlushOnlyLatestState() passed after 0.020 seconds.
+◇ Test immediateImportWaitsForSavedHistory() started.
+✔ Test immediateImportWaitsForSavedHistory() passed after 0.011 seconds.
+◇ Test immediateClearCannotBeUndoneByInitialLoad() started.
+✔ Test immediateClearCannotBeUndoneByInitialLoad() passed after 0.007 seconds.
+◇ Test build33EncodedHistoryLoadsAndRoundTripsWithoutDataLoss() started.
+✔ Test build33EncodedHistoryLoadsAndRoundTripsWithoutDataLoss() passed after 0.007 seconds.
+◇ Test latestSnapshotRoundTripsCertificateAndBody() started.
+✔ Test latestSnapshotRoundTripsCertificateAndBody() passed after 0.001 seconds.
+✔ Suite HistoryPersistenceTests passed after 0.052 seconds.
+◇ Suite HistoryRetentionTests started.
+◇ Test countLimitRetainsNewest() started.
+✔ Test countLimitRetainsNewest() passed after 0.001 seconds.
+◇ Test actualEncodedBytesIncludeCertificatesAndEscapedBodies() started.
+✔ Test actualEncodedBytesIncludeCertificatesAndEscapedBodies() passed after 0.001 seconds.
+◇ Test exactArrayBoundaryIncludesComma() started.
+✔ Test exactArrayBoundaryIncludesComma() passed after 0.017 seconds.
+◇ Test oversizedNewestDoesNotKeepAnOlderPrefix() started.
+✔ Test oversizedNewestDoesNotKeepAnOlderPrefix() passed after 0.001 seconds.
+✔ Suite HistoryRetentionTests passed after 0.017 seconds.
+◇ Suite IntegrityTests started.
+◇ Test acceptsColonSeparatedDigest() started.
+✔ Test acceptsColonSeparatedDigest() passed after 0.001 seconds.
+◇ Test rejectsTruncatedChecksum() started.
+✔ Test rejectsTruncatedChecksum() passed after 0.003 seconds.
+◇ Test rejectsNonHexadecimal() started.
+✔ Test rejectsNonHexadecimal() passed after 0.001 seconds.
+◇ Test emptyMeansNoExpectedChecksum() started.
+✔ Test emptyMeansNoExpectedChecksum() passed after 0.001 seconds.
+◇ Test copiedGroupedChecksumCanBeUsedAsExpectedDigest() started.
+✔ Test copiedGroupedChecksumCanBeUsedAsExpectedDigest() passed after 0.008 seconds.
+✔ Suite IntegrityTests passed after 0.012 seconds.
+◇ Suite LocalProxyTests started.
+◇ Test exactRuleActuallyMapsTargetReframesBodyAndRecordsOrigin() started.
+2026-10-12 11:43:11.154540+0200 ATSDiagnostic[7738:25649396] [] nw_listener_socket_inbox_create_socket setsockopt SO_NECP_LISTENUUID failed [2: No such file or directory]
+2026-10-12 11:43:11.156616+0200 ATSDiagnostic[7738:25649396] [] nw_listener_socket_inbox_create_socket setsockopt SO_NECP_LISTENUUID failed [2: No such file or directory]
+✔ Test exactRuleActuallyMapsTargetReframesBodyAndRecordsOrigin() passed after 0.041 seconds.
+◇ Test oversizedRewrittenHeadersAreRejectedBeforeOriginConnect() started.
+2026-10-12 11:43:11.194974+0200 ATSDiagnostic[7738:25649457] [connection] [C4 127.0.0.1:56909 tcp, local: 127.0.0.1:56906, server, prohibit joining protocols, definite, attribution: developer] is already cancelled, ignoring cancel
+2026-10-12 11:43:11.195574+0200 ATSDiagnostic[7738:25649457] [] nw_listener_socket_inbox_create_socket setsockopt SO_NECP_LISTENUUID failed [2: No such file or directory]
+2026-10-12 11:43:11.201120+0200 ATSDiagnostic[7738:25649457] [] nw_listener_socket_inbox_create_socket setsockopt SO_NECP_LISTENUUID failed [2: No such file or directory]
+✔ Test oversizedRewrittenHeadersAreRejectedBeforeOriginConnect() passed after 0.073 seconds.
+◇ Test httpActuallyForwardsOriginFormAndStripsProxySecret() started.
+2026-10-12 11:43:11.268313+0200 ATSDiagnostic[7738:25649396] [] nw_listener_socket_inbox_create_socket setsockopt SO_NECP_LISTENUUID failed [2: No such file or directory]
+2026-10-12 11:43:11.269534+0200 ATSDiagnostic[7738:25649396] [] nw_listener_socket_inbox_create_socket setsockopt SO_NECP_LISTENUUID failed [2: No such file or directory]
+✔ Test httpActuallyForwardsOriginFormAndStripsProxySecret() passed after 0.057 seconds.
+◇ Test connectRelaysLargeOpaqueBytesAndHalfClose() started.
+2026-10-12 11:43:11.327223+0200 ATSDiagnostic[7738:25649389] [connection] [C10 127.0.0.1:56916 tcp, local: 127.0.0.1:56913, server, prohibit joining protocols, definite, attribution: developer] is already cancelled, ignoring cancel
+2026-10-12 11:43:11.327603+0200 ATSDiagnostic[7738:25649389] [] nw_listener_socket_inbox_create_socket setsockopt SO_NECP_LISTENUUID failed [2: No such file or directory]
+2026-10-12 11:43:11.328127+0200 ATSDiagnostic[7738:25649389] [] nw_listener_socket_inbox_create_socket setsockopt SO_NECP_LISTENUUID failed [2: No such file or directory]
+2026-10-12 11:43:11.421066+0200 ATSDiagnostic[7738:25649388] [connection] nw_protocol_socket_reset_linger [C14:1] setsockopt SO_LINGER failed [22: Invalid argument]
+✔ Test connectRelaysLargeOpaqueBytesAndHalfClose() passed after 0.096 seconds.
+◇ Test ambiguousFramingRejectedBeforeConnecting() started.
+2026-10-12 11:43:11.423376+0200 ATSDiagnostic[7738:25649388] [] nw_listener_socket_inbox_create_socket setsockopt SO_NECP_LISTENUUID failed [2: No such file or directory]
+2026-10-12 11:43:11.444878+0200 ATSDiagnostic[7738:25649388] [connection] nw_protocol_socket_reset_linger [C15:1] setsockopt SO_LINGER failed [22: Invalid argument]
+✔ Test ambiguousFramingRejectedBeforeConnecting() passed after 0.023 seconds.
+◇ Test selfLoopRejectedAndIdleConnectionClosed() started.
+2026-10-12 11:43:11.447229+0200 ATSDiagnostic[7738:25649388] [] nw_listener_socket_inbox_create_socket setsockopt SO_NECP_LISTENUUID failed [2: No such file or directory]
+2026-10-12 11:43:11.472669+0200 ATSDiagnostic[7738:25649396] [connection] nw_protocol_socket_reset_linger [C17:1] setsockopt SO_LINGER failed [22: Invalid argument]
+✔ Test selfLoopRejectedAndIdleConnectionClosed() passed after 1.081 seconds.
+◇ Test interimResponseDoesNotHideFinalStatus() started.
+✔ Test interimResponseDoesNotHideFinalStatus() passed after 0.001 seconds.
+◇ Test upgradeHeadersArePreservedButProxyAuthIsNot() started.
+✔ Test upgradeHeadersArePreservedButProxyAuthIsNot() passed after 0.001 seconds.
+◇ Test serverHalfCloseDoesNotDiscardLaterClientBytes() started.
+2026-10-12 11:43:12.527355+0200 ATSDiagnostic[7738:25649392] [] nw_listener_socket_inbox_create_socket setsockopt SO_NECP_LISTENUUID failed [2: No such file or directory]
+2026-10-12 11:43:12.527775+0200 ATSDiagnostic[7738:25649392] [] nw_listener_socket_inbox_create_socket setsockopt SO_NECP_LISTENUUID failed [2: No such file or directory]
+2026-10-12 11:43:12.533298+0200 ATSDiagnostic[7738:25649392] [connection] nw_protocol_socket_reset_linger [C22:1] setsockopt SO_LINGER failed [22: Invalid argument]
+2026-10-12 11:43:12.533793+0200 ATSDiagnostic[7738:25649392] [connection] nw_protocol_socket_reset_linger [C23:1] setsockopt SO_LINGER failed [22: Invalid argument]
+✔ Test serverHalfCloseDoesNotDiscardLaterClientBytes() passed after 0.017 seconds.
+◇ Test upgradeBecomesBidirectionalStream() started.
+2026-10-12 11:43:12.545135+0200 ATSDiagnostic[7738:25649393] [connection] [C24 127.0.0.1:56953 tcp, local: 127.0.0.1:56950, server, prohibit joining protocols, definite, attribution: developer] is already cancelled, ignoring cancel
+2026-10-12 11:43:12.545574+0200 ATSDiagnostic[7738:25649393] [] nw_listener_socket_inbox_create_socket setsockopt SO_NECP_LISTENUUID failed [2: No such file or directory]
+2026-10-12 11:43:12.546017+0200 ATSDiagnostic[7738:25649393] [] nw_listener_socket_inbox_create_socket setsockopt SO_NECP_LISTENUUID failed [2: No such file or directory]
+2026-10-12 11:43:12.553154+0200 ATSDiagnostic[7738:25649389] [connection] nw_protocol_socket_reset_linger [C27:1] setsockopt SO_LINGER failed [22: Invalid argument]
+✔ Test upgradeBecomesBidirectionalStream() passed after 0.009 seconds.
+◇ Test postBodyReallyReachesOriginWithNormalizedLength() started.
+2026-10-12 11:43:12.554821+0200 ATSDiagnostic[7738:25649389] [connection] [C28 127.0.0.1:56957 tcp, local: 127.0.0.1:56954, server, prohibit joining protocols, definite, attribution: developer] is already cancelled, ignoring cancel
+2026-10-12 11:43:12.555130+0200 ATSDiagnostic[7738:25649389] [] nw_listener_socket_inbox_create_socket setsockopt SO_NECP_LISTENUUID failed [2: No such file or directory]
+2026-10-12 11:43:12.555662+0200 ATSDiagnostic[7738:25649389] [] nw_listener_socket_inbox_create_socket setsockopt SO_NECP_LISTENUUID failed [2: No such file or directory]
+✔ Test postBodyReallyReachesOriginWithNormalizedLength() passed after 0.008 seconds.
+✔ Suite LocalProxyTests passed after 1.411 seconds.
+◇ Suite PolicyDirectivesTests started.
+◇ Test cspKeepsValuesTogether() started.
+✔ Test cspKeepsValuesTogether() passed after 0.001 seconds.
+◇ Test permissionsKeepQuotedCommas() started.
+✔ Test permissionsKeepQuotedCommas() passed after 0.001 seconds.
+◇ Test otherHeadersAreNotInterpretedAsPolicies() started.
+✔ Test otherHeadersAreNotInterpretedAsPolicies() passed after 0.001 seconds.
+✔ Suite PolicyDirectivesTests passed after 0.001 seconds.
+2026-10-12 11:43:12.563452+0200 ATSDiagnostic[7738:25649389] [connection] [C32 127.0.0.1:56961 tcp, local: 127.0.0.1:56958, server, prohibit joining protocols, definite, attribution: developer] is already cancelled, ignoring cancel
+◇ Suite ProxyRuleConfigurationTests started.
+◇ Test binaryBase64BodyAndExplicitEmptyBodyRemainDistinct() started.
+✔ Test binaryBase64BodyAndExplicitEmptyBodyRemainDistinct() passed after 0.003 seconds.
+◇ Test editGuardsPreserveOrderAndPreventChangesWhileRunning() started.
+✔ Test editGuardsPreserveOrderAndPreventChangesWhileRunning() passed after 0.002 seconds.
+✔ Suite ProxyRuleConfigurationTests passed after 0.006 seconds.
+◇ Suite RecordingSettingsTests started.
+◇ Test excludesRegexMatches() started.
+✔ Test excludesRegexMatches() passed after 0.001 seconds.
+◇ Test rejectsMalformedPattern() started.
+✔ Test rejectsMalformedPattern() passed after 0.001 seconds.
+◇ Test categoriesIgnoreHeaderCase() started.
+✔ Test categoriesIgnoreHeaderCase() passed after 0.001 seconds.
+◇ Test statisticsHaveNoDivideByZero() started.
+✔ Test statisticsHaveNoDivideByZero() passed after 0.001 seconds.
+✔ Suite RecordingSettingsTests passed after 0.002 seconds.
+◇ Suite ReverseDNSLookupTests started.
+◇ Test acceptsOnlyNumericIPv4AndIPv6() started.
+✔ Test acceptsOnlyNumericIPv4AndIPv6() passed after 0.001 seconds.
+◇ Test rejectsNonNumericAndAmbiguousInputs(_:) started.
+◇ Test case passing 1 argument value → "example.com" to rejectsNonNumericAndAmbiguousInputs(_:) started.
+​◇ Test case passing 1 argument value → "https://127.0.0.1" to rejectsNonNumericAndAmbiguousInputs(_:) started.
+​◇ Test case passing 1 argument value → "127.0.0.1:443" to rejectsNonNumericAndAmbiguousInputs(_:) started.
+​◇ Test case passing 1 argument value → "999.1.1.1" to rejectsNonNumericAndAmbiguousInputs(_:) started.
+​◇ Test case passing 1 argument value → "" to rejectsNonNumericAndAmbiguousInputs(_:) started.
+​◇ Test case passing 1 argument value → "127.0.0.1
+example.com" to rejectsNonNumericAndAmbiguousInputs(_:) started.
+​✔ Test rejectsNonNumericAndAmbiguousInputs(_:) with 6 test cases passed after 0.001 seconds.
+◇ Test missingNameExplainsTrustIsSeparate() started.
+✔ Test missingNameExplainsTrustIsSeparate() passed after 0.001 seconds.
+✔ Suite ReverseDNSLookupTests passed after 0.001 seconds.
+◇ Suite SDKHARImportTests started.
+◇ Test actualPartialStreamKeepsObservedBytesWithoutFullSizeOrHash() started.
+✔ Test actualPartialStreamKeepsObservedBytesWithoutFullSizeOrHash() passed after 0.001 seconds.
+◇ Test partialStreamRoundTripPreservesSeparateObservedCount() started.
+✔ Test partialStreamRoundTripPreservesSeparateObservedCount() passed after 0.001 seconds.
+◇ Test partialMetadataCannotClaimFullSizeHashOrTooFewObservedBytes() started.
+✔ Test partialMetadataCannotClaimFullSizeHashOrTooFewObservedBytes() passed after 0.001 seconds.
+◇ Test actualSDKSuccessKeepsPreviewAndReportedHash() started.
+✔ Test actualSDKSuccessKeepsPreviewAndReportedHash() passed after 0.001 seconds.
+◇ Test actualSDKFailuresRetainErrorsWithoutInventingResponseBytes(_:) started.
+◇ Test case passing 1 argument name → "SDK-Live-expired.badssl.com" to actualSDKFailuresRetainErrorsWithoutInventingResponseBytes(_:) started.
+​◇ Test case passing 1 argument name → "SDK-Live-wrong.host.badssl.com" to actualSDKFailuresRetainErrorsWithoutInventingResponseBytes(_:) started.
+​✔ Test actualSDKFailuresRetainErrorsWithoutInventingResponseBytes(_:) with 2 test cases passed after 0.002 seconds.
+◇ Test incompleteSDKRequestCannotReplayEvenAfterAppReExport() started.
+✔ Test incompleteSDKRequestCannotReplayEvenAfterAppReExport() passed after 0.002 seconds.
+◇ Test importedClaimsNeverBecomeSystemTrustResults() started.
+✔ Test importedClaimsNeverBecomeSystemTrustResults() passed after 0.001 seconds.
+◇ Test incompleteBodyCannotBeEnabledByImportMetadata() started.
+✔ Test incompleteBodyCannotBeEnabledByImportMetadata() passed after 0.001 seconds.
+✔ Suite SDKHARImportTests passed after 0.012 seconds.
+◇ Suite SignedCRLTests started.
+◇ Test validatesSignatureAndFindsSerial() started.
+✔ Test validatesSignatureAndFindsSerial() passed after 0.003 seconds.
+◇ Test rejectsTamperedSignature() started.
+2026-10-12 11:43:12.591690+0200 ATSDiagnostic[7738:25649457] [seckey] SecKeyVerifySignature failed: Error Domain=NSOSStatusErrorDomain Code=-67808 "EC signature verification failed, no match" UserInfo={numberOfErrorsDeep=0, NSDescription=EC signature verification failed, no match}
+✔ Test rejectsTamperedSignature() passed after 0.003 seconds.
+◇ Test rejectsStaleList() started.
+✔ Test rejectsStaleList() passed after 0.001 seconds.
+◇ Test rejectsWrongIssuer() started.
+✔ Test rejectsWrongIssuer() passed after 0.001 seconds.
+◇ Test rejectsDeltaWithoutBase() started.
+✔ Test rejectsDeltaWithoutBase() passed after 0.001 seconds.
+◇ Test verifiesDistributionPointScope() started.
+✔ Test verifiesDistributionPointScope() passed after 0.003 seconds.
+◇ Test rejectsIndirectAndPartialReasonLists() started.
+✔ Test rejectsIndirectAndPartialReasonLists() passed after 0.004 seconds.
+✔ Suite SignedCRLTests passed after 0.020 seconds.
+◇ Suite StreamingIntegrityTests started.
+◇ Test hashesEntireResponseBeyondPreviewLimit() started.
+✔ Test hashesEntireResponseBeyondPreviewLimit() passed after 0.006 seconds.
+✔ Suite StreamingIntegrityTests passed after 0.006 seconds.
+✔ Test run with 146 tests in 32 suites passed after 1.857 seconds.
+2026-10-12 11:43:12.917 xcodebuild[7149:25645223] [MT] IDETestOperationsObserverDebug: 16.094 elapsed -- Testing started completed.
+2026-10-12 11:43:12.917 xcodebuild[7149:25645223] [MT] IDETestOperationsObserverDebug: 0.000 sec, +0.000 sec -- start
+2026-10-12 11:43:12.918 xcodebuild[7149:25645223] [MT] IDETestOperationsObserverDebug: 16.094 sec, +16.094 sec -- end
+
+Test session results, code coverage, and logs:
+	/Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/ProxyRules-Guarded.xcresult
+
+** TEST SUCCEEDED **
+
+Testing started

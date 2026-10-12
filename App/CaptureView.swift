@@ -38,6 +38,11 @@ struct CaptureView: View {
                     }
                     if let message = inputError ?? monitor.error { Text(message).foregroundStyle(.red) }
                 }
+                Section {
+                    NavigationLink { ProxyRulesView(monitor: monitor) } label: {
+                        Label("Proxy-Regeln · \(monitor.rewriteConfigurations.filter(\.enabled).count) aktiv", systemImage: "arrow.triangle.branch")
+                    }
+                }
                 ProxyScopeSection()
                 Section("Prüfanfrage durch den Proxy") {
                     TextField("HTTPS-Ziel",text:$target).keyboardType(.URL).textInputAutocapitalization(.never).autocorrectionDisabled().focused($editing,equals:.target)
@@ -98,6 +103,10 @@ private struct ProxyCaptureDetails: View {
         List {
             Section("Verbindung") {
                 Text(capture.target).textSelection(.enabled)
+                if capture.rewriteRuleApplied == true {
+                    Label("Umschreibungsregel angewendet", systemImage: "arrow.triangle.branch")
+                    if let original = capture.originalTarget { Text("Ursprüngliches Ziel").font(.caption).foregroundStyle(.secondary); Text(original).textSelection(.enabled) }
+                }
                 LabeledContent("Methode",value:capture.method)
                 LabeledContent("Status",value:capture.stateText)
                 if let status = capture.status { LabeledContent(capture.opaque ? "Proxy-Antwort" : "HTTP-Antwort",value:String(status)) }
