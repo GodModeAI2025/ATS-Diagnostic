@@ -1,5 +1,6 @@
 import Foundation
 import Network
+import Darwin
 import Testing
 @testable import ATSDiagnostic
 
@@ -66,6 +67,41 @@ private final class TCPFixture: @unchecked Sendable {
     func stop() { queue.sync { listener.stateUpdateHandler = nil;listener.newConnectionHandler = nil;listener.cancel();for connection in connections { connection.cancel() };connections = [] } }
 }
 
+private final class ResetTCPFixture: @unchecked Sendable {
+    private let descriptor: Int32
+    let port: UInt16
+    init() throws {
+        let descriptor = Darwin.socket(AF_INET, SOCK_STREAM, 0)
+        self.descriptor = descriptor
+        guard descriptor >= 0 else { throw POSIXError(.EIO) }
+        var address = sockaddr_in()
+        address.sin_len = UInt8(MemoryLayout<sockaddr_in>.size)
+        address.sin_family = sa_family_t(AF_INET)
+        address.sin_addr.s_addr = inet_addr("127.0.0.1")
+        let bound = withUnsafePointer(to: &address) { $0.withMemoryRebound(to: sockaddr.self, capacity: 1) { Darwin.bind(descriptor, $0, socklen_t(MemoryLayout<sockaddr_in>.size)) } }
+        guard bound == 0, Darwin.listen(descriptor, 1) == 0 else { Darwin.close(descriptor); throw POSIXError(.EIO) }
+        var length = socklen_t(MemoryLayout<sockaddr_in>.size)
+        let identified = withUnsafeMutablePointer(to: &address) { $0.withMemoryRebound(to: sockaddr.self, capacity: 1) { getsockname(descriptor, $0, &length) } }
+        guard identified == 0 else { Darwin.close(descriptor); throw POSIXError(.EIO) }
+        port = UInt16(bigEndian: address.sin_port)
+    }
+    func resetAfterFirstByte() async throws {
+        let descriptor = descriptor
+        try await Task.detached {
+            let peer = Darwin.accept(descriptor, nil, nil)
+            guard peer >= 0 else { throw POSIXError(.EIO) }
+            defer { Darwin.close(peer) }
+            var timeout = timeval(tv_sec: 5, tv_usec: 0)
+            _ = setsockopt(peer, SOL_SOCKET, SO_RCVTIMEO, &timeout, socklen_t(MemoryLayout<timeval>.size))
+            var byte: UInt8 = 0
+            guard Darwin.recv(peer, &byte, 1, 0) == 1 else { throw POSIXError(.EIO) }
+            var reset = linger(l_onoff: 1, l_linger: 0)
+            guard setsockopt(peer, SOL_SOCKET, SO_LINGER, &reset, socklen_t(MemoryLayout<linger>.size)) == 0 else { throw POSIXError(.EIO) }
+        }.value
+    }
+    func stop() { Darwin.close(descriptor) }
+}
+
 private final class TCPExchange: @unchecked Sendable {
     private let queue = DispatchQueue(label:"ATS local proxy client")
     private let connection: NWConnection
@@ -88,7 +124,10 @@ private final class TCPExchange: @unchecked Sendable {
                         // the full upload completes. Waiting to read can deadlock duplex I/O.
                         receive()
                         connection.send(content:request,contentContext:halfClose ? .finalMessage : .defaultMessage,isComplete:true,completion:.contentProcessed { [self] error in if let error { finish(.failure(contextual(error, stage: "client send"))) } })
-                    case .failed(let error): finish(.failure(contextual(error, stage: becameReady ? "client state after ready, received \(response.count) bytes" : "client connect")))
+                    case .failed(let error):
+                        // Once reading has begun its completion is authoritative;
+                        // state changes must not overtake pending content/FIN delivery.
+                        if !becameReady { finish(.failure(contextual(error, stage: "client connect"))) }
                     default: break
                     }
                 }
@@ -128,6 +167,27 @@ private func proxyPort(_ stream:AsyncStream<LocalProxyEvent>) async throws -> UI
 }
 @Suite(.serialized)
 struct LocalProxyTests {
+    @Test func realTCPResetStillProducesOriginalTransferFailure() async throws {
+        let fixture = try ResetTCPFixture(); defer { fixture.stop() }
+        let reset = Task { try await fixture.resetAfterFirstByte() }
+        let pair = AsyncStream<LocalProxyEvent>.makeStream()
+        let proxy = LocalHTTPProxy(idleTimeout: 3, maximumDuration: 5, event: { pair.continuation.yield($0) })
+        proxy.start(); defer { proxy.stopAndDrain(); pair.continuation.finish() }
+        let port = try await proxyPort(pair.stream)
+        var request = Data("CONNECT 127.0.0.1:\(fixture.port) HTTP/1.1\r\nHost: 127.0.0.1:\(fixture.port)\r\n\r\n".utf8)
+        request.append(Data(repeating: 0x42, count: 128 * 1024))
+        do { _ = try await TCPExchange(port: port).exchange(request) } catch {}
+        try await reset.value
+        for await event in pair.stream {
+            if case .capture(let record) = event, !record.active {
+                #expect(record.state == .failed)
+                #expect(record.failurePhase != nil)
+                #expect(record.transportErrors?.isEmpty == false)
+                #expect(record.error != nil)
+                break
+            }
+        }
+    }
     @Test func exactRuleActuallyMapsTargetReframesBodyAndRecordsOrigin() async throws {
         let fixture = try TCPFixture(mode: .http)
         let origin = try await fixture.start(); defer { fixture.stop() }
@@ -181,7 +241,7 @@ struct LocalProxyTests {
         #expect(forwarded.hasPrefix("GET /one?q=1 HTTP/1.1\r\n"));#expect(forwarded.contains("Host: 127.0.0.1:\(origin)"));#expect(!forwarded.contains("secret"))
         for await event in pair.stream { if case .capture(let record) = event, !record.active { #expect(record.status == 200);#expect(record.receivedBytes == response.count);#expect(!record.responsePreview.isEmpty);break } }
     }
-    @Test func connectRelaysLargeOpaqueBytesAndHalfClose() async throws {
+    @Test(arguments: 0..<8) func connectRelaysLargeOpaqueBytesAndHalfClose(_ iteration: Int) async throws {
         let fixture = try TCPFixture(mode:.echo);let origin = try await fixture.start();defer { fixture.stop() }
         let pair = AsyncStream<LocalProxyEvent>.makeStream()
         let proxy = LocalHTTPProxy(idleTimeout:3,maximumDuration:5,event:{ pair.continuation.yield($0) });proxy.start();defer { proxy.stopAndDrain();pair.continuation.finish() }
@@ -192,7 +252,7 @@ struct LocalProxyTests {
         let response = try await exchange.exchange(request)
         let header = Data("HTTP/1.1 200 Connection Established\r\n\r\n".utf8)
         #expect(response.starts(with:header));#expect(Data(response.dropFirst(header.count)) == payload)
-        for await event in pair.stream { if case .capture(let record) = event,!record.active { #expect(record.state == .completed, "Terminal state: \(record.state), error: \(record.error ?? "none")");#expect(record.sentBytes == payload.count);#expect(record.receivedBytes == payload.count);#expect(record.requestPreview.isEmpty && record.responsePreview.isEmpty);break } }
+        for await event in pair.stream { if case .capture(let record) = event,!record.active { #expect(record.state == .completed, "Terminal state: \(record.state), error: \(record.error ?? "none"), client read/write \(String(describing: record.clientReadClosed))/\(String(describing: record.clientWriteClosed)), upstream read/write \(String(describing: record.upstreamReadClosed))/\(String(describing: record.upstreamWriteClosed))");#expect(record.sentBytes == payload.count);#expect(record.receivedBytes == payload.count);#expect(record.requestPreview.isEmpty && record.responsePreview.isEmpty);break } }
     }
     @Test func ambiguousFramingRejectedBeforeConnecting() async throws {
         let pair = AsyncStream<LocalProxyEvent>.makeStream();let proxy = LocalHTTPProxy(idleTimeout:3,maximumDuration:5,event:{ pair.continuation.yield($0) });proxy.start();defer { proxy.stopAndDrain();pair.continuation.finish() }

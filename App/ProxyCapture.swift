@@ -15,6 +15,18 @@ struct ProxyCapture: Identifiable, Codable, Sendable, Equatable {
     var duration: Double = 0
     var status: Int?
     var error: String?
+    struct ConnectionStateIssue: Identifiable, Codable, Sendable, Equatable {
+        var id = UUID()
+        let phase: String
+        let errors: [ErrorEvidence]
+    }
+    var connectionStateIssues: [ConnectionStateIssue]?
+    var failurePhase: String?
+    var transportErrors: [ErrorEvidence]?
+    var clientReadClosed: Bool?
+    var clientWriteClosed: Bool?
+    var upstreamReadClosed: Bool?
+    var upstreamWriteClosed: Bool?
     var requestPreview = Data()
     var responsePreview = Data()
     var upstreamTLS: String?

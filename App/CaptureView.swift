@@ -117,6 +117,17 @@ private struct ProxyCaptureDetails: View {
                 LabeledContent("Dauer",value:"\(capture.duration.formatted(.number.precision(.fractionLength(2)))) s")
                 if let error = capture.error { Label(error,systemImage:"exclamationmark.circle").foregroundStyle(.orange) }
             }
+            if let issues = capture.connectionStateIssues, !issues.isEmpty {
+                Section("Zusätzliche Systemmeldungen") {
+                    Text("Diese Meldungen beschreiben den Verbindungsstatus des Betriebssystems. Der Übertragungsstatus berücksichtigt die tatsächlich abgeschlossenen Sende- und Empfangsvorgänge.").font(.footnote).foregroundStyle(.secondary)
+                    ForEach(issues) { issue in
+                        VStack(alignment: .leading, spacing: 4) {
+                            Text(issue.phase).font(.subheadline)
+                            Text(issue.errors.map { "\($0.domain) (\($0.code)): \($0.message)" }.joined(separator: "\n")).font(.footnote).foregroundStyle(.secondary).textSelection(.enabled)
+                        }
+                    }
+                }
+            }
             if capture.opaque { Section { Text("Die Bytezahlen beziehen sich auf den weitergeleiteten TCP-Datenstrom. Sie sind keine HTTP-Inhaltsgrößen und belegen weder den Inhalt noch die Zertifikatsprüfung des Clients.").foregroundStyle(.secondary) } }
             else {
                 if let errors = capture.upstreamTrustErrors { Section("Server-Zertifikatsprüfung") { DiagnosticIssueView(record:DiagnosticRecord(url:capture.target,method:capture.method,trustValid:false,trustErrors:errors)) } }

@@ -101,7 +101,7 @@ private final class ProxyRelay: @unchecked Sendable {
     }
     func start() {
         began = clock.now; emit(force:true)
-        client.stateUpdateHandler = { [weak self] state in if case .failed(let error) = state { self?.finish(state:.failed,message:error.localizedDescription) } }
+        client.stateUpdateHandler = { [weak self] state in if case .failed(let error) = state { self?.connectionStateFailed(error, phase: "Client-Verbindung") } }
         client.start(queue:queue)
         let lifetime = DispatchWorkItem { [weak self] in self?.reject(504,"Das Gesamtzeitlimit der Proxy-Verbindung ist erreicht.") }
         lifetimeWork = lifetime; queue.asyncAfter(deadline:.now()+maximumDuration,execute:lifetime)
@@ -112,9 +112,10 @@ private final class ProxyRelay: @unchecked Sendable {
     func stop(reason:String) { finish(state:.stopped,message:reason) }
     private func receiveRequest() {
         guard !finished else { return }
-        client.receive(minimumIncompleteLength:1,maximumLength:64*1024) { [weak self] data,_,eof,error in
+        client.receive(minimumIncompleteLength:1,maximumLength:64*1024) { [weak self] data,context,complete,error in
+            let eof = complete && context?.isFinal == true
             guard let self, !finished else { return }
-            if let error { finish(state:.failed,message:error.localizedDescription); return }
+            if let error { failTransfer(error, phase: "Empfang vom Client"); return }
             if let data, !data.isEmpty {
                 refreshIdle(); input.append(data)
                 guard input.count <= 2*ProxyWire.requestLimit + HTTPProxyMessage.headerLimit else { reject(413,"Die Anfrage überschreitet das Pufferlimit."); return }
@@ -123,7 +124,7 @@ private final class ProxyRelay: @unchecked Sendable {
                     if input.range(of:Data("\r\n\r\n".utf8)) != nil { headerWork?.cancel(); headerWork = nil }
                     if let expectation = try ProxyWire.expectation(input) {
                         guard expectation == "100-continue" else { reject(417,"Diese Expect-Anforderung wird nicht unterstützt."); return }
-                        if parsed == nil, !acknowledgedContinue { acknowledgedContinue = true; client.send(content:Data("HTTP/1.1 100 Continue\r\n\r\n".utf8),completion:.contentProcessed { [weak self] error in if let error { self?.finish(state:.failed,message:error.localizedDescription) } }) }
+                        if parsed == nil, !acknowledgedContinue { acknowledgedContinue = true; client.send(content:Data("HTTP/1.1 100 Continue\r\n\r\n".utf8),completion:.contentProcessed { [weak self] error in if let error { self?.failTransfer(error, phase: "100-Continue-Antwort senden") } }) }
                     }
                     if let parsed { receivedClientEOF = eof; connect(parsed); return }
                 } catch let error as HTTPProxyMessage.ParseError {
@@ -191,7 +192,7 @@ private final class ProxyRelay: @unchecked Sendable {
                     record.upstreamTLS = String(format:"0x%04x",sec_protocol_metadata_get_negotiated_tls_protocol_version(metadata.securityProtocolMetadata).rawValue)
                     record.upstreamCipher = String(format:"0x%04x",sec_protocol_metadata_get_negotiated_tls_ciphersuite(metadata.securityProtocolMetadata).rawValue)
                 }
-                connection.stateUpdateHandler = { [weak self] state in if case .failed(let error) = state { self?.finish(state:.failed,message:error.localizedDescription) } }
+                connection.stateUpdateHandler = { [weak self] state in if case .failed(let error) = state { self?.connectionStateFailed(error, phase: "Ziel-Verbindung") } }
                 established(request)
             case .failed(let error): reject(502,"Das Ziel konnte nicht verbunden werden: \(error.localizedDescription)")
             default: break
@@ -204,7 +205,7 @@ private final class ProxyRelay: @unchecked Sendable {
         if request.isTunnel {
             record.state = .tunnel; record.status = 200; sentControlResponse = true; emit(force:true)
             client.send(content:Data("HTTP/1.1 200 Connection Established\r\n\r\n".utf8),completion:.contentProcessed { [weak self] error in
-                guard let self, !finished else { return }; if let error { finish(state:.failed,message:error.localizedDescription); return }
+                guard let self, !finished else { return }; if let error { failTransfer(error, phase: "CONNECT-Antwort senden"); return }
                 let first = pendingUpgrade; pendingUpgrade = Data()
                 sendUpstream(first,eof:receivedClientEOF) { [weak self] in self?.startClientStream() }
                 receiveUpstream()
@@ -218,7 +219,7 @@ private final class ProxyRelay: @unchecked Sendable {
         guard !finished, let upstream else { return }
         if data.isEmpty && !eof { then(); return }
         upstream.send(content:data.isEmpty ? nil : data,contentContext:eof ? .finalMessage : .defaultMessage,isComplete:true,completion:.contentProcessed { [weak self] error in
-            guard let self, !finished else { return }; if let error { finish(state:.failed,message:error.localizedDescription) } else { record.sentBytes += data.count; if eof { upstreamWriteClosed = true }; emit(); then() }
+            guard let self, !finished else { return }; if let error { failTransfer(error, phase: "Senden an das Ziel") } else { record.sentBytes += data.count; if eof { upstreamWriteClosed = true }; emit(); then() }
         })
     }
     private func startClientStream() {
@@ -226,8 +227,9 @@ private final class ProxyRelay: @unchecked Sendable {
     }
     private func receiveClientStream() {
         guard !finished else { return }
-        client.receive(minimumIncompleteLength:1,maximumLength:64*1024) { [weak self] data,_,eof,error in
-            guard let self, !finished else { return }; if let error { finish(state:.failed,message:error.localizedDescription); return }
+        client.receive(minimumIncompleteLength:1,maximumLength:64*1024) { [weak self] data,context,complete,error in
+            let eof = complete && context?.isFinal == true
+            guard let self, !finished else { return }; if let error { failTransfer(error, phase: "Empfang vom Client"); return }
             if let data, !data.isEmpty { refreshIdle() }
             receivedClientEOF = eof
             sendUpstream(data ?? Data(),eof:eof) { [weak self] in
@@ -237,23 +239,25 @@ private final class ProxyRelay: @unchecked Sendable {
     }
     private func receiveUpstream() {
         guard !finished, let upstream else { return }
-        upstream.receive(minimumIncompleteLength:1,maximumLength:64*1024) { [weak self] data,_,eof,error in
-            guard let self, !finished else { return }; if let error { finish(state:.failed,message:error.localizedDescription); return }
+        upstream.receive(minimumIncompleteLength:1,maximumLength:64*1024) { [weak self] data,context,complete,error in
+            let eof = complete && context?.isFinal == true
+            guard let self, !finished else { return }
             let bytes = data ?? Data(); record.receivedBytes += bytes.count
             if !bytes.isEmpty {
                 refreshIdle(); sentControlResponse = true
                 if !record.opaque {
                     record.responsePreview.append(bytes.prefix(max(0,ProxyWire.previewLimit-record.responsePreview.count)))
                     if let status = ProxyWire.responseStatus(record.responsePreview), status >= 200 || status == 101 { record.status = status }
-                    if record.status == 101 && wantsUpgrade && !readingClientStream {
+                    if error == nil && record.status == 101 && wantsUpgrade && !readingClientStream {
                         record.state = .upgraded; emit(force:true)
                         let first = pendingUpgrade; pendingUpgrade = Data(); sendUpstream(first,eof:receivedClientEOF) { [weak self] in self?.startClientStream() }
                     }
                 }
             }
+            if let error { failTransfer(error, phase: "Empfang vom Ziel"); return }
             receivedUpstreamEOF = eof; emit()
             client.send(content:bytes.isEmpty ? nil : bytes,contentContext:eof ? .finalMessage : .defaultMessage,isComplete:true,completion:.contentProcessed { [weak self] error in
-                guard let self, !finished else { return }; if let error { finish(state:.failed,message:error.localizedDescription); return }
+                guard let self, !finished else { return }; if let error { failTransfer(error, phase: "Senden an den Client"); return }
                 if eof {
                     if record.opaque || record.state == .upgraded {
                         clientWriteClosed = true
@@ -275,6 +279,25 @@ private final class ProxyRelay: @unchecked Sendable {
         if sentControlResponse { finish(state:.failed,message:message); return }
         record.error = message; record.status = status; emit(force:true); sentControlResponse = true
         client.send(content:ProxyWire.errorResponse(status,message:message),completion:.contentProcessed { [weak self] _ in self?.finish(state:.failed,message:message) })
+    }
+    private func connectionStateFailed(_ error: NWError, phase: String) {
+        guard !finished else { return }
+        if [.forwarding, .tunnel, .upgraded].contains(record.state) {
+            // A connected stream has outstanding receive/send callbacks. Let their
+            // data/error/final-context completion decide the transfer outcome.
+            var issues = record.connectionStateIssues ?? []
+            if issues.count < 16 { issues.append(.init(phase: phase, errors: ErrorEvidence.capture(error))) }
+            record.connectionStateIssues = issues
+            emit(force: true)
+        } else { failTransfer(error, phase: phase) }
+    }
+    private func failTransfer(_ error: NWError, phase: String) {
+        guard !finished else { return }
+        record.failurePhase = phase
+        record.transportErrors = ErrorEvidence.capture(error)
+        record.clientReadClosed = receivedClientEOF; record.clientWriteClosed = clientWriteClosed
+        record.upstreamReadClosed = receivedUpstreamEOF; record.upstreamWriteClosed = upstreamWriteClosed
+        finish(state: .failed, message: phase + ": " + error.localizedDescription)
     }
     private func finish(state:ProxyCapture.State,message:String? = nil) {
         guard !finished else { return }; finished = true
