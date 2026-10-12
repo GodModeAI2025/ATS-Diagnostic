@@ -129,6 +129,7 @@
 		C2DB2498D717BB2B14CD6C59 /* CertificateDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B1A39C75564C7E5F42B7323 /* CertificateDetailView.swift */; };
 		CCF4F88C3D1EBE00E1A0D6AF /* CertificateFindings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FB8348535345EC1A56E1F14 /* CertificateFindings.swift */; };
 		CD2A517C0DE3C027B4A025A3 /* HTTPRequestFields.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99E6F21C883F3C2B23DCBE15 /* HTTPRequestFields.swift */; };
+		CFB6E0FD6CBD29EDFBD87332 /* ReverseDNSLookupTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB89D263179CE8DD0A4EF985 /* ReverseDNSLookupTests.swift */; };
 		D2EACD1C8C02F6241D3DD599 /* SignedCRLTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 260C1CF7F732EF44D22E72DA /* SignedCRLTests.swift */; };
 		D36018ADF1ED7A65B2F192AF /* DiagnosticSettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B23483D08F8289B1EEBDA828 /* DiagnosticSettingsView.swift */; };
 		DAD338AB51D878DA1BCF17E0 /* SDK-Post-Partial.json in Resources */ = {isa = PBXBuildFile; fileRef = 564023DD235D24ECA710F96D /* SDK-Post-Partial.json */; };
@@ -275,6 +276,7 @@
 		E031D20D2B393480C2B3A4CF /* ATSDiagnosticPreview.app */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.application; path = ATSDiagnosticPreview.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EAA192DD5325997D4603D365 /* HTTPProxyMessageTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPProxyMessageTests.swift; sourceTree = "<group>"; };
 		EAA33C1C93B935A4E25F3B42 /* HistoryPersistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryPersistence.swift; sourceTree = "<group>"; };
+		EB89D263179CE8DD0A4EF985 /* ReverseDNSLookupTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReverseDNSLookupTests.swift; sourceTree = "<group>"; };
 		F45C97FCFC49991D92C95A74 /* LocalHTTPProxy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalHTTPProxy.swift; sourceTree = "<group>"; };
 		FA48D7B93B862A0646236C1B /* ATSDiagnosticApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ATSDiagnosticApp.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -345,6 +347,7 @@
 				6B6905AC218394ADAC0E5D53 /* LocalProxyTests.swift */,
 				A06531EFAC5C286A0772F400 /* PolicyDirectivesTests.swift */,
 				D23B04393A327FEE67D7F180 /* RecordingSettingsTests.swift */,
+				EB89D263179CE8DD0A4EF985 /* ReverseDNSLookupTests.swift */,
 				1B73ED70D903B1752F319415 /* SDKHARImportTests.swift */,
 				260C1CF7F732EF44D22E72DA /* SignedCRLTests.swift */,
 				25717A33CD7A96A36B57D11D /* StreamingIntegrityTests.swift */,
@@ -774,6 +777,7 @@
 				6C09E3A6C1F3668CE8AC701C /* LocalProxyTests.swift in Sources */,
 				9573348766C5637851E2432B /* PolicyDirectivesTests.swift in Sources */,
 				4792B0CC0854E01E5A51D7D9 /* RecordingSettingsTests.swift in Sources */,
+				CFB6E0FD6CBD29EDFBD87332 /* ReverseDNSLookupTests.swift in Sources */,
 				3AF916B03824A8D13DDA9C89 /* SDKHARImportTests.swift in Sources */,
 				D2EACD1C8C02F6241D3DD599 /* SignedCRLTests.swift in Sources */,
 				3BEA09AEF69591C9E9CA8DAF /* StreamingIntegrityTests.swift in Sources */,

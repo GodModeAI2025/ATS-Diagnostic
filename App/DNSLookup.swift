@@ -67,3 +67,56 @@ enum SystemDNSLookup {
         return DNSLookupResult(host: host, addresses: addresses, duration: Double(elapsed.seconds) + Double(elapsed.attoseconds) / 1e18, truncated: truncated)
     }
 }
+
+struct DNSReverseResult: Sendable {
+    let address: String
+    let hostname: String
+    let duration: Double
+    var text: String { "\(address) → \(hostname)" }
+}
+
+enum SystemReverseDNSLookup {
+    struct Failure: LocalizedError, Sendable {
+        let code: Int32
+        var errorDescription: String? {
+            switch code {
+            case EAI_NONAME: "Der Systemresolver hat keinen Hostnamen zu dieser IP-Adresse gefunden. Ein fehlender Rückwärtseintrag ist kein TLS- oder Zertifikatsfehler."
+            case EAI_AGAIN: "Die Rückwärtsauflösung ist vorübergehend nicht verfügbar. Prüfe die Netzwerkverbindung und versuche es erneut."
+            default: "Die Rückwärtsauflösung ist fehlgeschlagen (Resolver-Code \(code))."
+            }
+        }
+    }
+    static func numericAddress(_ input: String) throws -> String {
+        var value = input.trimmingCharacters(in: .whitespacesAndNewlines)
+        if value.hasPrefix("[") && value.hasSuffix("]") { value = String(value.dropFirst().dropLast()) }
+        var ipv4 = in_addr()
+        var ipv6 = in6_addr()
+        guard value.withCString({ inet_pton(AF_INET, $0, &ipv4) }) == 1 || value.withCString({ inet_pton(AF_INET6, $0, &ipv6) }) == 1 else {
+            throw URLError(.badURL)
+        }
+        return value
+    }
+    static func resolve(_ input: String) async throws -> DNSReverseResult {
+        let address = try numericAddress(input)
+        return try await Task.detached(priority: .userInitiated) { try lookup(address) }.value
+    }
+    private static func lookup(_ address: String) throws -> DNSReverseResult {
+        let began = ContinuousClock.now
+        var hints = addrinfo()
+        hints.ai_family = AF_UNSPEC
+        hints.ai_socktype = SOCK_STREAM
+        hints.ai_flags = AI_NUMERICHOST
+        var list: UnsafeMutablePointer<addrinfo>?
+        let code = address.withCString { getaddrinfo($0, nil, &hints, &list) }
+        guard code == 0, let list else { throw Failure(code: code == 0 ? EAI_NONAME : code) }
+        defer { freeaddrinfo(list) }
+        var buffer = [CChar](repeating: 0, count: Int(NI_MAXHOST))
+        let result = buffer.withUnsafeMutableBufferPointer {
+            getnameinfo(list.pointee.ai_addr, list.pointee.ai_addrlen, $0.baseAddress, socklen_t($0.count), nil, 0, NI_NAMEREQD)
+        }
+        guard result == 0 else { throw Failure(code: result) }
+        let hostname = buffer.withUnsafeBufferPointer { String(cString: $0.baseAddress!) }
+        let elapsed = began.duration(to: .now).components
+        return DNSReverseResult(address: address, hostname: hostname, duration: Double(elapsed.seconds) + Double(elapsed.attoseconds) / 1e18)
+    }
+}
