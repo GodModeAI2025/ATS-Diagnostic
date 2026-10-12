@@ -36,15 +36,12 @@ import Observation
         do {
             let checksum = try Integrity.normalizeSHA256(expectedSHA256)
             let endpoint = try Endpoint.parse(url)
+            let fields = try HTTPRequestFields.parseHeaders(headers)
+            try HTTPRequestFields.validate(method: method, headers: fields)
             var request = URLRequest(url: endpoint)
             request.httpMethod = method
             if !body.isEmpty { request.httpBody = Data(body.utf8) }
-            for line in headers.split(separator: "\n") {
-                guard let colon = line.firstIndex(of: ":") else { throw HeaderError.invalid }
-                let name = String(line[..<colon]).trimmingCharacters(in: .whitespaces)
-                guard !name.isEmpty else { throw HeaderError.invalid }
-                request.setValue(String(line[line.index(after: colon)...]).trimmingCharacters(in: .whitespaces), forHTTPHeaderField: name)
-            }
+            for (name, value) in fields { request.setValue(value, forHTTPHeaderField: name) }
             running = true
             error = nil
             let record = await DiagnosticEngine(request: request, expectedSHA256: checksum, options: diagnosticOptions).run(request)

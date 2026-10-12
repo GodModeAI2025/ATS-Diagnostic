@@ -271,7 +271,7 @@ struct RecordView: View {
     private var checksumExplanation: LocalizedStringKey { record.origin == nil ? "SHA-256 of the complete received response" : "SHA-256 laut importierter Aufzeichnung · nicht neu geprüft" }
     private func detailList(includeOverview: Bool) -> some View {
         List {
-            if let origin = record.origin { ImportedRecordSection(origin: origin, requestBodyUnavailable: !record.canReplay, requestPreview: record.importedRequestBodyPreview, requestBytes: record.importedRequestBodyBytes) }
+            if let origin = record.origin { ImportedRecordSection(origin: origin, requestBodyUnavailable: record.requestBodyUnavailable == true, requestPreview: record.importedRequestBodyPreview, requestBytes: record.importedRequestBodyBytes, requestFormatError: record.requestFormatError) }
             if includeOverview { Section { ConnectionOverview(record: record); DiagnosticIssueView(record:displayedRecord) } }
             Section { NavigationLink { ConnectionMapView(record: record) } label: { Label("Connection map", systemImage: "point.3.connected.trianglepath.dotted") } }
             Section("Connection") {

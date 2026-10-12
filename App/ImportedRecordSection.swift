@@ -5,11 +5,17 @@ struct ImportedRecordSection: View {
     let requestBodyUnavailable: Bool
     let requestPreview: Data?
     let requestBytes: Int?
+    let requestFormatError: String?
     var body: some View {
         Section {
             Label("Importierte Aufzeichnung", systemImage: "square.and.arrow.down").font(.headline)
             if origin == .developerSDK { Text("Vom Export gemeldete Quelle: ATSRecording.").font(.subheadline) }
             Text("Die Angaben stammen aus der importierten Datei. Diese Verbindung wurde durch den Import nicht erneut geprüft.").font(.footnote).foregroundStyle(.secondary)
+            if let requestFormatError {
+                Label("Ungültige Anfragefelder", systemImage: "exclamationmark.triangle").font(.headline)
+                Text(requestFormatError).font(.footnote)
+                Text("Wiederholung und cURL-Ausgabe sind für diese Anfrage deaktiviert.").font(.footnote).foregroundStyle(.secondary)
+            }
             if requestBodyUnavailable {
                 Text("Der ursprüngliche Anfragekörper ist nicht vollständig für eine Wiederholung verfügbar. Wiederholung und cURL-Ausgabe sind deaktiviert.").font(.footnote)
                 LabeledContent("Ursprünglicher Anfragekörper", value: requestBytes.map { $0.formatted(.byteCount(style: .file)) } ?? "Nicht gemeldet")

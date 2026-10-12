@@ -87,6 +87,7 @@
 		A038E67CA289B16ED89D5F59 /* HistoryPersistenceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDC71A0A7F76360F74169CED /* HistoryPersistenceTests.swift */; };
 		A1D329C2B08FE63A1D9E56C9 /* CertificateReminderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59E847A30CD68F6D73D2CD42 /* CertificateReminderTests.swift */; };
 		A6B6B5EA6FA5D4483DC6A2F4 /* HTTPProxyMessageTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAA192DD5325997D4603D365 /* HTTPProxyMessageTests.swift */; };
+		AA4E2B2E832B02D541EF47A7 /* HTTPRequestFields.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99E6F21C883F3C2B23DCBE15 /* HTTPRequestFields.swift */; };
 		ACDA30D9DB4F1BB6FBB266B3 /* DiagnosticFailureTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A4D779A854D30AAF1836C77 /* DiagnosticFailureTests.swift */; };
 		AF276C8B265A3534BCCDA3A9 /* X509.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CFCC8BF2582B5E1B8F4E4A1 /* X509.swift */; };
 		B12964EFB49FAC1465B30292 /* DiagnosticSettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B23483D08F8289B1EEBDA828 /* DiagnosticSettingsView.swift */; };
@@ -109,6 +110,7 @@
 		C20E1B5DF3B19D588AD83858 /* ATSDiagnosticApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA48D7B93B862A0646236C1B /* ATSDiagnosticApp.swift */; };
 		C2DB2498D717BB2B14CD6C59 /* CertificateDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B1A39C75564C7E5F42B7323 /* CertificateDetailView.swift */; };
 		CCF4F88C3D1EBE00E1A0D6AF /* CertificateFindings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FB8348535345EC1A56E1F14 /* CertificateFindings.swift */; };
+		CD2A517C0DE3C027B4A025A3 /* HTTPRequestFields.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99E6F21C883F3C2B23DCBE15 /* HTTPRequestFields.swift */; };
 		D2EACD1C8C02F6241D3DD599 /* SignedCRLTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 260C1CF7F732EF44D22E72DA /* SignedCRLTests.swift */; };
 		D36018ADF1ED7A65B2F192AF /* DiagnosticSettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B23483D08F8289B1EEBDA828 /* DiagnosticSettingsView.swift */; };
 		DAD338AB51D878DA1BCF17E0 /* SDK-Post-Partial.json in Resources */ = {isa = PBXBuildFile; fileRef = 564023DD235D24ECA710F96D /* SDK-Post-Partial.json */; };
@@ -121,6 +123,7 @@
 		E7F88C72B0A0FBD40949F4E9 /* VisualComponents.swift in Sources */ = {isa = PBXBuildFile; fileRef = 687B5C8DC9BA142303849330 /* VisualComponents.swift */; };
 		E8E0B14A37A3221A3914BD93 /* BadSSLView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00CDFFB17F51EC96E7E8D7EF /* BadSSLView.swift */; };
 		EC87C05D22670AF92C2D9FDE /* BadSSLSuite.swift in Sources */ = {isa = PBXBuildFile; fileRef = 706B5102F961F60CA9E9BE97 /* BadSSLSuite.swift */; };
+		ECDEBE2221C9AE55E1CA4852 /* HTTPRequestFieldsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 671714AA452AF89A71417A2C /* HTTPRequestFieldsTests.swift */; };
 		ED25B8DCC7D3B3248750CD7F /* PolicyDirectives.swift in Sources */ = {isa = PBXBuildFile; fileRef = B24D2A511693F1C3090D61F1 /* PolicyDirectives.swift */; };
 		F1F1C375B80BF4C13DE010B6 /* IntegrityTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98BF98AF90961C96D6E0AB2B /* IntegrityTests.swift */; };
 		F372717F60A20CA93078034E /* BackgroundWriteLease.swift in Sources */ = {isa = PBXBuildFile; fileRef = 647945BB215181112C4706B2 /* BackgroundWriteLease.swift */; };
@@ -190,6 +193,7 @@
 		5CAB7A4A887A022BE790CC74 /* DiagnosticOptions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiagnosticOptions.swift; sourceTree = "<group>"; };
 		5F7CB99775433E4D4A1F096F /* ProxyLiveTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProxyLiveTests.swift; sourceTree = "<group>"; };
 		647945BB215181112C4706B2 /* BackgroundWriteLease.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundWriteLease.swift; sourceTree = "<group>"; };
+		671714AA452AF89A71417A2C /* HTTPRequestFieldsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPRequestFieldsTests.swift; sourceTree = "<group>"; };
 		687B5C8DC9BA142303849330 /* VisualComponents.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VisualComponents.swift; sourceTree = "<group>"; };
 		6A5AE58CCEBB77DC8A9F1E7C /* ATSDiagnosticLiveTests.xctest */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.cfbundle; path = ATSDiagnosticLiveTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		6AB56752BCD5D28B97DB8C7E /* ATSDiagnostic.app */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.application; path = ATSDiagnostic.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -207,6 +211,7 @@
 		948315BB0FCB5247585725A2 /* SignedCRL.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignedCRL.swift; sourceTree = "<group>"; };
 		960C7CE9492F2F4DBADC03AB /* SDK-Live-Example.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = "SDK-Live-Example.json"; sourceTree = "<group>"; };
 		98BF98AF90961C96D6E0AB2B /* IntegrityTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntegrityTests.swift; sourceTree = "<group>"; };
+		99E6F21C883F3C2B23DCBE15 /* HTTPRequestFields.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPRequestFields.swift; sourceTree = "<group>"; };
 		9B1A39C75564C7E5F42B7323 /* CertificateDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CertificateDetailView.swift; sourceTree = "<group>"; };
 		9D694D65FB7B8DE61D1846A0 /* BadSSLCatalog.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = BadSSLCatalog.json; sourceTree = "<group>"; };
 		9F8BC3C673B24C862C754BBD /* CertificateTransparencyTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CertificateTransparencyTests.swift; sourceTree = "<group>"; };
@@ -295,6 +300,7 @@
 				BDC71A0A7F76360F74169CED /* HistoryPersistenceTests.swift */,
 				4D6467264A0E56E47E993F93 /* HistoryRetentionTests.swift */,
 				EAA192DD5325997D4603D365 /* HTTPProxyMessageTests.swift */,
+				671714AA452AF89A71417A2C /* HTTPRequestFieldsTests.swift */,
 				98BF98AF90961C96D6E0AB2B /* IntegrityTests.swift */,
 				6B6905AC218394ADAC0E5D53 /* LocalProxyTests.swift */,
 				A06531EFAC5C286A0772F400 /* PolicyDirectivesTests.swift */,
@@ -358,6 +364,7 @@
 				3E94985D0FEBCCA700CA4190 /* HistoryRetention.swift */,
 				BAA06F59CA7F407DB1257EED /* HTTPDetailViews.swift */,
 				3AA82D275D1C50A55AA9F83A /* HTTPProxyMessage.swift */,
+				99E6F21C883F3C2B23DCBE15 /* HTTPRequestFields.swift */,
 				A3C307EBF4A75A452738313B /* ImportedRecordSection.swift */,
 				B5571AEF32197ACDBF1475DB /* Integrity.swift */,
 				F45C97FCFC49991D92C95A74 /* LocalHTTPProxy.swift */,
@@ -593,6 +600,7 @@
 				2C6A9B2F1CC537D485940B4A /* HAR.swift in Sources */,
 				89D5B454689C2C103A4F4D3B /* HTTPDetailViews.swift in Sources */,
 				B924E34D3C99DDB24D926116 /* HTTPProxyMessage.swift in Sources */,
+				CD2A517C0DE3C027B4A025A3 /* HTTPRequestFields.swift in Sources */,
 				F50BCDE9B12AD890E5318501 /* HistoryPersistence.swift in Sources */,
 				B8BBBA6048FDD004D4C8F20B /* HistoryRetention.swift in Sources */,
 				E27198736FA91776E9ACED06 /* ImportedRecordSection.swift in Sources */,
@@ -649,6 +657,7 @@
 				BF6307C82B4BDB21AE152F13 /* HAR.swift in Sources */,
 				8A921EC296645270E2EB0A83 /* HTTPDetailViews.swift in Sources */,
 				3189B213A050C5CA5E2FAF86 /* HTTPProxyMessage.swift in Sources */,
+				AA4E2B2E832B02D541EF47A7 /* HTTPRequestFields.swift in Sources */,
 				E2C7B9A0B262CBA53881B560 /* HistoryPersistence.swift in Sources */,
 				B4D274B683F5DE606BC54D3D /* HistoryRetention.swift in Sources */,
 				035D026530724683CB0399C9 /* ImportedRecordSection.swift in Sources */,
@@ -686,6 +695,7 @@
 				117F3FD22732F020EEE3C5E1 /* EndpointTests.swift in Sources */,
 				12B5FC44B53A012A2E7B0ACC /* HARTests.swift in Sources */,
 				A6B6B5EA6FA5D4483DC6A2F4 /* HTTPProxyMessageTests.swift in Sources */,
+				ECDEBE2221C9AE55E1CA4852 /* HTTPRequestFieldsTests.swift in Sources */,
 				A038E67CA289B16ED89D5F59 /* HistoryPersistenceTests.swift in Sources */,
 				788F3B299F032DAEBE98254A /* HistoryRetentionTests.swift in Sources */,
 				F1F1C375B80BF4C13DE010B6 /* IntegrityTests.swift in Sources */,

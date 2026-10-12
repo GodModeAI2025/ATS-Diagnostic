@@ -51,7 +51,11 @@ struct DiagnosticRecord: Identifiable, Codable, Sendable {
     var responseByteCountKnown: Bool?
     var importedResponseComplete: Bool?
     var importedObservedResponseBytes: Int?
-    var canReplay: Bool { requestBodyUnavailable != true }
+    var requestFormatError: String? {
+        do { _ = try Endpoint.parse(url); try HTTPRequestFields.validate(method: method, headers: requestHeaders); return nil }
+        catch { return error.localizedDescription }
+    }
+    var canReplay: Bool { requestBodyUnavailable != true && requestFormatError == nil }
     var curl: String {
         let headers = requestHeaders.sorted { $0.key < $1.key }.map { "-H \(Self.quote("\($0.key): \($0.value)"))" }.joined(separator: " ")
         return "curl -X \(method) \(headers) \(requestBody.isEmpty ? "" : "--data-raw " + Self.quote(requestBody)) \(Self.quote(url))"
