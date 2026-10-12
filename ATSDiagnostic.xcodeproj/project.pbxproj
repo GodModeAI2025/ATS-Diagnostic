@@ -27,6 +27,7 @@
 		278E7C9032D85DBD8D084D09 /* CertificateDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B1A39C75564C7E5F42B7323 /* CertificateDetailView.swift */; };
 		2A5754DAECFC18D4B434D0F2 /* BackgroundWriteLease.swift in Sources */ = {isa = PBXBuildFile; fileRef = 647945BB215181112C4706B2 /* BackgroundWriteLease.swift */; };
 		2C2AEEE90F31E4BA71B21532 /* VisualComponents.swift in Sources */ = {isa = PBXBuildFile; fileRef = 687B5C8DC9BA142303849330 /* VisualComponents.swift */; };
+		2C38BE19CAA1B01D9C812134 /* SDK-Stream-Partial.json in Resources */ = {isa = PBXBuildFile; fileRef = B136DA93075DD990C98CAF78 /* SDK-Stream-Partial.json */; };
 		2C6A9B2F1CC537D485940B4A /* HAR.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E46CE5231D8CC42A1587A78 /* HAR.swift */; };
 		2C9DF7749D26EB73CC9B75B1 /* History-Legacy33.json in Resources */ = {isa = PBXBuildFile; fileRef = 4CDAF4C177EEEC846261D444 /* History-Legacy33.json */; };
 		2D4D12C09D75D149C65AECF5 /* CCADB-License.txt in Resources */ = {isa = PBXBuildFile; fileRef = 576B1BE5362059F67EF577F8 /* CCADB-License.txt */; };
@@ -214,6 +215,7 @@
 		ABC8F829F66AF685D8859DC0 /* TLSProbe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TLSProbe.swift; sourceTree = "<group>"; };
 		ADFBB0848E1250019868E7F3 /* RevocationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RevocationView.swift; sourceTree = "<group>"; };
 		AE9DCAB53091977AB4E4AFCD /* SDK-Live-wrong.host.badssl.com.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = "SDK-Live-wrong.host.badssl.com.json"; sourceTree = "<group>"; };
+		B136DA93075DD990C98CAF78 /* SDK-Stream-Partial.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = "SDK-Stream-Partial.json"; sourceTree = "<group>"; };
 		B23483D08F8289B1EEBDA828 /* DiagnosticSettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiagnosticSettingsView.swift; sourceTree = "<group>"; };
 		B24D2A511693F1C3090D61F1 /* PolicyDirectives.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PolicyDirectives.swift; sourceTree = "<group>"; };
 		B5571AEF32197ACDBF1475DB /* Integrity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Integrity.swift; sourceTree = "<group>"; };
@@ -253,6 +255,7 @@
 				DD7E726B18C28B33FFD73D71 /* SDK-Live-expired.badssl.com.json */,
 				AE9DCAB53091977AB4E4AFCD /* SDK-Live-wrong.host.badssl.com.json */,
 				564023DD235D24ECA710F96D /* SDK-Post-Partial.json */,
+				B136DA93075DD990C98CAF78 /* SDK-Stream-Partial.json */,
 			);
 			path = Fixtures;
 			sourceTree = "<group>";
@@ -531,6 +534,7 @@
 				B5574A9300DE2D61D7E7AB8F /* SDK-Live-expired.badssl.com.json in Resources */,
 				221DC1D1E65ED9A8B3F628F2 /* SDK-Live-wrong.host.badssl.com.json in Resources */,
 				DAD338AB51D878DA1BCF17E0 /* SDK-Post-Partial.json in Resources */,
+				2C38BE19CAA1B01D9C812134 /* SDK-Stream-Partial.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

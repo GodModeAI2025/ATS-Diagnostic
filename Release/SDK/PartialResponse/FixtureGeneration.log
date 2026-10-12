@@ -1,0 +1,14 @@
+Building for debugging...
+[1 / 9] ATSRecording
+[2 / 5] ATSRecordingTests-product
+[4 / 7] ATSRecordingTests-product
+[9 / 11] ATSRecordingTests-product
+Build complete! (2,00 Sek.)
+◇ Test run started.
+↳ Testing Library Version: 2084
+↳ Target Platform: arm64e-apple-macos14.0
+◇ Suite RecordingClientTests started.
+◇ Test structuredStreamEarlyReturnRecordsPartialWithoutInventingFailure() started.
+✔ Test structuredStreamEarlyReturnRecordsPartialWithoutInventingFailure() passed after 0.009 seconds.
+✔ Suite RecordingClientTests passed after 0.009 seconds.
+✔ Test run with 1 test in 1 suite passed after 0.009 seconds.

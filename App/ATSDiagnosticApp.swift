@@ -241,6 +241,7 @@ struct RecordRow: View {
             VStack(alignment: .leading, spacing: 6) {
             Text(record.url).font(.headline).lineLimit(2)
             Label("\(record.method) · \(record.status.map(String.init) ?? "Failed")", systemImage: record.error == nil ? "checkmark.circle" : "exclamationmark.triangle").foregroundStyle(record.error == nil ? Color.secondary : Color.red)
+            if record.importedResponseComplete == false && (record.status != nil || record.importedObservedResponseBytes != nil) { Label("Teilaufnahme", systemImage: "doc.text").font(.caption).foregroundStyle(.secondary) }
             Text(record.date, format: .dateTime.month().day().hour().minute()).font(.caption).foregroundStyle(.secondary)
             }
         }.padding(.vertical, 4)
@@ -297,7 +298,7 @@ struct RecordView: View {
                 if let d = record.dnsDuration { LabeledContent("DNS", value: d.formatted() + " s") }
                 if let d = record.connectDuration { LabeledContent("Connect", value: d.formatted() + " s") }
                 if let d = record.tlsDuration { LabeledContent("TLS handshake", value: d.formatted() + " s") }
-                LabeledContent("Response size", value: record.bytes.formatted(.byteCount(style: .file)))
+                LabeledContent("Response size", value: record.responseByteCountKnown == false ? "Unbekannt" : record.bytes.formatted(.byteCount(style: .file)))
             }
             Section {
                 ConnectionSecuritySummary(record: record)
@@ -320,7 +321,7 @@ struct RecordView: View {
                 ForEach(record.responseHeaders.keys.sorted().prefix(3), id: \.self) { key in HeaderRow(item: HeaderItem(name: key, value: record.responseHeaders[key] ?? "")) }
                 NavigationLink("All headers") { HeadersView(headers: record.responseHeaders) }
             }
-            ResponseBodySection(body: record.responseBody, encoding: record.responseEncoding, bytes: record.bytes, previewLimit: record.diagnosticOptions?.bodyPreviewBytes, hasCompleteHash: record.origin == nil && record.responseSHA256 != nil, byteCountKnown: record.responseByteCountKnown != false)
+            ResponseBodySection(body: record.responseBody, encoding: record.responseEncoding, bytes: record.bytes, previewLimit: record.diagnosticOptions?.bodyPreviewBytes, hasCompleteHash: record.origin == nil && record.responseSHA256 != nil, byteCountKnown: record.responseByteCountKnown != false, incomplete: record.importedResponseComplete == false && (record.status != nil || record.importedObservedResponseBytes != nil), observedBytes: record.importedObservedResponseBytes)
             Section {
                 ShareLink("Copy or share as cURL", item: record.curl).disabled(!record.canReplay)
                 Button("Replay request") { Task { await store.execute(url: record.url, method: record.method, headers: record.requestHeaders.map { "\($0.key): \($0.value)" }.joined(separator: "\n"), body: record.requestBody) } }.disabled(store.running || !record.canReplay)
@@ -336,12 +337,21 @@ private struct ResponseBodySection: View {
     let previewLimit: Int?
     let hasCompleteHash: Bool
     let byteCountKnown: Bool
-    init(body: String, encoding: String?, bytes: Int, previewLimit: Int?, hasCompleteHash: Bool, byteCountKnown: Bool) {
-        bodyText = body; self.encoding = encoding; self.bytes = bytes; self.previewLimit = previewLimit; self.hasCompleteHash = hasCompleteHash; self.byteCountKnown = byteCountKnown
+    let incomplete: Bool
+    let observedBytes: Int?
+    init(body: String, encoding: String?, bytes: Int, previewLimit: Int?, hasCompleteHash: Bool, byteCountKnown: Bool, incomplete: Bool, observedBytes: Int?) {
+        bodyText = body; self.encoding = encoding; self.bytes = bytes; self.previewLimit = previewLimit; self.hasCompleteHash = hasCompleteHash; self.byteCountKnown = byteCountKnown; self.incomplete = incomplete; self.observedBytes = observedBytes
     }
     var body: some View {
         Section("Antwortdaten") {
-            LabeledContent("Empfangen", value: byteCountKnown ? bytes.formatted(.byteCount(style: .file)) : "Nicht gemeldet")
+            if incomplete {
+                Label("Unvollständige Antwortaufzeichnung", systemImage: "doc.text").font(.headline)
+                LabeledContent("Gesamtgröße", value: "Unbekannt")
+                if let observedBytes { LabeledContent("Laut Export aufgezeichnet", value: observedBytes.formatted(.byteCount(style: .file))) }
+                Text("Die Aufzeichnung endete vor dem vollständigen Lesen der Antwort. Der HTTP-Status allein bestätigt keine vollständige Antwort; ein vollständiger Hash wird nicht ausgewiesen.").font(.footnote).foregroundStyle(.secondary)
+            } else {
+                LabeledContent("Empfangen", value: byteCountKnown ? bytes.formatted(.byteCount(style: .file)) : "Nicht gemeldet")
+            }
             if bodyText.isEmpty {
                 Text(!byteCountKnown ? "Der Import enthält keine verlässlich gemeldete Antwortgröße." : bytes > 0 ? "Antwortdaten empfangen; keine Textvorschau gespeichert." : "Keine Antwortdaten empfangen.").foregroundStyle(.secondary)
             } else {

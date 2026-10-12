@@ -47,7 +47,11 @@ private final class TCPFixture: @unchecked Sendable {
             if mode == .serverHalfClose { if eof { connection.cancel() } else { receive(connection) } }
             else if mode == .echo || upgraded {
                 connection.send(content:bytes.isEmpty ? nil : bytes,contentContext:eof ? .finalMessage : .defaultMessage,isComplete:true,completion:.contentProcessed { [self] error in
-                    if eof || error != nil { connection.cancel() } else { receive(connection) }
+                    if error != nil { connection.cancel() }
+                    else if !eof { receive(connection) }
+                    else if mode != .echo { connection.cancel() }
+                    // Keep the echo peer alive until the test has observed proxy
+                    // completion; immediate cancellation races final FIN processing.
                 })
             } else if (try? HTTPProxyMessage.parseRequest(requestData)) != nil {
                 if mode == .upgrade {
@@ -68,7 +72,8 @@ private final class TCPExchange: @unchecked Sendable {
     private var continuation: CheckedContinuation<Data,any Error>?
     private var response = Data()
     private var afterEOF: Data?
-    init(port: UInt16) { connection = NWConnection(host:"127.0.0.1",port:NWEndpoint.Port(rawValue:port)!,using:.tcp) }
+    private let keepOpenAfterResponse: Bool
+    init(port: UInt16, keepOpenAfterResponse: Bool = false) { self.keepOpenAfterResponse = keepOpenAfterResponse; connection = NWConnection(host:"127.0.0.1",port:NWEndpoint.Port(rawValue:port)!,using:.tcp) }
     func exchange(_ request:Data,halfClose:Bool = true,afterEOF:Data? = nil) async throws -> Data {
         try await withCheckedThrowingContinuation { continuation in
             queue.async { [self] in
@@ -103,8 +108,12 @@ private final class TCPExchange: @unchecked Sendable {
         let original = error as NSError
         return NSError(domain: original.domain, code: original.code, userInfo: [NSLocalizedDescriptionKey: "\(stage): \(error)", NSUnderlyingErrorKey: error])
     }
+    func stop() { queue.sync { connection.stateUpdateHandler = nil; connection.cancel() } }
     private func finish(_ result:Result<Data,any Error>) {
-        guard let continuation else { return };self.continuation = nil;connection.stateUpdateHandler = nil;connection.cancel();continuation.resume(with:result)
+        guard let continuation else { return };self.continuation = nil;connection.stateUpdateHandler = nil
+        if case .failure = result { connection.cancel() }
+        else if !keepOpenAfterResponse { connection.cancel() }
+        continuation.resume(with:result)
     }
 }
 
@@ -135,7 +144,8 @@ struct LocalProxyTests {
         let port = try await proxyPort(pair.stream)
         let payload = Data((0..<(512*1024)).map { UInt8($0 % 251) })
         var request = Data("CONNECT 127.0.0.1:\(origin) HTTP/1.1\r\nHost: 127.0.0.1:\(origin)\r\n\r\n".utf8);request.append(payload)
-        let response = try await TCPExchange(port:port).exchange(request)
+        let exchange = TCPExchange(port: port, keepOpenAfterResponse: true); defer { exchange.stop() }
+        let response = try await exchange.exchange(request)
         let header = Data("HTTP/1.1 200 Connection Established\r\n\r\n".utf8)
         #expect(response.starts(with:header));#expect(Data(response.dropFirst(header.count)) == payload)
         for await event in pair.stream { if case .capture(let record) = event,!record.active { #expect(record.state == .completed, "Terminal state: \(record.state), error: \(record.error ?? "none")");#expect(record.sentBytes == payload.count);#expect(record.receivedBytes == payload.count);#expect(record.requestPreview.isEmpty && record.responsePreview.isEmpty);break } }

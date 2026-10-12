@@ -71,7 +71,7 @@ struct TrafficOverview: View {
     var body: some View {
         AdaptiveMetricGrid {
             MetricTile(title: "Requests", value: statistics.count.formatted(), symbol: "arrow.up.arrow.down")
-            MetricTile(title: "Response data", value: statistics.bytes.formatted(.byteCount(style: .file)), symbol: "externaldrive")
+            MetricTile(title: "Response data", value: statistics.responseSizesKnown ? statistics.bytes.formatted(.byteCount(style: .file)) : "Unbekannt", symbol: "externaldrive")
             MetricTile(title: "Average time", value: statistics.averageDuration.formatted(.number.precision(.fractionLength(3))) + " s", symbol: "timer")
             MetricTile(title: "Failures", value: statistics.failures.formatted(), symbol: "exclamationmark.circle")
         }.padding(.vertical, 8)

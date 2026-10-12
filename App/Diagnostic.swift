@@ -49,6 +49,8 @@ struct DiagnosticRecord: Identifiable, Codable, Sendable {
     var importedRequestBodyPreview: Data?
     var importedRequestBodyBytes: Int?
     var responseByteCountKnown: Bool?
+    var importedResponseComplete: Bool?
+    var importedObservedResponseBytes: Int?
     var canReplay: Bool { requestBodyUnavailable != true }
     var curl: String {
         let headers = requestHeaders.sorted { $0.key < $1.key }.map { "-H \(Self.quote("\($0.key): \($0.value)"))" }.joined(separator: " ")

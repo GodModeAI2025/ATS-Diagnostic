@@ -8,6 +8,43 @@ struct SDKHARImportTests {
         let url = try #require(Bundle(for: SDKHARResourceScope.self).url(forResource: name, withExtension: "json"))
         return try Data(contentsOf: url)
     }
+    @Test func actualPartialStreamKeepsObservedBytesWithoutFullSizeOrHash() throws {
+        let record = try #require(HARArchive.importRecords(fixture("SDK-Stream-Partial")).first)
+        #expect(record.origin == .developerSDK); #expect(record.status == 200)
+        #expect(record.importedResponseComplete == false)
+        #expect(record.importedObservedResponseBytes == 3)
+        #expect(record.responseByteCountKnown == false); #expect(record.bytes == 0)
+        #expect(record.responseSHA256 == nil); #expect(record.error == nil)
+        #expect(Data(base64Encoded: record.responseBody) == Data([0, 1]))
+        #expect(record.canReplay)
+        #expect(!TrafficStatistics([record]).responseSizesKnown)
+    }
+    @Test func partialStreamRoundTripPreservesSeparateObservedCount() throws {
+        let records = try HARArchive.importRecords(fixture("SDK-Stream-Partial"))
+        let restored = try HARArchive(records: records).records()
+        #expect(restored.first?.importedResponseComplete == false)
+        #expect(restored.first?.importedObservedResponseBytes == 3)
+        #expect(restored.first?.responseByteCountKnown == false)
+        #expect(restored.first?.responseSHA256 == nil)
+    }
+    @Test func partialMetadataCannotClaimFullSizeHashOrTooFewObservedBytes() throws {
+        var root = try #require(try JSONSerialization.jsonObject(with: fixture("SDK-Stream-Partial")) as? [String: Any])
+        var log = try #require(root["log"] as? [String: Any])
+        var entries = try #require(log["entries"] as? [[String: Any]])
+        var metadata = try #require(entries[0]["_atsDiagnostic"] as? [String: Any])
+        metadata["responseBytesKnown"] = true
+        metadata["responseSHA256"] = String(repeating: "f", count: 64)
+        metadata["observedResponseBytes"] = 1
+        var response = try #require(entries[0]["response"] as? [String: Any])
+        var content = try #require(response["content"] as? [String: Any])
+        content["size"] = 99; response["content"] = content
+        entries[0]["response"] = response; entries[0]["_atsDiagnostic"] = metadata
+        log["entries"] = entries; root["log"] = log
+        let record = try #require(HARArchive.importRecords(JSONSerialization.data(withJSONObject: root)).first)
+        #expect(record.responseByteCountKnown == false); #expect(record.bytes == 0)
+        #expect(record.responseSHA256 == nil); #expect(record.importedObservedResponseBytes == nil)
+    }
+
     @Test func actualSDKSuccessKeepsPreviewAndReportedHash() throws {
         let record = try #require(HARArchive.importRecords(fixture("SDK-Live-Example")).first)
         #expect(record.origin == .developerSDK); #expect(record.status == 200)

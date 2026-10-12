@@ -21,7 +21,7 @@ struct ConnectionMapView: View {
                     DisclosureGroup {
                         VStack(alignment: .leading, spacing: 12) {
                             NavigationLink { HeadersView(headers: record.responseHeaders) } label: { TreeNode(title: "Headers", subtitle: "\(record.responseHeaders.count) fields · delivery, security & caching", symbol: "list.bullet.rectangle") }
-                            NavigationLink { TextValueView(title: "Response body", value: record.responseBody) } label: { TreeNode(title: "Body", subtitle: record.bytes.formatted(.byteCount(style: .file)), symbol: "doc.text") }
+                            NavigationLink { TextValueView(title: "Response body", value: record.responseBody) } label: { TreeNode(title: "Body", subtitle: record.responseByteCountKnown == false ? "Gesamtgröße unbekannt" : record.bytes.formatted(.byteCount(style: .file)), symbol: "doc.text") }
                         }.padding(.top, 12)
                     } label: { TreeNode(title: "HTTP response", subtitle: "\(record.method) · \(record.status.map(String.init) ?? "Failed") · \(record.protocolName ?? "Protocol not reported")", symbol: "arrow.down.doc") }
                 }

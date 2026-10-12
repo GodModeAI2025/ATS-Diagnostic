@@ -231,6 +231,7 @@ struct RecordingClientTests {
         #expect(metadata["responseBytesKnown"] as? Bool == false)
         #expect(metadata["observedResponseBytes"] as? Int == 3)
         #expect(response["bodySize"] as? Int == -1)
+        try writeHARFixture(har, name: "SDK-Stream-Partial")
     }
     @Test func structuredConsumerErrorIsNotMisreportedAsTransportError() async throws {
         enum ConsumerFailure: Error { case parsing }

@@ -27,10 +27,12 @@ enum ResponseCategory: String, CaseIterable, Identifiable {
 struct TrafficStatistics {
     let count: Int
     let bytes: Int
+    let responseSizesKnown: Bool
     let averageDuration: Double
     let failures: Int
     init(_ records: [DiagnosticRecord]) {
         count = records.count
+        responseSizesKnown = records.allSatisfy { $0.responseByteCountKnown != false }
         bytes = records.reduce(0) { $0 + $1.bytes }
         averageDuration = records.isEmpty ? 0 : records.reduce(0) { $0 + $1.duration } / Double(records.count)
         failures = records.filter { $0.error != nil || ($0.status ?? 0) >= 400 }.count
