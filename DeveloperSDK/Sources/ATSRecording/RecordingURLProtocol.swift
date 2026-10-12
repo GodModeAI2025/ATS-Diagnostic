@@ -6,15 +6,20 @@ public final class RecordingProtocolContext: @unchecked Sendable {
     public enum ConfigurationError: Error { case backgroundSession, mismatchedProtocol }
     let recorder: RecordingClient
     let previewLimit: Int
+    let transportDelegate: (any URLSessionTaskDelegate)?
     private let configuration: URLSessionConfiguration
     private let lock = NSLock()
     private var active = 0
     private var omitted = 0
     public var omittedCaptureCount: Int { lock.withLock { omitted } }
 
-    public init(recorder: RecordingClient, configuration: URLSessionConfiguration = .ephemeral, previewLimit: Int = 64 * 1024) throws {
+    /// The optional delegate is retained for this context's lifetime. It receives
+    /// callbacks for the internal forwarding sessions/tasks on their delegate queues.
+    /// Do not identify these objects with the outer sessions returned by makeSession.
+    public init(recorder: RecordingClient, configuration: URLSessionConfiguration = .ephemeral, previewLimit: Int = 64 * 1024, transportDelegate: (any URLSessionTaskDelegate)? = nil) throws {
         guard configuration.identifier == nil else { throw ConfigurationError.backgroundSession }
         self.recorder = recorder
+        self.transportDelegate = transportDelegate
         self.previewLimit = max(0, min(previewLimit, 64 * 1024))
         self.configuration = configuration.copy() as! URLSessionConfiguration
         self.configuration.protocolClasses = configuration.protocolClasses?.filter { !($0 is RecordingURLProtocol.Type) }
@@ -22,7 +27,8 @@ public final class RecordingProtocolContext: @unchecked Sendable {
 
     /// New sessions automatically record supported HTTP data loads, including async
     /// and completion-handler calls. Existing sessions are not modified.
-    /// Use the existing-session wrappers for host-specific authentication delegates.
+    /// The optional transport delegate receives the internal session/task callbacks.
+    /// It does not represent or replace a delegate on an existing host session.
     public func makeSession(protocolClass: RecordingURLProtocol.Type) throws -> URLSession {
         guard protocolClass.recordingContext === self else { throw ConfigurationError.mismatchedProtocol }
         let copy = forwardingConfiguration()
@@ -53,6 +59,16 @@ open class RecordingURLProtocol: URLProtocol, URLSessionDataDelegate, @unchecked
         return canInit(with: request)
     }
     open override class func canonicalRequest(for request: URLRequest) -> URLRequest { request }
+
+    public override func responds(to selector: Selector!) -> Bool {
+        super.responds(to: selector) || type(of: self).recordingContext?.transportDelegate?.responds(to: selector) == true
+    }
+    public override func forwardingTarget(for selector: Selector!) -> Any? {
+        if let target = type(of: self).recordingContext?.transportDelegate, target.responds(to: selector) {
+            return target
+        }
+        return super.forwardingTarget(for: selector)
+    }
 
     private let stateLock = NSRecursiveLock()
     private var forwardingSession: URLSession?
@@ -117,6 +133,7 @@ open class RecordingURLProtocol: URLProtocol, URLSessionDataDelegate, @unchecked
     }
     public func urlSession(_ session: URLSession, task: URLSessionTask, didFinishCollecting metrics: URLSessionTaskMetrics) {
         stateLock.withLock { if !terminal { self.metrics = RecordedTaskMetrics(metrics) } }
+        type(of: self).recordingContext?.transportDelegate?.urlSession?(session, task: task, didFinishCollecting: metrics)
     }
     public func urlSession(_ session: URLSession, task: URLSessionTask, didCompleteWithError error: (any Error)?) {
         stateLock.withLock {
@@ -127,6 +144,7 @@ open class RecordingURLProtocol: URLProtocol, URLSessionDataDelegate, @unchecked
             session.finishTasksAndInvalidate()
             forwardingSession = nil; forwardingTask = nil
         }
+        type(of: self).recordingContext?.transportDelegate?.urlSession?(session, task: task, didCompleteWithError: error)
     }
     private func finish(error: NSError?, success: Bool) {
         terminal = true

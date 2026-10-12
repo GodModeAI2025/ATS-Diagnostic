@@ -13,6 +13,50 @@ private final class NativeRecordingProtocol: RecordingURLProtocol, @unchecked Se
     }()
     override class var recordingContext: RecordingProtocolContext? { context }
 }
+private final class ProtocolPolicyDelegate: NSObject, URLSessionTaskDelegate, @unchecked Sendable {
+    let rejectRedirect: Bool
+    let cancelAuthentication: Bool
+    private let lock = NSLock()
+    private var redirects = 0
+    private var challenges = 0
+    private var metrics = 0
+    private var completions = 0
+    private var completionError: Int?
+    var redirectCount: Int { lock.withLock { redirects } }
+    var challengeCount: Int { lock.withLock { challenges } }
+    var metricsCount: Int { lock.withLock { metrics } }
+    var completionCount: Int { lock.withLock { completions } }
+    var lastCompletionError: Int? { lock.withLock { completionError } }
+    init(rejectRedirect: Bool, cancelAuthentication: Bool) {
+        self.rejectRedirect = rejectRedirect; self.cancelAuthentication = cancelAuthentication
+    }
+    func urlSession(_ session: URLSession, task: URLSessionTask, willPerformHTTPRedirection response: HTTPURLResponse, newRequest request: URLRequest, completionHandler: @escaping @Sendable (URLRequest?) -> Void) {
+        lock.withLock { redirects += 1 }
+        completionHandler(rejectRedirect ? nil : request)
+    }
+    func urlSession(_ session: URLSession, task: URLSessionTask, didFinishCollecting metrics: URLSessionTaskMetrics) {
+        lock.withLock { self.metrics += 1 }
+    }
+    func urlSession(_ session: URLSession, task: URLSessionTask, didCompleteWithError error: (any Error)?) {
+        lock.withLock { completions += 1; completionError = (error as NSError?)?.code }
+    }
+    func urlSession(_ session: URLSession, didReceive challenge: URLAuthenticationChallenge, completionHandler: @escaping @Sendable (URLSession.AuthChallengeDisposition, URLCredential?) -> Void) {
+        lock.withLock { challenges += 1 }
+        completionHandler(cancelAuthentication ? .cancelAuthenticationChallenge : .performDefaultHandling, nil)
+    }
+}
+private final class RedirectPolicyRecordingProtocol: RecordingURLProtocol, @unchecked Sendable {
+    static let recorder = try! RecordingClient()
+    static let policy = ProtocolPolicyDelegate(rejectRedirect: true, cancelAuthentication: false)
+    static let context = try! RecordingProtocolContext(recorder: recorder, transportDelegate: policy)
+    override class var recordingContext: RecordingProtocolContext? { context }
+}
+private final class AuthenticationPolicyRecordingProtocol: RecordingURLProtocol, @unchecked Sendable {
+    static let recorder = try! RecordingClient()
+    static let policy = ProtocolPolicyDelegate(rejectRedirect: false, cancelAuthentication: true)
+    static let context = try! RecordingProtocolContext(recorder: recorder, transportDelegate: policy)
+    override class var recordingContext: RecordingProtocolContext? { context }
+}
 @Suite(.serialized, .enabled(if: ProcessInfo.processInfo.environment["ATS_RECORDING_LIVE"] == "1"))
 struct LiveURLProtocolTests {
     @Test(arguments: ["https://example.com/", "https://enbw.com/"])
@@ -52,9 +96,52 @@ struct LiveURLProtocolTests {
         #expect(record.responseSHA256 == nil); #expect(record.responseBytes == nil)
         print("SDK_PROTOCOL_NATIVE \(target) system rejection\(failure.code) preserved")
     }
-    private func waitForRecord() async throws -> RecordedExchange? {
+    @Test func nativeTransportDelegateCanRejectRedirectWithoutLosingResponse() async throws {
+        let recorder = RedirectPolicyRecordingProtocol.recorder
+        await recorder.clear()
+        let session = try RedirectPolicyRecordingProtocol.context.makeSession(protocolClass: RedirectPolicyRecordingProtocol.self)
+        defer { session.invalidateAndCancel() }
+        let (_, response) = try await session.data(from: URL(string: "https://enbw.com/")!)
+        #expect((response as? HTTPURLResponse)?.statusCode == 301)
+        #expect(RedirectPolicyRecordingProtocol.policy.redirectCount > 0)
+        let record = try #require(await waitForRecord(in: recorder))
+        #expect(record.status == 301); #expect(record.errorCode == nil)
+        #expect(record.metrics?.redirectCount == 0)
+        try await waitForCompletion(of: RedirectPolicyRecordingProtocol.policy)
+        #expect(RedirectPolicyRecordingProtocol.policy.metricsCount == 1)
+        #expect(RedirectPolicyRecordingProtocol.policy.completionCount == 1)
+        #expect(RedirectPolicyRecordingProtocol.policy.lastCompletionError == nil)
+    }
+    @Test func nativeTransportDelegateCanCancelAuthenticationWithoutOverride() async throws {
+        let recorder = AuthenticationPolicyRecordingProtocol.recorder
+        await recorder.clear()
+        let session = try AuthenticationPolicyRecordingProtocol.context.makeSession(protocolClass: AuthenticationPolicyRecordingProtocol.self)
+        defer { session.invalidateAndCancel() }
+        var returned: NSError?
+        do {
+            _ = try await session.data(from: URL(string: "https://example.com/")!)
+            Issue.record("Transport delegate cancellation was ignored")
+        } catch { returned = error as NSError }
+        let failure = try #require(returned)
+        #expect(failure.domain == NSURLErrorDomain); #expect(failure.code == URLError.cancelled.rawValue)
+        #expect(AuthenticationPolicyRecordingProtocol.policy.challengeCount > 0)
+        let record = try #require(await waitForRecord(in: recorder))
+        #expect(record.errorDomain == failure.domain); #expect(record.errorCode == failure.code)
+        #expect(record.responseComplete == false); #expect(record.responseSHA256 == nil)
+        try await waitForCompletion(of: AuthenticationPolicyRecordingProtocol.policy)
+        #expect(AuthenticationPolicyRecordingProtocol.policy.completionCount == 1)
+        #expect(AuthenticationPolicyRecordingProtocol.policy.lastCompletionError == failure.code)
+    }
+    private func waitForCompletion(of policy: ProtocolPolicyDelegate) async throws {
         for _ in 0..<100 {
-            if let record = await liveProtocolRecorder.records().first { return record }
+            if policy.completionCount > 0 { return }
+            try await Task.sleep(for: .milliseconds(10))
+        }
+        Issue.record("Missing original transport completion callback")
+    }
+    private func waitForRecord(in recorder: RecordingClient = liveProtocolRecorder) async throws -> RecordedExchange? {
+        for _ in 0..<100 {
+            if let record = await recorder.records().first { return record }
             try await Task.sleep(for: .milliseconds(10))
         }
         return nil

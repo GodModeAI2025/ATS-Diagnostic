@@ -1,0 +1,29 @@
+Building for debugging...
+[2 / 11] ATSRecording
+[4 / 13] ATSRecording
+[12 / 17] ATSRecording
+[16 / 19] ATSRecordingTests-product
+[22 / 24] ATSRecordingTests-product
+Build complete! (1,46 Sek.)
+◇ Test run started.
+↳ Testing Library Version: 2084
+↳ Target Platform: arm64e-apple-macos14.0
+◇ Suite LiveURLProtocolTests started.
+◇ Test nativeHTTPResponseAndRedirectMetrics(_:) started.
+◇ Test case passing 1 argument target → "https://example.com/" to nativeHTTPResponseAndRedirectMetrics(_:) started.
+SDK_PROTOCOL_NATIVE https://example.com/ status200 bytes577 redirects0
+◇ Test case passing 1 argument target → "https://enbw.com/" to nativeHTTPResponseAndRedirectMetrics(_:) started.
+SDK_PROTOCOL_NATIVE https://enbw.com/ status200 bytes199958 redirects1
+✔ Test nativeHTTPResponseAndRedirectMetrics(_:) with 2 test cases passed after 0.247 seconds.
+◇ Test nativeCertificateRejectionIsPreserved(_:) started.
+◇ Test case passing 1 argument target → "https://expired.badssl.com/" to nativeCertificateRejectionIsPreserved(_:) started.
+SDK_PROTOCOL_NATIVE https://expired.badssl.com/ system rejection-1202 preserved
+◇ Test case passing 1 argument target → "https://wrong.host.badssl.com/" to nativeCertificateRejectionIsPreserved(_:) started.
+SDK_PROTOCOL_NATIVE https://wrong.host.badssl.com/ system rejection-1202 preserved
+✔ Test nativeCertificateRejectionIsPreserved(_:) with 2 test cases passed after 4.706 seconds.
+◇ Test nativeTransportDelegateCanRejectRedirectWithoutLosingResponse() started.
+✔ Test nativeTransportDelegateCanRejectRedirectWithoutLosingResponse() passed after 0.042 seconds.
+◇ Test nativeTransportDelegateCanCancelAuthenticationWithoutOverride() started.
+✔ Test nativeTransportDelegateCanCancelAuthenticationWithoutOverride() passed after 0.023 seconds.
+✔ Suite LiveURLProtocolTests passed after 5.020 seconds.
+✔ Test run with 4 tests in 1 suite passed after 5.020 seconds.

@@ -1,19 +1,15 @@
 {
-  "verifiedAt": "2026-10-12T13:09:14.165628+02:00",
-  "feature": "Automatic URLProtocol recording in new host-configured sessions",
-  "macOSTestMethodsPassed": 53,
-  "iOSTestMethodsPassed": 53,
-  "iOSParameterizedExecutionsPassed": 61,
+  "verifiedAt": "2026-10-12T13:18:30.306318+02:00",
+  "baseCommit": "3102ccb",
+  "feature": "Automatic URLProtocol recording, with explicit forwarding-transport policies",
+  "macOSTestMethodsPassed": 55,
+  "iOSTestMethodsPassed": 55,
+  "iOSExecutionsPassed": 63,
   "failed": 0,
   "skipped": 0,
-  "iOS": "27.0 simulator",
-  "liveCases": [
-    "example.com HTTP200/full SHA256",
-    "enbw.com HTTP200/one native redirect",
-    "expired.badssl.com system rejection",
-    "wrong.host.badssl.com system rejection"
-  ],
+  "runtimeWarnings": 0,
   "appBinaryChanged": false,
-  "uploadedPreviewBuild": 54,
-  "completeHistoricalParity": false
+  "uploadedPreviewBuildUnchanged": 54,
+  "existingSessionDelegateParity": false,
+  "proofDirectory": "TransportPolicy"
 }
