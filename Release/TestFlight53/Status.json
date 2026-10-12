@@ -1,0 +1,17 @@
+{
+  "appId": "6821686996",
+  "bundleId": "com.mobilebox.atsdiagnostic.preview",
+  "version": "2.0",
+  "build": 53,
+  "sourceCommit": "71415d0",
+  "archive": "succeeded",
+  "upload": "in_progress",
+  "processing": "not_verified",
+  "testFlightAssignment": "not_verified",
+  "intendedTester": "mark_zimmermann@mac.com",
+  "unitTestMethodsPassed": 142,
+  "editReplayURLHeadersBodyUIVerified": true,
+  "unavailableSDKBodyUIVerified": false,
+  "deviceInstallationVerified": false,
+  "proxyRewriteRuntimeEnabled": false
+}
