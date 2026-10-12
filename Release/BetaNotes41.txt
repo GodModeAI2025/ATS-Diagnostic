@@ -1,0 +1,7 @@
+ATS Diagnostic 2.0 (41)
+
+Der gespeicherte Verlauf wird jetzt im Hintergrund gelesen und dekodiert. Währenddessen erscheint ein Ladehinweis. Frühe Anfragen, Importe und Löschaktionen warten auf den gespeicherten Stand, damit keine neuen Änderungen durch das Laden überschrieben werden.
+
+Enthält außerdem die Verbesserungen von Build 40: zusammengefasste atomare Speicheraufträge außerhalb der Oberfläche, Abschluss laufender Schreibvorgänge innerhalb der gewährten Hintergrundzeit und den korrigierten Leerzustand auf iPhone/iPad.
+
+Testhinweis: Bericht speichern, App erneut starten und History öffnen. Den Verlauf löschen und erneut starten; der Verlauf muss leer bleiben.
