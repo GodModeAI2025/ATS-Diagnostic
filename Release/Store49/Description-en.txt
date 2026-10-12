@@ -1,0 +1,15 @@
+Inspect HTTP connections, TLS negotiation and certificates directly on your iPhone or iPad.
+
+ATS Diagnostic helps you understand user-selected local and Internet endpoints:
+• Certificate chain, issuer, validity and fingerprints
+• Apple system trust results and original connection errors
+• Negotiated TLS version and cipher, plus individual TLS-version probes
+• Certificate Transparency timestamps and dated log directories
+• Response headers, HSTS explanations and bounded response previews
+• Request building, cURL import, history and HAR export
+• Foreground loopback HTTP proxy and opaque CONNECT forwarding
+• System IPv4/IPv6 address lookup and SHA-256 download checks
+
+Results describe the observed connection. Root-store directory membership is separate from platform trust validation. SCT signatures and log inclusion are not independently verified. A successful request is not a comprehensive ATS-compliance certification.
+
+History stays on your device. Export only the reports you choose to share.

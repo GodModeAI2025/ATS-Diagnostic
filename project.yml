@@ -8,13 +8,21 @@ settings:
     SWIFT_VERSION: '6.0'
     DEVELOPMENT_TEAM: SP73Z8JWXM
     MARKETING_VERSION: '2.0'
-    CURRENT_PROJECT_VERSION: '48'
+    CURRENT_PROJECT_VERSION: '49'
     TARGETED_DEVICE_FAMILY: '1,2'
 targets:
   ATSDiagnostic:
     type: application
     platform: iOS
     sources: [App]
+    info:
+      path: Configuration/ATSDiagnostic-Info.plist
+      properties:
+        CFBundleShortVersionString: $(MARKETING_VERSION)
+        CFBundleVersion: $(CURRENT_PROJECT_VERSION)
+        NSLocalNetworkUsageDescription: "ATS Diagnostic prüft von dir ausgewählte Geräte und Server im lokalen Netzwerk, um HTTP, TLS und Zertifikate zu untersuchen."
+        NSAppTransportSecurity:
+          NSAllowsLocalNetworking: true
     settings:
       base:
         PRODUCT_BUNDLE_IDENTIFIER: com.mobilebox.atsdiagnostic
@@ -29,6 +37,14 @@ targets:
     type: application
     platform: iOS
     sources: [App]
+    info:
+      path: Configuration/ATSDiagnosticPreview-Info.plist
+      properties:
+        CFBundleShortVersionString: $(MARKETING_VERSION)
+        CFBundleVersion: $(CURRENT_PROJECT_VERSION)
+        NSLocalNetworkUsageDescription: "ATS Diagnostic prüft von dir ausgewählte Geräte und Server im lokalen Netzwerk, um HTTP, TLS und Zertifikate zu untersuchen."
+        NSAppTransportSecurity:
+          NSAllowsLocalNetworking: true
     settings:
       base:
         PRODUCT_BUNDLE_IDENTIFIER: com.mobilebox.atsdiagnostic.preview

@@ -1,0 +1,769 @@
+Command line invocation:
+    /Applications/Xcode.app/Contents/Developer/usr/bin/xcodebuild -project ATSDiagnostic.xcodeproj -scheme ATSDiagnostic -destination "platform=iOS Simulator,id=60567F9D-DAD7-4445-84BF-F22C057FEA80" -derivedDataPath ../../work/Store49LocalCheck build
+
+ComputePackagePrebuildTargetDependencyGraph
+
+Prepare packages
+
+CreateBuildRequest
+
+SendProjectDescription
+
+CreateBuildOperation
+
+ComputeTargetDependencyGraph
+note: Building targets in dependency order
+note: Target dependency graph (1 target)
+    Target 'ATSDiagnostic' in project 'ATSDiagnostic' (no dependencies)
+
+GatherProvisioningInputs
+
+CreateBuildDescription
+
+ExecuteExternalTool /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -v -E -dM -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator27.0.sdk -x c -c /dev/null
+
+ExecuteExternalTool /Applications/Xcode.app/Contents/Developer/usr/bin/ibtool --version --output-format xml1
+
+ExecuteExternalTool /Applications/Xcode.app/Contents/Developer/usr/bin/actool --print-asset-tag-combinations --output-format xml1 /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/outputs/ATS-Diagnostic/App/Assets.xcassets
+
+ExecuteExternalTool /Applications/Xcode.app/Contents/Developer/usr/bin/actool --version --output-format xml1
+
+ExecuteExternalTool /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc --version
+
+ExecuteExternalTool /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/ld -version_details
+
+Build description signature: d0803882a05c2939e235003aa478cee0
+Build description path: /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/Store49LocalCheck/Build/Intermediates.noindex/XCBuildData/d0803882a05c2939e235003aa478cee0.xcbuilddata
+CreateBuildDirectory /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/Store49LocalCheck/ModuleCache.noindex
+    cd /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/outputs/ATS-Diagnostic/ATSDiagnostic.xcodeproj
+    builtin-create-build-directory /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/Store49LocalCheck/ModuleCache.noindex
+
+CreateBuildDirectory /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/Store49LocalCheck/SDKExplicitPrecompiledModules
+    cd /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/outputs/ATS-Diagnostic/ATSDiagnostic.xcodeproj
+    builtin-create-build-directory /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/Store49LocalCheck/SDKExplicitPrecompiledModules
+
+CreateBuildDirectory /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/Store49LocalCheck/CompilationCache.noindex
+    cd /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/outputs/ATS-Diagnostic/ATSDiagnostic.xcodeproj
+    builtin-create-build-directory /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/Store49LocalCheck/CompilationCache.noindex
+
+ClangStatCache /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang-stat-cache /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator27.0.sdk /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/Store49LocalCheck/SDKStatCaches.noindex/iphonesimulator27.0-24A430-e829b21a6f8c9b70876ba0858053c0448dc58220667be655e1bcc261a7455254.sdkstatcache
+    cd /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/outputs/ATS-Diagnostic/ATSDiagnostic.xcodeproj
+    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang-stat-cache /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator27.0.sdk -o /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/Store49LocalCheck/SDKStatCaches.noindex/iphonesimulator27.0-24A430-e829b21a6f8c9b70876ba0858053c0448dc58220667be655e1bcc261a7455254.sdkstatcache
+
+CreateBuildDirectory /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/Store49LocalCheck/Build/Products
+    cd /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/outputs/ATS-Diagnostic/ATSDiagnostic.xcodeproj
+    builtin-create-build-directory /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/Store49LocalCheck/Build/Products
+
+CreateBuildDirectory /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/Store49LocalCheck/Build/Intermediates.noindex
+    cd /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/outputs/ATS-Diagnostic/ATSDiagnostic.xcodeproj
+    builtin-create-build-directory /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/Store49LocalCheck/Build/Intermediates.noindex
+
+CreateBuildDirectory /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/Store49LocalCheck/Build/Intermediates.noindex/ExplicitPrecompiledModules
+    cd /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/outputs/ATS-Diagnostic/ATSDiagnostic.xcodeproj
+    builtin-create-build-directory /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/Store49LocalCheck/Build/Intermediates.noindex/ExplicitPrecompiledModules
+
+CreateBuildDirectory /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/Store49LocalCheck/Build/Intermediates.noindex/SwiftExplicitPrecompiledModules
+    cd /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/outputs/ATS-Diagnostic/ATSDiagnostic.xcodeproj
+    builtin-create-build-directory /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/Store49LocalCheck/Build/Intermediates.noindex/SwiftExplicitPrecompiledModules
+
+CreateBuildDirectory /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/Store49LocalCheck/Build/Intermediates.noindex/PrecompiledHeaders
+    cd /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/outputs/ATS-Diagnostic/ATSDiagnostic.xcodeproj
+    builtin-create-build-directory /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/Store49LocalCheck/Build/Intermediates.noindex/PrecompiledHeaders
+
+CreateBuildDirectory /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/Store49LocalCheck/Build/Intermediates.noindex/EagerLinkingTBDs/Debug-iphonesimulator
+    cd /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/outputs/ATS-Diagnostic/ATSDiagnostic.xcodeproj
+    builtin-create-build-directory /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/Store49LocalCheck/Build/Intermediates.noindex/EagerLinkingTBDs/Debug-iphonesimulator
+
+CreateBuildDirectory /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/Store49LocalCheck/Build/Products/Debug-iphonesimulator
+    cd /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/outputs/ATS-Diagnostic/ATSDiagnostic.xcodeproj
+    builtin-create-build-directory /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/Store49LocalCheck/Build/Products/Debug-iphonesimulator
+
+WriteAuxiliaryFile /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/Store49LocalCheck/Build/Intermediates.noindex/ATSDiagnostic.build/Debug-iphonesimulator/ATSDiagnostic-cafc0eb5694d32a8835b6c6a8412de95-VFS-iphonesimulator/all-product-headers.yaml
+    cd /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/outputs/ATS-Diagnostic/ATSDiagnostic.xcodeproj
+    write-file /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/Store49LocalCheck/Build/Intermediates.noindex/ATSDiagnostic.build/Debug-iphonesimulator/ATSDiagnostic-cafc0eb5694d32a8835b6c6a8412de95-VFS-iphonesimulator/all-product-headers.yaml
+
+WriteAuxiliaryFile /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/Store49LocalCheck/Build/Intermediates.noindex/ATSDiagnostic.build/Debug-iphonesimulator/ATSDiagnostic.build/ATSDiagnostic.hmap (in target 'ATSDiagnostic' from project 'ATSDiagnostic')
+    cd /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/outputs/ATS-Diagnostic
+    write-file /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/Store49LocalCheck/Build/Intermediates.noindex/ATSDiagnostic.build/Debug-iphonesimulator/ATSDiagnostic.build/ATSDiagnostic.hmap
+
+WriteAuxiliaryFile /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/Store49LocalCheck/Build/Intermediates.noindex/ATSDiagnostic.build/Debug-iphonesimulator/ATSDiagnostic.build/ATSDiagnostic.DependencyStaticMetadataFileList (in target 'ATSDiagnostic' from project 'ATSDiagnostic')
+    cd /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/outputs/ATS-Diagnostic
+    write-file /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/Store49LocalCheck/Build/Intermediates.noindex/ATSDiagnostic.build/Debug-iphonesimulator/ATSDiagnostic.build/ATSDiagnostic.DependencyStaticMetadataFileList
+
+WriteAuxiliaryFile /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/Store49LocalCheck/Build/Intermediates.noindex/ATSDiagnostic.build/Debug-iphonesimulator/ATSDiagnostic.build/ATSDiagnostic-project-headers.hmap (in target 'ATSDiagnostic' from project 'ATSDiagnostic')
+    cd /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/outputs/ATS-Diagnostic
+    write-file /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/Store49LocalCheck/Build/Intermediates.noindex/ATSDiagnostic.build/Debug-iphonesimulator/ATSDiagnostic.build/ATSDiagnostic-project-headers.hmap
+
+WriteAuxiliaryFile /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/Store49LocalCheck/Build/Intermediates.noindex/ATSDiagnostic.build/Debug-iphonesimulator/ATSDiagnostic.build/ATSDiagnostic-own-target-headers.hmap (in target 'ATSDiagnostic' from project 'ATSDiagnostic')
+    cd /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/outputs/ATS-Diagnostic
+    write-file /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/Store49LocalCheck/Build/Intermediates.noindex/ATSDiagnostic.build/Debug-iphonesimulator/ATSDiagnostic.build/ATSDiagnostic-own-target-headers.hmap
+
+WriteAuxiliaryFile /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/Store49LocalCheck/Build/Intermediates.noindex/ATSDiagnostic.build/Debug-iphonesimulator/ATSDiagnostic.build/ATSDiagnostic.DependencyMetadataFileList (in target 'ATSDiagnostic' from project 'ATSDiagnostic')
+    cd /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/outputs/ATS-Diagnostic
+    write-file /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/Store49LocalCheck/Build/Intermediates.noindex/ATSDiagnostic.build/Debug-iphonesimulator/ATSDiagnostic.build/ATSDiagnostic.DependencyMetadataFileList
+
+WriteAuxiliaryFile /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/Store49LocalCheck/Build/Intermediates.noindex/ATSDiagnostic.build/Debug-iphonesimulator/ATSDiagnostic.build/ATSDiagnostic-generated-files.hmap (in target 'ATSDiagnostic' from project 'ATSDiagnostic')
+    cd /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/outputs/ATS-Diagnostic
+    write-file /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/Store49LocalCheck/Build/Intermediates.noindex/ATSDiagnostic.build/Debug-iphonesimulator/ATSDiagnostic.build/ATSDiagnostic-generated-files.hmap
+
+WriteAuxiliaryFile /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/Store49LocalCheck/Build/Intermediates.noindex/ATSDiagnostic.build/Debug-iphonesimulator/ATSDiagnostic.build/ATSDiagnostic-all-target-headers.hmap (in target 'ATSDiagnostic' from project 'ATSDiagnostic')
+    cd /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/outputs/ATS-Diagnostic
+    write-file /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/Store49LocalCheck/Build/Intermediates.noindex/ATSDiagnostic.build/Debug-iphonesimulator/ATSDiagnostic.build/ATSDiagnostic-all-target-headers.hmap
+
+WriteAuxiliaryFile /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/Store49LocalCheck/Build/Intermediates.noindex/ATSDiagnostic.build/Debug-iphonesimulator/ATSDiagnostic.build/ATSDiagnostic-DebugDylibPath-normal-arm64.txt (in target 'ATSDiagnostic' from project 'ATSDiagnostic')
+    cd /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/outputs/ATS-Diagnostic
+    write-file /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/Store49LocalCheck/Build/Intermediates.noindex/ATSDiagnostic.build/Debug-iphonesimulator/ATSDiagnostic.build/ATSDiagnostic-DebugDylibPath-normal-arm64.txt
+
+WriteAuxiliaryFile /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/Store49LocalCheck/Build/Intermediates.noindex/ATSDiagnostic.build/Debug-iphonesimulator/ATSDiagnostic.build/ATSDiagnostic-all-non-framework-target-headers.hmap (in target 'ATSDiagnostic' from project 'ATSDiagnostic')
+    cd /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/outputs/ATS-Diagnostic
+    write-file /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/Store49LocalCheck/Build/Intermediates.noindex/ATSDiagnostic.build/Debug-iphonesimulator/ATSDiagnostic.build/ATSDiagnostic-all-non-framework-target-headers.hmap
+
+WriteAuxiliaryFile /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/Store49LocalCheck/Build/Intermediates.noindex/ATSDiagnostic.build/Debug-iphonesimulator/ATSDiagnostic.build/Objects-normal/arm64/ATSDiagnostic.SwiftConstValuesFileList (in target 'ATSDiagnostic' from project 'ATSDiagnostic')
+    cd /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/outputs/ATS-Diagnostic
+    write-file /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/Store49LocalCheck/Build/Intermediates.noindex/ATSDiagnostic.build/Debug-iphonesimulator/ATSDiagnostic.build/Objects-normal/arm64/ATSDiagnostic.SwiftConstValuesFileList
+
+WriteAuxiliaryFile /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/Store49LocalCheck/Build/Intermediates.noindex/ATSDiagnostic.build/Debug-iphonesimulator/ATSDiagnostic.build/Objects-normal/arm64/ATSDiagnostic.SwiftFileList (in target 'ATSDiagnostic' from project 'ATSDiagnostic')
+    cd /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/outputs/ATS-Diagnostic
+    write-file /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/Store49LocalCheck/Build/Intermediates.noindex/ATSDiagnostic.build/Debug-iphonesimulator/ATSDiagnostic.build/Objects-normal/arm64/ATSDiagnostic.SwiftFileList
+
+WriteAuxiliaryFile /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/Store49LocalCheck/Build/Intermediates.noindex/ATSDiagnostic.build/Debug-iphonesimulator/ATSDiagnostic.build/ATSDiagnostic-DebugDylibInstallName-normal-arm64.txt (in target 'ATSDiagnostic' from project 'ATSDiagnostic')
+    cd /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/outputs/ATS-Diagnostic
+    write-file /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/Store49LocalCheck/Build/Intermediates.noindex/ATSDiagnostic.build/Debug-iphonesimulator/ATSDiagnostic.build/ATSDiagnostic-DebugDylibInstallName-normal-arm64.txt
+
+MkDir /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/Store49LocalCheck/Build/Products/Debug-iphonesimulator/ATSDiagnostic.app (in target 'ATSDiagnostic' from project 'ATSDiagnostic')
+    cd /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/outputs/ATS-Diagnostic
+    /bin/mkdir -p /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/Store49LocalCheck/Build/Products/Debug-iphonesimulator/ATSDiagnostic.app
+
+WriteAuxiliaryFile /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/Store49LocalCheck/Build/Intermediates.noindex/ATSDiagnostic.build/Debug-iphonesimulator/ATSDiagnostic.build/Objects-normal/arm64/ATSDiagnostic_const_extract_protocols.json (in target 'ATSDiagnostic' from project 'ATSDiagnostic')
+    cd /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/outputs/ATS-Diagnostic
+    write-file /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/Store49LocalCheck/Build/Intermediates.noindex/ATSDiagnostic.build/Debug-iphonesimulator/ATSDiagnostic.build/Objects-normal/arm64/ATSDiagnostic_const_extract_protocols.json
+
+WriteAuxiliaryFile /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/Store49LocalCheck/Build/Intermediates.noindex/ATSDiagnostic.build/Debug-iphonesimulator/ATSDiagnostic.build/Objects-normal/arm64/ATSDiagnostic.LinkFileList (in target 'ATSDiagnostic' from project 'ATSDiagnostic')
+    cd /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/outputs/ATS-Diagnostic
+    write-file /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/Store49LocalCheck/Build/Intermediates.noindex/ATSDiagnostic.build/Debug-iphonesimulator/ATSDiagnostic.build/Objects-normal/arm64/ATSDiagnostic.LinkFileList
+
+WriteAuxiliaryFile /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/Store49LocalCheck/Build/Intermediates.noindex/ATSDiagnostic.build/Debug-iphonesimulator/ATSDiagnostic.build/DerivedSources/Entitlements-Simulated.plist (in target 'ATSDiagnostic' from project 'ATSDiagnostic')
+    cd /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/outputs/ATS-Diagnostic
+    write-file /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/Store49LocalCheck/Build/Intermediates.noindex/ATSDiagnostic.build/Debug-iphonesimulator/ATSDiagnostic.build/DerivedSources/Entitlements-Simulated.plist
+
+WriteAuxiliaryFile /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/Store49LocalCheck/Build/Intermediates.noindex/ATSDiagnostic.build/Debug-iphonesimulator/ATSDiagnostic.build/Objects-normal/arm64/ATSDiagnostic-OutputFileMap.json (in target 'ATSDiagnostic' from project 'ATSDiagnostic')
+    cd /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/outputs/ATS-Diagnostic
+    write-file /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/Store49LocalCheck/Build/Intermediates.noindex/ATSDiagnostic.build/Debug-iphonesimulator/ATSDiagnostic.build/Objects-normal/arm64/ATSDiagnostic-OutputFileMap.json
+
+ProcessProductPackaging "" /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/Store49LocalCheck/Build/Intermediates.noindex/ATSDiagnostic.build/Debug-iphonesimulator/ATSDiagnostic.build/ATSDiagnostic.app-Simulated.xcent (in target 'ATSDiagnostic' from project 'ATSDiagnostic')
+    cd /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/outputs/ATS-Diagnostic
+    
+    Entitlements:
+    
+    {
+    "application-identifier" = "SP73Z8JWXM.com.mobilebox.atsdiagnostic";
+}
+    
+    builtin-productPackagingUtility -entitlements -format xml -o /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/Store49LocalCheck/Build/Intermediates.noindex/ATSDiagnostic.build/Debug-iphonesimulator/ATSDiagnostic.build/ATSDiagnostic.app-Simulated.xcent
+
+ProcessProductPackagingDER /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/Store49LocalCheck/Build/Intermediates.noindex/ATSDiagnostic.build/Debug-iphonesimulator/ATSDiagnostic.build/ATSDiagnostic.app-Simulated.xcent /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/Store49LocalCheck/Build/Intermediates.noindex/ATSDiagnostic.build/Debug-iphonesimulator/ATSDiagnostic.build/ATSDiagnostic.app-Simulated.xcent.der (in target 'ATSDiagnostic' from project 'ATSDiagnostic')
+    cd /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/outputs/ATS-Diagnostic
+    /usr/bin/derq query -f xml -i /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/Store49LocalCheck/Build/Intermediates.noindex/ATSDiagnostic.build/Debug-iphonesimulator/ATSDiagnostic.build/ATSDiagnostic.app-Simulated.xcent -o /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/Store49LocalCheck/Build/Intermediates.noindex/ATSDiagnostic.build/Debug-iphonesimulator/ATSDiagnostic.build/ATSDiagnostic.app-Simulated.xcent.der --raw
+
+Ld /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/Store49LocalCheck/Build/Products/Debug-iphonesimulator/ATSDiagnostic.app/__preview.dylib normal (in target 'ATSDiagnostic' from project 'ATSDiagnostic')
+    cd /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/outputs/ATS-Diagnostic
+    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -Xlinker -reproducible -target arm64-apple-ios18.0-simulator -dynamiclib -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator27.0.sdk -O0 -Xlinker -no_warn_duplicate_libraries -L/Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/Store49LocalCheck/Build/Products/Debug-iphonesimulator -F/Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/Store49LocalCheck/Build/Products/Debug-iphonesimulator -install_name @rpath/ATSDiagnostic.debug.dylib -Xlinker -dead_strip -rdynamic -Xlinker -no_deduplicate -Xlinker -objc_abi_version -Xlinker 2 -Xlinker -dependency_info -Xlinker /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/Store49LocalCheck/Build/Intermediates.noindex/ATSDiagnostic.build/Debug-iphonesimulator/ATSDiagnostic.build/Objects-normal/arm64/ATSDiagnostic_dependency_info.dat -Xlinker -sectcreate -Xlinker __TEXT -Xlinker __entitlements -Xlinker /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/Store49LocalCheck/Build/Intermediates.noindex/ATSDiagnostic.build/Debug-iphonesimulator/ATSDiagnostic.build/ATSDiagnostic.app-Simulated.xcent -Xlinker -sectcreate -Xlinker __TEXT -Xlinker __ents_der -Xlinker /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/Store49LocalCheck/Build/Intermediates.noindex/ATSDiagnostic.build/Debug-iphonesimulator/ATSDiagnostic.build/ATSDiagnostic.app-Simulated.xcent.der -Xlinker -no_adhoc_codesign -o /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/Store49LocalCheck/Build/Products/Debug-iphonesimulator/ATSDiagnostic.app/__preview.dylib
+
+CpResource /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/Store49LocalCheck/Build/Products/Debug-iphonesimulator/ATSDiagnostic.app/PrivacyInfo.xcprivacy /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/outputs/ATS-Diagnostic/App/PrivacyInfo.xcprivacy (in target 'ATSDiagnostic' from project 'ATSDiagnostic')
+    cd /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/outputs/ATS-Diagnostic
+    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/outputs/ATS-Diagnostic/App/PrivacyInfo.xcprivacy /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/Store49LocalCheck/Build/Products/Debug-iphonesimulator/ATSDiagnostic.app
+
+CpResource /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/Store49LocalCheck/Build/Products/Debug-iphonesimulator/ATSDiagnostic.app/RootStoreSnapshot.json /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/outputs/ATS-Diagnostic/App/Resources/RootStoreSnapshot.json (in target 'ATSDiagnostic' from project 'ATSDiagnostic')
+    cd /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/outputs/ATS-Diagnostic
+    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/outputs/ATS-Diagnostic/App/Resources/RootStoreSnapshot.json /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/Store49LocalCheck/Build/Products/Debug-iphonesimulator/ATSDiagnostic.app
+
+CpResource /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/Store49LocalCheck/Build/Products/Debug-iphonesimulator/ATSDiagnostic.app/CTLogSnapshot.json /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/outputs/ATS-Diagnostic/App/Resources/CTLogSnapshot.json (in target 'ATSDiagnostic' from project 'ATSDiagnostic')
+    cd /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/outputs/ATS-Diagnostic
+    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/outputs/ATS-Diagnostic/App/Resources/CTLogSnapshot.json /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/Store49LocalCheck/Build/Products/Debug-iphonesimulator/ATSDiagnostic.app
+
+CpResource /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/Store49LocalCheck/Build/Products/Debug-iphonesimulator/ATSDiagnostic.app/BadSSLCatalog.json /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/outputs/ATS-Diagnostic/App/Resources/BadSSLCatalog.json (in target 'ATSDiagnostic' from project 'ATSDiagnostic')
+    cd /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/outputs/ATS-Diagnostic
+    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/outputs/ATS-Diagnostic/App/Resources/BadSSLCatalog.json /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/Store49LocalCheck/Build/Products/Debug-iphonesimulator/ATSDiagnostic.app
+
+CpResource /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/Store49LocalCheck/Build/Products/Debug-iphonesimulator/ATSDiagnostic.app/CCADB-License.txt /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/outputs/ATS-Diagnostic/App/Resources/CCADB-License.txt (in target 'ATSDiagnostic' from project 'ATSDiagnostic')
+    cd /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/outputs/ATS-Diagnostic
+    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/outputs/ATS-Diagnostic/App/Resources/CCADB-License.txt /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/Store49LocalCheck/Build/Products/Debug-iphonesimulator/ATSDiagnostic.app
+
+GenerateAssetSymbols /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/outputs/ATS-Diagnostic/App/Assets.xcassets (in target 'ATSDiagnostic' from project 'ATSDiagnostic')
+    cd /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/outputs/ATS-Diagnostic
+    /Applications/Xcode.app/Contents/Developer/usr/bin/actool /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/outputs/ATS-Diagnostic/App/Assets.xcassets --compile /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/Store49LocalCheck/Build/Products/Debug-iphonesimulator/ATSDiagnostic.app --output-format human-readable-text --notices --warnings --export-dependency-info /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/Store49LocalCheck/Build/Intermediates.noindex/ATSDiagnostic.build/Debug-iphonesimulator/ATSDiagnostic.build/assetcatalog_dependencies --output-partial-info-plist /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/Store49LocalCheck/Build/Intermediates.noindex/ATSDiagnostic.build/Debug-iphonesimulator/ATSDiagnostic.build/assetcatalog_generated_info.plist --app-icon AppIcon --compress-pngs --enable-on-demand-resources YES --development-region en --target-device iphone --target-device ipad --minimum-deployment-target 18.0 --platform iphonesimulator --bundle-identifier com.mobilebox.atsdiagnostic --generate-swift-asset-symbol-extensions NO --generate-swift-asset-symbols /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/Store49LocalCheck/Build/Intermediates.noindex/ATSDiagnostic.build/Debug-iphonesimulator/ATSDiagnostic.build/DerivedSources/GeneratedAssetSymbols.swift --generate-objc-asset-symbols /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/Store49LocalCheck/Build/Intermediates.noindex/ATSDiagnostic.build/Debug-iphonesimulator/ATSDiagnostic.build/DerivedSources/GeneratedAssetSymbols.h --generate-asset-symbol-index /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/Store49LocalCheck/Build/Intermediates.noindex/ATSDiagnostic.build/Debug-iphonesimulator/ATSDiagnostic.build/DerivedSources/GeneratedAssetSymbols-Index.plist
+/* com.apple.actool.compilation-results */
+/Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/Store49LocalCheck/Build/Intermediates.noindex/ATSDiagnostic.build/Debug-iphonesimulator/ATSDiagnostic.build/DerivedSources/GeneratedAssetSymbols-Index.plist
+/Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/Store49LocalCheck/Build/Intermediates.noindex/ATSDiagnostic.build/Debug-iphonesimulator/ATSDiagnostic.build/DerivedSources/GeneratedAssetSymbols.h
+/Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/Store49LocalCheck/Build/Intermediates.noindex/ATSDiagnostic.build/Debug-iphonesimulator/ATSDiagnostic.build/DerivedSources/GeneratedAssetSymbols.swift
+
+
+CpResource /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/Store49LocalCheck/Build/Products/Debug-iphonesimulator/ATSDiagnostic.app/AppleCTLogSnapshot.json /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/outputs/ATS-Diagnostic/App/Resources/AppleCTLogSnapshot.json (in target 'ATSDiagnostic' from project 'ATSDiagnostic')
+    cd /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/outputs/ATS-Diagnostic
+    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/outputs/ATS-Diagnostic/App/Resources/AppleCTLogSnapshot.json /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/Store49LocalCheck/Build/Products/Debug-iphonesimulator/ATSDiagnostic.app
+
+MkDir /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/Store49LocalCheck/Build/Intermediates.noindex/ATSDiagnostic.build/Debug-iphonesimulator/ATSDiagnostic.build/assetcatalog_output/unthinned (in target 'ATSDiagnostic' from project 'ATSDiagnostic')
+    cd /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/outputs/ATS-Diagnostic
+    /bin/mkdir -p /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/Store49LocalCheck/Build/Intermediates.noindex/ATSDiagnostic.build/Debug-iphonesimulator/ATSDiagnostic.build/assetcatalog_output/unthinned
+
+CompileStoryboard /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/outputs/ATS-Diagnostic/App/LaunchScreen.storyboard (in target 'ATSDiagnostic' from project 'ATSDiagnostic')
+    cd /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/outputs/ATS-Diagnostic
+    /Applications/Xcode.app/Contents/Developer/usr/bin/ibtool --errors --warnings --notices --module ATSDiagnostic --output-partial-info-plist /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/Store49LocalCheck/Build/Intermediates.noindex/ATSDiagnostic.build/Debug-iphonesimulator/ATSDiagnostic.build/LaunchScreen-SBPartialInfo.plist --auto-activate-custom-fonts --target-device iphone --target-device ipad --minimum-deployment-target 18.0 --output-format human-readable-text /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/outputs/ATS-Diagnostic/App/LaunchScreen.storyboard --compilation-directory /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/Store49LocalCheck/Build/Intermediates.noindex/ATSDiagnostic.build/Debug-iphonesimulator/ATSDiagnostic.build
+
+MkDir /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/Store49LocalCheck/Build/Intermediates.noindex/ATSDiagnostic.build/Debug-iphonesimulator/ATSDiagnostic.build/assetcatalog_output/thinned (in target 'ATSDiagnostic' from project 'ATSDiagnostic')
+    cd /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/outputs/ATS-Diagnostic
+    /bin/mkdir -p /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/Store49LocalCheck/Build/Intermediates.noindex/ATSDiagnostic.build/Debug-iphonesimulator/ATSDiagnostic.build/assetcatalog_output/thinned
+
+CompileAssetCatalogVariant thinned /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/Store49LocalCheck/Build/Products/Debug-iphonesimulator/ATSDiagnostic.app /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/outputs/ATS-Diagnostic/App/Assets.xcassets (in target 'ATSDiagnostic' from project 'ATSDiagnostic')
+    cd /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/outputs/ATS-Diagnostic
+    /Applications/Xcode.app/Contents/Developer/usr/bin/actool /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/outputs/ATS-Diagnostic/App/Assets.xcassets --compile /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/Store49LocalCheck/Build/Intermediates.noindex/ATSDiagnostic.build/Debug-iphonesimulator/ATSDiagnostic.build/assetcatalog_output/thinned --output-format human-readable-text --notices --warnings --export-dependency-info /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/Store49LocalCheck/Build/Intermediates.noindex/ATSDiagnostic.build/Debug-iphonesimulator/ATSDiagnostic.build/assetcatalog_dependencies_thinned --output-partial-info-plist /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/Store49LocalCheck/Build/Intermediates.noindex/ATSDiagnostic.build/Debug-iphonesimulator/ATSDiagnostic.build/assetcatalog_generated_info.plist_thinned --app-icon AppIcon --compress-pngs --enable-on-demand-resources YES --filter-for-thinning-device-configuration iPad17,4-A --filter-for-device-os-version 27.0 --development-region en --target-device iphone --target-device ipad --minimum-deployment-target 18.0 --platform iphonesimulator
+/* com.apple.actool.compilation-results */
+/Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/Store49LocalCheck/Build/Intermediates.noindex/ATSDiagnostic.build/Debug-iphonesimulator/ATSDiagnostic.build/assetcatalog_generated_info.plist_thinned
+/Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/Store49LocalCheck/Build/Intermediates.noindex/ATSDiagnostic.build/Debug-iphonesimulator/ATSDiagnostic.build/assetcatalog_output/thinned/AppIcon60x60@2x.png
+/Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/Store49LocalCheck/Build/Intermediates.noindex/ATSDiagnostic.build/Debug-iphonesimulator/ATSDiagnostic.build/assetcatalog_output/thinned/AppIcon76x76@2x~ipad.png
+/Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/Store49LocalCheck/Build/Intermediates.noindex/ATSDiagnostic.build/Debug-iphonesimulator/ATSDiagnostic.build/assetcatalog_output/thinned/Assets.car
+
+
+SwiftDriver ATSDiagnostic normal arm64 com.apple.xcode.tools.swift.compiler (in target 'ATSDiagnostic' from project 'ATSDiagnostic')
+    cd /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/outputs/ATS-Diagnostic
+    builtin-SwiftDriver -- /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc -module-name ATSDiagnostic -Onone @/Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/Store49LocalCheck/Build/Intermediates.noindex/ATSDiagnostic.build/Debug-iphonesimulator/ATSDiagnostic.build/Objects-normal/arm64/ATSDiagnostic.SwiftFileList -DDEBUG -enable-experimental-feature DebugDescriptionMacro -sdk /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator27.0.sdk -target arm64-apple-ios18.0-simulator -g -module-cache-path /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/Store49LocalCheck/ModuleCache.noindex -Xfrontend -serialize-debugging-options -enable-testing -index-store-path /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/Store49LocalCheck/Index.noindex/DataStore -Xcc -D_LIBCPP_HARDENING_MODE\=_LIBCPP_HARDENING_MODE_DEBUG -swift-version 6 -I /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/Store49LocalCheck/Build/Products/Debug-iphonesimulator -F /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/Store49LocalCheck/Build/Products/Debug-iphonesimulator -c -j18 -enable-batch-mode -incremental -Xcc -ivfsstatcache -Xcc /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/Store49LocalCheck/SDKStatCaches.noindex/iphonesimulator27.0-24A430-e829b21a6f8c9b70876ba0858053c0448dc58220667be655e1bcc261a7455254.sdkstatcache -output-file-map /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/Store49LocalCheck/Build/Intermediates.noindex/ATSDiagnostic.build/Debug-iphonesimulator/ATSDiagnostic.build/Objects-normal/arm64/ATSDiagnostic-OutputFileMap.json -save-temps -no-color-diagnostics -explicit-module-build -module-cache-path /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/Store49LocalCheck/Build/Intermediates.noindex/SwiftExplicitPrecompiledModules -clang-scanner-module-cache-path /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/Store49LocalCheck/ModuleCache.noindex -sdk-module-cache-path /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/Store49LocalCheck/SDKExplicitPrecompiledModules -emit-dependencies -emit-module -emit-module-path /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/Store49LocalCheck/Build/Intermediates.noindex/ATSDiagnostic.build/Debug-iphonesimulator/ATSDiagnostic.build/Objects-normal/arm64/ATSDiagnostic.swiftmodule -serialize-diagnostics -dependency-scan-serialize-diagnostics-path /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/Store49LocalCheck/Build/Intermediates.noindex/ATSDiagnostic.build/Debug-iphonesimulator/ATSDiagnostic.build/Objects-normal/arm64/ATSDiagnostic-dependency-scan.dia -validate-clang-modules-once -clang-build-session-file /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/Store49LocalCheck/ModuleCache.noindex/Session.modulevalidation -Xcc -fmodules-prune-interval\=86400 -Xcc -fmodules-prune-after\=345600 -emit-const-values -const-gather-protocols-list /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/Store49LocalCheck/Build/Intermediates.noindex/ATSDiagnostic.build/Debug-iphonesimulator/ATSDiagnostic.build/Objects-normal/arm64/ATSDiagnostic_const_extract_protocols.json -Xcc -iquote -Xcc /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/Store49LocalCheck/Build/Intermediates.noindex/ATSDiagnostic.build/Debug-iphonesimulator/ATSDiagnostic.build/ATSDiagnostic-generated-files.hmap -Xcc -I/Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/Store49LocalCheck/Build/Intermediates.noindex/ATSDiagnostic.build/Debug-iphonesimulator/ATSDiagnostic.build/ATSDiagnostic-own-target-headers.hmap -Xcc -I/Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/Store49LocalCheck/Build/Intermediates.noindex/ATSDiagnostic.build/Debug-iphonesimulator/ATSDiagnostic.build/ATSDiagnostic-all-target-headers.hmap -Xcc -iquote -Xcc /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/Store49LocalCheck/Build/Intermediates.noindex/ATSDiagnostic.build/Debug-iphonesimulator/ATSDiagnostic.build/ATSDiagnostic-project-headers.hmap -Xcc -I/Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/Store49LocalCheck/Build/Products/Debug-iphonesimulator/include -Xcc -I/Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/Store49LocalCheck/Build/Intermediates.noindex/ATSDiagnostic.build/Debug-iphonesimulator/ATSDiagnostic.build/DerivedSources-normal/arm64 -Xcc -I/Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/Store49LocalCheck/Build/Intermediates.noindex/ATSDiagnostic.build/Debug-iphonesimulator/ATSDiagnostic.build/DerivedSources/arm64 -Xcc -I/Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/Store49LocalCheck/Build/Intermediates.noindex/ATSDiagnostic.build/Debug-iphonesimulator/ATSDiagnostic.build/DerivedSources -Xcc -DDEBUG\=1 -emit-objc-header -emit-objc-header-path /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/Store49LocalCheck/Build/Intermediates.noindex/ATSDiagnostic.build/Debug-iphonesimulator/ATSDiagnostic.build/Objects-normal/arm64/ATSDiagnostic-Swift.h -working-directory /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/outputs/ATS-Diagnostic -experimental-emit-module-separately -disable-cmo
+
+LinkStoryboards (in target 'ATSDiagnostic' from project 'ATSDiagnostic')
+    cd /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/outputs/ATS-Diagnostic
+    /Applications/Xcode.app/Contents/Developer/usr/bin/ibtool --errors --warnings --notices --module ATSDiagnostic --target-device iphone --target-device ipad --minimum-deployment-target 18.0 --output-format human-readable-text --link /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/Store49LocalCheck/Build/Products/Debug-iphonesimulator/ATSDiagnostic.app /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/Store49LocalCheck/Build/Intermediates.noindex/ATSDiagnostic.build/Debug-iphonesimulator/ATSDiagnostic.build/LaunchScreen.storyboardc
+
+SwiftExplicitDependencyGeneratePcm arm64 /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/Store49LocalCheck/SDKExplicitPrecompiledModules/_Builtin_stdbool-766KD9FXOFAJ3PN4D2HV3K727.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/Store49LocalCheck/SDKExplicitPrecompiledModules/DeveloperToolsSupport-9HG27T8XA9UMKDLHBJXWAYFFH.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/Store49LocalCheck/SDKExplicitPrecompiledModules/ptrauth-36AOVV3XV493J5V6KCBELE6OP.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/Store49LocalCheck/SDKExplicitPrecompiledModules/_Builtin_stddef-E47LLIYPIGLYCLD4TG01M5NHG.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/Store49LocalCheck/SDKExplicitPrecompiledModules/_SwiftConcurrencyShims-89CT82W6FMBYGD363CWFZRNTF.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/Store49LocalCheck/SDKExplicitPrecompiledModules/_AvailabilityInternal-8A3MCX6ABHAPA9JOT1R19NXOX.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/Store49LocalCheck/SDKExplicitPrecompiledModules/_Builtin_stdarg-AVDD94ZMKYQ0EGI0GAFCKEJDT.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/Store49LocalCheck/SDKExplicitPrecompiledModules/SwiftShims-7GHAZ8H5VMKNDC7VFSYVKIJ9Z.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/Store49LocalCheck/SDKExplicitPrecompiledModules/ptrcheck-A4HMVM0GLD9RJJR8CFX33S2C9.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/Store49LocalCheck/SDKExplicitPrecompiledModules/_Builtin_float-CKOPWU39C50PD4G893PMMLKLO.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/Store49LocalCheck/SDKExplicitPrecompiledModules/_DarwinFoundation1-BW29UFH3OQWAPF5OS1PABEDLR.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/Store49LocalCheck/SDKExplicitPrecompiledModules/_Builtin_limits-22K058JK0CTL5OOYPEHM03NX9.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/Store49LocalCheck/SDKExplicitPrecompiledModules/_DarwinFoundation2-9OM3WH507C9PVMFKP06LYAVSF.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/Store49LocalCheck/SDKExplicitPrecompiledModules/sys_types-1KU7A9UHTBM8ZX0PKTG38UILS.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/Store49LocalCheck/SDKExplicitPrecompiledModules/_Builtin_tgmath-1UWJ77SF6YPCO92M3G5GWALQY.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/Store49LocalCheck/SDKExplicitPrecompiledModules/string_h-ERB49FKTYUWQZ34NVLEGHEY5A.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/Store49LocalCheck/SDKExplicitPrecompiledModules/_Builtin_stdint-COUEOMRDEC1UBJTG2X4FKJR64.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/Store49LocalCheck/SDKExplicitPrecompiledModules/_DarwinFoundation3-DVPCPD1UVKLO0CNMZDI3DP9NK.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/Store49LocalCheck/SDKExplicitPrecompiledModules/_Builtin_stdatomic-83V9Q4BKIP0IH1HJBFWKH64IB.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/Store49LocalCheck/SDKExplicitPrecompiledModules/_Builtin_intrinsics-5O7XIK6VP68XAPZGWO2IFUGIA.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/Store49LocalCheck/SDKExplicitPrecompiledModules/_Builtin_inttypes-CTILTD3VBXXCY16TU9XW2MLP3.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/Store49LocalCheck/SDKExplicitPrecompiledModules/Darwin-DAJ51FALL8ZMKSEER5QPLESS1.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/Store49LocalCheck/SDKExplicitPrecompiledModules/simd-AWYESBLB1D7B4CEBFJVAH4T1X.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/Store49LocalCheck/SDKExplicitPrecompiledModules/MachO-2IKRRMRWAPJJP94KAYO3VLK6C.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/Store49LocalCheck/SDKExplicitPrecompiledModules/ObjectiveC-384XAHZ831NK1GNE6HDA4J0O0.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/Store49LocalCheck/SDKExplicitPrecompiledModules/os_object-BYYG83UI65X3T65KRCUGQ6G8B.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/Store49LocalCheck/SDKExplicitPrecompiledModules/Spatial-5PW4O0EL2RF9704ST61EFFZZC.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/Store49LocalCheck/SDKExplicitPrecompiledModules/os_workgroup-DJST28UR5DZE5SMHJSCDL8HLD.pcm
+
+LinkAssetCatalog /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/outputs/ATS-Diagnostic/App/Assets.xcassets (in target 'ATSDiagnostic' from project 'ATSDiagnostic')
+    cd /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/outputs/ATS-Diagnostic
+    builtin-linkAssetCatalog --thinned /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/Store49LocalCheck/Build/Intermediates.noindex/ATSDiagnostic.build/Debug-iphonesimulator/ATSDiagnostic.build/assetcatalog_output/thinned --thinned-dependencies /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/Store49LocalCheck/Build/Intermediates.noindex/ATSDiagnostic.build/Debug-iphonesimulator/ATSDiagnostic.build/assetcatalog_dependencies_thinned --thinned-info-plist-content /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/Store49LocalCheck/Build/Intermediates.noindex/ATSDiagnostic.build/Debug-iphonesimulator/ATSDiagnostic.build/assetcatalog_generated_info.plist_thinned --unthinned /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/Store49LocalCheck/Build/Intermediates.noindex/ATSDiagnostic.build/Debug-iphonesimulator/ATSDiagnostic.build/assetcatalog_output/unthinned --unthinned-dependencies /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/Store49LocalCheck/Build/Intermediates.noindex/ATSDiagnostic.build/Debug-iphonesimulator/ATSDiagnostic.build/assetcatalog_dependencies_unthinned --unthinned-info-plist-content /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/Store49LocalCheck/Build/Intermediates.noindex/ATSDiagnostic.build/Debug-iphonesimulator/ATSDiagnostic.build/assetcatalog_generated_info.plist_unthinned --output /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/Store49LocalCheck/Build/Products/Debug-iphonesimulator/ATSDiagnostic.app --plist-output /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/Store49LocalCheck/Build/Intermediates.noindex/ATSDiagnostic.build/Debug-iphonesimulator/ATSDiagnostic.build/assetcatalog_generated_info.plist
+note: Emplaced /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/Store49LocalCheck/Build/Products/Debug-iphonesimulator/ATSDiagnostic.app/Assets.car (in target 'ATSDiagnostic' from project 'ATSDiagnostic')
+note: Emplaced /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/Store49LocalCheck/Build/Products/Debug-iphonesimulator/ATSDiagnostic.app/AppIcon60x60@2x.png (in target 'ATSDiagnostic' from project 'ATSDiagnostic')
+note: Emplaced /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/Store49LocalCheck/Build/Products/Debug-iphonesimulator/ATSDiagnostic.app/AppIcon76x76@2x~ipad.png (in target 'ATSDiagnostic' from project 'ATSDiagnostic')
+
+ProcessInfoPlistFile /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/Store49LocalCheck/Build/Products/Debug-iphonesimulator/ATSDiagnostic.app/Info.plist /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/outputs/ATS-Diagnostic/Configuration/ATSDiagnostic-Info.plist (in target 'ATSDiagnostic' from project 'ATSDiagnostic')
+    cd /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/outputs/ATS-Diagnostic
+    builtin-infoPlistUtility /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/outputs/ATS-Diagnostic/Configuration/ATSDiagnostic-Info.plist -producttype com.apple.product-type.application -genpkginfo /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/Store49LocalCheck/Build/Products/Debug-iphonesimulator/ATSDiagnostic.app/PkgInfo -expandbuildsettings -format binary -platform iphonesimulator -additionalcontentfile /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/Store49LocalCheck/Build/Intermediates.noindex/ATSDiagnostic.build/Debug-iphonesimulator/ATSDiagnostic.build/LaunchScreen-SBPartialInfo.plist -additionalcontentfile /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/Store49LocalCheck/Build/Intermediates.noindex/ATSDiagnostic.build/Debug-iphonesimulator/ATSDiagnostic.build/assetcatalog_generated_info.plist -o /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/Store49LocalCheck/Build/Products/Debug-iphonesimulator/ATSDiagnostic.app/Info.plist
+
+SwiftExplicitDependencyGeneratePcm arm64 /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/Store49LocalCheck/SDKExplicitPrecompiledModules/Dispatch-22F9Y5E0RJ6N4LZJW98TDRZ4G.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/Store49LocalCheck/SDKExplicitPrecompiledModules/dnssd-64IIU92NJ4564U4ILV6MSR9MK.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/Store49LocalCheck/SDKExplicitPrecompiledModules/CoreFoundation-60RUHD3ON2CXWHP4DADILNZHG.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/Store49LocalCheck/SDKExplicitPrecompiledModules/XPC-5BQR1LAYSJDI81TR6M1XDRHNR.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/Store49LocalCheck/SDKExplicitPrecompiledModules/os-9MUA1KWYXH7R034YUTO27L03X.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/Store49LocalCheck/SDKExplicitPrecompiledModules/CFNetwork-CYN62MY3FVZ0VYS4KXS4APQ21.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/Store49LocalCheck/SDKExplicitPrecompiledModules/Security-6DM468HDHH9N9CVZEUY6LMLBX.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/Store49LocalCheck/SDKExplicitPrecompiledModules/CoreGraphics-CI71UUDF83B9XUAQCYLFTEXXN.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/Store49LocalCheck/SDKExplicitPrecompiledModules/CoreAudioTypes-2TGRV3X23MDTYTNXUGRA0HF4W.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/Store49LocalCheck/SDKExplicitPrecompiledModules/CoreAudio-B9JJC91BOQYOL04OAIMPEAQJV.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/Store49LocalCheck/SDKExplicitPrecompiledModules/Foundation-7K3KX2UOUL9EPQQPXFF9JSI11.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/Store49LocalCheck/SDKExplicitPrecompiledModules/ImageIO-BQIJ7P3A4DBJ4HSK41FIVA22E.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/Store49LocalCheck/SDKExplicitPrecompiledModules/CoreText-14XKUCBZ06EDI0DTVKGLFFW08.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/Store49LocalCheck/SDKExplicitPrecompiledModules/_LocationEssentials-83NZZ4Z9OIOUVVI81TAZO4J3N.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/Store49LocalCheck/SDKExplicitPrecompiledModules/LocalAuthentication-7LJ776CA3QYMIUYSULKXQ8XFP.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/Store49LocalCheck/SDKExplicitPrecompiledModules/Symbols-1O3BS5H37YVCV70RHDTS7LSIH.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/Store49LocalCheck/SDKExplicitPrecompiledModules/UniformTypeIdentifiers-DMY7C09N9Q04OEOJO5E40UZDX.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/Store49LocalCheck/SDKExplicitPrecompiledModules/CoreTransferable-67PVJLHKMV9H10PGFPQYGNSEB.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/Store49LocalCheck/SDKExplicitPrecompiledModules/OpenGLES-AD8CH7CK1H371W6RSC7DAP7NB.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/Store49LocalCheck/SDKExplicitPrecompiledModules/Accessibility-4S9XAGFLZLPNLI0GXD3YSDRBA.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/Store49LocalCheck/SDKExplicitPrecompiledModules/FileProvider-XRIT8UQ078C74C0DYXEHSGK.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/Store49LocalCheck/SDKExplicitPrecompiledModules/DataDetection-1OYKKB8AVYN6RP8QT6UJ039JB.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/Store49LocalCheck/SDKExplicitPrecompiledModules/CoreData-7OQOFNRVJMW2S8PVPCWE0KM93.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/Store49LocalCheck/SDKExplicitPrecompiledModules/UserNotifications-4FXNYE5XR0HTLBM1AYGGEH657.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/Store49LocalCheck/SDKExplicitPrecompiledModules/IOSurface-CFT4HJCYA8U2P4EBGXPY8ZP7O.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/Store49LocalCheck/SDKExplicitPrecompiledModules/UIUtilities-D2CR4B08CIXULFR2TXWHNUOGD.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/Store49LocalCheck/SDKExplicitPrecompiledModules/Network-BGJW9B5WUBYEJRIFXSHRMEG79.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/Store49LocalCheck/SDKExplicitPrecompiledModules/OSLog-7Q5EPKT8G6XHSKL9MEU1RC8Q6.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/Store49LocalCheck/SDKExplicitPrecompiledModules/CoreLocation-JHUQR41MGDCQOI55OMY793QE.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/Store49LocalCheck/SDKExplicitPrecompiledModules/Metal-7ZIWXW1CM8LJVY6CLWY2H3NI2.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/Store49LocalCheck/SDKExplicitPrecompiledModules/CoreMotion-6IWVGDF5A1PTDKNPYI8OGSGV6.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/Store49LocalCheck/SDKExplicitPrecompiledModules/CoreVideo-8PTTG3PQV5LBYFH97QIVLRZA.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/Store49LocalCheck/SDKExplicitPrecompiledModules/QuartzCore-BASNYQHU92ESD9XUI4NS48P2C.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/Store49LocalCheck/SDKExplicitPrecompiledModules/CoreImage-EQ1F06G3MTJ5OVIZJYEPCPML4.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/Store49LocalCheck/SDKExplicitPrecompiledModules/CoreMedia-AOB35Q7TD0PCSEEVTMWFKIELB.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/Store49LocalCheck/SDKExplicitPrecompiledModules/SwiftUICore-EX7KUX7ZGO8UVQLRI7XC9SLQN.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/Store49LocalCheck/SDKExplicitPrecompiledModules/UIKit-75YMREC03MEZVTLUICS650FA2.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/Store49LocalCheck/SDKExplicitPrecompiledModules/SwiftUI-9PMW9OBILU5CHWIRVXSP9D2RC.pcm
+
+SwiftEmitModule normal arm64 Emitting\ module\ for\ ATSDiagnostic (in target 'ATSDiagnostic' from project 'ATSDiagnostic')
+
+SwiftCompile normal arm64 (in target 'ATSDiagnostic' from project 'ATSDiagnostic')
+    cd /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/outputs/ATS-Diagnostic
+    
+
+SwiftCompile normal arm64 Compiling\ Store.swift,\ TLSDisplay.swift /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/outputs/ATS-Diagnostic/App/Store.swift /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/outputs/ATS-Diagnostic/App/TLSDisplay.swift (in target 'ATSDiagnostic' from project 'ATSDiagnostic')
+
+SwiftCompile normal arm64 /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/outputs/ATS-Diagnostic/App/Store.swift (in target 'ATSDiagnostic' from project 'ATSDiagnostic')
+    cd /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/outputs/ATS-Diagnostic
+    builtin-SwiftPerFileCompile Store.swift
+
+SwiftCompile normal arm64 /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/outputs/ATS-Diagnostic/App/TLSDisplay.swift (in target 'ATSDiagnostic' from project 'ATSDiagnostic')
+    cd /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/outputs/ATS-Diagnostic
+    builtin-SwiftPerFileCompile TLSDisplay.swift
+
+SwiftCompile normal arm64 Compiling\ TLSProbe.swift,\ TLSVersionProbeView.swift /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/outputs/ATS-Diagnostic/App/TLSProbe.swift /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/outputs/ATS-Diagnostic/App/TLSVersionProbeView.swift (in target 'ATSDiagnostic' from project 'ATSDiagnostic')
+
+SwiftCompile normal arm64 /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/outputs/ATS-Diagnostic/App/TLSProbe.swift (in target 'ATSDiagnostic' from project 'ATSDiagnostic')
+    cd /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/outputs/ATS-Diagnostic
+    builtin-SwiftPerFileCompile TLSProbe.swift
+
+SwiftCompile normal arm64 /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/outputs/ATS-Diagnostic/App/TLSVersionProbeView.swift (in target 'ATSDiagnostic' from project 'ATSDiagnostic')
+    cd /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/outputs/ATS-Diagnostic
+    builtin-SwiftPerFileCompile TLSVersionProbeView.swift
+
+/Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/outputs/ATS-Diagnostic/App/TLSProbe.swift:78:74: warning: 'TLSv10' was deprecated in iOS 15.0: Use tls_protocol_version_TLSv12 or tls_protocol_version_TLSv13 instead. [#DeprecatedDeclaration]
+76 |         let url = try Endpoint.parse(input)
+77 |         guard let host = url.host, let port = UInt16(exactly: url.port ?? 443), port > 0 else { throw URLError(.badURL) }
+78 |         let versions: [(String, tls_protocol_version_t)] = [("TLS 1.0", .TLSv10), ("TLS 1.1", .TLSv11), ("TLS 1.2", .TLSv12), ("TLS 1.3", .TLSv13)]
+   |                                                                          `- warning: 'TLSv10' was deprecated in iOS 15.0: Use tls_protocol_version_TLSv12 or tls_protocol_version_TLSv13 instead. [#DeprecatedDeclaration]
+79 |         var results: [TLSProbeResult] = []
+80 |         for (name, version) in versions { results.append(await TLSProbe(title: name).run(host: host, port: port, version: version)) }
+
+/Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/outputs/ATS-Diagnostic/App/TLSProbe.swift:78:96: warning: 'TLSv11' was deprecated in iOS 15.0: Use tls_protocol_version_TLSv12 or tls_protocol_version_TLSv13 instead. [#DeprecatedDeclaration]
+76 |         let url = try Endpoint.parse(input)
+77 |         guard let host = url.host, let port = UInt16(exactly: url.port ?? 443), port > 0 else { throw URLError(.badURL) }
+78 |         let versions: [(String, tls_protocol_version_t)] = [("TLS 1.0", .TLSv10), ("TLS 1.1", .TLSv11), ("TLS 1.2", .TLSv12), ("TLS 1.3", .TLSv13)]
+   |                                                                                                `- warning: 'TLSv11' was deprecated in iOS 15.0: Use tls_protocol_version_TLSv12 or tls_protocol_version_TLSv13 instead. [#DeprecatedDeclaration]
+79 |         var results: [TLSProbeResult] = []
+80 |         for (name, version) in versions { results.append(await TLSProbe(title: name).run(host: host, port: port, version: version)) }
+
+[#DeprecatedDeclaration]: <https://docs.swift.org/compiler/documentation/diagnostics/deprecated-declaration>
+SwiftCompile normal arm64 Compiling\ RecordingSettings.swift,\ RevocationAssessment.swift,\ RevocationView.swift /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/outputs/ATS-Diagnostic/App/RecordingSettings.swift /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/outputs/ATS-Diagnostic/App/RevocationAssessment.swift /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/outputs/ATS-Diagnostic/App/RevocationView.swift (in target 'ATSDiagnostic' from project 'ATSDiagnostic')
+
+SwiftCompile normal arm64 /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/outputs/ATS-Diagnostic/App/RecordingSettings.swift (in target 'ATSDiagnostic' from project 'ATSDiagnostic')
+    cd /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/outputs/ATS-Diagnostic
+    builtin-SwiftPerFileCompile RecordingSettings.swift
+
+SwiftCompile normal arm64 /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/outputs/ATS-Diagnostic/App/RevocationAssessment.swift (in target 'ATSDiagnostic' from project 'ATSDiagnostic')
+    cd /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/outputs/ATS-Diagnostic
+    builtin-SwiftPerFileCompile RevocationAssessment.swift
+
+SwiftCompile normal arm64 /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/outputs/ATS-Diagnostic/App/RevocationView.swift (in target 'ATSDiagnostic' from project 'ATSDiagnostic')
+    cd /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/outputs/ATS-Diagnostic
+    builtin-SwiftPerFileCompile RevocationView.swift
+
+SwiftCompile normal arm64 Compiling\ X509.swift,\ GeneratedAssetSymbols.swift /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/outputs/ATS-Diagnostic/App/X509.swift /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/Store49LocalCheck/Build/Intermediates.noindex/ATSDiagnostic.build/Debug-iphonesimulator/ATSDiagnostic.build/DerivedSources/GeneratedAssetSymbols.swift (in target 'ATSDiagnostic' from project 'ATSDiagnostic')
+
+SwiftCompile normal arm64 /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/outputs/ATS-Diagnostic/App/X509.swift (in target 'ATSDiagnostic' from project 'ATSDiagnostic')
+    cd /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/outputs/ATS-Diagnostic
+    builtin-SwiftPerFileCompile X509.swift
+
+SwiftCompile normal arm64 /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/Store49LocalCheck/Build/Intermediates.noindex/ATSDiagnostic.build/Debug-iphonesimulator/ATSDiagnostic.build/DerivedSources/GeneratedAssetSymbols.swift (in target 'ATSDiagnostic' from project 'ATSDiagnostic')
+    cd /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/outputs/ATS-Diagnostic
+    builtin-SwiftPerFileCompile GeneratedAssetSymbols.swift
+
+SwiftCompile normal arm64 Compiling\ HTTPDetailViews.swift,\ HTTPProxyMessage.swift,\ HTTPRequestFields.swift /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/outputs/ATS-Diagnostic/App/HTTPDetailViews.swift /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/outputs/ATS-Diagnostic/App/HTTPProxyMessage.swift /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/outputs/ATS-Diagnostic/App/HTTPRequestFields.swift (in target 'ATSDiagnostic' from project 'ATSDiagnostic')
+
+SwiftCompile normal arm64 /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/outputs/ATS-Diagnostic/App/HTTPDetailViews.swift (in target 'ATSDiagnostic' from project 'ATSDiagnostic')
+    cd /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/outputs/ATS-Diagnostic
+    builtin-SwiftPerFileCompile HTTPDetailViews.swift
+
+SwiftCompile normal arm64 /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/outputs/ATS-Diagnostic/App/HTTPProxyMessage.swift (in target 'ATSDiagnostic' from project 'ATSDiagnostic')
+    cd /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/outputs/ATS-Diagnostic
+    builtin-SwiftPerFileCompile HTTPProxyMessage.swift
+
+SwiftCompile normal arm64 /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/outputs/ATS-Diagnostic/App/HTTPRequestFields.swift (in target 'ATSDiagnostic' from project 'ATSDiagnostic')
+    cd /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/outputs/ATS-Diagnostic
+    builtin-SwiftPerFileCompile HTTPRequestFields.swift
+
+SwiftCompile normal arm64 Compiling\ DNSLookupView.swift,\ Diagnostic.swift,\ DiagnosticFailure.swift /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/outputs/ATS-Diagnostic/App/DNSLookupView.swift /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/outputs/ATS-Diagnostic/App/Diagnostic.swift /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/outputs/ATS-Diagnostic/App/DiagnosticFailure.swift (in target 'ATSDiagnostic' from project 'ATSDiagnostic')
+
+SwiftCompile normal arm64 /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/outputs/ATS-Diagnostic/App/DNSLookupView.swift (in target 'ATSDiagnostic' from project 'ATSDiagnostic')
+    cd /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/outputs/ATS-Diagnostic
+    builtin-SwiftPerFileCompile DNSLookupView.swift
+
+SwiftCompile normal arm64 /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/outputs/ATS-Diagnostic/App/Diagnostic.swift (in target 'ATSDiagnostic' from project 'ATSDiagnostic')
+    cd /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/outputs/ATS-Diagnostic
+    builtin-SwiftPerFileCompile Diagnostic.swift
+
+SwiftCompile normal arm64 /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/outputs/ATS-Diagnostic/App/DiagnosticFailure.swift (in target 'ATSDiagnostic' from project 'ATSDiagnostic')
+    cd /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/outputs/ATS-Diagnostic
+    builtin-SwiftPerFileCompile DiagnosticFailure.swift
+
+SwiftCompile normal arm64 Compiling\ Integrity.swift,\ KeyboardDismissSurface.swift,\ LocalHTTPProxy.swift /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/outputs/ATS-Diagnostic/App/Integrity.swift /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/outputs/ATS-Diagnostic/App/KeyboardDismissSurface.swift /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/outputs/ATS-Diagnostic/App/LocalHTTPProxy.swift (in target 'ATSDiagnostic' from project 'ATSDiagnostic')
+
+SwiftCompile normal arm64 /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/outputs/ATS-Diagnostic/App/Integrity.swift (in target 'ATSDiagnostic' from project 'ATSDiagnostic')
+    cd /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/outputs/ATS-Diagnostic
+    builtin-SwiftPerFileCompile Integrity.swift
+
+SwiftCompile normal arm64 /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/outputs/ATS-Diagnostic/App/KeyboardDismissSurface.swift (in target 'ATSDiagnostic' from project 'ATSDiagnostic')
+    cd /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/outputs/ATS-Diagnostic
+    builtin-SwiftPerFileCompile KeyboardDismissSurface.swift
+
+SwiftCompile normal arm64 /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/outputs/ATS-Diagnostic/App/LocalHTTPProxy.swift (in target 'ATSDiagnostic' from project 'ATSDiagnostic')
+    cd /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/outputs/ATS-Diagnostic
+    builtin-SwiftPerFileCompile LocalHTTPProxy.swift
+
+SwiftCompile normal arm64 Compiling\ DiagnosticIssueView.swift,\ DiagnosticOptions.swift,\ DiagnosticSettingsView.swift /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/outputs/ATS-Diagnostic/App/DiagnosticIssueView.swift /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/outputs/ATS-Diagnostic/App/DiagnosticOptions.swift /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/outputs/ATS-Diagnostic/App/DiagnosticSettingsView.swift (in target 'ATSDiagnostic' from project 'ATSDiagnostic')
+
+SwiftCompile normal arm64 /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/outputs/ATS-Diagnostic/App/DiagnosticIssueView.swift (in target 'ATSDiagnostic' from project 'ATSDiagnostic')
+    cd /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/outputs/ATS-Diagnostic
+    builtin-SwiftPerFileCompile DiagnosticIssueView.swift
+
+SwiftCompile normal arm64 /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/outputs/ATS-Diagnostic/App/DiagnosticOptions.swift (in target 'ATSDiagnostic' from project 'ATSDiagnostic')
+    cd /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/outputs/ATS-Diagnostic
+    builtin-SwiftPerFileCompile DiagnosticOptions.swift
+
+SwiftCompile normal arm64 /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/outputs/ATS-Diagnostic/App/DiagnosticSettingsView.swift (in target 'ATSDiagnostic' from project 'ATSDiagnostic')
+    cd /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/outputs/ATS-Diagnostic
+    builtin-SwiftPerFileCompile DiagnosticSettingsView.swift
+
+SwiftCompile normal arm64 Compiling\ HAR.swift,\ HSTSPolicy.swift,\ HSTSPolicyView.swift /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/outputs/ATS-Diagnostic/App/HAR.swift /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/outputs/ATS-Diagnostic/App/HSTSPolicy.swift /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/outputs/ATS-Diagnostic/App/HSTSPolicyView.swift (in target 'ATSDiagnostic' from project 'ATSDiagnostic')
+
+SwiftCompile normal arm64 /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/outputs/ATS-Diagnostic/App/HAR.swift (in target 'ATSDiagnostic' from project 'ATSDiagnostic')
+    cd /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/outputs/ATS-Diagnostic
+    builtin-SwiftPerFileCompile HAR.swift
+
+SwiftCompile normal arm64 /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/outputs/ATS-Diagnostic/App/HSTSPolicy.swift (in target 'ATSDiagnostic' from project 'ATSDiagnostic')
+    cd /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/outputs/ATS-Diagnostic
+    builtin-SwiftPerFileCompile HSTSPolicy.swift
+
+SwiftCompile normal arm64 /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/outputs/ATS-Diagnostic/App/HSTSPolicyView.swift (in target 'ATSDiagnostic' from project 'ATSDiagnostic')
+    cd /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/outputs/ATS-Diagnostic
+    builtin-SwiftPerFileCompile HSTSPolicyView.swift
+
+SwiftCompile normal arm64 Compiling\ RootStoreSnapshot.swift,\ SignedCRL.swift /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/outputs/ATS-Diagnostic/App/RootStoreSnapshot.swift /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/outputs/ATS-Diagnostic/App/SignedCRL.swift (in target 'ATSDiagnostic' from project 'ATSDiagnostic')
+
+SwiftCompile normal arm64 /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/outputs/ATS-Diagnostic/App/RootStoreSnapshot.swift (in target 'ATSDiagnostic' from project 'ATSDiagnostic')
+    cd /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/outputs/ATS-Diagnostic
+    builtin-SwiftPerFileCompile RootStoreSnapshot.swift
+
+SwiftCompile normal arm64 /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/outputs/ATS-Diagnostic/App/SignedCRL.swift (in target 'ATSDiagnostic' from project 'ATSDiagnostic')
+    cd /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/outputs/ATS-Diagnostic
+    builtin-SwiftPerFileCompile SignedCRL.swift
+
+SwiftCompile normal arm64 Compiling\ CertificateTransparency.swift,\ ConnectionMapView.swift,\ DNSLookup.swift /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/outputs/ATS-Diagnostic/App/CertificateTransparency.swift /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/outputs/ATS-Diagnostic/App/ConnectionMapView.swift /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/outputs/ATS-Diagnostic/App/DNSLookup.swift (in target 'ATSDiagnostic' from project 'ATSDiagnostic')
+
+SwiftCompile normal arm64 /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/outputs/ATS-Diagnostic/App/CertificateTransparency.swift (in target 'ATSDiagnostic' from project 'ATSDiagnostic')
+    cd /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/outputs/ATS-Diagnostic
+    builtin-SwiftPerFileCompile CertificateTransparency.swift
+
+SwiftCompile normal arm64 /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/outputs/ATS-Diagnostic/App/ConnectionMapView.swift (in target 'ATSDiagnostic' from project 'ATSDiagnostic')
+    cd /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/outputs/ATS-Diagnostic
+    builtin-SwiftPerFileCompile ConnectionMapView.swift
+
+SwiftCompile normal arm64 /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/outputs/ATS-Diagnostic/App/DNSLookup.swift (in target 'ATSDiagnostic' from project 'ATSDiagnostic')
+    cd /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/outputs/ATS-Diagnostic
+    builtin-SwiftPerFileCompile DNSLookup.swift
+
+SwiftCompile normal arm64 Compiling\ CertificateIssuer.swift,\ CertificateIssuerView.swift,\ CertificateReminders.swift /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/outputs/ATS-Diagnostic/App/CertificateIssuer.swift /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/outputs/ATS-Diagnostic/App/CertificateIssuerView.swift /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/outputs/ATS-Diagnostic/App/CertificateReminders.swift (in target 'ATSDiagnostic' from project 'ATSDiagnostic')
+
+SwiftCompile normal arm64 /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/outputs/ATS-Diagnostic/App/CertificateIssuer.swift (in target 'ATSDiagnostic' from project 'ATSDiagnostic')
+    cd /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/outputs/ATS-Diagnostic
+    builtin-SwiftPerFileCompile CertificateIssuer.swift
+
+SwiftCompile normal arm64 /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/outputs/ATS-Diagnostic/App/CertificateIssuerView.swift (in target 'ATSDiagnostic' from project 'ATSDiagnostic')
+    cd /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/outputs/ATS-Diagnostic
+    builtin-SwiftPerFileCompile CertificateIssuerView.swift
+
+SwiftCompile normal arm64 /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/outputs/ATS-Diagnostic/App/CertificateReminders.swift (in target 'ATSDiagnostic' from project 'ATSDiagnostic')
+    cd /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/outputs/ATS-Diagnostic
+    builtin-SwiftPerFileCompile CertificateReminders.swift
+
+SwiftCompile normal arm64 Compiling\ Tools.swift,\ VisualComponents.swift /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/outputs/ATS-Diagnostic/App/Tools.swift /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/outputs/ATS-Diagnostic/App/VisualComponents.swift (in target 'ATSDiagnostic' from project 'ATSDiagnostic')
+
+SwiftCompile normal arm64 /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/outputs/ATS-Diagnostic/App/Tools.swift (in target 'ATSDiagnostic' from project 'ATSDiagnostic')
+    cd /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/outputs/ATS-Diagnostic
+    builtin-SwiftPerFileCompile Tools.swift
+
+SwiftCompile normal arm64 /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/outputs/ATS-Diagnostic/App/VisualComponents.swift (in target 'ATSDiagnostic' from project 'ATSDiagnostic')
+    cd /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/outputs/ATS-Diagnostic
+    builtin-SwiftPerFileCompile VisualComponents.swift
+
+SwiftCompile normal arm64 Compiling\ BadSSLView.swift,\ CURLImport.swift,\ CaptureView.swift /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/outputs/ATS-Diagnostic/App/BadSSLView.swift /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/outputs/ATS-Diagnostic/App/CURLImport.swift /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/outputs/ATS-Diagnostic/App/CaptureView.swift (in target 'ATSDiagnostic' from project 'ATSDiagnostic')
+
+SwiftCompile normal arm64 /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/outputs/ATS-Diagnostic/App/BadSSLView.swift (in target 'ATSDiagnostic' from project 'ATSDiagnostic')
+    cd /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/outputs/ATS-Diagnostic
+    builtin-SwiftPerFileCompile BadSSLView.swift
+
+SwiftCompile normal arm64 /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/outputs/ATS-Diagnostic/App/CURLImport.swift (in target 'ATSDiagnostic' from project 'ATSDiagnostic')
+    cd /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/outputs/ATS-Diagnostic
+    builtin-SwiftPerFileCompile CURLImport.swift
+
+SwiftCompile normal arm64 /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/outputs/ATS-Diagnostic/App/CaptureView.swift (in target 'ATSDiagnostic' from project 'ATSDiagnostic')
+    cd /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/outputs/ATS-Diagnostic
+    builtin-SwiftPerFileCompile CaptureView.swift
+
+SwiftCompile normal arm64 Compiling\ PolicyDirectives.swift,\ ProxyCapture.swift,\ ProxyMonitor.swift /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/outputs/ATS-Diagnostic/App/PolicyDirectives.swift /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/outputs/ATS-Diagnostic/App/ProxyCapture.swift /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/outputs/ATS-Diagnostic/App/ProxyMonitor.swift (in target 'ATSDiagnostic' from project 'ATSDiagnostic')
+
+SwiftCompile normal arm64 /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/outputs/ATS-Diagnostic/App/PolicyDirectives.swift (in target 'ATSDiagnostic' from project 'ATSDiagnostic')
+    cd /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/outputs/ATS-Diagnostic
+    builtin-SwiftPerFileCompile PolicyDirectives.swift
+
+SwiftCompile normal arm64 /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/outputs/ATS-Diagnostic/App/ProxyCapture.swift (in target 'ATSDiagnostic' from project 'ATSDiagnostic')
+    cd /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/outputs/ATS-Diagnostic
+    builtin-SwiftPerFileCompile ProxyCapture.swift
+
+SwiftCompile normal arm64 /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/outputs/ATS-Diagnostic/App/ProxyMonitor.swift (in target 'ATSDiagnostic' from project 'ATSDiagnostic')
+    cd /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/outputs/ATS-Diagnostic
+    builtin-SwiftPerFileCompile ProxyMonitor.swift
+
+SwiftCompile normal arm64 Compiling\ ATSDiagnosticApp.swift,\ BackgroundWriteLease.swift,\ BadSSLSuite.swift /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/outputs/ATS-Diagnostic/App/ATSDiagnosticApp.swift /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/outputs/ATS-Diagnostic/App/BackgroundWriteLease.swift /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/outputs/ATS-Diagnostic/App/BadSSLSuite.swift (in target 'ATSDiagnostic' from project 'ATSDiagnostic')
+
+SwiftCompile normal arm64 /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/outputs/ATS-Diagnostic/App/ATSDiagnosticApp.swift (in target 'ATSDiagnostic' from project 'ATSDiagnostic')
+    cd /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/outputs/ATS-Diagnostic
+    builtin-SwiftPerFileCompile ATSDiagnosticApp.swift
+
+SwiftCompile normal arm64 /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/outputs/ATS-Diagnostic/App/BackgroundWriteLease.swift (in target 'ATSDiagnostic' from project 'ATSDiagnostic')
+    cd /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/outputs/ATS-Diagnostic
+    builtin-SwiftPerFileCompile BackgroundWriteLease.swift
+
+SwiftCompile normal arm64 /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/outputs/ATS-Diagnostic/App/BadSSLSuite.swift (in target 'ATSDiagnostic' from project 'ATSDiagnostic')
+    cd /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/outputs/ATS-Diagnostic
+    builtin-SwiftPerFileCompile BadSSLSuite.swift
+
+SwiftCompile normal arm64 Compiling\ CertificateDetailView.swift,\ CertificateFindings.swift,\ CertificateFormats.swift /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/outputs/ATS-Diagnostic/App/CertificateDetailView.swift /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/outputs/ATS-Diagnostic/App/CertificateFindings.swift /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/outputs/ATS-Diagnostic/App/CertificateFormats.swift (in target 'ATSDiagnostic' from project 'ATSDiagnostic')
+
+SwiftCompile normal arm64 /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/outputs/ATS-Diagnostic/App/CertificateDetailView.swift (in target 'ATSDiagnostic' from project 'ATSDiagnostic')
+    cd /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/outputs/ATS-Diagnostic
+    builtin-SwiftPerFileCompile CertificateDetailView.swift
+
+SwiftCompile normal arm64 /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/outputs/ATS-Diagnostic/App/CertificateFindings.swift (in target 'ATSDiagnostic' from project 'ATSDiagnostic')
+    cd /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/outputs/ATS-Diagnostic
+    builtin-SwiftPerFileCompile CertificateFindings.swift
+
+SwiftCompile normal arm64 /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/outputs/ATS-Diagnostic/App/CertificateFormats.swift (in target 'ATSDiagnostic' from project 'ATSDiagnostic')
+    cd /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/outputs/ATS-Diagnostic
+    builtin-SwiftPerFileCompile CertificateFormats.swift
+
+SwiftCompile normal arm64 Compiling\ HistoryPersistence.swift,\ HistoryRetention.swift,\ ImportedRecordSection.swift /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/outputs/ATS-Diagnostic/App/HistoryPersistence.swift /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/outputs/ATS-Diagnostic/App/HistoryRetention.swift /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/outputs/ATS-Diagnostic/App/ImportedRecordSection.swift (in target 'ATSDiagnostic' from project 'ATSDiagnostic')
+
+SwiftCompile normal arm64 /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/outputs/ATS-Diagnostic/App/HistoryPersistence.swift (in target 'ATSDiagnostic' from project 'ATSDiagnostic')
+    cd /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/outputs/ATS-Diagnostic
+    builtin-SwiftPerFileCompile HistoryPersistence.swift
+
+SwiftCompile normal arm64 /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/outputs/ATS-Diagnostic/App/HistoryRetention.swift (in target 'ATSDiagnostic' from project 'ATSDiagnostic')
+    cd /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/outputs/ATS-Diagnostic
+    builtin-SwiftPerFileCompile HistoryRetention.swift
+
+SwiftCompile normal arm64 /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/outputs/ATS-Diagnostic/App/ImportedRecordSection.swift (in target 'ATSDiagnostic' from project 'ATSDiagnostic')
+    cd /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/outputs/ATS-Diagnostic
+    builtin-SwiftPerFileCompile ImportedRecordSection.swift
+
+SwiftDriverJobDiscovery normal arm64 Emitting module for ATSDiagnostic (in target 'ATSDiagnostic' from project 'ATSDiagnostic')
+
+SwiftDriver\ Compilation\ Requirements ATSDiagnostic normal arm64 com.apple.xcode.tools.swift.compiler (in target 'ATSDiagnostic' from project 'ATSDiagnostic')
+    cd /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/outputs/ATS-Diagnostic
+    builtin-Swift-Compilation-Requirements -- /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc -module-name ATSDiagnostic -Onone @/Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/Store49LocalCheck/Build/Intermediates.noindex/ATSDiagnostic.build/Debug-iphonesimulator/ATSDiagnostic.build/Objects-normal/arm64/ATSDiagnostic.SwiftFileList -DDEBUG -enable-experimental-feature DebugDescriptionMacro -sdk /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator27.0.sdk -target arm64-apple-ios18.0-simulator -g -module-cache-path /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/Store49LocalCheck/ModuleCache.noindex -Xfrontend -serialize-debugging-options -enable-testing -index-store-path /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/Store49LocalCheck/Index.noindex/DataStore -Xcc -D_LIBCPP_HARDENING_MODE\=_LIBCPP_HARDENING_MODE_DEBUG -swift-version 6 -I /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/Store49LocalCheck/Build/Products/Debug-iphonesimulator -F /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/Store49LocalCheck/Build/Products/Debug-iphonesimulator -c -j18 -enable-batch-mode -incremental -Xcc -ivfsstatcache -Xcc /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/Store49LocalCheck/SDKStatCaches.noindex/iphonesimulator27.0-24A430-e829b21a6f8c9b70876ba0858053c0448dc58220667be655e1bcc261a7455254.sdkstatcache -output-file-map /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/Store49LocalCheck/Build/Intermediates.noindex/ATSDiagnostic.build/Debug-iphonesimulator/ATSDiagnostic.build/Objects-normal/arm64/ATSDiagnostic-OutputFileMap.json -save-temps -no-color-diagnostics -explicit-module-build -module-cache-path /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/Store49LocalCheck/Build/Intermediates.noindex/SwiftExplicitPrecompiledModules -clang-scanner-module-cache-path /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/Store49LocalCheck/ModuleCache.noindex -sdk-module-cache-path /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/Store49LocalCheck/SDKExplicitPrecompiledModules -emit-dependencies -emit-module -emit-module-path /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/Store49LocalCheck/Build/Intermediates.noindex/ATSDiagnostic.build/Debug-iphonesimulator/ATSDiagnostic.build/Objects-normal/arm64/ATSDiagnostic.swiftmodule -serialize-diagnostics -dependency-scan-serialize-diagnostics-path /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/Store49LocalCheck/Build/Intermediates.noindex/ATSDiagnostic.build/Debug-iphonesimulator/ATSDiagnostic.build/Objects-normal/arm64/ATSDiagnostic-dependency-scan.dia -validate-clang-modules-once -clang-build-session-file /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/Store49LocalCheck/ModuleCache.noindex/Session.modulevalidation -Xcc -fmodules-prune-interval\=86400 -Xcc -fmodules-prune-after\=345600 -emit-const-values -const-gather-protocols-list /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/Store49LocalCheck/Build/Intermediates.noindex/ATSDiagnostic.build/Debug-iphonesimulator/ATSDiagnostic.build/Objects-normal/arm64/ATSDiagnostic_const_extract_protocols.json -Xcc -iquote -Xcc /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/Store49LocalCheck/Build/Intermediates.noindex/ATSDiagnostic.build/Debug-iphonesimulator/ATSDiagnostic.build/ATSDiagnostic-generated-files.hmap -Xcc -I/Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/Store49LocalCheck/Build/Intermediates.noindex/ATSDiagnostic.build/Debug-iphonesimulator/ATSDiagnostic.build/ATSDiagnostic-own-target-headers.hmap -Xcc -I/Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/Store49LocalCheck/Build/Intermediates.noindex/ATSDiagnostic.build/Debug-iphonesimulator/ATSDiagnostic.build/ATSDiagnostic-all-target-headers.hmap -Xcc -iquote -Xcc /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/Store49LocalCheck/Build/Intermediates.noindex/ATSDiagnostic.build/Debug-iphonesimulator/ATSDiagnostic.build/ATSDiagnostic-project-headers.hmap -Xcc -I/Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/Store49LocalCheck/Build/Products/Debug-iphonesimulator/include -Xcc -I/Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/Store49LocalCheck/Build/Intermediates.noindex/ATSDiagnostic.build/Debug-iphonesimulator/ATSDiagnostic.build/DerivedSources-normal/arm64 -Xcc -I/Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/Store49LocalCheck/Build/Intermediates.noindex/ATSDiagnostic.build/Debug-iphonesimulator/ATSDiagnostic.build/DerivedSources/arm64 -Xcc -I/Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/Store49LocalCheck/Build/Intermediates.noindex/ATSDiagnostic.build/Debug-iphonesimulator/ATSDiagnostic.build/DerivedSources -Xcc -DDEBUG\=1 -emit-objc-header -emit-objc-header-path /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/Store49LocalCheck/Build/Intermediates.noindex/ATSDiagnostic.build/Debug-iphonesimulator/ATSDiagnostic.build/Objects-normal/arm64/ATSDiagnostic-Swift.h -working-directory /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/outputs/ATS-Diagnostic -experimental-emit-module-separately -disable-cmo
+
+SwiftDriverJobDiscovery normal arm64 Compiling Store.swift, TLSDisplay.swift (in target 'ATSDiagnostic' from project 'ATSDiagnostic')
+
+SwiftMergeGeneratedHeaders /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/Store49LocalCheck/Build/Intermediates.noindex/ATSDiagnostic.build/Debug-iphonesimulator/ATSDiagnostic.build/DerivedSources/ATSDiagnostic-Swift.h /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/Store49LocalCheck/Build/Intermediates.noindex/ATSDiagnostic.build/Debug-iphonesimulator/ATSDiagnostic.build/Objects-normal/arm64/ATSDiagnostic-Swift.h (in target 'ATSDiagnostic' from project 'ATSDiagnostic')
+    cd /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/outputs/ATS-Diagnostic
+    builtin-swiftHeaderTool -arch arm64 /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/Store49LocalCheck/Build/Intermediates.noindex/ATSDiagnostic.build/Debug-iphonesimulator/ATSDiagnostic.build/Objects-normal/arm64/ATSDiagnostic-Swift.h -o /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/Store49LocalCheck/Build/Intermediates.noindex/ATSDiagnostic.build/Debug-iphonesimulator/ATSDiagnostic.build/DerivedSources/ATSDiagnostic-Swift.h
+
+Copy /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/Store49LocalCheck/Build/Products/Debug-iphonesimulator/ATSDiagnostic.swiftmodule/arm64-apple-ios-simulator.swiftmodule /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/Store49LocalCheck/Build/Intermediates.noindex/ATSDiagnostic.build/Debug-iphonesimulator/ATSDiagnostic.build/Objects-normal/arm64/ATSDiagnostic.swiftmodule (in target 'ATSDiagnostic' from project 'ATSDiagnostic')
+    cd /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/outputs/ATS-Diagnostic
+    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks -rename /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/Store49LocalCheck/Build/Intermediates.noindex/ATSDiagnostic.build/Debug-iphonesimulator/ATSDiagnostic.build/Objects-normal/arm64/ATSDiagnostic.swiftmodule /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/Store49LocalCheck/Build/Products/Debug-iphonesimulator/ATSDiagnostic.swiftmodule/arm64-apple-ios-simulator.swiftmodule
+
+Copy /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/Store49LocalCheck/Build/Products/Debug-iphonesimulator/ATSDiagnostic.swiftmodule/arm64-apple-ios-simulator.swiftdoc /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/Store49LocalCheck/Build/Intermediates.noindex/ATSDiagnostic.build/Debug-iphonesimulator/ATSDiagnostic.build/Objects-normal/arm64/ATSDiagnostic.swiftdoc (in target 'ATSDiagnostic' from project 'ATSDiagnostic')
+    cd /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/outputs/ATS-Diagnostic
+    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks -rename /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/Store49LocalCheck/Build/Intermediates.noindex/ATSDiagnostic.build/Debug-iphonesimulator/ATSDiagnostic.build/Objects-normal/arm64/ATSDiagnostic.swiftdoc /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/Store49LocalCheck/Build/Products/Debug-iphonesimulator/ATSDiagnostic.swiftmodule/arm64-apple-ios-simulator.swiftdoc
+
+Copy /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/Store49LocalCheck/Build/Products/Debug-iphonesimulator/ATSDiagnostic.swiftmodule/arm64-apple-ios-simulator.abi.json /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/Store49LocalCheck/Build/Intermediates.noindex/ATSDiagnostic.build/Debug-iphonesimulator/ATSDiagnostic.build/Objects-normal/arm64/ATSDiagnostic.abi.json (in target 'ATSDiagnostic' from project 'ATSDiagnostic')
+    cd /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/outputs/ATS-Diagnostic
+    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks -rename /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/Store49LocalCheck/Build/Intermediates.noindex/ATSDiagnostic.build/Debug-iphonesimulator/ATSDiagnostic.build/Objects-normal/arm64/ATSDiagnostic.abi.json /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/Store49LocalCheck/Build/Products/Debug-iphonesimulator/ATSDiagnostic.swiftmodule/arm64-apple-ios-simulator.abi.json
+
+Copy /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/Store49LocalCheck/Build/Products/Debug-iphonesimulator/ATSDiagnostic.swiftmodule/Project/arm64-apple-ios-simulator.swiftsourceinfo /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/Store49LocalCheck/Build/Intermediates.noindex/ATSDiagnostic.build/Debug-iphonesimulator/ATSDiagnostic.build/Objects-normal/arm64/ATSDiagnostic.swiftsourceinfo (in target 'ATSDiagnostic' from project 'ATSDiagnostic')
+    cd /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/outputs/ATS-Diagnostic
+    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks -rename /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/Store49LocalCheck/Build/Intermediates.noindex/ATSDiagnostic.build/Debug-iphonesimulator/ATSDiagnostic.build/Objects-normal/arm64/ATSDiagnostic.swiftsourceinfo /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/Store49LocalCheck/Build/Products/Debug-iphonesimulator/ATSDiagnostic.swiftmodule/Project/arm64-apple-ios-simulator.swiftsourceinfo
+
+SwiftDriverJobDiscovery normal arm64 Compiling RootStoreSnapshot.swift, SignedCRL.swift (in target 'ATSDiagnostic' from project 'ATSDiagnostic')
+
+SwiftDriverJobDiscovery normal arm64 Compiling X509.swift, GeneratedAssetSymbols.swift (in target 'ATSDiagnostic' from project 'ATSDiagnostic')
+
+SwiftDriverJobDiscovery normal arm64 Compiling PolicyDirectives.swift, ProxyCapture.swift, ProxyMonitor.swift (in target 'ATSDiagnostic' from project 'ATSDiagnostic')
+
+SwiftDriverJobDiscovery normal arm64 Compiling HAR.swift, HSTSPolicy.swift, HSTSPolicyView.swift (in target 'ATSDiagnostic' from project 'ATSDiagnostic')
+
+SwiftDriverJobDiscovery normal arm64 Compiling CertificateIssuer.swift, CertificateIssuerView.swift, CertificateReminders.swift (in target 'ATSDiagnostic' from project 'ATSDiagnostic')
+
+SwiftDriverJobDiscovery normal arm64 Compiling Tools.swift, VisualComponents.swift (in target 'ATSDiagnostic' from project 'ATSDiagnostic')
+
+SwiftDriverJobDiscovery normal arm64 Compiling HistoryPersistence.swift, HistoryRetention.swift, ImportedRecordSection.swift (in target 'ATSDiagnostic' from project 'ATSDiagnostic')
+
+SwiftDriverJobDiscovery normal arm64 Compiling TLSProbe.swift, TLSVersionProbeView.swift (in target 'ATSDiagnostic' from project 'ATSDiagnostic')
+
+SwiftDriverJobDiscovery normal arm64 Compiling DiagnosticIssueView.swift, DiagnosticOptions.swift, DiagnosticSettingsView.swift (in target 'ATSDiagnostic' from project 'ATSDiagnostic')
+
+SwiftDriverJobDiscovery normal arm64 Compiling HTTPDetailViews.swift, HTTPProxyMessage.swift, HTTPRequestFields.swift (in target 'ATSDiagnostic' from project 'ATSDiagnostic')
+
+SwiftDriverJobDiscovery normal arm64 Compiling CertificateDetailView.swift, CertificateFindings.swift, CertificateFormats.swift (in target 'ATSDiagnostic' from project 'ATSDiagnostic')
+
+SwiftDriverJobDiscovery normal arm64 Compiling RecordingSettings.swift, RevocationAssessment.swift, RevocationView.swift (in target 'ATSDiagnostic' from project 'ATSDiagnostic')
+
+SwiftDriverJobDiscovery normal arm64 Compiling CertificateTransparency.swift, ConnectionMapView.swift, DNSLookup.swift (in target 'ATSDiagnostic' from project 'ATSDiagnostic')
+
+SwiftDriverJobDiscovery normal arm64 Compiling Integrity.swift, KeyboardDismissSurface.swift, LocalHTTPProxy.swift (in target 'ATSDiagnostic' from project 'ATSDiagnostic')
+
+SwiftDriverJobDiscovery normal arm64 Compiling DNSLookupView.swift, Diagnostic.swift, DiagnosticFailure.swift (in target 'ATSDiagnostic' from project 'ATSDiagnostic')
+
+SwiftDriverJobDiscovery normal arm64 Compiling BadSSLView.swift, CURLImport.swift, CaptureView.swift (in target 'ATSDiagnostic' from project 'ATSDiagnostic')
+
+SwiftDriverJobDiscovery normal arm64 Compiling ATSDiagnosticApp.swift, BackgroundWriteLease.swift, BadSSLSuite.swift (in target 'ATSDiagnostic' from project 'ATSDiagnostic')
+
+SwiftDriver\ Compilation ATSDiagnostic normal arm64 com.apple.xcode.tools.swift.compiler (in target 'ATSDiagnostic' from project 'ATSDiagnostic')
+    cd /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/outputs/ATS-Diagnostic
+    builtin-Swift-Compilation -- /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc -module-name ATSDiagnostic -Onone @/Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/Store49LocalCheck/Build/Intermediates.noindex/ATSDiagnostic.build/Debug-iphonesimulator/ATSDiagnostic.build/Objects-normal/arm64/ATSDiagnostic.SwiftFileList -DDEBUG -enable-experimental-feature DebugDescriptionMacro -sdk /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator27.0.sdk -target arm64-apple-ios18.0-simulator -g -module-cache-path /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/Store49LocalCheck/ModuleCache.noindex -Xfrontend -serialize-debugging-options -enable-testing -index-store-path /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/Store49LocalCheck/Index.noindex/DataStore -Xcc -D_LIBCPP_HARDENING_MODE\=_LIBCPP_HARDENING_MODE_DEBUG -swift-version 6 -I /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/Store49LocalCheck/Build/Products/Debug-iphonesimulator -F /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/Store49LocalCheck/Build/Products/Debug-iphonesimulator -c -j18 -enable-batch-mode -incremental -Xcc -ivfsstatcache -Xcc /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/Store49LocalCheck/SDKStatCaches.noindex/iphonesimulator27.0-24A430-e829b21a6f8c9b70876ba0858053c0448dc58220667be655e1bcc261a7455254.sdkstatcache -output-file-map /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/Store49LocalCheck/Build/Intermediates.noindex/ATSDiagnostic.build/Debug-iphonesimulator/ATSDiagnostic.build/Objects-normal/arm64/ATSDiagnostic-OutputFileMap.json -save-temps -no-color-diagnostics -explicit-module-build -module-cache-path /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/Store49LocalCheck/Build/Intermediates.noindex/SwiftExplicitPrecompiledModules -clang-scanner-module-cache-path /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/Store49LocalCheck/ModuleCache.noindex -sdk-module-cache-path /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/Store49LocalCheck/SDKExplicitPrecompiledModules -emit-dependencies -emit-module -emit-module-path /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/Store49LocalCheck/Build/Intermediates.noindex/ATSDiagnostic.build/Debug-iphonesimulator/ATSDiagnostic.build/Objects-normal/arm64/ATSDiagnostic.swiftmodule -serialize-diagnostics -dependency-scan-serialize-diagnostics-path /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/Store49LocalCheck/Build/Intermediates.noindex/ATSDiagnostic.build/Debug-iphonesimulator/ATSDiagnostic.build/Objects-normal/arm64/ATSDiagnostic-dependency-scan.dia -validate-clang-modules-once -clang-build-session-file /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/Store49LocalCheck/ModuleCache.noindex/Session.modulevalidation -Xcc -fmodules-prune-interval\=86400 -Xcc -fmodules-prune-after\=345600 -emit-const-values -const-gather-protocols-list /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/Store49LocalCheck/Build/Intermediates.noindex/ATSDiagnostic.build/Debug-iphonesimulator/ATSDiagnostic.build/Objects-normal/arm64/ATSDiagnostic_const_extract_protocols.json -Xcc -iquote -Xcc /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/Store49LocalCheck/Build/Intermediates.noindex/ATSDiagnostic.build/Debug-iphonesimulator/ATSDiagnostic.build/ATSDiagnostic-generated-files.hmap -Xcc -I/Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/Store49LocalCheck/Build/Intermediates.noindex/ATSDiagnostic.build/Debug-iphonesimulator/ATSDiagnostic.build/ATSDiagnostic-own-target-headers.hmap -Xcc -I/Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/Store49LocalCheck/Build/Intermediates.noindex/ATSDiagnostic.build/Debug-iphonesimulator/ATSDiagnostic.build/ATSDiagnostic-all-target-headers.hmap -Xcc -iquote -Xcc /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/Store49LocalCheck/Build/Intermediates.noindex/ATSDiagnostic.build/Debug-iphonesimulator/ATSDiagnostic.build/ATSDiagnostic-project-headers.hmap -Xcc -I/Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/Store49LocalCheck/Build/Products/Debug-iphonesimulator/include -Xcc -I/Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/Store49LocalCheck/Build/Intermediates.noindex/ATSDiagnostic.build/Debug-iphonesimulator/ATSDiagnostic.build/DerivedSources-normal/arm64 -Xcc -I/Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/Store49LocalCheck/Build/Intermediates.noindex/ATSDiagnostic.build/Debug-iphonesimulator/ATSDiagnostic.build/DerivedSources/arm64 -Xcc -I/Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/Store49LocalCheck/Build/Intermediates.noindex/ATSDiagnostic.build/Debug-iphonesimulator/ATSDiagnostic.build/DerivedSources -Xcc -DDEBUG\=1 -emit-objc-header -emit-objc-header-path /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/Store49LocalCheck/Build/Intermediates.noindex/ATSDiagnostic.build/Debug-iphonesimulator/ATSDiagnostic.build/Objects-normal/arm64/ATSDiagnostic-Swift.h -working-directory /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/outputs/ATS-Diagnostic -experimental-emit-module-separately -disable-cmo
+
+Ld /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/Store49LocalCheck/Build/Products/Debug-iphonesimulator/ATSDiagnostic.app/ATSDiagnostic.debug.dylib normal (in target 'ATSDiagnostic' from project 'ATSDiagnostic')
+    cd /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/outputs/ATS-Diagnostic
+    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -Xlinker -reproducible -target arm64-apple-ios18.0-simulator -dynamiclib -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator27.0.sdk -O0 -Xlinker -no_warn_duplicate_libraries -L/Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/Store49LocalCheck/Build/Intermediates.noindex/EagerLinkingTBDs/Debug-iphonesimulator -L/Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/Store49LocalCheck/Build/Products/Debug-iphonesimulator -F/Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/Store49LocalCheck/Build/Intermediates.noindex/EagerLinkingTBDs/Debug-iphonesimulator -F/Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/Store49LocalCheck/Build/Products/Debug-iphonesimulator -filelist /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/Store49LocalCheck/Build/Intermediates.noindex/ATSDiagnostic.build/Debug-iphonesimulator/ATSDiagnostic.build/Objects-normal/arm64/ATSDiagnostic.LinkFileList -install_name @rpath/ATSDiagnostic.debug.dylib -Xlinker -rpath -Xlinker /usr/lib/swift -Xlinker -rpath -Xlinker @executable_path/Frameworks -Xlinker -dead_strip -Xlinker -object_path_lto -Xlinker /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/Store49LocalCheck/Build/Intermediates.noindex/ATSDiagnostic.build/Debug-iphonesimulator/ATSDiagnostic.build/Objects-normal/arm64/ATSDiagnostic_lto.o -rdynamic -Xlinker -no_deduplicate -Xlinker -objc_abi_version -Xlinker 2 -Xlinker -dependency_info -Xlinker /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/Store49LocalCheck/Build/Intermediates.noindex/ATSDiagnostic.build/Debug-iphonesimulator/ATSDiagnostic.build/Objects-normal/arm64/ATSDiagnostic_dependency_info.dat -fobjc-link-runtime -L/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator -L/usr/lib/swift -Xlinker -add_ast_path -Xlinker /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/Store49LocalCheck/Build/Intermediates.noindex/ATSDiagnostic.build/Debug-iphonesimulator/ATSDiagnostic.build/Objects-normal/arm64/ATSDiagnostic.swiftmodule -Xlinker -alias -Xlinker _main -Xlinker ___debug_main_executable_dylib_entry_point -Xlinker -no_adhoc_codesign -o /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/Store49LocalCheck/Build/Products/Debug-iphonesimulator/ATSDiagnostic.app/ATSDiagnostic.debug.dylib
+
+ConstructStubExecutorLinkFileList /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/Store49LocalCheck/Build/Intermediates.noindex/ATSDiagnostic.build/Debug-iphonesimulator/ATSDiagnostic.build/ATSDiagnostic-ExecutorLinkFileList-normal-arm64.txt (in target 'ATSDiagnostic' from project 'ATSDiagnostic')
+    cd /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/outputs/ATS-Diagnostic
+    construct-stub-executor-link-file-list /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/Store49LocalCheck/Build/Products/Debug-iphonesimulator/ATSDiagnostic.app/ATSDiagnostic.debug.dylib /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/lib/libPreviewsJITStubExecutor_no_swift_entry_point.a /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/lib/libPreviewsJITStubExecutor.a --output /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/Store49LocalCheck/Build/Intermediates.noindex/ATSDiagnostic.build/Debug-iphonesimulator/ATSDiagnostic.build/ATSDiagnostic-ExecutorLinkFileList-normal-arm64.txt
+note: Using stub executor library with Swift entry point. (in target 'ATSDiagnostic' from project 'ATSDiagnostic')
+
+Ld /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/Store49LocalCheck/Build/Products/Debug-iphonesimulator/ATSDiagnostic.app/ATSDiagnostic normal (in target 'ATSDiagnostic' from project 'ATSDiagnostic')
+    cd /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/outputs/ATS-Diagnostic
+    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -Xlinker -reproducible -target arm64-apple-ios18.0-simulator -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator27.0.sdk -O0 -Xlinker -no_warn_duplicate_libraries -L/Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/Store49LocalCheck/Build/Products/Debug-iphonesimulator -F/Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/Store49LocalCheck/Build/Products/Debug-iphonesimulator -Xlinker -rpath -Xlinker @executable_path -Xlinker -rpath -Xlinker @executable_path/Frameworks -rdynamic -Xlinker -no_deduplicate -Xlinker -objc_abi_version -Xlinker 2 -e ___debug_blank_executor_main -Xlinker -sectcreate -Xlinker __TEXT -Xlinker __debug_dylib -Xlinker /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/Store49LocalCheck/Build/Intermediates.noindex/ATSDiagnostic.build/Debug-iphonesimulator/ATSDiagnostic.build/ATSDiagnostic-DebugDylibPath-normal-arm64.txt -Xlinker -sectcreate -Xlinker __TEXT -Xlinker __debug_instlnm -Xlinker /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/Store49LocalCheck/Build/Intermediates.noindex/ATSDiagnostic.build/Debug-iphonesimulator/ATSDiagnostic.build/ATSDiagnostic-DebugDylibInstallName-normal-arm64.txt -Xlinker -filelist -Xlinker /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/Store49LocalCheck/Build/Intermediates.noindex/ATSDiagnostic.build/Debug-iphonesimulator/ATSDiagnostic.build/ATSDiagnostic-ExecutorLinkFileList-normal-arm64.txt -Xlinker -sectcreate -Xlinker __TEXT -Xlinker __entitlements -Xlinker /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/Store49LocalCheck/Build/Intermediates.noindex/ATSDiagnostic.build/Debug-iphonesimulator/ATSDiagnostic.build/ATSDiagnostic.app-Simulated.xcent -Xlinker -sectcreate -Xlinker __TEXT -Xlinker __ents_der -Xlinker /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/Store49LocalCheck/Build/Intermediates.noindex/ATSDiagnostic.build/Debug-iphonesimulator/ATSDiagnostic.build/ATSDiagnostic.app-Simulated.xcent.der /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/Store49LocalCheck/Build/Products/Debug-iphonesimulator/ATSDiagnostic.app/ATSDiagnostic.debug.dylib -Xlinker -no_adhoc_codesign -o /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/Store49LocalCheck/Build/Products/Debug-iphonesimulator/ATSDiagnostic.app/ATSDiagnostic
+
+CopySwiftLibs /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/Store49LocalCheck/Build/Products/Debug-iphonesimulator/ATSDiagnostic.app (in target 'ATSDiagnostic' from project 'ATSDiagnostic')
+    cd /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/outputs/ATS-Diagnostic
+    builtin-swiftStdLibTool --copy --verbose --sign - --scan-executable /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/Store49LocalCheck/Build/Products/Debug-iphonesimulator/ATSDiagnostic.app/ATSDiagnostic.debug.dylib --scan-folder /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/Store49LocalCheck/Build/Products/Debug-iphonesimulator/ATSDiagnostic.app/Frameworks --scan-folder /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/Store49LocalCheck/Build/Products/Debug-iphonesimulator/ATSDiagnostic.app/PlugIns --scan-folder /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/Store49LocalCheck/Build/Products/Debug-iphonesimulator/ATSDiagnostic.app/SystemExtensions --scan-folder /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/Store49LocalCheck/Build/Products/Debug-iphonesimulator/ATSDiagnostic.app/Extensions --platform iphonesimulator --toolchain /var/run/com.apple.security.cryptexd/mnt/com.apple.MobileAsset.MetalToolchain-v27.1.266.1.vUJ43u/Metal.xctoolchain --toolchain /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain --destination /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/Store49LocalCheck/Build/Products/Debug-iphonesimulator/ATSDiagnostic.app/Frameworks --strip-bitcode --strip-bitcode-tool /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/bitcode_strip --emit-dependency-info /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/Store49LocalCheck/Build/Intermediates.noindex/ATSDiagnostic.build/Debug-iphonesimulator/ATSDiagnostic.build/SwiftStdLibToolInputDependencies.dep --filter-for-swift-os
+
+ExtractAppIntentsMetadata (in target 'ATSDiagnostic' from project 'ATSDiagnostic')
+    cd /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/outputs/ATS-Diagnostic
+    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/appintentsmetadataprocessor --toolchain-dir /var/run/com.apple.security.cryptexd/mnt/com.apple.MobileAsset.MetalToolchain-v27.1.266.1.vUJ43u/Metal.xctoolchain --module-name ATSDiagnostic --sdk-root /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator27.0.sdk --xcode-version 27A266a --platform-family iOS --deployment-target 18.0 --bundle-identifier com.mobilebox.atsdiagnostic --output /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/Store49LocalCheck/Build/Products/Debug-iphonesimulator/ATSDiagnostic.app --target-triple arm64-apple-ios18.0-simulator --binary-file /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/Store49LocalCheck/Build/Products/Debug-iphonesimulator/ATSDiagnostic.app/ATSDiagnostic --dependency-file /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/Store49LocalCheck/Build/Intermediates.noindex/ATSDiagnostic.build/Debug-iphonesimulator/ATSDiagnostic.build/Objects-normal/arm64/ATSDiagnostic_dependency_info.dat --stringsdata-file /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/Store49LocalCheck/Build/Intermediates.noindex/ATSDiagnostic.build/Debug-iphonesimulator/ATSDiagnostic.build/Objects-normal/arm64/ExtractedAppShortcutsMetadata.stringsdata --source-file-list /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/Store49LocalCheck/Build/Intermediates.noindex/ATSDiagnostic.build/Debug-iphonesimulator/ATSDiagnostic.build/Objects-normal/arm64/ATSDiagnostic.SwiftFileList --metadata-file-list /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/Store49LocalCheck/Build/Intermediates.noindex/ATSDiagnostic.build/Debug-iphonesimulator/ATSDiagnostic.build/ATSDiagnostic.DependencyMetadataFileList --static-metadata-file-list /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/Store49LocalCheck/Build/Intermediates.noindex/ATSDiagnostic.build/Debug-iphonesimulator/ATSDiagnostic.build/ATSDiagnostic.DependencyStaticMetadataFileList --swift-const-vals-list /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/Store49LocalCheck/Build/Intermediates.noindex/ATSDiagnostic.build/Debug-iphonesimulator/ATSDiagnostic.build/Objects-normal/arm64/ATSDiagnostic.SwiftConstValuesFileList --compile-time-extraction --deployment-aware-processing --no-app-shortcuts-localization
+2026-10-12 07:11:17.954 appintentsmetadataprocessor[89098:23809327] Starting appintentsmetadataprocessor export
+2026-10-12 07:11:17.958 appintentsmetadataprocessor[89098:23809327] warning: Metadata extraction skipped, no AppIntents.framework dependency found
+
+AppIntentsSSUTraining (in target 'ATSDiagnostic' from project 'ATSDiagnostic')
+    cd /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/outputs/ATS-Diagnostic
+    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/appintentsnltrainingprocessor --infoplist-path /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/Store49LocalCheck/Build/Products/Debug-iphonesimulator/ATSDiagnostic.app/Info.plist --temp-dir-path /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/Store49LocalCheck/Build/Intermediates.noindex/ATSDiagnostic.build/Debug-iphonesimulator/ATSDiagnostic.build/ssu --bundle-id com.mobilebox.atsdiagnostic --product-path /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/Store49LocalCheck/Build/Products/Debug-iphonesimulator/ATSDiagnostic.app --extracted-metadata-path /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/Store49LocalCheck/Build/Products/Debug-iphonesimulator/ATSDiagnostic.app/Metadata.appintents --metadata-file-list /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/Store49LocalCheck/Build/Intermediates.noindex/ATSDiagnostic.build/Debug-iphonesimulator/ATSDiagnostic.build/ATSDiagnostic.DependencyMetadataFileList --source-file /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/Store49LocalCheck/Build/Products/Debug-iphonesimulator/ATSDiagnostic.app/Info.plist --archive-ssu-assets
+2026-10-12 07:11:18.007 appintentsnltrainingprocessor[89101:23809333] Parsing options for appintentsnltrainingprocessor
+2026-10-12 07:11:18.008 appintentsnltrainingprocessor[89101:23809333] Starting AppIntents SSU YAML Generation
+2026-10-12 07:11:18.008 appintentsnltrainingprocessor[89101:23809333] No AppShortcuts found - Skipping.
+
+CodeSign /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/Store49LocalCheck/Build/Products/Debug-iphonesimulator/ATSDiagnostic.app/ATSDiagnostic.debug.dylib (in target 'ATSDiagnostic' from project 'ATSDiagnostic')
+    cd /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/outputs/ATS-Diagnostic
+    
+    Signing Identity:     "Sign to Run Locally"
+    
+    /usr/bin/codesign --force --sign - --timestamp\=none --generate-entitlement-der /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/Store49LocalCheck/Build/Products/Debug-iphonesimulator/ATSDiagnostic.app/ATSDiagnostic.debug.dylib
+
+CodeSign /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/Store49LocalCheck/Build/Products/Debug-iphonesimulator/ATSDiagnostic.app/__preview.dylib (in target 'ATSDiagnostic' from project 'ATSDiagnostic')
+    cd /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/outputs/ATS-Diagnostic
+    
+    Signing Identity:     "Sign to Run Locally"
+    
+    /usr/bin/codesign --force --sign - --timestamp\=none --generate-entitlement-der /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/Store49LocalCheck/Build/Products/Debug-iphonesimulator/ATSDiagnostic.app/__preview.dylib
+
+CodeSign /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/Store49LocalCheck/Build/Products/Debug-iphonesimulator/ATSDiagnostic.app (in target 'ATSDiagnostic' from project 'ATSDiagnostic')
+    cd /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/outputs/ATS-Diagnostic
+    
+    Signing Identity:     "Sign to Run Locally"
+    
+    /usr/bin/codesign --force --sign - --timestamp\=none --generate-entitlement-der /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/Store49LocalCheck/Build/Products/Debug-iphonesimulator/ATSDiagnostic.app
+
+RegisterExecutionPolicyException /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/Store49LocalCheck/Build/Products/Debug-iphonesimulator/ATSDiagnostic.app (in target 'ATSDiagnostic' from project 'ATSDiagnostic')
+    cd /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/outputs/ATS-Diagnostic
+    builtin-RegisterExecutionPolicyException /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/Store49LocalCheck/Build/Products/Debug-iphonesimulator/ATSDiagnostic.app
+
+Validate /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/Store49LocalCheck/Build/Products/Debug-iphonesimulator/ATSDiagnostic.app (in target 'ATSDiagnostic' from project 'ATSDiagnostic')
+    cd /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/outputs/ATS-Diagnostic
+    builtin-validationUtility /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/Store49LocalCheck/Build/Products/Debug-iphonesimulator/ATSDiagnostic.app -shallow-bundle -infoplist-subpath Info.plist
+
+Touch /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/Store49LocalCheck/Build/Products/Debug-iphonesimulator/ATSDiagnostic.app (in target 'ATSDiagnostic' from project 'ATSDiagnostic')
+    cd /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/outputs/ATS-Diagnostic
+    /usr/bin/touch -c /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/Store49LocalCheck/Build/Products/Debug-iphonesimulator/ATSDiagnostic.app
+
+PruneExplicitPrecompiledModules /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/Store49LocalCheck/Build/Intermediates.noindex/ExplicitPrecompiledModules
+
+PruneExplicitPrecompiledModules /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/Store49LocalCheck/Build/Intermediates.noindex/SwiftExplicitPrecompiledModules
+
+PruneExplicitPrecompiledModules /Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/Store49LocalCheck/SDKExplicitPrecompiledModules
+
+** BUILD SUCCEEDED **
+

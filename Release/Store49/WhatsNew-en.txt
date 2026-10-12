@@ -1,0 +1,1 @@
+Rebuilt for iPhone and iPad with clearer connection summaries, issuer details and helpful certificate explanations. Adds HSTS diagnostics, dated Apple Certificate Transparency log information, request tools and local history. Improves keyboard dismissal and places TLS-version probes inside individual inspections.
