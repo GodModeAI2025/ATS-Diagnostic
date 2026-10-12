@@ -36,4 +36,43 @@ struct ProxyRulePersistenceTests {
         catch {}
         #expect(try await store.load().first?.id == rule.id)
     }
+    @Test @MainActor func monitorReloadPreservesLatestEditAndDeletion() async throws {
+        let directory = FileManager.default.temporaryDirectory.appendingPathComponent(UUID().uuidString)
+        defer { try? FileManager.default.removeItem(at: directory) }
+        let file = directory.appendingPathComponent("rules.json")
+        let monitor = ProxyMonitor(persistence: ProxyRulePersistence(file: file))
+        await monitor.loadRules()
+        var rule = ProxyRuleConfiguration(); rule.matchURL = "https://example.com/a"
+        rule.headerText = "X-Test: original"
+        try monitor.saveRewriteConfiguration(rule)
+        rule.enabled = false; rule.headerText = "X-Test: edited"
+        try monitor.saveRewriteConfiguration(rule)
+        await monitor.flushRules()
+        let reopened = ProxyMonitor(persistence: ProxyRulePersistence(file: file))
+        await reopened.loadRules()
+        #expect(!reopened.rulesLoading); #expect(!reopened.rulesLoadFailed)
+        let restored = try #require(reopened.rewriteConfigurations.first)
+        #expect(restored.id == rule.id); #expect(!restored.enabled)
+        #expect(restored.headerText == "X-Test: edited")
+        reopened.removeRewriteConfigurations(at: IndexSet(integer: 0))
+        await reopened.flushRules()
+        let afterDeletion = ProxyMonitor(persistence: ProxyRulePersistence(file: file))
+        await afterDeletion.loadRules()
+        #expect(afterDeletion.rewriteConfigurations.isEmpty)
+    }
+    @Test @MainActor func writeFailureRemainsVisibleAndDoesNotReplaceBlockingFile() async throws {
+        let directory = FileManager.default.temporaryDirectory.appendingPathComponent(UUID().uuidString)
+        try FileManager.default.createDirectory(at: directory, withIntermediateDirectories: true)
+        defer { try? FileManager.default.removeItem(at: directory) }
+        let blocking = directory.appendingPathComponent("blocked")
+        let sentinel = Data("fixture".utf8); try sentinel.write(to: blocking)
+        let monitor = ProxyMonitor(persistence: ProxyRulePersistence(file: blocking.appendingPathComponent("rules.json")))
+        await monitor.loadRules()
+        var rule = ProxyRuleConfiguration(); rule.matchURL = "https://example.com/a"
+        try monitor.saveRewriteConfiguration(rule)
+        await monitor.flushRules()
+        #expect(monitor.rulesPersistenceError?.contains("nicht gespeichert") == true)
+        #expect(try Data(contentsOf: blocking) == sentinel)
+    }
+
 }

@@ -34,10 +34,12 @@ struct CaptureView: View {
                         Button("Proxy starten",systemImage:"play.circle") {
                             guard let value = UInt16(port) else { inputError = "Der Port muss zwischen 0 und 65.535 liegen."; return }
                             editing = nil; inputError = nil; monitor.start(port:value)
-                        }.buttonStyle(.borderedProminent).controlSize(.large)
+                        }.buttonStyle(.borderedProminent).controlSize(.large).disabled(monitor.rulesLoading || monitor.rulesLoadFailed)
                     }
                     if let message = inputError ?? monitor.error { Text(message).foregroundStyle(.red) }
                 }
+                if monitor.rulesLoading { ProgressView("Proxy-Regeln laden…") }
+                if let error = monitor.rulesPersistenceError { Text(error).foregroundStyle(.red) }
                 Section {
                     NavigationLink { ProxyRulesView(monitor: monitor) } label: {
                         Label("Proxy-Regeln · \(monitor.rewriteConfigurations.filter(\.enabled).count) aktiv", systemImage: "arrow.triangle.branch")

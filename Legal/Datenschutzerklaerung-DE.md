@@ -33,6 +33,8 @@ Die App verarbeitet eingegebene Adressen und Anfragen, Antwortstatus und Header,
 
 Abgeschlossene Diagnosen werden lokal im App-Speicher aufbewahrt, bis Sie Einträge oder die Historie löschen oder die Speichergrenzen der App ältere Einträge entfernen. Die Historie hat eine begrenzte Anzahl von Einträgen und ein begrenztes Speicherbudget; Körpervorschauen sind ebenfalls begrenzt. Einstellungen bleiben lokal gespeichert. Die App verwendet die Schutzmechanismen von iOS; dies ersetzt nicht die Absicherung Ihres Geräts.
 
+Von Ihnen konfigurierte Proxy-Regeln werden ebenfalls lokal gespeichert. Sie können Ziel-URLs, Methoden, Header und Anfrageinhalte enthalten. Aktivierte Regeln ändern passende Anfragen nur im von Ihnen gestarteten Proxy. Dabei kann eine Anfrage an das in der Regel festgelegte Ziel gesendet werden. Sie können Regeln deaktivieren oder löschen; laufende Proxy-Verbindungen verwenden den beim Start übernommenen Regelstand.
+
 Geräte- oder iCloud-Sicherungen können je nach Ihren Apple-Einstellungen App-Daten enthalten. Solche Sicherungen werden durch das Betriebssystem beziehungsweise Apple verwaltet, nicht durch einen eigenen ATS-Diagnostic-Server. Das Entfernen lokaler Einträge löscht nicht automatisch Kopien in bereits erstellten Sicherungen oder Exporten.
 
 ## Lokales Netzwerk und Proxy

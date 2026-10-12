@@ -7,7 +7,12 @@ struct ProxyRulesView: View {
         List {
             Section {
                 Text("Regeln gelten für genau die angegebene URL. Bei mehreren Treffern wird die erste Regel verwendet. Änderungen sind nur bei gestopptem Proxy möglich.").font(.footnote).foregroundStyle(.secondary)
-                Text("Regeln bleiben für diese App-Sitzung erhalten. CONNECT-Tunnel und Upgrade-Verbindungen werden nicht verändert. Bei einem Zielwechsel entfallen alte Authorization- und Cookie-Header.").font(.footnote).foregroundStyle(.secondary)
+                Text("Regeln werden auf diesem Gerät gespeichert und beim nächsten Start wieder geladen. CONNECT-Tunnel und Upgrade-Verbindungen werden nicht verändert. Bei einem Zielwechsel entfallen alte Authorization- und Cookie-Header.").font(.footnote).foregroundStyle(.secondary)
+            }
+            if monitor.rulesLoading { ProgressView("Proxy-Regeln laden…") }
+            if let error = monitor.rulesPersistenceError {
+                Text(error).foregroundStyle(.red)
+                if monitor.rulesLoadFailed { Button("Laden erneut versuchen") { monitor.retryLoadingRules() } }
             }
             Section("Regeln · \(monitor.rewriteConfigurations.count)") {
                 ForEach(monitor.rewriteConfigurations) { configuration in
@@ -19,13 +24,13 @@ struct ProxyRulesView: View {
                                 Text(configuration.replacementURL.isEmpty ? "Ziel unverändert" : configuration.replacementURL).font(.caption).foregroundStyle(.secondary).lineLimit(2)
                             }
                         }
-                    }.disabled(monitor.running).deleteDisabled(monitor.running).moveDisabled(monitor.running)
+                    }.disabled((monitor.running || monitor.rulesLoading || monitor.rulesLoadFailed)).deleteDisabled((monitor.running || monitor.rulesLoading || monitor.rulesLoadFailed)).moveDisabled((monitor.running || monitor.rulesLoading || monitor.rulesLoadFailed))
                 }.onDelete { monitor.removeRewriteConfigurations(at: $0) }
                 .onMove { monitor.moveRewriteConfigurations(from: $0, to: $1) }
-            }.disabled(monitor.running)
-            Button("Regel hinzufügen", systemImage: "plus") { draft = ProxyRuleConfiguration() }.disabled(monitor.running || monitor.rewriteConfigurations.count >= 64)
+            }.disabled((monitor.running || monitor.rulesLoading || monitor.rulesLoadFailed))
+            Button("Regel hinzufügen", systemImage: "plus") { draft = ProxyRuleConfiguration() }.disabled(monitor.running || monitor.rulesLoading || monitor.rulesLoadFailed || monitor.rewriteConfigurations.count >= 64)
         }.navigationTitle("Proxy-Regeln")
-            .toolbar { EditButton().disabled(monitor.running) }
+            .toolbar { EditButton().disabled((monitor.running || monitor.rulesLoading || monitor.rulesLoadFailed)) }
             .sheet(item: $draft) { configuration in
                 ProxyRuleEditor(configuration: configuration) { value in
                     try monitor.saveRewriteConfiguration(value)

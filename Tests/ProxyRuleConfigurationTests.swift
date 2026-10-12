@@ -14,13 +14,17 @@ struct ProxyRuleConfigurationTests {
         value.bodyMode = .base64; value.bodyText = "invalid!"
         #expect(throws: ProxyRuleConfiguration.ConfigurationError.self) { try value.rule() }
     }
-    @Test @MainActor func editGuardsPreserveOrderAndPreventChangesWhileRunning() throws {
-        let monitor = ProxyMonitor()
+    @Test @MainActor func editGuardsPreserveOrderAndPreventChangesWhileRunning() async throws {
+        let directory = FileManager.default.temporaryDirectory.appendingPathComponent(UUID().uuidString)
+        defer { try? FileManager.default.removeItem(at: directory) }
+        let monitor = ProxyMonitor(persistence: ProxyRulePersistence(file: directory.appendingPathComponent("rules.json")))
+        await monitor.loadRules()
         var first = ProxyRuleConfiguration(); first.matchURL = "http://example.com/a"
         var second = ProxyRuleConfiguration(); second.matchURL = "http://example.com/b"
         try monitor.saveRewriteConfiguration(first); try monitor.saveRewriteConfiguration(second)
         monitor.moveRewriteConfigurations(from: IndexSet(integer: 0), to: 2)
         #expect(monitor.rewriteConfigurations.map(\.id) == [second.id, first.id])
+        await monitor.flushRules()
         monitor.starting = true
         #expect(throws: ProxyMonitor.RuleEditError.self) { try monitor.saveRewriteConfiguration(first) }
         monitor.removeRewriteConfigurations(at: IndexSet(integer: 0))

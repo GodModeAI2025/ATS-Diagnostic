@@ -9,7 +9,7 @@ import UserNotifications
     private let notificationDelegate = CertificateNotificationDelegate()
     init() { UNUserNotificationCenter.current().delegate = notificationDelegate }
     var body: some Scene {
-        WindowGroup { RootView(store: store,proxy:proxy).onChange(of:scenePhase) { if scenePhase == .background { proxy.stop(reason:"Der Proxy wurde beim Wechsel in den Hintergrund gestoppt."); Task { await store.flushHistory() } } } }
+        WindowGroup { RootView(store: store,proxy:proxy).onChange(of:scenePhase) { if scenePhase == .background { proxy.stop(reason:"Der Proxy wurde beim Wechsel in den Hintergrund gestoppt."); Task { await store.flushHistory(); await proxy.flushRules() } } } }
     }
 }
 struct RootView: View {

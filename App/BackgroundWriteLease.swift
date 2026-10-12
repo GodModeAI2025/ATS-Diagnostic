@@ -3,9 +3,9 @@ import UIKit
 /// Holds only the system-granted time needed to finish an already queued write.
 @MainActor final class BackgroundWriteLease {
     private var identifier: UIBackgroundTaskIdentifier = .invalid
-    func begin() {
+    func begin(name: String = "Save diagnostic history") {
         guard identifier == .invalid else { return }
-        identifier = UIApplication.shared.beginBackgroundTask(withName: "Save diagnostic history") { [weak self] in
+        identifier = UIApplication.shared.beginBackgroundTask(withName: name) { [weak self] in
             Task { @MainActor in self?.end() }
         }
     }

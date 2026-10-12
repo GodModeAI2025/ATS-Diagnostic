@@ -33,6 +33,8 @@ The app processes entered addresses and requests, response status and headers, b
 
 Completed records remain in local app storage until you delete records or history, or the app's storage limits remove older entries. The history has entry and storage limits, and body previews are bounded. Settings are stored locally. The app uses iOS data-protection mechanisms; these do not replace securing your device.
 
+Proxy rules you configure are also stored locally. They may contain target URLs, methods, headers and request contents. Enabled rules change matching requests only within the proxy you start. A request may then be sent to the target configured in the rule. You can disable or delete rules; a running proxy uses the rule snapshot selected at startup.
+
 Device or iCloud backups may contain app data, depending on your Apple settings. The operating system and Apple manage these backups; they are not an ATS Diagnostic backend. Deleting local records does not automatically remove copies from existing backups or exports.
 
 ## Local network and proxy

@@ -3,6 +3,52 @@ import Network
 import Observation
 
 @MainActor @Observable final class ProxyMonitor {
+    private let rulePersistence: ProxyRulePersistence
+    private var rulesLoadTask: Task<Void, Never>?
+    private var rulesSaveTask: Task<Void, Never>?
+    private var pendingRules: (revision: UInt64, rules: [ProxyRuleConfiguration])?
+    private var rulesRevision: UInt64 = 0
+    private(set) var rulesLoading = true
+    private(set) var rulesLoadFailed = false
+    private(set) var rulesPersistenceError: String?
+    init(persistence: ProxyRulePersistence? = nil) {
+        rulePersistence = persistence ?? ProxyRulePersistence(file: URL.applicationSupportDirectory.appendingPathComponent("ATS-Proxy-Rules.json"))
+        rulesLoadTask = Task { [weak self] in await self?.readRules() }
+    }
+    func loadRules() async { await rulesLoadTask?.value }
+    func retryLoadingRules() {
+        guard !running, !rulesLoading else { return }
+        rulesLoading = true
+        rulesLoadTask = Task { [weak self] in await self?.readRules() }
+    }
+    private func readRules() async {
+        defer { rulesLoading = false }
+        do {
+            rewriteConfigurations = try await rulePersistence.load()
+            rulesLoadFailed = false; rulesPersistenceError = nil
+        } catch {
+            rulesLoadFailed = true; rulesPersistenceError = "Proxy-Regeln konnten nicht geladen werden: " + error.localizedDescription
+        }
+    }
+    private func persistRules() {
+        rulesRevision &+= 1
+        pendingRules = (rulesRevision, rewriteConfigurations)
+        guard rulesSaveTask == nil else { return }
+        let lease = BackgroundWriteLease(); lease.begin(name: "Save proxy rules")
+        rulesSaveTask = Task { [self] in
+            defer { lease.end(); rulesSaveTask = nil }
+            while let snapshot = pendingRules {
+                pendingRules = nil
+                do {
+                    _ = try await rulePersistence.save(snapshot.rules, revision: snapshot.revision)
+                    if snapshot.revision == rulesRevision { rulesPersistenceError = nil }
+                } catch {
+                    if snapshot.revision == rulesRevision { rulesPersistenceError = "Proxy-Regeln konnten nicht gespeichert werden: " + error.localizedDescription }
+                }
+            }
+        }
+    }
+    func flushRules() async { await rulesLoadTask?.value; await rulesSaveTask?.value }
     var port: UInt16?
     var starting = false
     var error: String?
@@ -14,15 +60,17 @@ import Observation
     private var generation = UUID()
     var running: Bool { starting || port != nil }
     enum RuleEditError: LocalizedError {
-        case running, limit
+        case running, limit, loading
         var errorDescription: String? {
             switch self {
+            case .loading: "Die Proxy-Regeln sind noch nicht verfügbar. Warte auf das Laden oder versuche es erneut."
             case .running: "Stoppe den Proxy, bevor du Regeln änderst."
             case .limit: "Es können höchstens 64 Regeln konfiguriert werden."
             }
         }
     }
     func saveRewriteConfiguration(_ value: ProxyRuleConfiguration) throws {
+        guard !rulesLoading, !rulesLoadFailed else { throw RuleEditError.loading }
         guard !running else { throw RuleEditError.running }
         _ = try value.rule()
         if let index = rewriteConfigurations.firstIndex(where: { $0.id == value.id }) { rewriteConfigurations[index] = value }
@@ -30,20 +78,24 @@ import Observation
             guard rewriteConfigurations.count < 64 else { throw RuleEditError.limit }
             rewriteConfigurations.append(value)
         }
+        persistRules()
     }
     func removeRewriteConfigurations(at offsets: IndexSet) {
-        guard !running else { return }
+        guard !running, !rulesLoading, !rulesLoadFailed else { return }
         for index in offsets.sorted(by: >) where rewriteConfigurations.indices.contains(index) { rewriteConfigurations.remove(at: index) }
+        persistRules()
     }
     func moveRewriteConfigurations(from offsets: IndexSet, to destination: Int) {
-        guard !running, (0...rewriteConfigurations.count).contains(destination), offsets.allSatisfy({ rewriteConfigurations.indices.contains($0) }) else { return }
+        guard !running, !rulesLoading, !rulesLoadFailed, (0...rewriteConfigurations.count).contains(destination), offsets.allSatisfy({ rewriteConfigurations.indices.contains($0) }) else { return }
         let selected = offsets.sorted().map { rewriteConfigurations[$0] }
         let remaining = rewriteConfigurations.enumerated().filter { !offsets.contains($0.offset) }.map(\.element)
         let insertion = destination - offsets.filter { $0 < destination }.count
         rewriteConfigurations = Array(remaining.prefix(insertion)) + selected + Array(remaining.dropFirst(insertion))
+        persistRules()
     }
     func start(port: UInt16) {
         guard !running else { return }
+        guard !rulesLoading, !rulesLoadFailed else { error = RuleEditError.loading.localizedDescription; return }
         let rules: [HTTPProxyRewriteRule]
         do { rules = try rewriteConfigurations.filter(\.enabled).map { try $0.rule() } }
         catch { self.error = error.localizedDescription; return }
