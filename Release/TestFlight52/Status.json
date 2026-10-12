@@ -5,11 +5,12 @@
   "build": 52,
   "sourceCommit": "d15be2d",
   "archive": "succeeded",
-  "upload": "in_progress",
-  "processing": "not_verified",
+  "upload": "succeeded",
+  "processing": "started_per_xcode_upload",
   "testFlightAssignment": "not_verified",
   "intendedTester": "mark_zimmermann@mac.com",
   "unitTestMethodsPassed": 136,
   "simulatorUIVerified": true,
-  "deviceInstallationVerified": false
+  "deviceInstallationVerified": false,
+  "uploadCompletedAt": "2026-10-12T10:42:53+02:00"
 }
