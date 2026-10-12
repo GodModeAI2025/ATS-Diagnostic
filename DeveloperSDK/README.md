@@ -15,7 +15,7 @@ Die bestehende Session behält ihre Cookies, Weiterleitungen, Cache-, Proxy- und
 
 Standard: 200 Einträge, 64 KiB Vorschau je Körper, 64 MiB kodiertes Journal. Zu große Einträge werden ausgelassen; abgeschlossene ältere Einträge werden zur Einhaltung der Grenzen entfernt. `clear()` leert abgeschlossene Einträge und beendet keine laufenden Anfragen. Das Journal bleibt im Arbeitsspeicher. Exporte können vertrauliche Header oder Körper enthalten und müssen von der integrierenden App ausdrücklich geteilt werden.
 
-Noch offen: automatische URLProtocol-Integration, Streaming-/Upload-/Download-Aufzeichnung, vollständige Redirect- und Verbindungsmetriken, Shake-/Präsentationshooks. Dieses Paket ist noch nicht in Build 38 eingebettet. Die vollständige historische SDK-Parität ist damit nicht erreicht.
+Noch offen: automatische URLProtocol-Integration, Streaming-/Upload-/Download-Aufzeichnung, vollständige Redirect- und Verbindungsmetriken sowie eine vollständige SDK-Diagnoseoberfläche. Optionale Aktivierungshooks sind unten beschrieben. Dieses Paket ist noch nicht in Build 39 eingebettet. Die vollständige historische SDK-Parität ist damit nicht erreicht.
 
 Prüfung: `swift test`. Die Tests verwenden eine kontrollierte URLProtocol-Gegenstelle in der vom Aufrufer bereitgestellten Session und prüfen vollständige Rückgabe trotz leerer Vorschau, unveränderte Fehler, tatsächliche POST-Daten, begrenztes Journal und explizites Leeren.
 
