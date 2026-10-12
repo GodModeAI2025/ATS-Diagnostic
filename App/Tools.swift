@@ -54,7 +54,12 @@ struct ToolsView: View {
             else { Text(output).font(.body.monospaced()).textSelection(.enabled); ShareLink("Share result", item: output) }
         }.frame(maxWidth: .infinity, alignment: .leading)
     }
-    private var privacyText: some View { Text("Diagnostics are stored on this device. Requests connect only to the destination you choose. Exported files may contain credentials or personal data.").font(.subheadline).foregroundStyle(.secondary).fixedSize(horizontal: false, vertical: true) }
+    private var privacyText: some View {
+        VStack(alignment: .leading, spacing: 12) {
+            Text("Diagnostics are stored on this device. Requests connect only to the destination you choose. Exported files may contain credentials or personal data.").font(.subheadline).foregroundStyle(.secondary).fixedSize(horizontal: false, vertical: true)
+            Link("Datenschutzerklärung / Privacy Policy", destination: URL(string: "https://www.mobilebox-consulting.de/datenschutzerklärung-privacy-policy/")!)
+        }
+    }
     private func transform() {
         let data = Data(input.utf8)
         switch operation {

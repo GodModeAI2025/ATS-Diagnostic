@@ -1,0 +1,18 @@
+{
+  "appId": "1297164068",
+  "bundleId": "com.mobilebox.atsdiagnostic",
+  "version": "2.0",
+  "build": 49,
+  "archiveSucceeded": true,
+  "uploadCompleted": true,
+  "uploadCompletedAt": "2026-10-12T07:26:33+02:00",
+  "atsGlobalExceptionExplicitlyApproved": true,
+  "normalHTTPSTrustVerified": true,
+  "processingCompleted": null,
+  "submittedForReview": false,
+  "published": false,
+  "privacyURL": "https://www.mobilebox-consulting.de/datenschutzerklärung-privacy-policy/",
+  "privacyURLSavedAsDraft": true,
+  "policyContentOwnerUpdating": true,
+  "inAppPrivacyLinkAddedAfterBuild49": true
+}
