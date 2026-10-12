@@ -1,0 +1,5 @@
+ATS Diagnostic 2.0 (47)
+
+Neue Antwortansicht „HSTS verstehen“: fehlende und ungültige Header, Laufzeit, Subdomains und Löschung durch max-age=0 verständlich erklärt. Originalwert bleibt sichtbar.
+
+Die Auswertung betrifft die beobachtete Antwort; Browsercache und tatsächliche Preload-Mitgliedschaft werden nicht behauptet. Importierte Berichte und fehlende HTTP-Antworten werden entsprechend gekennzeichnet.
