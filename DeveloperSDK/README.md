@@ -15,7 +15,7 @@ Die bestehende Session behält ihre Cookies, Weiterleitungen, Cache-, Proxy- und
 
 Standard: 200 Einträge, 64 KiB Vorschau je Körper, 64 MiB kodiertes Journal. Zu große Einträge werden ausgelassen; abgeschlossene ältere Einträge werden zur Einhaltung der Grenzen entfernt. `clear()` leert abgeschlossene Einträge und beendet keine laufenden Anfragen. Das Journal bleibt im Arbeitsspeicher. Exporte können vertrauliche Header oder Körper enthalten und müssen von der integrierenden App ausdrücklich geteilt werden.
 
-Noch offen: automatische URLProtocol-Integration, Streaming-Aufzeichnung und Vorschau tatsächlich übertragener Datei-Uploads, vollständige Redirect- und Verbindungsmetriken sowie eine vollständige SDK-Diagnoseoberfläche. Optionale Aktivierungshooks sind unten beschrieben. Dieses Paket ist noch nicht in Build 39 eingebettet. Die vollständige historische SDK-Parität ist damit nicht erreicht.
+Noch offen: automatische URLProtocol-Integration, automatische Erfassung vorhandener Sessions, Vorschau tatsächlich übertragener Datei-Uploads und Abschluss abgebrochener Stream-Konsumenten, vollständige Redirect- und Verbindungsmetriken sowie eine vollständige SDK-Diagnoseoberfläche. Optionale Aktivierungshooks sind unten beschrieben. Dieses Paket ist noch nicht in Build 39 eingebettet. Die vollständige historische SDK-Parität ist damit nicht erreicht.
 
 Prüfung: `swift test`. Die Tests verwenden eine kontrollierte URLProtocol-Gegenstelle in der vom Aufrufer bereitgestellten Session und prüfen vollständige Rückgabe trotz leerer Vorschau, unveränderte Fehler, tatsächliche POST-Daten, begrenztes Journal und explizites Leeren.
 
@@ -39,7 +39,7 @@ Der native Beispielhost unter `Examples/ActivationDemo` demonstriert diese Verdr
 
 ## Uploads aus Data
 
-`try await recorder.upload(for: request, from: body, using: session)` verwendet die bestehende URLSession direkt. Der explizite Upload-Body wird mit voller Bytezahl und begrenzter Vorschau protokolliert; der Aufrufer erhält die vollständige Antwort. Transportfehler bleiben unverändert. Streaming bleibt offen. Datei-Uploads sind unten beschrieben.
+`try await recorder.upload(for: request, from: body, using: session)` verwendet die bestehende URLSession direkt. Der explizite Upload-Body wird mit voller Bytezahl und begrenzter Vorschau protokolliert; der Aufrufer erhält die vollständige Antwort. Transportfehler bleiben unverändert. Streaming und Datei-Uploads sind unten beschrieben.
 
 ## Downloads
 
@@ -48,3 +48,9 @@ Der native Beispielhost unter `Examples/ActivationDemo` demonstriert diese Verdr
 ## Datei-Uploads
 
 `try await recorder.upload(for: request, fromFile: fileURL, using: session)` übergibt die vorhandene Datei direkt an URLSession. Das SDK liest den Anfragekörper nicht vorab; seine Vorschau und gesendete Bytezahl bleiben unbekannt. Der HAR-Export kennzeichnet diesen Körper als nicht verfügbar. Die vollständige Antwort, begrenzte Antwortvorschau und der vollständige Antwort-Hash werden wie bei Data-Uploads behandelt. Die Quelldatei gehört weiterhin der aufrufenden App.
+
+## Gestreamte Antworten
+
+`let (stream, response) = try await recorder.bytes(for: request, using: session)` nutzt die übergebene Session direkt. `for try await byte in stream` liefert jedes konsumierte Byte. Vorschau und Hash-Puffer bleiben begrenzt; SHA-256 wird über alle konsumierten Bytes berechnet und erst bei EOF als vollständiger Hash gespeichert. Bei einem Iterator-Transportfehler bleiben beobachtete Teilbytes und der Originalfehler erhalten, ohne vollständigen Hash. Die beobachtete Dauer umfasst auch die Zeit der Konsumierung, keine isolierte Netzwerkmetrik.
+
+Der Stream ist einmalig und mit einem Iterator zu konsumieren; Iteratoren nicht kopieren oder gleichzeitig benutzen. Ein zweiter Iterator wird mit `ConsumptionError.alreadyConsumed` abgewiesen. `stream.task` erlaubt dem Host die normale Task-Steuerung. Vor EOF/Fehler gibt es keinen abgeschlossenen Journaleintrag. Wird die Schleife vorzeitig verlassen oder gar nicht begonnen, wird kein abgeschlossener Eintrag behauptet; automatische Abschlussbeobachtung solcher Konsumenten bleibt offen. Das SDK übernimmt keine zusätzlichen Authentifizierungs- oder Trust-Handler.

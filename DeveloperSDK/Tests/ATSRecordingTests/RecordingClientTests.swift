@@ -12,7 +12,12 @@ private final class FixtureProtocol: URLProtocol, @unchecked Sendable {
         let data = request.url?.path == "/echo" ? ((request.httpBodyStream ?? task?.originalRequest?.httpBodyStream) != nil ? readBodyStream() : (request.httpBody ?? task?.originalRequest?.httpBody ?? Data())) : Data((0..<(request.url?.path == "/large" ? 150_017 : 4096)).map { UInt8($0 % 251) })
         let response = HTTPURLResponse(url:request.url!,statusCode:200,httpVersion:"HTTP/1.1",headerFields:["Content-Type":"application/octet-stream"])!
         client?.urlProtocol(self,didReceive:response,cacheStoragePolicy:.notAllowed)
-        client?.urlProtocol(self,didLoad:data);client?.urlProtocolDidFinishLoading(self)
+        client?.urlProtocol(self,didLoad:data)
+        if request.url?.path == "/partial" {
+            DispatchQueue.global().asyncAfter(deadline: .now() + 0.2) { [self] in
+                if !stopLock.withLock({ stopped }) { client?.urlProtocol(self, didFailWithError: URLError(.networkConnectionLost)) }
+            }
+        } else { client?.urlProtocolDidFinishLoading(self) }
     }
     private func readBodyStream() -> Data {
         guard let stream = request.httpBodyStream ?? task?.originalRequest?.httpBodyStream else { return Data() }
@@ -21,7 +26,9 @@ private final class FixtureProtocol: URLProtocol, @unchecked Sendable {
         while stream.hasBytesAvailable { let count = stream.read(&buffer, maxLength: buffer.count); if count <= 0 { break }; data.append(contentsOf: buffer.prefix(count)) }
         return data
     }
-    override func stopLoading() {}
+    private let stopLock = NSLock()
+    private var stopped = false
+    override func stopLoading() { stopLock.withLock { stopped = true } }
 }
 private func session() -> URLSession { let config = URLSessionConfiguration.ephemeral;config.protocolClasses = [FixtureProtocol.self];return URLSession(configuration:config) }
 struct RecordingClientTests {
@@ -146,6 +153,59 @@ struct RecordingClientTests {
         let entry = try #require((log["entries"] as? [[String: Any]])?.first)
         let metadata = try #require(entry["_atsDiagnostic"] as? [String: Any])
         #expect(metadata["requestBodyUnavailable"] as? Bool == true)
+    }
+
+    @Test func streamingPreservesEveryByteAndFullMultiChunkHash() async throws {
+        let recorder = try RecordingClient(previewLimit: 3)
+        let session = session(); defer { session.invalidateAndCancel() }
+        let (stream, response) = try await recorder.bytes(for: URLRequest(url: URL(string: "https://fixture.invalid/large")!), using: session)
+        #expect(await recorder.records().isEmpty)
+        var body = Data()
+        for try await byte in stream { body.append(byte) }
+        #expect(body == Data((0..<150_017).map { UInt8($0 % 251) }))
+        #expect((response as? HTTPURLResponse)?.statusCode == 200)
+        let record = try #require(await recorder.records().first)
+        #expect(record.responseBytes == body.count); #expect(record.responseBodyPreview == body.prefix(3))
+        #expect(record.responseSHA256 == SHA256.hash(data: body).map { String(format: "%02x", $0) }.joined())
+        var duplicate = stream.makeAsyncIterator()
+        await #expect(throws: RecordingByteStream.ConsumptionError.self) { try await duplicate.next() }
+        #expect(await recorder.records().count == 1)
+    }
+    @MainActor @Test func streamingZeroPreviewStillCountsAndHashesFullBody() async throws {
+        let recorder = try RecordingClient(previewLimit: 0)
+        let session = session(); defer { session.invalidateAndCancel() }
+        let (stream, _) = try await recorder.bytes(for: URLRequest(url: URL(string: "https://fixture.invalid/body")!), using: session)
+        var body = Data()
+        for try await byte in stream { body.append(byte) }
+        let record = try #require(await recorder.records().first)
+        #expect(record.responseBodyPreview.isEmpty); #expect(record.responseBytes == 4096)
+        #expect(record.responseSHA256 == SHA256.hash(data: body).map { String(format: "%02x", $0) }.joined())
+    }
+    @Test func streamingFailureRecordsObservedPartialBytesWithoutCompleteHash() async throws {
+        let recorder = try RecordingClient(previewLimit: 3)
+        let session = session(); defer { session.invalidateAndCancel() }
+        let (stream, _) = try await recorder.bytes(for: URLRequest(url: URL(string: "https://fixture.invalid/partial")!), using: session)
+        var observed = 0
+        do {
+            for try await _ in stream { observed += 1 }
+            Issue.record("Expected stream failure")
+        } catch { #expect((error as NSError).code == URLError.networkConnectionLost.rawValue) }
+        let record = try #require(await recorder.records().first)
+        #expect(observed > 0); #expect(record.responseBytes == observed)
+        #expect(record.responseBodyPreview.count == min(observed, 3))
+        #expect(record.responseSHA256 == nil)
+        #expect(record.errorCode == URLError.networkConnectionLost.rawValue)
+    }
+    @Test func streamingInitialFailureRetainsUnknownResponse() async throws {
+        let recorder = try RecordingClient()
+        let session = session(); defer { session.invalidateAndCancel() }
+        do {
+            _ = try await recorder.bytes(for: URLRequest(url: URL(string: "https://fixture.invalid/failure")!), using: session)
+            Issue.record("Expected initial failure")
+        } catch { #expect((error as NSError).code == URLError.cannotConnectToHost.rawValue) }
+        let record = try #require(await recorder.records().first)
+        #expect(record.responseBytes == nil); #expect(record.status == nil)
+        #expect(record.responseSHA256 == nil)
     }
 
     @Test func tooSmallJournalCannotChangeSuccessfulResponse() async throws {

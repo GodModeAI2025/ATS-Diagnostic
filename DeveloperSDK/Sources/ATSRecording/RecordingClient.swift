@@ -140,6 +140,22 @@ public actor RecordingClient {
         return (stored, count, hash.finalize().map { String(format: "%02x", $0) }.joined())
     }
 
+    /// Observes a single consumption of the supplied session's streaming response.
+    public func bytes(for request: URLRequest, using session: URLSession) async throws -> (RecordingByteStream, URLResponse) {
+        let began = ContinuousClock.now
+        let date = Date()
+        do {
+            let (bytes, response) = try await session.bytes(for: request)
+            return (RecordingByteStream(bytes: bytes, owner: self, request: request, response: response, date: date, began: began, previewLimit: previewLimit), response)
+        } catch {
+            try? append(makeRecord(request: request, date: date, began: began, data: nil, response: nil, error: error as NSError))
+            throw error
+        }
+    }
+    func recordStream(request: URLRequest, response: URLResponse, date: Date, began: ContinuousClock.Instant, preview: Data, count: Int, hash: String?, error: NSError?) {
+        try? append(makeRecord(request: request, date: date, began: began, data: preview, response: response as? HTTPURLResponse, error: error, responseByteCount: count, responseHash: hash, completeResponse: error == nil))
+    }
+
     public func records() -> [RecordedExchange] { journal.map(\.record) }
     public func clear() { journal.removeAll(); encodedBytes = 2; publish(.cleared) }
     /// Buffered metadata-only events; revision gaps require a records() reload.
@@ -182,10 +198,10 @@ public actor RecordingClient {
         guard let data, !data.isEmpty, previewLimit > 0 else { return Data() }
         return data.withUnsafeBytes { buffer in Data(bytes: buffer.baseAddress!, count: min(buffer.count, previewLimit)) }
     }
-    private func makeRecord(request: URLRequest, date: Date, began: ContinuousClock.Instant, data: Data?, response: HTTPURLResponse?, error: NSError?, responseByteCount: Int? = nil, responseHash: String? = nil, requestBodyUnknown: Bool = false) -> RecordedExchange {
+    private func makeRecord(request: URLRequest, date: Date, began: ContinuousClock.Instant, data: Data?, response: HTTPURLResponse?, error: NSError?, responseByteCount: Int? = nil, responseHash: String? = nil, requestBodyUnknown: Bool = false, completeResponse: Bool = true) -> RecordedExchange {
         let time = began.duration(to: .now).components
         let headers = response?.allHeaderFields.reduce(into: [String: String]()) { result, item in result[String(describing: item.key)] = String(describing: item.value) } ?? [:]
         let body = requestBodyUnknown ? nil : request.httpBody
-        return RecordedExchange(id: UUID(), date: date, url: request.url?.absoluteString ?? "", method: request.httpMethod ?? "GET", requestHeaders: request.allHTTPHeaderFields ?? [:], requestBodyPreview: preview(body), requestBodyBytes: requestBodyUnknown ? nil : (body?.count ?? (request.httpBodyStream == nil ? 0 : nil)), status: response?.statusCode, responseHeaders: headers, responseBodyPreview: preview(data), responseBytes: responseByteCount ?? data?.count, responseSHA256: responseHash ?? data.map { SHA256.hash(data: $0).map { String(format: "%02x", $0) }.joined() }, duration: Double(time.seconds) + Double(time.attoseconds) / 1e18, errorDomain: error?.domain, errorCode: error?.code, errorDescription: error?.localizedDescription)
+        return RecordedExchange(id: UUID(), date: date, url: request.url?.absoluteString ?? "", method: request.httpMethod ?? "GET", requestHeaders: request.allHTTPHeaderFields ?? [:], requestBodyPreview: preview(body), requestBodyBytes: requestBodyUnknown ? nil : (body?.count ?? (request.httpBodyStream == nil ? 0 : nil)), status: response?.statusCode, responseHeaders: headers, responseBodyPreview: preview(data), responseBytes: responseByteCount ?? data?.count, responseSHA256: completeResponse ? (responseHash ?? data.map { SHA256.hash(data: $0).map { String(format: "%02x", $0) }.joined() }) : nil, duration: Double(time.seconds) + Double(time.attoseconds) / 1e18, errorDomain: error?.domain, errorCode: error?.code, errorDescription: error?.localizedDescription)
     }
 }

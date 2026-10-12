@@ -1,0 +1,7 @@
+# SDK-Streaming
+
+RecordingClient.bytes(for:using:) verwendet die übergebene URLSession direkt und liefert eine einmalig konsumierbare RecordingByteStream-Sequenz samt Originalantwort. Jeder konsumierte Bytewert bleibt unverändert. Vorschau ist separat begrenzt; der zusätzliche Hash-Puffer beträgt höchstens 64 KiB. Nur EOF erzeugt einen vollständigen SHA-256. Ein Iterator-Transportfehler protokolliert tatsächlich beobachtete Teilbytes und den Originalfehler ohne vollständigen Hash. Fehlgeschlagener Beginn lässt Antwortgröße/-status unbekannt.
+
+23 kontrollierte Tests bestehen auf macOS und iOS 27.0, ohne Fehler/Warnungen; zwei opt-in Live-Testmethoden wurden übersprungen. Vier neue Fälle prüfen 150.017 unveränderte Bytes und Multi-Chunk-Hash, Null-Vorschau aus MainActor, kontrollierten Fehler nach gelieferten Bytes und initialen Transportfehler. Ein zweiter Iterator wird explizit abgewiesen, ohne zusätzliche Journalaufnahme. Native Foundation-API wurde im lokalen Xcode-SDK geprüft.
+
+Nur ein Iterator; nicht kopieren oder gleichzeitig konsumieren. Ein vorzeitig verlassener oder nie konsumierter Stream bekommt keinen abgeschlossenen Eintrag. Dauer umfasst den Konsumierungszeitraum. Automatische Abschluss-/URLProtocol-Erfassung und die neue Streaming-Live-TLS-Verifikation bleiben offen. Keine zusätzlichen Trust-/Auth-Handler. Das separate SDK ist nicht in App-Build 41 eingebettet.
