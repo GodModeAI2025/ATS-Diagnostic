@@ -1,0 +1,165 @@
+Device orientation: Unknown
+------------------------
+Application bundle identifier: com.mobilebox.atsdiagnostic
+Application UI orientation: Portrait
+Application, pid: 45382, label: 'ATS Diagnostic'
+ Window, {{0.0, 0.0}, {402.0, 874.0}}, hitPoint: {201.0, 437.0}
+  Other, {{0.0, 0.0}, {402.0, 874.0}}, hitPoint: {201.0, 437.0}
+  Other, {{0.0, 0.0}, {402.0, 874.0}}, hitPoint: {201.0, 437.0}
+   Other, {{0.0, 0.0}, {402.0, 874.0}}, hitPoint: {201.0, 437.0}
+    Other, {{0.0, 0.0}, {402.0, 874.0}}, hitPoint: {201.0, 437.0}
+     Other, {{0.0, 0.0}, {402.0, 874.0}}, hitPoint: {201.0, 437.0}
+      Other, {{0.0, 0.0}, {402.0, 874.0}}, hitPoint: {201.0, 437.0}
+       Other, {{0.0, 0.0}, {402.0, 874.0}}, hitPoint: {201.0, 437.0}
+        Other, {{0.0, 0.0}, {402.0, 874.0}}, hitPoint: {201.0, 437.0}
+         Other, {{0.0, 0.0}, {402.0, 874.0}}, hitPoint: {201.0, 437.0}
+          Other, {{0.0, 0.0}, {402.0, 874.0}}, hitPoint: {201.0, 437.0}
+           Other, {{0.0, 0.0}, {402.0, 874.0}}, hitPoint: {201.0, 437.0}
+            Other, {{0.0, 0.0}, {402.0, 874.0}}, hitPoint: {201.0, 437.0}
+             NavigationBar, {{0.0, 62.0}, {402.0, 54.0}}, identifier: 'Transparency', hitPoint: {201.0, 89.0}
+              Button, {{16.0, 62.0}, {44.0, 44.0}}, identifier: 'BackButton', label: 'Connection details', hitPoint: {38.0, 84.0}
+              StaticText, {{146.3, 73.7}, {109.0, 20.7}}, label: 'Transparency', hitPoint: {200.8, 84.0}
+             Other, {{0.0, 0.0}, {402.0, 874.0}}, hitPoint: {201.0, 437.0}
+              Other, {{0.0, 0.0}, {402.0, 874.0}}, hitPoint: {201.0, 437.0}
+               Other, {{0.0, 0.0}, {402.0, 874.0}}, hitPoint: {201.0, 437.0}
+                Other, {{0.0, 0.0}, {402.0, 874.0}}, hitPoint: {201.0, 437.0}
+                 CollectionView, {{0.0, 0.0}, {402.0, 874.0}}, hitPoint: {201.0, 437.0}
+                  Other, {{-16.0, -2003.7}, {434.0, 2023.7}}, hitPoint: {201.0, 10.0}
+                  Cell, {{16.0, -61.3}, {370.0, 63.7}}, hitPoint: {201.0, 1.2}
+                   Other, {{16.0, -61.3}, {370.0, 63.7}}, hitPoint: {201.0, 1.2}
+                    Other, {{16.0, -61.3}, {370.0, 63.7}}, hitPoint: {201.0, 1.2}
+                   Other, {{16.0, -61.3}, {370.0, 63.7}}, hitPoint: {201.0, 1.2}
+                    Other, {{16.0, -61.3}, {370.0, 63.7}}, hitPoint: {201.0, 1.2}
+                     Other, {{16.0, -61.3}, {370.0, 63.7}}, hitPoint: {201.0, 1.2}
+                      StaticText, {{16.0, -61.3}, {370.0, 63.7}}, label: 'Apple’s trust engine confirmed that this connection meets its CT policy.', hitPoint: {201.0, 1.2}
+                  Other, {{0.0, -0.0}, {402.0, 874.0}}, hitPoint: {201.0, 437.0}
+                   Other, {{0.0, 0.0}, {402.0, 156.0}}, hitPoint: {201.0, 78.0}
+                   Other, {{0.0, 741.0}, {402.0, 133.0}}, hitPoint: {201.0, 807.5}
+                  Other, {{0.0, -0.0}, {402.0, 874.0}}, hitPoint: {201.0, 437.0}
+                   Other, {{0.0, 0.0}, {402.0, 156.0}}, hitPoint: {201.0, 78.0}
+                   Other, {{0.0, 741.0}, {402.0, 133.0}}, hitPoint: {201.0, 807.5}
+                  Other, {{-16.0, 20.0}, {434.0, 794.7}}, hitPoint: {201.0, 417.3}
+                  Cell, {{16.0, 20.0}, {370.0, 40.3}}, hitPoint: {201.0, 40.2}
+                   Other, {{16.0, 20.0}, {370.0, 40.3}}, hitPoint: {201.0, 40.2}
+                   Other, {{16.0, 20.0}, {370.0, 40.3}}, hitPoint: {201.0, 40.2}
+                    Other, {{16.0, 20.0}, {370.0, 40.3}}, hitPoint: {201.0, 40.2}
+                     Other, {{16.0, 20.0}, {370.0, 40.3}}, hitPoint: {201.0, 40.2}
+                      StaticText, {{16.0, 20.0}, {370.0, 40.3}}, label: 'Embedded signed timestamps · 2', hitPoint: {201.0, 40.2}
+                  Cell, {{16.0, 60.3}, {370.0, 346.3}}, hitPoint: {201.0, 233.5}
+                   Other, {{16.0, 60.3}, {370.0, 346.3}}, hitPoint: {201.0, 233.5}
+                    Other, {{16.0, 60.3}, {370.0, 346.3}}, hitPoint: {201.0, 233.5}
+                   Other, {{16.0, 60.3}, {370.0, 346.3}}, hitPoint: {201.0, 233.5}
+                    Other, {{16.0, 60.3}, {370.0, 346.3}}, hitPoint: {201.0, 233.5}
+                     Other, {{16.0, 60.3}, {370.0, 346.3}}, hitPoint: {201.0, 233.5}
+                      Image, {{34.7, 80.0}, {18.7, 23.3}}, identifier: 'doc.text', label: 'Plain Text Document', hitPoint: {44.0, 91.7}
+                      StaticText, {{34.7, 80.0}, {234.3, 23.3}}, label: 'DigiCert 'Sphinx2026h2'', hitPoint: {151.8, 91.7}
+                      StaticText, {{32.0, 109.7}, {56.3, 18.0}}, label: 'DigiCert', hitPoint: {60.2, 118.7}
+                      StaticText, {{32.0, 135.7}, {85.0, 20.3}}, label: 'Timestamp', hitPoint: {74.5, 145.8}
+                      StaticText, {{32.0, 135.7}, {338.0, 20.3}}, label: 'Timestamp, 27. Sep 2026 at 0:59:12', hitPoint: {201.0, 145.8}
+                      StaticText, {{32.0, 164.0}, {338.0, 20.3}}, label: 'Signature, SHA-256 · ECDSA', hitPoint: {201.0, 174.2}
+                      StaticText, {{32.0, 164.0}, {73.0, 20.3}}, label: 'Signature', hitPoint: {68.5, 174.2}
+                      StaticText, {{32.0, 192.3}, {338.0, 20.3}}, label: 'Log’s current state, Usable', hitPoint: {201.0, 202.5}
+                      StaticText, {{32.0, 192.3}, {142.3, 20.3}}, label: 'Log’s current state', hitPoint: {103.2, 202.5}
+                      StaticText, {{32.0, 220.7}, {127.0, 20.3}}, label: 'Apple-Logstatus', hitPoint: {95.5, 230.8}
+                      StaticText, {{32.0, 220.7}, {338.0, 20.3}}, label: 'Apple-Logstatus, Usable', hitPoint: {201.0, 230.8}
+                      StaticText, {{32.0, 249.0}, {338.0, 51.7}}, label: 'Aktuell qualifiziert laut Apple-Listenstand. Die SCT-Signatur und weitere Richtlinienbedingungen sind damit noch nicht geprüft.', hitPoint: {201.0, 274.8}
+                      StaticText, {{32.0, 308.7}, {338.0, 20.3}}, label: 'Apple-Logbetreiber, DigiCert', hitPoint: {201.0, 318.8}
+                      StaticText, {{32.0, 308.7}, {149.3, 20.3}}, label: 'Apple-Logbetreiber', hitPoint: {106.7, 318.8}
+                      StaticText, {{32.0, 337.0}, {61.3, 20.3}}, label: 'Log-API', hitPoint: {62.7, 347.2}
+                      StaticText, {{32.0, 337.0}, {338.0, 20.3}}, label: 'Log-API, RFC6962', hitPoint: {201.0, 347.2}
+                      Button, {{32.0, 365.3}, {338.0, 20.3}}, label: 'Log ID & signature', hitPoint: {201.0, 375.5}
+                       StaticText, {{32.0, 365.3}, {140.3, 20.3}}, label: 'Log ID & signature', hitPoint: {102.2, 375.5}
+                       Button, {{359.7, 368.7}, {10.3, 14.0}}, hitPoint: {364.8, 375.7}
+                        Image, {{359.7, 368.7}, {10.3, 14.0}}, identifier: 'collapsed', hitPoint: {364.8, 375.7}
+                  Cell, {{16.0, 406.7}, {370.0, 346.3}}, hitPoint: {201.0, 579.8}
+                   Other, {{16.0, 406.7}, {370.0, 346.3}}, hitPoint: {201.0, 579.8}
+                    Other, {{16.0, 406.7}, {370.0, 346.3}}, hitPoint: {201.0, 579.8}
+                   Other, {{16.0, 406.7}, {370.0, 346.3}}, hitPoint: {201.0, 579.8}
+                    Other, {{16.0, 406.7}, {370.0, 346.3}}, hitPoint: {201.0, 579.8}
+                     Other, {{16.0, 406.7}, {370.0, 346.3}}, hitPoint: {201.0, 579.8}
+                      Image, {{34.7, 426.3}, {18.7, 23.3}}, identifier: 'doc.text', label: 'Plain Text Document', hitPoint: {44.0, 438.0}
+                      StaticText, {{34.7, 426.3}, {237.7, 23.3}}, label: 'Cloudflare 'Nimbus2026'', hitPoint: {153.5, 438.0}
+                      StaticText, {{32.0, 456.0}, {70.7, 18.0}}, label: 'Cloudflare', hitPoint: {67.3, 465.0}
+                      StaticText, {{32.0, 482.0}, {338.0, 20.3}}, label: 'Timestamp, 27. Sep 2026 at 0:59:12', hitPoint: {201.0, 492.2}
+                      StaticText, {{32.0, 482.0}, {85.0, 20.3}}, label: 'Timestamp', hitPoint: {74.5, 492.2}
+                      StaticText, {{32.0, 510.3}, {73.0, 20.3}}, label: 'Signature', hitPoint: {68.5, 520.5}
+                      StaticText, {{32.0, 510.3}, {338.0, 20.3}}, label: 'Signature, SHA-256 · ECDSA', hitPoint: {201.0, 520.5}
+                      StaticText, {{32.0, 538.7}, {142.3, 20.3}}, label: 'Log’s current state', hitPoint: {103.2, 548.8}
+                      StaticText, {{32.0, 538.7}, {338.0, 20.3}}, label: 'Log’s current state, Usable', hitPoint: {201.0, 548.8}
+                      StaticText, {{32.0, 567.0}, {338.0, 20.3}}, label: 'Apple-Logstatus, Usable', hitPoint: {201.0, 577.2}
+                      StaticText, {{32.0, 567.0}, {127.0, 20.3}}, label: 'Apple-Logstatus', hitPoint: {95.5, 577.2}
+                      StaticText, {{32.0, 595.3}, {338.0, 51.7}}, label: 'Aktuell qualifiziert laut Apple-Listenstand. Die SCT-Signatur und weitere Richtlinienbedingungen sind damit noch nicht geprüft.', hitPoint: {201.0, 621.2}
+                      StaticText, {{32.0, 655.0}, {338.0, 20.3}}, label: 'Apple-Logbetreiber, Cloudflare', hitPoint: {201.0, 665.2}
+                      StaticText, {{32.0, 655.0}, {149.3, 20.3}}, label: 'Apple-Logbetreiber', hitPoint: {106.7, 665.2}
+                      StaticText, {{32.0, 683.3}, {338.0, 20.3}}, label: 'Log-API, RFC6962', hitPoint: {201.0, 693.5}
+                      StaticText, {{32.0, 683.3}, {61.3, 20.3}}, label: 'Log-API', hitPoint: {62.7, 693.5}
+                      Button, {{32.0, 711.7}, {338.0, 20.3}}, label: 'Log ID & signature', hitPoint: {201.0, 721.8}
+                       StaticText, {{32.0, 711.7}, {140.3, 20.3}}, label: 'Log ID & signature', hitPoint: {102.2, 721.8}
+                       Button, {{359.7, 715.0}, {10.3, 14.0}}, hitPoint: {364.8, 722.0}
+                        Image, {{359.7, 715.0}, {10.3, 14.0}}, identifier: 'collapsed', hitPoint: {364.8, 722.0}
+                  Other, {{72.0, 405.7}, {298.0, 1.0}}, hitPoint: {221.0, 406.2}
+                  Cell, {{16.0, 753.0}, {370.0, 61.7}}, hitPoint: {201.0, 783.8}
+                   Other, {{16.0, 753.0}, {370.0, 61.7}}, hitPoint: {201.0, 783.8}
+                   Other, {{16.0, 753.0}, {370.0, 61.7}}, hitPoint: {201.0, 783.8}
+                    Other, {{16.0, 753.0}, {370.0, 61.7}}, hitPoint: {201.0, 783.8}
+                     Other, {{16.0, 753.0}, {370.0, 61.7}}, hitPoint: {201.0, 783.8}
+                      StaticText, {{16.0, 753.0}, {370.0, 61.7}}, label: 'SCT contents are decoded, not independently signature-verified. The system CT result is separate; an SCT alone does not prove inclusion in a log.', hitPoint: {201.0, 783.8}
+                  Other, {{-16.0, 814.3}, {434.0, 277.7}}, hitPoint: {201.0, 844.2}
+                  Cell, {{16.0, 814.3}, {370.0, 40.3}}, hitPoint: {201.0, 834.5}
+                   Other, {{16.0, 814.3}, {370.0, 40.3}}, hitPoint: {201.0, 834.5}
+                   Other, {{16.0, 814.3}, {370.0, 40.3}}, hitPoint: {201.0, 834.5}
+                    Other, {{16.0, 814.3}, {370.0, 40.3}}, hitPoint: {201.0, 834.5}
+                     Other, {{16.0, 814.3}, {370.0, 40.3}}, hitPoint: {201.0, 834.5}
+                      StaticText, {{16.0, 814.3}, {370.0, 40.3}}, label: 'Apple-Logverzeichnis', hitPoint: {201.0, 834.5}
+                  Cell, {{16.0, 854.7}, {370.0, 52.0}}, hitPoint: {201.0, 864.3}
+                   Other, {{16.0, 854.7}, {370.0, 52.0}}, hitPoint: {201.0, 864.3}
+                    Other, {{16.0, 854.7}, {370.0, 52.0}}, hitPoint: {201.0, 864.3}
+                   Other, {{16.0, 854.7}, {370.0, 52.0}}, hitPoint: {201.0, 864.3}
+                    Other, {{16.0, 854.7}, {370.0, 52.0}}, hitPoint: {201.0, 864.3}
+                     Other, {{16.0, 854.7}, {370.0, 52.0}}, hitPoint: {201.0, 864.3}
+                      StaticText, {{16.0, 854.7}, {370.0, 52.0}}, label: 'Version, 511', hitPoint: {201.0, 864.3}
+                      StaticText, {{32.0, 870.5}, {57.0, 20.3}}, label: 'Version', hitPoint: {60.5, 872.2}
+                  Other, {{369.0, 116.0}, {30.0, 675.0}}, label: 'Vertical scroll bar, 3 pages', value: 42 %, hitPoint: {384.0, 453.5}
+                   Other, {{396.0, 260.0}, {3.0, 331.7}}, hitPoint: {397.5, 425.8}
+                  Other, {{369.0, 116.0}, {30.0, 675.0}}, label: 'Vertical scroll bar, 3 pages', value: 42 %, hitPoint: {384.0, 453.5}
+                   Other, {{396.0, 260.0}, {3.0, 331.7}}, hitPoint: {397.5, 425.8}
+             Toolbar, {{0.0, 0.0}, {402.0, 874.0}}, identifier: 'Toolbar', label: 'Toolbar', hitPoint: {201.0, 437.0}
+              Other, {{0.0, 0.0}, {402.0, 874.0}}, hitPoint: {201.0, 437.0}
+       Other, {{0.0, 0.0}, {402.0, 874.0}}, hitPoint: {201.0, 437.0}
+        Other, {{0.0, 791.0}, {402.0, 83.0}}, hitPoint: {201.0, 832.5}
+         Other, {{0.0, 0.0}, {402.0, 874.0}}, hitPoint: {201.0, 437.0}
+          TabBar, {{0.0, 791.0}, {402.0, 83.0}}, label: 'Tab Bar', hitPoint: {201.0, 832.5}
+           Other, {{21.0, 791.0}, {360.0, 62.0}}, hitPoint: {201.0, 822.0}
+            Other, {{21.0, 791.0}, {85.1, 54.0}}, hitPoint: {63.6, 818.0}
+            Other, {{21.0, 791.0}, {360.0, 62.0}}, hitPoint: {201.0, 822.0}
+             Button, {{25.0, 795.0}, {85.1, 54.0}}, identifier: 'checkmark.shield', label: 'Inspect', Selected, hitPoint: {67.6, 822.0}
+              Image, {{55.3, 801.7}, {24.7, 26.7}}, identifier: 'checkmark.shield.fill', label: 'Checkmark in a filled shield', hitPoint: {67.7, 815.0}
+             Button, {{90.1, 795.0}, {89.9, 54.0}}, identifier: 'arrow.up.arrow.down', label: 'Requests', hitPoint: {135.1, 822.0}
+              Image, {{118.4, 801.7}, {33.0, 26.3}}, identifier: 'arrow.up.arrow.down', label: 'sort', hitPoint: {134.9, 814.8}
+             Button, {{160.1, 795.0}, {86.7, 54.0}}, identifier: 'network', label: 'Erfassen', hitPoint: {203.4, 822.0}
+              Image, {{189.7, 801.3}, {27.3, 27.3}}, identifier: 'network', label: 'Network nodes connected by lines', hitPoint: {203.4, 815.0}
+             Button, {{226.8, 795.0}, {85.1, 54.0}}, identifier: 'clock', label: 'History', hitPoint: {269.3, 822.0}
+              Image, {{255.8, 801.3}, {27.3, 27.3}}, identifier: 'clock.fill', label: 'clock', hitPoint: {269.4, 815.0}
+             Button, {{291.9, 795.0}, {85.1, 54.0}}, identifier: 'wrench.and.screwdriver', label: 'Tools', hitPoint: {334.4, 822.0}
+              Image, {{318.2, 799.3}, {32.7, 31.7}}, identifier: 'wrench.and.screwdriver.fill', label: 'Wrench and screwdriver, filled', hitPoint: {334.6, 815.2}
+            Other, {{21.0, 791.0}, {360.0, 62.0}}, hitPoint: {201.0, 822.0}
+            Other, {{25.0, 795.0}, {85.1, 54.0}}, hitPoint: {67.6, 822.0}
+             Other, {{25.0, 795.0}, {85.0, 54.0}}, hitPoint: {67.5, 822.0}
+              Other, {{25.0, 795.0}, {85.0, 54.0}}, hitPoint: {67.5, 822.0}
+              Other, {{25.0, 795.0}, {85.0, 54.0}}, hitPoint: {67.5, 822.0}
+               Other, {{25.0, 795.0}, {85.0, 54.0}}, hitPoint: {67.5, 822.0}
+                Other, {{25.0, 795.0}, {85.0, 54.0}}, hitPoint: {67.5, 822.0}
+                 Other, {{25.0, 795.0}, {85.0, 54.0}}, hitPoint: {67.5, 822.0}
+                Other, {{25.0, 795.0}, {85.0, 54.0}}, hitPoint: {67.5, 822.0}
+               Other, {{25.0, 795.0}, {85.0, 54.0}}, hitPoint: {67.5, 822.0}
+         Other, {{0.0, 791.0}, {402.0, 83.0}}, hitPoint: {201.0, 832.5}
+          Other, {{0.0, 791.0}, {402.0, 83.0}}, hitPoint: {201.0, 832.5}
+           Other, {{0.0, 791.0}, {402.0, 83.0}}, hitPoint: {201.0, 832.5}
+            Other, {{0.0, 791.0}, {402.0, 83.0}}, hitPoint: {201.0, 832.5}
+             Other, {{0.0, 791.0}, {402.0, 83.0}}, hitPoint: {201.0, 832.5}
+              Other, {{0.0, 791.0}, {402.0, 83.0}}, hitPoint: {201.0, 832.5}
+            Other, {{0.0, 791.0}, {402.0, 83.0}}, hitPoint: {201.0, 832.5}
+             Other, {{0.0, 791.0}, {402.0, 83.0}}, hitPoint: {201.0, 832.5}
+ Window, {{0.0, 0.0}, {402.0, 874.0}}, hitPoint: {201.0, 437.0}
+  Other, {{0.0, 0.0}, {402.0, 874.0}}, hitPoint: {201.0, 437.0}
+   Other, {{0.0, 0.0}, {402.0, 874.0}}, hitPoint: {201.0, 437.0}
