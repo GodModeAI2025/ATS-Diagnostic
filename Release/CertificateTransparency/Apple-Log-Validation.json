@@ -1,0 +1,16 @@
+{
+  "logCount": 166,
+  "states": {
+    "rejected": 108,
+    "usable": 51,
+    "readonly": 6,
+    "pending": 1
+  },
+  "uniqueLogIDs": true,
+  "publicKeyHashesMatchLogIDs": true,
+  "stateTimestampsValid": true,
+  "rfc6962": 135,
+  "staticCT": 31,
+  "sourceURL": "https://valid.apple.com/ct/log_list/current_log_list.json",
+  "retrievedAt": "2026-10-12T02:30:07.254421+00:00"
+}
