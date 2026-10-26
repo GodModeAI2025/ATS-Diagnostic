@@ -1,0 +1,132 @@
+- banner "App Store Connect":
+  - heading "App Store Connect" [level=1]:
+    - link "App Store Connect":
+      - /url: /
+  - navigation "Global":
+    - list:
+      - link "Apps":
+        - /url: /apps
+      - link "Xcode Cloud":
+        - /url: /teams/69a6de93-b31c-47e3-e053-5b8c7c11a4d1/xcode-cloud
+      - link "Trends":
+        - /url: /trends
+      - link "Berichte":
+        - /url: /itc/payments_and_financial_reports
+      - link "Geschäftliches":
+        - /url: /business
+      - link "Benutzer und Zugriffsrechte":
+        - /url: /access/users
+  - button "Mark Zimmermann Mobile Box - App Consulting UG (haftungsbeschraenkt) Account name menu":
+- button "App-Menü, ATS Diagnostic, ausgewählt":
+  - generic "ATS Diagnostic":
+    - img "ATS Diagnostic"
+  - generic: ATS Diagnostic
+- navigation "Apps":
+  - generic: Vertrieb
+  - list:
+    - link "Vertrieb":
+      - /url: /apps/1297164068/distribution
+    - link "Analyse":
+      - /url: /apps/1297164068/analytics
+    - link "TestFlight":
+      - /url: /teams/69a6de93-b31c-47e3-e053-5b8c7c11a4d1/apps/1297164068/testflight
+- main:
+  - link "App-Prüfung":
+    - /url: /apps/1297164068/distribution/reviewsubmissions
+    - text: App-Prüfung
+  - heading "iOS-Übermittlung" [level=2]
+  - paragraph:
+    - text: Warten auf Prüfung
+  - heading "Übermittelte Elemente (1)" [level=3]
+  - table:
+    - rowgroup:
+      - row "Element Typ Prüfungsstatus":
+        - columnheader "Element":
+          - generic: Element
+        - columnheader "Typ":
+          - generic: Typ
+        - columnheader "Prüfungsstatus":
+          - generic: Prüfungsstatus
+        - columnheader
+        - columnheader
+    - rowgroup:
+      - row "App-Symbol iOS-App 2.0 2.0 (55) App-Version Warten auf Prüfung":
+        - cell "App-Symbol iOS-App 2.0 2.0 (55)":
+          - generic "App-Symbol":
+            - img "App-Symbol"
+          - paragraph: iOS-App 2.0
+          - paragraph:
+            - link "2.0 (55)":
+              - /url: /apps/1297164068/testflight/ios/9a491232-fb33-4f0c-808a-9ba7b2c9c4c9/metadata
+          - paragraph
+        - cell "App-Version":
+          - generic: App-Version
+        - cell "Warten auf Prüfung":
+          - text: Warten auf Prüfung
+        - cell
+        - cell
+  - heading "Nachrichten (1)" [level=3]
+  - button "AppleHeute 10:40" [expanded]:
+    - heading "AppleHeute 10:40" [level=6]
+  - region "AppleHeute 10:40":
+    - text: Hello,
+    - text: Thank you for submitting an update to the app, ATS Diagnostic, for review. We noticed some issues that require your attention. Please see below for additional information.
+    - text: If you have any questions, we are here to help. Reply to this message in App Store Connect and let us know.
+    - heading "Review Environment" [level=3]
+    - text: "Submission ID: 2bbc0bc5-8b0a-4506-9c33-04c26e43a1d6"
+    - text: "Review date: October 26, 2026"
+    - text: "Review Device: iPad Air 11-inch (M3) and iPhone 17 Pro Max"
+    - text: "Version reviewed: 2.0 (55)"
+    - heading "Guideline 2.3.4 - Performance - Accurate Metadata" [level=3]
+    - text: Issue Description
+    - text: "The app preview includes content that does not sufficiently show the app in use. Specifically, the app preview:"
+    - text: "- Includes framing around the video screen capture of the app."
+    - text: App previews should allow users to see what the app does and how it will appear on their device when the preview is played in full screen.
+    - text: Next Steps
+    - text: To resolve this issue, revise the app preview to only use video screen captures of the app that may include narration and video or textual overlays for added clarity.
+    - text: Note some app previews may only be viewed and updated by selecting "View All Sizes in Media Manager" in the Previews and Screenshots section of App Store Connect.
+    - text: Resources
+    - text: "- Learn more about"
+    - link "creating great app previews":
+      - /url: https://developer.apple.com/app-store/app-previews/
+    - text: .
+    - text: "- Discover best practices for making the most of the app's"
+    - link "App Store Product Page":
+      - /url: https://developer.apple.com/app-store/product-page/
+    - text: .
+    - heading "Support" [level=3]
+    - text: "- Reply to this message in your preferred language if you need assistance. If you need additional support, use the"
+    - link "Contact Us module":
+      - /url: https://developer.apple.com/contact/topic/#!/topic/select
+    - text: .
+    - text: "- Consult with fellow developers and Apple engineers on the"
+    - link "Apple Developer Forums":
+      - /url: https://developer.apple.com/forums/
+    - text: .
+    - text: "- Provide feedback on this message and your review experience by"
+    - link "completing a short survey":
+      - /url: https://survey.apple.com/axm/survey/as/6a46ca0d464463cf1e8158e8
+    - text: .
+  - generic: Übermittlungsdatum
+  - generic: 26. Okt. 2026 um 11:33 Uhr
+  - generic: Übermittlungskennung
+  - generic: 2bbc0bc5-8b0a-4506-9c33-04c26e43a1d6
+  - generic: Übermittelt von
+  - generic: Mark Zimmermann
+  - generic: Zuletzt aktualisiert von
+  - generic: Mark Zimmermann
+  - button "Übermittlung abbrechen"
+- contentinfo:
+  - list:
+    - link "App Store Connect":
+      - /url: /apps
+  - list:
+    - listitem: Copyright © 2026 Apple Inc. Alle Rechte vorbehalten. |
+    - link "Geschäftsbedingungen":
+      - /url: /WebObjects/iTunesConnect.woa/wa/termsOfService
+    - text: "|"
+    - link "Datenschutzrichtlinie":
+      - /url: https://www.apple.com/legal/privacy
+    - text: "|"
+    - link "Kontakt":
+      - /url: /contact-us

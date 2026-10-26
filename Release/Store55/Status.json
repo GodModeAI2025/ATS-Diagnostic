@@ -22,5 +22,14 @@
   "phasedRelease": false,
   "ratingsRetained": true,
   "approvalVerified": false,
-  "publicAvailabilityVerified": false
+  "publicAvailabilityVerified": false,
+  "resubmission_2026_10_26": {
+    "reason": "Guideline 2.3.4: framing around inherited app preview",
+    "fix": "Removed pr_source.mp4 from optional large Home-button iPhone media set; retained in content library",
+    "build": "2.0 (55)",
+    "state": "Warten auf Prüfung",
+    "portal_submission_date": "26. Okt. 2026 um 11:33 Uhr",
+    "submission_id": "2bbc0bc5-8b0a-4506-9c33-04c26e43a1d6",
+    "evidence": "Resubmission-2026-10-26/Waiting-for-Review.png"
+  }
 }
