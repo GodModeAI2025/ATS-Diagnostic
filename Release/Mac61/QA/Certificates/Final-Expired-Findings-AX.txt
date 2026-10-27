@@ -1,0 +1,54 @@
+Window: "ATS Diagnostic", App: ATS Diagnostic.
+0 Standardfenster ATS Diagnostic, ID: SceneWindow, Secondary Actions: Raise
+	1 container Secondary Actions: Cancel
+		2 container Secondary Actions: Cancel
+			3 Text (selected) Description: Prüfen, ID: checkmark.shield, Secondary Actions: Cancel
+			4 Text Description: Anfragen, ID: arrow.up.arrow.down, Secondary Actions: Cancel
+			5 Text Description: Verlauf, ID: clock, Secondary Actions: Cancel
+			6 Text Description: Werkzeuge, ID: wrench.and.screwdriver, Secondary Actions: Cancel
+		7 container Secondary Actions: Cancel
+			8 container ID: Zertifikat, Secondary Actions: Cancel
+				9 Taste „Zurück“ Description: Verbindung prüfen, ID: BackButton, Secondary Actions: Cancel
+				10 Überschrift Description: Zertifikat, Secondary Actions: Cancel
+			11 container Secondary Actions: Cancel, Scroll Down, Scroll Up
+				12 Text Description: Schlüsselverwendung · kritisch, Secondary Actions: Cancel
+				13 Text Secondary Actions: Cancel, Description: Digitale Signatur
+Schlüsselverschlüsselung
+				14 Text Description: Grundlegende Einschränkungen · kritisch, Secondary Actions: Cancel
+				15 Text Description: Zertifizierungsstelle: Nein, Secondary Actions: Cancel
+				16 Text Description: Erweiterte Schlüsselverwendung, Secondary Actions: Cancel
+				17 Text Secondary Actions: Cancel, Description: TLS-Serverauthentifizierung
+TLS-Clientauthentifizierung
+				18 Text Description: Zertifikatrichtlinien, Secondary Actions: Cancel
+				19 Text Secondary Actions: Cancel, Description: 1.3.6.1.4.1.6449.1.2.2.7
+1.3.6.1.5.5.7.2.1
+https://secure.comodo.com/CPS
+2.23.140.1.2.1
+				20 Text Description: CRL-Verteilungspunkte, Secondary Actions: Cancel
+				21 Text Description: http://crl.comodoca.com/COMODORSADomainValidationSecureServerCA.crl, Secondary Actions: Cancel
+				22 Text Description: Zugriff auf Ausstellerinformationen, Secondary Actions: Cancel
+				23 Text Secondary Actions: Cancel, Description: CA-Aussteller: http://crt.comodoca.com/COMODORSADomainValidationSecureServerCA.crt
+OCSP: http://ocsp.comodoca.com
+				24 Text Description: Alternative Subject-Namen, Secondary Actions: Cancel
+				25 Text Secondary Actions: Cancel, Description: DNS: *.badssl.com
+DNS: badssl.com
+				26 Überschrift Secondary Actions: Cancel
+					27 Überschrift Description: Ergebnisse, Secondary Actions: Cancel
+				28 Text Description: Zertifikat abgelaufen, Secondary Actions: Cancel
+				29 Text Description: Gültigkeit endete am 13.4.2015, 1:59., Secondary Actions: Cancel
+				30 Überschrift Secondary Actions: Cancel
+					31 Überschrift Description: Export und Erinnerungen, Secondary Actions: Cancel
+				32 Taste Description: PEM exportieren, Secondary Actions: Cancel
+				33 Taste Description: DER exportieren, Secondary Actions: Cancel
+				34 Taste Description: CRT exportieren, Secondary Actions: Cancel
+	35 Text ATS Diagnostic
+	36 Menü-Taste Fenster teilen
+37 menu bar
+	38 ATSDiagnostic, ID: com.apple.menu.application
+	39 Ablage, ID: com.apple.menu.file
+	40 Bearbeiten, ID: com.apple.menu.edit
+	41 Darstellung, ID: com.apple.menu.view
+	42 Fenster, ID: com.apple.menu.window
+	43 Hilfe, ID: com.apple.menu.help
+
+The focused UI element is 3 Text (selected) Description: Prüfen, ID: checkmark.shield, Secondary Actions: Cancel

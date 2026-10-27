@@ -1,0 +1,52 @@
+Window: "ATS Diagnostic", App: ATS Diagnostic.
+0 Standardfenster ATS Diagnostic, ID: SceneWindow, Secondary Actions: Raise
+	1 container Secondary Actions: Cancel
+		2 container Secondary Actions: Cancel
+			3 Text (selected) Description: Prüfen, ID: checkmark.shield, Secondary Actions: Cancel
+			4 Text Description: Anfragen, ID: arrow.up.arrow.down, Secondary Actions: Cancel
+			5 Text Description: Verlauf, ID: clock, Secondary Actions: Cancel
+			6 Text Description: Werkzeuge, ID: wrench.and.screwdriver, Secondary Actions: Cancel
+		7 container Secondary Actions: Cancel
+			8 container ID: Zertifikat, Secondary Actions: Cancel
+				9 Taste „Zurück“ Description: Verbindung prüfen, ID: BackButton, Secondary Actions: Cancel
+				10 Überschrift Description: Zertifikat, Secondary Actions: Cancel
+			11 container Secondary Actions: Cancel, Scroll Down, Scroll Up
+				12 Taste Description: Cloudflare TLS Issuing ECC CA 3, Nächstes Zertifikat der ausgewerteten Kette, Secondary Actions: Cancel
+				13 Text Secondary Actions: Cancel, Description: Die Angaben oben stammen aus dem Issuer-Feld. Das nächste Kettenzertifikat ist ein eigener Datensatz; das Gesamtergebnis zum Vertrauen steht bei der Verbindung.
+				14 Überschrift Secondary Actions: Cancel
+					15 Überschrift Description: Fingerabdrücke, Secondary Actions: Cancel
+				16 Text Description: SHA-256, Secondary Actions: Cancel
+				17 Taste Description: SHA-256 teilen, ID: square.and.arrow.up, Secondary Actions: Cancel
+				18 Text Description: 85ca 6ab0 68e9 bcce 88b6 c4aa 3c47 f7d1 7228 134a 457f 870d 3800 e622 3a0d f07a, Secondary Actions: Cancel
+				19 Text Description: SHA-1, Secondary Actions: Cancel
+				20 Taste Description: SHA-1 teilen, ID: square.and.arrow.up, Secondary Actions: Cancel
+				21 Text Description: 899c b259 e7de 8df1 0033 a2af 48c2 2c2f 6580 a21d, Secondary Actions: Cancel
+				22 Text Secondary Actions: Cancel, Description: Fingerabdrücke identifizieren exakt die Zertifikatsdaten. SHA-1 wird zum Vergleich mit älteren Werkzeugen angezeigt, aber nicht zur Vertrauensprüfung verwendet.
+				23 Überschrift Secondary Actions: Cancel
+					24 Überschrift Description: Aufnahme in Root-Stores, Secondary Actions: Cancel
+				25 Text Description: Vertrauen über die Zertifikatskette, Secondary Actions: Cancel
+				26 Text Secondary Actions: Cancel, Description: Serverzertifikate sind normalerweise nicht selbst in Root-Stores aufgeführt. Ihr Vertrauen wird anhand des Ausstellers und des Root-Zertifikats geprüft. Ein fehlender direkter Listeneintrag ist daher kein Vertrauensfehler.
+				27 Taste Description: Ausstellerzertifikat ansehen, Secondary Actions: Cancel
+				28 Überschrift Secondary Actions: Cancel
+					29 Überschrift Description: Certificate Transparency, Secondary Actions: Cancel
+				30 Taste (selected) Description: System-CT-Qualifikation bestätigt, Log-Identitäten, Zeitstempel und Ergebnis der Systemrichtlinie, Secondary Actions: Cancel
+				31 Überschrift Secondary Actions: Cancel
+					32 Überschrift Description: Öffentlicher Schlüssel und Kennungen, Secondary Actions: Cancel
+				33 Text Description: Elliptische Kurve · 256 Bit, Secondary Actions: Cancel
+				34 Text Description: Algorithmus des öffentlichen Schlüssels, Secondary Actions: Cancel
+				35 Text Description: Elliptische Kurve · 1.2.840.10045.2.1, Secondary Actions: Cancel
+				36 Text Description: Der Algorithmus des öffentlichen Schlüssels dieses Zertifikats., Secondary Actions: Cancel
+				37 Text Description: Aussteller-Schlüsselkennung, Secondary Actions: Cancel
+				38 Text Description: Schlüsselkennung: 83:03:FD:E7:F6:F5:4A:4D:15:41:F4:ED:22:16:D3:32:0A:3E:CA:66, Secondary Actions: Cancel
+				39 Text Description: Hilft, den Signaturschlüssel des Ausstellers zu erkennen und die Zertifikatskette aufzubauen., Secondary Actions: Cancel
+	40 Text ATS Diagnostic
+	41 Menü-Taste Fenster teilen
+42 menu bar
+	43 ATSDiagnostic, ID: com.apple.menu.application
+	44 Ablage, ID: com.apple.menu.file
+	45 Bearbeiten, ID: com.apple.menu.edit
+	46 Darstellung, ID: com.apple.menu.view
+	47 Fenster, ID: com.apple.menu.window
+	48 Hilfe, ID: com.apple.menu.help
+
+The focused UI element is 3 Text (selected) Description: Prüfen, ID: checkmark.shield, Secondary Actions: Cancel

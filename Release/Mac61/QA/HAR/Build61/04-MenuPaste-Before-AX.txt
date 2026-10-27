@@ -1,0 +1,37 @@
+Window: "MenuPaste", App: Finder.
+0 Bearbeiten, Secondary Actions: Cancel, Pick
+	1 Menü Secondary Actions: Cancel
+		2 Kopieren von 2 Objekten widerrufen
+		3 (disabled) Wiederholen
+		4 (disabled) Ausschneiden
+		5 (disabled) Kopieren
+		6 „MenuPaste“ als Pfadname kopieren
+		7 (disabled) Als Link kopieren
+		8 2 Objekte einsetzen
+		9 Objekt hierherbewegen
+		10 2 Objekte exakt einsetzen
+		11 (disabled) Alles auswählen
+		12 (disabled) Auswahl aufheben
+		13 Zwischenablage einblenden
+		14 Suchen
+		15 Nach Namen suchen …
+		16 Schreibtools
+			17 Menü Secondary Actions: Cancel
+				18 Schreibtools anzeigen, ID: showWritingTools:
+				19 Korrekturlesen, ID: showWritingTools:
+				20 Umformulieren, ID: showWritingTools:
+				21 Freundlich formulieren, ID: showWritingTools:
+				22 Sachlich formulieren, ID: showWritingTools:
+				23 Kompakt formulieren, ID: showWritingTools:
+				24 Zusammenfassen, ID: showWritingTools:
+				25 Hauptpunkte erstellen, ID: showWritingTools:
+				26 Liste erstellen, ID: showWritingTools:
+				27 Tabelle erstellen, ID: showWritingTools:
+				28 Verfassen …, ID: showWritingTools:
+		29 Automatisch ausfüllen
+			30 Menü Secondary Actions: Cancel
+				31 (disabled) Kontakt …
+				32 (disabled) Passwörter …
+				33 (disabled) Kreditkarte …
+		34 (disabled) Diktat starten, ID: startDictation:
+		35 Emoji & Symbole, ID: orderFrontCharacterPalette:

@@ -1,0 +1,41 @@
+Window: "ATS Diagnostic", App: ATS Diagnostic.
+0 Standardfenster ATS Diagnostic, ID: SceneWindow, Secondary Actions: Raise
+	1 container
+		2 container Secondary Actions: Cancel
+			3 container Secondary Actions: Cancel
+				4 Text (selected) Description: Prüfen, ID: checkmark.shield, Secondary Actions: Cancel
+				5 Text Description: Anfragen, ID: arrow.up.arrow.down, Secondary Actions: Cancel
+				6 Text (selected) Description: Verlauf, ID: clock, Secondary Actions: Cancel
+				7 Text Description: Werkzeuge, ID: wrench.and.screwdriver, Secondary Actions: Cancel
+			8 container Secondary Actions: Cancel
+				9 container ID: Verlauf, Secondary Actions: Cancel
+					10 Taste „Zurück“ ID: BackButton, Secondary Actions: Cancel
+					11 Taste Description: Favorite, Secondary Actions: Cancel
+					12 Überschrift Description: Verlauf, Secondary Actions: Cancel
+				13 container Secondary Actions: Cancel
+					14 Einblendmenü Description: Antworttyp, Alle, Secondary Actions: Cancel
+					15 Schalter Description: Nur Favoriten, Value: 0, Secondary Actions: Cancel
+					16 Text Description: Anfragen, 100, Secondary Actions: Cancel
+					17 Text Description: Antwortdaten, 43 kB, Secondary Actions: Cancel
+					18 Text Description: Durchschnittliche Dauer, 0,232 s, Secondary Actions: Cancel
+					19 Text Description: Fehler, 19, Secondary Actions: Cancel
+					20 container Secondary Actions: Cancel, Scroll Down, Scroll Up
+						21 Taste Description: GET, 200, https://example.com, 27. Okt., 21:45, 0,174 s, Secondary Actions: Cancel
+						22 Taste Description: GET, 200, https://example.com, 27. Okt., 20:27, 0,130 s, Secondary Actions: Cancel
+						23 Taste Description: GET, 200, https://example.com, 27. Okt., 20:24, 0,634 s, Secondary Actions: Cancel
+						24 Taste Description: GET, 200, https://example.com/?curl=mac60, 27. Okt., 20:17, 0,494 s, Secondary Actions: Cancel
+						25 Taste Description: GET, 200, http://example.com, 27. Okt., 20:06, 0,130 s, Secondary Actions: Cancel
+						26 Taste Description: GET, Fehlgeschlagen, https://expired.badssl.com, 27. Okt., 20:06, 0,365 s, Secondary Actions: Cancel
+						27 Taste Description: GET, 200, https://example.com, 27. Okt., 20:05, 0,155 s, Secondary Actions: Cancel
+						28 Taste Description: GET, 200, http://example.com, 27. Okt., 19:43, 0,060 s, Secondary Actions: Cancel
+						29 Taste Description: GET, Fehlgeschlagen, https://expired.badssl.com, 27. Okt., 19:43, 0,334 s, Secondary Actions: Cancel
+						30 Taste Description: GET, 200, https://example.com, 27. Okt., 19:42, 0,059 s, Secondary Actions: Cancel
+						31 Taste Description: GET, 200, https://example.com, 27. Okt., 19:40, 0,076 s, Secondary Actions: Cancel
+	32 Text ATS Diagnostic
+33 menu bar
+	34 ATSDiagnostic, ID: com.apple.menu.application
+	35 Ablage, ID: com.apple.menu.file
+	36 Bearbeiten, ID: com.apple.menu.edit
+	37 Darstellung, ID: com.apple.menu.view
+	38 Fenster, ID: com.apple.menu.window
+	39 Hilfe, ID: com.apple.menu.help

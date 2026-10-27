@@ -1,0 +1,12 @@
+Inspect HTTP, TLS and certificate connections on your Mac. Choose a server on the Internet or your local network and review certificate issuers, chains, validity, fingerprints and Apple system-trust results. Clear explanations accompany the original connection errors.
+
+- Compare TLS-version probes with the negotiated connection.
+- Examine HTTP headers, HSTS, redirects and connection timings.
+- Build requests and inspect URL query parameters.
+- Keep inspection history locally and export it as HAR or JSON.
+- Use IPv4/IPv6 forward and reverse lookup and SHA-256 download checks.
+- Explore Certificate Transparency timestamps and dated root-store directories.
+
+HTTP and legacy TLS configurations can be tested for diagnosis. HTTPS certificates are still evaluated; invalid certificates are reported as failures. Results describe the observed connection and do not certify every ATS requirement. Root-store membership is separate from platform trust. SCT signatures and log inclusion are not independently verified.
+
+No account is required. History stays on your Mac. Files are opened or exported only through user-selected file access. The app does not capture traffic from other apps and does not install a VPN or root certificate. Outbound connections use the macOS App Sandbox and the stated ATS diagnostic exceptions; no proxy is included.

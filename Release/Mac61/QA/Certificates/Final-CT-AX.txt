@@ -1,0 +1,50 @@
+Window: "ATS Diagnostic", App: ATS Diagnostic.
+0 Standardfenster ATS Diagnostic, ID: SceneWindow, Secondary Actions: Raise
+	1 container Secondary Actions: Cancel
+		2 container Secondary Actions: Cancel
+			3 Text (selected) Description: Prüfen, ID: checkmark.shield, Secondary Actions: Cancel
+			4 Text Description: Anfragen, ID: arrow.up.arrow.down, Secondary Actions: Cancel
+			5 Text Description: Verlauf, ID: clock, Secondary Actions: Cancel
+			6 Text Description: Werkzeuge, ID: wrench.and.screwdriver, Secondary Actions: Cancel
+		7 container Secondary Actions: Cancel
+			8 container ID: Transparenz, Secondary Actions: Cancel
+				9 Taste „Zurück“ Description: Zertifikat, ID: BackButton, Secondary Actions: Cancel
+				10 Überschrift Description: Transparenz, Secondary Actions: Cancel
+			11 container Secondary Actions: Cancel, Scroll Down, Scroll Up
+				12 Text Description: Certificate Transparency, Secondary Actions: Cancel
+				13 Text Description: Öffentliche Logs helfen dabei, unerwartet ausgestellte Zertifikate zu erkennen., Secondary Actions: Cancel
+				14 Text Description: System-CT-Qualifikation bestätigt, Secondary Actions: Cancel
+				15 Text Description: Apples Vertrauensprüfung hat bestätigt, dass diese Verbindung die CT-Richtlinie erfüllt., Secondary Actions: Cancel
+				16 Überschrift Secondary Actions: Cancel
+					17 Überschrift Description: Eingebettete signierte Zeitstempel · 2, Secondary Actions: Cancel
+				18 Text Description: DigiCert 'Sphinx2026h2', Secondary Actions: Cancel
+				19 Text Description: DigiCert, Secondary Actions: Cancel
+				20 Text Description: Zeitstempel, 27. Sept. 2026, 0:59:12, Secondary Actions: Cancel
+				21 Text Description: Signatur, SHA-256 · ECDSA, Secondary Actions: Cancel
+				22 Text Description: Aktueller Log-Status, Nutzbar, Secondary Actions: Cancel
+				23 Text Description: Apple-Log-Status, Nutzbar, Secondary Actions: Cancel
+				24 Text Secondary Actions: Cancel, Description: Laut Apple-Verzeichnis derzeit qualifiziert. Die SCT-Signatur und weitere Richtlinienbedingungen wurden nicht geprüft.
+				25 Text Description: Apple-Log-Betreiber, DigiCert, Secondary Actions: Cancel
+				26 Text Description: Log-API, RFC6962, Secondary Actions: Cancel
+				27 Taste Description: Log-ID und Signatur, Secondary Actions: Cancel
+				28 Text Description: Cloudflare 'Nimbus2026', Secondary Actions: Cancel
+				29 Text Description: Cloudflare, Secondary Actions: Cancel
+				30 Text Description: Zeitstempel, 27. Sept. 2026, 0:59:12, Secondary Actions: Cancel
+				31 Text Description: Signatur, SHA-256 · ECDSA, Secondary Actions: Cancel
+				32 Text Description: Aktueller Log-Status, Nutzbar, Secondary Actions: Cancel
+				33 Text Description: Apple-Log-Status, Nutzbar, Secondary Actions: Cancel
+				34 Text Secondary Actions: Cancel, Description: Laut Apple-Verzeichnis derzeit qualifiziert. Die SCT-Signatur und weitere Richtlinienbedingungen wurden nicht geprüft.
+				35 Text Description: Apple-Log-Betreiber, Cloudflare, Secondary Actions: Cancel
+				36 Text Description: Log-API, RFC6962, Secondary Actions: Cancel
+				37 Taste Description: Log-ID und Signatur, Secondary Actions: Cancel
+	38 Text ATS Diagnostic
+	39 Menü-Taste Fenster teilen
+40 menu bar
+	41 ATSDiagnostic, ID: com.apple.menu.application
+	42 Ablage, ID: com.apple.menu.file
+	43 Bearbeiten, ID: com.apple.menu.edit
+	44 Darstellung, ID: com.apple.menu.view
+	45 Fenster, ID: com.apple.menu.window
+	46 Hilfe, ID: com.apple.menu.help
+
+The focused UI element is 3 Text (selected) Description: Prüfen, ID: checkmark.shield, Secondary Actions: Cancel

@@ -1,0 +1,20 @@
+{
+  "source": "QA/Certificates/Store-Final-Aussteller.jpg",
+  "output": "Screenshots/02-Certificate-Issuer.png",
+  "source_size": [
+    2048,
+    1538
+  ],
+  "output_size": [
+    2560,
+    1600
+  ],
+  "offset": [
+    256,
+    31
+  ],
+  "scaled": false,
+  "retouched": false,
+  "pixel_equality": true,
+  "sha256": "f07562def8eabfb86302c413920bd6112f4bc5151d8b74425b07fa79b7be3ef8"
+}

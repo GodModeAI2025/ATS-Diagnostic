@@ -1,0 +1,81 @@
+Window: "Öffnen", App: ATS Diagnostic.
+0 Blatt Description: öffnen, ID: open-panel, Secondary Actions: Raise
+	1 Trenngruppe
+		2 Rollbereich Secondary Actions: Scroll Up, Scroll Down
+			3 Gliederung Seitenleiste
+				4 row (selectable) Description: Uhr, Value: Zuletzt benutzt
+				5 row (selectable) Description: Zwei Personen, Value: Geteilt
+				6 row (selectable, expanded) Value: Favoriten, Secondary Actions: Collapse
+				7 row (selectable) OneDrive
+				8 row (selectable) Description: „A“-Logo für App Store, Value: Programme
+				9 row (selectable) Description: Menüleiste mit Dock auf einem Rechteck, Value: Schreibtisch
+				10 row (selectable) Description: Dokumentseite, Value: Dokumente
+				11 row (selectable) Description: Kreispfeil nach unten, Value: Downloads
+				12 row (selectable, expanded) Value: Orte, Secondary Actions: Collapse
+				13 row (selectable) Description: iCloud, Value: iCloud Drive
+				14 row (selectable) Description: Zuhause, Value: markzimmermann
+				15 row (selectable) Description: Interne Festplatte, Value: Macintosh HD
+				16 row (selectable) Auswerfen, Value: Mark, Description: Externe Festplatte
+auswerfen
+				17 row (selectable) Auswerfen, Value: SDMark, Description: Externe Festplatte
+auswerfen
+				18 row (selectable) Auswerfen, Value: EnBW CoWork, Description: Externe Festplatte
+auswerfen
+				19 row (selectable) Description: Durch Linien verbundene Netzwerkknoten, Value: Netzwerk
+				20 row (selectable, collapsed) Value: Tags, Secondary Actions: Expand
+				21 row (selectable, expanded) Value: Medien, Secondary Actions: Collapse
+				22 row (selectable) Description: Musiknote, Value: Musik
+				23 row (selectable) Description: Foto, Value: Fotos
+				24 row (selectable) Description: Film, Value: Filme
+			25 Rollbalken (settable, float) 0
+				26 Wertanzeige (settable, float) 0
+				27 Aufwärtspfeil
+				28 Abwärtspfeil
+				29 Seite aufwärts
+				30 Seite abwärts
+		31 Trenner (disabled, settable, float) 183.5
+		32 Rollbereich Secondary Actions: Scroll Left, Scroll Right
+			33 Gliederung Description: Listendarstellung, ID: ListView
+				34 row (selected)
+					35 Zelle (selected) Secondary Actions: Finder-Objekt öffnen
+						36 Bild
+						37 Textfeld (selected, settable) Value: ATS-Diagnostic.har, Secondary Actions: Finder-Objekt öffnen, URL: file:///Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/outputs/ATS-Diagnostic/Release/Mac61/QA/HAR/Build61/MenuPaste/ATS-Diagnostic.har
+					38 Zelle (selected)
+						39 Text 121 KB
+					40 Zelle (selected)
+						41 Text Reiner Text
+					42 Zelle (selected)
+						43 Text Heute, 21:49
+				44 container ListViewHeader
+					45 Taste Description: Name, ID: name
+					46 Taste Description: Größe, ID: size
+					47 Taste Description: Art, ID: kind
+					48 Taste Description: Hinzugefügt am, Value: AXDescendingSortDirection, ID: dateAdded
+			49 Rollbalken (settable, float) 0
+				50 Wertanzeige (settable, float) 0
+				51 Aufwärtspfeil
+				52 Abwärtspfeil
+				53 Seite aufwärts
+				54 Seite abwärts
+		55 container
+			56 Taste (disabled) Zurück
+			57 Taste (disabled) Weiter
+		58 Menü-Taste Description: Liste, Help: Als Symbole, Liste oder Spalten anzeigen sowie Seitenleiste ein-/ausblenden, ID: View Options
+		59 Menü-Taste Description: 3x1-Quadratraster unter einem 1x2-Linienraster, Help: Gruppierung der Objekte ändern (Option-Taste gedrückt halten, um die Sortierung zu ändern), ID: Group or Sort By
+		60 Einblendmenü Ort:, Value: MenuPaste, ID: where popup
+		61 Feld für Suchtext Search
+			62 Taste Suchen
+		63 Taste Abbrechen, ID: CancelButton
+		64 Taste (disabled) Öffnen, ID: OKButton
+65 menu bar
+	66 ATSDiagnostic, ID: com.apple.menu.application
+	67 Ablage, ID: com.apple.menu.file
+	68 Bearbeiten, ID: com.apple.menu.edit
+	69 Darstellung, ID: com.apple.menu.view
+	70 Fenster, ID: com.apple.menu.window
+	71 Hilfe, ID: com.apple.menu.help
+
+Selected:
+	34 row (selected)
+
+Note: Pay special attention to the content selected by the user. If the user asks a question or refers to the content they are looking at on-screen, they might be referring to the selected content (but they might be referring to something else that's visible, too).

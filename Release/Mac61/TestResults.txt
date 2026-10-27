@@ -1,0 +1,50 @@
+Mac61-ReleaseTests.log
+✔ Suite ASN1Tests passed after 0.001 seconds.
+✔ Suite CertificateFieldTests passed after 0.003 seconds.
+✔ Suite CURLImportTests passed after 0.008 seconds.
+✔ Suite CertificateFieldDisplayTests passed after 0.002 seconds.
+✔ Suite CertificateFormatsTests passed after 0.004 seconds.
+✔ Suite CertificateIssuerTests passed after 0.001 seconds.
+✔ Suite CertificateReminderTests passed after 0.001 seconds.
+✔ Suite CertificateTransparencyTests passed after 0.009 seconds.
+✔ Suite AppleCTDirectoryTests passed after 0.061 seconds.
+✔ Suite SystemCTPresentationTests passed after 0.001 seconds.
+✔ Suite ConnectionMetricsTests passed after 0.006 seconds.
+✔ Suite DNSLookupTests passed after 0.001 seconds.
+✔ Suite DiagnosticFailureTests passed after 0.004 seconds.
+✔ Suite DiagnosticOptionsTests passed after 0.029 seconds.
+✔ Suite DiagnosticTransportConfigurationTests passed after 0.001 seconds.
+✔ Suite EndpointTests passed after 0.001 seconds.
+✔ Suite HARTests passed after 0.009 seconds.
+✔ Suite ExternalHARTests passed after 0.026 seconds.
+✔ Suite HSTSPolicyTests passed after 0.002 seconds.
+✔ Suite HTTPProxyMessageTests passed after 0.005 seconds.
+✔ Suite HTTPProxyFramingSafetyTests passed after 0.001 seconds.
+✔ Suite HTTPProxyRewriteTests passed after 0.010 seconds.
+✔ Suite HTTPRequestFieldsTests passed after 0.002 seconds.
+✔ Suite HistoryPersistenceTests passed after 0.066 seconds.
+✔ Suite HistoryRetentionTests passed after 0.001 seconds.
+✔ Suite IntegrityTests passed after 0.001 seconds.
+✔ Suite LocalProxyTests passed after 1.831 seconds.
+✔ Suite MacTechnicalTextEditorTests passed after 0.010 seconds.
+✔ Suite PolicyDirectivesTests passed after 0.001 seconds.
+✔ Suite ProxyRuleConfigurationTests passed after 0.029 seconds.
+✔ Suite ProxyRulePersistenceTests passed after 0.261 seconds.
+✔ Suite RecordingSettingsTests passed after 0.001 seconds.
+✔ Suite ReverseDNSLookupTests passed after 0.002 seconds.
+✔ Suite SDKHARImportTests passed after 0.010 seconds.
+✔ Suite SignedCRLTests passed after 0.018 seconds.
+✔ Suite StreamingIntegrityTests passed after 0.005 seconds.
+✔ Suite TLSDisplayTests passed after 0.001 seconds.
+✔ Suite URLQueryDetailsTests passed after 0.003 seconds.
+✔ Test run with 172 tests in 38 suites passed after 2.454 seconds.
+** TEST SUCCEEDED **
+Mac61-iOS-Final.log
+✔ Suite CertificateFieldDisplayTests passed after 0.002 seconds.
+✔ Suite CertificateTransparencyTests passed after 0.017 seconds.
+✔ Suite HARTests passed after 0.027 seconds.
+✔ Suite ExternalHARTests passed after 0.041 seconds.
+✔ Suite HistoryPersistenceTests passed after 0.052 seconds.
+✔ Suite SDKHARImportTests passed after 0.019 seconds.
+✔ Test run with 32 tests in 6 suites passed after 0.166 seconds.
+** TEST SUCCEEDED **

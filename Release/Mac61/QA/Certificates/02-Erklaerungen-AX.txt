@@ -1,0 +1,56 @@
+Window: "ATS Diagnostic", App: ATS Diagnostic.
+0 Standardfenster ATS Diagnostic, ID: SceneWindow, Secondary Actions: Raise
+	1 container Secondary Actions: Cancel
+		2 container Secondary Actions: Cancel
+			3 Text (selected) Description: Prüfen, ID: checkmark.shield, Secondary Actions: Cancel
+			4 Text Description: Anfragen, ID: arrow.up.arrow.down, Secondary Actions: Cancel
+			5 Text Description: Verlauf, ID: clock, Secondary Actions: Cancel
+			6 Text Description: Werkzeuge, ID: wrench.and.screwdriver, Secondary Actions: Cancel
+		7 container Secondary Actions: Cancel
+			8 container ID: Zertifikat, Secondary Actions: Cancel
+				9 Taste „Zurück“ Description: Verbindung prüfen, ID: BackButton, Secondary Actions: Cancel
+				10 Überschrift Description: Zertifikat, Secondary Actions: Cancel
+			11 container Secondary Actions: Cancel, Scroll Down, Scroll Up
+				12 Text Description: example.com, Secondary Actions: Cancel
+				13 Text Description: Serverzertifikat, Secondary Actions: Cancel
+				14 Text Description: Läuft am 25. Dez. 2026 ab, Secondary Actions: Cancel
+				15 Schalter Description: Zertifikatsfelder erklären, Value: 1, Secondary Actions: Cancel
+				16 Überschrift Secondary Actions: Cancel
+					17 Überschrift Description: Identität und Gültigkeit, Secondary Actions: Cancel
+				18 Text Description: Gültig ab (UTC), Secondary Actions: Cancel
+				19 Text Description: 2026-09-26T22:49:11Z, Secondary Actions: Cancel
+				20 Text Description: Das Zertifikat darf vor diesem Zeitpunkt nicht verwendet werden., Secondary Actions: Cancel
+				21 Text Description: Gültig bis (UTC), Secondary Actions: Cancel
+				22 Text Description: 2026-12-25T22:56:35Z, Secondary Actions: Cancel
+				23 Text Secondary Actions: Cancel, Description: Das Zertifikat läuft zu diesem Zeitpunkt ab. Das Systemvertrauen prüft zusätzlich Signatur, Hostnamen und Kette.
+				24 Text Description: Subject, Secondary Actions: Cancel
+				25 Text Description: CN=example.com, Secondary Actions: Cancel
+				26 Text Secondary Actions: Cancel, Description: Die von diesem Zertifikat beschriebene Identität. Beim Abgleich des Hostnamens werden auch alternative Subject-Namen berücksichtigt.
+				27 Überschrift Secondary Actions: Cancel
+					28 Überschrift Description: Aussteller dieses Zertifikats, Secondary Actions: Cancel
+				29 Text Description: Land (C), Secondary Actions: Cancel
+				30 Text Description: US, Secondary Actions: Cancel
+				31 Text Description: Organisation (O), Secondary Actions: Cancel
+				32 Text Description: SSL Corporation, Secondary Actions: Cancel
+				33 Text Description: Name (CN), Secondary Actions: Cancel
+				34 Text Description: Cloudflare TLS Issuing ECC CA 3, Secondary Actions: Cancel
+				35 Taste Description: Cloudflare TLS Issuing ECC CA 3, Nächstes Zertifikat der ausgewerteten Kette, Secondary Actions: Cancel
+				36 Text Secondary Actions: Cancel, Description: Die Angaben oben stammen aus dem Issuer-Feld. Das nächste Kettenzertifikat ist ein eigener Datensatz; das Gesamtergebnis zum Vertrauen steht bei der Verbindung.
+				37 Überschrift Secondary Actions: Cancel
+					38 Überschrift Description: Fingerabdrücke, Secondary Actions: Cancel
+				39 Text Description: SHA-256, Secondary Actions: Cancel
+				40 Taste Description: SHA-256 teilen, ID: square.and.arrow.up, Secondary Actions: Cancel
+				41 Text Description: 85ca 6ab0 68e9 bcce 88b6 c4aa 3c47 f7d1 7228 134a 457f 870d 3800 e622 3a0d f07a, Secondary Actions: Cancel
+				42 Text Description: SHA-1, Secondary Actions: Cancel
+				43 Taste Description: SHA-1 teilen, ID: square.and.arrow.up, Secondary Actions: Cancel
+				44 Text Description: 899c b259 e7de 8df1 0033 a2af 48c2 2c2f 6580 a21d, Secondary Actions: Cancel
+	45 Text ATS Diagnostic
+46 menu bar
+	47 ATSDiagnostic, ID: com.apple.menu.application
+	48 Ablage, ID: com.apple.menu.file
+	49 Bearbeiten, ID: com.apple.menu.edit
+	50 Darstellung, ID: com.apple.menu.view
+	51 Fenster, ID: com.apple.menu.window
+	52 Hilfe, ID: com.apple.menu.help
+
+The focused UI element is 3 Text (selected) Description: Prüfen, ID: checkmark.shield, Secondary Actions: Cancel

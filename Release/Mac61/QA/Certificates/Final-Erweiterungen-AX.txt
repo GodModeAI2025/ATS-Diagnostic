@@ -1,0 +1,55 @@
+Window: "ATS Diagnostic", App: ATS Diagnostic.
+0 Standardfenster ATS Diagnostic, ID: SceneWindow, Secondary Actions: Raise
+	1 container Secondary Actions: Cancel
+		2 container Secondary Actions: Cancel
+			3 Text (selected) Description: Prüfen, ID: checkmark.shield, Secondary Actions: Cancel
+			4 Text Description: Anfragen, ID: arrow.up.arrow.down, Secondary Actions: Cancel
+			5 Text Description: Verlauf, ID: clock, Secondary Actions: Cancel
+			6 Text Description: Werkzeuge, ID: wrench.and.screwdriver, Secondary Actions: Cancel
+		7 container Secondary Actions: Cancel
+			8 container ID: Zertifikat, Secondary Actions: Cancel
+				9 Taste „Zurück“ Description: Verbindung prüfen, ID: BackButton, Secondary Actions: Cancel
+				10 Überschrift Description: Zertifikat, Secondary Actions: Cancel
+			11 container Secondary Actions: Cancel, Scroll Down, Scroll Up
+				12 Text Description: Signaturalgorithmus, Secondary Actions: Cancel
+				13 Text Description: ECDSA mit SHA-256 · 1.2.840.10045.4.3.2, Secondary Actions: Cancel
+				14 Text Description: Der vom Aussteller verwendete Signaturalgorithmus, dargestellt als Objektkennung., Secondary Actions: Cancel
+				15 Text Description: Zertifikatsquelle, Secondary Actions: Cancel
+				16 Text Description: Vom System geprüfte Vertrauenskette, Secondary Actions: Cancel
+				17 Text Secondary Actions: Cancel, Description: Die Systemprüfung kann Zertifikate aus ihrem Trust-Store hinzufügen oder fehlende Zwischenzertifikate abrufen. Diese Angabe beweist nicht, dass der Server alle Zertifikate gesendet hat.
+				18 Überschrift Secondary Actions: Cancel
+					19 Überschrift Description: Erweiterungen, Secondary Actions: Cancel
+				20 Text Description: Grundlegende Einschränkungen · kritisch, Secondary Actions: Cancel
+				21 Text Description: Zertifizierungsstelle: Nein, Secondary Actions: Cancel
+				22 Text Secondary Actions: Cancel, Description: Gibt an, ob dieses Zertifikat als Zertifizierungsstelle agieren kann, und begrenzt die Tiefe untergeordneter CAs.
+				23 Text Description: Zugriff auf Ausstellerinformationen, Secondary Actions: Cancel
+				24 Text Secondary Actions: Cancel, Description: CA-Aussteller: http://i.cf-i.ssl.com/Cloudflare-TLS-I-E3.cer
+OCSP: http://o.cf-i.ssl.com
+				25 Text Description: Veröffentlichte Fundorte für Ausstellerzertifikate und OCSP-Sperrinformationen., Secondary Actions: Cancel
+				26 Text Description: Alternative Subject-Namen, Secondary Actions: Cancel
+				27 Text Secondary Actions: Cancel, Description: DNS: example.com
+DNS: *.example.com
+				28 Text Description: Namen und Adressen, die dieses Zertifikat identifizieren kann., Secondary Actions: Cancel
+				29 Text Description: Zertifikatrichtlinien, Secondary Actions: Cancel
+				30 Text Secondary Actions: Cancel, Description: 2.23.140.1.2.1
+1.3.6.1.4.1.38064.1.3.1.1
+				31 Text Description: Erweiterte Schlüsselverwendung, Secondary Actions: Cancel
+				32 Text Description: TLS-Serverauthentifizierung, Secondary Actions: Cancel
+				33 Text Description: Von diesem Zertifikat erlaubte Anwendungszwecke., Secondary Actions: Cancel
+				34 Text Description: CRL-Verteilungspunkte, Secondary Actions: Cancel
+				35 Text Description: http://c.cf-i.ssl.com/ae801ed1c55bb579d79208b0d772acfb8cc3a208.crl, Secondary Actions: Cancel
+				36 Text Description: Schlüsselverwendung · kritisch, Secondary Actions: Cancel
+				37 Text Description: Digitale Signatur, Secondary Actions: Cancel
+				38 Text Description: Kryptografische Vorgänge, für die dieser Schlüssel verwendet werden darf., Secondary Actions: Cancel
+				39 Text Description: 1.3.6.1.4.1.44363.44, Secondary Actions: Cancel
+	40 Text ATS Diagnostic
+	41 Menü-Taste Fenster teilen
+42 menu bar
+	43 ATSDiagnostic, ID: com.apple.menu.application
+	44 Ablage, ID: com.apple.menu.file
+	45 Bearbeiten, ID: com.apple.menu.edit
+	46 Darstellung, ID: com.apple.menu.view
+	47 Fenster, ID: com.apple.menu.window
+	48 Hilfe, ID: com.apple.menu.help
+
+The focused UI element is 3 Text (selected) Description: Prüfen, ID: checkmark.shield, Secondary Actions: Cancel

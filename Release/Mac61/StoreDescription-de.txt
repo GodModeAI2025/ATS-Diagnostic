@@ -1,0 +1,12 @@
+Untersuche HTTP-, TLS- und Zertifikatsverbindungen auf dem Mac. Wähle einen Server im Internet oder im lokalen Netzwerk aus und sieh Zertifikatsaussteller, Zertifikatskette, Gültigkeit, Fingerabdrücke und die Ergebnisse der Apple-Systemvertrauensprüfung. Verständliche Erläuterungen ergänzen die ursprünglichen Verbindungsfehler.
+
+- Vergleiche TLS-Versionsprüfungen mit der ausgehandelten Verbindung.
+- Prüfe HTTP-Header, HSTS, Weiterleitungen und Verbindungszeiten.
+- Erstelle Anfragen und untersuche URL-Abfrageparameter.
+- Speichere den Prüfverlauf lokal und exportiere ihn als HAR oder JSON.
+- Nutze IPv4-/IPv6-Vorwärts- und Rückwärtssuche sowie SHA-256-Prüfsummen für Downloads.
+- Untersuche Certificate-Transparency-Zeitstempel und datierte Root-Store-Verzeichnisse.
+
+HTTP und ältere TLS-Konfigurationen lassen sich zu Diagnosezwecken prüfen. HTTPS-Zertifikate werden weiterhin bewertet; ungültige Zertifikate werden als Fehler angezeigt. Die Ergebnisse beschreiben die beobachtete Verbindung und bestätigen nicht pauschal die Einhaltung aller ATS-Anforderungen. Ein Eintrag im Root Store ist nicht gleichbedeutend mit Systemvertrauen. SCT-Signaturen und Log-Inklusion werden nicht unabhängig verifiziert.
+
+Die App benötigt kein Konto. Der Verlauf bleibt auf deinem Mac. Dateien werden nur über eine vom Nutzer gewählte Datei geöffnet oder exportiert. Die App erfasst keinen Netzwerkverkehr anderer Apps und installiert weder VPN noch Root-Zertifikat. Für ausgehende Verbindungen gelten die macOS-App-Sandbox und die ausgewiesenen ATS-Diagnoseausnahmen; ein Proxy ist nicht enthalten.

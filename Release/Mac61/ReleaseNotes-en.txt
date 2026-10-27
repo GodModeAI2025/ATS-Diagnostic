@@ -1,0 +1,1 @@
+Native Mac interface with a sidebar and clear diagnostic views. Certificate details, issuer information and explanations are available in German. HAR exports use the .har extension and preserve recorded milliseconds. Export and reimport of HTTP data, binary responses and failures have been tested. Imported recordings remain explicitly marked as not revalidated.

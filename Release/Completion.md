@@ -202,3 +202,10 @@ At the user’s explicit request, original Store55 (com.mobilebox.atsdiagnostic,
 - Build `6359853f-f275-49e3-a0c6-985a6f58b1db` is **Im Test** in **Mark – Intern**, with exactly one invited tester `mark_zimmermann@mac.com`. No external tester was added.
 - Four real current app screenshots were fitted unchanged on 2560x1600 canvases with decoded-pixel equality checks. After resolving stalled image processing using already processed library assets, macOS **2.0.1 (60)** was submitted. Portal confirms **Warten auf Prüfung**, submission **d54e0a9c-caf7-4ed7-9cdc-0ac3dfb8e215**, 27 October 2026 20:48 CET. Automatic release after approval is selected. Mac59 was never submitted.
 - iOS2.0.1(56) remains **Bereit für Vertrieb** in the portal. Mac approval/public availability and physical TestFlight installation are not verified. Existing mixed-language certificate detail labels and final HAR file save/reimport remain limitations. Evidence: `Release/Mac60/`. Historical parity expansion remains closed.
+
+
+## 2026-10-27 — Mac61 follow-up
+
+German certificate labels, explanations, findings and generated extension values completed. HAR .har filename and millisecond timestamp fixes verified through the real Transferable export. Native actual-file export/reimport passed in normal and full-screen windows; attaching the importer to the outer NavigationStack fixed disabled Open in full-screen. 172 Mac tests/38 suites and 32 targeted iOS tests/6 suites passed. See Mac61/Verification.md and retained QA evidence.
+
+Source commit fb36f7e pushed. Mac 2.0.1 (61) uploaded and enabled for the owner-only Mark – Intern TestFlight group. Updated certificate screenshot and accurate HAR-history wording saved in English and German Store metadata. Submitted 2026-10-27 22:16 CET, submission f3fbe14a-3727-4beb-b264-f0e39dba5b73, Warten auf Prüfung. Mac60 was withdrawn and replaced. Apple approval and a TestFlight-installed device check are not claimed.

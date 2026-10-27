@@ -1,0 +1,88 @@
+Window: "Fullscreen", App: Finder.
+0 Standardfenster Fullscreen, ID: FinderWindow, Secondary Actions: Raise
+	1 Trenngruppe
+		2 Rollbereich Secondary Actions: Scroll Up, Scroll Down
+			3 Gliederung Seitenleiste
+				4 row (selectable) Description: Uhr, Value: Zuletzt benutzt
+				5 row (selectable) Description: Zwei Personen, Value: Geteilt
+				6 row (selectable, expanded) Value: Favoriten, Secondary Actions: Collapse
+				7 row (selectable) OneDrive
+				8 row (selectable) Description: „A“-Logo für App Store, Value: Programme
+				9 row (selectable) Description: Menüleiste mit Dock auf einem Rechteck, Value: Schreibtisch
+				10 row (selectable) Description: Dokumentseite, Value: Dokumente
+				11 row (selectable) Description: Kreispfeil nach unten, Value: Downloads
+				12 row (selectable, expanded) Value: Orte, Secondary Actions: Collapse
+				13 row (selectable) Description: iCloud, Value: iCloud Drive
+				14 row (selectable) Description: Zuhause, Value: markzimmermann
+				15 row (selectable) Description: Interne Festplatte, Value: Macintosh HD
+				16 row (selectable) Auswerfen, Value: Mark, Description: Externe Festplatte
+auswerfen
+				17 row (selectable) Auswerfen, Value: SDMark, Description: Externe Festplatte
+auswerfen
+				18 row (selectable) Auswerfen, Value: EnBW CoWork, Description: Externe Festplatte
+auswerfen
+				19 row (selectable) Description: Konzentrische AirDrop-Radiowellen, Value: AirDrop
+				20 row (selectable) Description: Durch Linien verbundene Netzwerkknoten, Value: Netzwerk
+				21 row (selectable) Papierkorb
+				22 row (selectable, collapsed) Value: Tags, Secondary Actions: Expand
+			23 Rollbalken (settable, float) 0
+				24 Wertanzeige (settable, float) 0
+				25 Aufwärtspfeil
+				26 Abwärtspfeil
+				27 Seite aufwärts
+				28 Seite abwärts
+		29 Trenner (disabled, settable, float) 180.5
+		30 Rollbereich
+			31 Gliederung Description: Listendarstellung, ID: ListView
+				32 row (selectable)
+					33 Zelle Secondary Actions: Finder-Objekt öffnen
+						34 Bild
+						35 Textfeld (settable) Value: ATS-Diagnostic 2.har, Secondary Actions: Finder-Objekt öffnen, URL: file:///Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/outputs/ATS-Diagnostic/Release/Mac61/QA/HAR/Build61/Fullscreen/ATS-Diagnostic%202.har
+					36 Zelle
+						37 Text Heute, 21:48
+					38 Zelle
+						39 Text 121 KB
+					40 Zelle
+						41 Text Reiner Text
+				42 row (selectable)
+					43 Zelle Secondary Actions: Finder-Objekt öffnen
+						44 Bild
+						45 Textfeld (settable) Value: ATS-Diagnostic.har, Secondary Actions: Finder-Objekt öffnen, URL: file:///Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/outputs/ATS-Diagnostic/Release/Mac61/QA/HAR/Build61/Fullscreen/ATS-Diagnostic.har
+					46 Zelle
+						47 Text Heute, 21:48
+					48 Zelle
+						49 Text 121 KB
+					50 Zelle
+						51 Text Reiner Text
+				52 container ListViewHeader
+					53 Taste Description: Name, Value: AXAscendingSortDirection, ID: name
+					54 Taste Description: Änderungsdatum, ID: dateModified
+					55 Taste Description: Größe, ID: size
+					56 Taste Description: Art, ID: kind
+		57 Unbekannt Details: Statusleiste, ID: statusBar
+			58 Text Value: 2 Objekte, 330,17 GB verfügbar, ID: statusBarText
+	59 Symbolleiste
+		60 container Zurück/Vorwärts
+			61 Taste (disabled) Zurück
+			62 Taste (disabled) Weiter
+		63 Optionsschaltfläche Description: Symboldarstellung, Value: 0
+		64 Optionsschaltfläche Description: Listendarstellung, Value: 1
+		65 Optionsschaltfläche Description: Spaltendarstellung, Value: 0
+		66 Optionsschaltfläche Description: Galeriedarstellung, Value: 0
+		67 Menü-Taste Description: Gruppieren, Help: Gruppierung der Objekte ändern (Option-Taste gedrückt halten, um die Sortierung zu ändern), Secondary Actions: Vorheriges bewegen, Nächstes bewegen, Aus Symbolleiste entfernen
+		68 Taste (disabled) Description: Teilen, Help: Ausgewählte Objekte teilen, Secondary Actions: Vorheriges bewegen, Nächstes bewegen, Aus Symbolleiste entfernen
+		69 Taste (disabled) Description: Tags bearbeiten, Secondary Actions: Vorheriges bewegen, Nächstes bewegen, Aus Symbolleiste entfernen
+		70 Menü-Taste Description: Aktion, Help: Vorgänge mit den ausgewählten Objekten durchführen, Secondary Actions: Vorheriges bewegen, Nächstes bewegen, Aus Symbolleiste entfernen
+		71 Taste Suchen
+	72 Text Fullscreen
+	73 Menü-Taste Fenster teilen
+74 menu bar
+	75 Finder
+	76 Ablage
+	77 Bearbeiten
+	78 Darstellung
+	79 Gehe zu
+	80 Fenster
+	81 Hilfe
+
+The focused UI element is 31 Gliederung Description: Listendarstellung, ID: ListView

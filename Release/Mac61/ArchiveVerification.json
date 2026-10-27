@@ -1,0 +1,17 @@
+{
+  "build": "61",
+  "version": "2.0.1",
+  "bundle_id": "com.mobilebox.atsdiagnostic",
+  "minimum_macos": "15.0",
+  "architectures": "x86_64 arm64",
+  "ats": {
+    "NSAllowsArbitraryLoads": true
+  },
+  "local_network_purpose": "ATS Diagnostic pr\u00fcft von dir ausgew\u00e4hlte Ger\u00e4te und Server im lokalen Netzwerk, um HTTP, TLS und Zertifikate zu untersuchen.",
+  "entitlements": {
+    "com.apple.security.app-sandbox": true,
+    "com.apple.security.files.user-selected.read-write": true,
+    "com.apple.security.network.client": true
+  },
+  "appearance_override": false
+}

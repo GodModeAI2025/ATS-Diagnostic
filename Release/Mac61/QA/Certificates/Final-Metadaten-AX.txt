@@ -1,0 +1,58 @@
+Window: "ATS Diagnostic", App: ATS Diagnostic.
+0 Standardfenster ATS Diagnostic, ID: SceneWindow, Secondary Actions: Raise
+	1 container Secondary Actions: Cancel
+		2 container Secondary Actions: Cancel
+			3 Text (selected) Description: Prüfen, ID: checkmark.shield, Secondary Actions: Cancel
+			4 Text Description: Anfragen, ID: arrow.up.arrow.down, Secondary Actions: Cancel
+			5 Text Description: Verlauf, ID: clock, Secondary Actions: Cancel
+			6 Text Description: Werkzeuge, ID: wrench.and.screwdriver, Secondary Actions: Cancel
+		7 container Secondary Actions: Cancel
+			8 container ID: Zertifikat, Secondary Actions: Cancel
+				9 Taste „Zurück“ Description: Verbindung prüfen, ID: BackButton, Secondary Actions: Cancel
+				10 Überschrift Description: Zertifikat, Secondary Actions: Cancel
+			11 container Secondary Actions: Cancel, Scroll Down, Scroll Up
+				12 Text Description: Elliptische Kurve · 256 Bit, Secondary Actions: Cancel
+				13 Text Description: Algorithmus des öffentlichen Schlüssels, Secondary Actions: Cancel
+				14 Text Description: Elliptische Kurve · 1.2.840.10045.2.1, Secondary Actions: Cancel
+				15 Text Description: Der Algorithmus des öffentlichen Schlüssels dieses Zertifikats., Secondary Actions: Cancel
+				16 Text Description: Aussteller-Schlüsselkennung, Secondary Actions: Cancel
+				17 Text Description: Schlüsselkennung: 83:03:FD:E7:F6:F5:4A:4D:15:41:F4:ED:22:16:D3:32:0A:3E:CA:66, Secondary Actions: Cancel
+				18 Text Description: Hilft, den Signaturschlüssel des Ausstellers zu erkennen und die Zertifikatskette aufzubauen., Secondary Actions: Cancel
+				19 Überschrift Secondary Actions: Cancel
+					20 Überschrift Description: Metadaten, Secondary Actions: Cancel
+				21 Text Description: X.509-Version, Secondary Actions: Cancel
+				22 Text Description: v3, Secondary Actions: Cancel
+				23 Text Description: X.509-Versionen werden als v1, v2 oder v3 angezeigt. Die codierte Versionsnummer beginnt bei null., Secondary Actions: Cancel
+				24 Text Description: Seriennummer, Secondary Actions: Cancel
+				25 Text Description: 01:EE:E6:AA:BB:52:1D:5E:14:FC:31:5F:D9:98:56:90, Secondary Actions: Cancel
+				26 Text Description: Der Aussteller vergibt diese Nummer zur Kennzeichnung des Zertifikats, auch in Sperrlisten., Secondary Actions: Cancel
+				27 Text Description: Signaturalgorithmus, Secondary Actions: Cancel
+				28 Text Description: ECDSA mit SHA-256 · 1.2.840.10045.4.3.2, Secondary Actions: Cancel
+				29 Text Description: Der vom Aussteller verwendete Signaturalgorithmus, dargestellt als Objektkennung., Secondary Actions: Cancel
+				30 Text Description: Zertifikatsquelle, Secondary Actions: Cancel
+				31 Text Description: Vom System geprüfte Vertrauenskette, Secondary Actions: Cancel
+				32 Text Secondary Actions: Cancel, Description: Die Systemprüfung kann Zertifikate aus ihrem Trust-Store hinzufügen oder fehlende Zwischenzertifikate abrufen. Diese Angabe beweist nicht, dass der Server alle Zertifikate gesendet hat.
+				33 Überschrift Secondary Actions: Cancel
+					34 Überschrift Description: Erweiterungen, Secondary Actions: Cancel
+				35 Text Description: Grundlegende Einschränkungen · kritisch, Secondary Actions: Cancel
+				36 Text Description: Zertifizierungsstelle: Nein, Secondary Actions: Cancel
+				37 Text Secondary Actions: Cancel, Description: Gibt an, ob dieses Zertifikat als Zertifizierungsstelle agieren kann, und begrenzt die Tiefe untergeordneter CAs.
+				38 Text Description: Zugriff auf Ausstellerinformationen, Secondary Actions: Cancel
+				39 Text Secondary Actions: Cancel, Description: CA-Aussteller: http://i.cf-i.ssl.com/Cloudflare-TLS-I-E3.cer
+OCSP: http://o.cf-i.ssl.com
+				40 Text Description: Veröffentlichte Fundorte für Ausstellerzertifikate und OCSP-Sperrinformationen., Secondary Actions: Cancel
+				41 Text Description: Alternative Subject-Namen, Secondary Actions: Cancel
+				42 Text Secondary Actions: Cancel, Description: DNS: example.com
+DNS: *.example.com
+				43 Text Description: Namen und Adressen, die dieses Zertifikat identifizieren kann., Secondary Actions: Cancel
+	44 Text ATS Diagnostic
+	45 Menü-Taste Fenster teilen
+46 menu bar
+	47 ATSDiagnostic, ID: com.apple.menu.application
+	48 Ablage, ID: com.apple.menu.file
+	49 Bearbeiten, ID: com.apple.menu.edit
+	50 Darstellung, ID: com.apple.menu.view
+	51 Fenster, ID: com.apple.menu.window
+	52 Hilfe, ID: com.apple.menu.help
+
+The focused UI element is 3 Text (selected) Description: Prüfen, ID: checkmark.shield, Secondary Actions: Cancel

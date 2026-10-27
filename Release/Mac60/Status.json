@@ -30,7 +30,7 @@
     "HAR exported-file roundtrip not verified"
   ],
   "testflight_status": "Im Test",
-  "testflight_group": "Mark \u2013 Intern",
+  "testflight_group": "Mark – Intern",
   "testflight_tester": "mark_zimmermann@mac.com",
   "testflight_tester_status": "Eingeladen",
   "apple_build_id": "6359853f-f275-49e3-a0c6-985a6f58b1db",
@@ -40,10 +40,12 @@
     "en-US",
     "de-DE inherited"
   ],
-  "store_status": "Warten auf Pr\u00fcfung",
+  "store_status": "Vom Entwickler abgelehnt",
   "store_submission_id": "d54e0a9c-caf7-4ed7-9cdc-0ac3dfb8e215",
   "store_submitted_at": "2026-10-27T20:48:00+01:00",
   "store_screenshots_processed": true,
   "release_after_approval": "automatic",
-  "local_debug_system_appearance_restored": true
+  "local_debug_system_appearance_restored": true,
+  "superseded_by_build": "61",
+  "replacement_submission_id": "f3fbe14a-3727-4beb-b264-f0e39dba5b73"
 }

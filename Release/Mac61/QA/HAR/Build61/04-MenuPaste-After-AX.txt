@@ -1,0 +1,78 @@
+Window: "MenuPaste", App: Finder.
+0 Standardfenster MenuPaste, ID: FinderWindow, Secondary Actions: Raise
+	1 Trenngruppe
+		2 Rollbereich Secondary Actions: Scroll Up, Scroll Down
+			3 Gliederung Seitenleiste
+				4 row (selectable) Description: Uhr, Value: Zuletzt benutzt
+				5 row (selectable) Description: Zwei Personen, Value: Geteilt
+				6 row (selectable, expanded) Value: Favoriten, Secondary Actions: Collapse
+				7 row (selectable) OneDrive
+				8 row (selectable) Description: „A“-Logo für App Store, Value: Programme
+				9 row (selectable) Description: Menüleiste mit Dock auf einem Rechteck, Value: Schreibtisch
+				10 row (selectable) Description: Dokumentseite, Value: Dokumente
+				11 row (selectable) Description: Kreispfeil nach unten, Value: Downloads
+				12 row (selectable, expanded) Value: Orte, Secondary Actions: Collapse
+				13 row (selectable) Description: iCloud, Value: iCloud Drive
+				14 row (selectable) Description: Zuhause, Value: markzimmermann
+				15 row (selectable) Description: Interne Festplatte, Value: Macintosh HD
+				16 row (selectable) Auswerfen, Value: Mark, Description: Externe Festplatte
+auswerfen
+				17 row (selectable) Auswerfen, Value: SDMark, Description: Externe Festplatte
+auswerfen
+				18 row (selectable) Auswerfen, Value: EnBW CoWork, Description: Externe Festplatte
+auswerfen
+				19 row (selectable) Description: Konzentrische AirDrop-Radiowellen, Value: AirDrop
+				20 row (selectable) Description: Durch Linien verbundene Netzwerkknoten, Value: Netzwerk
+				21 row (selectable) Papierkorb
+				22 row (selectable, collapsed) Value: Tags, Secondary Actions: Expand
+			23 Rollbalken (settable, float) 0
+				24 Wertanzeige (settable, float) 0
+				25 Aufwärtspfeil
+				26 Abwärtspfeil
+				27 Seite aufwärts
+				28 Seite abwärts
+		29 Trenner (disabled, settable, float) 180.5
+		30 Rollbereich
+			31 Gliederung Description: Listendarstellung, ID: ListView
+				32 row (selectable)
+					33 Zelle Secondary Actions: Finder-Objekt öffnen
+						34 Bild
+						35 Textfeld (settable) Value: ATS-Diagnostic.har, Secondary Actions: Finder-Objekt öffnen, URL: file:///Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/outputs/ATS-Diagnostic/Release/Mac61/QA/HAR/Build61/MenuPaste/ATS-Diagnostic.har
+					36 Zelle
+						37 Text Heute, 21:48
+					38 Zelle
+						39 Text 121 KB
+					40 Zelle
+						41 Text Reiner Text
+				42 container ListViewHeader
+					43 Taste Description: Name, Value: AXAscendingSortDirection, ID: name
+					44 Taste Description: Änderungsdatum, ID: dateModified
+					45 Taste Description: Größe, ID: size
+					46 Taste Description: Art, ID: kind
+		47 Unbekannt Details: Statusleiste, ID: statusBar
+			48 Text Value: 1 Objekt, 330,16 GB verfügbar, ID: statusBarText
+	49 Symbolleiste
+		50 container Zurück/Vorwärts
+			51 Taste Zurück
+			52 Taste (disabled) Weiter
+		53 Optionsschaltfläche Description: Symboldarstellung, Value: 0
+		54 Optionsschaltfläche Description: Listendarstellung, Value: 1
+		55 Optionsschaltfläche Description: Spaltendarstellung, Value: 0
+		56 Optionsschaltfläche Description: Galeriedarstellung, Value: 0
+		57 Menü-Taste Description: Gruppieren, Help: Gruppierung der Objekte ändern (Option-Taste gedrückt halten, um die Sortierung zu ändern), Secondary Actions: Vorheriges bewegen, Nächstes bewegen, Aus Symbolleiste entfernen
+		58 Taste (disabled) Description: Teilen, Help: Ausgewählte Objekte teilen, Secondary Actions: Vorheriges bewegen, Nächstes bewegen, Aus Symbolleiste entfernen
+		59 Taste (disabled) Description: Tags bearbeiten, Secondary Actions: Vorheriges bewegen, Nächstes bewegen, Aus Symbolleiste entfernen
+		60 Menü-Taste Description: Aktion, Help: Vorgänge mit den ausgewählten Objekten durchführen, Secondary Actions: Vorheriges bewegen, Nächstes bewegen, Aus Symbolleiste entfernen
+		61 Taste Suchen
+	62 Text MenuPaste
+	63 Menü-Taste Fenster teilen
+64 menu bar
+	65 Finder
+	66 Ablage
+	67 Bearbeiten
+	68 Darstellung
+	69 Gehe zu
+	70 Fenster
+	71 Hilfe
+
+The focused UI element is 31 Gliederung Description: Listendarstellung, ID: ListView

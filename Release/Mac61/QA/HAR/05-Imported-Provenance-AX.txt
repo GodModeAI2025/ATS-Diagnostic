@@ -1,0 +1,55 @@
+Window: "ATS Diagnostic", App: ATS Diagnostic.
+0 Standardfenster ATS Diagnostic, ID: SceneWindow, Secondary Actions: Raise
+	1 container Secondary Actions: Cancel
+		2 container Secondary Actions: Cancel
+			3 Text (selected) Description: Prüfen, ID: checkmark.shield, Secondary Actions: Cancel
+			4 Text Description: Anfragen, ID: arrow.up.arrow.down, Secondary Actions: Cancel
+			5 Text (selected) Description: Verlauf, ID: clock, Secondary Actions: Cancel
+			6 Text Description: Werkzeuge, ID: wrench.and.screwdriver, Secondary Actions: Cancel
+		7 container Secondary Actions: Cancel
+			8 container ID: Verbindungsdetails, Secondary Actions: Cancel
+				9 Taste „Zurück“ Description: Verlauf, ID: BackButton, Secondary Actions: Cancel
+				10 Überschrift Description: Verbindungsdetails, Secondary Actions: Cancel
+				11 Taste Description: Favorite, Secondary Actions: Cancel
+			12 container Secondary Actions: Cancel
+				13 Text Description: Verbindungsübersicht, Secondary Actions: Cancel
+				14 Text Description: Antwort empfangen, Secondary Actions: Cancel
+				15 container Secondary Actions: Cancel
+					16 Text Description: HTTP-Status, 200, Secondary Actions: Cancel
+					17 Text Description: TLS-Version, Nicht gemeldet, Secondary Actions: Cancel
+					18 Text Description: Dauer, 0,130 s, Secondary Actions: Cancel
+					19 Text Description: Zertifikate, 0, Secondary Actions: Cancel
+				20 Text Description: Verbindungszeiten, Secondary Actions: Cancel
+				21 Text Description: Gesamte Anfrage, 0,130 s, Secondary Actions: Cancel
+				22 Text Description: DNS-Abfrage, 0,001 s, Secondary Actions: Cancel
+				23 Text Description: Verbindung, 0,079 s, Secondary Actions: Cancel
+				24 Text Description: TLS-Handshake, 0,078 s, Secondary Actions: Cancel
+				25 Text Secondary Actions: Cancel, Description: Die Phasenbalken vergleichen gemeldete Dauern mit der gesamten Anfragezeit. Phasen können sich überschneiden.
+				26 container Secondary Actions: Cancel, Scroll Down, Scroll Up
+					27 Text Description: Importierte Aufzeichnung, Secondary Actions: Cancel
+					28 Text Secondary Actions: Cancel, Description: Die Angaben stammen aus der importierten Datei. Diese Verbindung wurde durch den Import nicht erneut geprüft.
+					29 Taste Description: Connection map, Secondary Actions: Cancel
+					30 Überschrift Secondary Actions: Cancel
+						31 Überschrift Description: Verbindung, Secondary Actions: Cancel
+					32 Text Description: https://example.com, Secondary Actions: Cancel
+					33 Text Description: Status, 200, Secondary Actions: Cancel
+					34 Text Description: Protocol, HTTP/3.0, Secondary Actions: Cancel
+					35 Text Description: TLS-Version, Nicht gemeldet, Secondary Actions: Cancel
+					36 Text Description: Cipher suite, Nicht gemeldet, Secondary Actions: Cancel
+					37 Text Description: Remote address, 104.20.23.154, Secondary Actions: Cancel
+					38 Taste Description: URL-Parameter, Secondary Actions: Cancel
+					39 Überschrift Secondary Actions: Cancel
+						40 Überschrift Description: Download integrity, Secondary Actions: Cancel
+					41 Text Description: SHA-256 laut importierter Aufzeichnung · nicht neu geprüft, Secondary Actions: Cancel
+					42 Text Description: 25dd f2c8 83e0 d195 8ea9 71d2 79a7 e4f0 fd44 6724 ee3d b7db 19da dabd 4a62 e484, Secondary Actions: Cancel
+	43 Text ATS Diagnostic
+	44 Menü-Taste Fenster teilen
+45 menu bar
+	46 ATSDiagnostic, ID: com.apple.menu.application
+	47 Ablage, ID: com.apple.menu.file
+	48 Bearbeiten, ID: com.apple.menu.edit
+	49 Darstellung, ID: com.apple.menu.view
+	50 Fenster, ID: com.apple.menu.window
+	51 Hilfe, ID: com.apple.menu.help
+
+The focused UI element is 5 Text (selected) Description: Verlauf, ID: clock, Secondary Actions: Cancel

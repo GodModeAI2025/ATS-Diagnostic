@@ -1,0 +1,118 @@
+Window: "HAR", App: Finder.
+0 Standardfenster HAR, ID: FinderWindow, Secondary Actions: Raise
+	1 Trenngruppe
+		2 Rollbereich Secondary Actions: Scroll Up, Scroll Down
+			3 Gliederung Seitenleiste
+				4 row (selectable) Description: Uhr, Value: Zuletzt benutzt
+				5 row (selectable) Description: Zwei Personen, Value: Geteilt
+				6 row (selectable, expanded) Value: Favoriten, Secondary Actions: Collapse
+				7 row (selectable) OneDrive
+				8 row (selectable) Description: „A“-Logo für App Store, Value: Programme
+				9 row (selectable) Description: Menüleiste mit Dock auf einem Rechteck, Value: Schreibtisch
+				10 row (selectable) Description: Dokumentseite, Value: Dokumente
+				11 row (selectable) Description: Kreispfeil nach unten, Value: Downloads
+				12 row (selectable, expanded) Value: Orte, Secondary Actions: Collapse
+				13 row (selectable) Description: iCloud, Value: iCloud Drive
+				14 row (selectable) Description: Zuhause, Value: markzimmermann
+				15 row (selectable) Description: Interne Festplatte, Value: Macintosh HD
+				16 row (selectable) Auswerfen, Value: Mark, Description: Externe Festplatte
+auswerfen
+				17 row (selectable) Auswerfen, Value: SDMark, Description: Externe Festplatte
+auswerfen
+				18 row (selectable) Auswerfen, Value: EnBW CoWork, Description: Externe Festplatte
+auswerfen
+				19 row (selectable) Description: Konzentrische AirDrop-Radiowellen, Value: AirDrop
+				20 row (selectable) Description: Durch Linien verbundene Netzwerkknoten, Value: Netzwerk
+				21 row (selectable) Papierkorb
+				22 row (selectable, collapsed) Value: Tags, Secondary Actions: Expand
+			23 Rollbalken (settable, float) 0
+				24 Wertanzeige (settable, float) 0
+				25 Aufwärtspfeil
+				26 Abwärtspfeil
+				27 Seite aufwärts
+				28 Seite abwärts
+		29 Trenner (disabled, settable, float) 180.5
+		30 Rollbereich
+			31 Gliederung Description: Listendarstellung, ID: ListView
+				32 row (selectable)
+					33 Zelle Secondary Actions: Finder-Objekt öffnen
+						34 Bild
+						35 Textfeld (settable) Value: 01-History-Before-AX.txt, Secondary Actions: Finder-Objekt öffnen, URL: file:///Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/outputs/ATS-Diagnostic/Release/Mac61/QA/HAR/01-History-Before-AX.txt
+					36 Zelle
+						37 Text Heute, 21:34
+					38 Zelle
+						39 Text 3 KB
+					40 Zelle
+						41 Text Reiner Text
+				42 row (selectable)
+					43 Zelle Secondary Actions: Finder-Objekt öffnen
+						44 Bild
+						45 Textfeld (settable) Value: 01-History-Before.jpg, Secondary Actions: Finder-Objekt öffnen, URL: file:///Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/outputs/ATS-Diagnostic/Release/Mac61/QA/HAR/01-History-Before.jpg
+					46 Zelle
+						47 Text Heute, 21:34
+					48 Zelle
+						49 Text 195 KB
+					50 Zelle
+						51 Text JPEG-Bild
+				52 row (selectable)
+					53 Zelle Secondary Actions: Finder-Objekt öffnen
+						54 Bild
+						55 Textfeld (settable) Value: 02-Share-Normal-AX.txt, Secondary Actions: Finder-Objekt öffnen, URL: file:///Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/outputs/ATS-Diagnostic/Release/Mac61/QA/HAR/02-Share-Normal-AX.txt
+					56 Zelle
+						57 Text Heute, 21:34
+					58 Zelle
+						59 Text 877 Byte
+					60 Zelle
+						61 Text Reiner Text
+				62 row (selectable)
+					63 Zelle Secondary Actions: Finder-Objekt öffnen
+						64 Bild
+						65 Textfeld (settable) Value: ATS-Diagnostic.har 2.json, Secondary Actions: Finder-Objekt öffnen, URL: file:///Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/outputs/ATS-Diagnostic/Release/Mac61/QA/HAR/ATS-Diagnostic.har%202.json
+					66 Zelle
+						67 Text Heute, 21:34
+					68 Zelle
+						69 Text 58 KB
+					70 Zelle
+						71 Text JSON Document
+				72 row (selectable)
+					73 Zelle Secondary Actions: Finder-Objekt öffnen
+						74 Bild
+						75 Textfeld (settable) Value: ATS-Diagnostic.har.json, Secondary Actions: Finder-Objekt öffnen, URL: file:///Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/outputs/ATS-Diagnostic/Release/Mac61/QA/HAR/ATS-Diagnostic.har.json
+					76 Zelle
+						77 Text Heute, 21:34
+					78 Zelle
+						79 Text 58 KB
+					80 Zelle
+						81 Text JSON Document
+				82 container ListViewHeader
+					83 Taste Description: Name, Value: AXAscendingSortDirection, ID: name
+					84 Taste Description: Änderungsdatum, ID: dateModified
+					85 Taste Description: Größe, ID: size
+					86 Taste Description: Art, ID: kind
+		87 Unbekannt Details: Statusleiste, ID: statusBar
+			88 Text Value: 5 Objekte, 329,53 GB verfügbar, ID: statusBarText
+	89 Symbolleiste
+		90 container Zurück/Vorwärts
+			91 Taste (disabled) Zurück
+			92 Taste (disabled) Weiter
+		93 Optionsschaltfläche Description: Symboldarstellung, Value: 0
+		94 Optionsschaltfläche Description: Listendarstellung, Value: 1
+		95 Optionsschaltfläche Description: Spaltendarstellung, Value: 0
+		96 Optionsschaltfläche Description: Galeriedarstellung, Value: 0
+		97 Menü-Taste Description: Gruppieren, Help: Gruppierung der Objekte ändern (Option-Taste gedrückt halten, um die Sortierung zu ändern), Secondary Actions: Vorheriges bewegen, Nächstes bewegen, Aus Symbolleiste entfernen
+		98 Taste (disabled) Description: Teilen, Help: Ausgewählte Objekte teilen, Secondary Actions: Vorheriges bewegen, Nächstes bewegen, Aus Symbolleiste entfernen
+		99 Taste (disabled) Description: Tags bearbeiten, Secondary Actions: Vorheriges bewegen, Nächstes bewegen, Aus Symbolleiste entfernen
+		100 Menü-Taste Description: Aktion, Help: Vorgänge mit den ausgewählten Objekten durchführen, Secondary Actions: Vorheriges bewegen, Nächstes bewegen, Aus Symbolleiste entfernen
+		101 Taste Suchen
+	102 Text HAR
+	103 Menü-Taste Fenster teilen
+104 menu bar
+	105 Finder
+	106 Ablage
+	107 Bearbeiten
+	108 Darstellung
+	109 Gehe zu
+	110 Fenster
+	111 Hilfe
+
+The focused UI element is 31 Gliederung Description: Listendarstellung, ID: ListView

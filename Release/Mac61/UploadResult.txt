@@ -1,0 +1,6 @@
+2026-10-27 22:02:50.165 xcodebuild[72461:16117586] Progress 100 %: Waiting for package to begin processing…
+2026-10-27 22:02:50.443 xcodebuild[72461:16117586] Progress 100 %: Uploaded package is processing.
+2026-10-27 22:02:50.450 xcodebuild[72461:16117586] Progress 100 %: Upload succeeded.
+Uploaded ATSDiagnostic
+** EXPORT SUCCEEDED **
+

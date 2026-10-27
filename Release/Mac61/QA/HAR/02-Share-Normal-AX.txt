@@ -1,0 +1,28 @@
+Window: "ATS Diagnostic", App: ATS Diagnostic.
+0 Standardfenster ATS Diagnostic, ID: SceneWindow, Secondary Actions: Raise
+	1 container
+		2 Überblendung ID: ShareSheet.Popover, Secondary Actions: Cancel
+			3 container
+				4 Bild
+				5 text ATS-Diagnostic.har JSON · 58 KB
+				6 Taste Mirja
+				7 Taste O365
+				8 Taste Florian Bliesch
+				9 Taste Ruth Astrid Zimmermann
+				10 Taste AirDrop
+				11 Taste Mail
+				12 Taste Nachrichten
+				13 Taste Notizen
+				14 Taste Freeform
+				15 Taste Kurzbefehle
+				16 Taste Kopieren
+				17 Taste Erweiterungen bearbeiten …
+	18 Text ATS Diagnostic
+	19 Menü-Taste Fenster teilen
+20 menu bar
+	21 ATSDiagnostic, ID: com.apple.menu.application
+	22 Ablage, ID: com.apple.menu.file
+	23 Bearbeiten, ID: com.apple.menu.edit
+	24 Darstellung, ID: com.apple.menu.view
+	25 Fenster, ID: com.apple.menu.window
+	26 Hilfe, ID: com.apple.menu.help
