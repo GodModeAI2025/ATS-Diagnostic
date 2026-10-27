@@ -192,3 +192,13 @@ At the user’s explicit request, original Store55 (com.mobilebox.atsdiagnostic,
 - The 161 Mac tests and 8 iOS SignedCRL tests passed. Logs: `work/Mac58-Tests-Final.log` and `work/Mac58-iOS-CRL.log`.
 - Mac screenshots and visual UI QA remain outstanding. The CUA `getApp` call is hanging; another XcodeRun attempt is in progress. Historical feature parity was explicitly closed by the user and is not an open gate.
 - iOS 2.0.1 (56) is **Ready for Distribution** in the portal; no device installation is verified.
+
+
+## Native Mac redesign 2.0.1 (60), verified 2026-10-27
+
+- The user rejected Mac59, then explicitly approved the native Mac60 concept. Source `76cfb64` implements the sidebar, compact address/request controls, flat result sections, restrained colors, adaptive tools workspace and literal technical editors. Existing iOS branches and diagnostic/trust behavior remain intact.
+- Full Mac regression: 165 methods / 37 suites passed. Three targeted iOS regression tests and the final iOS build passed. Independent review findings about partial-capture warnings and Return sending were fixed; follow-up review found no concrete blocker. Native Dark/Light, narrow/wide, HTTP/HTTPS/expired certificate, issuer navigation, retained drafts, cURL import, explicit-send behavior and HAR share presentation were checked.
+- Signed universal Intel/Apple Silicon archive retains the existing bundle `com.mobilebox.atsdiagnostic`, macOS15+, ATS arbitrary-load exception, local-network purpose and App Sandbox client/user-selected-file entitlements. No network.server or get-task-allow entitlement, and no forced appearance. Upload and Apple processing succeeded.
+- Build `6359853f-f275-49e3-a0c6-985a6f58b1db` is **Im Test** in **Mark – Intern**, with exactly one invited tester `mark_zimmermann@mac.com`. No external tester was added.
+- Four real current app screenshots were fitted unchanged on 2560x1600 canvases with decoded-pixel equality checks. After resolving stalled image processing using already processed library assets, macOS **2.0.1 (60)** was submitted. Portal confirms **Warten auf Prüfung**, submission **d54e0a9c-caf7-4ed7-9cdc-0ac3dfb8e215**, 27 October 2026 20:48 CET. Automatic release after approval is selected. Mac59 was never submitted.
+- iOS2.0.1(56) remains **Bereit für Vertrieb** in the portal. Mac approval/public availability and physical TestFlight installation are not verified. Existing mixed-language certificate detail labels and final HAR file save/reimport remain limitations. Evidence: `Release/Mac60/`. Historical parity expansion remains closed.

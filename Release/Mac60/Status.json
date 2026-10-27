@@ -6,7 +6,7 @@
   "platform": "macOS",
   "technology": "Mac Catalyst",
   "design_approved": true,
-  "store_submitted": false,
+  "store_submitted": true,
   "archive_succeeded": true,
   "upload_succeeded": true,
   "ios_targeted_tests_passed": 3,
@@ -35,9 +35,15 @@
   "testflight_tester_status": "Eingeladen",
   "apple_build_id": "6359853f-f275-49e3-a0c6-985a6f58b1db",
   "store_selected_build": "60",
-  "store_submission_blocker": "Apple screenshot processing: one of four screenshots still pending",
+  "store_submission_blocker": null,
   "store_screenshots_languages": [
     "en-US",
     "de-DE inherited"
-  ]
+  ],
+  "store_status": "Warten auf Pr\u00fcfung",
+  "store_submission_id": "d54e0a9c-caf7-4ed7-9cdc-0ac3dfb8e215",
+  "store_submitted_at": "2026-10-27T20:48:00+01:00",
+  "store_screenshots_processed": true,
+  "release_after_approval": "automatic",
+  "local_debug_system_appearance_restored": true
 }

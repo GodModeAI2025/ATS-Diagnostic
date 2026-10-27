@@ -38,4 +38,4 @@ Files: project.yml, generated project, Release/Mac60/.
 - [x] Build Mac and iOS; run existing applicable regression tests.
 - [x] Native QA the five review conditions plus Light/Dark, HTTPS success/HTTP cleartext/expired certificate, tools output.
 - [x] Fix visual issues from actual screenshots; archive/upload only after checks pass.
-- [ ] Capture current real Store screenshots, replace rejected Mac59 Store draft with new build and assets, verify submission result if authorized release gates permit.
+- [x] Capture current real Store screenshots, replace rejected Mac59 Store draft with new build and assets, verify submission result if authorized release gates permit.

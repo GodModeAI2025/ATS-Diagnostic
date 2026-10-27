@@ -1,0 +1,71 @@
+Browser tab: 2, Title: "App Store Connect", URL: "https://appstoreconnect.apple.com/apps/1297164068/distribution/reviewsubmissions/details/d54e0a9c-caf7-4ed7-9cdc-0ac3dfb8e215".
+1 AXWebArea App Store Connect, URL: appstoreconnect.apple.com/apps/1297164068/distribution/reviewsubmissions/details/d54e0a9c-caf7-4ed7-9cdc-0ac3dfb8e215
+	2 container
+		3 container App Store Connect
+			4 container
+				5 heading App Store Connect, Value: 1
+					6 link Description: App Store Connect, Value: appstoreconnect.apple.com/, ID: logo
+				7 container Global
+					8 content list
+						9 link Description: Apps, Value: appstoreconnect.apple.com/apps
+						10 link Description: Xcode Cloud, Value: appstoreconnect.apple.com/teams/69a6de93-b31c-47e3-e053-5b8c7c11a4d1/xcode-cloud
+						11 link Description: Trends, Value: appstoreconnect.apple.com/trends
+						12 link Description: Berichte, Value: appstoreconnect.apple.com/itc/payments_and_financial_reports
+				13 button Mark Zimmermann Mobile Box - App Consulting UG (haftungsbeschraenkt) Account name menu
+					14 text Mark Zimmermann
+					15 text Mobile Box - App Consulting UG (haftungsbeschraenkt)
+					16 image
+		17 container
+			18 pop up button (collapsed) Description: App-Menü, ATS Diagnostic, ausgewählt, Secondary Actions: Expand
+				19 container
+					20 image ATS Diagnostic
+					21 text ATS Diagnostic
+				22 image
+			23 container Apps
+				24 content list
+					25 link Description: Vertrieb, Value: appstoreconnect.apple.com/apps/1297164068/distribution
+					26 link Description: Analyse, Value: appstoreconnect.apple.com/apps/1297164068/analytics
+					27 link Description: TestFlight, Value: appstoreconnect.apple.com/teams/69a6de93-b31c-47e3-e053-5b8c7c11a4d1/apps/1297164068/testflight
+		28 container
+			29 container
+				30 link Description: App-Prüfung, Value: appstoreconnect.apple.com/apps/1297164068/distribution/reviewsubmissions
+				31 heading macOS-Übermittlung, Value: 2
+					32 text macOS-Übermittlung
+				33 image
+				34 text Warten auf Prüfung
+				35 heading Übermittelte Elemente (1), Value: 3
+					36 text Übermittelte Elemente (1)
+				37 table
+					38 row
+						39 cell
+							40 text ELEMENT
+						41 cell
+							42 text TYP
+						43 cell
+							44 text PRÜFUNGSSTATUS
+						45 cell
+					46 row ZDU0ZTBhOWMtY2FmNy00ZWQ3LTljZGMtMGFjM2RmYjhlMjE1fDZ8ODk0MDE3MzIx
+						47 cell
+							48 image App-Symbol
+							49 text macOS-App 2.0.1
+							50 link Description: 2.0.1 (60), Value: appstoreconnect.apple.com/apps/1297164068/testflight/macos/6359853f-f275-49e3-a0c6-985a6f58b1db/metadata
+						51 cell
+							52 text App-Version
+						53 cell
+							54 text Warten auf Prüfung
+				55 text Übermittlungsdatum 27. Okt. 2026 um 20:48 Uhr Übermittlungskennung d54e0a9c-caf7-4ed7-9cdc-0ac3dfb8e215 Übermittelt von Mark Zimmermann
+				56 button Übermittlung abbrechen
+		57 content list
+			58 link Description: App Store Connect, Value: appstoreconnect.apple.com/apps
+		59 content list
+			60 container
+				61 text Copyright © 2026 Apple Inc. Alle Rechte vorbehalten. |
+			62 container
+				63 link Description: Geschäftsbedingungen, Value: appstoreconnect.apple.com/WebObjects/iTunesConnect.woa/wa/termsOfService
+				64 text |
+			65 container
+				66 link Description: Datenschutzrichtlinie, Value: apple.com/legal/privacy
+				67 text |
+			68 link Description: Kontakt, Value: appstoreconnect.apple.com/contact-us
+
+The focused UI element is 1 AXWebArea App Store Connect, URL: appstoreconnect.apple.com/apps/1297164068/distribution/reviewsubmissions/details/d54e0a9c-caf7-4ed7-9cdc-0ac3dfb8e215
