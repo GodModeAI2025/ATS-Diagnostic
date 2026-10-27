@@ -58,13 +58,13 @@ struct InspectView: View {
                         Section { trustExplanation }
                     }
                 }
-            }.navigationTitle("ATS Diagnostic").navigationBarTitleDisplayMode(.inline)
+            }.navigationTitle("Inspect connection").navigationBarTitleDisplayMode(.inline)
         }
     }
     private var inspectionInput: some View {
         VStack(alignment: .leading, spacing: 16) {
             TextField("example.com", text: $host).textInputAutocapitalization(.never).autocorrectionDisabled().keyboardType(.URL).onSubmit { run() }.textFieldStyle(.roundedBorder)
-            Button(action: run) { Label(store.running ? "Inspecting…" : "Inspect connection", systemImage: "magnifyingglass").frame(maxWidth: .infinity) }.buttonStyle(.borderedProminent).controlSize(.large).disabled(store.running || host.isEmpty)
+            Button(action: run) { Label(store.running ? "Inspecting…" : "Inspect connection", systemImage: "magnifyingglass").frame(maxWidth: .infinity) }.buttonStyle(.borderedProminent).tint(.diagnosticAction).foregroundStyle(.white).controlSize(.large).disabled(store.running || host.isEmpty)
             if store.running { ProgressView("Connecting…") }
             if let error = store.error { Text(error).foregroundStyle(.red) }
         }
@@ -167,7 +167,7 @@ struct RequestView: View {
                         TextField("Expected SHA-256 checksum", text: $expectedSHA256).textInputAutocapitalization(.never).autocorrectionDisabled().font(.callout.monospaced())
                     } label: { Label(expectedSHA256.isEmpty ? "Verify download checksum" : "Checksum · configured", systemImage: "checkmark.shield") }
                 }
-                Button { Task { await store.execute(url: url, method: method, headers: headers, body: bodyText, expectedSHA256: expectedSHA256) } } label: { Label("Send request", systemImage: "paperplane").frame(maxWidth: .infinity) }.buttonStyle(.borderedProminent).controlSize(.large).disabled(store.running || url.isEmpty)
+                Button { Task { await store.execute(url: url, method: method, headers: headers, body: bodyText, expectedSHA256: expectedSHA256) } } label: { Label("Send request", systemImage: "paperplane").frame(maxWidth: .infinity) }.buttonStyle(.borderedProminent).tint(.diagnosticAction).foregroundStyle(.white).controlSize(.large).disabled(store.running || url.isEmpty)
                 if store.running { ProgressView("Sending…") }
                 if let error = store.error { Text(error).foregroundStyle(.red) }
                 if showLatest, let record = store.latest ?? store.records.first { NavigationLink("Open latest response") { RecordView(record: record, store: store) } }
@@ -228,7 +228,7 @@ struct HistoryView: View {
     }
     private var filters: some View {
         VStack(alignment: .leading, spacing: 16) {
-            Picker("Response type", selection: $category) { ForEach(ResponseCategory.allCases) { Text($0.rawValue).tag($0) } }
+            Picker("Response type", selection: $category) { ForEach(ResponseCategory.allCases) { Text(LocalizedStringKey($0.rawValue)).tag($0) } }
             Toggle("Favorites only", isOn: $favoritesOnly)
         }
     }
@@ -282,7 +282,7 @@ struct RecordView: View {
                 if let finalURL = record.finalURL, finalURL != record.url { LabeledContent("Final destination", value: finalURL).textSelection(.enabled) }
                 LabeledContent("Status", value: record.status.map(String.init) ?? "Failed")
                 LabeledContent("Protocol", value: record.protocolName.flatMap { $0.isEmpty ? nil : $0 } ?? "Not reported")
-                LabeledContent("TLS version", value: TLSDisplay.version(record.tlsVersion))
+                LabeledContent("TLS version", value: TLSDisplay.isUnencrypted(record) ? String(localized: "Unencrypted") : TLSDisplay.version(record.tlsVersion))
                 LabeledContent("Cipher suite", value: TLSDisplay.cipher(record.cipher))
                 LabeledContent("Remote address", value: record.remoteAddress ?? "Not reported")
                 if let error = record.error { Text(error).foregroundStyle(.red) }

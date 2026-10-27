@@ -3,6 +3,7 @@ import SwiftUI
 extension Color {
     static var diagnosticAccent: Color { Color("AccentColor") }
     static var diagnosticTint: Color { Color("DiagnosticTint") }
+    static var diagnosticAction: Color { Color("ActionAccent") }
 }
 struct InspectionHero: View {
     let record: DiagnosticRecord?
@@ -48,21 +49,12 @@ struct ConnectionOverview: View {
                 Spacer()
             }
             AdaptiveMetricGrid {
-                MetricTile(title: "HTTP status", value: record.status.map(String.init) ?? "Failed", symbol: "arrow.down.circle")
-                MetricTile(title: "TLS version", value: tlsName(record.tlsVersion), symbol: "lock")
+                MetricTile(title: "HTTP status", value: record.status.map(String.init) ?? String(localized: "Failed"), symbol: "arrow.down.circle")
+                MetricTile(title: "TLS version", value: TLSDisplay.isUnencrypted(record) ? String(localized: "Unencrypted") : TLSDisplay.version(record.tlsVersion), symbol: TLSDisplay.isUnencrypted(record) ? "lock.open" : "lock")
                 MetricTile(title: "Duration", value: record.duration.formatted(.number.precision(.fractionLength(3))) + " s", symbol: "timer")
                 MetricTile(title: "Certificates", value: record.certificates.count.formatted(), symbol: "checkmark.seal")
             }
         }.padding(.vertical, 8)
-    }
-    private func tlsName(_ raw: String?) -> String {
-        switch raw?.lowercased() {
-        case "0x0304": "TLS 1.3"
-        case "0x0303": "TLS 1.2"
-        case "0x0302": "TLS 1.1"
-        case "0x0301": "TLS 1.0"
-        default: raw ?? "Not reported"
-        }
     }
 }
 struct TrafficOverview: View {
@@ -71,7 +63,7 @@ struct TrafficOverview: View {
     var body: some View {
         AdaptiveMetricGrid {
             MetricTile(title: "Requests", value: statistics.count.formatted(), symbol: "arrow.up.arrow.down")
-            MetricTile(title: "Response data", value: statistics.responseSizesKnown ? statistics.bytes.formatted(.byteCount(style: .file)) : "Unbekannt", symbol: "externaldrive")
+            MetricTile(title: "Response data", value: statistics.responseSizesKnown ? statistics.bytes.formatted(.byteCount(style: .file)) : String(localized: "Unknown"), symbol: "externaldrive")
             MetricTile(title: "Average time", value: statistics.averageDuration.formatted(.number.precision(.fractionLength(3))) + " s", symbol: "timer")
             MetricTile(title: "Failures", value: statistics.failures.formatted(), symbol: "exclamationmark.circle")
         }.padding(.vertical, 8)

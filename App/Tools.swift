@@ -45,9 +45,9 @@ struct ToolsView: View {
             }.onDisappear { editing = false }
         }
     }
-    private var operationPicker: some View { Picker("Operation", selection: $operation) { ForEach(operations, id: \.self) { Text($0) } } }
+    private var operationPicker: some View { Picker("Operation", selection: $operation) { ForEach(operations, id: \.self) { Text(LocalizedStringKey($0)) } } }
     private var inputEditor: some View { TextEditor(text: $input).focused($editing).font(.body.monospaced()).frame(minHeight: 180).accessibilityLabel("Tool input") }
-    private var transformButton: some View { Button { editing = false; transform() } label: { Label("Transform", systemImage: "arrow.down").frame(maxWidth: .infinity) }.buttonStyle(.borderedProminent).controlSize(.large) }
+    private var transformButton: some View { Button { editing = false; transform() } label: { Label("Transform", systemImage: "arrow.down").frame(maxWidth: .infinity) }.buttonStyle(.borderedProminent).tint(.diagnosticAction).foregroundStyle(.white).controlSize(.large) }
     private var resultContent: some View {
         VStack(alignment: .leading, spacing: 16) {
             if output.isEmpty { Text("Choose an operation and transform your input.").foregroundStyle(.secondary) }

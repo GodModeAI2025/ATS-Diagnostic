@@ -1,0 +1,27 @@
+/* Primary screens: German UI strings */
+"Verbindungen verständlich prüfen" = "Understand your connections";
+"Zertifikate, TLS und HTTP-Antworten im Überblick." = "An overview of certificates, TLS and HTTP responses.";
+"Adressauflösung" = "Address lookup";
+"Diagnoseeinstellungen" = "Diagnostic settings";
+"Schließen" = "Close";
+"Du bearbeitest eine Kopie. Erst „Send request“ sendet sie; die ursprüngliche Aufzeichnung bleibt erhalten." = "You are editing a copy. Only “Send request” sends it; the original record is preserved.";
+"Verlauf wird geladen…" = "Loading history…";
+"Unbekannt" = "Unknown";
+"Teilaufnahme" = "Partial capture";
+"Weiterleitungen und Verbindungsweg" = "Redirects and connection path";
+"Kopie vor dem Senden bearbeiten" = "Edit a copy before sending";
+"Antwortdaten" = "Response data";
+"Unvollständige Antwortaufzeichnung" = "Incomplete response capture";
+"Gesamtgröße" = "Total size";
+"Laut Export aufgezeichnet" = "Recorded in export";
+"Nicht gemeldet" = "Not reported";
+"Der Import enthält keine verlässlich gemeldete Antwortgröße." = "The import contains no reliably reported response size.";
+"Antwortdaten empfangen; keine Textvorschau gespeichert." = "Response data received; no text preview was saved.";
+"Keine Antwortdaten empfangen." = "No response data received.";
+"Base64-Vorschau öffnen" = "Open Base64 preview";
+"Antwortvorschau öffnen" = "Open response preview";
+"Antwortvorschau" = "Response preview";
+"SHA-256 bezieht sich auf die vollständig empfangene Antwort." = "SHA-256 applies to the fully received response.";
+"Verbindung prüfen" = "Inspect connection";
+
+"Systemvertrauen wird weiterhin geprüft. Für die Diagnose fremder Server sind HTTP und ältere TLS-Konfigurationen zugelassen. Ein erfolgreicher Aufruf bestätigt deshalb keine ATS-Konformität." = "System trust is still evaluated. HTTP and legacy TLS configurations are allowed to diagnose third-party servers. A successful request therefore does not establish ATS compliance.";

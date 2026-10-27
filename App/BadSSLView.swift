@@ -26,7 +26,7 @@ private struct BadSSLRunControls: View {
                 Text(suite.current).font(.caption).foregroundStyle(.secondary)
                 Button("Nach laufenden Anfragen stoppen",role:.destructive) { suite.cancelled = true }
             } else {
-                Button("Alle Fälle prüfen",systemImage:"play") { Task { await suite.run() } }.buttonStyle(.borderedProminent).controlSize(.large)
+                Button("Alle Fälle prüfen",systemImage:"play") { Task { await suite.run() } }.buttonStyle(.borderedProminent).tint(.diagnosticAction).foregroundStyle(.white).controlSize(.large)
                 if let finished = suite.finished { Text("Letzter Durchlauf: \(finished.formatted(date:.abbreviated,time:.shortened))").font(.caption).foregroundStyle(.secondary) }
             }
         }.padding(.vertical,6)
