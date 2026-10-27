@@ -21,10 +21,9 @@
   "store_texts_saved": true,
   "old_media_associations_removed": true,
   "new_screenshots_uploaded": false,
-  "upload_succeeded": false,
+  "upload_succeeded": true,
   "submitted": false,
   "blockers": [
-    "Xcode App Store Connect account refresh required (Failed to Use Accounts, team SP73Z8JWXM)",
     "Browser file chooser timed out; native Codex app access denied. User manual screenshot upload requested."
   ],
   "prior_version_2_0_build55": "Genehmigt / Bereit für Vertrieb verified 2026-10-27",
@@ -40,5 +39,26 @@
     "medium_iPhone": 4,
     "large_iPhone": 4,
     "iPad": 4
-  }
+  },
+  "upload_completed_at": "2026-10-27T08:10:24",
+  "upload_completed_at_timezone": "local xcodebuild log time; offset not recorded",
+  "processing_state": "Complete",
+  "build_id": "a08ee741-fe06-41e9-9d57-c92cd8c35534",
+  "preview_app_visibility": "Not returned by current App Store Connect app search for ATS; do not assume prior Preview entry is available.",
+  "testflight_state": "Im Test",
+  "testflight_group_id": "39cff430-dc7d-4305-a24a-8e6b42330bcf",
+  "testflight_group": "Mark – Intern",
+  "testflight_tester": "mark_zimmermann@mac.com",
+  "testflight_tester_count": 1,
+  "testflight_tester_state": "Eingeladen",
+  "testflight_automatic_distribution": false,
+  "default_internal_group_tester_count": 0,
+  "device_installation_verified": false,
+  "beta_notes_saved": true,
+  "store_build_selected": true,
+  "store_validation_errors": [
+    "Upload a screenshot for 13-inch iPad displays.",
+    "Upload a screenshot for iPhone with Dynamic Island (medium display)."
+  ],
+  "store_submission_state": "Not added to review: required screenshots missing"
 }

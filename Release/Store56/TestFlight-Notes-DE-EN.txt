@@ -1,0 +1,5 @@
+Version 2.0.1 (56)
+
+DE: Der Vordergrund-Proxy wurde entfernt. Bitte Inspect, Requests, History und Tools auf iPhone und iPad prüfen. HTTP und selbst gewählte Server im lokalen Netzwerk sind erlaubt. HTTPS-Zertifikatsfehler sollen verständlich angezeigt werden; die Zertifikatsprüfung bleibt aktiv. Für lokale Server die Netzwerkfreigabe erlauben.
+
+EN: Removed the foreground-only proxy. Test Inspect, Requests, History and Tools on iPhone and iPad, direct HTTP and local-network permissions. Expired or untrusted HTTPS certificates should produce clear errors; certificate validation remains active.
