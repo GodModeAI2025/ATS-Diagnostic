@@ -20,12 +20,10 @@
   "app_store_connect_version_created": true,
   "store_texts_saved": true,
   "old_media_associations_removed": true,
-  "new_screenshots_uploaded": false,
+  "new_screenshots_uploaded": true,
   "upload_succeeded": true,
-  "submitted": false,
-  "blockers": [
-    "Browser file chooser timed out; native Codex app access denied. User manual screenshot upload requested."
-  ],
+  "submitted": true,
+  "blockers": [],
   "prior_version_2_0_build55": "Genehmigt / Bereit für Vertrieb verified 2026-10-27",
   "final_targeted_tests": {
     "passed": 11,
@@ -56,9 +54,15 @@
   "device_installation_verified": false,
   "beta_notes_saved": true,
   "store_build_selected": true,
-  "store_validation_errors": [
-    "Upload a screenshot for 13-inch iPad displays.",
-    "Upload a screenshot for iPhone with Dynamic Island (medium display)."
-  ],
-  "store_submission_state": "Not added to review: required screenshots missing"
+  "store_validation_errors": [],
+  "store_submission_state": "Warten auf Prüfung",
+  "screenshots_uploaded": {
+    "medium_iPhone": 4,
+    "large_iPhone": 4,
+    "iPad": 4
+  },
+  "store_submission_id": "dbbfb2f6-65af-477a-934a-dcbe621ef7e0",
+  "store_submission_verified_date": "2026-10-27",
+  "store_approved": false,
+  "store_public_release_verified": false
 }

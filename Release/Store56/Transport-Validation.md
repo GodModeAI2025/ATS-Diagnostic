@@ -6,7 +6,7 @@
 - New regression test checks the actual app-bundle plist, effective ATS exception, local-network usage description and absence of background modes.
 - Full suite: 158 tests passed, zero failures/skips on isolated iOS 27.2 simulator. Native QA separately tests HTTP success and expired HTTPS rejection; screenshots and report are under Screenshots/.
 - Build/archive succeeded. Archive uses development signing before export (get-task-allow=true); App Store export must re-sign for distribution. Do not treat archive signing as uploaded distribution signing.
-- Initial upload failed with Failed to Use Accounts. After Xcode account sign-in, retry succeeded on 2026-10-27 (Upload-Succeeded.log). Apple processed build 56; TestFlight shows Im Test for Mark – Intern, with only mark_zimmermann@mac.com invited. Physical installation is not verified. App Store submission remains pending current screenshots.
+- Initial upload failed with Failed to Use Accounts. After Xcode account sign-in, retry succeeded on 2026-10-27 (Upload-Succeeded.log). Apple processed build 56; TestFlight shows Im Test for Mark – Intern, with only mark_zimmermann@mac.com invited. Physical installation is not verified. All 12 current screenshots were subsequently uploaded and version 2.0.1 (56) submitted on 2026-10-27. Apple confirmed Warten auf Prüfung, submission dbbfb2f6-65af-477a-934a-dcbe621ef7e0. This is not approval or public release.
 
 Apple references verified 2026-10-27:
 - https://developer.apple.com/documentation/bundleresources/information-property-list/nsapptransportsecurity/nsallowslocalnetworking

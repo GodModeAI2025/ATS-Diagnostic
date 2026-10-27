@@ -6,4 +6,4 @@ Use AppStore-Screenshots.zip (unzip first) or the individual PNGs in Screenshots
 - iPhone Dynamic Island large: four iPhone-Inspect/Certificate/Requests/Tools.png, 1320 × 2868.
 - iPad 13-inch: iPad-Inspect.png, iPad-Certificate.png, iPad-Requests-Cold.png, iPad-Tools-Cold.png, 2752 × 2064.
 
-Inherited old screenshot associations were removed from update 2.0.1, including optional Face ID/Home-button iPhone and iPad Pro 2nd generation groups. Underlying content-library assets and the live version 2.0 were retained. New uploads are pending: the browser file chooser timed out and native Codex app access was denied. No security-policy bypass was attempted.
+Inherited old screenshot associations were removed from update 2.0.1, including optional Face ID/Home-button iPhone and iPad Pro 2nd generation groups. Underlying content-library assets and the live version 2.0 were retained. All 12 current screenshots were uploaded on 2026-10-27 using the supported browser file chooser after it became available. Earlier file-chooser timeouts and denial of native Codex app access were not bypassed.
