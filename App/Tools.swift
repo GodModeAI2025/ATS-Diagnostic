@@ -19,6 +19,12 @@ struct ToolsView: View {
     var body: some View {
         NavigationStack {
             GeometryReader { geometry in
+#if targetEnvironment(macCatalyst)
+                MacToolsWorkspace(input: $input, operation: $operation, output: output, operations: operations, width: geometry.size.width) {
+                    editing = false
+                    transform()
+                }
+#else
                 if geometry.size.width >= 900 && !dynamicTypeSize.isAccessibilitySize {
                     ScrollView {
                         HStack(alignment: .top, spacing: 24) {
@@ -39,6 +45,7 @@ struct ToolsView: View {
                         Section("Privacy") { privacyText }
                     }
                 }
+#endif
             }.scrollDismissesKeyboard(.interactively).navigationTitle("Tools").toolbar {
                 ToolbarItem(placement: .topBarTrailing) { NavigationLink { DiagnosticSettingsView(store:store) } label: { Label("Diagnoseeinstellungen",systemImage:"slider.horizontal.3") } }
                 ToolbarItemGroup(placement: .keyboard) { if editing { Spacer(); Button("Done") { editing = false } } }
@@ -78,3 +85,83 @@ struct ToolsView: View {
         }
     }
 }
+
+#if targetEnvironment(macCatalyst)
+private struct MacToolsWorkspace: View {
+    @Binding var input: String
+    @Binding var operation: String
+    let output: String
+    let operations: [String]
+    let width: CGFloat
+    let transform: () -> Void
+    @Environment(\.dynamicTypeSize) private var dynamicTypeSize
+
+    var body: some View {
+        ScrollView {
+            VStack(alignment: .leading, spacing: 20) {
+                ViewThatFits(in: .horizontal) {
+                    HStack(spacing: 12) {
+                        Picker("Operation", selection: $operation) { ForEach(operations, id: \.self) { Text(LocalizedStringKey($0)) } }
+                            .frame(maxWidth: 320)
+                        Button("Transform", systemImage: "arrow.right", action: transform)
+                            .buttonStyle(.borderedProminent).buttonBorderShape(.roundedRectangle).controlSize(.regular).tint(.diagnosticAction).foregroundStyle(.white)
+                        Spacer(minLength: 0)
+                    }
+                    VStack(alignment: .leading, spacing: 10) {
+                        Picker("Operation", selection: $operation) { ForEach(operations, id: \.self) { Text(LocalizedStringKey($0)) } }
+                        Button("Transform", systemImage: "arrow.down", action: transform)
+                            .buttonStyle(.borderedProminent).buttonBorderShape(.roundedRectangle).controlSize(.regular).tint(.diagnosticAction).foregroundStyle(.white)
+                    }
+                }
+                Divider()
+                let columns = width >= 720 && !dynamicTypeSize.isAccessibilitySize
+                let layout = columns ? AnyLayout(HStackLayout(alignment: .top, spacing: 24)) : AnyLayout(VStackLayout(alignment: .leading, spacing: 20))
+                layout {
+                    MacToolInput(input: $input)
+                    MacToolOutput(output: output)
+                }
+                Divider()
+                NavigationLink { DNSLookupView() } label: { Label("Adressauflösung", systemImage: "network") }
+                DisclosureGroup("Privacy") {
+                    Text("Diagnostics are stored on this device. Requests connect only to the destination you choose. Exported files may contain credentials or personal data.")
+                        .font(.footnote).foregroundStyle(.secondary)
+                    Link("Datenschutzerklärung / Privacy Policy", destination: URL(string: "https://www.mobilebox-consulting.de/datenschutzerklärung-privacy-policy/")!)
+                        .font(.footnote)
+                }.font(.footnote).foregroundStyle(.secondary)
+            }.padding(24).frame(maxWidth: 1200, alignment: .leading).frame(maxWidth: .infinity, alignment: .leading)
+        }.background(Color(uiColor: .systemBackground))
+    }
+}
+
+private struct MacToolInput: View {
+    @Binding var input: String
+    var body: some View {
+        VStack(alignment: .leading, spacing: 10) {
+            Text("Input").font(.headline)
+            MacTechnicalTextEditor(text: $input, accessibilityName: String(localized: "Tool input"))
+                .padding(8).frame(minHeight: 300).background(Color(uiColor: .secondarySystemBackground), in: RoundedRectangle(cornerRadius: 6))
+                .overlay(RoundedRectangle(cornerRadius: 6).strokeBorder(Color.primary.opacity(0.1)))
+                .accessibilityLabel("Tool input")
+        }.frame(maxWidth: .infinity, alignment: .leading)
+    }
+}
+
+private struct MacToolOutput: View {
+    let output: String
+    var body: some View {
+        VStack(alignment: .leading, spacing: 10) {
+            HStack {
+                Text("Result").font(.headline)
+                Spacer()
+                if !output.isEmpty { ShareLink(item: output) { Label("Share result", systemImage: "square.and.arrow.up") }.labelStyle(.iconOnly) }
+            }
+            ScrollView([.horizontal, .vertical]) {
+                Text(output.isEmpty ? String(localized: "Choose an operation and transform your input.") : output)
+                    .font(.callout.monospaced()).foregroundStyle(output.isEmpty ? .secondary : .primary)
+                    .textSelection(.enabled).frame(maxWidth: .infinity, alignment: .topLeading).padding(12)
+            }.frame(minHeight: 300).background(Color(uiColor: .secondarySystemBackground), in: RoundedRectangle(cornerRadius: 6))
+                .overlay(RoundedRectangle(cornerRadius: 6).strokeBorder(Color.primary.opacity(0.1)))
+        }.frame(maxWidth: .infinity, alignment: .leading)
+    }
+}
+#endif

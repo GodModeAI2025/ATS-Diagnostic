@@ -19,7 +19,12 @@ struct RootView: View {
             Tab("Requests", systemImage: "arrow.up.arrow.down") { RequestView(store: store) }
             Tab("History", systemImage: "clock") { HistoryView(store: store) }
             Tab("Tools", systemImage: "wrench.and.screwdriver") { ToolsView(store:store) }
-        }.tint(Color.diagnosticAccent).background(KeyboardDismissSurface())
+        }
+#if targetEnvironment(macCatalyst)
+        .tabViewStyle(.sidebarAdaptable)
+        .defaultAdaptableTabBarPlacement(.sidebar)
+#endif
+        .tint(Color.diagnosticAccent).background(KeyboardDismissSurface())
     }
 }
 struct InspectView: View {
@@ -29,6 +34,9 @@ struct InspectView: View {
     var body: some View {
         NavigationStack {
             GeometryReader { geometry in
+#if targetEnvironment(macCatalyst)
+                macWorkspace(width: geometry.size.width)
+#else
                 if geometry.size.width >= 900 && !dynamicTypeSize.isAccessibilitySize {
                     ScrollView {
                         HStack(alignment: .top, spacing: 24) {
@@ -58,9 +66,68 @@ struct InspectView: View {
                         Section { trustExplanation }
                     }
                 }
+#endif
             }.navigationTitle("Inspect connection").navigationBarTitleDisplayMode(.inline)
         }
     }
+#if targetEnvironment(macCatalyst)
+    private func macWorkspace(width: CGFloat) -> some View {
+        ScrollView {
+            VStack(alignment: .leading, spacing: 20) {
+                VStack(alignment: .leading, spacing: 8) {
+                    let controls = width >= 560 && !dynamicTypeSize.isAccessibilitySize ? AnyLayout(HStackLayout(spacing: 12)) : AnyLayout(VStackLayout(alignment: .leading, spacing: 10))
+                    controls {
+                        TextField("Host or URL", text: $host)
+                            .textInputAutocapitalization(.never).autocorrectionDisabled().keyboardType(.URL)
+                            .textFieldStyle(.roundedBorder).onSubmit { if !store.running && !host.isEmpty { run() } }
+                            .accessibilityLabel("Host or URL")
+                        Button(action: run) { Label(store.running ? "Inspecting…" : "Inspect connection", systemImage: "magnifyingglass") }
+                            .buttonStyle(.borderedProminent).tint(.diagnosticAction).foregroundStyle(.white)
+                            .buttonBorderShape(.roundedRectangle).controlSize(.regular)
+                            .disabled(store.running || host.isEmpty)
+                    }
+                    if store.running { ProgressView("Connecting…").controlSize(.small) }
+                    if let error = store.error { Text(error).font(.callout).foregroundStyle(.red).textSelection(.enabled) }
+                }
+                Divider()
+                if let record = store.latest ?? store.records.first {
+                    MacRecordIdentity(record: record)
+                    ConnectionOverview(record: record)
+                    DiagnosticIssueView(record: record)
+                    Divider()
+                    let columns = width >= 820 && !dynamicTypeSize.isAccessibilitySize ? AnyLayout(HStackLayout(alignment: .top, spacing: 28)) : AnyLayout(VStackLayout(alignment: .leading, spacing: 24))
+                    columns {
+                        VStack(alignment: .leading, spacing: 12) {
+                            Text("Certificates & trust").font(.headline)
+                            if record.certificates.isEmpty {
+                                Text("No certificate chain was recorded for this connection.").foregroundStyle(.secondary)
+                            }
+                            ForEach(record.certificates) { certificate in
+                                NavigationLink {
+                                    CertificateDetailView(certificate: certificate, isLeaf: certificate.id == record.certificates.first?.id, systemCT: record.certificateTransparency, issuerCertificate: record.certificates.nextIssuer(after: certificate))
+                                } label: { MacCertificateRow(certificate: certificate) }
+                                .buttonStyle(.plain)
+                                Divider()
+                            }
+                        }.frame(maxWidth: .infinity, alignment: .leading)
+                        VStack(alignment: .leading, spacing: 12) {
+                            Text("Measured timings").font(.headline)
+                            ConnectionTimingChart(record: record)
+                        }.frame(maxWidth: .infinity, alignment: .leading)
+                    }
+                    Divider()
+                    NavigationLink { RecordView(record: record, store: store) } label: {
+                        HStack { Label("Connection details", systemImage: "list.bullet.rectangle"); Spacer(); Image(systemName: "chevron.right").foregroundStyle(.tertiary) }
+                            .padding(.vertical, 6).contentShape(Rectangle())
+                    }.buttonStyle(.plain)
+                } else {
+                    ContentUnavailableView("Ready to inspect", systemImage: "network", description: Text("Enter a hostname to see certificates, security and timings."))
+                }
+                trustExplanation
+            }.padding(20).frame(maxWidth: .infinity, alignment: .leading)
+        }.background(Color(uiColor: .systemBackground))
+    }
+#endif
     private var inspectionInput: some View {
         VStack(alignment: .leading, spacing: 16) {
             TextField("example.com", text: $host).textInputAutocapitalization(.never).autocorrectionDisabled().keyboardType(.URL).onSubmit { run() }.textFieldStyle(.roundedBorder)
@@ -112,6 +179,9 @@ struct RequestView: View {
     var body: some View {
         NavigationStack {
             GeometryReader { geometry in
+#if targetEnvironment(macCatalyst)
+                macWorkspace(width: geometry.size.width)
+#else
                 if geometry.size.width >= 900 && !dynamicTypeSize.isAccessibilitySize {
                     HStack(alignment: .top, spacing: 24) {
                         requestForm(showLatest: false).frame(width: 460)
@@ -129,10 +199,17 @@ struct RequestView: View {
                         }.frame(maxWidth: 660)
                     }.padding(24).frame(maxWidth: .infinity).background(Color(uiColor: .systemGroupedBackground))
                 } else { requestForm(showLatest: true) }
+#endif
             }.scrollDismissesKeyboard(.interactively).navigationTitle("Requests").navigationBarTitleDisplayMode(.inline)
             .sheet(isPresented: $importCURL) {
                 NavigationStack { Form {
-                    Section("Paste cURL") { TextEditor(text: $curlText).font(.body.monospaced()).frame(minHeight: 180).accessibilityLabel("cURL command") }
+                    Section("Paste cURL") {
+#if targetEnvironment(macCatalyst)
+                        MacTechnicalTextEditor(text: $curlText, accessibilityName: String(localized: "cURL command")).frame(minHeight: 180)
+#else
+                        TextEditor(text: $curlText).font(.body.monospaced()).frame(minHeight: 180).accessibilityLabel("cURL command")
+#endif
+                    }
                     if let importError { Text(importError).foregroundStyle(.red) }
                     Button("Import request") { do { let request = try CURLImport.parse(curlText); url = request.url; method = request.method; headers = request.headers; bodyText = request.body; importError = nil; importCURL = false } catch { importError = error.localizedDescription } }
                 }.navigationTitle("Import cURL").toolbar { Button("Cancel") { importCURL = false } } }
@@ -140,6 +217,64 @@ struct RequestView: View {
             .toolbar { ToolbarItem(placement: .cancellationAction) { if isEditedCopy { Button("Schließen") { dismiss() } } }; ToolbarItem(placement: .topBarTrailing) { Button("Import cURL", systemImage: "square.and.arrow.down") { importCURL = true } }; ToolbarItemGroup(placement: .keyboard) { Spacer(); Button("Done") { editing = false } } }
         }
     }
+#if targetEnvironment(macCatalyst)
+    private func macWorkspace(width: CGFloat) -> some View {
+        VStack(alignment: .leading, spacing: 0) {
+            VStack(alignment: .leading, spacing: 10) {
+                if isEditedCopy { Text("Du bearbeitest eine Kopie. Erst „Send request“ sendet sie; die ursprüngliche Aufzeichnung bleibt erhalten.").font(.footnote).foregroundStyle(.secondary) }
+                let controls = width >= 650 && !dynamicTypeSize.isAccessibilitySize ? AnyLayout(HStackLayout(spacing: 10)) : AnyLayout(VStackLayout(alignment: .leading, spacing: 10))
+                controls {
+                    Picker("Method", selection: $method) { ForEach(["GET", "HEAD", "POST", "PUT", "PATCH", "DELETE", "OPTIONS"], id: \.self) { Text($0) } }
+                        .labelsHidden().pickerStyle(.menu).fixedSize().accessibilityLabel("Method")
+                    TextField("https://example.com/api", text: $url).keyboardType(.URL).textInputAutocapitalization(.never).autocorrectionDisabled()
+                        .textFieldStyle(.roundedBorder).accessibilityLabel("Host or URL")
+                        .frame(minWidth: 0, maxWidth: .infinity)
+                    Button(action: sendRequest) { Label("Send request", systemImage: "paperplane") }
+                        .buttonStyle(.borderedProminent).tint(.diagnosticAction).foregroundStyle(.white)
+                        .buttonBorderShape(.roundedRectangle).controlSize(.regular).fixedSize(horizontal: true, vertical: false)
+                        .disabled(store.running || url.isEmpty)
+                }
+                if store.running { ProgressView("Sending…").controlSize(.small) }
+                if let error = store.error { Text(error).font(.callout).foregroundStyle(.red).textSelection(.enabled) }
+            }.padding(20)
+            Divider()
+            ScrollView {
+                let columns = width >= 850 && !dynamicTypeSize.isAccessibilitySize ? AnyLayout(HStackLayout(alignment: .top, spacing: 28)) : AnyLayout(VStackLayout(alignment: .leading, spacing: 24))
+                columns {
+                    VStack(alignment: .leading, spacing: 16) {
+                        Text("Optional request fields").font(.headline)
+                        DisclosureGroup(isExpanded: $headerExpanded) {
+                            Text("One header per line, for example Accept: application/json.").font(.footnote).foregroundStyle(.secondary)
+                            MacTechnicalTextEditor(text: $headers, accessibilityName: String(localized: "Request headers")).frame(height: 110)
+                        } label: { Label(headers.isEmpty ? "Headers" : "Headers · configured", systemImage: "list.bullet.rectangle") }
+                        DisclosureGroup(isExpanded: $bodyExpanded) {
+                            Text("The payload sent with this request, usually for POST, PUT or PATCH.").font(.footnote).foregroundStyle(.secondary)
+                            MacTechnicalTextEditor(text: $bodyText, accessibilityName: String(localized: "Request body")).frame(height: 150)
+                        } label: { Label(bodyText.isEmpty ? "Body" : "Body · configured", systemImage: "doc.text") }
+                        DisclosureGroup(isExpanded: $integrityExpanded) {
+                            Text("Paste a known SHA-256 checksum to compare it with the complete downloaded response.").font(.footnote).foregroundStyle(.secondary)
+                            TextField("Expected SHA-256 checksum", text: $expectedSHA256).textInputAutocapitalization(.never).autocorrectionDisabled().font(.callout.monospaced())
+                        } label: { Label(expectedSHA256.isEmpty ? "Verify download checksum" : "Checksum · configured", systemImage: "checkmark.shield") }
+                    }.frame(minWidth: 0, maxWidth: .infinity, alignment: .leading)
+                    VStack(alignment: .leading, spacing: 16) {
+                        Text("Latest response").font(.headline)
+                        if let record = store.latest ?? store.records.first {
+                            MacRecordIdentity(record: record)
+                            ConnectionOverview(record: record)
+                            DiagnosticIssueView(record: record)
+                            Divider()
+                            Text(String(record.responseBody.prefix(1200))).font(.callout.monospaced()).textSelection(.enabled).frame(minWidth: 0, maxWidth: .infinity, alignment: .leading)
+                            NavigationLink("Open full response") { RecordView(record: record, store: store) }
+                        } else {
+                            Text("Send a request to inspect headers, body, certificates and timings.").foregroundStyle(.secondary)
+                        }
+                    }.frame(minWidth: 0, maxWidth: .infinity, alignment: .leading)
+                }.frame(width: max(0, width - 40), alignment: .leading).padding(20)
+            }
+        }.frame(width: width, alignment: .leading).background(Color(uiColor: .systemBackground))
+    }
+    private func sendRequest() { Task { await store.execute(url: url, method: method, headers: headers, body: bodyText, expectedSHA256: expectedSHA256) } }
+#endif
     private func requestForm(showLatest: Bool) -> some View {
         Form {
                 if isEditedCopy { Text("Du bearbeitest eine Kopie. Erst „Send request“ sendet sie; die ursprüngliche Aufzeichnung bleibt erhalten.").font(.footnote).foregroundStyle(.secondary) }
@@ -192,6 +327,9 @@ struct HistoryView: View {
     var body: some View {
         NavigationStack {
             GeometryReader { geometry in
+#if targetEnvironment(macCatalyst)
+                macWorkspace(width: geometry.size.width)
+#else
                 if geometry.size.width >= 900 && !dynamicTypeSize.isAccessibilitySize {
                     HStack(alignment: .top, spacing: 24) {
                         ScrollView {
@@ -211,6 +349,7 @@ struct HistoryView: View {
                         ForEach(filtered) { record in NavigationLink { RecordView(record: record, store: store) } label: { RecordRow(record: record) } }
                     }
                 }
+#endif
             }
 
                 .searchable(text: $query, prompt: "URL, method or status")
@@ -226,6 +365,29 @@ struct HistoryView: View {
                 .onChange(of: store.settings.favorites) { refresh() }
         }
     }
+#if targetEnvironment(macCatalyst)
+    private func macWorkspace(width: CGFloat) -> some View {
+        VStack(alignment: .leading, spacing: 0) {
+            VStack(alignment: .leading, spacing: 10) {
+                let controls = width >= 560 && !dynamicTypeSize.isAccessibilitySize ? AnyLayout(HStackLayout(spacing: 24)) : AnyLayout(VStackLayout(alignment: .leading, spacing: 10))
+                controls {
+                    Picker("Response type", selection: $category) { ForEach(ResponseCategory.allCases) { Text(LocalizedStringKey($0.rawValue)).tag($0) } }.pickerStyle(.menu).fixedSize()
+                    Toggle("Favorites only", isOn: $favoritesOnly).toggleStyle(.button)
+                }
+                TrafficOverview(statistics: TrafficStatistics(filtered))
+            }.padding(.horizontal, 20).padding(.vertical, 12)
+            Divider()
+            List {
+                if store.loadingHistory { ProgressView("Verlauf wird geladen…") }
+                else if store.records.isEmpty { emptyHistory.listRowSeparator(.hidden) }
+                else if filtered.isEmpty { ContentUnavailableView.search(text: query).listRowSeparator(.hidden) }
+                ForEach(filtered) { record in
+                    NavigationLink { RecordView(record: record, store: store) } label: { RecordRow(record: record) }
+                }
+            }.listStyle(.plain).scrollContentBackground(.hidden)
+        }.background(Color(uiColor: .systemBackground))
+    }
+#endif
     private var filters: some View {
         VStack(alignment: .leading, spacing: 16) {
             Picker("Response type", selection: $category) { ForEach(ResponseCategory.allCases) { Text(LocalizedStringKey($0.rawValue)).tag($0) } }
@@ -237,6 +399,21 @@ struct HistoryView: View {
 struct RecordRow: View {
     let record: DiagnosticRecord
     var body: some View {
+#if targetEnvironment(macCatalyst)
+        VStack(alignment: .leading, spacing: 5) {
+            HStack(alignment: .firstTextBaseline, spacing: 12) {
+                Text(record.method).font(.caption.monospaced().weight(.semibold)).frame(width: 60, alignment: .leading)
+                Text(record.status.map(String.init) ?? String(localized: "Failed")).font(.callout.monospacedDigit()).frame(width: 54, alignment: .leading)
+                    .foregroundStyle(record.error == nil && (record.status ?? 0) < 400 ? Color.primary : Color.red)
+                Text(record.url).font(.callout).lineLimit(2).frame(maxWidth: .infinity, alignment: .leading)
+            }
+            HStack(spacing: 10) {
+                Text(record.date, format: .dateTime.month().day().hour().minute()).foregroundStyle(.secondary)
+                Text(record.duration.formatted(.number.precision(.fractionLength(3))) + " s").monospacedDigit().foregroundStyle(.secondary)
+                if record.importedResponseComplete == false && (record.status != nil || record.importedObservedResponseBytes != nil) { Label("Teilaufnahme", systemImage: "doc.text").foregroundStyle(.secondary) }
+            }.font(.caption)
+        }.padding(.vertical, 4)
+#else
         HStack(alignment: .top, spacing: 12) {
             SupportingIllustration(kind: .traffic)
             VStack(alignment: .leading, spacing: 6) {
@@ -246,8 +423,41 @@ struct RecordRow: View {
             Text(record.date, format: .dateTime.month().day().hour().minute()).font(.caption).foregroundStyle(.secondary)
             }
         }.padding(.vertical, 4)
+#endif
     }
 }
+#if targetEnvironment(macCatalyst)
+private struct MacRecordIdentity: View {
+    let record: DiagnosticRecord
+    var body: some View {
+        VStack(alignment: .leading, spacing: 6) {
+            Text(record.url).font(.title3.weight(.semibold)).textSelection(.enabled).fixedSize(horizontal: false, vertical: true)
+            if let finalURL = record.finalURL, finalURL != record.url { LabeledContent("Final destination", value: finalURL).font(.callout).textSelection(.enabled) }
+            Text(record.date, format: .dateTime.year().month().day().hour().minute().second()).font(.caption).foregroundStyle(.secondary)
+            if record.importedResponseComplete == false && (record.status != nil || record.importedObservedResponseBytes != nil) {
+                Label("Teilaufnahme", systemImage: "doc.text").font(.caption).foregroundStyle(.secondary)
+            }
+        }
+    }
+}
+private struct MacCertificateRow: View {
+    let certificate: CertificateRecord
+    private var issuer: String? {
+        guard let attributes = try? X509.issuerAttributes(certificate.der), !attributes.isEmpty else { return nil }
+        return attributes.first(where: { $0.oid == "2.5.4.3" })?.value ?? attributes.map(\.value).joined(separator: ", ")
+    }
+    var body: some View {
+        HStack(alignment: .top, spacing: 12) {
+            Image(systemName: "checkmark.seal").font(.title3).foregroundStyle(Color.diagnosticAccent).accessibilityHidden(true)
+            VStack(alignment: .leading, spacing: 5) {
+                Text(certificate.subject).font(.callout.weight(.semibold)).fixedSize(horizontal: false, vertical: true)
+                if let issuer { Text("Issuer: \(issuer)").font(.caption).foregroundStyle(.secondary).fixedSize(horizontal: false, vertical: true) }
+            }.frame(maxWidth: .infinity, alignment: .leading)
+            Image(systemName: "chevron.right").font(.caption).foregroundStyle(.tertiary).accessibilityHidden(true)
+        }.padding(.vertical, 4).contentShape(Rectangle())
+    }
+}
+#endif
 struct RecordView: View {
     @State private var editRequest = false
     @State private var additionalRevocation: RevocationAssessment?

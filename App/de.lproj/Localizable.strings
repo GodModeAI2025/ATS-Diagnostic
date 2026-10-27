@@ -5,6 +5,12 @@
 "Inspect a connection" = "Verbindung prüfen";
 "Latest inspection" = "Letzte Prüfung";
 "Connection overview" = "Verbindungsübersicht";
+"Connection details" = "Verbindungsdetails";
+"Certificates & trust" = "Zertifikate und Vertrauen";
+"No certificate chain was recorded for this connection." = "Für diese Verbindung wurde keine Zertifikatskette aufgezeichnet.";
+"Measured timings" = "Verbindungszeiten";
+"Final destination" = "Endgültiges Ziel";
+"Issuer: %@" = "Aussteller: %@";
 "Ready to inspect" = "Bereit zur Prüfung";
 "Enter a hostname to see certificates, security and timings." = "Gib einen Hostnamen ein, um Zertifikate, Sicherheit und Zeitmessungen anzuzeigen.";
 "System trust" = "Systemvertrauen";

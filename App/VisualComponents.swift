@@ -33,10 +33,20 @@ struct MetricTile: View {
     let value: String
     let symbol: String
     var body: some View {
+#if targetEnvironment(macCatalyst)
+        VStack(alignment: .leading, spacing: 6) {
+            Label { Text(title) } icon: { Image(systemName: symbol) }
+                .font(.caption).foregroundStyle(.secondary)
+            Text(value).font(.title3.weight(.semibold).monospacedDigit())
+                .fixedSize(horizontal: false, vertical: true)
+        }.padding(.vertical, 10).frame(maxWidth: .infinity, alignment: .leading)
+            .accessibilityElement(children: .combine)
+#else
         VStack(alignment: .leading, spacing: 9) {
             Label { Text(title) } icon: { Image(systemName: symbol).foregroundStyle(Color.diagnosticAccent) }.font(.caption.weight(.medium)).foregroundStyle(.secondary)
             Text(value).font(.title3.weight(.semibold).monospacedDigit()).fixedSize(horizontal: false, vertical: true)
         }.padding(14).frame(maxWidth: .infinity, alignment: .leading).background(Color.diagnosticTint.opacity(0.55), in: RoundedRectangle(cornerRadius: 18)).accessibilityElement(children: .combine)
+#endif
     }
 }
 struct ConnectionOverview: View {
@@ -87,6 +97,21 @@ private struct TimingBar: View {
     let total: Double
     let symbol: String
     var body: some View {
+#if targetEnvironment(macCatalyst)
+        VStack(alignment: .leading, spacing: 6) {
+            HStack(spacing: 12) {
+                Label { Text(title) } icon: { Image(systemName: symbol).foregroundStyle(Color.diagnosticAccent) }
+                Spacer(minLength: 4)
+                Text(duration.formatted(.number.precision(.fractionLength(3))) + " s").monospacedDigit()
+            }.font(.callout)
+            GeometryReader { proxy in
+                ZStack(alignment: .leading) {
+                    Capsule().fill(Color.primary.opacity(0.06))
+                    Capsule().fill(Color.diagnosticAccent.opacity(0.65)).frame(width: max(3, proxy.size.width * min(1, max(0, total > 0 ? duration / total : 0))))
+                }
+            }.frame(height: 4).accessibilityHidden(true)
+        }.accessibilityElement(children: .combine)
+#else
         VStack(alignment: .leading, spacing: 8) {
             ViewThatFits(in: .horizontal) {
                 HStack { Label { Text(title) } icon: { Image(systemName: symbol) }; Spacer(); Text(duration.formatted(.number.precision(.fractionLength(3))) + " s").monospacedDigit() }
@@ -99,6 +124,7 @@ private struct TimingBar: View {
                 }
             }.frame(height: 8).accessibilityHidden(true)
         }.accessibilityElement(children: .combine)
+#endif
     }
 }
 
@@ -107,7 +133,12 @@ struct SupportingIllustration: View {
     let kind: IllustrationKind
     @ScaledMetric(relativeTo: .body) private var side = 36.0
     var body: some View {
+#if targetEnvironment(macCatalyst)
+        Image(systemName: kind == .certificate ? "checkmark.seal" : kind == .server ? "server.rack" : kind == .timing ? "timer" : "arrow.up.arrow.down")
+            .font(.body).foregroundStyle(Color.diagnosticAccent).frame(width: 20).accessibilityHidden(true)
+#else
         Image("Illustration-" + kind.rawValue).resizable().scaledToFit().frame(width: side, height: side).accessibilityHidden(true)
+#endif
     }
 }
 struct IllustratedSectionTitle: View {
@@ -126,7 +157,15 @@ struct AdaptiveMetricGrid<Content: View>: View {
             if dynamicTypeSize.isAccessibilitySize {
                 VStack(spacing: 12) { content() }
             } else {
+#if targetEnvironment(macCatalyst)
+                ViewThatFits(in: .horizontal) {
+                    LazyVGrid(columns: Array(repeating: GridItem(.flexible(), spacing: 20, alignment: .leading), count: 4), alignment: .leading, spacing: 12) { content() }
+                        .frame(minWidth: 680)
+                    LazyVGrid(columns: Array(repeating: GridItem(.flexible(), spacing: 16, alignment: .leading), count: 2), alignment: .leading, spacing: 12) { content() }
+                }
+#else
                 LazyVGrid(columns: [GridItem(.flexible(), spacing: 12), GridItem(.flexible(), spacing: 12)], spacing: 12) { content() }
+#endif
             }
         }
     }
@@ -136,9 +175,17 @@ struct DiagnosticPanel<Content: View>: View {
     let illustration: IllustrationKind
     @ViewBuilder let content: () -> Content
     var body: some View {
+#if targetEnvironment(macCatalyst)
+        VStack(alignment: .leading, spacing: 12) {
+            IllustratedSectionTitle(title: title, kind: illustration)
+            Divider()
+            content()
+        }.frame(maxWidth: .infinity, alignment: .leading)
+#else
         VStack(alignment: .leading, spacing: 18) {
             IllustratedSectionTitle(title: title, kind: illustration)
             content()
         }.padding(20).frame(maxWidth: .infinity, alignment: .leading).background(Color(uiColor: .secondarySystemGroupedBackground), in: RoundedRectangle(cornerRadius: 22))
+#endif
     }
 }
