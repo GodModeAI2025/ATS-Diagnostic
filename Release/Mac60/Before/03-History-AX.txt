@@ -1,0 +1,43 @@
+Window: "ATS Diagnostic", App: ATS Diagnostic.
+0 Standardfenster ATS Diagnostic, ID: SceneWindow, Secondary Actions: Raise
+	1 container
+		2 container Secondary Actions: Cancel
+			3 container ID: Verlauf, Secondary Actions: Cancel
+				4 Taste Description: Protokoll exportieren, Secondary Actions: Cancel
+				5 Taste Description: Aufnahmeeinstellungen, Secondary Actions: Cancel
+				6 Taste Description: HAR exportieren, Secondary Actions: Cancel
+				7 Taste Description: HAR importieren, Secondary Actions: Cancel
+				8 Taste Description: Leeren, Secondary Actions: Cancel
+				9 Feld für Suchtext (settable) Description: URL, Methode oder Status, Secondary Actions: Cancel
+				10 Überschrift Description: Verlauf, Secondary Actions: Cancel
+			11 container Secondary Actions: Cancel
+				12 Text Description: Verkehrsübersicht, Secondary Actions: Cancel
+				13 Einblendmenü Description: Antworttyp, Alle, Secondary Actions: Cancel
+				14 Schalter Description: Nur Favoriten, Value: 0, Secondary Actions: Cancel
+				15 container Secondary Actions: Cancel
+					16 Text Description: Anfragen, 10, Secondary Actions: Cancel
+					17 Text Description: Antwortdaten, 4 kB, Secondary Actions: Cancel
+					18 Text Description: Durchschnittliche Dauer, 0,181 s, Secondary Actions: Cancel
+					19 Text Description: Fehler, 2, Secondary Actions: Cancel
+				20 container Secondary Actions: Cancel, Scroll Down, Scroll Up
+					21 Taste Description: http://example.com, GET · 200, 27. Okt., 19:43, Secondary Actions: Cancel
+					22 Taste Description: https://expired.badssl.com, GET · Failed, 27. Okt., 19:43, Secondary Actions: Cancel
+					23 Taste Description: https://example.com, GET · 200, 27. Okt., 19:42, Secondary Actions: Cancel
+					24 Taste Description: https://example.com, GET · 200, 27. Okt., 19:40, Secondary Actions: Cancel
+					25 Taste Description: http://example.com, GET · 200, 27. Okt., 19:19, Secondary Actions: Cancel
+					26 Taste Description: https://example.com/mac-qa-import, GET · 200, 27. Okt., 19:00, Secondary Actions: Cancel
+					27 Taste Description: https://example.com/?source=ats-mac, GET · 200, 27. Okt., 19:14, Secondary Actions: Cancel
+	28 Symbolleiste
+		29 Optionsschaltfläche Description: Prüfen, Value: 0
+		30 Optionsschaltfläche Description: Anfragen, Value: 0
+		31 Optionsschaltfläche Description: Verlauf, Value: 1
+		32 Optionsschaltfläche Description: Werkzeuge, Value: 0
+	33 Text ATS Diagnostic
+	34 Menü-Taste Fenster teilen
+35 menu bar
+	36 ATSDiagnostic, ID: com.apple.menu.application
+	37 Ablage, ID: com.apple.menu.file
+	38 Bearbeiten, ID: com.apple.menu.edit
+	39 Darstellung, ID: com.apple.menu.view
+	40 Fenster, ID: com.apple.menu.window
+	41 Hilfe, ID: com.apple.menu.help

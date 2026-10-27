@@ -1,0 +1,43 @@
+{
+  "app_id": "1297164068",
+  "bundle_id": "com.mobilebox.atsdiagnostic",
+  "version": "2.0.1",
+  "build": "60",
+  "platform": "macOS",
+  "technology": "Mac Catalyst",
+  "design_approved": true,
+  "store_submitted": false,
+  "archive_succeeded": true,
+  "upload_succeeded": true,
+  "ios_targeted_tests_passed": 3,
+  "native_qa": "Passed final Dark functional checks and actual Light inspection; HAR file save/reimport unverified",
+  "review_findings_fixed": [
+    "Preserve partial-record warning",
+    "Request URL Return does not send edited copy"
+  ],
+  "mac59_release_hold": true,
+  "mac_tests_passed": 165,
+  "mac_test_suites": 37,
+  "ios_build_succeeded": true,
+  "code_review": "No remaining concrete blockers after fixes",
+  "source_commit": "76cfb64",
+  "source_pushed": true,
+  "store_screenshots_uploaded": 4,
+  "store_build_pending_apple_processing": false,
+  "known_limitations": [
+    "Existing mixed German/English certificate detail labels",
+    "Physical TestFlight installation not verified",
+    "HAR exported-file roundtrip not verified"
+  ],
+  "testflight_status": "Im Test",
+  "testflight_group": "Mark \u2013 Intern",
+  "testflight_tester": "mark_zimmermann@mac.com",
+  "testflight_tester_status": "Eingeladen",
+  "apple_build_id": "6359853f-f275-49e3-a0c6-985a6f58b1db",
+  "store_selected_build": "60",
+  "store_submission_blocker": "Apple screenshot processing: one of four screenshots still pending",
+  "store_screenshots_languages": [
+    "en-US",
+    "de-DE inherited"
+  ]
+}

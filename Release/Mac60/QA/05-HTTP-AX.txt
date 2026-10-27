@@ -1,0 +1,41 @@
+Window: "ATS Diagnostic", App: ATS Diagnostic.
+0 Standardfenster ATS Diagnostic, ID: SceneWindow, Secondary Actions: Raise
+	1 container Secondary Actions: Cancel
+		2 container Secondary Actions: Cancel
+			3 Text (selected) Description: Prüfen, ID: checkmark.shield, Secondary Actions: Cancel
+			4 Text Description: Anfragen, ID: arrow.up.arrow.down, Secondary Actions: Cancel
+			5 Text Description: Verlauf, ID: clock, Secondary Actions: Cancel
+			6 Text Description: Werkzeuge, ID: wrench.and.screwdriver, Secondary Actions: Cancel
+		7 container Secondary Actions: Cancel
+			8 Überschrift Description: Verbindung prüfen, Secondary Actions: Cancel
+			9 container Secondary Actions: Cancel
+				10 Textfeld (settable) Description: Host oder URL, Value: http://example.com, Secondary Actions: Cancel
+				11 Taste Description: Verbindung prüfen, Secondary Actions: Cancel
+				12 Text Description: http://example.com, Secondary Actions: Cancel
+				13 Text Description: Endgültiges Ziel, http://example.com/, Secondary Actions: Cancel
+				14 Text Description: 27. Okt. 2026, 20:06:11, Secondary Actions: Cancel
+				15 Text Description: Antwort empfangen, Secondary Actions: Cancel
+				16 Text Description: HTTP-Status, 200, Secondary Actions: Cancel
+				17 Text Description: TLS-Version, Unverschlüsselt, Secondary Actions: Cancel
+				18 Text Description: Dauer, 0,130 s, Secondary Actions: Cancel
+				19 Text Description: Zertifikate, 0, Secondary Actions: Cancel
+				20 Text Description: Zertifikate und Vertrauen, Secondary Actions: Cancel
+				21 Text Description: Verbindungszeiten, Secondary Actions: Cancel
+				22 Text Description: Für diese Verbindung wurde keine Zertifikatskette aufgezeichnet., Secondary Actions: Cancel
+				23 Text Description: Gesamte Anfrage, 0,130 s, Secondary Actions: Cancel
+				24 Text Description: DNS-Abfrage, 0,001 s, Secondary Actions: Cancel
+				25 Text Description: Verbindung, 0,093 s, Secondary Actions: Cancel
+				26 Text Secondary Actions: Cancel, Description: Die Phasenbalken vergleichen gemeldete Dauern mit der gesamten Anfragezeit. Phasen können sich überschneiden.
+				27 Taste Description: Verbindungsdetails, Secondary Actions: Cancel
+				28 Text Secondary Actions: Cancel, Description: Systemvertrauen wird weiterhin geprüft. Für die Diagnose fremder Server sind HTTP und ältere TLS-Konfigurationen zugelassen. Ein erfolgreicher Aufruf bestätigt deshalb keine ATS-Konformität.
+	29 Text ATS Diagnostic
+	30 Menü-Taste Fenster teilen
+31 menu bar
+	32 ATSDiagnostic, ID: com.apple.menu.application
+	33 Ablage, ID: com.apple.menu.file
+	34 Bearbeiten, ID: com.apple.menu.edit
+	35 Darstellung, ID: com.apple.menu.view
+	36 Fenster, ID: com.apple.menu.window
+	37 Hilfe, ID: com.apple.menu.help
+
+The focused UI element is 3 Text (selected) Description: Prüfen, ID: checkmark.shield, Secondary Actions: Cancel

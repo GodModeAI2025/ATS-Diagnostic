@@ -1,0 +1,45 @@
+Window: "ATS Diagnostic", App: ATS Diagnostic.
+0 Standardfenster ATS Diagnostic, ID: SceneWindow, Secondary Actions: Raise
+	1 container
+		2 container Secondary Actions: Cancel
+			3 container ID: Anfragen, Secondary Actions: Cancel
+				4 Überschrift Description: Anfragen, Secondary Actions: Cancel
+				5 Taste Description: cURL importieren, Secondary Actions: Cancel
+			6 container Secondary Actions: Cancel
+				7 Überschrift Secondary Actions: Cancel
+					8 Überschrift Description: Anfrage, Secondary Actions: Cancel
+				9 Textfeld (settable) Placeholder: https://example.com/api, Secondary Actions: Cancel
+				10 Einblendmenü Description: Methode, GET, Secondary Actions: Cancel
+				11 Text Secondary Actions: Cancel, Description: Sende eine HTTP-Anfrage und prüfe die Antwort des Servers. Für eine einfache GET-Anfrage genügt die URL.
+				12 Überschrift Secondary Actions: Cancel
+					13 Überschrift Description: Optionale Anfragefelder, Secondary Actions: Cancel
+				14 Taste Description: Header, Secondary Actions: Cancel
+				15 Taste Description: Inhalt, Secondary Actions: Cancel
+				16 Taste Description: Prüfsumme des Downloads prüfen, Secondary Actions: Cancel
+				17 Taste (disabled) Description: Anfrage senden, Secondary Actions: Cancel
+				18 Text Description: Letzte Antwort, Secondary Actions: Cancel
+				19 Text Description: http://example.com, Secondary Actions: Cancel
+				20 Text Description: GET · 200, Secondary Actions: Cancel
+				21 Text Description: 27. Okt., 19:43, Secondary Actions: Cancel
+				22 Text Description: Antwort empfangen, Secondary Actions: Cancel
+				23 container Secondary Actions: Cancel
+					24 Text Description: HTTP-Status, 200, Secondary Actions: Cancel
+					25 Text Description: TLS-Version, Unverschlüsselt, Secondary Actions: Cancel
+					26 Text Description: Dauer, 0,060 s, Secondary Actions: Cancel
+					27 Text Description: Zertifikate, 0, Secondary Actions: Cancel
+				28 Text Secondary Actions: Cancel, Description: <!doctype html><html lang=en><head><meta charset=utf-8><link rel=icon href=data:,><meta name=viewport content="width=device-width,initial-scale=1"><title>Example Domain</title><style>html{color-scheme:light dark;background:light-dark(#eee,#222)}body{font:16px/1.6 system-ui,sans-serif;max-width:26em;margin:auto;padding:25vh 2em 2em;text-align:center}</style></head><body><p>This domain is for use in documentation examples without needing permission. This is not a service; avoid relying on it for testing and m
+				29 Taste Description: Vollständige Antwort öffnen, Secondary Actions: Cancel
+	30 Symbolleiste
+		31 Optionsschaltfläche Description: Prüfen, Value: 0
+		32 Optionsschaltfläche Description: Anfragen, Value: 1
+		33 Optionsschaltfläche Description: Verlauf, Value: 0
+		34 Optionsschaltfläche Description: Werkzeuge, Value: 0
+	35 Text ATS Diagnostic
+	36 Menü-Taste Fenster teilen
+37 menu bar
+	38 ATSDiagnostic, ID: com.apple.menu.application
+	39 Ablage, ID: com.apple.menu.file
+	40 Bearbeiten, ID: com.apple.menu.edit
+	41 Darstellung, ID: com.apple.menu.view
+	42 Fenster, ID: com.apple.menu.window
+	43 Hilfe, ID: com.apple.menu.help

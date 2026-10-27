@@ -1,0 +1,45 @@
+Window: "ATS Diagnostic", App: ATS Diagnostic.
+0 Standardfenster ATS Diagnostic, ID: SceneWindow, Secondary Actions: Raise
+	1 container Secondary Actions: Cancel
+		2 container Secondary Actions: Cancel
+			3 Text (selected) Description: Prüfen, ID: checkmark.shield, Secondary Actions: Cancel
+			4 Text Description: Anfragen, ID: arrow.up.arrow.down, Secondary Actions: Cancel
+			5 Text Description: Verlauf, ID: clock, Secondary Actions: Cancel
+			6 Text Description: Werkzeuge, ID: wrench.and.screwdriver, Secondary Actions: Cancel
+		7 container Secondary Actions: Cancel
+			8 Überschrift Description: Verbindung prüfen, Secondary Actions: Cancel
+			9 container Secondary Actions: Cancel
+				10 Textfeld (settable) Description: Host oder URL, Value: https://expired.badssl.com, Secondary Actions: Cancel
+				11 Taste Description: Verbindung prüfen, Secondary Actions: Cancel
+				12 Text Description: https://expired.badssl.com, Secondary Actions: Cancel
+				13 Text Description: 27. Okt. 2026, 20:06:00, Secondary Actions: Cancel
+				14 Text Description: Verbindung erfordert Aufmerksamkeit, Secondary Actions: Cancel
+				15 Text Description: HTTP-Status, Fehlgeschlagen, Secondary Actions: Cancel
+				16 Text Description: TLS-Version, TLS 1.2, Secondary Actions: Cancel
+				17 Text Description: Dauer, 0,365 s, Secondary Actions: Cancel
+				18 Text Description: Zertifikate, 3, Secondary Actions: Cancel
+				19 Text Description: Zertifikat abgelaufen, Secondary Actions: Cancel
+				20 Text Secondary Actions: Cancel, Description: Mindestens ein Zertifikat der geprüften Kette liegt außerhalb seiner Gültigkeit. Eine vertrauenswürdige Verbindung kam nicht zustande.
+				21 Text Description: Nächster Schritt, Secondary Actions: Cancel
+				22 Text Secondary Actions: Cancel, Description: Gültigkeitsdaten und Gerätezeit prüfen. Der Betreiber muss ein gültiges Zertifikat samt passender Kette bereitstellen.
+				23 Taste Description: Technische Details, Secondary Actions: Cancel
+				24 Text Description: Zertifikate und Vertrauen, Secondary Actions: Cancel
+				25 Text Description: Verbindungszeiten, Secondary Actions: Cancel
+				26 Taste Description: *.badssl.com, Aussteller: COMODO RSA Domain Validation Secure Server CA, Secondary Actions: Cancel
+				27 Text Description: Gesamte Anfrage, 0,365 s, Secondary Actions: Cancel
+				28 Taste Description: COMODO RSA Domain Validation Secure Server CA, Aussteller: COMODO RSA Certification Authority, Secondary Actions: Cancel
+				29 Text Description: Für die letzte Transaktion wurden keine separaten Zeitmessungen der Phasen gemeldet., Secondary Actions: Cancel
+				30 Taste Description: COMODO RSA Certification Authority, Aussteller: COMODO RSA Certification Authority, Secondary Actions: Cancel
+				31 Taste Description: Verbindungsdetails, Secondary Actions: Cancel
+				32 Text Secondary Actions: Cancel, Description: Systemvertrauen wird weiterhin geprüft. Für die Diagnose fremder Server sind HTTP und ältere TLS-Konfigurationen zugelassen. Ein erfolgreicher Aufruf bestätigt deshalb keine ATS-Konformität.
+	33 Text ATS Diagnostic
+	34 Menü-Taste Fenster teilen
+35 menu bar
+	36 ATSDiagnostic, ID: com.apple.menu.application
+	37 Ablage, ID: com.apple.menu.file
+	38 Bearbeiten, ID: com.apple.menu.edit
+	39 Darstellung, ID: com.apple.menu.view
+	40 Fenster, ID: com.apple.menu.window
+	41 Hilfe, ID: com.apple.menu.help
+
+The focused UI element is 3 Text (selected) Description: Prüfen, ID: checkmark.shield, Secondary Actions: Cancel

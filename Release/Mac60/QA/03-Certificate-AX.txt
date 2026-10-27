@@ -1,0 +1,45 @@
+Window: "ATS Diagnostic", App: ATS Diagnostic.
+0 Standardfenster ATS Diagnostic, ID: SceneWindow, Secondary Actions: Raise
+	1 container
+		2 container Secondary Actions: Cancel
+			3 container Secondary Actions: Cancel
+				4 Text (selected) Description: Prüfen, ID: checkmark.shield, Secondary Actions: Cancel
+				5 Text Description: Anfragen, ID: arrow.up.arrow.down, Secondary Actions: Cancel
+				6 Text Description: Verlauf, ID: clock, Secondary Actions: Cancel
+				7 Text Description: Werkzeuge, ID: wrench.and.screwdriver, Secondary Actions: Cancel
+			8 container Secondary Actions: Cancel
+				9 container ID: Certificate, Secondary Actions: Cancel
+					10 Taste „Zurück“ Description: Verbindung prüfen, ID: BackButton, Secondary Actions: Cancel
+					11 Überschrift Description: Certificate, Secondary Actions: Cancel
+				12 container Secondary Actions: Cancel, Scroll Down, Scroll Up
+					13 Text Description: example.com, Secondary Actions: Cancel
+					14 Text Description: Server certificate, Secondary Actions: Cancel
+					15 Text Description: Expires 25. Dez. 2026, Secondary Actions: Cancel
+					16 Schalter Description: Explain certificate fields, Value: 0, Secondary Actions: Cancel
+					17 Überschrift Secondary Actions: Cancel
+						18 Überschrift Description: Identity & validity, Secondary Actions: Cancel
+					19 Text Description: Valid from (UTC), Secondary Actions: Cancel
+					20 Text Description: 2026-09-26T22:49:11Z, Secondary Actions: Cancel
+					21 Text Description: Valid until (UTC), Secondary Actions: Cancel
+					22 Text Description: 2026-12-25T22:56:35Z, Secondary Actions: Cancel
+					23 Text Description: Subject, Secondary Actions: Cancel
+					24 Text Description: CN=example.com, Secondary Actions: Cancel
+					25 Überschrift Secondary Actions: Cancel
+						26 Überschrift Description: Aussteller dieses Zertifikats, Secondary Actions: Cancel
+					27 Text Description: Land (C), Secondary Actions: Cancel
+					28 Text Description: US, Secondary Actions: Cancel
+					29 Text Description: Organisation (O), Secondary Actions: Cancel
+					30 Text Description: SSL Corporation, Secondary Actions: Cancel
+					31 Text Description: Name (CN), Secondary Actions: Cancel
+					32 Text Description: Cloudflare TLS Issuing ECC CA 3, Secondary Actions: Cancel
+					33 Taste Description: Cloudflare TLS Issuing ECC CA 3, Nächstes Zertifikat der ausgewerteten Kette, Secondary Actions: Cancel
+					34 Text Secondary Actions: Cancel, Description: Die Angaben oben stammen aus dem Issuer-Feld. Das nächste Kettenzertifikat ist ein eigener Datensatz; die Gesamtaussage zum Vertrauen steht bei der Verbindung.
+	35 Text ATS Diagnostic
+	36 Menü-Taste Fenster teilen
+37 menu bar
+	38 ATSDiagnostic, ID: com.apple.menu.application
+	39 Ablage, ID: com.apple.menu.file
+	40 Bearbeiten, ID: com.apple.menu.edit
+	41 Darstellung, ID: com.apple.menu.view
+	42 Fenster, ID: com.apple.menu.window
+	43 Hilfe, ID: com.apple.menu.help

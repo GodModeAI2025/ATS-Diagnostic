@@ -1,0 +1,42 @@
+Window: "ATS Diagnostic", App: ATS Diagnostic.
+0 Standardfenster ATS Diagnostic, ID: SceneWindow, Secondary Actions: Raise
+	1 container
+		2 container Secondary Actions: Cancel
+			3 Überschrift Description: Verbindung prüfen, Secondary Actions: Cancel
+			4 container Secondary Actions: Cancel
+				5 Text Description: Verbindung prüfen, Secondary Actions: Cancel
+				6 Text Description: Letzte Prüfung, Secondary Actions: Cancel
+				7 Text Description: Verbindungen verständlich prüfen, Secondary Actions: Cancel
+				8 Text Description: Verbindung erfordert Aufmerksamkeit, Secondary Actions: Cancel
+				9 Text Description: Zertifikate, TLS und HTTP-Antworten im Überblick., Secondary Actions: Cancel
+				10 Textfeld (settable) Value: https://expired.badssl.com, Placeholder: example.com, Secondary Actions: Cancel
+				11 Taste Description: Verbindung prüfen, Secondary Actions: Cancel
+				12 container Secondary Actions: Cancel
+					13 Text Description: HTTP-Status, Fehlgeschlagen, Secondary Actions: Cancel
+					14 Text Description: TLS-Version, TLS 1.2, Secondary Actions: Cancel
+					15 Text Description: Dauer, 0,334 s, Secondary Actions: Cancel
+					16 Text Description: Zertifikate, 3, Secondary Actions: Cancel
+				17 Text Description: Zertifikat abgelaufen, Secondary Actions: Cancel
+				18 Text Secondary Actions: Cancel, Description: Mindestens ein Zertifikat der geprüften Kette liegt außerhalb seiner Gültigkeit. Eine vertrauenswürdige Verbindung kam nicht zustande.
+				19 Text Description: Nächster Schritt, Secondary Actions: Cancel
+				20 Text Secondary Actions: Cancel, Description: Gültigkeitsdaten und Gerätezeit prüfen. Der Betreiber muss ein gültiges Zertifikat samt passender Kette bereitstellen.
+				21 Taste Description: Technische Details, Secondary Actions: Cancel
+				22 Text Description: Gesamte Anfrage, 0,334 s, Secondary Actions: Cancel
+				23 Text Description: Für die letzte Transaktion wurden keine separaten Zeitmessungen der Phasen gemeldet., Secondary Actions: Cancel
+				24 Taste Description: https://expired.badssl.com, GET · Failed, 27. Okt., 19:43, Secondary Actions: Cancel
+				25 Text Description: Systemvertrauen, Secondary Actions: Cancel
+				26 Text Secondary Actions: Cancel, Description: Systemvertrauen wird weiterhin geprüft. Für die Diagnose fremder Server sind HTTP und ältere TLS-Konfigurationen zugelassen. Ein erfolgreicher Aufruf bestätigt deshalb keine ATS-Konformität.
+	27 Symbolleiste
+		28 Optionsschaltfläche Description: Prüfen, Value: 1
+		29 Optionsschaltfläche Description: Anfragen, Value: 0
+		30 Optionsschaltfläche Description: Verlauf, Value: 0
+		31 Optionsschaltfläche Description: Werkzeuge, Value: 0
+	32 Text ATS Diagnostic
+	33 Menü-Taste Fenster teilen
+34 menu bar
+	35 ATSDiagnostic, ID: com.apple.menu.application
+	36 Ablage, ID: com.apple.menu.file
+	37 Bearbeiten, ID: com.apple.menu.edit
+	38 Darstellung, ID: com.apple.menu.view
+	39 Fenster, ID: com.apple.menu.window
+	40 Hilfe, ID: com.apple.menu.help

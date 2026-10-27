@@ -1,0 +1,227 @@
+Window: "Sichern", App: ATS Diagnostic.
+0 Blatt Description: sichern, ID: save-panel, Secondary Actions: Raise
+	1 Trenngruppe
+		2 Rollbereich Secondary Actions: Scroll Up, Scroll Down
+			3 Gliederung Seitenleiste
+				4 row (selectable) Description: Zwei Personen, Value: Geteilt
+				5 row (selectable, expanded) Value: Favoriten, Secondary Actions: Collapse
+				6 row (selectable) OneDrive
+				7 row (selectable) Description: „A“-Logo für App Store, Value: Programme
+				8 row (selectable) Description: Menüleiste mit Dock auf einem Rechteck, Value: Schreibtisch
+				9 row (selectable) Description: Dokumentseite, Value: Dokumente
+				10 row (selectable) Description: Kreispfeil nach unten, Value: Downloads
+				11 row (selectable, expanded) Value: Orte, Secondary Actions: Collapse
+				12 row (selectable) Description: iCloud, Value: iCloud Drive
+				13 row (selectable) Description: Zuhause, Value: markzimmermann
+				14 row (selectable) Description: Interne Festplatte, Value: Macintosh HD
+				15 row (selectable) Auswerfen, Value: Mark, Description: Externe Festplatte
+auswerfen
+				16 row (selectable) Auswerfen, Value: SDMark, Description: Externe Festplatte
+auswerfen
+				17 row (selectable) Auswerfen, Value: EnBW CoWork, Description: Externe Festplatte
+auswerfen
+				18 row (selectable) Description: Durch Linien verbundene Netzwerkknoten, Value: Netzwerk
+				19 row (selectable, collapsed) Value: Tags, Secondary Actions: Expand
+			20 Rollbalken (settable, float) 0
+				21 Wertanzeige (settable, float) 0
+				22 Aufwärtspfeil
+				23 Abwärtspfeil
+				24 Seite aufwärts
+				25 Seite abwärts
+		26 Trenner (disabled, settable, float) 183.5
+		27 Rollbereich Secondary Actions: Scroll Left, Scroll Right, Scroll Up, Scroll Down
+			28 Gliederung Description: Listendarstellung, ID: ListView
+				29 row (selectable)
+					30 Zelle Secondary Actions: Finder-Objekt öffnen
+						31 Bild
+						32 Textfeld (settable) Value: 06-FileDocument-Fullscreen-SingleProcess.png, Secondary Actions: Finder-Objekt öffnen, URL: file:///Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/outputs/ATS-Diagnostic/Release/Mac59/QA/06-FileDocument-Fullscreen-SingleProcess.png
+					33 Zelle
+						34 Text 186 KB
+					35 Zelle
+						36 Text PNG-Bild
+					37 Zelle
+						38 Text Heute, 19:36
+				39 row (selectable)
+					40 Zelle Secondary Actions: Finder-Objekt öffnen
+						41 Bild
+						42 Textfeld (settable) Value: 06-FileDocument-Fullscreen-SingleProcess-AX.txt, Secondary Actions: Finder-Objekt öffnen, URL: file:///Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/outputs/ATS-Diagnostic/Release/Mac59/QA/06-FileDocument-Fullscreen-SingleProcess-AX.txt
+					43 Zelle
+						44 Text 9 KB
+					45 Zelle
+						46 Text Reiner Text
+					47 Zelle
+						48 Text Heute, 19:36
+				49 row (selectable)
+					50 Zelle Secondary Actions: Finder-Objekt öffnen
+						51 Bild
+						52 Textfeld (settable) Value: HAR-FileDocument-Normal.har.json, Secondary Actions: Finder-Objekt öffnen, URL: file:///Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/outputs/ATS-Diagnostic/Release/Mac59/QA/HAR-FileDocument-Normal.har.json
+					53 Zelle
+						54 Text 20 KB
+					55 Zelle
+						56 Text JSON Document
+					57 Zelle
+						58 Text Heute, 19:36
+				59 row (selectable)
+					60 Zelle Secondary Actions: Finder-Objekt öffnen
+						61 Bild
+						62 Textfeld (settable) Value: Validation-59.md, Secondary Actions: Finder-Objekt öffnen, URL: file:///Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/outputs/ATS-Diagnostic/Release/Mac59/QA/Validation-59.md
+					63 Zelle
+						64 Text 2 KB
+					65 Zelle
+						66 Text Markdown
+					67 Zelle
+						68 Text Heute, 19:28
+				69 row (selectable)
+					70 Zelle Secondary Actions: Finder-Objekt öffnen
+						71 Bild
+						72 Textfeld (settable) Value: 05-PEM-Fullscreen.png, Secondary Actions: Finder-Objekt öffnen, URL: file:///Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/outputs/ATS-Diagnostic/Release/Mac59/QA/05-PEM-Fullscreen.png
+					73 Zelle
+						74 Text 183 KB
+					75 Zelle
+						76 Text PNG-Bild
+					77 Zelle
+						78 Text Heute, 19:28
+				79 row (selectable)
+					80 Zelle Secondary Actions: Finder-Objekt öffnen
+						81 Bild
+						82 Textfeld (settable) Value: 05-PEM-Fullscreen-AX.txt, Secondary Actions: Finder-Objekt öffnen, URL: file:///Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/outputs/ATS-Diagnostic/Release/Mac59/QA/05-PEM-Fullscreen-AX.txt
+					83 Zelle
+						84 Text 8 KB
+					85 Zelle
+						86 Text Reiner Text
+					87 Zelle
+						88 Text Heute, 19:28
+				89 row (selectable)
+					90 Zelle Secondary Actions: Finder-Objekt öffnen
+						91 Bild
+						92 Textfeld (settable) Value: 04-HAR-Fullscreen-Expanded.png, Secondary Actions: Finder-Objekt öffnen, URL: file:///Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/outputs/ATS-Diagnostic/Release/Mac59/QA/04-HAR-Fullscreen-Expanded.png
+					93 Zelle
+						94 Text 102 KB
+					95 Zelle
+						96 Text PNG-Bild
+					97 Zelle
+						98 Text Heute, 19:27
+				99 row (selectable)
+					100 Zelle Secondary Actions: Finder-Objekt öffnen
+						101 Bild
+						102 Textfeld (settable) Value: 04-HAR-Fullscreen-Expanded-AX.txt, Secondary Actions: Finder-Objekt öffnen, URL: file:///Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/outputs/ATS-Diagnostic/Release/Mac59/QA/04-HAR-Fullscreen-Expanded-AX.txt
+					103 Zelle
+						104 Text 7 KB
+					105 Zelle
+						106 Text Reiner Text
+					107 Zelle
+						108 Text Heute, 19:27
+				109 row (selectable)
+					110 Zelle Secondary Actions: Finder-Objekt öffnen
+						111 Bild
+						112 Textfeld (settable) Value: ATS-Diagnostic.har, Secondary Actions: Finder-Objekt öffnen, URL: file:///Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/outputs/ATS-Diagnostic/Release/Mac59/QA/ATS-Diagnostic.har
+					113 Zelle
+						114 Text 20 KB
+					115 Zelle
+						116 Text Dokument
+					117 Zelle
+						118 Text Heute, 19:24
+				119 row (selectable)
+					120 Zelle Secondary Actions: Finder-Objekt öffnen
+						121 Bild
+						122 Textfeld (settable) Value: ATS-Diagnostic-chain.pem, Secondary Actions: Finder-Objekt öffnen, URL: file:///Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/outputs/ATS-Diagnostic/Release/Mac59/QA/ATS-Diagnostic-chain.pem
+					123 Zelle
+						124 Text 4 KB
+					125 Zelle
+						126 Text Druckbares, codiertes Archiv
+					127 Zelle
+						128 Text Heute, 19:23
+				129 row (selectable)
+					130 Zelle Secondary Actions: Finder-Objekt öffnen
+						131 Bild
+						132 Textfeld (settable) Value: 03-HAR-Save-Disabled.png, Secondary Actions: Finder-Objekt öffnen, URL: file:///Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/outputs/ATS-Diagnostic/Release/Mac59/QA/03-HAR-Save-Disabled.png
+					133 Zelle
+						134 Text 29 KB
+					135 Zelle
+						136 Text PNG-Bild
+					137 Zelle
+						138 Text Heute, 19:21
+				139 row (selectable)
+					140 Zelle Secondary Actions: Finder-Objekt öffnen
+						141 Bild
+						142 Textfeld (settable) Value: 03-HAR-Save-Disabled-AX.txt, Secondary Actions: Finder-Objekt öffnen, URL: file:///Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/outputs/ATS-Diagnostic/Release/Mac59/QA/03-HAR-Save-Disabled-AX.txt
+					143 Zelle
+						144 Text 1 KB
+					145 Zelle
+						146 Text Reiner Text
+					147 Zelle
+						148 Text Heute, 19:21
+				149 row (selectable)
+					150 Zelle Secondary Actions: Finder-Objekt öffnen
+						151 Bild
+						152 Textfeld (settable) Value: 02-HTTP-Fullscreen.png, Secondary Actions: Finder-Objekt öffnen, URL: file:///Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/outputs/ATS-Diagnostic/Release/Mac59/QA/02-HTTP-Fullscreen.png
+					153 Zelle
+						154 Text 258 KB
+					155 Zelle
+						156 Text PNG-Bild
+					157 Zelle
+						158 Text Heute, 19:20
+				159 row (selectable)
+					160 Zelle Secondary Actions: Finder-Objekt öffnen
+						161 Bild
+						162 Textfeld (settable) Value: 01-HTTP200.png, Secondary Actions: Finder-Objekt öffnen, URL: file:///Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/outputs/ATS-Diagnostic/Release/Mac59/QA/01-HTTP200.png
+					163 Zelle
+						164 Text 220 KB
+					165 Zelle
+						166 Text PNG
+					167 Zelle
+						168 Text 19:19
+				169 row (selectable)
+					170 Zelle Secondary Actions: Finder-Objekt öffnen
+						171 Bild
+						172 Textfeld (settable) Value: 01-HTTP200-AX.txt, Secondary Actions: Finder-Objekt öffnen, URL: file:///Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/outputs/ATS-Diagnostic/Release/Mac59/QA/01-HTTP200-AX.txt
+					173 Zelle
+						174 Text 3 KB
+					175 Zelle
+						176 Text Text
+					177 Zelle
+						178 Text 19:19
+				179 container ListViewHeader
+					180 Taste Description: Name, ID: name
+					181 Taste Description: Größe, ID: size
+					182 Taste Description: Art, ID: kind
+					183 Taste Description: Hinzugefügt am, Value: AXDescendingSortDirection, ID: dateAdded
+			184 Rollbalken (settable, float) 0
+				185 Wertanzeige (settable, float) 0
+				186 Aufwärtspfeil
+				187 Abwärtspfeil
+				188 Seite aufwärts
+				189 Seite abwärts
+			190 Rollbalken (settable, float) 0
+				191 Wertanzeige (settable, float) 0
+				192 Aufwärtspfeil
+				193 Abwärtspfeil
+				194 Seite aufwärts
+				195 Seite abwärts
+		196 container
+			197 Taste (disabled) Zurück
+			198 Taste (disabled) Weiter
+		199 Menü-Taste Description: Liste, Help: Als Symbole, Liste oder Spalten anzeigen sowie Seitenleiste ein-/ausblenden, ID: View Options
+		200 Menü-Taste Description: 3x1-Quadratraster unter einem 1x2-Linienraster, Help: Gruppierung der Objekte ändern (Option-Taste gedrückt halten, um die Sortierung zu ändern), ID: Group or Sort By
+		201 Einblendmenü Ort:, Value: QA, ID: where popup
+		202 Schließdreieck Description: weniger Optionen anzeigen, Value: 1
+		203 Feld für Suchtext Search
+			204 Taste Suchen
+		205 Text Value: Sichern unter:, ID: nameFieldLabel
+		206 Textfeld (settable) Value: ATS-Diagnostic-chain, ID: saveAsNameTextField
+		207 Taste (disabled) Neuer Ordner, ID: NewFolderButton
+		208 Taste Abbrechen, ID: CancelButton
+		209 Taste (disabled) Sichern, ID: OKButton
+210 menu bar
+	211 ATSDiagnostic, ID: com.apple.menu.application
+	212 Ablage, ID: com.apple.menu.file
+	213 Bearbeiten, ID: com.apple.menu.edit
+	214 Darstellung, ID: com.apple.menu.view
+	215 Fenster, ID: com.apple.menu.window
+	216 Hilfe, ID: com.apple.menu.help
+
+Selected text: ```
+ATS-Diagnostic-chain
+```
+
+Note: Pay special attention to the content selected by the user. If the user asks a question or refers to the content they are looking at on-screen, they might be referring to the selected content (but they might be referring to something else that's visible, too).

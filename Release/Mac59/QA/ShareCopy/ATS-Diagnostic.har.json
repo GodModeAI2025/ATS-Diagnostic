@@ -1,0 +1,644 @@
+{
+  "log" : {
+    "creator" : {
+      "name" : "ATS Diagnostic",
+      "version" : "2.0"
+    },
+    "entries" : [
+      {
+        "_atsDiagnostic" : {
+          "responseSHA256" : "25ddf2c883e0d1958ea971d279a7e4f0fd446724ee3db7db19dadabd4a62e484",
+          "source" : "ATS Diagnostic",
+          "taskMetrics" : {
+            "duration" : 0.28957808017730713,
+            "redirectCount" : 0,
+            "transactionCount" : 1,
+            "transactions" : [
+              {
+                "connectDuration" : 0.018000006675720215,
+                "dnsDuration" : 0.001000046730041504,
+                "fetchType" : 1,
+                "localAddress" : "192.168.1.41",
+                "protocolName" : "http\/1.1",
+                "proxyConnection" : false,
+                "receiveDuration" : 0.00013697147369384766,
+                "remoteAddress" : "104.20.23.154",
+                "reusedConnection" : false,
+                "sendDuration" : 4.303455352783203e-05,
+                "status" : 200,
+                "url" : "http:\/\/example.com\/",
+                "waitDuration" : 0.024087071418762207
+              }
+            ],
+            "transactionsTruncated" : false
+          }
+        },
+        "cache" : {
+
+        },
+        "request" : {
+          "bodySize" : 0,
+          "cookies" : [
+
+          ],
+          "headers" : [
+
+          ],
+          "headersSize" : -1,
+          "httpVersion" : "http\/1.1",
+          "method" : "GET",
+          "queryString" : [
+
+          ],
+          "url" : "http:\/\/example.com"
+        },
+        "response" : {
+          "bodySize" : 577,
+          "content" : {
+            "mimeType" : "text\/html; charset=utf-8",
+            "size" : 577,
+            "text" : "<!doctype html><html lang=en><head><meta charset=utf-8><link rel=icon href=data:,><meta name=viewport content=\"width=device-width,initial-scale=1\"><title>Example Domain<\/title><style>html{color-scheme:light dark;background:light-dark(#eee,#222)}body{font:16px\/1.6 system-ui,sans-serif;max-width:26em;margin:auto;padding:25vh 2em 2em;text-align:center}<\/style><\/head><body><p>This domain is for use in documentation examples without needing permission. This is not a service; avoid relying on it for testing and monitoring purposes.<\/p><script src=\/s.js><\/script><\/body><\/html>\n"
+          },
+          "cookies" : [
+
+          ],
+          "headers" : [
+            {
+              "name" : "Content-Encoding",
+              "value" : "gzip"
+            },
+            {
+              "name" : "Last-Modified",
+              "value" : "Sat, 24 Oct 2026 20:05:47 GMT"
+            },
+            {
+              "name" : "Allow",
+              "value" : "GET, HEAD"
+            },
+            {
+              "name" : "Content-Type",
+              "value" : "text\/html; charset=utf-8"
+            },
+            {
+              "name" : "cf-cache-status",
+              "value" : "HIT"
+            },
+            {
+              "name" : "Server",
+              "value" : "cloudflare"
+            },
+            {
+              "name" : "CF-RAY",
+              "value" : "a513b5d9daafdc55-FRA"
+            },
+            {
+              "name" : "Date",
+              "value" : "Tue, 27 Oct 2026 18:19:40 GMT"
+            },
+            {
+              "name" : "Connection",
+              "value" : "keep-alive"
+            },
+            {
+              "name" : "Alt-Svc",
+              "value" : "h3=\":443\"; ma=86400"
+            },
+            {
+              "name" : "Age",
+              "value" : "8"
+            },
+            {
+              "name" : "Transfer-Encoding",
+              "value" : "Identity"
+            }
+          ],
+          "headersSize" : -1,
+          "httpVersion" : "http\/1.1",
+          "redirectURL" : "",
+          "status" : 200,
+          "statusText" : "no error"
+        },
+        "serverIPAddress" : "104.20.23.154",
+        "startedDateTime" : "2026-10-27T18:19:40Z",
+        "time" : 289.57808017730713,
+        "timings" : {
+          "connect" : 18.000006675720215,
+          "dns" : 1.000046730041504,
+          "receive" : -1,
+          "send" : -1,
+          "ssl" : -1,
+          "wait" : -1
+        }
+      },
+      {
+        "_atsDiagnostic" : {
+          "requestBodyUnavailable" : false,
+          "responseBytesKnown" : true,
+          "source" : "ATS Diagnostic"
+        },
+        "cache" : {
+
+        },
+        "request" : {
+          "bodySize" : 0,
+          "cookies" : [
+
+          ],
+          "headers" : [
+
+          ],
+          "headersSize" : -1,
+          "httpVersion" : "HTTP\/1.1",
+          "method" : "GET",
+          "queryString" : [
+
+          ],
+          "url" : "https:\/\/example.com\/mac-qa-import"
+        },
+        "response" : {
+          "bodySize" : 35,
+          "content" : {
+            "mimeType" : "application\/octet-stream",
+            "size" : 35,
+            "text" : "Controlled local HAR import fixture"
+          },
+          "cookies" : [
+
+          ],
+          "headers" : [
+
+          ],
+          "headersSize" : -1,
+          "httpVersion" : "HTTP\/1.1",
+          "redirectURL" : "",
+          "status" : 200,
+          "statusText" : "no error"
+        },
+        "startedDateTime" : "2026-10-27T18:00:00Z",
+        "time" : 1,
+        "timings" : {
+          "connect" : -1,
+          "dns" : -1,
+          "receive" : -1,
+          "send" : -1,
+          "ssl" : -1,
+          "wait" : -1
+        }
+      },
+      {
+        "_atsDiagnostic" : {
+          "responseSHA256" : "25ddf2c883e0d1958ea971d279a7e4f0fd446724ee3db7db19dadabd4a62e484",
+          "source" : "ATS Diagnostic",
+          "taskMetrics" : {
+            "duration" : 0.4408630132675171,
+            "redirectCount" : 0,
+            "transactionCount" : 1,
+            "transactions" : [
+              {
+                "connectDuration" : 0.02799999713897705,
+                "dnsDuration" : 0.001000046730041504,
+                "fetchType" : 1,
+                "localAddress" : "192.168.1.41",
+                "protocolName" : "h3",
+                "proxyConnection" : false,
+                "receiveDuration" : 0.004732966423034668,
+                "remoteAddress" : "104.20.23.154",
+                "reusedConnection" : false,
+                "sendDuration" : 0.00013506412506103516,
+                "status" : 200,
+                "tlsCipher" : "0x1302",
+                "tlsDuration" : 0.026000022888183594,
+                "tlsProtocol" : "0x0304",
+                "url" : "https:\/\/example.com\/?source=ats-mac",
+                "waitDuration" : 0.4041529893875122
+              }
+            ],
+            "transactionsTruncated" : false
+          }
+        },
+        "cache" : {
+
+        },
+        "request" : {
+          "bodySize" : 0,
+          "cookies" : [
+
+          ],
+          "headers" : [
+
+          ],
+          "headersSize" : -1,
+          "httpVersion" : "HTTP\/3.0",
+          "method" : "GET",
+          "queryString" : [
+            {
+              "name" : "source",
+              "value" : "ats-mac"
+            }
+          ],
+          "url" : "https:\/\/example.com\/?source=ats-mac"
+        },
+        "response" : {
+          "bodySize" : 577,
+          "content" : {
+            "mimeType" : "text\/html; charset=utf-8",
+            "size" : 577,
+            "text" : "<!doctype html><html lang=en><head><meta charset=utf-8><link rel=icon href=data:,><meta name=viewport content=\"width=device-width,initial-scale=1\"><title>Example Domain<\/title><style>html{color-scheme:light dark;background:light-dark(#eee,#222)}body{font:16px\/1.6 system-ui,sans-serif;max-width:26em;margin:auto;padding:25vh 2em 2em;text-align:center}<\/style><\/head><body><p>This domain is for use in documentation examples without needing permission. This is not a service; avoid relying on it for testing and monitoring purposes.<\/p><script src=\/s.js><\/script><\/body><\/html>\n"
+          },
+          "cookies" : [
+
+          ],
+          "headers" : [
+            {
+              "name" : "Server",
+              "value" : "cloudflare"
+            },
+            {
+              "name" : "server-timing",
+              "value" : "cfExtPri"
+            },
+            {
+              "name" : "cf-cache-status",
+              "value" : "MISS"
+            },
+            {
+              "name" : "cf-ray",
+              "value" : "a513ae0a4bd737dd-FRA"
+            },
+            {
+              "name" : "allow",
+              "value" : "GET, HEAD"
+            },
+            {
+              "name" : "Priority",
+              "value" : "u=3,i"
+            },
+            {
+              "name" : "Content-Encoding",
+              "value" : "br"
+            },
+            {
+              "name" : "Alt-Svc",
+              "value" : "h3=\":443\"; ma=86400"
+            },
+            {
+              "name" : "Date",
+              "value" : "Tue, 27 Oct 2026 18:14:20 GMT"
+            },
+            {
+              "name" : "Last-Modified",
+              "value" : "Sat, 24 Oct 2026 20:05:47 GMT"
+            },
+            {
+              "name" : "Content-Type",
+              "value" : "text\/html; charset=utf-8"
+            }
+          ],
+          "headersSize" : -1,
+          "httpVersion" : "HTTP\/3.0",
+          "redirectURL" : "",
+          "status" : 200,
+          "statusText" : "no error"
+        },
+        "serverIPAddress" : "104.20.23.154",
+        "startedDateTime" : "2026-10-27T18:14:20Z",
+        "time" : 440.8630132675171,
+        "timings" : {
+          "connect" : 27.99999713897705,
+          "dns" : 1.000046730041504,
+          "receive" : -1,
+          "send" : -1,
+          "ssl" : 26.000022888183594,
+          "wait" : -1
+        }
+      },
+      {
+        "_atsDiagnostic" : {
+          "errorCode" : -1202,
+          "errorDescription" : "The certificate for this server is invalid. You might be connecting to a server that is pretending to be “expired.badssl.com” which could put your confidential information at risk.",
+          "errorDomain" : "NSURLErrorDomain",
+          "source" : "ATS Diagnostic",
+          "taskMetrics" : {
+            "duration" : 0.37958192825317383,
+            "redirectCount" : 0,
+            "transactionCount" : 1,
+            "transactions" : [
+              {
+                "fetchType" : 1,
+                "protocolName" : "http\/1.1",
+                "proxyConnection" : false,
+                "reusedConnection" : false,
+                "tlsCipher" : "0xc02f",
+                "tlsProtocol" : "0x0303",
+                "url" : "https:\/\/expired.badssl.com\/"
+              }
+            ],
+            "transactionsTruncated" : false
+          }
+        },
+        "cache" : {
+
+        },
+        "request" : {
+          "bodySize" : 0,
+          "cookies" : [
+
+          ],
+          "headers" : [
+
+          ],
+          "headersSize" : -1,
+          "httpVersion" : "http\/1.1",
+          "method" : "GET",
+          "queryString" : [
+
+          ],
+          "url" : "https:\/\/expired.badssl.com"
+        },
+        "response" : {
+          "bodySize" : 0,
+          "content" : {
+            "mimeType" : "application\/octet-stream",
+            "size" : 0,
+            "text" : ""
+          },
+          "cookies" : [
+
+          ],
+          "headers" : [
+
+          ],
+          "headersSize" : -1,
+          "httpVersion" : "http\/1.1",
+          "redirectURL" : "",
+          "status" : 0,
+          "statusText" : ""
+        },
+        "startedDateTime" : "2026-10-27T18:14:02Z",
+        "time" : 379.5819282531738,
+        "timings" : {
+          "connect" : -1,
+          "dns" : -1,
+          "receive" : -1,
+          "send" : -1,
+          "ssl" : -1,
+          "wait" : -1
+        }
+      },
+      {
+        "_atsDiagnostic" : {
+          "responseSHA256" : "25ddf2c883e0d1958ea971d279a7e4f0fd446724ee3db7db19dadabd4a62e484",
+          "source" : "ATS Diagnostic",
+          "taskMetrics" : {
+            "duration" : 0.06884193420410156,
+            "redirectCount" : 0,
+            "transactionCount" : 1,
+            "transactions" : [
+              {
+                "connectDuration" : 0.029000043869018555,
+                "dnsDuration" : 0.001000046730041504,
+                "fetchType" : 1,
+                "localAddress" : "192.168.1.41",
+                "protocolName" : "h3",
+                "proxyConnection" : false,
+                "receiveDuration" : 0.0028710365295410156,
+                "remoteAddress" : "104.20.23.154",
+                "reusedConnection" : false,
+                "sendDuration" : 7.998943328857422e-05,
+                "status" : 200,
+                "tlsCipher" : "0x1302",
+                "tlsDuration" : 0.027000069618225098,
+                "tlsProtocol" : "0x0304",
+                "url" : "https:\/\/example.com\/",
+                "waitDuration" : 0.03146696090698242
+              }
+            ],
+            "transactionsTruncated" : false
+          }
+        },
+        "cache" : {
+
+        },
+        "request" : {
+          "bodySize" : 0,
+          "cookies" : [
+
+          ],
+          "headers" : [
+
+          ],
+          "headersSize" : -1,
+          "httpVersion" : "HTTP\/3.0",
+          "method" : "GET",
+          "queryString" : [
+
+          ],
+          "url" : "https:\/\/example.com"
+        },
+        "response" : {
+          "bodySize" : 577,
+          "content" : {
+            "mimeType" : "text\/html; charset=utf-8",
+            "size" : 577,
+            "text" : "<!doctype html><html lang=en><head><meta charset=utf-8><link rel=icon href=data:,><meta name=viewport content=\"width=device-width,initial-scale=1\"><title>Example Domain<\/title><style>html{color-scheme:light dark;background:light-dark(#eee,#222)}body{font:16px\/1.6 system-ui,sans-serif;max-width:26em;margin:auto;padding:25vh 2em 2em;text-align:center}<\/style><\/head><body><p>This domain is for use in documentation examples without needing permission. This is not a service; avoid relying on it for testing and monitoring purposes.<\/p><script src=\/s.js><\/script><\/body><\/html>\n"
+          },
+          "cookies" : [
+
+          ],
+          "headers" : [
+            {
+              "name" : "Date",
+              "value" : "Tue, 27 Oct 2026 18:12:15 GMT"
+            },
+            {
+              "name" : "Alt-Svc",
+              "value" : "h3=\":443\"; ma=86400"
+            },
+            {
+              "name" : "Content-Type",
+              "value" : "text\/html; charset=utf-8"
+            },
+            {
+              "name" : "cf-cache-status",
+              "value" : "HIT"
+            },
+            {
+              "name" : "Last-Modified",
+              "value" : "Sat, 24 Oct 2026 20:05:47 GMT"
+            },
+            {
+              "name" : "Content-Encoding",
+              "value" : "br"
+            },
+            {
+              "name" : "cf-ray",
+              "value" : "a513aafd78f399a5-FRA"
+            },
+            {
+              "name" : "Server",
+              "value" : "cloudflare"
+            },
+            {
+              "name" : "server-timing",
+              "value" : "cfExtPri"
+            },
+            {
+              "name" : "Age",
+              "value" : "3"
+            },
+            {
+              "name" : "allow",
+              "value" : "GET, HEAD"
+            },
+            {
+              "name" : "Priority",
+              "value" : "u=3,i"
+            }
+          ],
+          "headersSize" : -1,
+          "httpVersion" : "HTTP\/3.0",
+          "redirectURL" : "",
+          "status" : 200,
+          "statusText" : "no error"
+        },
+        "serverIPAddress" : "104.20.23.154",
+        "startedDateTime" : "2026-10-27T18:12:15Z",
+        "time" : 68.84193420410156,
+        "timings" : {
+          "connect" : 29.000043869018555,
+          "dns" : 1.000046730041504,
+          "receive" : -1,
+          "send" : -1,
+          "ssl" : 27.000069618225098,
+          "wait" : -1
+        }
+      },
+      {
+        "_atsDiagnostic" : {
+          "responseSHA256" : "25ddf2c883e0d1958ea971d279a7e4f0fd446724ee3db7db19dadabd4a62e484",
+          "source" : "ATS Diagnostic",
+          "taskMetrics" : {
+            "duration" : 0.10456907749176025,
+            "redirectCount" : 0,
+            "transactionCount" : 1,
+            "transactions" : [
+              {
+                "connectDuration" : 0.018000006675720215,
+                "dnsDuration" : 0.02799999713897705,
+                "fetchType" : 1,
+                "localAddress" : "192.168.1.41",
+                "protocolName" : "http\/1.1",
+                "proxyConnection" : false,
+                "receiveDuration" : 0.0002969503402709961,
+                "remoteAddress" : "104.20.23.154",
+                "reusedConnection" : false,
+                "sendDuration" : 6.604194641113281e-05,
+                "status" : 200,
+                "url" : "http:\/\/example.com\/",
+                "waitDuration" : 0.034147024154663086
+              }
+            ],
+            "transactionsTruncated" : false
+          }
+        },
+        "cache" : {
+
+        },
+        "request" : {
+          "bodySize" : 0,
+          "cookies" : [
+
+          ],
+          "headers" : [
+
+          ],
+          "headersSize" : -1,
+          "httpVersion" : "http\/1.1",
+          "method" : "GET",
+          "queryString" : [
+
+          ],
+          "url" : "http:\/\/example.com"
+        },
+        "response" : {
+          "bodySize" : 577,
+          "content" : {
+            "mimeType" : "text\/html; charset=utf-8",
+            "size" : 577,
+            "text" : "<!doctype html><html lang=en><head><meta charset=utf-8><link rel=icon href=data:,><meta name=viewport content=\"width=device-width,initial-scale=1\"><title>Example Domain<\/title><style>html{color-scheme:light dark;background:light-dark(#eee,#222)}body{font:16px\/1.6 system-ui,sans-serif;max-width:26em;margin:auto;padding:25vh 2em 2em;text-align:center}<\/style><\/head><body><p>This domain is for use in documentation examples without needing permission. This is not a service; avoid relying on it for testing and monitoring purposes.<\/p><script src=\/s.js><\/script><\/body><\/html>\n"
+          },
+          "cookies" : [
+
+          ],
+          "headers" : [
+            {
+              "name" : "Server",
+              "value" : "cloudflare"
+            },
+            {
+              "name" : "Content-Encoding",
+              "value" : "gzip"
+            },
+            {
+              "name" : "CF-RAY",
+              "value" : "a513a9e8684e4d7a-FRA"
+            },
+            {
+              "name" : "Age",
+              "value" : "6"
+            },
+            {
+              "name" : "Date",
+              "value" : "Tue, 27 Oct 2026 18:11:31 GMT"
+            },
+            {
+              "name" : "Transfer-Encoding",
+              "value" : "Identity"
+            },
+            {
+              "name" : "Connection",
+              "value" : "keep-alive"
+            },
+            {
+              "name" : "Alt-Svc",
+              "value" : "h3=\":443\"; ma=86400"
+            },
+            {
+              "name" : "Content-Type",
+              "value" : "text\/html; charset=utf-8"
+            },
+            {
+              "name" : "Allow",
+              "value" : "GET, HEAD"
+            },
+            {
+              "name" : "Last-Modified",
+              "value" : "Sat, 24 Oct 2026 20:05:47 GMT"
+            },
+            {
+              "name" : "cf-cache-status",
+              "value" : "HIT"
+            }
+          ],
+          "headersSize" : -1,
+          "httpVersion" : "http\/1.1",
+          "redirectURL" : "",
+          "status" : 200,
+          "statusText" : "no error"
+        },
+        "serverIPAddress" : "104.20.23.154",
+        "startedDateTime" : "2026-10-27T18:11:31Z",
+        "time" : 104.56907749176025,
+        "timings" : {
+          "connect" : 18.000006675720215,
+          "dns" : 27.99999713897705,
+          "receive" : -1,
+          "send" : -1,
+          "ssl" : -1,
+          "wait" : -1
+        }
+      }
+    ],
+    "version" : "1.2"
+  }
+}

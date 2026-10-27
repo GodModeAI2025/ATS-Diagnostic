@@ -1,0 +1,41 @@
+{
+  "app_id": "1297164068",
+  "bundle_id": "com.mobilebox.atsdiagnostic",
+  "platform": "macOS",
+  "technology": "Mac Catalyst",
+  "version": "2.0.1",
+  "build": "59",
+  "mac_tests_passed": 163,
+  "ios_targeted_tests_passed": 3,
+  "ui_qa_complete": false,
+  "archive_succeeded": true,
+  "upload_succeeded": true,
+  "store_submitted": false,
+  "action_label_contrast": 5.42,
+  "action_label_high_contrast": 8.1,
+  "last_available_mac_testflight_build": "59",
+  "source_commit": "e0ff843",
+  "apple_processing_complete": true,
+  "testflight_status": "Im Test",
+  "testflight_build_id": "a03b4146-9463-4311-b0d3-8e5a9ee0b2e1",
+  "testflight_group": "Mark – Intern",
+  "testers": [
+    "mark_zimmermann@mac.com"
+  ],
+  "native_core_flow_qa_passed": true,
+  "screenshots_uploaded": 4,
+  "screenshot_dimensions": [
+    2560,
+    1600
+  ],
+  "screenshot_original_pixels_preserved": true,
+  "store_selected_build": "59",
+  "store_status": "In Vorbereitung zur Übermittlung",
+  "pending_gate": "User rejected visual design; release held for redesign",
+  "known_limits": [
+    "Physical TestFlight installation not verified",
+    "Final ShareLink file-save round trip not verified",
+    "Detailed screens not fully localized"
+  ],
+  "release_hold": true
+}

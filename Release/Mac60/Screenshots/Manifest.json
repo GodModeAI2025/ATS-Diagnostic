@@ -1,0 +1,101 @@
+{
+  "format": "PNG",
+  "images": [
+    {
+      "source": "01-Inspect-HTTPS.jpg",
+      "source_sha256": "11c54de1add70e64af49693d72619e9849c8a270140910682cf2538a773fb323",
+      "source_decoded_dimensions": [
+        2048,
+        1538
+      ],
+      "output": "01-Inspect-HTTPS.png",
+      "output_sha256": "13eaae17776f73fca6af8b06a401575ff3f04164652b75c016b8f7663f7f1df0",
+      "output_dimensions": [
+        2560,
+        1600
+      ],
+      "offset_xy": [
+        256,
+        31
+      ],
+      "background_rgb": [
+        245,
+        245,
+        245
+      ],
+      "pixel_exact_source_crop": true
+    },
+    {
+      "source": "02-Certificate-Issuer.jpg",
+      "source_sha256": "3b20cdba05d9278cdf7301357d99d8b74681e63acc30d56e56fc2e03b17334fc",
+      "source_decoded_dimensions": [
+        2048,
+        1538
+      ],
+      "output": "02-Certificate-Issuer.png",
+      "output_sha256": "b4682a5e06bbdb9fe2253d5b0629662c34c4eba5e6a426b0bba7b06a48c14035",
+      "output_dimensions": [
+        2560,
+        1600
+      ],
+      "offset_xy": [
+        256,
+        31
+      ],
+      "background_rgb": [
+        245,
+        245,
+        245
+      ],
+      "pixel_exact_source_crop": true
+    },
+    {
+      "source": "03-Requests-GET.jpg",
+      "source_sha256": "a38fab12ea05b1053a3dfabc9b69ed5dddefbd3b976ecf568bf717b369a5c66f",
+      "source_decoded_dimensions": [
+        2048,
+        1538
+      ],
+      "output": "03-Requests.png",
+      "output_sha256": "c7b99230e27cb304b30d206d0f09b946e5ebb6d57adad273a0f4f8a3bf84a7dd",
+      "output_dimensions": [
+        2560,
+        1600
+      ],
+      "offset_xy": [
+        256,
+        31
+      ],
+      "background_rgb": [
+        245,
+        245,
+        245
+      ],
+      "pixel_exact_source_crop": true
+    },
+    {
+      "source": "04-Tools-Result.jpg",
+      "source_sha256": "c272ae608127c3b50edaf1be9eaea919d1e128bf69aac4d167e33bbbb342913a",
+      "source_decoded_dimensions": [
+        2048,
+        1538
+      ],
+      "output": "04-Tools.png",
+      "output_sha256": "10ceea456ce2fcdbbe7a4dbe3591b332c67d47182bb812299eb3285dccb2ea26",
+      "output_dimensions": [
+        2560,
+        1600
+      ],
+      "offset_xy": [
+        256,
+        31
+      ],
+      "background_rgb": [
+        245,
+        245,
+        245
+      ],
+      "pixel_exact_source_crop": true
+    }
+  ]
+}

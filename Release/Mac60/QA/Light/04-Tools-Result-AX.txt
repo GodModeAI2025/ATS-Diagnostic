@@ -1,0 +1,33 @@
+Window: "ATS Diagnostic", App: ATS Diagnostic.
+0 Standardfenster ATS Diagnostic, ID: SceneWindow, Secondary Actions: Raise
+	1 container Secondary Actions: Cancel
+		2 container Secondary Actions: Cancel
+			3 Text (selected) Description: Prüfen, ID: checkmark.shield, Secondary Actions: Cancel
+			4 Text Description: Anfragen, ID: arrow.up.arrow.down, Secondary Actions: Cancel
+			5 Text Description: Verlauf, ID: clock, Secondary Actions: Cancel
+			6 Text (selected) Description: Werkzeuge, ID: wrench.and.screwdriver, Secondary Actions: Cancel
+		7 container Secondary Actions: Cancel
+			8 container ID: Werkzeuge, Secondary Actions: Cancel
+				9 Taste Description: Diagnoseeinstellungen, Secondary Actions: Cancel
+				10 Überschrift Description: Werkzeuge, Secondary Actions: Cancel
+			11 container Secondary Actions: Cancel
+				12 Einblendmenü Description: Vorgang, Base64 codieren, Secondary Actions: Cancel
+				13 Taste Description: Umwandeln, Secondary Actions: Cancel
+				14 Text Description: Eingabe, Secondary Actions: Cancel
+				15 Text Description: Ergebnis, Secondary Actions: Cancel
+				16 Taste Description: Ergebnis teilen, ID: square.and.arrow.up, Secondary Actions: Cancel
+				17 Bereich für Texteinträge (settable) Description: Werkzeugeingabe, Value: ATS Diagnostic, Secondary Actions: Cancel
+				18 Text Description: QVRTIERpYWdub3N0aWM=, Secondary Actions: Cancel
+				19 Taste Description: Adressauflösung, Secondary Actions: Cancel
+				20 Taste Description: Datenschutz, Secondary Actions: Cancel
+	21 Text ATS Diagnostic
+	22 Menü-Taste Fenster teilen
+23 menu bar
+	24 ATSDiagnostic, ID: com.apple.menu.application
+	25 Ablage, ID: com.apple.menu.file
+	26 Bearbeiten, ID: com.apple.menu.edit
+	27 Darstellung, ID: com.apple.menu.view
+	28 Fenster, ID: com.apple.menu.window
+	29 Hilfe, ID: com.apple.menu.help
+
+The focused UI element is 6 Text (selected) Description: Werkzeuge, ID: wrench.and.screwdriver, Secondary Actions: Cancel

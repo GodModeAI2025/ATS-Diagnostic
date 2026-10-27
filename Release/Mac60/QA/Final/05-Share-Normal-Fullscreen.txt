@@ -1,0 +1,8 @@
+Normal:
+		2 Überblendung ID: ShareSheet.Popover, Secondary Actions: Cancel
+				5 text ATS-Diagnostic.har JSON · 49 KB
+				16 Taste Kopieren
+Fullscreen:
+		2 Überblendung ID: ShareSheet.Popover, Secondary Actions: Cancel
+				5 text ATS-Diagnostic.har JSON · 49 KB
+				16 Taste Kopieren

@@ -1,0 +1,32 @@
+Window: "ATS Diagnostic", App: ATS Diagnostic.
+0 Standardfenster ATS Diagnostic, ID: SceneWindow, Secondary Actions: Raise
+	1 container
+		2 container Secondary Actions: Cancel
+			3 container Secondary Actions: Cancel
+				4 Text (selected) Description: Prüfen, ID: checkmark.shield, Secondary Actions: Cancel
+				5 Text Description: Anfragen, ID: arrow.up.arrow.down, Secondary Actions: Cancel
+				6 Text Description: Verlauf, ID: clock, Secondary Actions: Cancel
+				7 Text (selected) Description: Werkzeuge, ID: wrench.and.screwdriver, Secondary Actions: Cancel
+			8 container Secondary Actions: Cancel
+				9 container ID: Werkzeuge, Secondary Actions: Cancel
+					10 Taste Description: Diagnoseeinstellungen, Secondary Actions: Cancel
+					11 Überschrift Description: Werkzeuge, Secondary Actions: Cancel
+				12 container Secondary Actions: Cancel
+					13 Einblendmenü Description: Vorgang, Base64 codieren, Secondary Actions: Cancel
+					14 Taste Description: Umwandeln, Secondary Actions: Cancel
+					15 Text Description: Eingabe, Secondary Actions: Cancel
+					16 Text Description: Ergebnis, Secondary Actions: Cancel
+					17 Taste Description: Ergebnis teilen, ID: square.and.arrow.up, Secondary Actions: Cancel
+					18 Bereich für Texteinträge (settable) Description: Werkzeugeingabe, Value: ATS Mac60, Secondary Actions: Cancel
+					19 Text Description: QVRTIE1hYzYw, Secondary Actions: Cancel
+					20 Taste Description: Adressauflösung, Secondary Actions: Cancel
+					21 Taste Description: Datenschutz, Secondary Actions: Cancel
+	22 Text ATS Diagnostic
+	23 Menü-Taste Fenster teilen
+24 menu bar
+	25 ATSDiagnostic, ID: com.apple.menu.application
+	26 Ablage, ID: com.apple.menu.file
+	27 Bearbeiten, ID: com.apple.menu.edit
+	28 Darstellung, ID: com.apple.menu.view
+	29 Fenster, ID: com.apple.menu.window
+	30 Hilfe, ID: com.apple.menu.help

@@ -1,0 +1,39 @@
+Window: "ATS Diagnostic", App: ATS Diagnostic.
+0 Standardfenster ATS Diagnostic, ID: SceneWindow, Secondary Actions: Raise
+	1 container
+		2 container Secondary Actions: Cancel
+			3 Überschrift Description: Verbindung prüfen, Secondary Actions: Cancel
+			4 container Secondary Actions: Cancel
+				5 Text Description: Verbindung prüfen, Secondary Actions: Cancel
+				6 Text Description: Letzte Prüfung, Secondary Actions: Cancel
+				7 Text Description: Verbindungen verständlich prüfen, Secondary Actions: Cancel
+				8 Text Description: Antwort empfangen, Secondary Actions: Cancel
+				9 Text Description: Zertifikate, TLS und HTTP-Antworten im Überblick., Secondary Actions: Cancel
+				10 Textfeld (settable) Value: https://example.com, Placeholder: example.com, Secondary Actions: Cancel
+				11 Taste Description: Verbindung prüfen, Secondary Actions: Cancel
+				12 Text Description: HTTP-Status, 200, Secondary Actions: Cancel
+				13 Text Description: TLS-Version, TLS 1.3, Secondary Actions: Cancel
+				14 Text Description: Dauer, 0,076 s, Secondary Actions: Cancel
+				15 Text Description: Zertifikate, 4, Secondary Actions: Cancel
+				16 Text Description: Gesamte Anfrage, 0,076 s, Secondary Actions: Cancel
+				17 Text Description: DNS-Abfrage, 0,001 s, Secondary Actions: Cancel
+				18 Text Description: Verbindung, 0,034 s, Secondary Actions: Cancel
+				19 Text Description: TLS-Handshake, 0,033 s, Secondary Actions: Cancel
+				20 Text Secondary Actions: Cancel, Description: Die Phasenbalken vergleichen gemeldete Dauern mit der gesamten Anfragezeit. Phasen können sich überschneiden.
+				21 Taste Description: https://example.com, GET · 200, 27. Okt., 19:40, Secondary Actions: Cancel
+				22 Text Description: Systemvertrauen, Secondary Actions: Cancel
+				23 Text Secondary Actions: Cancel, Description: Systemvertrauen wird weiterhin geprüft. Für die Diagnose fremder Server sind HTTP und ältere TLS-Konfigurationen zugelassen. Ein erfolgreicher Aufruf bestätigt deshalb keine ATS-Konformität.
+	24 Symbolleiste
+		25 Optionsschaltfläche Description: Prüfen, Value: 1
+		26 Optionsschaltfläche Description: Anfragen, Value: 0
+		27 Optionsschaltfläche Description: Verlauf, Value: 0
+		28 Optionsschaltfläche Description: Werkzeuge, Value: 0
+	29 Text ATS Diagnostic
+	30 Menü-Taste Fenster teilen
+31 menu bar
+	32 ATSDiagnostic, ID: com.apple.menu.application
+	33 Ablage, ID: com.apple.menu.file
+	34 Bearbeiten, ID: com.apple.menu.edit
+	35 Darstellung, ID: com.apple.menu.view
+	36 Fenster, ID: com.apple.menu.window
+	37 Hilfe, ID: com.apple.menu.help

@@ -1,0 +1,36 @@
+Window: "Ohne Titel", App: ATS Diagnostic.
+0 Blatt Secondary Actions: Raise
+	1 container
+		2 container Secondary Actions: Cancel
+			3 container ID: Anfragen, Secondary Actions: Cancel
+				4 Taste Description: Schließen, Secondary Actions: Cancel
+				5 Überschrift Description: Anfragen, Secondary Actions: Cancel
+				6 Taste Description: cURL importieren, Secondary Actions: Cancel
+			7 container Secondary Actions: Cancel
+				8 Text Secondary Actions: Cancel, Description: Du bearbeitest eine Kopie. Erst „Anfrage senden“ sendet sie; die ursprüngliche Aufzeichnung bleibt erhalten.
+				9 Einblendmenü Description: Methode, Methode, Secondary Actions: Cancel
+				10 Textfeld (settable) Description: Host oder URL, Value: https://example.com, Placeholder: https://example.com/api, Secondary Actions: Cancel
+				11 Taste Description: Anfrage senden, Secondary Actions: Cancel
+				12 container Secondary Actions: Cancel
+					13 Text Description: Optionale Anfragefelder, Secondary Actions: Cancel
+					14 Taste Description: Header, Secondary Actions: Cancel
+					15 Taste Description: Inhalt, Secondary Actions: Cancel
+					16 Taste Description: Prüfsumme des Downloads prüfen, Secondary Actions: Cancel
+					17 Text Description: Letzte Antwort, Secondary Actions: Cancel
+					18 Text Description: http://example.com, Secondary Actions: Cancel
+					19 Text Description: Endgültiges Ziel, http://example.com/, Secondary Actions: Cancel
+					20 Text Description: 27. Okt. 2026, 20:06:11, Secondary Actions: Cancel
+					21 Text Description: Antwort empfangen, Secondary Actions: Cancel
+					22 container Secondary Actions: Cancel
+						23 Text Description: HTTP-Status, 200, Secondary Actions: Cancel
+						24 Text Description: TLS-Version, Unverschlüsselt, Secondary Actions: Cancel
+						25 Text Description: Dauer, 0,130 s, Secondary Actions: Cancel
+					26 Text Secondary Actions: Cancel, Description: <!doctype html><html lang=en><head><meta charset=utf-8><link rel=icon href=data:,><meta name=viewport content="width=device-width,initial-scale=1"><title>Example Domain</title><style>html{color-scheme:light dark;background:light-dark(#eee,#222)}body{font:16px/1.6 system-ui,sans-serif;max-width:26em;margin:auto;padding:25vh 2em 2em;text-align:center}</style></head><body><p>This domain is for use in documentation examples without needing permission. This is not a service; avoid relying on it for testing and m
+					27 Taste Description: Vollständige Antwort öffnen, Secondary Actions: Cancel
+28 menu bar
+	29 ATSDiagnostic, ID: com.apple.menu.application
+	30 Ablage, ID: com.apple.menu.file
+	31 Bearbeiten, ID: com.apple.menu.edit
+	32 Darstellung, ID: com.apple.menu.view
+	33 Fenster, ID: com.apple.menu.window
+	34 Hilfe, ID: com.apple.menu.help

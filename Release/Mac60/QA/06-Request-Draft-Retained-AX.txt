@@ -1,0 +1,47 @@
+Window: "ATS Diagnostic", App: ATS Diagnostic.
+0 Standardfenster ATS Diagnostic, ID: SceneWindow, Secondary Actions: Raise
+	1 container Secondary Actions: Cancel
+		2 container Secondary Actions: Cancel
+			3 Text (selected) Description: Prüfen, ID: checkmark.shield, Secondary Actions: Cancel
+			4 Text (selected) Description: Anfragen, ID: arrow.up.arrow.down, Secondary Actions: Cancel
+			5 Text Description: Verlauf, ID: clock, Secondary Actions: Cancel
+			6 Text Description: Werkzeuge, ID: wrench.and.screwdriver, Secondary Actions: Cancel
+		7 container Secondary Actions: Cancel
+			8 container ID: Anfragen, Secondary Actions: Cancel
+				9 Überschrift Description: Anfragen, Secondary Actions: Cancel
+				10 Taste Description: cURL importieren, Secondary Actions: Cancel
+			11 container Secondary Actions: Cancel
+				12 Einblendmenü Description: Methode, Methode, Secondary Actions: Cancel
+				13 Textfeld (settable) Description: Host oder URL, Value: https://example.com/?draft=mac60, Placeholder: https://example.com/api, Secondary Actions: Cancel
+				14 Taste Description: Anfrage senden, Secondary Actions: Cancel
+				15 Text Description: Optionale Anfragefelder, Secondary Actions: Cancel
+				16 Text Description: Letzte Antwort, Secondary Actions: Cancel
+				17 Taste Description: Header · festgelegt, Secondary Actions: Cancel
+				18 Text Description: http://example.com, Secondary Actions: Cancel
+				19 Text Description: Ein Header pro Zeile, zum Beispiel Accept: application/json., Secondary Actions: Cancel
+				20 Text Description: Endgültiges Ziel, http://example.com/, Secondary Actions: Cancel
+				21 Bereich für Texteinträge (settable) Description: Anfrage-Header, Value: X-QA-Draft: retained, Secondary Actions: Cancel
+				22 Text Description: 27. Okt. 2026, 20:06:11, Secondary Actions: Cancel
+				23 Text Description: Antwort empfangen, Secondary Actions: Cancel
+				24 Taste Description: Inhalt · festgelegt, Secondary Actions: Cancel
+				25 Text Description: Die mit dieser Anfrage gesendeten Daten, üblicherweise bei POST, PUT oder PATCH., Secondary Actions: Cancel
+				26 container Secondary Actions: Cancel
+					27 Text Description: HTTP-Status, 200, Secondary Actions: Cancel
+					28 Text Description: TLS-Version, Unverschlüsselt, Secondary Actions: Cancel
+					29 Text Description: Dauer, 0,130 s, Secondary Actions: Cancel
+					30 Text Description: Zertifikate, 0, Secondary Actions: Cancel
+				31 Bereich für Texteinträge (settable) Description: Anfrageinhalt, Value: {„qa“:“draft-retained“}, Secondary Actions: Cancel
+				32 Taste Description: Prüfsumme des Downloads prüfen, Secondary Actions: Cancel
+				33 Text Secondary Actions: Cancel, Description: <!doctype html><html lang=en><head><meta charset=utf-8><link rel=icon href=data:,><meta name=viewport content="width=device-width,initial-scale=1"><title>Example Domain</title><style>html{color-scheme:light dark;background:light-dark(#eee,#222)}body{font:16px/1.6 system-ui,sans-serif;max-width:26em;margin:auto;padding:25vh 2em 2em;text-align:center}</style></head><body><p>This domain is for use in documentation examples without needing permission. This is not a service; avoid relying on it for testing and m
+				34 Taste Description: Vollständige Antwort öffnen, Secondary Actions: Cancel
+	35 Text ATS Diagnostic
+	36 Menü-Taste Fenster teilen
+37 menu bar
+	38 ATSDiagnostic, ID: com.apple.menu.application
+	39 Ablage, ID: com.apple.menu.file
+	40 Bearbeiten, ID: com.apple.menu.edit
+	41 Darstellung, ID: com.apple.menu.view
+	42 Fenster, ID: com.apple.menu.window
+	43 Hilfe, ID: com.apple.menu.help
+
+The focused UI element is 4 Text (selected) Description: Anfragen, ID: arrow.up.arrow.down, Secondary Actions: Cancel

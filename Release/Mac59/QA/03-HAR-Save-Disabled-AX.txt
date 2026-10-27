@@ -1,0 +1,24 @@
+Window: "Sichern", App: ATS Diagnostic.
+0 Blatt Description: sichern, ID: save-panel, Secondary Actions: Raise
+	1 Trenngruppe
+		2 Trenner (disabled, settable, float) -1
+		3 Text Value: Ort:, ID: whereLabel
+		4 Einblendmenü Ort:, Value: QA, ID: where popup
+		5 Schließdreieck Description: weitere Optionen anzeigen, Value: 0
+		6 Text Value: Sichern unter:, ID: nameFieldLabel
+		7 Textfeld (settable) Value: Mac59-QA.har, ID: saveAsNameTextField
+		8 Taste Abbrechen, ID: CancelButton
+		9 Taste (disabled) Sichern, ID: OKButton
+10 menu bar
+	11 ATSDiagnostic, ID: com.apple.menu.application
+	12 Ablage, ID: com.apple.menu.file
+	13 Bearbeiten, ID: com.apple.menu.edit
+	14 Darstellung, ID: com.apple.menu.view
+	15 Fenster, ID: com.apple.menu.window
+	16 Hilfe, ID: com.apple.menu.help
+
+Selected text: ```
+Mac59-QA.har
+```
+
+Note: Pay special attention to the content selected by the user. If the user asks a question or refers to the content they are looking at on-screen, they might be referring to the selected content (but they might be referring to something else that's visible, too).

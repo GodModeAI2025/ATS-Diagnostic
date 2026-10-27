@@ -1,0 +1,33 @@
+Window: "ATS Diagnostic", App: ATS Diagnostic.
+0 Standardfenster ATS Diagnostic, ID: SceneWindow, Secondary Actions: Raise
+	1 container
+		2 container Secondary Actions: Cancel
+			3 container ID: Werkzeuge, Secondary Actions: Cancel
+				4 Taste Description: Diagnoseeinstellungen, Secondary Actions: Cancel
+				5 Überschrift Description: Werkzeuge, Secondary Actions: Cancel
+			6 container Secondary Actions: Cancel
+				7 Text Description: Eingabe, Secondary Actions: Cancel
+				8 Text Description: Ergebnis, Secondary Actions: Cancel
+				9 Taste Description: Adressauflösung, Secondary Actions: Cancel
+				10 Text Description: QVRTIERpYWdub3N0aWM=, Secondary Actions: Cancel
+				11 Einblendmenü Description: Vorgang, Base64 codieren, Secondary Actions: Cancel
+				12 Taste Description: Ergebnis teilen, Secondary Actions: Cancel
+				13 Bereich für Texteinträge (settable) Description: Werkzeugeingabe, Value: ATS Diagnostic, Secondary Actions: Cancel
+				14 Text Description: Datenschutz, Secondary Actions: Cancel
+				15 Text Secondary Actions: Cancel, Description: Diagnosen werden auf diesem Gerät gespeichert. Anfragen verbinden sich nur mit dem von dir gewählten Ziel. Exportierte Dateien können Zugangsdaten oder personenbezogene Daten enthalten.
+				16 link Description: Datenschutzerklärung / Privacy Policy, Value: mobilebox-consulting.de/datenschutzerkl%C3%A4rung-privacy-policy/, Secondary Actions: Cancel
+				17 Taste Description: Umwandeln, Secondary Actions: Cancel
+	18 Symbolleiste
+		19 Optionsschaltfläche Description: Prüfen, Value: 0
+		20 Optionsschaltfläche Description: Anfragen, Value: 0
+		21 Optionsschaltfläche Description: Verlauf, Value: 0
+		22 Optionsschaltfläche Description: Werkzeuge, Value: 1
+	23 Text ATS Diagnostic
+	24 Menü-Taste Fenster teilen
+25 menu bar
+	26 ATSDiagnostic, ID: com.apple.menu.application
+	27 Ablage, ID: com.apple.menu.file
+	28 Bearbeiten, ID: com.apple.menu.edit
+	29 Darstellung, ID: com.apple.menu.view
+	30 Fenster, ID: com.apple.menu.window
+	31 Hilfe, ID: com.apple.menu.help

@@ -1,0 +1,45 @@
+Window: "ATS Diagnostic", App: ATS Diagnostic.
+0 Standardfenster ATS Diagnostic, ID: SceneWindow, Secondary Actions: Raise
+	1 container Secondary Actions: Cancel
+		2 container Secondary Actions: Cancel
+			3 Text (selected) Description: Prüfen, ID: checkmark.shield, Secondary Actions: Cancel
+			4 Text Description: Anfragen, ID: arrow.up.arrow.down, Secondary Actions: Cancel
+			5 Text Description: Verlauf, ID: clock, Secondary Actions: Cancel
+			6 Text Description: Werkzeuge, ID: wrench.and.screwdriver, Secondary Actions: Cancel
+		7 container Secondary Actions: Cancel
+			8 Überschrift Description: Verbindung prüfen, Secondary Actions: Cancel
+			9 container Secondary Actions: Cancel
+				10 Textfeld (settable) Description: Host oder URL, Value: https://example.com, Secondary Actions: Cancel
+				11 Taste Description: Verbindung prüfen, Secondary Actions: Cancel
+				12 Text Description: https://example.com, Secondary Actions: Cancel
+				13 Text Description: Endgültiges Ziel, https://example.com/, Secondary Actions: Cancel
+				14 Text Description: 27. Okt. 2026, 20:24:17, Secondary Actions: Cancel
+				15 Text Description: Antwort empfangen, Secondary Actions: Cancel
+				16 Text Description: HTTP-Status, 200, Secondary Actions: Cancel
+				17 Text Description: TLS-Version, TLS 1.3, Secondary Actions: Cancel
+				18 Text Description: Dauer, 0,634 s, Secondary Actions: Cancel
+				19 Text Description: Zertifikate, 4, Secondary Actions: Cancel
+				20 Text Description: Zertifikate und Vertrauen, Secondary Actions: Cancel
+				21 Text Description: Verbindungszeiten, Secondary Actions: Cancel
+				22 Taste Description: example.com, Aussteller: Cloudflare TLS Issuing ECC CA 3, Secondary Actions: Cancel
+				23 Text Description: Gesamte Anfrage, 0,634 s, Secondary Actions: Cancel
+				24 Text Description: DNS-Abfrage, 0,001 s, Secondary Actions: Cancel
+				25 Taste Description: Cloudflare TLS Issuing ECC CA 3, Aussteller: SSL.com TLS Transit ECC CA R2, Secondary Actions: Cancel
+				26 Text Description: Verbindung, 0,047 s, Secondary Actions: Cancel
+				27 Taste Description: SSL.com TLS Transit ECC CA R2, Aussteller: SSL.com TLS ECC Root CA 2022, Secondary Actions: Cancel
+				28 Text Description: TLS-Handshake, 0,046 s, Secondary Actions: Cancel
+				29 Text Secondary Actions: Cancel, Description: Die Phasenbalken vergleichen gemeldete Dauern mit der gesamten Anfragezeit. Phasen können sich überschneiden.
+				30 Taste Description: SSL.com TLS ECC Root CA 2022, Aussteller: SSL.com TLS ECC Root CA 2022, Secondary Actions: Cancel
+				31 Taste Description: Verbindungsdetails, Secondary Actions: Cancel
+				32 Text Secondary Actions: Cancel, Description: Systemvertrauen wird weiterhin geprüft. Für die Diagnose fremder Server sind HTTP und ältere TLS-Konfigurationen zugelassen. Ein erfolgreicher Aufruf bestätigt deshalb keine ATS-Konformität.
+	33 Text ATS Diagnostic
+	34 Menü-Taste Fenster teilen
+35 menu bar
+	36 ATSDiagnostic, ID: com.apple.menu.application
+	37 Ablage, ID: com.apple.menu.file
+	38 Bearbeiten, ID: com.apple.menu.edit
+	39 Darstellung, ID: com.apple.menu.view
+	40 Fenster, ID: com.apple.menu.window
+	41 Hilfe, ID: com.apple.menu.help
+
+The focused UI element is 3 Text (selected) Description: Prüfen, ID: checkmark.shield, Secondary Actions: Cancel
