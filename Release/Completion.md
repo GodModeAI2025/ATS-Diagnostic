@@ -165,3 +165,14 @@ Preview55 sourceaf996a7 implements native URL query detail display. Full157-meth
 Preview55 processing completed and Mark–Intern assignment verified: Im Test, exactly one tester mark_zimmermann@mac.com. Beta notes saved; sourceaf996a7/buildID130a8d9e-bc3d-465d-8b32-ca641994fa70. Physical installation not verified. User now explicitly requests Store55 submission; original-bundle archive/upload and replacement of queued Store50 are authorized and pending.
 
 At the user’s explicit request, original Store55 (com.mobilebox.atsdiagnostic, sourceaf996a7) was signed/uploaded, selected for version2.0 and submitted in place of queued50. Final portal readback confirms Warten auf Prüfung with55 selected, automatic release after approval. BuildID9a491232-fb33-4f0c-808a-9ba7b2c9c4c9. Approval/publication not yet verified; owner-only Preview55 remains Im Test. See Store55/Status.json and proof.
+
+
+## Release 2.0.1 (56), verified 2026-10-27
+
+- Source change 17290f3 removes the foreground proxy UI and app-owned proxy lifecycle as explicitly requested. Existing saved proxy rules are retained but not loaded or applied. Proxy/MITM/VPN expansion is not part of this release.
+- Original app 1297164068 / com.mobilebox.atsdiagnostic: signed archive, successful upload, completed Apple processing, and internal TestFlight availability are verified. Build a08ee741-fe06-41e9-9d57-c92cd8c35534 is Im Test in Mark – Intern (39cff430-dc7d-4305-a24a-8e6b42330bcf), with only mark_zimmermann@mac.com invited. The default internal group has zero testers.
+- ATS arbitrary loads and the local-network purpose string are present in the uploaded archive. Native simulator checks cover HTTP success and expired HTTPS rejection; certificate validation remains active.
+- Full app suite: 158 methods / 177 parameterized executions, zero failures or skips. After the final ATS diagnostic wording change, 11 targeted methods passed. Physical-device installation and individual TLS-version probes were not repeated in this release.
+- Twelve current screenshots (four medium iPhone, four large iPhone, four iPad) uploaded through the supported browser file chooser. No native app security restriction was bypassed.
+- Store 2.0.1 (56) submitted with ATS/local-network review justification, current descriptions and screenshots. Apple readback: Warten auf Prüfung; submission dbbfb2f6-65af-477a-934a-dcbe621ef7e0. Approval/public release remain unverified. Evidence is in Store56/.
+- Earlier unchecked historical-parity items above are not implicitly completed by this delivery. Clarification is pending on whether that additional work remains requested after the current release and explicit proxy removal.
