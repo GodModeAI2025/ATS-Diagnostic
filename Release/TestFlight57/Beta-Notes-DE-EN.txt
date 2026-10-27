@@ -1,0 +1,3 @@
+DE: Build 57 behebt ein Absturzrisiko bei Zertifikaten mit doppelten Erweiterungen. Fehlerhafte oder nicht unterstützte Zertifikatsstrukturen erhalten einen verständlichen Hinweis. Originaldaten bleiben exportierbar; die System-Vertrauensprüfung bleibt aktiv. Bitte Zertifikatsdetails, Fehlerhinweise sowie normale HTTP/TLS-Diagnosen prüfen.
+
+EN: Build 57 fixes a possible crash when certificate extensions occur more than once. Malformed or unsupported certificate structures show a clear finding. Original DER export and system trust validation remain unchanged. Please test certificate details, error explanations and regular HTTP/TLS diagnostics.

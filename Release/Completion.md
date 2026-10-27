@@ -176,3 +176,11 @@ At the user’s explicit request, original Store55 (com.mobilebox.atsdiagnostic,
 - Twelve current screenshots (four medium iPhone, four large iPhone, four iPad) uploaded through the supported browser file chooser. No native app security restriction was bypassed.
 - Store 2.0.1 (56) submitted with ATS/local-network review justification, current descriptions and screenshots. Apple readback: Warten auf Prüfung; submission dbbfb2f6-65af-477a-934a-dcbe621ef7e0. Approval/public release remain unverified. Evidence is in Store56/.
 - Earlier unchecked historical-parity items above are not implicitly completed by this delivery. Clarification is pending on whether that additional work remains requested after the current release and explicit proxy removal.
+
+## TestFlight 2.0.1 (57), verified 2026-10-27
+
+- Certificate parser fix 8e496f2 rejects duplicate extension OIDs and presents a readable structure finding instead of risking a duplicate-key trap. Full 160-method app regression passed; original DER export and system trust validation are preserved.
+- Build 57 archived and uploaded successfully for original app 1297164068 / com.mobilebox.atsdiagnostic. Archive retains NSAllowsArbitraryLoads and the local-network purpose string.
+- Apple processing completed. Bilingual test notes saved; build bbec0034-a1c8-49da-b426-7b42763d8173 manually assigned to Mark – Intern. Group page confirms 2.0.1 (57) Im Test and exactly one tester, mark_zimmermann@mac.com, currently Eingeladen. No additional tester or external group was added.
+- Existing Store 2.0.1 (56), with twelve current screenshots, remains Warten auf Prüfung under submission dbbfb2f6-65af-477a-934a-dcbe621ef7e0. This TestFlight delivery does not replace it.
+- Physical installation of 57 and Apple approval/publication are not verified. Evidence, upload logs and status are in TestFlight57/.
