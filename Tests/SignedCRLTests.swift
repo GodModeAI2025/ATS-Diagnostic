@@ -7,12 +7,12 @@ struct SignedCRLTests {
         let length: [UInt8] = value.count < 128 ? [UInt8(value.count)] : [0x82,UInt8(value.count>>8),UInt8(value.count&255)]
         return Data([tag]+length)+value
     }
-    private func fixture(next: String = "300101000000Z",issuer: Data = Data(),delta: Bool = false, point: String? = nil, flags: Data = Data()) throws -> (data:Data,key:SecKey) {
+    private func fixture(next: String = "300101000000Z",issuer: Data = Data(),delta: Bool = false, point: String? = nil, flags: Data = Data(), issued: String = "250101000000Z") throws -> (data:Data,key:SecKey) {
         let key = try #require(SecKeyCreateRandomKey([kSecAttrKeyType:kSecAttrKeyTypeECSECPrimeRandom,kSecAttrKeySizeInBits:256,kSecAttrIsPermanent:false] as CFDictionary,nil))
         let publicKey = try #require(SecKeyCopyPublicKey(key))
         let algorithm = tlv(0x30,Data([0x06,0x08,0x2a,0x86,0x48,0xce,0x3d,0x04,0x03,0x02]))
         let entry = tlv(0x30,tlv(2,Data([1]))+tlv(0x17,Data("250101000000Z".utf8)))
-        var fields = tlv(2,Data([1]))+algorithm+tlv(0x30,issuer)+tlv(0x17,Data("250101000000Z".utf8))+tlv(0x17,Data(next.utf8))+tlv(0x30,entry)
+        var fields = tlv(2,Data([1]))+algorithm+tlv(0x30,issuer)+tlv(0x17,Data(issued.utf8))+tlv(0x17,Data(next.utf8))+tlv(0x30,entry)
         if delta { let ext = tlv(0x30,Data([0x06,0x03,0x55,0x1d,0x1b])+tlv(4,tlv(2,Data([1]))));fields += tlv(0xa0,tlv(0x30,ext)) }
         if let point {
             let info = tlv(0x30,tlv(0xa0,tlv(0xa0,tlv(0x86,Data(point.utf8))))+flags)
@@ -29,6 +29,18 @@ struct SignedCRLTests {
         #expect(result.revoked);#expect(result.revocationDate != nil)
         let absent = try SignedCRL.validate(value.data,issuerKey:value.key,issuerName:Data(),serial:Data([2]),distributionPoint:"https://example.test/list")
         #expect(!absent.revoked)
+    }
+    @Test func preservesIssueRevocationAndExpiryBoundaries() throws {
+        let value = try fixture()
+        let issueDate = Date(timeIntervalSince1970: 1_735_689_600) // 2025-01-01T00:00:00Z
+        let result = try SignedCRL.validate(value.data,issuerKey:value.key,issuerName:Data(),serial:Data([1]),distributionPoint:"https://example.test/list",now:issueDate)
+        #expect(result.revoked)
+        #expect(result.revocationDate == issueDate)
+        for rejectedDate in [issueDate.addingTimeInterval(-1), Date(timeIntervalSince1970: 1_893_456_000)] {
+            #expect(throws:SignedCRL.ValidationError.self) { try SignedCRL.validate(value.data,issuerKey:value.key,issuerName:Data(),serial:Data([1]),distributionPoint:"https://example.test/list",now:rejectedDate) }
+        }
+        let futureRevocation = try fixture(issued:"240101000000Z")
+        #expect(throws:SignedCRL.ValidationError.self) { try SignedCRL.validate(futureRevocation.data,issuerKey:futureRevocation.key,issuerName:Data(),serial:Data([1]),distributionPoint:"https://example.test/list",now:issueDate.addingTimeInterval(-1)) }
     }
     @Test func rejectsTamperedSignature() throws {
         let value = try fixture();var altered = value.data;altered[altered.count-1] ^= 1

@@ -19,7 +19,8 @@ enum SignedCRL {
         guard SecKeyVerifySignature(issuerKey,algorithm,signedBytes as CFData,Data(signatureBits.value.dropFirst()) as CFData,&error) else { throw ValidationError.signature }
         let nodes = tbs.children, offset = nodes.first?.tag == 2 ? 1 : 0
         guard nodes.count >= offset+4, nodes[offset].value == signatureAlgorithm.value, nodes[offset+1].value == issuerName else { throw ValidationError.issuer }
-        guard let issued = X509.date(nodes[offset+2]), let next = X509.date(nodes[offset+3]), issued <= now, next > now else { throw ValidationError.stale }
+        // Date.<= weak-links a missing Foundation symbol on Mac Catalyst 27.2.
+        guard let issued = X509.date(nodes[offset+2]), let next = X509.date(nodes[offset+3]), issued.timeIntervalSinceReferenceDate <= now.timeIntervalSinceReferenceDate, next > now else { throw ValidationError.stale }
         for container in nodes where container.tag == 0xa0 {
             for ext in container.children.first?.children ?? [] {
                 guard let identifier = ext.children.first?.oid, let encoded = ext.children.last else { throw ValidationError.malformed }
@@ -45,7 +46,7 @@ enum SignedCRL {
                 if critical || ext.children.first?.oid == "2.5.29.29" { throw ValidationError.unsupported }
             }
             if normalizedSerial(entrySerial.value) == normalizedSerial(serial) {
-                guard entry.children.count >= 2, let date = X509.date(entry.children[1]), date <= now else { throw ValidationError.malformed }
+                guard entry.children.count >= 2, let date = X509.date(entry.children[1]), date.timeIntervalSinceReferenceDate <= now.timeIntervalSinceReferenceDate else { throw ValidationError.malformed }
                 for ext in entry.children.dropFirst(2).flatMap(\.children) {
                     let critical = ext.children.contains { $0.tag == 1 && $0.value.first != 0 }
                     if critical { throw ValidationError.unsupported }
