@@ -1,0 +1,169 @@
+Device orientation: Unknown
+------------------------
+Application bundle identifier: com.mobilebox.atsdiagnostic
+Application UI orientation: Portrait
+Application, pid: 68483, label: 'ATS Diagnostic'
+ Window, {{0.0, 0.0}, {402.0, 874.0}}, hitPoint: {201.0, 437.0}
+  Other, {{0.0, 0.0}, {402.0, 874.0}}, hitPoint: {201.0, 437.0}
+  Other, {{0.0, 0.0}, {402.0, 874.0}}, hitPoint: {201.0, 437.0}
+   Other, {{0.0, 0.0}, {402.0, 874.0}}, hitPoint: {201.0, 437.0}
+    Other, {{0.0, 0.0}, {402.0, 874.0}}, hitPoint: {201.0, 437.0}
+     Other, {{0.0, 0.0}, {402.0, 874.0}}, hitPoint: {201.0, 437.0}
+      Other, {{0.0, 0.0}, {402.0, 874.0}}, hitPoint: {201.0, 437.0}
+       Other, {{0.0, 0.0}, {402.0, 874.0}}, hitPoint: {201.0, 437.0}
+        Other, {{0.0, 0.0}, {402.0, 874.0}}, hitPoint: {201.0, 437.0}
+         Other, {{0.0, 0.0}, {402.0, 874.0}}, hitPoint: {201.0, 437.0}
+          Other, {{0.0, 0.0}, {402.0, 874.0}}, hitPoint: {201.0, 437.0}
+           Other, {{0.0, 0.0}, {402.0, 874.0}}, hitPoint: {201.0, 437.0}
+            Other, {{0.0, 0.0}, {402.0, 874.0}}, hitPoint: {201.0, 437.0}
+             NavigationBar, {{0.0, 62.0}, {402.0, 54.0}}, identifier: 'Requests', hitPoint: {201.0, 89.0}
+              StaticText, {{163.7, 73.7}, {74.3, 20.7}}, label: 'Requests', hitPoint: {200.8, 84.0}
+              Button, {{346.0, 66.0}, {36.0, 36.0}}, label: 'Import cURL', hitPoint: {364.0, 84.0}
+             Other, {{0.0, 0.0}, {402.0, 874.0}}, hitPoint: {201.0, 437.0}
+              Other, {{0.0, 0.0}, {402.0, 874.0}}, hitPoint: {201.0, 437.0}
+               Other, {{0.0, 0.0}, {402.0, 874.0}}, hitPoint: {201.0, 437.0}
+                Other, {{0.0, 0.0}, {402.0, 874.0}}, hitPoint: {201.0, 437.0}
+                 CollectionView, {{0.0, 0.0}, {402.0, 874.0}}, hitPoint: {201.0, 437.0}
+                  Other, {{-16.0, -1632.0}, {434.0, 1910.0}}, hitPoint: {201.0, 139.0}
+                  Other, {{0.0, 0.0}, {402.0, 874.0}}, hitPoint: {201.0, 437.0}
+                   Other, {{0.0, 0.0}, {402.0, 156.0}}, hitPoint: {201.0, 78.0}
+                   Other, {{0.0, 741.0}, {402.0, 133.0}}, hitPoint: {201.0, 807.5}
+                  Other, {{0.0, 0.0}, {402.0, 874.0}}, hitPoint: {201.0, 437.0}
+                   Other, {{0.0, 741.0}, {402.0, 133.0}}, hitPoint: {201.0, 807.5}
+                  Cell, {{16.0, 116.0}, {370.0, 40.3}}, hitPoint: {201.0, 136.2}
+                   Other, {{16.0, 116.0}, {370.0, 40.3}}, hitPoint: {201.0, 136.2}
+                   Other, {{16.0, 116.0}, {370.0, 40.3}}, hitPoint: {201.0, 136.2}
+                    Other, {{16.0, 116.0}, {370.0, 40.3}}, hitPoint: {201.0, 136.2}
+                     Other, {{16.0, 116.0}, {370.0, 40.3}}, hitPoint: {201.0, 136.2}
+                      StaticText, {{16.0, 116.0}, {370.0, 40.3}}, label: 'Request', hitPoint: {201.0, 136.2}
+                  Cell, {{16.0, 156.3}, {370.0, 52.0}}, hitPoint: {201.0, 182.3}
+                   Other, {{16.0, 156.3}, {370.0, 52.0}}, hitPoint: {201.0, 182.3}
+                    Other, {{16.0, 156.3}, {370.0, 52.0}}, hitPoint: {201.0, 182.3}
+                   Other, {{16.0, 156.3}, {370.0, 52.0}}, hitPoint: {201.0, 182.3}
+                    Other, {{16.0, 156.3}, {370.0, 52.0}}, hitPoint: {201.0, 182.3}
+                     Other, {{16.0, 156.3}, {370.0, 52.0}}, hitPoint: {201.0, 182.3}
+                      TextField, {{36.0, 171.3}, {330.0, 22.0}}, placeholderValue: 'https://example.com/api', hitPoint: {201.0, 182.3}
+                  Cell, {{16.0, 208.3}, {370.0, 52.0}}, hitPoint: {201.0, 234.3}
+                   Other, {{16.0, 208.3}, {370.0, 52.0}}, hitPoint: {201.0, 234.3}
+                    Other, {{16.0, 208.3}, {370.0, 52.0}}, hitPoint: {201.0, 234.3}
+                   Other, {{16.0, 208.3}, {370.0, 52.0}}, hitPoint: {201.0, 234.3}
+                    Other, {{16.0, 208.3}, {370.0, 52.0}}, hitPoint: {201.0, 234.3}
+                     Other, {{16.0, 208.3}, {370.0, 52.0}}, hitPoint: {201.0, 234.3}
+                      Button, {{36.0, 217.3}, {330.0, 34.3}}, label: 'Method, GET', hitPoint: {201.0, 234.5}
+                       StaticText, {{317.3, 224.3}, {32.3, 20.3}}, label: 'GET', hitPoint: {333.5, 234.5}
+                      StaticText, {{36.0, 224.2}, {58.7, 20.3}}, label: 'Method', hitPoint: {65.3, 234.3}
+                  Other, {{36.0, 207.3}, {330.0, 1.0}}, hitPoint: {201.0, 207.8}
+                  Other, {{-16.0, 278.0}, {434.0, 123.0}}, hitPoint: {201.0, 339.5}
+                  Cell, {{16.0, 295.3}, {370.0, 88.0}}, hitPoint: {201.0, 339.3}
+                   Other, {{16.0, 295.3}, {370.0, 88.0}}, hitPoint: {201.0, 339.3}
+                    Other, {{16.0, 295.3}, {370.0, 88.0}}, hitPoint: {201.0, 339.3}
+                   Other, {{16.0, 295.3}, {370.0, 88.0}}, hitPoint: {201.0, 339.3}
+                    Other, {{16.0, 295.3}, {370.0, 88.0}}, hitPoint: {201.0, 339.3}
+                     Other, {{16.0, 295.3}, {370.0, 88.0}}, hitPoint: {201.0, 339.3}
+                      StaticText, {{16.0, 295.3}, {370.0, 88.0}}, label: 'Send an HTTP request and inspect the server’s response. For a simple GET request, the URL is enough.', hitPoint: {201.0, 339.3}
+                      Image, {{36.0, 310.3}, {36.0, 36.0}}, label: 'Illustration-traffic', hitPoint: {54.0, 328.3}
+                  Other, {{-16.0, 401.0}, {434.0, 214.0}}, hitPoint: {201.0, 508.0}
+                  Cell, {{16.0, 401.0}, {370.0, 40.3}}, hitPoint: {201.0, 421.2}
+                   Other, {{16.0, 401.0}, {370.0, 40.3}}, hitPoint: {201.0, 421.2}
+                   Other, {{16.0, 401.0}, {370.0, 40.3}}, hitPoint: {201.0, 421.2}
+                    Other, {{16.0, 401.0}, {370.0, 40.3}}, hitPoint: {201.0, 421.2}
+                     Other, {{16.0, 401.0}, {370.0, 40.3}}, hitPoint: {201.0, 421.2}
+                      StaticText, {{16.0, 401.0}, {370.0, 40.3}}, label: 'Optional request fields', hitPoint: {201.0, 421.2}
+                  Cell, {{16.0, 441.3}, {370.0, 52.0}}, hitPoint: {201.0, 467.3}
+                   Other, {{16.0, 441.3}, {370.0, 52.0}}, hitPoint: {201.0, 467.3}
+                    Other, {{16.0, 441.3}, {370.0, 52.0}}, hitPoint: {201.0, 467.3}
+                   Other, {{16.0, 441.3}, {370.0, 52.0}}, hitPoint: {201.0, 467.3}
+                    Other, {{16.0, 441.3}, {370.0, 52.0}}, hitPoint: {201.0, 467.3}
+                     Other, {{16.0, 441.3}, {370.0, 52.0}}, hitPoint: {201.0, 467.3}
+                      Button, {{16.0, 441.3}, {370.0, 52.0}}, label: 'Headers', hitPoint: {201.0, 467.3}
+                       StaticText, {{35.3, 457.2}, {105.0, 20.3}}, label: 'Headers', hitPoint: {87.8, 467.3}
+                       Image, {{35.3, 457.7}, {25.3, 19.7}}, identifier: 'list.bullet.rectangle', label: 'Bulleted List In A Rectangle', hitPoint: {48.0, 467.5}
+                       Button, {{355.7, 460.3}, {10.3, 14.0}}, hitPoint: {360.8, 467.3}
+                        Image, {{355.7, 460.3}, {10.3, 14.0}}, identifier: 'collapsed', hitPoint: {360.8, 467.3}
+                  Cell, {{16.0, 493.3}, {370.0, 52.0}}, hitPoint: {201.0, 519.3}
+                   Other, {{16.0, 493.3}, {370.0, 52.0}}, hitPoint: {201.0, 519.3}
+                    Other, {{16.0, 493.3}, {370.0, 52.0}}, hitPoint: {201.0, 519.3}
+                   Other, {{16.0, 493.3}, {370.0, 52.0}}, hitPoint: {201.0, 519.3}
+                    Other, {{16.0, 493.3}, {370.0, 52.0}}, hitPoint: {201.0, 519.3}
+                     Other, {{16.0, 493.3}, {370.0, 52.0}}, hitPoint: {201.0, 519.3}
+                      Button, {{16.0, 493.3}, {370.0, 52.0}}, label: 'Body', hitPoint: {201.0, 519.3}
+                       Image, {{39.0, 508.0}, {18.0, 23.0}}, identifier: 'doc.text', label: 'Plain Text Document', hitPoint: {48.0, 519.5}
+                       StaticText, {{39.0, 508.0}, {76.3, 23.0}}, label: 'Body', hitPoint: {77.2, 519.5}
+                       Button, {{355.7, 512.3}, {10.3, 14.0}}, hitPoint: {360.8, 519.3}
+                        Image, {{355.7, 512.3}, {10.3, 14.0}}, identifier: 'collapsed', hitPoint: {360.8, 519.3}
+                  Other, {{76.0, 492.3}, {290.0, 1.0}}, hitPoint: {221.0, 492.8}
+                  Cell, {{16.0, 545.3}, {370.0, 52.0}}, hitPoint: {201.0, 571.3}
+                   Other, {{16.0, 545.3}, {370.0, 52.0}}, hitPoint: {201.0, 571.3}
+                    Other, {{16.0, 545.3}, {370.0, 52.0}}, hitPoint: {201.0, 571.3}
+                   Other, {{16.0, 545.3}, {370.0, 52.0}}, hitPoint: {201.0, 571.3}
+                    Other, {{16.0, 545.3}, {370.0, 52.0}}, hitPoint: {201.0, 571.3}
+                     Other, {{16.0, 545.3}, {370.0, 52.0}}, hitPoint: {201.0, 571.3}
+                      Button, {{16.0, 545.3}, {370.0, 52.0}}, label: 'Verify download checksum', hitPoint: {201.0, 571.3}
+                       StaticText, {{39.3, 560.7}, {241.0, 21.7}}, label: 'Verify download checksum', hitPoint: {159.8, 571.5}
+                       Image, {{39.3, 560.7}, {17.7, 21.7}}, identifier: 'checkmark.shield', label: 'Checkmark In A Shield', Selected, hitPoint: {48.2, 571.5}
+                       Button, {{355.7, 564.3}, {10.3, 14.0}}, hitPoint: {360.8, 571.3}
+                        Image, {{355.7, 564.3}, {10.3, 14.0}}, identifier: 'collapsed', hitPoint: {360.8, 571.3}
+                  Other, {{76.0, 544.3}, {290.0, 1.0}}, hitPoint: {221.0, 544.8}
+                  Other, {{-16.0, 614.7}, {434.0, 1917.7}}, hitPoint: {201.0, 744.3}
+                  Cell, {{16.0, 632.3}, {370.0, 80.3}}, hitPoint: {201.0, 672.5}
+                   Other, {{16.0, 632.3}, {370.0, 80.3}}, hitPoint: {201.0, 672.5}
+                    Other, {{16.0, 632.3}, {370.0, 80.3}}, hitPoint: {201.0, 672.5}
+                   Other, {{16.0, 632.3}, {370.0, 80.3}}, hitPoint: {201.0, 672.5}
+                    Other, {{16.0, 632.3}, {370.0, 80.3}}, hitPoint: {201.0, 672.5}
+                     Other, {{16.0, 632.3}, {370.0, 80.3}}, hitPoint: {201.0, 672.5}
+                      Button, {{16.0, 632.3}, {370.0, 80.3}}, label: 'Send request', Disabled, hitPoint: {201.0, 672.5}
+                       StaticText, {{36.0, 647.3}, {330.0, 50.3}}, label: 'Send request', Disabled, hitPoint: {201.0, 672.5}
+                       Image, {{130.7, 661.3}, {22.3, 22.3}}, identifier: 'paperplane', label: 'Send', Disabled, hitPoint: {141.8, 672.5}
+                  Cell, {{16.0, 712.7}, {370.0, 52.0}}, hitPoint: {201.0, 738.7}
+                   Other, {{16.0, 712.7}, {370.0, 52.0}}, hitPoint: {201.0, 738.7}
+                    Other, {{16.0, 712.7}, {370.0, 52.0}}, hitPoint: {201.0, 738.7}
+                   Other, {{16.0, 712.7}, {370.0, 52.0}}, hitPoint: {201.0, 738.7}
+                    Other, {{16.0, 712.7}, {370.0, 52.0}}, hitPoint: {201.0, 738.7}
+                     Other, {{16.0, 712.7}, {370.0, 52.0}}, hitPoint: {201.0, 738.7}
+                      Button, {{16.0, 712.7}, {370.0, 52.0}}, label: 'Open latest response', hitPoint: {201.0, 738.7}
+                       StaticText, {{36.0, 728.5}, {162.3, 20.3}}, label: 'Open latest response', hitPoint: {117.2, 738.7}
+                       Image, {{356.7, 732.7}, {7.0, 12.0}}, identifier: 'chevron.forward', hitPoint: {360.2, 738.7}
+                  Other, {{170.2, 711.7}, {195.8, 1.0}}, hitPoint: {268.1, 712.2}
+                  Other, {{369.0, 116.0}, {30.0, 675.0}}, label: 'Vertical scroll bar, 1 page', value: 0 %, hitPoint: {384.0, 453.5}
+                   Other, {{396.0, 125.3}, {3.0, 662.7}}, hitPoint: {397.5, 456.7}
+                  Other, {{369.0, 116.0}, {30.0, 675.0}}, label: 'Vertical scroll bar, 1 page', value: 0 %, hitPoint: {384.0, 453.5}
+                   Other, {{396.0, 125.3}, {3.0, 662.7}}, hitPoint: {397.5, 456.7}
+             Toolbar, {{0.0, 0.0}, {402.0, 874.0}}, identifier: 'Toolbar', label: 'Toolbar', hitPoint: {201.0, 437.0}
+              Other, {{0.0, 0.0}, {402.0, 874.0}}, hitPoint: {201.0, 437.0}
+       Other, {{0.0, 0.0}, {402.0, 874.0}}, hitPoint: {201.0, 437.0}
+        Other, {{0.0, 791.0}, {402.0, 83.0}}, hitPoint: {201.0, 832.5}
+         Other, {{0.0, 0.0}, {402.0, 874.0}}, hitPoint: {201.0, 437.0}
+          TabBar, {{0.0, 791.0}, {402.0, 83.0}}, label: 'Tab Bar', hitPoint: {201.0, 832.5}
+           Other, {{21.0, 791.0}, {360.0, 62.0}}, hitPoint: {201.0, 822.0}
+            Other, {{21.0, 791.0}, {95.0, 54.0}}, hitPoint: {68.5, 818.0}
+            Other, {{21.0, 791.0}, {360.0, 62.0}}, hitPoint: {201.0, 822.0}
+             Button, {{25.0, 795.0}, {95.0, 54.0}}, identifier: 'checkmark.shield', label: 'Inspect', hitPoint: {72.5, 822.0}
+              Image, {{60.3, 801.7}, {24.7, 26.7}}, identifier: 'checkmark.shield.fill', label: 'Checkmark in a filled shield', hitPoint: {72.7, 815.0}
+             Button, {{110.7, 795.0}, {95.0, 54.0}}, identifier: 'arrow.up.arrow.down', label: 'Requests', Selected, hitPoint: {158.2, 822.0}
+              Image, {{141.7, 801.7}, {33.0, 26.3}}, identifier: 'arrow.up.arrow.down', label: 'sort', hitPoint: {158.2, 814.8}
+             Button, {{196.3, 795.0}, {95.0, 54.0}}, identifier: 'clock', label: 'History', hitPoint: {243.8, 822.0}
+              Image, {{230.3, 801.3}, {27.3, 27.3}}, identifier: 'clock.fill', label: 'clock', hitPoint: {244.0, 815.0}
+             Button, {{282.0, 795.0}, {95.0, 54.0}}, identifier: 'wrench.and.screwdriver', label: 'Tools', hitPoint: {329.5, 822.0}
+              Image, {{313.3, 799.3}, {32.7, 31.7}}, identifier: 'wrench.and.screwdriver.fill', label: 'Wrench and screwdriver, filled', hitPoint: {329.7, 815.2}
+            Other, {{21.0, 791.0}, {360.0, 62.0}}, hitPoint: {201.0, 822.0}
+            Other, {{110.7, 795.0}, {95.0, 54.0}}, hitPoint: {158.2, 822.0}
+             Other, {{110.7, 795.0}, {95.0, 54.0}}, hitPoint: {158.2, 822.0}
+              Other, {{110.7, 795.0}, {95.0, 54.0}}, hitPoint: {158.2, 822.0}
+              Other, {{110.7, 795.0}, {95.0, 54.0}}, hitPoint: {158.2, 822.0}
+               Other, {{110.7, 795.0}, {95.0, 54.0}}, hitPoint: {158.2, 822.0}
+                Other, {{110.7, 795.0}, {95.0, 54.0}}, hitPoint: {158.2, 822.0}
+                 Other, {{110.7, 795.0}, {95.0, 54.0}}, hitPoint: {158.2, 822.0}
+                Other, {{110.7, 795.0}, {95.0, 54.0}}, hitPoint: {158.2, 822.0}
+               Other, {{110.7, 795.0}, {95.0, 54.0}}, hitPoint: {158.2, 822.0}
+         Other, {{0.0, 791.0}, {402.0, 83.0}}, hitPoint: {201.0, 832.5}
+          Other, {{0.0, 791.0}, {402.0, 83.0}}, hitPoint: {201.0, 832.5}
+           Other, {{0.0, 791.0}, {402.0, 83.0}}, hitPoint: {201.0, 832.5}
+            Other, {{0.0, 791.0}, {402.0, 83.0}}, hitPoint: {201.0, 832.5}
+             Other, {{0.0, 791.0}, {402.0, 83.0}}, hitPoint: {201.0, 832.5}
+              Other, {{0.0, 791.0}, {402.0, 83.0}}, hitPoint: {201.0, 832.5}
+            Other, {{0.0, 791.0}, {402.0, 83.0}}, hitPoint: {201.0, 832.5}
+             Other, {{0.0, 791.0}, {402.0, 83.0}}, hitPoint: {201.0, 832.5}
+      Other, {{0.0, 62.0}, {402.0, 778.0}}, hitPoint: {201.0, 451.0}
+ Window, {{0.0, 0.0}, {402.0, 874.0}}, hitPoint: {201.0, 437.0}
+  Other, {{0.0, 0.0}, {402.0, 874.0}}, hitPoint: {201.0, 437.0}
+   Other, {{0.0, 0.0}, {402.0, 874.0}}, hitPoint: {201.0, 437.0}

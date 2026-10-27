@@ -1,0 +1,14 @@
+Understand HTTP, TLS and certificates on your iPhone and iPad.
+
+Inspect a server you choose on the Internet or your local network. See certificate issuers and chains, validity dates, fingerprints and Apple system trust results. Understand failures with readable explanations and the original error evidence.
+
+• Compare individual TLS-version probes and the negotiated connection.
+• Examine HTTP response headers, HSTS, redirects and connection timings.
+• Build requests, import cURL commands and inspect URL query parameters.
+• Save inspection history locally and export selected reports as HAR or JSON.
+• Use IPv4/IPv6 forward and reverse lookup and SHA-256 download checks.
+• Explore Certificate Transparency timestamps and dated root-store directories.
+
+HTTP and legacy TLS configurations can be tested for diagnosis. HTTPS certificate trust is still evaluated; invalid certificates are reported rather than silently accepted. Results describe the observed connection and do not certify every ATS requirement. Root-store membership is separate from platform trust. SCT signatures and log inclusion are not independently verified.
+
+No account is required. History stays on your device; share only the reports you choose. This app does not capture traffic from other apps and does not install a VPN or root certificate.

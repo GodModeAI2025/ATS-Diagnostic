@@ -31,5 +31,12 @@
     "portal_submission_date": "26. Okt. 2026 um 11:33 Uhr",
     "submission_id": "2bbc0bc5-8b0a-4506-9c33-04c26e43a1d6",
     "evidence": "Resubmission-2026-10-26/Waiting-for-Review.png"
+  },
+  "verification_2026_10_27": {
+    "reviewState": "Genehmigt",
+    "distributionState": "Bereit für Vertrieb",
+    "approvalVerified": true,
+    "publicAvailabilityVerified": false,
+    "source": "App Store Connect review submission and deliverable version page read live"
   }
 }

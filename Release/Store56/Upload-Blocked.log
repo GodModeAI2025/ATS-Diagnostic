@@ -1,0 +1,6 @@
+2026-10-27 07:50:45.923 xcodebuild[62261:13364489] [MT] IDEDistribution: -[IDEDistributionLogging _createLoggingBundleAtPath:]: Created bundle at path "/var/folders/x1/7lf9qqs113vgtrl29vpc0t880000gn/T/ATSDiagnostic_2026-10-27_07-50-45.923.xcdistributionlogs".
+error: exportArchive Failed to Use Accounts
+  App Store Connect access for “SP73Z8JWXM” is required. Ensure that your Apple Account usernames and passwords are correct in Accounts settings.
+
+** EXPORT FAILED **
+

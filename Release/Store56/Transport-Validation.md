@@ -1,0 +1,15 @@
+# Transport configuration and release checks
+
+- Original signed Store archive 2.0 (55) and new signed archive 2.0.1 (56): NSAppTransportSecurity contains exactly NSAllowsArbitraryLoads=true; local-network purpose string present.
+- No fine-grained global ATS key overrides that exception. No unnecessary VPN, multicast or background-mode capabilities were added. Direct user-selected TCP/HTTP/TLS requests do not need a Network Extension entitlement. Local-network access remains subject to user permission.
+- Independent TLS 1.0/1.1/1.2/1.3 probes configure explicit protocol bounds and preserve system trust validation/errors. The OS and server still determine which algorithms are supported. An ATS exception cannot restore removed cryptography.
+- New regression test checks the actual app-bundle plist, effective ATS exception, local-network usage description and absence of background modes.
+- Full suite: 158 tests passed, zero failures/skips on isolated iOS 27.2 simulator. Native QA separately tests HTTP success and expired HTTPS rejection; screenshots and report are under Screenshots/.
+- Build/archive succeeded. Archive uses development signing before export (get-task-allow=true); App Store export must re-sign for distribution. Do not treat archive signing as uploaded distribution signing.
+- Upload attempt failed: exportArchive Failed to Use Accounts; App Store Connect access for team SP73Z8JWXM is required. Xcode account refresh requested. No claim that build 56 has been uploaded or submitted yet.
+
+Apple references verified 2026-10-27:
+- https://developer.apple.com/documentation/bundleresources/information-property-list/nsapptransportsecurity/nsallowslocalnetworking
+- https://developer.apple.com/documentation/technotes/tn3179-understanding-local-network-privacy
+- https://developer.apple.com/documentation/technotes/tn3120-expected-use-cases-for-network-extension-packet-tunnel-providers
+- https://developer.apple.com/documentation/technotes/tn3134-network-extension-provider-deployment

@@ -1,0 +1,3 @@
+A clearer diagnostic workspace with four tabs: Inspect, Requests, History and Tools.
+
+Removed the foreground-only local proxy. Direct HTTP/TLS diagnostics, certificate details and local-network inspection remain available. Updated product screenshots show the current iPhone and iPad interface.

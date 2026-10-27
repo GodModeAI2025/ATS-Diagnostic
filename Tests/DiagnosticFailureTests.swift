@@ -13,6 +13,9 @@ struct DiagnosticFailureTests {
         var value = record(URLError.secureConnectionFailed.rawValue,ssl:Int(errSSLFatalAlert));value.trustValid = false;value.trustErrors = [.init(domain:NSOSStatusErrorDomain,code:Int(errSecHostNameMismatch),message:"Mismatch",sslCode:nil)]
         #expect(DiagnosticFailure.explain(value)?.cause == .hostname)
     }
+    @Test func recordedATSFailureRemainsDistinctFromCertificateFailure() {
+        #expect(DiagnosticFailure.explain(record(URLError.appTransportSecurityRequiresSecureConnection.rawValue))?.cause == .cleartext)
+    }
     @Test func expiryUsesSystemEvidence() { #expect(DiagnosticFailure.explain(record(Int(errSecCertificateExpired),domain:NSOSStatusErrorDomain))?.cause == .expired) }
     @Test func tlsVersionUsesActualPeerAlert() { #expect(DiagnosticFailure.explain(record(URLError.secureConnectionFailed.rawValue,ssl:Int(errSSLPeerProtocolVersion)))?.cause == .tlsVersion) }
     @Test func genericHandshakeDoesNotGuessCipher() { #expect(DiagnosticFailure.explain(record(URLError.secureConnectionFailed.rawValue,ssl:Int(errSSLPeerHandshakeFail)))?.cause == .tlsHandshake) }

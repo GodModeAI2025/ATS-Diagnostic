@@ -46,7 +46,7 @@ struct DiagnosticFailure: Sendable {
             return make(.hostname,"Zertifikat passt nicht zum Hostnamen","Die Zertifikatsprüfung hat eine Abweichung zwischen aufgerufenem Host und den erlaubten Zertifikatsnamen festgestellt.","Adresse und Subject Alternative Names vergleichen. Der Betreiber muss ein Zertifikat für genau diesen Host einsetzen.")
         }
         if urlCodes.contains(URLError.appTransportSecurityRequiresSecureConnection.rawValue) {
-            return make(.cleartext,"Unverschlüsseltes HTTP durch ATS blockiert","Die angeforderte URL verwendet HTTP. Die App behält Apples Transport-Schutz bei und sendet diese Anfrage nicht unverschlüsselt.","Eine HTTPS-Adresse verwenden. Dieser Befund beschreibt die App-Richtlinie, nicht einen Fehler des Zertifikats.")
+            return make(.cleartext,"Unverschlüsseltes HTTP durch ATS blockiert","Die aufgezeichnete Systemmeldung meldet eine ATS-Sperre. ATS Diagnostic erlaubt HTTP für Diagnosezwecke; importierte Aufzeichnungen können aus Apps mit anderen Transportregeln stammen.","Herkunft der Aufzeichnung und wirksame ATS-Konfiguration prüfen. Eine ATS-Sperre ist kein Zertifikatsfehler.")
         }
         if securityCodes.contains(Int(errSSLATSMinimumVersionViolation)) || securityCodes.contains(Int(errSSLPeerProtocolVersion)) {
             return make(.tlsVersion,"TLS-Version nicht akzeptiert","Die Systemmeldung benennt eine nicht akzeptierte Protokollversion. Die Verbindung erfüllt die Anforderungen dieses Clients nicht.","Server auf TLS 1.2 oder TLS 1.3 aktualisieren; die einzelnen Versions-Probes können zusätzliche Handshake-Ergebnisse liefern.")

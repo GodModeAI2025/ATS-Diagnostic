@@ -1,0 +1,9 @@
+ATS Diagnostic is a user-directed HTTP/TLS and certificate diagnostic utility. Version 2.0.1 (56) removes the foreground-only proxy and its Capture tab. There is no VPN, background listener, TLS interception or installed root CA. No account is required.
+
+ATS justification: NSAllowsArbitraryLoads=YES is required to diagnose arbitrary user-selected HTTP endpoints and legacy TLS configurations, including devices on a local network and Internet servers operated by third parties. Their configurations are outside our control and cannot be pre-enumerated in NSExceptionDomains. The exception permits diagnosis; it is not a statement that the target is secure or that another app complies with ATS. Default HTTPS certificate-chain, hostname and validity checks remain enabled. Invalid certificates produce understandable errors and original evidence.
+
+NSLocalNetworkUsageDescription explains access to user-selected local devices and servers. The app performs no Bonjour browsing or multicast discovery, so no Bonjour service list or multicast entitlement is needed. Local access requires the user's system permission. No Network Extension entitlement is used.
+
+Test: enter http://example.com in Inspect to test an HTTP connection. Enter https://expired.badssl.com to see an expired-certificate failure. Open a result for issuer, chain, headers and TLS-version probes. Enter a reachable local device hostname/IP to exercise local-network permission. Platform TLS support and server reachability limit which legacy configurations can be negotiated; failures are preserved.
+
+Inspection history stays on-device; exports require an explicit user action. The privacy manifest declares app-container FileTimestamp access with reason C617.1. Updated screenshots show this version; inherited old screenshots and previews have been removed from the version's media sets.

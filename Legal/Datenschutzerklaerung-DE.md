@@ -1,6 +1,6 @@
 # Datenschutzerklärung für ATS Diagnostic
 
-Stand: 12. Oktober 2026
+Stand: 27. Oktober 2026
 
 ## Verantwortlicher und Kontakt
 
@@ -33,15 +33,13 @@ Die App verarbeitet eingegebene Adressen und Anfragen, Antwortstatus und Header,
 
 Abgeschlossene Diagnosen werden lokal im App-Speicher aufbewahrt, bis Sie Einträge oder die Historie löschen oder die Speichergrenzen der App ältere Einträge entfernen. Die Historie hat eine begrenzte Anzahl von Einträgen und ein begrenztes Speicherbudget; Körpervorschauen sind ebenfalls begrenzt. Einstellungen bleiben lokal gespeichert. Die App verwendet die Schutzmechanismen von iOS; dies ersetzt nicht die Absicherung Ihres Geräts.
 
-Von Ihnen konfigurierte Proxy-Regeln werden ebenfalls lokal gespeichert. Sie können Ziel-URLs, Methoden, Header und Anfrageinhalte enthalten. Aktivierte Regeln ändern passende Anfragen nur im von Ihnen gestarteten Proxy. Dabei kann eine Anfrage an das in der Regel festgelegte Ziel gesendet werden. Sie können Regeln deaktivieren oder löschen; laufende Proxy-Verbindungen verwenden den beim Start übernommenen Regelstand.
-
 Geräte- oder iCloud-Sicherungen können je nach Ihren Apple-Einstellungen App-Daten enthalten. Solche Sicherungen werden durch das Betriebssystem beziehungsweise Apple verwaltet, nicht durch einen eigenen ATS-Diagnostic-Server. Das Entfernen lokaler Einträge löscht nicht automatisch Kopien in bereits erstellten Sicherungen oder Exporten.
 
-## Lokales Netzwerk und Proxy
+## Lokales Netzwerk
 
 Der Zugriff auf das lokale Netzwerk dient der Prüfung von Geräten und Servern, die Sie auswählen. Die Systemberechtigung können Sie in den iOS-Einstellungen erteilen oder widerrufen. Ohne diese Berechtigung können lokale Prüfungen eingeschränkt sein. Internetprüfungen benötigen diese lokale Berechtigung grundsätzlich nicht.
 
-Der optionale HTTP-Proxy wird von Ihnen gestartet, ist auf die lokale Loopback-Schnittstelle dieses Geräts beschränkt und wird beim Wechsel in den Hintergrund gestoppt. Er kann die durch ihn geleiteten HTTP-Anfragen und begrenzte Vorschauen aufzeichnen. HTTPS-CONNECT-Verbindungen werden als undurchsichtiger Tunnel weitergeleitet; die App entschlüsselt dabei keine HTTPS-Inhalte und installiert keine eigene Root-CA. Es handelt sich nicht um einen geräteweiten VPN-Dienst.
+Seit Version 2.0.1 enthält die App keinen lokalen HTTP-Proxy mehr. Sie erfasst keinen Datenverkehr anderer Apps, installiert keine Root-CA und bietet keinen VPN-Dienst an. Eventuell aus einer früheren Version vorhandene Proxy-Regeldateien werden nicht geladen oder angewendet; sie werden durch das Update nicht automatisch gelöscht.
 
 ## Exporte, Freigaben und externe Links
 

@@ -1,6 +1,6 @@
 # Privacy Policy for ATS Diagnostic
 
-Last updated: 12 October 2026
+Last updated: 27 October 2026
 
 ## Controller and contact
 
@@ -33,15 +33,13 @@ The app processes entered addresses and requests, response status and headers, b
 
 Completed records remain in local app storage until you delete records or history, or the app's storage limits remove older entries. The history has entry and storage limits, and body previews are bounded. Settings are stored locally. The app uses iOS data-protection mechanisms; these do not replace securing your device.
 
-Proxy rules you configure are also stored locally. They may contain target URLs, methods, headers and request contents. Enabled rules change matching requests only within the proxy you start. A request may then be sent to the target configured in the rule. You can disable or delete rules; a running proxy uses the rule snapshot selected at startup.
-
 Device or iCloud backups may contain app data, depending on your Apple settings. The operating system and Apple manage these backups; they are not an ATS Diagnostic backend. Deleting local records does not automatically remove copies from existing backups or exports.
 
-## Local network and proxy
+## Local network
 
 Local-network access is used to inspect devices and servers you select. You can grant or revoke the system permission in iOS settings. Local inspections may be limited without permission. Internet inspections generally do not require this local-network permission.
 
-You explicitly start the optional HTTP proxy. It listens only on this device's loopback interface and stops when the app enters the background. It may record HTTP requests routed through it and bounded previews. HTTPS CONNECT connections are forwarded as opaque tunnels: the app does not decrypt their HTTPS contents or install a root CA. This is not a device-wide VPN service.
+Since version 2.0.1, the app no longer includes a local HTTP proxy. It does not capture other apps’ traffic, install a root CA or provide a VPN service. Any proxy-rule files left from an earlier version are not loaded or applied and are not automatically deleted by the update.
 
 ## Exports, sharing and external links
 

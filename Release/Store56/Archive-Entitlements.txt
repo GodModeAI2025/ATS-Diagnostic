@@ -1,0 +1,12 @@
+[Dict]
+	[Key] application-identifier
+	[Value]
+		[String] SP73Z8JWXM.com.mobilebox.atsdiagnostic
+	[Key] com.apple.developer.team-identifier
+	[Value]
+		[String] SP73Z8JWXM
+	[Key] get-task-allow
+	[Value]
+		[Bool] true
+
+Executable=/Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/work/ATSDiagnostic-Store56.xcarchive/Products/Applications/ATSDiagnostic.app/ATSDiagnostic

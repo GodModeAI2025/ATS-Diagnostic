@@ -58,7 +58,6 @@
 		4ED4232225C983443FA7938D /* CertificateReminders.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91225691ACBDD43921BC9414 /* CertificateReminders.swift */; };
 		51975863A9E2C3D44D8E961F /* HSTSPolicyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9CCB91852D1C2F549C67ACC /* HSTSPolicyView.swift */; };
 		541095BC8BF9940CACAAD16D /* Diagnostic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0354E181C7AA4FB81B16BEBB /* Diagnostic.swift */; };
-		54C10D1536E6FB3037E4E700 /* ProxyRulesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25E124BB9B9A7DD4BEC89D4E /* ProxyRulesView.swift */; };
 		54CAB8BB40AE6483DC36D75B /* TLSDisplay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C37115E859C3B7E31FAB79C /* TLSDisplay.swift */; };
 		55353EB6457378815E588805 /* Integrity.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5571AEF32197ACDBF1475DB /* Integrity.swift */; };
 		5540E3D666229F5236001DF1 /* CertificateFormatsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BB9572933C9725E68F4AF2D /* CertificateFormatsTests.swift */; };
@@ -130,13 +129,11 @@
 		B89827E3E63739044284C76A /* Tools.swift in Sources */ = {isa = PBXBuildFile; fileRef = B623A579ADD8FD75F9E64D2A /* Tools.swift */; };
 		B8BBBA6048FDD004D4C8F20B /* HistoryRetention.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E94985D0FEBCCA700CA4190 /* HistoryRetention.swift */; };
 		B924E34D3C99DDB24D926116 /* HTTPProxyMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AA82D275D1C50A55AA9F83A /* HTTPProxyMessage.swift */; };
-		B9B4513E48061A6424EB8864 /* CaptureView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 287C93DA26E28D4037185486 /* CaptureView.swift */; };
 		BCE45EF3EE6F4566488E4C03 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5C445D36467C2B43616F628A /* LaunchScreen.storyboard */; };
 		BEA745643220C24E7F8E71C1 /* RevocationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADFBB0848E1250019868E7F3 /* RevocationView.swift */; };
 		BF07C549EB849D420428DC01 /* BadSSLCatalog.json in Resources */ = {isa = PBXBuildFile; fileRef = 9D694D65FB7B8DE61D1846A0 /* BadSSLCatalog.json */; };
 		BF6307C82B4BDB21AE152F13 /* HAR.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E46CE5231D8CC42A1587A78 /* HAR.swift */; };
 		C115430B664DBA8159D80D6F /* ProxyCapture.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BE50945D8B4124C39214F62 /* ProxyCapture.swift */; };
-		C19867815171413BF4317C2B /* CaptureView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 287C93DA26E28D4037185486 /* CaptureView.swift */; };
 		C20E1B5DF3B19D588AD83858 /* ATSDiagnosticApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA48D7B93B862A0646236C1B /* ATSDiagnosticApp.swift */; };
 		C2DB2498D717BB2B14CD6C59 /* CertificateDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B1A39C75564C7E5F42B7323 /* CertificateDetailView.swift */; };
 		CC88113277BF4067F6DFD238 /* ProxyRuleConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10B4D516E71AC67F1804E89D /* ProxyRuleConfiguration.swift */; };
@@ -145,7 +142,6 @@
 		CFB6E0FD6CBD29EDFBD87332 /* ReverseDNSLookupTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB89D263179CE8DD0A4EF985 /* ReverseDNSLookupTests.swift */; };
 		D2EACD1C8C02F6241D3DD599 /* SignedCRLTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 260C1CF7F732EF44D22E72DA /* SignedCRLTests.swift */; };
 		D36018ADF1ED7A65B2F192AF /* DiagnosticSettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B23483D08F8289B1EEBDA828 /* DiagnosticSettingsView.swift */; };
-		D925A10ECC1D2E5684458CE5 /* ProxyRulesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25E124BB9B9A7DD4BEC89D4E /* ProxyRulesView.swift */; };
 		DAD338AB51D878DA1BCF17E0 /* SDK-Post-Partial.json in Resources */ = {isa = PBXBuildFile; fileRef = 564023DD235D24ECA710F96D /* SDK-Post-Partial.json */; };
 		DBD6F73744A00D7409A10F86 /* LocalHTTPProxy.swift in Sources */ = {isa = PBXBuildFile; fileRef = F45C97FCFC49991D92C95A74 /* LocalHTTPProxy.swift */; };
 		DBF06B7274345B2226DB432E /* HTTPProxyRewrite.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77242E06CBEEC9EE31B5A2DF /* HTTPProxyRewrite.swift */; };
@@ -166,6 +162,7 @@
 		F37B064B276CF0A78155BA08 /* TLSVersionProbeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59E3EB89F895108488C30C16 /* TLSVersionProbeView.swift */; };
 		F50BCDE9B12AD890E5318501 /* HistoryPersistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAA33C1C93B935A4E25F3B42 /* HistoryPersistence.swift */; };
 		F513B992D4BDEDFC5BD5BD3C /* HSTSPolicyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D42C8014505D9708E3D7BA72 /* HSTSPolicyTests.swift */; };
+		F5BD9397C71438AC9D8ED2AD /* DiagnosticTransportConfigurationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB2B5369A5D16394B578F185 /* DiagnosticTransportConfigurationTests.swift */; };
 		F6EEE53A630A98E74C290A9E /* DNSLookup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C507F9752F38E931B806F86 /* DNSLookup.swift */; };
 		F7F5E9D9AAB9A9DDCC04267F /* DiagnosticOptions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CAB7A4A887A022BE790CC74 /* DiagnosticOptions.swift */; };
 		F9C880C6E3950843F0CF473E /* DNSLookupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38C6F47F5C79CC165D22F5AC /* DNSLookupView.swift */; };
@@ -217,9 +214,7 @@
 		2376A40FF8D615A5635F72D1 /* RevocationAssessment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RevocationAssessment.swift; sourceTree = "<group>"; };
 		24DBF19779BFD59CEA5F31DC /* HSTSPolicy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HSTSPolicy.swift; sourceTree = "<group>"; };
 		25717A33CD7A96A36B57D11D /* StreamingIntegrityTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StreamingIntegrityTests.swift; sourceTree = "<group>"; };
-		25E124BB9B9A7DD4BEC89D4E /* ProxyRulesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProxyRulesView.swift; sourceTree = "<group>"; };
 		260C1CF7F732EF44D22E72DA /* SignedCRLTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignedCRLTests.swift; sourceTree = "<group>"; };
-		287C93DA26E28D4037185486 /* CaptureView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CaptureView.swift; sourceTree = "<group>"; };
 		2A4D779A854D30AAF1836C77 /* DiagnosticFailureTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiagnosticFailureTests.swift; sourceTree = "<group>"; };
 		2BE50945D8B4124C39214F62 /* ProxyCapture.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProxyCapture.swift; sourceTree = "<group>"; };
 		2FADD3EDC9C9B0F550BA9CFE /* DiagnosticIssueView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiagnosticIssueView.swift; sourceTree = "<group>"; };
@@ -305,6 +300,7 @@
 		EE39A081A4262769FA62949A /* ProxyRulePersistenceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProxyRulePersistenceTests.swift; sourceTree = "<group>"; };
 		F45C97FCFC49991D92C95A74 /* LocalHTTPProxy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalHTTPProxy.swift; sourceTree = "<group>"; };
 		FA48D7B93B862A0646236C1B /* ATSDiagnosticApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ATSDiagnosticApp.swift; sourceTree = "<group>"; };
+		FB2B5369A5D16394B578F185 /* DiagnosticTransportConfigurationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiagnosticTransportConfigurationTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXGroup section */
@@ -361,6 +357,7 @@
 				5116786756C186E1A2D6769C /* CURLImportTests.swift */,
 				2A4D779A854D30AAF1836C77 /* DiagnosticFailureTests.swift */,
 				8BD71BB4443DD67B3D667E5C /* DiagnosticOptionsTests.swift */,
+				FB2B5369A5D16394B578F185 /* DiagnosticTransportConfigurationTests.swift */,
 				57B3E0C2183A9DE09DA5BA1F /* DNSLookupTests.swift */,
 				6F416B595E31C21C933D4911 /* EndpointTests.swift */,
 				BBFDF97001FEC55463E871E0 /* HARTests.swift */,
@@ -417,7 +414,6 @@
 				647945BB215181112C4706B2 /* BackgroundWriteLease.swift */,
 				706B5102F961F60CA9E9BE97 /* BadSSLSuite.swift */,
 				00CDFFB17F51EC96E7E8D7EF /* BadSSLView.swift */,
-				287C93DA26E28D4037185486 /* CaptureView.swift */,
 				9B1A39C75564C7E5F42B7323 /* CertificateDetailView.swift */,
 				2FB8348535345EC1A56E1F14 /* CertificateFindings.swift */,
 				306C387A89FF92AF8E550A38 /* CertificateFormats.swift */,
@@ -456,7 +452,6 @@
 				B8CC2E2ECD74EFAE9C3C2101 /* ProxyMonitor.swift */,
 				10B4D516E71AC67F1804E89D /* ProxyRuleConfiguration.swift */,
 				17AA61658FB90A65F0376693 /* ProxyRulePersistence.swift */,
-				25E124BB9B9A7DD4BEC89D4E /* ProxyRulesView.swift */,
 				EC246D17A926A0DEA6446FE3 /* QueryParametersView.swift */,
 				50E6B91F56AB4DD248EAA064 /* RecordingSettings.swift */,
 				2376A40FF8D615A5635F72D1 /* RevocationAssessment.swift */,
@@ -675,7 +670,6 @@
 				96DA7487D858332661F18204 /* BadSSLSuite.swift in Sources */,
 				E8E0B14A37A3221A3914BD93 /* BadSSLView.swift in Sources */,
 				81186C01D4A82C1DB7B04CD8 /* CURLImport.swift in Sources */,
-				C19867815171413BF4317C2B /* CaptureView.swift in Sources */,
 				C2DB2498D717BB2B14CD6C59 /* CertificateDetailView.swift in Sources */,
 				9EC117912282E1ECDB045049 /* CertificateFindings.swift in Sources */,
 				825AE0C0DC75E4C6F1613DE1 /* CertificateFormats.swift in Sources */,
@@ -711,7 +705,6 @@
 				1F6D12F7661441F956747C02 /* ProxyMonitor.swift in Sources */,
 				CC88113277BF4067F6DFD238 /* ProxyRuleConfiguration.swift in Sources */,
 				83B826EF7E2839521365D64F /* ProxyRulePersistence.swift in Sources */,
-				54C10D1536E6FB3037E4E700 /* ProxyRulesView.swift in Sources */,
 				3E3C878399CB7AA7F264DD90 /* QueryParametersView.swift in Sources */,
 				8807BD7716946293292CF465 /* RecordingSettings.swift in Sources */,
 				10BC66014A678974AA9A6383 /* RevocationAssessment.swift in Sources */,
@@ -746,7 +739,6 @@
 				EC87C05D22670AF92C2D9FDE /* BadSSLSuite.swift in Sources */,
 				616544E83DC843EF89FB659C /* BadSSLView.swift in Sources */,
 				43F40D97F182CD3182318204 /* CURLImport.swift in Sources */,
-				B9B4513E48061A6424EB8864 /* CaptureView.swift in Sources */,
 				278E7C9032D85DBD8D084D09 /* CertificateDetailView.swift in Sources */,
 				CCF4F88C3D1EBE00E1A0D6AF /* CertificateFindings.swift in Sources */,
 				E69A2493585758DC7BFB6509 /* CertificateFormats.swift in Sources */,
@@ -782,7 +774,6 @@
 				3343FB5C9E9E72B9B880666E /* ProxyMonitor.swift in Sources */,
 				DE05A8ED6E2013C66E409454 /* ProxyRuleConfiguration.swift in Sources */,
 				14F269AC0D2A060DDEF56707 /* ProxyRulePersistence.swift in Sources */,
-				D925A10ECC1D2E5684458CE5 /* ProxyRulesView.swift in Sources */,
 				80DE524D31E9FBF99BC394AA /* QueryParametersView.swift in Sources */,
 				7B494C1CEF9C7D5BF5A8817A /* RecordingSettings.swift in Sources */,
 				465E23091DBAED9680CA4159 /* RevocationAssessment.swift in Sources */,
@@ -814,6 +805,7 @@
 				87DE6E61A7476D73E5506DFC /* DNSLookupTests.swift in Sources */,
 				ACDA30D9DB4F1BB6FBB266B3 /* DiagnosticFailureTests.swift in Sources */,
 				0D86FB94C7E8E90B8C0486A4 /* DiagnosticOptionsTests.swift in Sources */,
+				F5BD9397C71438AC9D8ED2AD /* DiagnosticTransportConfigurationTests.swift in Sources */,
 				117F3FD22732F020EEE3C5E1 /* EndpointTests.swift in Sources */,
 				12B5FC44B53A012A2E7B0ACC /* HARTests.swift in Sources */,
 				F513B992D4BDEDFC5BD5BD3C /* HSTSPolicyTests.swift in Sources */,
@@ -938,7 +930,7 @@
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
-				CURRENT_PROJECT_VERSION = 55;
+				CURRENT_PROJECT_VERSION = 56;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEVELOPMENT_TEAM = SP73Z8JWXM;
 				ENABLE_NS_ASSERTIONS = NO;
@@ -952,7 +944,7 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
-				MARKETING_VERSION = 2.0;
+				MARKETING_VERSION = 2.0.1;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -1059,7 +1051,7 @@
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
-				CURRENT_PROJECT_VERSION = 55;
+				CURRENT_PROJECT_VERSION = 56;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				DEVELOPMENT_TEAM = SP73Z8JWXM;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -1079,7 +1071,7 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
-				MARKETING_VERSION = 2.0;
+				MARKETING_VERSION = 2.0.1;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;

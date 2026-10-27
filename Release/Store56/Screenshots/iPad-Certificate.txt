@@ -1,0 +1,268 @@
+Device orientation: Landscape Left
+------------------------
+Application bundle identifier: com.mobilebox.atsdiagnostic
+Application UI orientation: Landscape Right
+Application, pid: 65798, label: 'ATS Diagnostic'
+ Window, {{0.0, 0.0}, {1376.0, 1032.0}}, hitPoint: {688.0, 516.0}
+  Other, {{0.0, 0.0}, {1376.0, 1032.0}}, hitPoint: {688.0, 516.0}
+  Other, {{0.0, 0.0}, {1376.0, 1032.0}}, hitPoint: {688.0, 516.0}
+   Other, {{0.0, 0.0}, {1376.0, 1032.0}}, hitPoint: {688.0, 516.0}
+    Other, {{0.0, 0.0}, {1376.0, 1032.0}}, hitPoint: {688.0, 516.0}
+     Other, {{0.0, 0.0}, {1376.0, 1032.0}}, hitPoint: {688.0, 516.0}
+      Other, {{0.0, 0.0}, {1376.0, 1032.0}}, hitPoint: {688.0, 516.0}
+       Other, {{0.0, 0.0}, {1376.0, 1032.0}}, hitPoint: {688.0, 516.0}
+        Other, {{0.0, 0.0}, {1376.0, 1032.0}}, hitPoint: {688.0, 516.0}
+         Other, {{0.0, 0.0}, {1376.0, 1032.0}}, hitPoint: {688.0, 516.0}
+          Other, {{0.0, 0.0}, {1376.0, 1032.0}}, hitPoint: {688.0, 516.0}
+           Other, {{0.0, 0.0}, {1376.0, 1032.0}}, hitPoint: {688.0, 516.0}
+            Other, {{0.0, 0.0}, {1376.0, 1032.0}}, hitPoint: {688.0, 516.0}
+             NavigationBar, {{0.0, 32.0}, {1376.0, 108.0}}, identifier: 'Certificate', hitPoint: {688.0, 86.0}
+              Button, {{10.0, 32.0}, {44.0, 44.0}}, identifier: 'BackButton', label: 'Connection details', hitPoint: {32.0, 54.0}
+              StaticText, {{646.0, 97.5}, {84.0, 21.0}}, label: 'Certificate', hitPoint: {688.0, 108.0}
+             Other, {{0.0, 0.0}, {1376.0, 1032.0}}, hitPoint: {688.0, 516.0}
+              Other, {{0.0, 0.0}, {1376.0, 1032.0}}, hitPoint: {688.0, 516.0}
+               Other, {{0.0, 0.0}, {1376.0, 1032.0}}, hitPoint: {688.0, 516.0}
+                Other, {{0.0, 0.0}, {1376.0, 1032.0}}, hitPoint: {688.0, 516.0}
+                 CollectionView, {{0.0, 0.0}, {1376.0, 1032.0}}, hitPoint: {688.0, 516.0}
+                  Other, {{-20.0, -229.5}, {1416.0, 289.0}}, hitPoint: {688.0, 29.8}
+                  Cell, {{20.0, -35.0}, {1336.0, 77.0}}, hitPoint: {688.0, 21.0}
+                   Other, {{20.0, -35.0}, {1336.0, 77.0}}, hitPoint: {688.0, 21.0}
+                    Other, {{20.0, -35.0}, {1336.0, 77.0}}, hitPoint: {688.0, 21.0}
+                   Other, {{20.0, -35.0}, {1336.0, 77.0}}, hitPoint: {688.0, 21.0}
+                    Other, {{20.0, -35.0}, {1336.0, 77.0}}, hitPoint: {688.0, 21.0}
+                     Other, {{20.0, -35.0}, {1336.0, 77.0}}, hitPoint: {688.0, 21.0}
+                      StaticText, {{40.0, 4.5}, {129.0, 19.5}}, label: 'CN=example.com', hitPoint: {104.5, 14.2}
+                  Other, {{0.0, 0.0}, {1376.0, 1032.0}}, hitPoint: {688.0, 516.0}
+                   Other, {{0.0, 0.0}, {1376.0, 180.0}}, hitPoint: {688.0, 90.0}
+                  Other, {{0.0, 0.0}, {1376.0, 1032.0}}, hitPoint: {688.0, 516.0}
+                   Other, {{0.0, 0.0}, {1376.0, 180.0}}, hitPoint: {688.0, 90.0}
+                  Other, {{-20.0, 59.5}, {1416.0, 406.5}}, hitPoint: {688.0, 262.8}
+                  Cell, {{20.0, 59.5}, {1336.0, 40.5}}, hitPoint: {688.0, 79.8}
+                   Other, {{20.0, 59.5}, {1336.0, 40.5}}, hitPoint: {688.0, 79.8}
+                   Other, {{20.0, 59.5}, {1336.0, 40.5}}, hitPoint: {688.0, 79.8}
+                    Other, {{20.0, 59.5}, {1336.0, 40.5}}, hitPoint: {688.0, 79.8}
+                     Other, {{20.0, 59.5}, {1336.0, 40.5}}, hitPoint: {688.0, 79.8}
+                      StaticText, {{20.0, 59.5}, {1336.0, 40.5}}, label: 'Aussteller dieses Zertifikats', hitPoint: {688.0, 79.8}
+                  Cell, {{20.0, 100.0}, {1336.0, 76.0}}, hitPoint: {688.0, 138.0}
+                   Other, {{20.0, 100.0}, {1336.0, 76.0}}, hitPoint: {688.0, 138.0}
+                    Other, {{20.0, 100.0}, {1336.0, 76.0}}, hitPoint: {688.0, 138.0}
+                   Other, {{20.0, 100.0}, {1336.0, 76.0}}, hitPoint: {688.0, 138.0}
+                    Other, {{20.0, 100.0}, {1336.0, 76.0}}, hitPoint: {688.0, 138.0}
+                     Other, {{20.0, 100.0}, {1336.0, 76.0}}, hitPoint: {688.0, 138.0}
+                      StaticText, {{40.0, 118.0}, {50.0, 14.5}}, label: 'Land (C)', hitPoint: {65.0, 125.2}
+                      StaticText, {{40.0, 138.5}, {21.5, 19.5}}, label: 'US', hitPoint: {50.8, 148.2}
+                  Cell, {{20.0, 176.0}, {1336.0, 76.0}}, hitPoint: {688.0, 214.0}
+                   Other, {{20.0, 176.0}, {1336.0, 76.0}}, hitPoint: {688.0, 214.0}
+                    Other, {{20.0, 176.0}, {1336.0, 76.0}}, hitPoint: {688.0, 214.0}
+                   Other, {{20.0, 176.0}, {1336.0, 76.0}}, hitPoint: {688.0, 214.0}
+                    Other, {{20.0, 176.0}, {1336.0, 76.0}}, hitPoint: {688.0, 214.0}
+                     Other, {{20.0, 176.0}, {1336.0, 76.0}}, hitPoint: {688.0, 214.0}
+                      StaticText, {{40.0, 194.0}, {96.5, 14.5}}, label: 'Organisation (O)', hitPoint: {88.2, 201.2}
+                      StaticText, {{40.0, 214.5}, {119.5, 19.5}}, label: 'SSL Corporation', hitPoint: {99.8, 224.2}
+                  Other, {{40.0, 175.0}, {1296.0, 1.0}}, hitPoint: {688.0, 175.5}
+                  Cell, {{20.0, 252.0}, {1336.0, 76.0}}, hitPoint: {688.0, 290.0}
+                   Other, {{20.0, 252.0}, {1336.0, 76.0}}, hitPoint: {688.0, 290.0}
+                    Other, {{20.0, 252.0}, {1336.0, 76.0}}, hitPoint: {688.0, 290.0}
+                   Other, {{20.0, 252.0}, {1336.0, 76.0}}, hitPoint: {688.0, 290.0}
+                    Other, {{20.0, 252.0}, {1336.0, 76.0}}, hitPoint: {688.0, 290.0}
+                     Other, {{20.0, 252.0}, {1336.0, 76.0}}, hitPoint: {688.0, 290.0}
+                      StaticText, {{40.0, 270.0}, {64.5, 14.5}}, label: 'Name (CN)', hitPoint: {72.2, 277.2}
+                      StaticText, {{40.0, 290.5}, {238.0, 19.5}}, label: 'Cloudflare TLS Issuing ECC CA 3', hitPoint: {159.0, 300.2}
+                  Other, {{40.0, 251.0}, {1296.0, 1.0}}, hitPoint: {688.0, 251.5}
+                  Cell, {{20.0, 328.0}, {1336.0, 68.5}}, hitPoint: {688.0, 362.2}
+                   Other, {{20.0, 328.0}, {1336.0, 68.5}}, hitPoint: {688.0, 362.2}
+                    Other, {{20.0, 328.0}, {1336.0, 68.5}}, hitPoint: {688.0, 362.2}
+                   Other, {{20.0, 328.0}, {1336.0, 68.5}}, hitPoint: {688.0, 362.2}
+                    Other, {{20.0, 328.0}, {1336.0, 68.5}}, hitPoint: {688.0, 362.2}
+                     Other, {{20.0, 328.0}, {1336.0, 68.5}}, hitPoint: {688.0, 362.2}
+                      Button, {{20.0, 328.0}, {1336.0, 68.5}}, label: 'Cloudflare TLS Issuing ECC CA 3, Nächstes Zertifikat der ausgewerteten Kette', hitPoint: {688.0, 362.2}
+                       Image, {{40.0, 343.0}, {36.0, 36.0}}, label: 'Illustration-certificate', hitPoint: {58.0, 361.0}
+                       StaticText, {{88.0, 343.0}, {233.0, 18.0}}, label: 'Cloudflare TLS Issuing ECC CA 3', hitPoint: {204.5, 352.0}
+                       StaticText, {{88.0, 367.0}, {250.5, 14.5}}, label: 'Nächstes Zertifikat der ausgewerteten Kette', hitPoint: {213.2, 374.2}
+                       Image, {{1326.5, 356.5}, {7.0, 12.0}}, identifier: 'chevron.forward', hitPoint: {1330.0, 362.5}
+                  Other, {{40.0, 327.0}, {1296.0, 1.0}}, hitPoint: {688.0, 327.5}
+                  Cell, {{20.0, 396.5}, {1336.0, 52.0}}, hitPoint: {688.0, 422.5}
+                   Other, {{20.0, 396.5}, {1336.0, 52.0}}, hitPoint: {688.0, 422.5}
+                    Other, {{20.0, 396.5}, {1336.0, 52.0}}, hitPoint: {688.0, 422.5}
+                   Other, {{20.0, 396.5}, {1336.0, 52.0}}, hitPoint: {688.0, 422.5}
+                    Other, {{20.0, 396.5}, {1336.0, 52.0}}, hitPoint: {688.0, 422.5}
+                     Other, {{20.0, 396.5}, {1336.0, 52.0}}, hitPoint: {688.0, 422.5}
+                      StaticText, {{20.0, 396.5}, {1336.0, 52.0}}, label: 'Die Angaben oben stammen aus dem Issuer-Feld. Das nächste Kettenzertifikat ist ein eigener Datensatz; die Gesamtaussage zum Vertrauen steht bei der Verbindung.', hitPoint: {688.0, 422.5}
+                  Other, {{88.0, 395.5}, {1248.0, 1.0}}, hitPoint: {712.0, 396.0}
+                  Other, {{-20.0, 466.0}, {1416.0, 229.0}}, hitPoint: {688.0, 580.5}
+                  Cell, {{20.0, 466.0}, {1336.0, 40.5}}, hitPoint: {688.0, 486.2}
+                   Other, {{20.0, 466.0}, {1336.0, 40.5}}, hitPoint: {688.0, 486.2}
+                   Other, {{20.0, 466.0}, {1336.0, 40.5}}, hitPoint: {688.0, 486.2}
+                    Other, {{20.0, 466.0}, {1336.0, 40.5}}, hitPoint: {688.0, 486.2}
+                     Other, {{20.0, 466.0}, {1336.0, 40.5}}, hitPoint: {688.0, 486.2}
+                      StaticText, {{20.0, 466.0}, {1336.0, 40.5}}, label: 'Fingerprints', hitPoint: {688.0, 486.2}
+                  Cell, {{20.0, 506.5}, {1336.0, 85.5}}, hitPoint: {688.0, 549.2}
+                   Other, {{20.0, 506.5}, {1336.0, 85.5}}, hitPoint: {688.0, 549.2}
+                    Other, {{20.0, 506.5}, {1336.0, 85.5}}, hitPoint: {688.0, 549.2}
+                   Other, {{20.0, 506.5}, {1336.0, 85.5}}, hitPoint: {688.0, 549.2}
+                    Other, {{20.0, 506.5}, {1336.0, 85.5}}, hitPoint: {688.0, 549.2}
+                     Other, {{20.0, 506.5}, {1336.0, 85.5}}, hitPoint: {688.0, 549.2}
+                      StaticText, {{40.0, 528.8}, {54.0, 14.5}}, label: 'SHA-256', hitPoint: {67.0, 536.0}
+                      Button, {{1319.0, 526.0}, {15.0, 20.0}}, identifier: 'square.and.arrow.up', label: 'Share SHA-256', hitPoint: {1326.5, 536.0}
+                      StaticText, {{40.0, 554.5}, {781.5, 19.5}}, label: '85ca 6ab0 68e9 bcce 88b6 c4aa 3c47 f7d1 7228 134a 457f 870d 3800 e622 3a0d f07a', hitPoint: {430.8, 564.2}
+                  Cell, {{20.0, 592.0}, {1336.0, 85.5}}, hitPoint: {688.0, 634.8}
+                   Other, {{20.0, 592.0}, {1336.0, 85.5}}, hitPoint: {688.0, 634.8}
+                    Other, {{20.0, 592.0}, {1336.0, 85.5}}, hitPoint: {688.0, 634.8}
+                   Other, {{20.0, 592.0}, {1336.0, 85.5}}, hitPoint: {688.0, 634.8}
+                    Other, {{20.0, 592.0}, {1336.0, 85.5}}, hitPoint: {688.0, 634.8}
+                     Other, {{20.0, 592.0}, {1336.0, 85.5}}, hitPoint: {688.0, 634.8}
+                      StaticText, {{40.0, 614.2}, {37.0, 14.5}}, label: 'SHA-1', hitPoint: {58.5, 621.5}
+                      Button, {{1319.0, 611.5}, {15.0, 20.0}}, identifier: 'square.and.arrow.up', label: 'Share SHA-1', hitPoint: {1326.5, 621.5}
+                      StaticText, {{40.0, 640.0}, {485.0, 19.5}}, label: '899c b259 e7de 8df1 0033 a2af 48c2 2c2f 6580 a21d', hitPoint: {282.5, 649.8}
+                  Other, {{40.0, 591.0}, {1296.0, 1.0}}, hitPoint: {688.0, 591.5}
+                  Other, {{-20.0, 695.0}, {1416.0, 214.0}}, hitPoint: {688.0, 802.0}
+                  Cell, {{20.0, 695.0}, {1336.0, 40.5}}, hitPoint: {688.0, 715.2}
+                   Other, {{20.0, 695.0}, {1336.0, 40.5}}, hitPoint: {688.0, 715.2}
+                   Other, {{20.0, 695.0}, {1336.0, 40.5}}, hitPoint: {688.0, 715.2}
+                    Other, {{20.0, 695.0}, {1336.0, 40.5}}, hitPoint: {688.0, 715.2}
+                     Other, {{20.0, 695.0}, {1336.0, 40.5}}, hitPoint: {688.0, 715.2}
+                      StaticText, {{20.0, 695.0}, {1336.0, 40.5}}, label: 'Root-store inclusion', hitPoint: {688.0, 715.2}
+                  Cell, {{20.0, 735.5}, {1336.0, 52.0}}, hitPoint: {688.0, 761.5}
+                   Other, {{20.0, 735.5}, {1336.0, 52.0}}, hitPoint: {688.0, 761.5}
+                    Other, {{20.0, 735.5}, {1336.0, 52.0}}, hitPoint: {688.0, 761.5}
+                   Other, {{20.0, 735.5}, {1336.0, 52.0}}, hitPoint: {688.0, 761.5}
+                    Other, {{20.0, 735.5}, {1336.0, 52.0}}, hitPoint: {688.0, 761.5}
+                     Other, {{20.0, 735.5}, {1336.0, 52.0}}, hitPoint: {688.0, 761.5}
+                      StaticText, {{20.0, 735.5}, {1336.0, 52.0}}, label: 'Vertrauen über die Zertifikatskette', hitPoint: {688.0, 761.5}
+                      Image, {{40.0, 749.5}, {24.0, 24.0}}, identifier: 'link', label: 'Link', hitPoint: {52.0, 761.5}
+                  Cell, {{20.0, 787.5}, {1336.0, 52.0}}, hitPoint: {688.0, 813.5}
+                   Other, {{20.0, 787.5}, {1336.0, 52.0}}, hitPoint: {688.0, 813.5}
+                    Other, {{20.0, 787.5}, {1336.0, 52.0}}, hitPoint: {688.0, 813.5}
+                   Other, {{20.0, 787.5}, {1336.0, 52.0}}, hitPoint: {688.0, 813.5}
+                    Other, {{20.0, 787.5}, {1336.0, 52.0}}, hitPoint: {688.0, 813.5}
+                     Other, {{20.0, 787.5}, {1336.0, 52.0}}, hitPoint: {688.0, 813.5}
+                      StaticText, {{20.0, 787.5}, {1336.0, 52.0}}, label: 'Serverzertifikate stehen normalerweise nicht selbst in Root-Stores. Ihr Vertrauen wird über Aussteller und Wurzelzertifikat geprüft. Ein fehlender direkter Listeneintrag ist deshalb kein Vertrauensfehler.', hitPoint: {688.0, 813.5}
+                  Other, {{80.0, 786.5}, {1256.0, 1.0}}, hitPoint: {708.0, 787.0}
+                  Cell, {{20.0, 839.5}, {1336.0, 52.0}}, hitPoint: {688.0, 865.5}
+                   Other, {{20.0, 839.5}, {1336.0, 52.0}}, hitPoint: {688.0, 865.5}
+                    Other, {{20.0, 839.5}, {1336.0, 52.0}}, hitPoint: {688.0, 865.5}
+                   Other, {{20.0, 839.5}, {1336.0, 52.0}}, hitPoint: {688.0, 865.5}
+                    Other, {{20.0, 839.5}, {1336.0, 52.0}}, hitPoint: {688.0, 865.5}
+                     Other, {{20.0, 839.5}, {1336.0, 52.0}}, hitPoint: {688.0, 865.5}
+                      Button, {{20.0, 839.5}, {1336.0, 52.0}}, label: 'Ausstellerzertifikat ansehen', hitPoint: {688.0, 865.5}
+                       StaticText, {{40.0, 855.2}, {210.0, 20.5}}, label: 'Ausstellerzertifikat ansehen', hitPoint: {145.0, 865.5}
+                       Image, {{1326.5, 859.5}, {7.0, 12.0}}, identifier: 'chevron.forward', hitPoint: {1330.0, 865.5}
+                  Other, {{40.0, 838.5}, {1296.0, 1.0}}, hitPoint: {688.0, 839.0}
+                  Other, {{-20.0, 909.0}, {1416.0, 128.0}}, hitPoint: {688.0, 970.5}
+                  Cell, {{20.0, 909.0}, {1336.0, 40.5}}, hitPoint: {688.0, 929.2}
+                   Other, {{20.0, 909.0}, {1336.0, 40.5}}, hitPoint: {688.0, 929.2}
+                   Other, {{20.0, 909.0}, {1336.0, 40.5}}, hitPoint: {688.0, 929.2}
+                    Other, {{20.0, 909.0}, {1336.0, 40.5}}, hitPoint: {688.0, 929.2}
+                     Other, {{20.0, 909.0}, {1336.0, 40.5}}, hitPoint: {688.0, 929.2}
+                      StaticText, {{20.0, 909.0}, {1336.0, 40.5}}, label: 'Certificate Transparency', hitPoint: {688.0, 929.2}
+                  Cell, {{20.0, 949.5}, {1336.0, 70.0}}, hitPoint: {688.0, 984.5}
+                   Other, {{20.0, 949.5}, {1336.0, 70.0}}, hitPoint: {688.0, 984.5}
+                    Other, {{20.0, 949.5}, {1336.0, 70.0}}, hitPoint: {688.0, 984.5}
+                   Other, {{20.0, 949.5}, {1336.0, 70.0}}, hitPoint: {688.0, 984.5}
+                    Other, {{20.0, 949.5}, {1336.0, 70.0}}, hitPoint: {688.0, 984.5}
+                     Other, {{20.0, 949.5}, {1336.0, 70.0}}, hitPoint: {688.0, 984.5}
+                      Button, {{20.0, 949.5}, {1336.0, 70.0}}, label: 'System CT qualified, Log identities, timestamps and system policy result', Selected, hitPoint: {688.0, 984.5}
+                       Image, {{41.0, 966.0}, {19.5, 19.5}}, identifier: 'checkmark.seal', label: 'Verified', Selected, hitPoint: {50.8, 975.8}
+                       StaticText, {{73.5, 964.5}, {152.0, 20.5}}, label: 'System CT qualified', hitPoint: {149.5, 974.8}
+                       StaticText, {{73.5, 990.0}, {289.5, 14.5}}, label: 'Log identities, timestamps and system policy result', hitPoint: {218.2, 997.2}
+                       Image, {{1326.5, 978.5}, {7.0, 12.0}}, identifier: 'chevron.forward', hitPoint: {1330.0, 984.5}
+                  Other, {{1343.0, 140.0}, {30.0, 548.0}}, label: 'Vertical scroll bar, 5 pages', value: 27 %, hitPoint: {1358.0, 414.0}
+                   Other, {{1370.0, 241.0}, {3.0, 174.0}}, hitPoint: {1371.5, 328.0}
+                  Other, {{1343.0, 140.0}, {30.0, 548.0}}, label: 'Vertical scroll bar, 5 pages', value: 27 %, hitPoint: {1358.0, 414.0}
+                   Other, {{1370.0, 241.0}, {3.0, 174.0}}, hitPoint: {1371.5, 328.0}
+             Toolbar, {{0.0, 0.0}, {1376.0, 1032.0}}, identifier: 'Toolbar', label: 'Toolbar', hitPoint: {688.0, 516.0}
+              Other, {{0.0, 0.0}, {1376.0, 1032.0}}, hitPoint: {688.0, 516.0}
+       Other, {{0.0, 0.0}, {1376.0, 1032.0}}, hitPoint: {688.0, 516.0}
+        Other, {{0.0, 32.0}, {1376.0, 44.0}}, hitPoint: {688.0, 54.0}
+         Button, {{509.2, 36.0}, {90.5, 36.0}}, identifier: 'checkmark.shield', label: 'Inspect', Selected, hitPoint: {554.5, 54.0}
+          Button, {{509.2, 36.0}, {90.5, 36.0}}, identifier: 'checkmark.shield', label: 'Inspect', Selected, hitPoint: {554.5, 54.0}
+         Button, {{599.8, 36.0}, {105.0, 36.0}}, identifier: 'arrow.up.arrow.down', label: 'Requests', hitPoint: {652.2, 54.0}
+          Button, {{599.8, 36.0}, {105.0, 36.0}}, identifier: 'arrow.up.arrow.down', label: 'Requests', hitPoint: {652.2, 54.0}
+         Button, {{704.8, 36.0}, {88.5, 36.0}}, identifier: 'clock', label: 'History', hitPoint: {749.0, 54.0}
+          Button, {{704.8, 36.0}, {88.5, 36.0}}, identifier: 'clock', label: 'History', hitPoint: {749.0, 54.0}
+         Button, {{793.2, 36.0}, {73.5, 36.0}}, identifier: 'wrench.and.screwdriver', label: 'Tools', hitPoint: {830.0, 54.0}
+          Button, {{793.2, 36.0}, {73.5, 36.0}}, identifier: 'wrench.and.screwdriver', label: 'Tools', hitPoint: {830.0, 54.0}
+      Other, {{0.0, 32.0}, {1376.0, 980.0}}, hitPoint: {688.0, 522.0}
+ Window, {{0.0, 0.0}, {1376.0, 1032.0}}, hitPoint: {688.0, 516.0}
+  Other, {{0.0, 0.0}, {1376.0, 1032.0}}, hitPoint: {688.0, 516.0}
+   Other, {{0.0, 0.0}, {1376.0, 1032.0}}, hitPoint: {688.0, 516.0}
+------------------------
+Application bundle identifier: com.apple.springboard
+Application UI orientation: Landscape Right
+Application, pid: 65169, label: ' ', activationBundleId: com.apple.springboard
+ Window, {{0.0, 0.0}, {1376.0, 1032.0}}, hitPoint: {688.0, 516.0}, activationBundleId: com.apple.springboard
+  Other, {{0.0, 0.0}, {1032.0, 1376.0}}, hitPoint: {516.0, 516.0}, activationBundleId: com.apple.springboard
+ Window, {{0.0, 0.0}, {1376.0, 1032.0}}, hitPoint: {688.0, 516.0}, activationBundleId: com.apple.springboard
+  Other, {{0.0, 0.0}, {1032.0, 1376.0}}, hitPoint: {516.0, 516.0}, activationBundleId: com.apple.springboard
+ Window, {{0.0, 0.0}, {1376.0, 1032.0}}, hitPoint: {688.0, 516.0}, activationBundleId: com.apple.springboard
+  Other, {{0.0, 0.0}, {2064.0, 2752.0}}, hitPoint: {688.0, 516.0}, activationBundleId: com.apple.springboard
+   Other, {{0.0, 0.0}, {2064.0, 2752.0}}, hitPoint: {688.0, 516.0}, activationBundleId: com.apple.springboard
+ Window, {{0.0, 0.0}, {1376.0, 1032.0}}, hitPoint: {688.0, 516.0}, activationBundleId: com.apple.springboard
+  Other, {{0.0, 0.0}, {2064.0, 2752.0}}, hitPoint: {688.0, 516.0}, activationBundleId: com.apple.springboard
+ Window, {{0.0, 0.0}, {1376.0, 1032.0}}, identifier: 'SBSwitcherWindow:Main', hitPoint: {688.0, 516.0}, activationBundleId: com.apple.springboard
+  Other, {{0.0, 0.0}, {1032.0, 1376.0}}, hitPoint: {516.0, 516.0}, activationBundleId: com.apple.springboard
+   Other, {{0.0, 0.0}, {1032.0, 1376.0}}, hitPoint: {516.0, 516.0}, activationBundleId: com.apple.springboard
+    Other, {{0.0, 0.0}, {1032.0, 1376.0}}, hitPoint: {516.0, 516.0}, activationBundleId: com.apple.springboard
+     Other, {{0.0, 0.0}, {1032.0, 1376.0}}, hitPoint: {516.0, 516.0}, activationBundleId: com.apple.springboard
+      ScrollView, {{0.0, 0.0}, {1032.0, 1376.0}}, hitPoint: {516.0, 516.0}, activationBundleId: com.apple.springboard
+      Other, {{0.0, 0.0}, {1032.0, 1376.0}}, identifier: 'AppSwitcherContentView', hitPoint: {516.0, 516.0}, activationBundleId: com.apple.springboard
+       Other, {{0.0, 0.0}, {1032.0, 1376.0}}, hitPoint: {516.0, 516.0}, activationBundleId: com.apple.springboard
+        Other, {{0.0, 0.0}, {1032.0, 1376.0}}, hitPoint: {516.0, 516.0}, activationBundleId: com.apple.springboard
+       Other, {{0.0, 0.0}, {1032.0, 1376.0}}, hitPoint: {516.0, 516.0}, activationBundleId: com.apple.springboard
+        Other, {{0.0, 0.0}, {1032.0, 1376.0}}, hitPoint: {516.0, 516.0}, activationBundleId: com.apple.springboard
+         Other, {{0.0, 0.0}, {1032.0, 1376.0}}, hitPoint: {516.0, 516.0}, activationBundleId: com.apple.springboard
+       Other, {{0.0, 0.0}, {1032.0, 1376.0}}, identifier: 'card:com.mobilebox.atsdiagnostic:sceneID:com.mobilebox.atsdiagnostic-CBCAC51C-F3CB-477A-A32F-EC8308B67047', label: 'ATS Diagnostic', hitPoint: {516.0, 516.0}, activationBundleId: com.apple.springboard
+        Other, {{0.0, 0.0}, {1032.0, 1376.0}}, hitPoint: {516.0, 516.0}, activationBundleId: com.apple.springboard
+         Other, {{0.0, 0.0}, {1032.0, 1376.0}}, hitPoint: {516.0, 516.0}, activationBundleId: com.apple.springboard
+          Other, {{0.0, 0.0}, {1032.0, 1376.0}}, hitPoint: {516.0, 516.0}, activationBundleId: com.apple.springboard
+           Other, {{0.0, 0.0}, {1032.0, 1376.0}}, hitPoint: {516.0, 516.0}, activationBundleId: com.apple.springboard
+            Other, {{0.0, 0.0}, {1032.0, 1376.0}}, hitPoint: {516.0, 516.0}, activationBundleId: com.apple.springboard
+             ScrollView, {{0.0, 0.0}, {1548.0, 1376.0}}, hitPoint: {688.0, 516.0}, activationBundleId: com.apple.springboard
+              Other, {{0.0, 0.0}, {1032.0, 1376.0}}, hitPoint: {516.0, 516.0}, activationBundleId: com.apple.springboard
+               Other, {{0.0, 0.0}, {1032.0, 1376.0}}, hitPoint: {516.0, 516.0}, activationBundleId: com.apple.springboard
+                Other, {{0.0, 0.0}, {1032.0, 1376.0}}, hitPoint: {516.0, 516.0}, activationBundleId: com.apple.springboard
+               Other, {{0.0, 0.0}, {1032.0, 1376.0}}, hitPoint: {516.0, 516.0}, activationBundleId: com.apple.springboard
+                Other, {{0.0, 0.0}, {1032.0, 1376.0}}, hitPoint: {516.0, 516.0}, activationBundleId: com.apple.springboard
+                 Other, {{0.0, 0.0}, {1032.0, 1376.0}}, hitPoint: {516.0, 516.0}, activationBundleId: com.apple.springboard
+                  Other, {{0.0, 0.0}, {1032.0, 1376.0}}, hitPoint: {516.0, 516.0}, activationBundleId: com.apple.springboard
+                   Other, {{0.0, 0.0}, {1032.0, 1376.0}}, hitPoint: {516.0, 516.0}, activationBundleId: com.apple.springboard
+                    Other, {{0.0, 0.0}, {1032.0, 1376.0}}, hitPoint: {516.0, 516.0}, activationBundleId: com.apple.springboard
+                     Other, {{0.0, 0.0}, {1032.0, 1376.0}}, hitPoint: {516.0, 516.0}, activationBundleId: com.apple.springboard
+                      Other, {{0.0, 0.0}, {1032.0, 1376.0}}, hitPoint: {516.0, 516.0}, activationBundleId: com.apple.springboard
+                       Other, {{0.0, 0.0}, {1032.0, 1376.0}}, hitPoint: {516.0, 516.0}, activationBundleId: com.apple.springboard
+                        Other, {{0.0, 0.0}, {1032.0, 1376.0}}, hitPoint: {516.0, 516.0}, activationBundleId: com.apple.springboard
+                         StatusBar, {{1000.0, 0.0}, {32.0, 1376.0}}, hitPoint: {1016.0, 516.0}, activationBundleId: com.apple.springboard
+                          Other, {{1000.0, 0.0}, {32.0, 1376.0}}, hitPoint: {1016.0, 516.0}, activationBundleId: com.apple.springboard
+                           Other, {{1000.0, 0.0}, {32.0, 1376.0}}, hitPoint: {1016.0, 516.0}, activationBundleId: com.apple.springboard
+                            Other, {{1011.0, 25.0}, {10.0, 161.5}}, hitPoint: {1016.0, 105.8}, activationBundleId: com.apple.springboard
+                             StaticText, {{1007.5, 25.0}, {17.0, 38.0}}, label: '07:57', hitPoint: {1016.0, 44.0}, activationBundleId: com.apple.springboard
+                             StaticText, {{1007.5, 73.0}, {17.0, 113.5}}, label: 'Dienstag 27. Okt.', hitPoint: {1016.0, 129.8}, activationBundleId: com.apple.springboard
+                            Other, {{1007.0, 49.0}, {18.0, 18.0}}, hitPoint: {1016.0, 58.0}, activationBundleId: com.apple.springboard
+                            Other, {{1011.0, 196.5}, {10.0, 117.5}}, hitPoint: {1016.0, 255.2}, activationBundleId: com.apple.springboard
+                             Other, {{1000.0, 196.5}, {32.0, 117.5}}, hitPoint: {1016.0, 255.2}, activationBundleId: com.apple.springboard
+                              Other, {{1000.0, 196.5}, {32.0, 117.5}}, hitPoint: {1016.0, 255.2}, activationBundleId: com.apple.springboard
+                               StaticText, {{1000.0, 196.5}, {32.0, 105.0}}, label: 'ATS Diagnostic', hitPoint: {1016.0, 249.0}, activationBundleId: com.apple.springboard
+                            Other, {{1007.0, 246.5}, {18.0, 18.0}}, hitPoint: {1016.0, 255.5}, activationBundleId: com.apple.springboard
+                            Other, {{1011.0, 322.0}, {10.0, 1028.0}}, hitPoint: {1016.0, 677.0}, activationBundleId: com.apple.springboard
+                      Other, {{0.0, 0.0}, {1032.0, 1376.0}}, hitPoint: {516.0, 516.0}, activationBundleId: com.apple.springboard
+                       Other, {{0.0, 0.0}, {1032.0, 1376.0}}, hitPoint: {516.0, 516.0}, activationBundleId: com.apple.springboard
+                        Other, {{0.0, 0.0}, {1032.0, 1376.0}}, hitPoint: {516.0, 516.0}, activationBundleId: com.apple.springboard
+                     Other, {{0.0, 0.0}, {1032.0, 1376.0}}, hitPoint: {516.0, 516.0}, activationBundleId: com.apple.springboard
+                Other, {{0.0, 0.0}, {1032.0, 1376.0}}, hitPoint: {516.0, 516.0}, activationBundleId: com.apple.springboard
+                Other, {{0.0, 0.0}, {1000.0, 1376.0}}, hitPoint: {500.0, 516.0}, activationBundleId: com.apple.springboard
+       Other, {{0.0, 0.0}, {1032.0, 1376.0}}, hitPoint: {516.0, 516.0}, activationBundleId: com.apple.springboard
+        Other, {{0.0, 0.0}, {1032.0, 1376.0}}, hitPoint: {516.0, 516.0}, activationBundleId: com.apple.springboard
+         Other, {{0.0, 0.0}, {1032.0, 1376.0}}, hitPoint: {516.0, 516.0}, activationBundleId: com.apple.springboard
+          Other, {{0.0, 0.0}, {1032.0, 1376.0}}, hitPoint: {516.0, 516.0}, activationBundleId: com.apple.springboard
+ Window, {{0.0, 516.0}, {688.0, 516.0}}, hitPoint: {344.0, 774.0}, activationBundleId: com.apple.springboard
+  Other, {{0.0, 516.0}, {1032.0, 1376.0}}, hitPoint: {344.0, 774.0}, activationBundleId: com.apple.springboard
+   Other, {{0.0, 516.0}, {1032.0, 1376.0}}, hitPoint: {344.0, 774.0}, activationBundleId: com.apple.springboard
+ Window, {{0.0, 0.0}, {1376.0, 1032.0}}, hitPoint: {688.0, 516.0}, activationBundleId: com.apple.springboard
+  Other, {{0.0, 0.0}, {1032.0, 1376.0}}, hitPoint: {516.0, 516.0}, activationBundleId: com.apple.springboard
+   Other, {{0.0, 0.0}, {1032.0, 1376.0}}, hitPoint: {516.0, 516.0}, activationBundleId: com.apple.springboard
+ Window, {{0.0, 0.0}, {1376.0, 1032.0}}, hitPoint: {688.0, 516.0}, activationBundleId: com.apple.springboard
+  Other, {{0.0, 0.0}, {1032.0, 1376.0}}, hitPoint: {516.0, 516.0}, activationBundleId: com.apple.springboard
+ Window, {{0.0, 0.0}, {1376.0, 1032.0}}, hitPoint: {688.0, 516.0}, activationBundleId: com.apple.springboard
+  Other, {{0.0, 0.0}, {1032.0, 1376.0}}, hitPoint: {516.0, 516.0}, activationBundleId: com.apple.springboard
+ Window, {{0.0, 0.0}, {1376.0, 1032.0}}, hitPoint: {688.0, 516.0}, activationBundleId: com.apple.springboard
+  Other, {{0.0, 0.0}, {1032.0, 1376.0}}, hitPoint: {516.0, 516.0}, activationBundleId: com.apple.springboard

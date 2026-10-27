@@ -1,0 +1,194 @@
+Device orientation: Unknown
+------------------------
+Application bundle identifier: com.mobilebox.atsdiagnostic
+Application UI orientation: Portrait
+Application, pid: 61940, label: 'ATS Diagnostic'
+ Window, {{0.0, 0.0}, {440.0, 956.0}}, hitPoint: {220.0, 478.0}
+  Other, {{0.0, 0.0}, {440.0, 956.0}}, hitPoint: {220.0, 478.0}
+  Other, {{0.0, 0.0}, {440.0, 956.0}}, hitPoint: {220.0, 478.0}
+   Other, {{0.0, 0.0}, {440.0, 956.0}}, hitPoint: {220.0, 478.0}
+    Other, {{0.0, 0.0}, {440.0, 956.0}}, hitPoint: {220.0, 478.0}
+     Other, {{0.0, 0.0}, {440.0, 956.0}}, hitPoint: {220.0, 478.0}
+      Other, {{0.0, 0.0}, {440.0, 956.0}}, hitPoint: {220.0, 478.0}
+       Other, {{0.0, 0.0}, {440.0, 956.0}}, hitPoint: {220.0, 478.0}
+        Other, {{0.0, 0.0}, {440.0, 956.0}}, hitPoint: {220.0, 478.0}
+         Other, {{0.0, 0.0}, {440.0, 956.0}}, hitPoint: {220.0, 478.0}
+          Other, {{0.0, 0.0}, {440.0, 956.0}}, hitPoint: {220.0, 478.0}
+           Other, {{0.0, 0.0}, {440.0, 956.0}}, hitPoint: {220.0, 478.0}
+            Other, {{0.0, 0.0}, {440.0, 956.0}}, hitPoint: {220.0, 478.0}
+             NavigationBar, {{0.0, 62.0}, {440.0, 54.0}}, identifier: 'Certificate', hitPoint: {220.0, 89.0}
+              Button, {{20.0, 62.0}, {44.0, 44.0}}, identifier: 'BackButton', label: 'Connection details', hitPoint: {42.0, 84.0}
+              StaticText, {{178.0, 73.7}, {84.0, 20.7}}, label: 'Certificate', hitPoint: {220.0, 84.0}
+             Other, {{0.0, 0.0}, {440.0, 956.0}}, hitPoint: {220.0, 478.0}
+              Other, {{0.0, 0.0}, {440.0, 956.0}}, hitPoint: {220.0, 478.0}
+               Other, {{0.0, 0.0}, {440.0, 956.0}}, hitPoint: {220.0, 478.0}
+                Other, {{0.0, 0.0}, {440.0, 956.0}}, hitPoint: {220.0, 478.0}
+                 CollectionView, {{0.0, 0.0}, {440.0, 956.0}}, hitPoint: {220.0, 478.0}
+                  Other, {{-20.0, -76.7}, {480.0, 435.0}}, hitPoint: {220.0, 179.2}
+                  Cell, {{20.0, -36.3}, {400.0, 75.7}}, hitPoint: {220.0, 19.7}
+                   Other, {{20.0, -36.3}, {400.0, 75.7}}, hitPoint: {220.0, 19.7}
+                    Other, {{20.0, -36.3}, {400.0, 75.7}}, hitPoint: {220.0, 19.7}
+                   Other, {{20.0, -36.3}, {400.0, 75.7}}, hitPoint: {220.0, 19.7}
+                    Other, {{20.0, -36.3}, {400.0, 75.7}}, hitPoint: {220.0, 19.7}
+                     Other, {{20.0, -36.3}, {400.0, 75.7}}, hitPoint: {220.0, 19.7}
+                      StaticText, {{40.0, 2.0}, {21.7, 19.3}}, label: 'US', hitPoint: {50.8, 11.7}
+                  Other, {{0.0, -0.0}, {440.0, 956.0}}, hitPoint: {220.0, 478.0}
+                   Other, {{0.0, 0.0}, {440.0, 156.0}}, hitPoint: {220.0, 78.0}
+                   Other, {{0.0, 823.0}, {440.0, 133.0}}, hitPoint: {220.0, 889.5}
+                  Other, {{0.0, -0.0}, {440.0, 956.0}}, hitPoint: {220.0, 478.0}
+                   Other, {{0.0, 0.0}, {440.0, 156.0}}, hitPoint: {220.0, 78.0}
+                   Other, {{0.0, 823.0}, {440.0, 133.0}}, hitPoint: {220.0, 889.5}
+                  Cell, {{20.0, 39.3}, {400.0, 75.7}}, hitPoint: {220.0, 77.2}
+                   Other, {{20.0, 39.3}, {400.0, 75.7}}, hitPoint: {220.0, 77.2}
+                    Other, {{20.0, 39.3}, {400.0, 75.7}}, hitPoint: {220.0, 77.2}
+                   Other, {{20.0, 39.3}, {400.0, 75.7}}, hitPoint: {220.0, 77.2}
+                    Other, {{20.0, 39.3}, {400.0, 75.7}}, hitPoint: {220.0, 77.2}
+                     Other, {{20.0, 39.3}, {400.0, 75.7}}, hitPoint: {220.0, 77.2}
+                      StaticText, {{40.0, 57.3}, {96.3, 14.3}}, label: 'Organisation (O)', hitPoint: {88.2, 64.5}
+                      StaticText, {{40.0, 77.7}, {119.3, 19.3}}, label: 'SSL Corporation', hitPoint: {99.7, 87.3}
+                  Other, {{40.0, 38.3}, {360.0, 1.0}}, hitPoint: {220.0, 38.8}
+                  Cell, {{20.0, 115.0}, {400.0, 75.7}}, hitPoint: {220.0, 152.8}
+                   Other, {{20.0, 115.0}, {400.0, 75.7}}, hitPoint: {220.0, 152.8}
+                    Other, {{20.0, 115.0}, {400.0, 75.7}}, hitPoint: {220.0, 152.8}
+                   Other, {{20.0, 115.0}, {400.0, 75.7}}, hitPoint: {220.0, 152.8}
+                    Other, {{20.0, 115.0}, {400.0, 75.7}}, hitPoint: {220.0, 152.8}
+                     Other, {{20.0, 115.0}, {400.0, 75.7}}, hitPoint: {220.0, 152.8}
+                      StaticText, {{40.0, 133.0}, {64.3, 14.3}}, label: 'Name (CN)', hitPoint: {72.2, 140.2}
+                      StaticText, {{40.0, 153.3}, {237.7, 19.3}}, label: 'Cloudflare TLS Issuing ECC CA 3', hitPoint: {158.8, 163.0}
+                  Other, {{40.0, 114.0}, {360.0, 1.0}}, hitPoint: {220.0, 114.5}
+                  Cell, {{20.0, 190.7}, {400.0, 68.3}}, hitPoint: {220.0, 224.8}
+                   Other, {{20.0, 190.7}, {400.0, 68.3}}, hitPoint: {220.0, 224.8}
+                    Other, {{20.0, 190.7}, {400.0, 68.3}}, hitPoint: {220.0, 224.8}
+                   Other, {{20.0, 190.7}, {400.0, 68.3}}, hitPoint: {220.0, 224.8}
+                    Other, {{20.0, 190.7}, {400.0, 68.3}}, hitPoint: {220.0, 224.8}
+                     Other, {{20.0, 190.7}, {400.0, 68.3}}, hitPoint: {220.0, 224.8}
+                      Button, {{20.0, 190.7}, {400.0, 68.3}}, label: 'Cloudflare TLS Issuing ECC CA 3, Nächstes Zertifikat der ausgewerteten Kette', hitPoint: {220.0, 224.8}
+                       Image, {{40.0, 205.7}, {36.0, 36.0}}, label: 'Illustration-certificate', hitPoint: {58.0, 223.7}
+                       StaticText, {{88.0, 205.7}, {233.0, 18.0}}, label: 'Cloudflare TLS Issuing ECC CA 3', hitPoint: {204.5, 214.7}
+                       Image, {{390.7, 219.0}, {7.0, 12.0}}, identifier: 'chevron.forward', hitPoint: {394.2, 225.0}
+                       StaticText, {{88.0, 229.7}, {250.3, 14.3}}, label: 'Nächstes Zertifikat der ausgewerteten Kette', hitPoint: {213.2, 236.8}
+                  Other, {{40.0, 189.7}, {360.0, 1.0}}, hitPoint: {220.0, 190.2}
+                  Cell, {{20.0, 259.0}, {400.0, 81.7}}, hitPoint: {220.0, 299.8}
+                   Other, {{20.0, 259.0}, {400.0, 81.7}}, hitPoint: {220.0, 299.8}
+                    Other, {{20.0, 259.0}, {400.0, 81.7}}, hitPoint: {220.0, 299.8}
+                   Other, {{20.0, 259.0}, {400.0, 81.7}}, hitPoint: {220.0, 299.8}
+                    Other, {{20.0, 259.0}, {400.0, 81.7}}, hitPoint: {220.0, 299.8}
+                     Other, {{20.0, 259.0}, {400.0, 81.7}}, hitPoint: {220.0, 299.8}
+                      StaticText, {{20.0, 259.0}, {400.0, 81.7}}, label: 'Die Angaben oben stammen aus dem Issuer-Feld. Das nächste Kettenzertifikat ist ein eigener Datensatz; die Gesamtaussage zum Vertrauen steht bei der Verbindung.', hitPoint: {220.0, 299.8}
+                  Other, {{88.0, 258.0}, {312.0, 1.0}}, hitPoint: {244.0, 258.5}
+                  Other, {{-20.0, 358.3}, {480.0, 291.0}}, hitPoint: {220.0, 503.8}
+                  Cell, {{20.0, 358.3}, {400.0, 40.3}}, hitPoint: {220.0, 378.5}
+                   Other, {{20.0, 358.3}, {400.0, 40.3}}, hitPoint: {220.0, 378.5}
+                   Other, {{20.0, 358.3}, {400.0, 40.3}}, hitPoint: {220.0, 378.5}
+                    Other, {{20.0, 358.3}, {400.0, 40.3}}, hitPoint: {220.0, 378.5}
+                     Other, {{20.0, 358.3}, {400.0, 40.3}}, hitPoint: {220.0, 378.5}
+                      StaticText, {{20.0, 358.3}, {400.0, 40.3}}, label: 'Fingerprints', hitPoint: {220.0, 378.5}
+                  Cell, {{20.0, 398.7}, {400.0, 127.0}}, hitPoint: {220.0, 462.2}
+                   Other, {{20.0, 398.7}, {400.0, 127.0}}, hitPoint: {220.0, 462.2}
+                    Other, {{20.0, 398.7}, {400.0, 127.0}}, hitPoint: {220.0, 462.2}
+                   Other, {{20.0, 398.7}, {400.0, 127.0}}, hitPoint: {220.0, 462.2}
+                    Other, {{20.0, 398.7}, {400.0, 127.0}}, hitPoint: {220.0, 462.2}
+                     Other, {{20.0, 398.7}, {400.0, 127.0}}, hitPoint: {220.0, 462.2}
+                      StaticText, {{40.0, 420.8}, {53.7, 14.3}}, label: 'SHA-256', hitPoint: {66.8, 428.0}
+                      Button, {{383.0, 418.0}, {15.0, 20.0}}, identifier: 'square.and.arrow.up', label: 'Share SHA-256', hitPoint: {390.5, 428.0}
+                      StaticText, {{40.0, 446.3}, {346.3, 61.3}}, label: '85ca 6ab0 68e9 bcce 88b6 c4aa 3c47 f7d1 7228 134a 457f 870d 3800 e622 3a0d f07a', hitPoint: {213.2, 477.0}
+                  Cell, {{20.0, 525.3}, {400.0, 106.0}}, hitPoint: {220.0, 578.3}
+                   Other, {{20.0, 525.3}, {400.0, 106.0}}, hitPoint: {220.0, 578.3}
+                    Other, {{20.0, 525.3}, {400.0, 106.0}}, hitPoint: {220.0, 578.3}
+                   Other, {{20.0, 525.3}, {400.0, 106.0}}, hitPoint: {220.0, 578.3}
+                    Other, {{20.0, 525.3}, {400.0, 106.0}}, hitPoint: {220.0, 578.3}
+                     Other, {{20.0, 525.3}, {400.0, 106.0}}, hitPoint: {220.0, 578.3}
+                      StaticText, {{40.0, 547.5}, {36.7, 14.3}}, label: 'SHA-1', hitPoint: {58.3, 554.7}
+                      Button, {{383.0, 544.7}, {15.0, 20.0}}, identifier: 'square.and.arrow.up', label: 'Share SHA-1', hitPoint: {390.5, 554.7}
+                      StaticText, {{40.0, 573.0}, {346.3, 40.3}}, label: '899c b259 e7de 8df1 0033 a2af 48c2 2c2f 6580 a21d', hitPoint: {213.2, 593.2}
+                  Other, {{40.0, 524.3}, {360.0, 1.0}}, hitPoint: {220.0, 524.8}
+                  Other, {{-20.0, 649.0}, {480.0, 261.7}}, hitPoint: {220.0, 779.8}
+                  Cell, {{20.0, 649.0}, {400.0, 40.3}}, hitPoint: {220.0, 669.2}
+                   Other, {{20.0, 649.0}, {400.0, 40.3}}, hitPoint: {220.0, 669.2}
+                   Other, {{20.0, 649.0}, {400.0, 40.3}}, hitPoint: {220.0, 669.2}
+                    Other, {{20.0, 649.0}, {400.0, 40.3}}, hitPoint: {220.0, 669.2}
+                     Other, {{20.0, 649.0}, {400.0, 40.3}}, hitPoint: {220.0, 669.2}
+                      StaticText, {{20.0, 649.0}, {400.0, 40.3}}, label: 'Root-store inclusion', hitPoint: {220.0, 669.2}
+                  Cell, {{20.0, 689.3}, {400.0, 52.0}}, hitPoint: {220.0, 715.3}
+                   Other, {{20.0, 689.3}, {400.0, 52.0}}, hitPoint: {220.0, 715.3}
+                    Other, {{20.0, 689.3}, {400.0, 52.0}}, hitPoint: {220.0, 715.3}
+                   Other, {{20.0, 689.3}, {400.0, 52.0}}, hitPoint: {220.0, 715.3}
+                    Other, {{20.0, 689.3}, {400.0, 52.0}}, hitPoint: {220.0, 715.3}
+                     Other, {{20.0, 689.3}, {400.0, 52.0}}, hitPoint: {220.0, 715.3}
+                      StaticText, {{20.0, 689.3}, {400.0, 52.0}}, label: 'Vertrauen über die Zertifikatskette', hitPoint: {220.0, 715.3}
+                      Image, {{40.0, 703.3}, {24.0, 24.0}}, identifier: 'link', label: 'Link', hitPoint: {52.0, 715.3}
+                  Cell, {{20.0, 741.3}, {400.0, 99.7}}, hitPoint: {220.0, 791.2}
+                   Other, {{20.0, 741.3}, {400.0, 99.7}}, hitPoint: {220.0, 791.2}
+                    Other, {{20.0, 741.3}, {400.0, 99.7}}, hitPoint: {220.0, 791.2}
+                   Other, {{20.0, 741.3}, {400.0, 99.7}}, hitPoint: {220.0, 791.2}
+                    Other, {{20.0, 741.3}, {400.0, 99.7}}, hitPoint: {220.0, 791.2}
+                     Other, {{20.0, 741.3}, {400.0, 99.7}}, hitPoint: {220.0, 791.2}
+                      StaticText, {{20.0, 741.3}, {400.0, 99.7}}, label: 'Serverzertifikate stehen normalerweise nicht selbst in Root-Stores. Ihr Vertrauen wird über Aussteller und Wurzelzertifikat geprüft. Ein fehlender direkter Listeneintrag ist deshalb kein Vertrauensfehler.', hitPoint: {220.0, 791.2}
+                  Other, {{80.0, 740.3}, {320.0, 1.0}}, hitPoint: {240.0, 740.8}
+                  Cell, {{20.0, 841.0}, {400.0, 52.0}}, hitPoint: {220.0, 867.0}
+                   Other, {{20.0, 841.0}, {400.0, 52.0}}, hitPoint: {220.0, 867.0}
+                    Other, {{20.0, 841.0}, {400.0, 52.0}}, hitPoint: {220.0, 867.0}
+                   Other, {{20.0, 841.0}, {400.0, 52.0}}, hitPoint: {220.0, 867.0}
+                    Other, {{20.0, 841.0}, {400.0, 52.0}}, hitPoint: {220.0, 867.0}
+                     Other, {{20.0, 841.0}, {400.0, 52.0}}, hitPoint: {220.0, 867.0}
+                      Button, {{20.0, 841.0}, {400.0, 52.0}}, label: 'Ausstellerzertifikat ansehen', hitPoint: {220.0, 867.0}
+                       StaticText, {{40.0, 856.8}, {210.0, 20.3}}, label: 'Ausstellerzertifikat ansehen', hitPoint: {145.0, 867.0}
+                       Image, {{390.7, 861.0}, {7.0, 12.0}}, identifier: 'chevron.forward', hitPoint: {394.2, 867.0}
+                  Other, {{40.0, 840.0}, {360.0, 1.0}}, hitPoint: {220.0, 840.5}
+                  Other, {{-20.0, 910.7}, {480.0, 127.7}}, hitPoint: {220.0, 933.3}
+                  Cell, {{20.0, 910.7}, {400.0, 40.3}}, hitPoint: {220.0, 930.8}
+                   Other, {{20.0, 910.7}, {400.0, 40.3}}, hitPoint: {220.0, 930.8}
+                   Other, {{20.0, 910.7}, {400.0, 40.3}}, hitPoint: {220.0, 930.8}
+                    Other, {{20.0, 910.7}, {400.0, 40.3}}, hitPoint: {220.0, 930.8}
+                     Other, {{20.0, 910.7}, {400.0, 40.3}}, hitPoint: {220.0, 930.8}
+                      StaticText, {{20.0, 910.7}, {400.0, 40.3}}, label: 'Certificate Transparency', hitPoint: {220.0, 930.8}
+                  Cell, {{20.0, 950.7}, {400.0, 69.7}}, hitPoint: {220.0, 953.3}
+                   Other, {{20.0, 950.7}, {400.0, 69.7}}, hitPoint: {220.0, 953.3}
+                    Other, {{20.0, 950.7}, {400.0, 69.7}}, hitPoint: {220.0, 953.3}
+                   Other, {{20.0, 950.7}, {400.0, 69.7}}, hitPoint: {220.0, 953.3}
+                    Other, {{20.0, 950.7}, {400.0, 69.7}}, hitPoint: {220.0, 953.3}
+                     Other, {{20.0, 950.7}, {400.0, 69.7}}, hitPoint: {220.0, 953.3}
+                      Button, {{20.0, 950.7}, {400.0, 69.7}}, label: 'System CT qualified, Log identities, timestamps and system policy result', Selected, hitPoint: {220.0, 953.3}
+                  Other, {{407.0, 116.0}, {30.0, 757.0}}, label: 'Vertical scroll bar, 4 pages', value: 33 %, hitPoint: {422.0, 494.5}
+                   Other, {{434.0, 290.0}, {3.0, 236.7}}, hitPoint: {435.5, 408.3}
+                  Other, {{407.0, 116.0}, {30.0, 757.0}}, label: 'Vertical scroll bar, 4 pages', value: 33 %, hitPoint: {422.0, 494.5}
+                   Other, {{434.0, 290.0}, {3.0, 236.7}}, hitPoint: {435.5, 408.3}
+             Toolbar, {{0.0, 0.0}, {440.0, 956.0}}, identifier: 'Toolbar', label: 'Toolbar', hitPoint: {220.0, 478.0}
+              Other, {{0.0, 0.0}, {440.0, 956.0}}, hitPoint: {220.0, 478.0}
+       Other, {{0.0, 0.0}, {440.0, 956.0}}, hitPoint: {220.0, 478.0}
+        Other, {{0.0, 873.0}, {440.0, 83.0}}, hitPoint: {220.0, 914.5}
+         Other, {{0.0, 0.0}, {440.0, 956.0}}, hitPoint: {220.0, 478.0}
+          TabBar, {{0.0, 873.0}, {440.0, 83.0}}, label: 'Tab Bar', hitPoint: {220.0, 914.5}
+           Other, {{21.0, 873.0}, {398.0, 62.0}}, hitPoint: {220.0, 904.0}
+            Other, {{21.0, 873.0}, {104.5, 54.0}}, hitPoint: {73.2, 900.0}
+            Other, {{21.0, 873.0}, {398.0, 62.0}}, hitPoint: {220.0, 904.0}
+             Button, {{25.0, 877.0}, {104.5, 54.0}}, identifier: 'checkmark.shield', label: 'Inspect', Selected, hitPoint: {77.2, 904.0}
+              Image, {{65.0, 883.7}, {24.7, 26.7}}, identifier: 'checkmark.shield.fill', label: 'Checkmark in a filled shield', hitPoint: {77.3, 897.0}
+             Button, {{120.2, 877.0}, {104.5, 54.0}}, identifier: 'arrow.up.arrow.down', label: 'Requests', hitPoint: {172.4, 904.0}
+              Image, {{155.8, 883.7}, {33.0, 26.3}}, identifier: 'arrow.up.arrow.down', label: 'sort', hitPoint: {172.3, 896.8}
+             Button, {{215.3, 877.0}, {104.5, 54.0}}, identifier: 'clock', label: 'History', hitPoint: {267.6, 904.0}
+              Image, {{254.0, 883.3}, {27.3, 27.3}}, identifier: 'clock.fill', label: 'clock', hitPoint: {267.7, 897.0}
+             Button, {{310.5, 877.0}, {104.5, 54.0}}, identifier: 'wrench.and.screwdriver', label: 'Tools', hitPoint: {362.8, 904.0}
+              Image, {{346.5, 881.3}, {32.7, 31.7}}, identifier: 'wrench.and.screwdriver.fill', label: 'Wrench and screwdriver, filled', hitPoint: {362.8, 897.2}
+            Other, {{21.0, 873.0}, {398.0, 62.0}}, hitPoint: {220.0, 904.0}
+            Other, {{25.0, 877.0}, {104.5, 54.0}}, hitPoint: {77.2, 904.0}
+             Other, {{25.0, 877.0}, {104.3, 54.0}}, hitPoint: {77.2, 904.0}
+              Other, {{25.0, 877.0}, {104.3, 54.0}}, hitPoint: {77.2, 904.0}
+              Other, {{25.0, 877.0}, {104.3, 54.0}}, hitPoint: {77.2, 904.0}
+               Other, {{25.0, 877.0}, {104.3, 54.0}}, hitPoint: {77.2, 904.0}
+                Other, {{25.0, 877.0}, {104.3, 54.0}}, hitPoint: {77.2, 904.0}
+                 Other, {{25.0, 877.0}, {104.3, 54.0}}, hitPoint: {77.2, 904.0}
+                Other, {{25.0, 877.0}, {104.3, 54.0}}, hitPoint: {77.2, 904.0}
+               Other, {{25.0, 877.0}, {104.3, 54.0}}, hitPoint: {77.2, 904.0}
+         Other, {{0.0, 873.0}, {440.0, 83.0}}, hitPoint: {220.0, 914.5}
+          Other, {{0.0, 873.0}, {440.0, 83.0}}, hitPoint: {220.0, 914.5}
+           Other, {{0.0, 873.0}, {440.0, 83.0}}, hitPoint: {220.0, 914.5}
+            Other, {{0.0, 873.0}, {440.0, 83.0}}, hitPoint: {220.0, 914.5}
+             Other, {{0.0, 873.0}, {440.0, 83.0}}, hitPoint: {220.0, 914.5}
+              Other, {{0.0, 873.0}, {440.0, 83.0}}, hitPoint: {220.0, 914.5}
+            Other, {{0.0, 873.0}, {440.0, 83.0}}, hitPoint: {220.0, 914.5}
+             Other, {{0.0, 873.0}, {440.0, 83.0}}, hitPoint: {220.0, 914.5}
+      Other, {{0.0, 62.0}, {440.0, 860.0}}, hitPoint: {220.0, 492.0}
+ Window, {{0.0, 0.0}, {440.0, 956.0}}, hitPoint: {220.0, 478.0}
+  Other, {{0.0, 0.0}, {440.0, 956.0}}, hitPoint: {220.0, 478.0}
+   Other, {{0.0, 0.0}, {440.0, 956.0}}, hitPoint: {220.0, 478.0}

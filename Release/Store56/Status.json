@@ -1,0 +1,44 @@
+{
+  "version": "2.0.1",
+  "build": "56",
+  "app_id": "1297164068",
+  "bundle_id": "com.mobilebox.atsdiagnostic",
+  "source_changes": "Removed Capture tab and app-owned proxy lifecycle; deleted proxy UI screens; existing saved rules untouched",
+  "archive": "ATSDiagnostic-Store56.xcarchive",
+  "archive_succeeded": true,
+  "tests": {
+    "methods": 158,
+    "executions": 177,
+    "failed": 0,
+    "skipped": 0
+  },
+  "ats": {
+    "NSAllowsArbitraryLoads": true,
+    "local_network_purpose_present": true,
+    "override_keys_absent": true
+  },
+  "app_store_connect_version_created": true,
+  "store_texts_saved": true,
+  "old_media_associations_removed": true,
+  "new_screenshots_uploaded": false,
+  "upload_succeeded": false,
+  "submitted": false,
+  "blockers": [
+    "Xcode App Store Connect account refresh required (Failed to Use Accounts, team SP73Z8JWXM)",
+    "Browser file chooser timed out; native Codex app access denied. User manual screenshot upload requested."
+  ],
+  "prior_version_2_0_build55": "Genehmigt / Bereit für Vertrieb verified 2026-10-27",
+  "final_targeted_tests": {
+    "passed": 11,
+    "failed": 0,
+    "suites": [
+      "DiagnosticTransportConfigurationTests",
+      "DiagnosticFailureTests"
+    ]
+  },
+  "screenshots_prepared": {
+    "medium_iPhone": 4,
+    "large_iPhone": 4,
+    "iPad": 4
+  }
+}

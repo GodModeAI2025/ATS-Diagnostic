@@ -4,22 +4,19 @@ import UserNotifications
 
 @main struct ATSDiagnosticApp: App {
     @State private var store = DiagnosticStore()
-    @State private var proxy = ProxyMonitor()
     @Environment(\.scenePhase) private var scenePhase
     private let notificationDelegate = CertificateNotificationDelegate()
     init() { UNUserNotificationCenter.current().delegate = notificationDelegate }
     var body: some Scene {
-        WindowGroup { RootView(store: store,proxy:proxy).onChange(of:scenePhase) { if scenePhase == .background { proxy.stop(reason:"Der Proxy wurde beim Wechsel in den Hintergrund gestoppt."); Task { await store.flushHistory(); await proxy.flushRules() } } } }
+        WindowGroup { RootView(store: store).onChange(of:scenePhase) { if scenePhase == .background { Task { await store.flushHistory() } } } }
     }
 }
 struct RootView: View {
     let store: DiagnosticStore
-    let proxy: ProxyMonitor
     var body: some View {
         TabView {
             Tab("Inspect", systemImage: "checkmark.shield") { InspectView(store: store) }
             Tab("Requests", systemImage: "arrow.up.arrow.down") { RequestView(store: store) }
-            Tab("Erfassen", systemImage: "network") { CaptureView(monitor:proxy,store:store) }
             Tab("History", systemImage: "clock") { HistoryView(store: store) }
             Tab("Tools", systemImage: "wrench.and.screwdriver") { ToolsView(store:store) }
         }.tint(Color.diagnosticAccent).background(KeyboardDismissSurface())
