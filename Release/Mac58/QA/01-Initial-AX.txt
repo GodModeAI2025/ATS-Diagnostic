@@ -1,0 +1,4 @@
+The following is a diff from the previous accessibility tree for Window: "ATS Diagnostic" with ~ and + representing changed and added elements, respectively. Removed elements are summarized by ID range.
+Removed element IDs: 20-23
++	31 text ATS Diagnostic
++	32 menu button Window sharing

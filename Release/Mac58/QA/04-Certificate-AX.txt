@@ -1,0 +1,25 @@
+The following is a diff from the previous accessibility tree for Window: "ATS Diagnostic" with ~ and + representing changed and added elements, respectively. Removed elements are summarized by ID range.
+Removed element IDs: 41, 62-75, 96-105, 107-133
++			107 container Secondary Actions: Cancel, Scroll Down, Scroll Up
++				108 text Description: example.com, Secondary Actions: Cancel
++				109 text Description: Server certificate, Secondary Actions: Cancel
++				110 text Description: Expires 25. Dec 2026, Secondary Actions: Cancel
++				111 switch Description: Explain certificate fields, Value: 0, Secondary Actions: Cancel
++				112 heading Secondary Actions: Cancel
++					113 heading Description: Identity & validity, Secondary Actions: Cancel
++				114 text Description: Valid from (UTC), Secondary Actions: Cancel
++				115 text Description: 2026-09-26T22:49:11Z, Secondary Actions: Cancel
++				116 text Description: Valid until (UTC), Secondary Actions: Cancel
++				117 text Description: 2026-12-25T22:56:35Z, Secondary Actions: Cancel
++				118 text Description: Subject, Secondary Actions: Cancel
++				119 text Description: CN=example.com, Secondary Actions: Cancel
++				120 heading Secondary Actions: Cancel
++					121 heading Description: Aussteller dieses Zertifikats, Secondary Actions: Cancel
++				122 text Description: Land (C), Secondary Actions: Cancel
++				123 text Description: US, Secondary Actions: Cancel
++				124 text Description: Organisation (O), Secondary Actions: Cancel
++				125 text Description: SSL Corporation, Secondary Actions: Cancel
++				126 text Description: Name (CN), Secondary Actions: Cancel
++				127 text Description: Cloudflare TLS Issuing ECC CA 3, Secondary Actions: Cancel
++				128 button Description: Cloudflare TLS Issuing ECC CA 3, Nächstes Zertifikat der ausgewerteten Kette, Secondary Actions: Cancel
++				129 text Secondary Actions: Cancel, Description: Die Angaben oben stammen aus dem Issuer-Feld. Das nächste Kettenzertifikat ist ein eigener Datensatz; die Gesamtaussage zum Vertrauen steht bei der Verbindung.

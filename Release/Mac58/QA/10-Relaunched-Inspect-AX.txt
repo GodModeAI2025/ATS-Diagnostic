@@ -1,0 +1,38 @@
+Window: "ATS Diagnostic", App: ATS Diagnostic.
+0 standard window ATS Diagnostic, ID: SceneWindow, Secondary Actions: Raise
+	1 container
+		2 container Secondary Actions: Cancel
+			3 heading Description: ATS Diagnostic, Secondary Actions: Cancel
+			4 container Secondary Actions: Cancel
+				5 text Description: Inspect a connection, Secondary Actions: Cancel
+				6 text Description: Latest inspection, Secondary Actions: Cancel
+				7 text Description: Verbindungen verständlich prüfen, Secondary Actions: Cancel
+				8 text Description: Response received, Secondary Actions: Cancel
+				9 text Description: Zertifikate, TLS und HTTP-Antworten im Überblick., Secondary Actions: Cancel
+				10 text field (settable) Placeholder: example.com, Secondary Actions: Cancel
+				11 button (disabled) Description: Inspect connection, Secondary Actions: Cancel
+				12 text Description: HTTP status, 200, Secondary Actions: Cancel
+				13 text Description: TLS version, Not reported, Secondary Actions: Cancel
+				14 text Description: Duration, 0,001 s, Secondary Actions: Cancel
+				15 text Description: Certificates, 0, Secondary Actions: Cancel
+				16 text Description: Total request, 0,001 s, Secondary Actions: Cancel
+				17 text Description: No separate phase timings were reported for the final transaction., Secondary Actions: Cancel
+				18 button Description: https://example.com/mac-qa-import, GET · 200, 27. Oct at 19:00, Secondary Actions: Cancel
+				19 text Description: System trust, Secondary Actions: Cancel
+				20 text Secondary Actions: Cancel, Description: Systemvertrauen wird weiterhin geprüft. Für die Diagnose fremder Server sind HTTP und ältere TLS-Konfigurationen zugelassen. Ein erfolgreicher Aufruf bestätigt deshalb keine ATS-Konformität.
+	21 toolbar
+		22 radio button Description: Inspect, Value: 1
+		23 radio button Description: Requests, Value: 0
+		24 radio button Description: History, Value: 0
+		25 radio button Description: Tools, Value: 0
+	26 close button
+	27 full screen button Help: this button also has an action to zoom the window, Secondary Actions: zoom the window
+	28 minimize button
+	29 text ATS Diagnostic
+30 menu bar
+	31 ATSDiagnostic, ID: com.apple.menu.application
+	32 File, ID: com.apple.menu.file
+	33 Edit, ID: com.apple.menu.edit
+	34 View, ID: com.apple.menu.view
+	35 Window, ID: com.apple.menu.window
+	36 Help, ID: com.apple.menu.help

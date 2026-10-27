@@ -1,0 +1,33 @@
+{
+  "app_id": "1297164068",
+  "bundle_id": "com.mobilebox.atsdiagnostic",
+  "platform": "macOS",
+  "technology": "Mac Catalyst",
+  "version": "2.0.1",
+  "build": "58",
+  "minimum_macos": "15.0",
+  "architectures": [
+    "arm64",
+    "x86_64"
+  ],
+  "archive_succeeded": true,
+  "mac_test_methods_passed": 161,
+  "ios_targeted_test_methods_passed": 8,
+  "ui_qa_complete": false,
+  "upload_succeeded": true,
+  "processing_complete": true,
+  "testflight_assigned": true,
+  "store_submitted": false,
+  "ios_build_56_state_observed": "Bereit für Vertrieb",
+  "source_commit": "f7951f9",
+  "build_id": "26cc6def-2c25-43d6-95f0-893ec4debee7",
+  "testflight_state": "Im Test",
+  "testflight_group": "Mark – Intern",
+  "tester_email": "mark_zimmermann@mac.com",
+  "tester_state": "Eingeladen",
+  "store_metadata_saved": true,
+  "store_build_selected": true,
+  "store_screenshots_uploaded": false,
+  "xcode_launch_succeeded": true,
+  "xcode_launch_pid": 64128
+}

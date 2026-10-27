@@ -1,0 +1,2 @@
+There has been no change in the accessibility tree for Window: "ATS Diagnostic".
+The focused UI element is 55 text field (settable) Value: https://example.com/?source=ats-mac, Placeholder: https://example.com/api, Secondary Actions: Cancel

@@ -184,3 +184,11 @@ At the user’s explicit request, original Store55 (com.mobilebox.atsdiagnostic,
 - Apple processing completed. Bilingual test notes saved; build bbec0034-a1c8-49da-b426-7b42763d8173 manually assigned to Mark – Intern. Group page confirms 2.0.1 (57) Im Test and exactly one tester, mark_zimmermann@mac.com, currently Eingeladen. No additional tester or external group was added.
 - Existing Store 2.0.1 (56), with twelve current screenshots, remains Warten auf Prüfung under submission dbbfb2f6-65af-477a-934a-dcbe621ef7e0. This TestFlight delivery does not replace it.
 - Physical installation of 57 and Apple approval/publication are not verified. Evidence, upload logs and status are in TestFlight57/.
+
+## macOS Catalyst 2.0.1 (58), current status 2026-10-27
+
+- Universal Mac Catalyst build 58 from source `f7951f5`, using the existing app record **1297164068** and bundle **com.mobilebox.atsdiagnostic**, was archived, uploaded successfully, processed by Apple, and selected for TestFlight. Mark – Intern shows **Im Test** with only `mark_zimmermann@mac.com` invited. This verifies TestFlight availability, not installation on a Mac.
+- English/German macOS 2.0.1 metadata and ATS/App Sandbox justifications are saved in App Store Connect, with build 58 selected. The macOS version has **not** been submitted to the App Store.
+- The 161 Mac tests and 8 iOS SignedCRL tests passed. Logs: `work/Mac58-Tests-Final.log` and `work/Mac58-iOS-CRL.log`.
+- Mac screenshots and visual UI QA remain outstanding. The CUA `getApp` call is hanging; another XcodeRun attempt is in progress. Historical feature parity was explicitly closed by the user and is not an open gate.
+- iOS 2.0.1 (56) is **Ready for Distribution** in the portal; no device installation is verified.

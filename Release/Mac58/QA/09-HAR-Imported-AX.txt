@@ -1,0 +1,40 @@
+Window: "ATS Diagnostic", App: ATS Diagnostic.
+0 standard window ATS Diagnostic, ID: SceneWindow, Secondary Actions: Raise
+	1 container
+		2 container Secondary Actions: Cancel
+			3 container ID: History, Secondary Actions: Cancel
+				4 button Description: Export log, Secondary Actions: Cancel
+				5 button Description: Recording settings, Secondary Actions: Cancel
+				6 button Description: Export HAR, Secondary Actions: Cancel
+				7 button Description: Import HAR, Secondary Actions: Cancel
+				8 button Description: Clear, Secondary Actions: Cancel
+				9 search text field (settable) Description: URL, method or status, Secondary Actions: Cancel
+				10 heading Description: History, Secondary Actions: Cancel
+			11 container Secondary Actions: Cancel
+				12 text Description: Traffic overview, Secondary Actions: Cancel
+				13 pop up button Description: Response type, All, Secondary Actions: Cancel
+				14 switch Description: Favorites only, Value: 0, Secondary Actions: Cancel
+				15 container Secondary Actions: Cancel
+					16 text Description: Requests, 5, Secondary Actions: Cancel
+					17 text Description: Response data, 2 kB, Secondary Actions: Cancel
+					18 text Description: Average time, 0,199 s, Secondary Actions: Cancel
+					19 text Description: Failures, 1, Secondary Actions: Cancel
+				20 button Description: https://example.com/mac-qa-import, GET · 200, 27. Oct at 19:00, Secondary Actions: Cancel
+				21 button Description: https://example.com/?source=ats-mac, GET · 200, 27. Oct at 19:14, Secondary Actions: Cancel
+				22 button Description: https://expired.badssl.com, GET · Failed, 27. Oct at 19:14, Secondary Actions: Cancel
+				23 button Description: https://example.com, GET · 200, 27. Oct at 19:12, Secondary Actions: Cancel
+				24 button Description: http://example.com, GET · 200, 27. Oct at 19:11, Secondary Actions: Cancel
+	25 toolbar
+		26 radio button Description: Inspect, Value: 0
+		27 radio button Description: Requests, Value: 0
+		28 radio button Description: History, Value: 1
+		29 radio button Description: Tools, Value: 0
+	30 text ATS Diagnostic
+	31 menu button Window sharing
+32 menu bar
+	33 ATSDiagnostic, ID: com.apple.menu.application
+	34 File, ID: com.apple.menu.file
+	35 Edit, ID: com.apple.menu.edit
+	36 View, ID: com.apple.menu.view
+	37 Window, ID: com.apple.menu.window
+	38 Help, ID: com.apple.menu.help
