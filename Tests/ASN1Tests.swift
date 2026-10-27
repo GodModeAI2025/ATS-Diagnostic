@@ -10,6 +10,22 @@ struct ASN1Tests {
 }
 
 struct CertificateFieldTests {
+    @Test func rejectsDuplicateCertificateExtensions() throws {
+        // Minimal parser fixture, not a cryptographically valid certificate.
+        func sequence(_ bytes: [UInt8]) -> [UInt8] { [0x30, UInt8(bytes.count)] + bytes }
+        let basicConstraints: [UInt8] = [0x30, 0x09, 0x06, 0x03, 0x55, 0x1d, 0x13, 0x04, 0x02, 0x30, 0x00]
+        func certificate(_ extensions: [UInt8]) -> Data {
+            let encodedExtensions = sequence(extensions)
+            let fields: [UInt8] = [0x02, 0x01, 0x01, 0x30, 0x00, 0x30, 0x00, 0x30, 0x00, 0x30, 0x00, 0x30, 0x00]
+            return Data(sequence(sequence(fields + [0xa3, UInt8(encodedExtensions.count)] + encodedExtensions) + [0x30, 0x00, 0x03, 0x01, 0x00]))
+        }
+        #expect(try X509.fields(certificate(basicConstraints)).contains { $0.id == "2.5.29.19" })
+        let duplicate = certificate(basicConstraints + basicConstraints)
+        #expect(throws: ASN1Node.ParseError.self) { try X509.fields(duplicate) }
+        let presentation = CertificatePresentation.make(CertificateRecord(id: "duplicate", subject: "Malformed imported certificate", der: duplicate))
+        #expect(presentation.fields.isEmpty)
+        #expect(presentation.findings.contains { $0.id == "structure" })
+    }
     @Test func utcCenturyBoundary() throws {
         let old = ASN1Node(tag: 0x17, value: Data("500101000000Z".utf8), children: [])
         let recent = ASN1Node(tag: 0x17, value: Data("490101000000Z".utf8), children: [])

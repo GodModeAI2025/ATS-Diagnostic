@@ -69,9 +69,11 @@ enum X509 {
         add("subject", "Subject", name(tbs[offset + 4]))
         let key = tbs[offset + 5].children
         add("key", "Public key algorithm", key.first?.children.first?.oid ?? "Unknown")
+        var extensionOIDs = Set<String>()
         for container in tbs where container.tag == 0xa3 {
             for ext in container.children.first?.children ?? [] {
                 guard let oid = ext.children.first?.oid, let value = ext.children.last else { continue }
+                guard extensionOIDs.insert(oid).inserted else { throw ASN1Node.ParseError.invalid }
                 let labels = ["2.5.29.17": "Subject alternative names", "2.5.29.15": "Key usage", "2.5.29.37": "Extended key usage", "2.5.29.19": "Basic constraints", "2.5.29.14": "Subject key identifier", "2.5.29.35": "Authority key identifier", "2.5.29.32": "Certificate policies", "1.3.6.1.5.5.7.1.1": "Authority information access", "2.5.29.31": "CRL distribution points"]
                 let decoded = try ASN1Node.decode(value.value)
                 add(oid, (labels[oid] ?? oid) + (ext.children.contains { $0.tag == 1 && $0.value.first != 0 } ? " · critical" : ""), extensionDescription(oid, decoded))

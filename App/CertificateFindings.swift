@@ -21,6 +21,8 @@ enum CertificateAnalysis {
             if ["1.2.840.113549.1.1.4", "1.2.840.113549.1.1.5", "1.2.840.10040.4.3", "1.2.840.10045.4.1"].contains(values["signature"] ?? "") {
                 result.append(CertificateFinding(id: "signature", title: "Weak signature algorithm", detail: "This certificate uses an MD5 or SHA-1 signature. Its role and system trust result should be considered separately."))
             }
+        } else {
+            result.append(CertificateFinding(id: "structure", title: "Zertifikatsfelder nicht lesbar", detail: "Die Zertifikatsstruktur ist fehlerhaft oder wird nicht unterstützt. Doppelte Erweiterungen sind nicht zulässig. Die Originaldaten bleiben exportierbar; das Ergebnis der System-Vertrauensprüfung wird dadurch nicht geändert."))
         }
         if let cert = SecCertificateCreateWithData(nil, certificate.der as CFData), let key = SecCertificateCopyKey(cert), let attrs = SecKeyCopyAttributes(key) as? [String: Any], let bits = attrs[kSecAttrKeySizeInBits as String] as? Int {
             let type = attrs[kSecAttrKeyType as String] as? String
