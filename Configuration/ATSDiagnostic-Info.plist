@@ -25,5 +25,25 @@
 	</dict>
 	<key>NSLocalNetworkUsageDescription</key>
 	<string>ATS Diagnostic prüft von dir ausgewählte Geräte und Server im lokalen Netzwerk, um HTTP, TLS und Zertifikate zu untersuchen.</string>
+	<key>UTImportedTypeDeclarations</key>
+	<array>
+		<dict>
+			<key>UTTypeConformsTo</key>
+			<array>
+				<string>public.json</string>
+			</array>
+			<key>UTTypeDescription</key>
+			<string>HTTP Archive</string>
+			<key>UTTypeIdentifier</key>
+			<string>com.mobilebox.http-archive</string>
+			<key>UTTypeTagSpecification</key>
+			<dict>
+				<key>public.filename-extension</key>
+				<array>
+					<string>har</string>
+				</array>
+			</dict>
+		</dict>
+	</array>
 </dict>
 </plist>

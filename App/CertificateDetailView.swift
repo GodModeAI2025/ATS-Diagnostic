@@ -22,8 +22,8 @@ struct CertificateDetailView: View {
                     SupportingIllustration(kind: .certificate)
                     VStack(alignment: .leading, spacing: 6) {
                         Text(certificate.subject).font(.headline).textSelection(.enabled)
-                        Text(isLeaf ? "Server certificate" : "Certificate authority in the chain").font(.subheadline).foregroundStyle(.secondary)
-                        if let expiry = presentation?.expiry { Label("Expires \(expiry.formatted(date: .abbreviated, time: .omitted))", systemImage: "calendar").font(.caption).foregroundStyle(expiry < Date() ? Color.orange : Color.secondary) }
+                        Text(LocalizedStringKey(isLeaf ? "Server certificate" : "Certificate authority in the chain")).font(.subheadline).foregroundStyle(.secondary)
+                        if let expiry = presentation?.expiry { Label("Valid until \(expiry.formatted(date: .abbreviated, time: .omitted))", systemImage: "calendar").font(.caption).foregroundStyle(expiry < Date() ? Color.orange : Color.secondary) }
                     }
                 }.padding(.vertical, 6)
                 Toggle("Explain certificate fields", isOn: $showExplanation)
@@ -31,7 +31,7 @@ struct CertificateDetailView: View {
             Section("Identity & validity") {
                 ForEach(fields.filter { ["subject", "from", "until"].contains($0.id) }) { field in CertificateFieldRow(field: field, explain: showExplanation) }
             }
-            if let presentation { CertificateIssuerView(attributes:presentation.issuerAttributes,issuerCertificate:issuerCertificate) } else { ProgressView("Zertifikatsangaben auswerten…") }
+            if let presentation { CertificateIssuerView(attributes:presentation.issuerAttributes,issuerCertificate:issuerCertificate) } else { ProgressView("Evaluating certificate details…") }
             Section("Fingerprints") {
                 FingerprintRow(title: "SHA-256", value: RootStoreSnapshot.fingerprint(certificate.der))
                 FingerprintRow(title: "SHA-1", value: Insecure.SHA1.hash(data: certificate.der).map { String(format: "%02x", $0) }.joined())
@@ -39,10 +39,10 @@ struct CertificateDetailView: View {
             }
             Section("Root-store inclusion") {
                 if isLeaf {
-                    Label("Vertrauen über die Zertifikatskette", systemImage: "link")
-                    Text("Serverzertifikate stehen normalerweise nicht selbst in Root-Stores. Ihr Vertrauen wird über Aussteller und Wurzelzertifikat geprüft. Ein fehlender direkter Listeneintrag ist deshalb kein Vertrauensfehler.").font(.footnote).foregroundStyle(.secondary)
+                    Label("Trust through the certificate chain", systemImage: "link")
+                    Text("Server certificates are not normally listed in root stores themselves. Their trust is evaluated through the issuer and root certificate, so a missing direct list entry is not a trust failure.").font(.footnote).foregroundStyle(.secondary)
                     if let issuerCertificate {
-                        NavigationLink("Ausstellerzertifikat ansehen") { CertificateDetailView(certificate: issuerCertificate, isLeaf: false, systemCT: nil) }
+                        NavigationLink("View issuer certificate") { CertificateDetailView(certificate: issuerCertificate, isLeaf: false, systemCT: nil) }
                     }
                 } else {
                     RootStoreRows(certificate: certificate, showLicense: { showDataLicense = true })
@@ -53,21 +53,21 @@ struct CertificateDetailView: View {
                     HStack(alignment: .top, spacing: 12) {
                         Image(systemName: isLeaf && systemCT == true ? "checkmark.seal" : "doc.text.magnifyingglass").foregroundStyle(Color.diagnosticAccent)
                         VStack(alignment: .leading, spacing: 5) {
-                            Text(isLeaf && systemCT == true ? "System CT qualified" : "Inspect signed timestamps")
+                            Text(LocalizedStringKey(isLeaf && systemCT == true ? "System CT qualified" : "Inspect signed timestamps"))
                             Text("Log identities, timestamps and system policy result").font(.caption).foregroundStyle(.secondary)
                         }
                     }
                 }
             }
             Section("Public key & identifiers") {
-                if let key = presentation?.publicKey { Label(key, systemImage: "key").textSelection(.enabled) }
+                if let key = presentation?.publicKey { Label(CertificateFieldDisplay.publicKeyDetails(key), systemImage: "key").textSelection(.enabled) }
                 ForEach(fields.filter { ["key", "2.5.29.14", "2.5.29.35"].contains($0.id) }) { field in CertificateFieldRow(field: field, explain: showExplanation) }
             }
             Section("Metadata") {
                 ForEach(fields.filter { ["version", "serial", "signature"].contains($0.id) }) { field in CertificateFieldRow(field: field, explain: showExplanation) }
                 VStack(alignment: .leading, spacing: 6) {
                     Label("Certificate source", systemImage: "tray.and.arrow.down").font(.caption).foregroundStyle(.secondary)
-                    Text(certificate.source ?? "Not recorded")
+                    Text(NSLocalizedString(certificate.source ?? "Not recorded", comment: ""))
                     if showExplanation { Text("System validation may add certificates from its trust store or fetch missing intermediates. This source does not prove the server sent every certificate.").font(.footnote).foregroundStyle(.secondary) }
                 }
             }
@@ -75,7 +75,9 @@ struct CertificateDetailView: View {
                 ForEach(fields.filter { !["subject", "issuer", "from", "until", "key", "version", "serial", "signature", "2.5.29.14", "2.5.29.35", CertificateTransparency.oid].contains($0.id) }) { field in CertificateFieldRow(field: field, explain: showExplanation) }
             }
             if let findings = presentation?.findings, !findings.isEmpty {
-                Section("Findings") { ForEach(findings) { finding in VStack(alignment: .leading, spacing: 6) { Label(finding.title, systemImage: "exclamationmark.triangle").foregroundStyle(.orange); Text(finding.detail).font(.subheadline) } } }
+                Section("Findings") { ForEach(findings) { finding in
+                    VStack(alignment: .leading, spacing: 6) { Label(finding.title, systemImage: "exclamationmark.triangle").foregroundStyle(.orange); Text(finding.detail).font(.subheadline) }
+                } }
             }
             Section("Export & reminders") {
                 ShareLink("Export PEM", item: PEMCertificateExport(certificate: certificate), preview: SharePreview(certificate.subject))
@@ -94,10 +96,10 @@ private struct CertificateFieldRow: View {
     let explain: Bool
     var body: some View {
         VStack(alignment: .leading, spacing: 7) {
-            Text(field.name).font(.caption.weight(.medium)).foregroundStyle(.secondary)
-            Text(field.id == "signature" || field.id == "key" ? X509.algorithmName(field.value) : String(field.value.prefix(800))).lineLimit(8).font(field.id == "serial" || field.id == "2.5.29.14" || field.id == "2.5.29.35" ? .callout.monospaced() : .callout).textSelection(.enabled).fixedSize(horizontal: false, vertical: true)
-            if field.value.count > 800 { NavigationLink("Vollständigen Wert öffnen") { TextValueView(title:field.name,value:field.value) }.font(.footnote) }
-            if explain, let explanation = explanations[field.id] { Text(explanation).font(.footnote).foregroundStyle(.secondary) }
+            Text(LocalizedStringKey(field.name)).font(.caption.weight(.medium)).foregroundStyle(.secondary)
+            Text(String(CertificateFieldDisplay.value(field).prefix(800))).lineLimit(8).font(field.id == "serial" || field.id == "2.5.29.14" || field.id == "2.5.29.35" ? .callout.monospaced() : .callout).textSelection(.enabled).fixedSize(horizontal: false, vertical: true)
+            if field.value.count > 800 { NavigationLink("Open full value") { TextValueView(title:NSLocalizedString(field.name, comment: ""),value:CertificateFieldDisplay.value(field)) }.font(.footnote) }
+            if explain, let explanation = explanations[field.id] { Text(LocalizedStringKey(explanation)).font(.footnote).foregroundStyle(.secondary) }
         }.padding(.vertical, 3)
     }
     private var explanations: [String: String] { [
@@ -139,7 +141,7 @@ struct RootStoreRows: View {
                     HStack {
                         Label(store.name, systemImage: root == nil ? "minus.circle" : "checkmark.circle").foregroundStyle(root == nil ? Color.secondary : Color.diagnosticAccent)
                         Spacer()
-                        Text(root == nil ? "Not listed" : "Included").font(.subheadline).foregroundStyle(.secondary)
+                        Text(LocalizedStringKey(root == nil ? "Not listed" : "Included")).font(.subheadline).foregroundStyle(.secondary)
                     }
                     if let root, !root.constraints.isEmpty { DisclosureGroup("Published constraints") { Text(root.constraints).font(.footnote.monospaced()).textSelection(.enabled) } }
                 }.padding(.vertical, 3)
@@ -174,27 +176,28 @@ struct CertificateTransparencyView: View {
                         Text("Public logs help reveal unexpected certificate issuance.").font(.subheadline).foregroundStyle(.secondary)
                     }
                 }.padding(.vertical, 6)
-                Label(SystemCTPresentation(value: systemCT).title, systemImage: systemCT == true ? "checkmark.seal" : "questionmark.circle").foregroundStyle(systemCT == true ? Color.diagnosticAccent : Color.secondary)
-                Text(SystemCTPresentation(value: systemCT).explanation).font(.footnote).foregroundStyle(.secondary)
+                Label(LocalizedStringKey(SystemCTPresentation(value: systemCT).title), systemImage: systemCT == true ? "checkmark.seal" : "questionmark.circle").foregroundStyle(systemCT == true ? Color.diagnosticAccent : Color.secondary)
+                Text(LocalizedStringKey(SystemCTPresentation(value: systemCT).explanation)).font(.footnote).foregroundStyle(.secondary)
             }
             Section {
                 if parseFailed { Label("Malformed SCT extension", systemImage: "exclamationmark.triangle").foregroundStyle(.orange) }
-                else if timestamps.isEmpty { Text(isLeaf ? "No embedded SCTs. The server may provide SCTs through TLS or OCSP; those are not exposed by this request capture." : "No embedded SCTs. CT applies to publicly issued server certificates, not normally to CA certificates.").font(.subheadline).foregroundStyle(.secondary) }
+                else if timestamps.isEmpty { Text(LocalizedStringKey(isLeaf ? "No embedded SCTs. The server may provide SCTs through TLS or OCSP; those are not exposed by this request capture." : "No embedded SCTs. CT applies to publicly issued server certificates, not normally to CA certificates.")).font(.subheadline).foregroundStyle(.secondary) }
                 ForEach(timestamps) { timestamp in
                     let log = CTLogSnapshot.bundled?.logs[timestamp.logID]
                     VStack(alignment: .leading, spacing: 8) {
-                        Label(log?.name ?? "Unknown log", systemImage: "doc.text").font(.headline)
+                        if let log { Label(log.name, systemImage: "doc.text").font(.headline) }
+                        else { Label("Unknown log", systemImage: "doc.text").font(.headline) }
                         if let log { Text(log.operatorName).font(.subheadline).foregroundStyle(.secondary) }
                         LabeledContent("Timestamp", value: timestamp.timestamp.formatted(date: .abbreviated, time: .standard))
                         LabeledContent("Signature", value: timestamp.signatureAlgorithm)
-                        if let log { LabeledContent("Log’s current state", value: log.state.capitalized) }
+                        if let log { LabeledContent("Log’s current state", value: NSLocalizedString(log.state.capitalized, comment: "")) }
                         if let appleLog = AppleCTLogSnapshot.bundled?.log(id: timestamp.logID) {
-                            LabeledContent("Apple-Logstatus", value: appleLog.state.capitalized)
-                            Text(appleLog.statusExplanation(at: timestamp.timestamp)).font(.footnote).foregroundStyle(.secondary)
-                            LabeledContent("Apple-Logbetreiber", value: appleLog.operatorName)
-                            LabeledContent("Log-API", value: appleLog.api)
+                            LabeledContent("Apple log status", value: NSLocalizedString(appleLog.state.capitalized, comment: ""))
+                            Text(LocalizedStringKey(appleLog.statusExplanation(at: timestamp.timestamp))).font(.footnote).foregroundStyle(.secondary)
+                            LabeledContent("Apple log operator", value: appleLog.operatorName)
+                            LabeledContent("Log API", value: appleLog.api)
                         } else {
-                            Text("In der hinterlegten Apple-Logliste nicht gefunden. Daraus allein folgt kein CT-Fehler.").font(.footnote).foregroundStyle(.secondary)
+                            Text("Not found in the recorded Apple log list. This alone does not indicate a CT failure.").font(.footnote).foregroundStyle(.secondary)
                         }
                         DisclosureGroup("Log ID & signature") {
                             FingerprintRow(title: "Log ID · SHA-256", value: timestamp.logID)
@@ -204,11 +207,11 @@ struct CertificateTransparencyView: View {
                 }
             } header: { Text("Embedded signed timestamps · \(timestamps.count)") } footer: { Text("SCT contents are decoded, not independently signature-verified. The system CT result is separate; an SCT alone does not prove inclusion in a log.") }
             if let apple = AppleCTLogSnapshot.bundled {
-                Section("Apple-Logverzeichnis") {
+                Section("Apple log directory") {
                     LabeledContent("Version", value: apple.version)
-                    LabeledContent("Abgerufen", value: String(apple.retrievedAt.prefix(10)))
-                    Text("Datiertes Verzeichnis; der aktuelle Gerätestand kann abweichen.").font(.footnote).foregroundStyle(.secondary)
-                    Link("Apple-CT-Richtlinie", destination: URL(string: "https://support.apple.com/103214")!)
+                    LabeledContent("Retrieved", value: String(apple.retrievedAt.prefix(10)))
+                    Text("Dated directory; the current device state may differ.").font(.footnote).foregroundStyle(.secondary)
+                    Link("Apple CT policy", destination: URL(string: "https://support.apple.com/103214")!)
                 }
             }
             if let snapshot = CTLogSnapshot.bundled { Section("Log directory") { LabeledContent("Version", value: snapshot.version); Text("Google CT log list · \(String(snapshot.date.prefix(10)))").font(.footnote).foregroundStyle(.secondary); Link("View log directory", destination: URL(string: "https://www.gstatic.com/ct/log_list/v3/log_list.json")!) } }
@@ -220,7 +223,7 @@ private struct DataLicenseView: View {
     @Environment(\.dismiss) private var dismiss
     var body: some View {
         NavigationStack {
-            TextValueView(title: "Data license", value: (Bundle.main.url(forResource: "CCADB-License", withExtension: "txt").flatMap { try? String(contentsOf: $0, encoding: .utf8) }) ?? "Unavailable")
+            TextValueView(title: String(localized: "Data license"), value: (Bundle.main.url(forResource: "CCADB-License", withExtension: "txt").flatMap { try? String(contentsOf: $0, encoding: .utf8) }) ?? String(localized: "Unavailable"))
                 .toolbar { Button("Done") { dismiss() } }
         }
     }

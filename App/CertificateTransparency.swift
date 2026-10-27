@@ -92,13 +92,13 @@ struct AppleCTLogSnapshot: Decodable, Sendable {
         let api: String
         func statusExplanation(at timestamp: Date) -> String {
             switch state {
-            case "usable", "qualified", "readonly": return "Aktuell qualifiziert laut Apple-Listenstand. Die SCT-Signatur und weitere Richtlinienbedingungen sind damit noch nicht geprüft."
+            case "usable", "qualified", "readonly": return "Currently qualified according to Apple’s directory. The SCT signature and other policy conditions have not been checked."
             case "retired":
-                guard let retirement = ISO8601DateFormatter().date(from: stateTimestamp) else { return "Stillgelegt; Zeitgrenze nicht lesbar." }
-                return timestamp < retirement ? "SCT vor Stilllegung ausgestellt; kann als ehemals qualifiziert zählen. Weitere Prüfungen sind erforderlich." : "SCT ab Stilllegung ausgestellt; zählt nicht als ehemals qualifiziert."
-            case "pending": return "Aufnahme ausstehend; zählt nicht als qualifiziert."
-            case "rejected": return "Von Apple abgelehnt; zählt nicht als qualifiziert."
-            default: return "Unbekannter Status; keine Qualifikation bestätigt."
+                guard let retirement = ISO8601DateFormatter().date(from: stateTimestamp) else { return "Retired; retirement time could not be read." }
+                return timestamp < retirement ? "SCT issued before retirement; it may count as historically qualified. Further checks are required." : "SCT issued at or after retirement; it does not count as historically qualified."
+            case "pending": return "Inclusion is pending; this log does not count as qualified."
+            case "rejected": return "Rejected by Apple; this log does not count as qualified."
+            default: return "Unknown status; qualification is not confirmed."
             }
         }
     }

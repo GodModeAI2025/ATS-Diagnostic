@@ -4,6 +4,19 @@ import Testing
 
 private final class LegacyHistoryResourceScope: NSObject {}
 struct HistoryPersistenceTests {
+    @MainActor @Test func malformedHARCannotPartiallyReplaceHistory() async throws {
+        let file = FileManager.default.temporaryDirectory.appendingPathComponent(UUID().uuidString)
+        defer { try? FileManager.default.removeItem(at: file) }
+        let existing = DiagnosticRecord(url: "https://example.com/saved", method: "GET")
+        try JSONEncoder().encode([existing]).write(to: file)
+        let store = DiagnosticStore(historyFile: file)
+        let data = Data(#"{"log":{"entries":[{"request":{"url":"https://example.com/valid"}},{"request":{"url":"file:///private/data"}}]}}"#.utf8)
+        await #expect(throws: (any Error).self) { try await store.importHAR(data) }
+        await store.flushHistory()
+        #expect(store.records.map(\.id) == [existing.id])
+        let saved = try JSONDecoder().decode([DiagnosticRecord].self, from: Data(contentsOf: file))
+        #expect(saved.map(\.id) == [existing.id])
+    }
     @Test func lateSnapshotCannotUndoClear() async throws {
         let file = FileManager.default.temporaryDirectory.appendingPathComponent(UUID().uuidString)
         defer { try? FileManager.default.removeItem(at: file) }

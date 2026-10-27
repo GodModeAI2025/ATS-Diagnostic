@@ -357,13 +357,13 @@ struct HistoryView: View {
                 .sheet(isPresented: $showSettings) { RecordingSettingsView(store: store) }
                 .toolbar { ShareLink(item: DiagnosticLogExport(records: store.records), preview: SharePreview("Diagnostic log")) { Label("Export log", systemImage: "doc.text") }; Button("Recording settings", systemImage: "gearshape") { showSettings = true }; ShareLink(item: HARArchive(records: store.records), preview: SharePreview("Diagnostics archive")) { Label("Export HAR", systemImage: "square.and.arrow.up") }; Button("Import HAR", systemImage: "square.and.arrow.down") { importHAR = true }; Button("Clear", systemImage: "trash") { confirmClear = true }.disabled(store.records.isEmpty) }
                 .confirmationDialog("Delete all local diagnostics?", isPresented: $confirmClear) { Button("Delete history", role: .destructive) { Task { await store.clear() } } }
-                .fileImporter(isPresented: $importHAR, allowedContentTypes: [.json, .data]) { result in Task { do { let url = try result.get(); let accessed = url.startAccessingSecurityScopedResource(); defer { if accessed { url.stopAccessingSecurityScopedResource() } }; try await store.importHAR(Data(contentsOf: url)) } catch { store.error = error.localizedDescription } } }
                 .onChange(of: query, initial: true) { refresh() }
                 .onChange(of: store.records.map(\.id)) { refresh() }
                 .onChange(of: category) { refresh() }
                 .onChange(of: favoritesOnly) { refresh() }
                 .onChange(of: store.settings.favorites) { refresh() }
         }
+        .fileImporter(isPresented: $importHAR, allowedContentTypes: [.httpArchive, .json, .data]) { result in Task { do { let url = try result.get(); let accessed = url.startAccessingSecurityScopedResource(); defer { if accessed { url.stopAccessingSecurityScopedResource() } }; try await store.importHAR(Data(contentsOf: url)) } catch { store.error = error.localizedDescription } } }
     }
 #if targetEnvironment(macCatalyst)
     private func macWorkspace(width: CGFloat) -> some View {

@@ -55,8 +55,8 @@ struct AppleCTDirectoryTests {
     @Test func retirementBoundaryIsStrict() {
         let log = AppleCTLogSnapshot.Log(logID: "id", name: "test", operatorName: "test", state: "retired", stateTimestamp: "2025-01-01T00:00:00Z", publicKey: "", api: "RFC6962")
         let boundary = ISO8601DateFormatter().date(from: log.stateTimestamp)!
-        #expect(log.statusExplanation(at: boundary.addingTimeInterval(-1)).contains("vor Stilllegung"))
-        #expect(log.statusExplanation(at: boundary).contains("ab Stilllegung"))
+        #expect(log.statusExplanation(at: boundary.addingTimeInterval(-1)).contains("before retirement"))
+        #expect(log.statusExplanation(at: boundary).contains("at or after retirement"))
     }
 }
 

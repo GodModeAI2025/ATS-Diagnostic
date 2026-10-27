@@ -8,7 +8,7 @@ settings:
     SWIFT_VERSION: '6.0'
     DEVELOPMENT_TEAM: SP73Z8JWXM
     MARKETING_VERSION: '2.0.1'
-    CURRENT_PROJECT_VERSION: '60'
+    CURRENT_PROJECT_VERSION: '61'
     TARGETED_DEVICE_FAMILY: '1,2'
 targets:
   ATSDiagnostic:
@@ -23,6 +23,12 @@ targets:
         NSLocalNetworkUsageDescription: "ATS Diagnostic prüft von dir ausgewählte Geräte und Server im lokalen Netzwerk, um HTTP, TLS und Zertifikate zu untersuchen."
         NSAppTransportSecurity:
           NSAllowsArbitraryLoads: true
+        UTImportedTypeDeclarations:
+          - UTTypeIdentifier: com.mobilebox.http-archive
+            UTTypeDescription: HTTP Archive
+            UTTypeConformsTo: [public.json]
+            UTTypeTagSpecification:
+              public.filename-extension: [har]
     settings:
       base:
         PRODUCT_BUNDLE_IDENTIFIER: com.mobilebox.atsdiagnostic
@@ -52,6 +58,12 @@ targets:
         NSLocalNetworkUsageDescription: "ATS Diagnostic prüft von dir ausgewählte Geräte und Server im lokalen Netzwerk, um HTTP, TLS und Zertifikate zu untersuchen."
         NSAppTransportSecurity:
           NSAllowsArbitraryLoads: true
+        UTImportedTypeDeclarations:
+          - UTTypeIdentifier: com.mobilebox.http-archive
+            UTTypeDescription: HTTP Archive
+            UTTypeConformsTo: [public.json]
+            UTTypeTagSpecification:
+              public.filename-extension: [har]
     settings:
       base:
         PRODUCT_BUNDLE_IDENTIFIER: com.mobilebox.atsdiagnostic.preview

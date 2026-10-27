@@ -13,9 +13,9 @@ enum CertificateReminderPlan {
         case expired, invalidDate, notificationsDenied
         var errorDescription: String? {
             switch self {
-            case .expired: "This certificate has expired or expires within the next minute."
-            case .invalidDate: "Choose a future reminder time before the certificate expires."
-            case .notificationsDenied: "Notifications are disabled. You can enable them in system Settings."
+            case .expired: NSLocalizedString("This certificate has expired or expires within the next minute.", comment: "")
+            case .invalidDate: NSLocalizedString("Choose a future reminder time before the certificate expires.", comment: "")
+            case .notificationsDenied: NSLocalizedString("Notifications are disabled. You can enable them in system Settings.", comment: "")
             }
         }
     }

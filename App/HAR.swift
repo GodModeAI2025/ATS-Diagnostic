@@ -2,6 +2,10 @@ import Foundation
 import UniformTypeIdentifiers
 import CoreTransferable
 
+extension UTType {
+    static let httpArchive = UTType(importedAs: "com.mobilebox.http-archive", conformingTo: .json)
+}
+
 struct HARArchive: Codable, Transferable {
     struct Log: Codable { var version = "1.2"; var creator = Creator(); var entries: [Entry] }
     struct Creator: Codable { var name = "ATS Diagnostic"; var version = "2.0" }
@@ -18,7 +22,7 @@ struct HARArchive: Codable, Transferable {
         log = Log(entries: records.map { record in
             let query = URLComponents(string: record.url)?.queryItems?.map { Header(name: $0.name, value: $0.value ?? "") } ?? []
             let version = record.protocolName == "h2" ? "HTTP/2.0" : record.protocolName == "h3" ? "HTTP/3.0" : record.protocolName ?? ""
-            return Entry(startedDateTime: record.date.ISO8601Format(), time: record.duration * 1000,
+            return Entry(startedDateTime: record.date.ISO8601Format(.init(includingFractionalSeconds: true)), time: record.duration * 1000,
                 request: Request(method: record.method, url: record.url, httpVersion: version, cookies: [], headers: record.requestHeaders.map { Header(name: $0.key, value: $0.value) }, queryString: query, headersSize: -1, bodySize: record.requestBodyUnavailable == true ? (record.importedRequestBodyBytes ?? -1) : record.requestBody.utf8.count, postData: record.requestBody.isEmpty ? nil : PostData(mimeType: record.requestHeaders.first { $0.key.lowercased() == "content-type" }?.value ?? "application/octet-stream", text: record.requestBody)),
                 response: Response(status: record.status ?? 0, statusText: record.status.map { HTTPURLResponse.localizedString(forStatusCode: $0) } ?? "", httpVersion: version, cookies: [], headers: record.responseHeaders.map { Header(name: $0.key, value: $0.value) }, content: Content(size: record.responseByteCountKnown == false ? -1 : record.bytes, mimeType: record.responseHeaders.first { $0.key.lowercased() == "content-type" }?.value ?? "application/octet-stream", text: record.responseBody, encoding: record.responseEncoding), redirectURL: record.responseHeaders.first { $0.key.lowercased() == "location" }?.value ?? "", headersSize: -1, bodySize: record.responseByteCountKnown == false ? -1 : record.bytes),
                 cache: [:], timings: Timings(send: -1, wait: -1, receive: -1, dns: record.dnsDuration.map { $0 * 1000 } ?? -1, connect: record.connectDuration.map { $0 * 1000 } ?? -1, ssl: record.tlsDuration.map { $0 * 1000 } ?? -1), serverIPAddress: record.remoteAddress, _atsDiagnostic: Metadata(source: record.origin == .developerSDK ? "ATSRecording" : "ATS Diagnostic", responseSHA256: record.responseSHA256, errorDomain: record.networkErrors?.first?.domain, errorCode: record.networkErrors?.first?.code, errorDescription: record.error, requestBodyUnavailable: record.requestBodyUnavailable, requestBodyPreviewBase64: record.importedRequestBodyPreview?.base64EncodedString(), responseBytesKnown: record.responseByteCountKnown, responseComplete: record.importedResponseComplete, observedResponseBytes: record.importedObservedResponseBytes, taskMetrics: record.connectionMetrics))
@@ -26,14 +30,14 @@ struct HARArchive: Codable, Transferable {
     }
     func records() throws -> [DiagnosticRecord] { try Self.importRecords(JSONEncoder().encode(self)) }
     static var transferRepresentation: some TransferRepresentation {
-        DataRepresentation(exportedContentType: .json) { archive in let encoder = JSONEncoder(); encoder.outputFormatting = [.prettyPrinted, .sortedKeys]; return try encoder.encode(archive) }.suggestedFileName("ATS-Diagnostic.har")
+        DataRepresentation(exportedContentType: .httpArchive) { archive in let encoder = JSONEncoder(); encoder.outputFormatting = [.prettyPrinted, .sortedKeys]; return try encoder.encode(archive) }.suggestedFileName("ATS-Diagnostic.har")
     }
 }
 
 extension HARArchive {
     enum ImportError: LocalizedError {
         case malformed
-        var errorDescription: String? { "Select a HAR file containing a log.entries array and valid request URLs." }
+        var errorDescription: String? { String(localized: "Select a HAR file containing a log.entries array and valid request URLs.") }
     }
     static func importRecords(_ data: Data) throws -> [DiagnosticRecord] {
         guard let root = try JSONSerialization.jsonObject(with: data) as? [String: Any], let log = root["log"] as? [String: Any], let entries = log["entries"] as? [[String: Any]], entries.count <= 10000 else { throw ImportError.malformed }
