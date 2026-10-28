@@ -1,0 +1,13 @@
+Window: "", App: ATS Diagnostic.
+0 Blatt Secondary Actions: Raise
+	1 Bild ATSDiagnostic Kritischer Hinweis
+	2 text „ATS-Normal.har“ existiert bereits. Möchtest du das Objekt ersetzen? Es existiert bereits eine Datei oder ein Ordner mit demselben Namen im Ordner „QA“. Beim Ersetzen wird der Inhalt überschrieben.
+	3 Taste Abbrechen, ID: action-button-2
+	4 Taste Ersetzen, ID: action-button-1
+5 menu bar
+	6 ATSDiagnostic, ID: com.apple.menu.application
+	7 Ablage, ID: com.apple.menu.file
+	8 Bearbeiten, ID: com.apple.menu.edit
+	9 Darstellung, ID: com.apple.menu.view
+	10 Fenster, ID: com.apple.menu.window
+	11 Hilfe, ID: com.apple.menu.help

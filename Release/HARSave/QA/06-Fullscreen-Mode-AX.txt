@@ -1,0 +1,6 @@
+Window: "ATS Diagnostic", App: ATS Diagnostic.
+0 Darstellung, ID: com.apple.menu.view, Secondary Actions: Cancel, Pick
+	1 Menü Secondary Actions: Cancel
+		2 Tableiste einblenden, ID: toggleTabBar:
+		3 Alle Tabs einblenden, ID: toggleTabOverview:
+		4 Vollbildmodus aus, ID: toggleFullScreen:

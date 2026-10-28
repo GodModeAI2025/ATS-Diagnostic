@@ -56,6 +56,8 @@
 "Recording settings" = "Aufnahmeeinstellungen";
 "Diagnostics archive" = "Diagnosearchiv";
 "Export HAR" = "HAR exportieren";
+"Save HAR As…" = "HAR speichern unter …";
+"HAR export failed" = "HAR konnte nicht gespeichert werden";
 "Import HAR" = "HAR importieren";
 "Clear" = "Leeren";
 "Delete all local diagnostics?" = "Alle lokalen Diagnosen löschen?";

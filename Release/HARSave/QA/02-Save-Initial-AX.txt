@@ -1,0 +1,75 @@
+Window: "Sichern", App: ATS Diagnostic.
+0 Blatt Description: sichern, ID: save-panel, Secondary Actions: Raise
+	1 Trenngruppe
+		2 Rollbereich Secondary Actions: Scroll Up, Scroll Down
+			3 Gliederung Seitenleiste
+				4 row (selectable) Description: Zwei Personen, Value: Geteilt
+				5 row (selectable, expanded) Value: Favoriten, Secondary Actions: Collapse
+				6 row (selectable) OneDrive
+				7 row (selectable) Description: „A“-Logo für App Store, Value: Programme
+				8 row (selectable) Description: Menüleiste mit Dock auf einem Rechteck, Value: Schreibtisch
+				9 row (selectable) Description: Dokumentseite, Value: Dokumente
+				10 row (selectable) Description: Kreispfeil nach unten, Value: Downloads
+				11 row (selectable, expanded) Value: Orte, Secondary Actions: Collapse
+				12 row (selectable) Description: iCloud, Value: iCloud Drive
+				13 row (selectable) Description: Zuhause, Value: markzimmermann
+				14 row (selectable) Description: Interne Festplatte, Value: Macintosh HD
+				15 row (selectable) Auswerfen, Value: Mark, Description: Externe Festplatte
+auswerfen
+				16 row (selectable) Auswerfen, Value: SDMark, Description: Externe Festplatte
+auswerfen
+				17 row (selectable) Auswerfen, Value: EnBW CoWork, Description: Externe Festplatte
+auswerfen
+				18 row (selectable) Description: Durch Linien verbundene Netzwerkknoten, Value: Netzwerk
+				19 row (selectable, collapsed) Value: Tags, Secondary Actions: Expand
+			20 Rollbalken (settable, float) 0
+				21 Wertanzeige (settable, float) 0
+				22 Aufwärtspfeil
+				23 Abwärtspfeil
+				24 Seite aufwärts
+				25 Seite abwärts
+		26 Trenner (disabled, settable, float) 183.5
+		27 Rollbereich Secondary Actions: Scroll Left, Scroll Right
+			28 Gliederung Description: Listendarstellung, ID: ListView
+				29 row (selectable)
+					30 Zelle Secondary Actions: Finder-Objekt öffnen
+						31 Bild
+						32 Textfeld (settable) Value: ATS-Diagnostic.har, Secondary Actions: Finder-Objekt öffnen, URL: file:///Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/outputs/ATS-Diagnostic/Release/Mac61/QA/HAR/Build61/MenuPaste/ATS-Diagnostic.har
+					33 Zelle
+						34 Text 121 KB
+					35 Zelle
+						36 Text Reiner Text
+					37 Zelle
+						38 Text Gestern, 21:49
+				39 container ListViewHeader
+					40 Taste Description: Name, ID: name
+					41 Taste Description: Größe, ID: size
+					42 Taste Description: Art, ID: kind
+					43 Taste Description: Hinzugefügt am, Value: AXDescendingSortDirection, ID: dateAdded
+			44 Rollbalken (settable, float) 0
+				45 Wertanzeige (settable, float) 0
+				46 Aufwärtspfeil
+				47 Abwärtspfeil
+				48 Seite aufwärts
+				49 Seite abwärts
+		50 container
+			51 Taste (disabled) Zurück
+			52 Taste (disabled) Weiter
+		53 Menü-Taste Description: Liste, Help: Als Symbole, Liste oder Spalten anzeigen sowie Seitenleiste ein-/ausblenden, ID: View Options
+		54 Menü-Taste Description: 3x1-Quadratraster unter einem 1x2-Linienraster, Help: Gruppierung der Objekte ändern (Option-Taste gedrückt halten, um die Sortierung zu ändern), ID: Group or Sort By
+		55 Einblendmenü Ort:, Value: MenuPaste, ID: where popup
+		56 Schließdreieck Description: weniger Optionen anzeigen, Value: 1
+		57 Feld für Suchtext Search
+			58 Taste Suchen
+		59 Text Value: Sichern unter:, ID: nameFieldLabel
+		60 Textfeld (settable) Value: ATS-Diagnostic, ID: saveAsNameTextField
+		61 Taste Neuer Ordner, ID: NewFolderButton
+		62 Taste Abbrechen, ID: CancelButton
+		63 Taste Sichern, ID: OKButton
+64 menu bar
+	65 ATSDiagnostic, ID: com.apple.menu.application
+	66 Ablage, ID: com.apple.menu.file
+	67 Bearbeiten, ID: com.apple.menu.edit
+	68 Darstellung, ID: com.apple.menu.view
+	69 Fenster, ID: com.apple.menu.window
+	70 Hilfe, ID: com.apple.menu.help

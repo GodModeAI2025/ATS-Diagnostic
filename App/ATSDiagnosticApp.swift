@@ -318,6 +318,11 @@ struct HistoryView: View {
     @State private var filtered: [DiagnosticRecord] = []
     @State private var confirmClear = false
     @State private var importHAR = false
+#if targetEnvironment(macCatalyst)
+    @State private var exportHAR = false
+    @State private var harToExport: HARArchive?
+    @State private var exportError: String?
+#endif
     @State private var category = ResponseCategory.all
     @State private var favoritesOnly = false
     @State private var showSettings = false
@@ -355,7 +360,20 @@ struct HistoryView: View {
                 .searchable(text: $query, prompt: "URL, method or status")
                 .navigationTitle("History")
                 .sheet(isPresented: $showSettings) { RecordingSettingsView(store: store) }
-                .toolbar { ShareLink(item: DiagnosticLogExport(records: store.records), preview: SharePreview("Diagnostic log")) { Label("Export log", systemImage: "doc.text") }; Button("Recording settings", systemImage: "gearshape") { showSettings = true }; ShareLink(item: HARArchive(records: store.records), preview: SharePreview("Diagnostics archive")) { Label("Export HAR", systemImage: "square.and.arrow.up") }; Button("Import HAR", systemImage: "square.and.arrow.down") { importHAR = true }; Button("Clear", systemImage: "trash") { confirmClear = true }.disabled(store.records.isEmpty) }
+                .toolbar {
+                    ShareLink(item: DiagnosticLogExport(records: store.records), preview: SharePreview("Diagnostic log")) { Label("Export log", systemImage: "doc.text") }
+                    Button("Recording settings", systemImage: "gearshape") { showSettings = true }
+#if targetEnvironment(macCatalyst)
+                    Button("Save HAR As…", systemImage: "square.and.arrow.down.on.square") {
+                        harToExport = HARArchive(records: store.records)
+                        exportHAR = true
+                    }.disabled(store.loadingHistory)
+#else
+                    ShareLink(item: HARArchive(records: store.records), preview: SharePreview("Diagnostics archive")) { Label("Export HAR", systemImage: "square.and.arrow.up") }
+#endif
+                    Button("Import HAR", systemImage: "square.and.arrow.down") { importHAR = true }
+                    Button("Clear", systemImage: "trash") { confirmClear = true }.disabled(store.records.isEmpty)
+                }
                 .confirmationDialog("Delete all local diagnostics?", isPresented: $confirmClear) { Button("Delete history", role: .destructive) { Task { await store.clear() } } }
                 .onChange(of: query, initial: true) { refresh() }
                 .onChange(of: store.records.map(\.id)) { refresh() }
@@ -364,6 +382,18 @@ struct HistoryView: View {
                 .onChange(of: store.settings.favorites) { refresh() }
         }
         .fileImporter(isPresented: $importHAR, allowedContentTypes: [.httpArchive, .json, .data]) { result in Task { do { let url = try result.get(); let accessed = url.startAccessingSecurityScopedResource(); defer { if accessed { url.stopAccessingSecurityScopedResource() } }; try await store.importHAR(Data(contentsOf: url)) } catch { store.error = error.localizedDescription } } }
+#if targetEnvironment(macCatalyst)
+        // Keep file dialogs on the outer navigation container so Catalyst can present them in fullscreen.
+        .fileExporter(isPresented: $exportHAR, item: harToExport, contentTypes: [.httpArchive], defaultFilename: "ATS-Diagnostic.har") { result in
+            harToExport = nil
+            if case .failure(let error) = result { exportError = error.localizedDescription }
+        } onCancellation: {
+            harToExport = nil
+        }
+        .alert("HAR export failed", isPresented: Binding(get: { exportError != nil }, set: { if !$0 { exportError = nil } })) {
+            Button("OK", role: .cancel) { exportError = nil }
+        } message: { Text(exportError ?? "") }
+#endif
     }
 #if targetEnvironment(macCatalyst)
     private func macWorkspace(width: CGFloat) -> some View {

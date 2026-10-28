@@ -1,0 +1,87 @@
+Window: "Sichern", App: ATS Diagnostic.
+0 Blatt Description: sichern, ID: save-panel, Secondary Actions: Raise
+	1 Trenngruppe
+		2 Rollbereich Secondary Actions: Scroll Up, Scroll Down
+			3 Gliederung Seitenleiste
+				4 row (selectable) Description: Zwei Personen, Value: Geteilt
+				5 row (selectable, expanded) Value: Favoriten, Secondary Actions: Collapse
+				6 row (selectable) OneDrive
+				7 row (selectable) Description: „A“-Logo für App Store, Value: Programme
+				8 row (selectable) Description: Menüleiste mit Dock auf einem Rechteck, Value: Schreibtisch
+				9 row (selectable) Description: Dokumentseite, Value: Dokumente
+				10 row (selectable) Description: Kreispfeil nach unten, Value: Downloads
+				11 row (selectable, expanded) Value: Orte, Secondary Actions: Collapse
+				12 row (selectable) Description: iCloud, Value: iCloud Drive
+				13 row (selectable) Description: Zuhause, Value: markzimmermann
+				14 row (selectable) Description: Interne Festplatte, Value: Macintosh HD
+				15 row (selectable) Auswerfen, Value: Mark, Description: Externe Festplatte
+auswerfen
+				16 row (selectable) Auswerfen, Value: SDMark, Description: Externe Festplatte
+auswerfen
+				17 row (selectable) Auswerfen, Value: EnBW CoWork, Description: Externe Festplatte
+auswerfen
+				18 row (selectable) Description: Durch Linien verbundene Netzwerkknoten, Value: Netzwerk
+				19 row (selectable, collapsed) Value: Tags, Secondary Actions: Expand
+			20 Rollbalken (settable, float) 0
+				21 Wertanzeige (settable, float) 0
+				22 Aufwärtspfeil
+				23 Abwärtspfeil
+				24 Seite aufwärts
+				25 Seite abwärts
+		26 Trenner (disabled, settable, float) 183.5
+		27 Rollbereich Secondary Actions: Scroll Left, Scroll Right
+			28 Gliederung Description: Listendarstellung, ID: ListView
+				29 row (selectable)
+					30 Zelle Secondary Actions: Finder-Objekt öffnen
+						31 Bild
+						32 Textfeld (settable) Value: 02-Save-Initial-AX.txt, Secondary Actions: Finder-Objekt öffnen, URL: file:///Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/outputs/ATS-Diagnostic/Release/HARSave/QA/02-Save-Initial-AX.txt
+					33 Zelle
+						34 Text 4 KB
+					35 Zelle
+						36 Text Reiner Text
+					37 Zelle
+						38 Text Heute, 06:50
+				39 row (selectable)
+					40 Zelle Secondary Actions: Finder-Objekt öffnen
+						41 Bild
+						42 Textfeld (settable) Value: 01-Baseline-AX.txt, Secondary Actions: Finder-Objekt öffnen, URL: file:///Users/markzimmermann/Documents/Codex/2026-10-11/clone-x20/outputs/ATS-Diagnostic/Release/HARSave/QA/01-Baseline-AX.txt
+					43 Zelle
+						44 Text 3 KB
+					45 Zelle
+						46 Text Reiner Text
+					47 Zelle
+						48 Text Heute, 06:49
+				49 container ListViewHeader
+					50 Taste Description: Name, ID: name
+					51 Taste Description: Größe, ID: size
+					52 Taste Description: Art, ID: kind
+					53 Taste Description: Hinzugefügt am, Value: AXDescendingSortDirection, ID: dateAdded
+			54 Rollbalken (settable, float) 0
+				55 Wertanzeige (settable, float) 0
+				56 Aufwärtspfeil
+				57 Abwärtspfeil
+				58 Seite aufwärts
+				59 Seite abwärts
+		60 container
+			61 Taste Zurück
+			62 Taste (disabled) Weiter
+		63 Menü-Taste Description: Liste, Help: Als Symbole, Liste oder Spalten anzeigen sowie Seitenleiste ein-/ausblenden, ID: View Options
+		64 Menü-Taste Description: 3x1-Quadratraster unter einem 1x2-Linienraster, Help: Gruppierung der Objekte ändern (Option-Taste gedrückt halten, um die Sortierung zu ändern), ID: Group or Sort By
+		65 Einblendmenü Ort:, Value: QA, ID: where popup
+		66 Schließdreieck Description: weniger Optionen anzeigen, Value: 1
+		67 Feld für Suchtext Search
+			68 Taste Suchen
+		69 Text Value: Sichern unter:, ID: nameFieldLabel
+		70 Textfeld (settable) Value: ATS-Normal, ID: saveAsNameTextField
+		71 Taste Neuer Ordner, ID: NewFolderButton
+		72 Taste Abbrechen, ID: CancelButton
+		73 Taste Sichern, ID: OKButton
+74 menu bar
+	75 ATSDiagnostic, ID: com.apple.menu.application
+	76 Ablage, ID: com.apple.menu.file
+	77 Bearbeiten, ID: com.apple.menu.edit
+	78 Darstellung, ID: com.apple.menu.view
+	79 Fenster, ID: com.apple.menu.window
+	80 Hilfe, ID: com.apple.menu.help
+
+The focused UI element is 70 Textfeld (settable) Value: ATS-Normal, ID: saveAsNameTextField
