@@ -1,0 +1,18 @@
+VPN CLARIFICATION FOR BUILD 61 (28 October 2026)
+ATS Diagnostic for macOS, version 2.0.1 (61), does not provide VPN functionality. It does not establish a VPN tunnel, install a VPN profile, change system routing, or intercept traffic from other applications.
+
+1. Information collected using VPN: None. There is no VPN connection or VPN data collection.
+2. Purposes: No VPN data is collected or used. The app makes direct HTTP/TLS requests only for user-selected diagnostics, such as inspecting a server's certificate, response headers and connection errors. Diagnostic history is stored locally in the app's sandbox.
+3. Third-party sharing/storage: No VPN data is shared with or stored by any third party. Diagnostic history is not automatically uploaded to us or an analytics service. Selected destination servers receive the direct requests; DNS resolution and certificate-validation/revocation checks can contact their respective network services. Users can explicitly export diagnostic files and choose their destination.
+
+We verified the signed archive for build 61: its entitlements are App Sandbox, outgoing network client access and user-selected file read/write access. It has no Network Extension/VPN entitlement, no app extension and no NetworkExtension framework dependency. NSAllowsArbitraryLoads permits diagnosis of user-selected HTTP/legacy endpoints; it does not create a VPN. HTTPS certificate validation remains enabled.
+
+ATS Diagnostic is a user-directed HTTP, TLS and certificate diagnostic utility in a Mac Catalyst app. This version uses the macOS App Sandbox with outbound network access. Files are accessed only when selected by the user. There is no proxy, listener for other devices, VPN, TLS interception or installed root CA.
+
+ATS exception: NSAllowsArbitraryLoads is required to diagnose arbitrary user-selected HTTP endpoints and legacy TLS configurations. Targets may be local devices or third-party servers and cannot be pre-enumerated in NSExceptionDomains. The exception enables measurement; it does not say a target is secure or that another app complies with ATS. Default HTTPS certificate evaluation, including chain, hostname and validity checks, remains enabled. Invalid certificates are shown with an error and original details.
+
+Local network: The user can enter a local host or IP address to inspect it. The system prompt explains access to user-selected local devices and servers. The app performs no Bonjour browsing or multicast discovery. No Network Extension entitlement is used.
+
+Review steps: Enter and run http://example.com in Inspect to test an HTTP connection. Enter https://expired.badssl.com to see an expired-certificate failure. Open a result to review issuer, chain, headers and TLS-probe details. To exercise local-network access, enter a reachable local hostname or IP address. Availability and negotiated TLS versions depend on system support and the server; failures remain visible.
+
+Build 61 adds German certificate labels and explanations and corrects HAR file naming, millisecond timestamps and the full-screen import dialog. Actual HAR file export and reimport were verified in windowed and full-screen mode; imported recordings are explicitly not new system-trust evaluations. The Mac regression suite passed 172 tests.

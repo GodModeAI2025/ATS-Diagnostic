@@ -1,0 +1,9 @@
+ATS Diagnostic is a user-directed HTTP, TLS and certificate diagnostic utility in a Mac Catalyst app. This version uses the macOS App Sandbox with outbound network access. Files are accessed only when selected by the user. There is no proxy, listener for other devices, VPN, TLS interception or installed root CA.
+
+ATS exception: NSAllowsArbitraryLoads is required to diagnose arbitrary user-selected HTTP endpoints and legacy TLS configurations. Targets may be local devices or third-party servers and cannot be pre-enumerated in NSExceptionDomains. The exception enables measurement; it does not say a target is secure or that another app complies with ATS. Default HTTPS certificate evaluation, including chain, hostname and validity checks, remains enabled. Invalid certificates are shown with an error and original details.
+
+Local network: The user can enter a local host or IP address to inspect it. The system prompt explains access to user-selected local devices and servers. The app performs no Bonjour browsing or multicast discovery. No Network Extension entitlement is used.
+
+Review steps: Enter and run http://example.com in Inspect to test an HTTP connection. Enter https://expired.badssl.com to see an expired-certificate failure. Open a result to review issuer, chain, headers and TLS-probe details. To exercise local-network access, enter a reachable local hostname or IP address. Availability and negotiated TLS versions depend on system support and the server; failures remain visible.
+
+Build 61 adds German certificate labels and explanations and corrects HAR file naming, millisecond timestamps and the full-screen import dialog. Actual HAR file export and reimport were verified in windowed and full-screen mode; imported recordings are explicitly not new system-trust evaluations. The Mac regression suite passed 172 tests.

@@ -1,0 +1,11 @@
+Hello App Review,
+
+ATS Diagnostic for macOS, version 2.0.1 (61), does not provide VPN functionality. It does not establish a VPN tunnel, install a VPN profile, change system routing, or intercept traffic from other applications.
+
+1. Information collected using VPN: None. There is no VPN connection or VPN data collection.
+2. Purposes: No VPN data is collected or used. The app makes direct HTTP/TLS requests only for user-selected diagnostics, such as inspecting a server's certificate, response headers and connection errors. Diagnostic history is stored locally in the app's sandbox.
+3. Third-party sharing/storage: No VPN data is shared with or stored by any third party. Diagnostic history is not automatically uploaded to us or an analytics service. Selected destination servers receive the direct requests; DNS resolution and certificate-validation/revocation checks can contact their respective network services. Users can explicitly export diagnostic files and choose their destination.
+
+We verified the signed archive for build 61: its entitlements are App Sandbox, outgoing network client access and user-selected file read/write access. It has no Network Extension/VPN entitlement, no app extension and no NetworkExtension framework dependency. NSAllowsArbitraryLoads permits diagnosis of user-selected HTTP/legacy endpoints; it does not create a VPN. HTTPS certificate validation remains enabled.
+
+We have added this clarification to App Review Information. Please continue reviewing build 61. Thank you.

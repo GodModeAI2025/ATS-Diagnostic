@@ -28,7 +28,7 @@
   "testflight_tester": "mark_zimmermann@mac.com",
   "testflight_group_testers": 1,
   "testflight_tester_status": "Eingeladen",
-  "store_status": "Warten auf Prüfung",
+  "store_status": "Abgelehnt",
   "store_submission_id": "f3fbe14a-3727-4beb-b264-f0e39dba5b73",
   "store_submitted_at": "2026-10-27T22:16:00+01:00",
   "store_selected_build": "61",
@@ -40,5 +40,11 @@
     "en-US",
     "de-DE inherited"
   ],
-  "store_submission_blocker": null
+  "store_submission_blocker": null,
+  "review_issue": "2.1.0 App Completeness: automated VPN-functionality clarification request",
+  "review_rejected_on": "2026-10-28",
+  "review_clarification_notes_saved": true,
+  "review_reply_sent": true,
+  "review_reply_draft_saved": false,
+  "review_reply_sent_at": "2026-10-28T18:24:00+01:00"
 }
