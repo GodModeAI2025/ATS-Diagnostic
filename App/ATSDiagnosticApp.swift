@@ -433,8 +433,12 @@ struct RecordRow: View {
         VStack(alignment: .leading, spacing: 5) {
             HStack(alignment: .firstTextBaseline, spacing: 12) {
                 Text(record.method).font(.caption.monospaced().weight(.semibold)).frame(width: 60, alignment: .leading)
-                Text(record.status.map(String.init) ?? String(localized: "Failed")).font(.callout.monospacedDigit()).frame(width: 54, alignment: .leading)
-                    .foregroundStyle(record.error == nil && (record.status ?? 0) < 400 ? Color.primary : Color.red)
+                ZStack(alignment: .leading) {
+                    // Reserve the localized failure label's width in every row to keep URLs aligned.
+                    Text("Failed").hidden().accessibilityHidden(true)
+                    Text(record.status.map(String.init) ?? String(localized: "Failed"))
+                        .foregroundStyle(record.error == nil && (record.status ?? 0) < 400 ? Color.primary : Color.red)
+                }.font(.callout.monospacedDigit()).lineLimit(1).fixedSize(horizontal: true, vertical: false).frame(minWidth: 54, alignment: .leading)
                 Text(record.url).font(.callout).lineLimit(2).frame(maxWidth: .infinity, alignment: .leading)
             }
             HStack(spacing: 10) {
